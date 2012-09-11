@@ -1007,14 +1007,21 @@ xmlXPtrEvalXPtrPart(xmlXPathParserContextPtr ctxt, xmlChar *name) {
 		NEXT;
 		break;
 	    }
+	    *cur++ = CUR;
 	} else if (CUR == '(') {
 	    level++;
+	    *cur++ = CUR;
 	} else if (CUR == '^') {
-            if ((NXT(1) == ')') || (NXT(1) == '(') || (NXT(1) == '^')) {
-                NEXT;
-            }
+	    NEXT;
+	    if ((CUR == ')') || (CUR == '(') || (CUR == '^')) {
+		*cur++ = CUR;
+	    } else {
+		*cur++ = '^';
+		*cur++ = CUR;
+	    }
+	} else {
+	    *cur++ = CUR;
 	}
-        *cur++ = CUR;
 	NEXT;
     }
     *cur = 0;
@@ -1262,7 +1269,6 @@ xmlXPtrEvalXPointer(xmlXPathParserContextPtr ctxt) {
 	ctxt->valueNr = 0;
 	ctxt->valueMax = 10;
 	ctxt->value = NULL;
-	ctxt->valueFrame = 0;
     }
     SKIP_BLANKS;
     if (CUR == '/') {

@@ -27,7 +27,7 @@
 #endif
 #endif
 
-#if defined( __MINGW32__ ) || defined( _MSC_VER )
+#ifdef __MINGW32__
 /* Include <errno.h> here to ensure that it doesn't get included later
  * (e.g. by iconv.h) and overwrites the definition of EWOULDBLOCK. */
 #include <errno.h>
@@ -39,9 +39,6 @@
 #endif
 
 #define EWOULDBLOCK             WSAEWOULDBLOCK
-#define ESHUTDOWN               WSAESHUTDOWN
-
-#ifndef _MSC_VER
 #define EINPROGRESS             WSAEINPROGRESS
 #define EALREADY                WSAEALREADY
 #define ENOTSOCK                WSAENOTSOCK
@@ -64,6 +61,7 @@
 #define ENOBUFS                 WSAENOBUFS
 #define EISCONN                 WSAEISCONN
 #define ENOTCONN                WSAENOTCONN
+#define ESHUTDOWN               WSAESHUTDOWN
 #define ETOOMANYREFS            WSAETOOMANYREFS
 #define ETIMEDOUT               WSAETIMEDOUT
 #define ECONNREFUSED            WSAECONNREFUSED
@@ -81,6 +79,5 @@
 #define ENAMETOOLONG            WSAENAMETOOLONG
 #define ENOTEMPTY               WSAENOTEMPTY
 */
-#endif /* _MSC_VER */
 
 #endif /* __XML_WSOCKCOMPAT_H__ */

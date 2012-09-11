@@ -1407,6 +1407,8 @@ xmlFetchXMLCatalogFile(xmlCatalogEntryPtr catal) {
 	return(-1);
     if (catal->URL == NULL)
 	return(-1);
+    if (catal->children != NULL)
+	return(-1);
 
     /*
      * lock the whole catalog for modification

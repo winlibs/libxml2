@@ -44,9 +44,6 @@
 
 #define MAX_PUSH 10000000
 
-#ifdef ERROR
-#undef ERROR
-#endif
 #define ERROR(str)							\
     ctxt->error = XML_REGEXP_COMPILE_ERROR;				\
     xmlRegexpErrCompile(ctxt, str);

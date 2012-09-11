@@ -151,7 +151,7 @@ found_content:
  * htmlSetMetaEncoding:
  * @doc:  the document
  * @encoding:  the encoding string
- *
+ * 
  * Sets the current encoding in the Meta tags
  * NOTE: this will not change the document content encoding, just
  * the META flag associated.
@@ -164,7 +164,6 @@ htmlSetMetaEncoding(htmlDocPtr doc, const xmlChar *encoding) {
     const xmlChar *content = NULL;
     char newcontent[100];
 
-    newcontent[0] = 0;
 
     if (doc == NULL)
 	return(-1);
@@ -245,7 +244,7 @@ found_meta:
 			    http = 1;
 			else
                         {
-                           if ((value != NULL) &&
+                           if ((value != NULL) && 
                                (!xmlStrcasecmp(attr->name, BAD_CAST"content")))
 			       content = value;
                         }
@@ -279,13 +278,8 @@ create:
             xmlNewProp(meta, BAD_CAST"content", BAD_CAST newcontent);
         }
     } else {
-        /* remove the meta tag if NULL is passed */
-        if (encoding == NULL) {
-            xmlUnlinkNode(meta);
-            xmlFreeNode(meta);
-        }
         /* change the document only if there is a real encoding change */
-        else if (xmlStrcasestr(content, encoding) == NULL) {
+        if (xmlStrcasestr(content, encoding) == NULL) {
             xmlSetProp(meta, BAD_CAST"content", BAD_CAST newcontent);
         }
     }
@@ -487,7 +481,7 @@ htmlNodeDumpFileFormat(FILE *out, xmlDocPtr doc,
 	if (enc != XML_CHAR_ENCODING_UTF8) {
 	    handler = xmlFindCharEncodingHandler(encoding);
 	    if (handler == NULL)
-		htmlSaveErr(XML_SAVE_UNKNOWN_ENCODING, NULL, encoding);
+		return(-1);
 	}
     }
 
@@ -568,9 +562,11 @@ htmlDocDumpMemoryFormat(xmlDocPtr cur, xmlChar**mem, int *size, int format) {
 	    }
 
 	    handler = xmlFindCharEncodingHandler(encoding);
-	    if (handler == NULL)
-                htmlSaveErr(XML_SAVE_UNKNOWN_ENCODING, NULL, encoding);
-
+	    if (handler == NULL) {
+		*mem = NULL;
+		*size = 0;
+		return;
+	    }
 	} else {
 	    handler = xmlFindCharEncodingHandler(encoding);
 	}
@@ -591,7 +587,7 @@ htmlDocDumpMemoryFormat(xmlDocPtr cur, xmlChar**mem, int *size, int format) {
 	return;
     }
 
-    htmlDocContentDumpFormatOutput(buf, cur, NULL, format);
+	htmlDocContentDumpFormatOutput(buf, cur, NULL, format);
 
     xmlOutputBufferFlush(buf);
     if (buf->conv != NULL) {
@@ -1065,7 +1061,7 @@ htmlDocDump(FILE *f, xmlDocPtr cur) {
 
 	    handler = xmlFindCharEncodingHandler(encoding);
 	    if (handler == NULL)
-		htmlSaveErr(XML_SAVE_UNKNOWN_ENCODING, NULL, encoding);
+		return(-1);
 	} else {
 	    handler = xmlFindCharEncodingHandler(encoding);
 	}
@@ -1124,7 +1120,7 @@ htmlSaveFile(const char *filename, xmlDocPtr cur) {
 
 	    handler = xmlFindCharEncodingHandler(encoding);
 	    if (handler == NULL)
-		htmlSaveErr(XML_SAVE_UNKNOWN_ENCODING, NULL, encoding);
+		return(-1);
 	}
     }
 
@@ -1185,7 +1181,7 @@ htmlSaveFileFormat(const char *filename, xmlDocPtr cur,
 
 	    handler = xmlFindCharEncodingHandler(encoding);
 	    if (handler == NULL)
-		htmlSaveErr(XML_SAVE_UNKNOWN_ENCODING, NULL, encoding);
+		return(-1);
 	}
         htmlSetMetaEncoding(cur, (const xmlChar *) encoding);
     } else {

@@ -452,8 +452,6 @@ __xmlRaiseError(xmlStructuredErrorFunc schannel,
     xmlErrorPtr to = &xmlLastError;
     xmlNodePtr baseptr = NULL;
 
-    if (code == XML_ERR_OK)
-        return;
     if ((xmlGetWarningsDefaultValue == 0) && (level == XML_ERR_WARNING))
         return;
     if ((domain == XML_FROM_PARSER) || (domain == XML_FROM_HTML) ||
@@ -461,11 +459,8 @@ __xmlRaiseError(xmlStructuredErrorFunc schannel,
 	(domain == XML_FROM_IO) || (domain == XML_FROM_VALID)) {
 	ctxt = (xmlParserCtxtPtr) ctx;
 	if ((schannel == NULL) && (ctxt != NULL) && (ctxt->sax != NULL) &&
-	    (ctxt->sax->initialized == XML_SAX2_MAGIC) &&
-	    (ctxt->sax->serror != NULL)) {
+	    (ctxt->sax->initialized == XML_SAX2_MAGIC))
 	    schannel = ctxt->sax->serror;
-	    data = ctxt->userData;
-	}
     }
     /*
      * Check if structured error handler set
@@ -478,6 +473,16 @@ __xmlRaiseError(xmlStructuredErrorFunc schannel,
 	if (schannel != NULL)
 	    data = xmlStructuredErrorContext;
     }
+    if ((domain == XML_FROM_VALID) &&
+        ((channel == xmlParserValidityError) ||
+	 (channel == xmlParserValidityWarning))) {
+	ctxt = (xmlParserCtxtPtr) ctx;
+	if ((schannel == NULL) && (ctxt != NULL) && (ctxt->sax != NULL) &&
+	    (ctxt->sax->initialized == XML_SAX2_MAGIC))
+	    schannel = ctxt->sax->serror;
+    }
+    if (code == XML_ERR_OK)
+        return;
     /*
      * Formatting the message
      */
@@ -584,11 +589,6 @@ __xmlRaiseError(xmlStructuredErrorFunc schannel,
     if (to != &xmlLastError)
         xmlCopyError(to,&xmlLastError);
 
-    if (schannel != NULL) {
-	schannel(data, to);
-	return;
-    }
-
     /*
      * Find the callback channel if channel param is NULL
      */
@@ -600,9 +600,19 @@ __xmlRaiseError(xmlStructuredErrorFunc schannel,
 	    channel = ctxt->sax->error;
 	data = ctxt->userData;
     } else if (channel == NULL) {
-	channel = xmlGenericError;
-	if (!data)
-	    data = xmlGenericErrorContext;
+        if ((schannel == NULL) && (xmlStructuredError != NULL)) {
+	    schannel = xmlStructuredError;
+	    data = xmlStructuredErrorContext;
+	} else {
+	    channel = xmlGenericError;
+	    if (!data) {
+		data = xmlGenericErrorContext;
+	    }
+	}
+    }
+    if (schannel != NULL) {
+        schannel(data, to);
+	return;
     }
     if (channel == NULL)
         return;

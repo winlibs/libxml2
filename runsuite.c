@@ -38,9 +38,14 @@
 static FILE *logfile = NULL;
 static int verbose = 0;
 
-#if defined(_WIN32) && !defined(__CYGWIN__) && !defined(__MINGW32__)
+
+
+#if defined(_WIN32) && !defined(__CYGWIN__)
+
 #define vsnprintf _vsnprintf
+
 #define snprintf _snprintf
+
 #endif
 
 /************************************************************************

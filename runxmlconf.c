@@ -37,9 +37,12 @@ static int verbose = 0;
 
 #define NB_EXPECTED_ERRORS 15
 
-#if defined(_WIN32) && !defined(__CYGWIN__) && !defined(__MINGW32__)
+#if defined(_WIN32) && !defined(__CYGWIN__)
+
 #define vsnprintf _vsnprintf
+
 #define snprintf _snprintf
+
 #endif
 
 const char *skipped_tests[] = {
@@ -513,7 +516,7 @@ static void
 xmlconfInfo(void) {
     fprintf(stderr, "  you need to fetch and extract the\n");
     fprintf(stderr, "  latest XML Conformance Test Suites\n");
-    fprintf(stderr, "  http://www.w3.org/XML/Test/xmlts20080827.tar.gz\n");
+    fprintf(stderr, "  http://www.w3.org/XML/Test/xmlts20080205.tar.gz\n");
     fprintf(stderr, "  see http://www.w3.org/XML/Test/ for informations\n");
 }
 

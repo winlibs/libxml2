@@ -13946,7 +13946,7 @@ xmlSchemaCheckCOSNSSubset(xmlSchemaWildcardPtr sub,
     */
     if ((sub->negNsSet != NULL) &&
 	(super->negNsSet != NULL) &&
-	(sub->negNsSet->value == super->negNsSet->value))
+	(sub->negNsSet->value == sub->negNsSet->value))
 	return (0);
     /*
     * 3.1 sub must be a set whose members are either namespace names or �absent�.
@@ -15156,10 +15156,9 @@ xmlSchemaCheckSTPropsCorrect(xmlSchemaParserCtxtPtr ctxt,
 	FREE_AND_NULL(str)
 	return (XML_SCHEMAP_ST_PROPS_CORRECT_1);
     }
-    if ((WXS_IS_LIST(type) || WXS_IS_UNION(type)) &&
-	(WXS_IS_RESTRICTION(type) == 0) &&
-	((! WXS_IS_ANY_SIMPLE_TYPE(baseType)) &&
-         (baseType->type != XML_SCHEMA_TYPE_SIMPLE))) {
+    if ( (WXS_IS_LIST(type) || WXS_IS_UNION(type)) &&
+	 (WXS_IS_RESTRICTION(type) == 0) &&
+	 (! WXS_IS_ANY_SIMPLE_TYPE(baseType))) {
 	xmlSchemaPCustomErr(ctxt,
 	    XML_SCHEMAP_ST_PROPS_CORRECT_1,
 	    WXS_BASIC_CAST type, NULL,
@@ -18476,8 +18475,8 @@ xmlSchemaFixupComplexType(xmlSchemaParserCtxtPtr pctxt,
 		    particle->children->children =
 			(xmlSchemaTreeItemPtr) xmlSchemaAddParticle(pctxt,
 			type->node,
-			((xmlSchemaParticlePtr) baseType->subtypes)->minOccurs,
-			((xmlSchemaParticlePtr) baseType->subtypes)->maxOccurs);
+			((xmlSchemaParticlePtr) type->subtypes)->minOccurs,
+			((xmlSchemaParticlePtr) type->subtypes)->maxOccurs);
 		    if (particle->children->children == NULL)
 			goto exit_failure;
 		    particle = (xmlSchemaParticlePtr)

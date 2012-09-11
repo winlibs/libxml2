@@ -727,7 +727,7 @@ static const char* const map_contents[] = { BLOCK, "area", NULL } ;
 static const char* const name_attr[] = { "name", NULL } ;
 static const char* const action_attr[] = { "action", NULL } ;
 static const char* const blockli_elt[] = { BLOCK, "li", NULL } ;
-static const char* const meta_attrs[] = { I18N, "http-equiv", "name", "scheme", "charset", NULL } ;
+static const char* const meta_attrs[] = { I18N, "http-equiv", "name", "scheme", NULL } ;
 static const char* const content_attr[] = { "content", NULL } ;
 static const char* const type_attr[] = { "type", NULL } ;
 static const char* const noframes_content[] = { "body", FLOW MODIFIER, NULL } ;
@@ -1080,7 +1080,7 @@ static const char * const htmlStartClose[] = {
 "menu",		"p", "head", "ul", NULL,
 "p",		"p", "head", "h1", "h2", "h3", "h4", "h5", "h6", FONTSTYLE, NULL,
 "div",		"p", "head", NULL,
-"noscript",	"p", NULL,
+"noscript",	"p", "head", NULL,
 "center",	"font", "b", "i", "p", "head", NULL,
 "a",		"a", NULL,
 "caption",	"p", NULL,
@@ -3435,26 +3435,34 @@ htmlParseAttribute(htmlParserCtxtPtr ctxt, xmlChar **value) {
 }
 
 /**
- * htmlCheckEncodingDirect:
+ * htmlCheckEncoding:
  * @ctxt:  an HTML parser context
  * @attvalue: the attribute value
  *
- * Checks an attribute value to detect
+ * Checks an http-equiv attribute from a Meta tag to detect
  * the encoding
  * If a new encoding is detected the parser is switched to decode
  * it and pass UTF8
  */
 static void
-htmlCheckEncodingDirect(htmlParserCtxtPtr ctxt, const xmlChar *encoding) {
+htmlCheckEncoding(htmlParserCtxtPtr ctxt, const xmlChar *attvalue) {
+    const xmlChar *encoding;
 
-    if ((ctxt == NULL) || (encoding == NULL) ||
-        (ctxt->options & HTML_PARSE_IGNORE_ENC))
+    if ((ctxt == NULL) || (attvalue == NULL))
 	return;
 
     /* do not change encoding */
     if (ctxt->input->encoding != NULL)
         return;
 
+    encoding = xmlStrcasestr(attvalue, BAD_CAST"charset=");
+    if (encoding != NULL) {
+	encoding += 8;
+    } else {
+	encoding = xmlStrcasestr(attvalue, BAD_CAST"charset =");
+	if (encoding != NULL)
+	    encoding += 9;
+    }
     if (encoding != NULL) {
 	xmlCharEncoding enc;
 	xmlCharEncodingHandlerPtr handler;
@@ -3492,9 +3500,7 @@ htmlCheckEncodingDirect(htmlParserCtxtPtr ctxt, const xmlChar *encoding) {
 		xmlSwitchToEncoding(ctxt, handler);
 		ctxt->charset = XML_CHAR_ENCODING_UTF8;
 	    } else {
-		htmlParseErr(ctxt, XML_ERR_UNSUPPORTED_ENCODING,
-		             "htmlCheckEncoding: unknown encoding %s\n",
-			     encoding, NULL);
+		ctxt->errNo = XML_ERR_UNSUPPORTED_ENCODING;
 	    }
 	}
 
@@ -3527,38 +3533,6 @@ htmlCheckEncodingDirect(htmlParserCtxtPtr ctxt, const xmlChar *encoding) {
 }
 
 /**
- * htmlCheckEncoding:
- * @ctxt:  an HTML parser context
- * @attvalue: the attribute value
- *
- * Checks an http-equiv attribute from a Meta tag to detect
- * the encoding
- * If a new encoding is detected the parser is switched to decode
- * it and pass UTF8
- */
-static void
-htmlCheckEncoding(htmlParserCtxtPtr ctxt, const xmlChar *attvalue) {
-    const xmlChar *encoding;
-
-    if (!attvalue)
-	return;
-
-    encoding = xmlStrcasestr(attvalue, BAD_CAST"charset");
-    if (encoding != NULL) {
-	encoding += 7;
-    }
-    /*
-     * skip blank
-     */
-    if (encoding && IS_BLANK_CH(*encoding))
-	encoding = xmlStrcasestr(attvalue, BAD_CAST"=");
-    if (encoding && *encoding == '=') {
-	encoding ++;
-	htmlCheckEncodingDirect(ctxt, encoding);
-    }
-}
-
-/**
  * htmlCheckMeta:
  * @ctxt:  an HTML parser context
  * @atts:  the attributes values
@@ -3582,8 +3556,6 @@ htmlCheckMeta(htmlParserCtxtPtr ctxt, const xmlChar **atts) {
 	if ((value != NULL) && (!xmlStrcasecmp(att, BAD_CAST"http-equiv"))
 	 && (!xmlStrcasecmp(value, BAD_CAST"Content-Type")))
 	    http = 1;
-	else if ((value != NULL) && (!xmlStrcasecmp(att, BAD_CAST"charset")))
-	    htmlCheckEncodingDirect(ctxt, value);
 	else if ((value != NULL) && (!xmlStrcasecmp(att, BAD_CAST"content")))
 	    content = value;
 	att = atts[i++];
@@ -3913,7 +3885,6 @@ htmlParseEndTag(htmlParserCtxtPtr ctxt)
     if ((oldname != NULL) && (xmlStrEqual(oldname, name))) {
         if ((ctxt->sax != NULL) && (ctxt->sax->endElement != NULL))
             ctxt->sax->endElement(ctxt->userData, name);
-	htmlNodeInfoPop(ctxt);
         htmlnamePop(ctxt);
         ret = 1;
     } else {
@@ -5202,8 +5173,6 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
     int avail = 0;
     xmlChar cur, next;
 
-    htmlParserNodeInfo node_info;
-
 #ifdef DEBUG_PUSH
     switch (ctxt->instate) {
 	case XML_PARSER_EOF:
@@ -5343,23 +5312,10 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
 		    avail = in->length - (in->cur - in->base);
 		else
 		    avail = in->buf->buffer->use - (in->cur - in->base);
-		/*
-		 * no chars in buffer
-		 */
-		if (avail < 1)
+		if (avail < 2)
 		    goto done;
-		/*
-		 * not enouth chars in buffer
-		 */
-		if (avail < 2) {
-		    if (!terminate)
-			goto done;
-		    else
-			next = ' ';
-		} else {
-		    next = in->cur[1];
-		}
 		cur = in->cur[0];
+		next = in->cur[1];
 	        if ((cur == '<') && (next == '!') &&
 		    (in->cur[2] == '-') && (in->cur[3] == '-')) {
 		    if ((!terminate) &&
@@ -5509,22 +5465,8 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
 		int failed;
 		const htmlElemDesc * info;
 
-		/*
-		 * no chars in buffer
-		 */
-		if (avail < 1)
+		if (avail < 2)
 		    goto done;
-		/*
-		 * not enouth chars in buffer
-		 */
-		if (avail < 2) {
-		    if (!terminate)
-			goto done;
-		    else
-			next = ' ';
-		} else {
-		    next = in->cur[1];
-		}
 		cur = in->cur[0];
 	        if (cur != '<') {
 		    ctxt->instate = XML_PARSER_CONTENT;
@@ -5534,7 +5476,7 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
 #endif
 		    break;
 		}
-		if (next == '/') {
+		if (in->cur[1] == '/') {
 		    ctxt->instate = XML_PARSER_END_TAG;
 		    ctxt->checkIndex = 0;
 #ifdef DEBUG_PUSH
@@ -5546,14 +5488,6 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
 		if ((!terminate) &&
 		    (htmlParseLookupSequence(ctxt, '>', 0, 0, 0, 1) < 0))
 		    goto done;
-
-                /* Capture start position */
-	        if (ctxt->record_info) {
-	             node_info.begin_pos = ctxt->input->consumed +
-	                                (CUR_PTR - ctxt->input->base);
-	             node_info.begin_line = ctxt->input->line;
-	        }
-
 
 		failed = htmlParseStartTag(ctxt);
 		name = ctxt->name;
@@ -5604,9 +5538,6 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
 			htmlnamePop(ctxt);
 		    }
 
-		    if (ctxt->record_info)
-		        htmlNodeInfoPush(ctxt, &node_info);
-
 		    ctxt->instate = XML_PARSER_CONTENT;
 #ifdef DEBUG_PUSH
 		    xmlGenericError(xmlGenericErrorContext,
@@ -5623,10 +5554,6 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
 			ctxt->sax->endElement(ctxt->userData, name);
 		    htmlnamePop(ctxt);
 		}
-
-                if (ctxt->record_info)
-	            htmlNodeInfoPush(ctxt, &node_info);
-
 		ctxt->instate = XML_PARSER_CONTENT;
 #ifdef DEBUG_PUSH
 		xmlGenericError(xmlGenericErrorContext,
@@ -6610,14 +6537,6 @@ htmlCtxtUseOptions(htmlParserCtxtPtr ctxt, int options)
 	ctxt->options |= HTML_PARSE_NODEFDTD;
         options -= HTML_PARSE_NODEFDTD;
     }
-    if (options & HTML_PARSE_IGNORE_ENC) {
-	ctxt->options |= HTML_PARSE_IGNORE_ENC;
-        options -= HTML_PARSE_IGNORE_ENC;
-    }
-    if (options & HTML_PARSE_NOIMPLIED) {
-        ctxt->options |= HTML_PARSE_NOIMPLIED;
-        options -= HTML_PARSE_NOIMPLIED;
-    }
     ctxt->dictNames = 0;
     return (options);
 }
@@ -6811,11 +6730,8 @@ htmlReadIO(xmlInputReadCallback ioread, xmlInputCloseCallback ioclose,
 
     input = xmlParserInputBufferCreateIO(ioread, ioclose, ioctx,
                                          XML_CHAR_ENCODING_NONE);
-    if (input == NULL) {
-        if (ioclose != NULL)
-            ioclose(ioctx);
+    if (input == NULL)
         return (NULL);
-    }
     ctxt = htmlNewParserCtxt();
     if (ctxt == NULL) {
         xmlFreeParserInputBuffer(input);
@@ -7014,11 +6930,8 @@ htmlCtxtReadIO(htmlParserCtxtPtr ctxt, xmlInputReadCallback ioread,
 
     input = xmlParserInputBufferCreateIO(ioread, ioclose, ioctx,
                                          XML_CHAR_ENCODING_NONE);
-    if (input == NULL) {
-        if (ioclose != NULL)
-            ioclose(ioctx);
+    if (input == NULL)
         return (NULL);
-    }
     stream = xmlNewIOInputStream(ctxt, input, XML_CHAR_ENCODING_NONE);
     if (stream == NULL) {
         xmlFreeParserInputBuffer(input);

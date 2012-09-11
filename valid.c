@@ -6559,7 +6559,6 @@ xmlValidateCheckRefCallback(xmlListPtr ref_list, xmlValidCtxtPtr ctxt,
 int
 xmlValidateDocumentFinal(xmlValidCtxtPtr ctxt, xmlDocPtr doc) {
     xmlRefTablePtr table;
-    unsigned int save;
 
     if (ctxt == NULL)
         return(0);
@@ -6568,10 +6567,6 @@ xmlValidateDocumentFinal(xmlValidCtxtPtr ctxt, xmlDocPtr doc) {
 		"xmlValidateDocumentFinal: doc == NULL\n", NULL);
 	return(0);
     }
-
-    /* trick to get correct line id report */
-    save = ctxt->finishDtd;
-    ctxt->finishDtd = 0;
 
     /*
      * Check all the NOTATION/NOTATIONS attributes
@@ -6586,8 +6581,6 @@ xmlValidateDocumentFinal(xmlValidCtxtPtr ctxt, xmlDocPtr doc) {
     ctxt->doc = doc;
     ctxt->valid = 1;
     xmlHashScan(table, (xmlHashScanner) xmlValidateCheckRefCallback, ctxt);
-
-    ctxt->finishDtd = save;
     return(ctxt->valid);
 }
 
