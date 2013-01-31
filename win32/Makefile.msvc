@@ -21,11 +21,18 @@ AUTOCONF = .\config.msvc
 # Names of various input and output components.
 XML_NAME = xml2
 XML_BASENAME = lib$(XML_NAME)
+XML_DEF = $(XML_BASENAME).def
+!if "$(DEBUG)" == "1"
+XML_SO = $(XML_BASENAME)_debug.dll
+XML_IMP = $(XML_BASENAME)_debug.lib
+XML_A = $(XML_BASENAME)_a_debug.lib
+XML_A_DLL = $(XML_BASENAME)_a_dll_debug.lib
+!else
 XML_SO = $(XML_BASENAME).dll
 XML_IMP = $(XML_BASENAME).lib
-XML_DEF = $(XML_BASENAME).def
 XML_A = $(XML_BASENAME)_a.lib
 XML_A_DLL = $(XML_BASENAME)_a_dll.lib
+!endif
 
 # Place where we let the compiler put its output.
 BINDIR = bin.msvc
@@ -69,7 +76,7 @@ LIBS =
 LIBS = $(LIBS) wsock32.lib ws2_32.lib
 !endif 
 !if "$(WITH_ICONV)" == "1"
-LIBS = $(LIBS) iconv.lib
+LIBS = $(LIBS) libiconv.lib
 !endif 
 !if "$(WITH_ICU)" == "1"
 LIBS = $(LIBS) icu.lib
@@ -94,7 +101,7 @@ CFLAGS = $(CFLAGS) /D "_DEBUG" /Od /Z7
 LDFLAGS = $(LDFLAGS) /DEBUG
 !else
 CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 
-LDFLAGS = $(LDFLAGS) /OPT:NOWIN98
+LDFLAGS = $(LDFLAGS)
 !endif
 
 # Libxml object files.
