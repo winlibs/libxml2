@@ -48,7 +48,7 @@ if "vc9"=="%WL_VC%" (
 	call "%ProgramFiles%\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" %WL_PLATFORM%
 
 ) else (
-	echo Unsupported Visual Studio version
+	echo Unsupported Visual C++ version
 )
 
 cscript configure.js lib=%WL_DEPS%\lib include=%WL_DEPS%\include %WL_DEBUG% vcmanifest=yes
@@ -66,7 +66,7 @@ nmake
 :HELP
 	cd ..
 	echo Builds a winlibs project
-	echo Usage: build.bat vc env platform deps
+	echo Usage: build.bat <CRT version> <mode> <arch> deps
 	echo     vc - vc9 or vc11
 	echo     env - release or debug
 	echo     platform - x86 or x64
