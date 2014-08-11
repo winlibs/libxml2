@@ -1,0 +1,21 @@
+From: Daniel Veillard <veillard@redhat.com>
+Date: Thu, 6 Feb 2014 10:47:20 +0100
+Subject: fixing a ptotential uninitialized access
+
+---
+ valid.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/valid.c b/valid.c
+index e0832e7..114bb72 100644
+--- a/valid.c
++++ b/valid.c
+@@ -6948,7 +6948,7 @@ xmlValidGetValidElements(xmlNode *prev, xmlNode *next, const xmlChar **names,
+                          int max) {
+     xmlValidCtxt vctxt;
+     int nb_valid_elements = 0;
+-    const xmlChar *elements[256];
++    const xmlChar *elements[256]={0};
+     int nb_elements = 0, i;
+     const xmlChar *name;
+ 

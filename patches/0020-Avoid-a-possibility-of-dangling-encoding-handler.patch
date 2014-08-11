@@ -1,0 +1,57 @@
+From: Gaurav <g.gupta@samsung.com>
+Date: Fri, 29 Nov 2013 23:10:50 +0800
+Subject: Avoid a possibility of dangling encoding handler
+
+For https://bugzilla.gnome.org/show_bug.cgi?id=711149
+
+In Function:
+int xmlCharEncCloseFunc(xmlCharEncodingHandler *handler)
+
+If the freed handler is any one of handlers[i] list, then it will make that
+hanldlers[i] as dangling. This may lead to crash issues at places where
+handlers is read.
+---
+ encoding.c |   16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+diff --git a/encoding.c b/encoding.c
+index 7330e90..d4fc45f 100644
+--- a/encoding.c
++++ b/encoding.c
+@@ -2851,14 +2851,25 @@ int
+ xmlCharEncCloseFunc(xmlCharEncodingHandler *handler) {
+     int ret = 0;
+     int tofree = 0;
++    int i, handler_in_list = 0;
++
+     if (handler == NULL) return(-1);
+     if (handler->name == NULL) return(-1);
++    if (handlers != NULL) {
++        for (i = 0;i < nbCharEncodingHandler; i++) {
++            if (handler == handlers[i]) {
++	        handler_in_list = 1;
++		break;
++	    }
++	}
++    }
+ #ifdef LIBXML_ICONV_ENABLED
+     /*
+      * Iconv handlers can be used only once, free the whole block.
+      * and the associated icon resources.
+      */
+-    if ((handler->iconv_out != NULL) || (handler->iconv_in != NULL)) {
++    if ((handler_in_list == 0) &&
++        ((handler->iconv_out != NULL) || (handler->iconv_in != NULL))) {
+         tofree = 1;
+ 	if (handler->iconv_out != NULL) {
+ 	    if (iconv_close(handler->iconv_out))
+@@ -2873,7 +2884,8 @@ xmlCharEncCloseFunc(xmlCharEncodingHandler *handler) {
+     }
+ #endif /* LIBXML_ICONV_ENABLED */
+ #ifdef LIBXML_ICU_ENABLED
+-    if ((handler->uconv_out != NULL) || (handler->uconv_in != NULL)) {
++    if ((handler_in_list == 0) &&
++        ((handler->uconv_out != NULL) || (handler->uconv_in != NULL))) {
+         tofree = 1;
+ 	if (handler->uconv_out != NULL) {
+ 	    closeIcuConverter(handler->uconv_out);

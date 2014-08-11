@@ -1,0 +1,30 @@
+From: Gaurav <g.gupta@40samsung.com>
+Date: Sat, 3 Aug 2013 22:16:02 +0800
+Subject: Fix a possible NULL dereference
+
+https://bugzilla.gnome.org/show_bug.cgi?id=705400
+In case of allocation error the pointer was dereferenced before the
+test for a failure
+---
+ SAX2.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/SAX2.c b/SAX2.c
+index 4adf202..33d167e 100644
+--- a/SAX2.c
++++ b/SAX2.c
+@@ -994,12 +994,12 @@ xmlSAX2StartDocument(void *ctx)
+ #ifdef LIBXML_HTML_ENABLED
+ 	if (ctxt->myDoc == NULL)
+ 	    ctxt->myDoc = htmlNewDocNoDtD(NULL, NULL);
+-	ctxt->myDoc->properties = XML_DOC_HTML;
+-	ctxt->myDoc->parseFlags = ctxt->options;
+ 	if (ctxt->myDoc == NULL) {
+ 	    xmlSAX2ErrMemory(ctxt, "xmlSAX2StartDocument");
+ 	    return;
+ 	}
++	ctxt->myDoc->properties = XML_DOC_HTML;
++	ctxt->myDoc->parseFlags = ctxt->options;
+ #else
+         xmlGenericError(xmlGenericErrorContext,
+ 		"libxml2 built without HTML support\n");

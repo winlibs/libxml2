@@ -1,0 +1,24 @@
+From: Daniel Veillard <veillard@redhat.com>
+Date: Thu, 6 Feb 2014 10:38:00 +0100
+Subject: Fix an fd leak in an error case
+
+---
+ catalog.c |    5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/catalog.c b/catalog.c
+index 8e34cd2..56991da 100644
+--- a/catalog.c
++++ b/catalog.c
+@@ -994,6 +994,11 @@ xmlLoadFileContent(const char *filename)
+     content = (xmlChar*)xmlMallocAtomic(size + 10);
+     if (content == NULL) {
+         xmlCatalogErrMemory("allocating catalog data");
++#ifdef HAVE_STAT
++	close(fd);
++#else
++	fclose(fd);
++#endif
+         return (NULL);
+     }
+ #ifdef HAVE_STAT

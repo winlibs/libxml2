@@ -1,0 +1,22 @@
+From: Daniel Veillard <veillard@redhat.com>
+Date: Sun, 26 Jan 2014 15:02:25 +0100
+Subject: Missing initialization for the catalog module
+
+---
+ parser.c |    3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/parser.c b/parser.c
+index ad400f4..7381a78 100644
+--- a/parser.c
++++ b/parser.c
+@@ -14720,6 +14720,9 @@ xmlInitParser(void) {
+ #ifdef LIBXML_XPATH_ENABLED
+ 	xmlXPathInit();
+ #endif
++#ifdef LIBXML_CATALOG_ENABLED
++        xmlInitializeCatalog();
++#endif
+ 	xmlParserInitialized = 1;
+ #ifdef LIBXML_THREAD_ENABLED
+     }

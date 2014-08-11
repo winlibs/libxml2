@@ -1,0 +1,25 @@
+From: Daniel Veillard <veillard@redhat.com>
+Date: Mon, 22 Jul 2013 14:28:20 +0800
+Subject: Avoid crash if allocation fails
+
+https://bugzilla.gnome.org/show_bug.cgi?id=704527
+xmlSchemaNewValue() may fail on OOM error
+---
+ xmlschemastypes.c |    4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/xmlschemastypes.c b/xmlschemastypes.c
+index a9edc03..ec403e8 100644
+--- a/xmlschemastypes.c
++++ b/xmlschemastypes.c
+@@ -242,6 +242,10 @@ xmlSchemaNewMinLengthFacet(int value)
+     }
+     ret->type = XML_SCHEMA_FACET_MINLENGTH;
+     ret->val = xmlSchemaNewValue(XML_SCHEMAS_NNINTEGER);
++    if (ret->val == NULL) {
++        xmlFree(ret);
++	return(NULL);
++    }
+     ret->val->value.decimal.lo = value;
+     return (ret);
+ }

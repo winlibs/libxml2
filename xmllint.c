@@ -1837,8 +1837,12 @@ static void streamFile(char *filename) {
 	if ((fd = open(filename, O_RDONLY)) < 0)
 	    return;
 	base = mmap(NULL, info.st_size, PROT_READ, MAP_SHARED, fd, 0) ;
-	if (base == (void *) MAP_FAILED)
+	if (base == (void *) MAP_FAILED) {
+	    close(fd);
+	    fprintf(stderr, "mmap failure for file %s\n", filename);
+	    progresult = XMLLINT_ERR_RDFILE;
 	    return;
+	}
 
 	reader = xmlReaderForMemory(base, info.st_size, filename,
 	                            NULL, options);
@@ -2223,8 +2227,12 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 	if ((fd = open(filename, O_RDONLY)) < 0)
 	    return;
 	base = mmap(NULL, info.st_size, PROT_READ, MAP_SHARED, fd, 0) ;
-	if (base == (void *) MAP_FAILED)
+	if (base == (void *) MAP_FAILED) {
+	    close(fd);
+	    fprintf(stderr, "mmap failure for file %s\n", filename);
+	    progresult = XMLLINT_ERR_RDFILE;
 	    return;
+	}
 
 	doc = htmlReadMemory((char *) base, info.st_size, filename,
 	                     NULL, options);
@@ -2338,8 +2346,12 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 	    if ((fd = open(filename, O_RDONLY)) < 0)
 		return;
 	    base = mmap(NULL, info.st_size, PROT_READ, MAP_SHARED, fd, 0) ;
-	    if (base == (void *) MAP_FAILED)
+	    if (base == (void *) MAP_FAILED) {
+	        close(fd);
+	        fprintf(stderr, "mmap failure for file %s\n", filename);
+		progresult = XMLLINT_ERR_RDFILE;
 	        return;
+	    }
 
 	    if (rectxt == NULL)
 		doc = xmlReadMemory((char *) base, info.st_size,
@@ -2561,7 +2573,7 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 		    fprintf(stderr, "Failed to canonicalize\n");
 		    progresult = XMLLINT_ERR_OUT;
 		}
-	    } else if (canonical) {
+	    } else if (canonical_11) {
 	        xmlChar *result = NULL;
 		int size;
 
@@ -3087,6 +3099,10 @@ static void usage(const char *name) {
 static void registerNode(xmlNodePtr node)
 {
     node->_private = malloc(sizeof(long));
+    if (node->_private == NULL) {
+        fprintf(stderr, "Out of memory in xmllint:registerNode()\n");
+	exit(XMLLINT_ERR_MEM);
+    }
     *(long*)node->_private = (long) 0x81726354;
     nbregister++;
 }
@@ -3372,11 +3388,13 @@ main(int argc, char **argv) {
 	         (!strcmp(argv[i], "--pretty"))) {
 	     i++;
 #ifdef LIBXML_OUTPUT_ENABLED
-	     format = atoi(argv[i]);
-	     if (format == 1) {
-	         noblanks++;
-	         xmlKeepBlanksDefault(0);
-	     }
+       if (argv[i] != NULL) {
+	         format = atoi(argv[i]);
+	         if (format == 1) {
+	             noblanks++;
+	             xmlKeepBlanksDefault(0);
+	         }
+       }
 #endif /* LIBXML_OUTPUT_ENABLED */
 	}
 #ifdef LIBXML_READER_ENABLED

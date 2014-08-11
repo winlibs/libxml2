@@ -13512,10 +13512,15 @@ xmlXPathCompOpEval(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op)
                 int frame;
 
                 frame = xmlXPathSetFrame(ctxt);
-                if (op->ch1 != -1)
+                if (op->ch1 != -1) {
                     total +=
                         xmlXPathCompOpEval(ctxt, &comp->steps[op->ch1]);
-		if (ctxt->valueNr < op->value) {
+                    if (ctxt->error != XPATH_EXPRESSION_OK) {
+                        xmlXPathPopFrame(ctxt, frame);
+                        return (total);
+                    }
+                }
+		if (ctxt->valueNr < ctxt->valueFrame + op->value) {
 		    xmlGenericError(xmlGenericErrorContext,
 			    "xmlXPathCompOpEval: parameter error\n");
 		    ctxt->error = XPATH_INVALID_OPERAND;
@@ -14719,8 +14724,9 @@ xmlXPathOptimizeExpression(xmlXPathCompExprPtr comp, xmlXPathStepOpPtr op)
     * internal representation.
     */
 
-    if ((op->ch1 != -1) &&
-        (op->op == XPATH_OP_COLLECT /* 11 */))
+    if ((op->op == XPATH_OP_COLLECT /* 11 */) &&
+        (op->ch1 != -1) &&
+        (op->ch2 == -1 /* no predicate */))
     {
         xmlXPathStepOpPtr prevop = &comp->steps[op->ch1];
 

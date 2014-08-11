@@ -1,0 +1,22 @@
+From: Ami Fischman <fischman@google.com>
+Date: Tue, 2 Jul 2013 09:47:26 +0800
+Subject: missing else in xlink.c
+
+Obviously forgotten
+---
+ xlink.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/xlink.c b/xlink.c
+index 3566e06..c0e4ff3 100644
+--- a/xlink.c
++++ b/xlink.c
+@@ -150,7 +150,7 @@ xlinkIsLink	(xmlDocPtr doc, xmlNodePtr node) {
+     if (type != NULL) {
+ 	if (xmlStrEqual(type, BAD_CAST "simple")) {
+             ret = XLINK_TYPE_SIMPLE;
+-	} if (xmlStrEqual(type, BAD_CAST "extended")) {
++	} else if (xmlStrEqual(type, BAD_CAST "extended")) {
+ 	    role = xmlGetNsProp(node, BAD_CAST "role", XLINK_NAMESPACE);
+ 	    if (role != NULL) {
+ 		xmlNsPtr xlink;

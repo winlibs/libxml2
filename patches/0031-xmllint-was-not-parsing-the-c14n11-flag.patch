@@ -1,0 +1,22 @@
+From: =?UTF-8?q?S=C3=A9rgio=20Batista?= <mail@se.rg.io>
+Date: Mon, 9 Jun 2014 22:10:15 +0800
+Subject: xmllint was not parsing the --c14n11 flag
+
+Cut and paste error, using the wrong variable
+---
+ xmllint.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/xmllint.c b/xmllint.c
+index d69722c..4a5d043 100644
+--- a/xmllint.c
++++ b/xmllint.c
+@@ -2573,7 +2573,7 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
+ 		    fprintf(stderr, "Failed to canonicalize\n");
+ 		    progresult = XMLLINT_ERR_OUT;
+ 		}
+-	    } else if (canonical) {
++	    } else if (canonical_11) {
+ 	        xmlChar *result = NULL;
+ 		int size;
+ 

@@ -1,0 +1,41 @@
+From: Nick Wellnhofer <wellnhofer@aevum.de>
+Date: Fri, 20 Dec 2013 00:01:53 +0100
+Subject: Handling of XPath function arguments in error case
+
+The XPath engine tries to guarantee that every XPath function can pop
+'nargs' non-NULL values off the stack. libxslt, for example, relies on
+this assumption. But the check isn't thorough enough if there are errors
+during the evaluation of arguments. This can lead to segfaults:
+
+https://mail.gnome.org/archives/xslt/2013-December/msg00005.html
+
+This commit makes the handling of function arguments more robust.
+
+* Bail out early when evaluation of XPath function arguments fails.
+* Make sure that there are 'nargs' arguments in the current call frame.
+---
+ xpath.c |    9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/xpath.c b/xpath.c
+index a676989..a75df9b 100644
+--- a/xpath.c
++++ b/xpath.c
+@@ -13512,10 +13512,15 @@ xmlXPathCompOpEval(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op)
+                 int frame;
+ 
+                 frame = xmlXPathSetFrame(ctxt);
+-                if (op->ch1 != -1)
++                if (op->ch1 != -1) {
+                     total +=
+                         xmlXPathCompOpEval(ctxt, &comp->steps[op->ch1]);
+-		if (ctxt->valueNr < op->value) {
++                    if (ctxt->error != XPATH_EXPRESSION_OK) {
++                        xmlXPathPopFrame(ctxt, frame);
++                        return (total);
++                    }
++                }
++		if (ctxt->valueNr < ctxt->valueFrame + op->value) {
+ 		    xmlGenericError(xmlGenericErrorContext,
+ 			    "xmlXPathCompOpEval: parameter error\n");
+ 		    ctxt->error = XPATH_INVALID_OPERAND;

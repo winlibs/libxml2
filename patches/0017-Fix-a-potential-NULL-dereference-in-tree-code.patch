@@ -1,0 +1,26 @@
+From: Daniel Veillard <veillard@redhat.com>
+Date: Wed, 11 Sep 2013 15:11:27 +0800
+Subject: Fix a potential NULL dereference in tree code
+
+https://bugzilla.gnome.org/show_bug.cgi?id=707750
+
+Also reported by Gaurav, simple fix to check the pointer before
+dereference
+---
+ tree.c |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/tree.c b/tree.c
+index 7e5af26..efc3ca2 100644
+--- a/tree.c
++++ b/tree.c
+@@ -9780,7 +9780,8 @@ leave_node:
+ 	    if (clone->parent != NULL)
+ 		clone->parent->last = clone;
+ 	    clone = clone->parent;
+-	    parentClone = clone->parent;
++	    if (clone != NULL)
++		parentClone = clone->parent;
+ 	    /*
+ 	    * Process parent --> next;
+ 	    */

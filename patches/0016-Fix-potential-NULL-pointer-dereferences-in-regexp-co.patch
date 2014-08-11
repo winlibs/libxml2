@@ -1,0 +1,45 @@
+From: Gaurav <g.gupta@samsung.com>
+Date: Wed, 11 Sep 2013 14:59:06 +0800
+Subject: Fix potential NULL pointer dereferences in regexp code
+
+https://bugzilla.gnome.org/show_bug.cgi?id=707749
+
+Fix 3 cases where we might dereference NULL
+---
+ xmlregexp.c |    8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/xmlregexp.c b/xmlregexp.c
+index 1f9911c..8e63d74 100644
+--- a/xmlregexp.c
++++ b/xmlregexp.c
+@@ -3162,8 +3162,10 @@ xmlFARegExecRollBack(xmlRegExecCtxtPtr exec) {
+ 	    exec->status = -6;
+ 	    return;
+ 	}
+-	memcpy(exec->counts, exec->rollbacks[exec->nbRollbacks].counts,
++	if (exec->counts) {
++	    memcpy(exec->counts, exec->rollbacks[exec->nbRollbacks].counts,
+ 	       exec->comp->nbCounters * sizeof(int));
++	}
+     }
+ 
+ #ifdef DEBUG_REGEXP_EXEC
+@@ -4091,7 +4093,7 @@ rollback:
+ 	     */
+ 	    exec->determinist = 0;
+ 	    xmlFARegExecRollBack(exec);
+-	    if (exec->status == 0) {
++	    if ((exec->inputStack != NULL ) && (exec->status == 0)) {
+ 		value = exec->inputStack[exec->index].value;
+ 		data = exec->inputStack[exec->index].data;
+ #ifdef DEBUG_PUSH
+@@ -4306,7 +4308,7 @@ xmlRegExecGetValues(xmlRegExecCtxtPtr exec, int err,
+ 		    (*nbval)++;
+ 		}
+ 	    } else {
+-                if ((exec->comp->states[trans->to] != NULL) &&
++                if ((exec->comp != NULL) && (exec->comp->states[trans->to] != NULL) &&
+ 		    (exec->comp->states[trans->to]->type !=
+ 		     XML_REGEXP_SINK_STATE)) {
+ 		    if (atom->neg)

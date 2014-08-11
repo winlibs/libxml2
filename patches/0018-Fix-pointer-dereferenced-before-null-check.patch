@@ -1,0 +1,25 @@
+From: Gaurav <g.gupta@samsung.com>
+Date: Mon, 30 Sep 2013 10:43:47 +0800
+Subject: Fix pointer dereferenced before null check
+
+for https://bugzilla.gnome.org/show_bug.cgi?id=708364
+
+xmlValidateElementContent is a private function but should still
+check the ctxt argument before dereferencing
+---
+ valid.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/valid.c b/valid.c
+index 6e53a76..e0832e7 100644
+--- a/valid.c
++++ b/valid.c
+@@ -5236,7 +5236,7 @@ xmlValidateElementContent(xmlValidCtxtPtr ctxt, xmlNodePtr child,
+     xmlElementContentPtr cont;
+     const xmlChar *name;
+ 
+-    if ((elemDecl == NULL) || (parent == NULL))
++    if ((elemDecl == NULL) || (parent == NULL) || (ctxt == NULL))
+ 	return(-1);
+     cont = elemDecl->content;
+     name = elemDecl->name;
