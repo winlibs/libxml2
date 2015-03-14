@@ -166,9 +166,9 @@ PyObject * libxml_xmlAddDocEntity(PyObject *self, PyObject *args);
 PyObject * libxml_xmlAddDtdEntity(PyObject *self, PyObject *args);
 PyObject * libxml_xmlAddEncodingAlias(PyObject *self, PyObject *args);
 PyObject * libxml_xmlAddNextSibling(PyObject *self, PyObject *args);
-#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
+#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_XINCLUDE_ENABLED)
 PyObject * libxml_xmlAddPrevSibling(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) */
+#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_XINCLUDE_ENABLED) */
 PyObject * libxml_xmlAddSibling(PyObject *self, PyObject *args);
 #if defined(LIBXML_DEBUG_ENABLED)
 PyObject * libxml_xmlBoolToText(PyObject *self, PyObject *args);
@@ -1662,9 +1662,9 @@ PyObject * libxml_xmlValidateDtdFinal(PyObject *self, PyObject *args);
 #if defined(LIBXML_VALID_ENABLED)
 PyObject * libxml_xmlValidateElement(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_VALID_ENABLED) */
-#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED)
+#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
 PyObject * libxml_xmlValidateNCName(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) */
+#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
 PyObject * libxml_xmlValidateNMToken(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) */

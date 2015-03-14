@@ -29,28 +29,28 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * the version string like "1.2.3"
  */
-#define LIBXML_DOTTED_VERSION "2.9.1"
+#define LIBXML_DOTTED_VERSION "2.9.2"
 
 /**
  * LIBXML_VERSION:
  *
  * the version number: 1.2.3 value is 10203
  */
-#define LIBXML_VERSION 20901
+#define LIBXML_VERSION 20902
 
 /**
  * LIBXML_VERSION_STRING:
  *
  * the version number string, 1.2.3 value is "10203"
  */
-#define LIBXML_VERSION_STRING "20901"
+#define LIBXML_VERSION_STRING "20902"
 
 /**
  * LIBXML_VERSION_EXTRA:
  *
  * extra version information, used to show a CVS compilation
  */
-#define LIBXML_VERSION_EXTRA ""
+#define LIBXML_VERSION_EXTRA "-GITv2.9.2-rc2-10-gbe2a7ed"
 
 /**
  * LIBXML_TEST_VERSION:
@@ -58,7 +58,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  * Macro to check that the libxml version in use is compatible with
  * the version the software has been compiled against
  */
-#define LIBXML_TEST_VERSION xmlCheckVersion(20901);
+#define LIBXML_TEST_VERSION xmlCheckVersion(20902);
 
 #ifndef VMS
 #if 0
@@ -291,7 +291,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * Whether ISO-8859-* support is made available in case iconv is not
  */
-#if 0
+#if 1
 #define LIBXML_ISO8859X_ENABLED
 #endif
 
@@ -388,7 +388,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * the string suffix used by dynamic modules (usually shared libraries)
  */
-#define LIBXML_MODULE_EXTENSION ".dll" 
+#define LIBXML_MODULE_EXTENSION ".so" 
 #endif
 
 /**
@@ -396,7 +396,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * Whether the Zlib support is compiled in
  */
-#if 0
+#if 1
 #define LIBXML_ZLIB_ENABLED
 #endif
 
@@ -405,7 +405,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * Whether the Lzma support is compiled in
  */
-#if 0
+#if 1
 #define LIBXML_LZMA_ENABLED
 #endif
 

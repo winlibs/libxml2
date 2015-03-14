@@ -2194,6 +2194,8 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 
 #if defined(_WIN32) || defined (__DJGPP__) && !defined (__CYGWIN__)
 	f = fopen(filename, "rb");
+#elif defined(__OS400__)
+	f = fopen(filename, "rb");
 #else
 	f = fopen(filename, "r");
 #endif
@@ -2206,6 +2208,7 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
             if (res > 0) {
                 ctxt = htmlCreatePushParserCtxt(NULL, NULL,
                             chars, res, filename, XML_CHAR_ENCODING_NONE);
+                xmlCtxtUseOptions(ctxt, options);
                 while ((res = fread(chars, 1, pushsize, f)) > 0) {
                     htmlParseChunk(ctxt, chars, res, 0);
                 }
@@ -2259,6 +2262,8 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 	    } else {
 #if defined(_WIN32) || defined (__DJGPP__) && !defined (__CYGWIN__)
 		f = fopen(filename, "rb");
+#elif defined(__OS400__)
+		f = fopen(filename, "rb");
 #else
 		f = fopen(filename, "r");
 #endif
@@ -2299,6 +2304,8 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 	        FILE *f;
 
 #if defined(_WIN32) || defined (__DJGPP__) && !defined (__CYGWIN__)
+		f = fopen(filename, "rb");
+#elif defined(__OS400__)
 		f = fopen(filename, "rb");
 #else
 		f = fopen(filename, "r");
@@ -3002,7 +3009,7 @@ static void usage(const char *name) {
     printf("\t--noenc : ignore any encoding specified inside the document\n");
     printf("\t--noout : don't output the result tree\n");
     printf("\t--path 'paths': provide a set of paths for resources\n");
-    printf("\t--load-trace : print trace of all external entites loaded\n");
+    printf("\t--load-trace : print trace of all external entities loaded\n");
     printf("\t--nonet : refuse to fetch DTDs or entities over network\n");
     printf("\t--nocompact : do not generate compact text nodes\n");
     printf("\t--htmlout : output results as HTML\n");

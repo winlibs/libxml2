@@ -19,7 +19,7 @@ if WITH_PYTHON
 AM_CPPFLAGS = \
 	-I$(top_builddir)/include \
 	-I$(top_srcdir)/include	\
-	$(PYTHON_INCLUDES)
+	-I$(PYTHON_INCLUDES)
 
 python_LTLIBRARIES = libxml2mod.la
 

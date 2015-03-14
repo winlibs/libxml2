@@ -166,9 +166,9 @@
     { (char *)"xmlAddDtdEntity", libxml_xmlAddDtdEntity, METH_VARARGS, NULL },
     { (char *)"xmlAddEncodingAlias", libxml_xmlAddEncodingAlias, METH_VARARGS, NULL },
     { (char *)"xmlAddNextSibling", libxml_xmlAddNextSibling, METH_VARARGS, NULL },
-#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
+#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_XINCLUDE_ENABLED)
     { (char *)"xmlAddPrevSibling", libxml_xmlAddPrevSibling, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) */
+#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_XINCLUDE_ENABLED) */
     { (char *)"xmlAddSibling", libxml_xmlAddSibling, METH_VARARGS, NULL },
 #if defined(LIBXML_DEBUG_ENABLED)
     { (char *)"xmlBoolToText", libxml_xmlBoolToText, METH_VARARGS, NULL },
@@ -1662,9 +1662,9 @@
 #if defined(LIBXML_VALID_ENABLED)
     { (char *)"xmlValidateElement", libxml_xmlValidateElement, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_VALID_ENABLED) */
-#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED)
+#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
     { (char *)"xmlValidateNCName", libxml_xmlValidateNCName, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) */
+#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
     { (char *)"xmlValidateNMToken", libxml_xmlValidateNMToken, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) */

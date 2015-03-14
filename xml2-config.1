@@ -8,15 +8,11 @@ xml-config - script to get information about the installed version of GNOME-XML
 \fIxml-config\fP is a tool that is used to determine the compile and
 linker flags that should be used to compile and link programs that use
 \fIGNOME-XML\fP.
-It is highly recommended to use pkg-config instead because building in a
-multi-arch environment is not well supported in this script.
 .SH OPTIONS
 \fIxml-config\fP accepts the following options:
 .TP 8
 .B  \-\-version
 Print the currently installed version of \fIGNOME-XML\fP on the standard output.
-Add the \fB\-\-static\fP option to print the linker flags that are necessary
-to \fBstatically\fP link a \fIGNOME-XML\fP program.
 .TP 8
 .B  \-\-libs
 Print the linker flags that are necessary to link a \fIGNOME-XML\fP program.

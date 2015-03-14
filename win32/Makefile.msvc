@@ -18,20 +18,14 @@
 AUTOCONF = .\config.msvc
 !include $(AUTOCONF)
 
-!if "$(DEBUG)" == "1"
-XML_SUFFIX = _debug
-!else
-XML_SUFFIX = 
-!endif
-
 # Names of various input and output components.
 XML_NAME = xml2
 XML_BASENAME = lib$(XML_NAME)
-XML_SO = $(XML_BASENAME)$(XML_SUFFIX).dll
-XML_IMP = $(XML_BASENAME)$(XML_SUFFIX).lib
+XML_SO = $(XML_BASENAME).dll
+XML_IMP = $(XML_BASENAME).lib
 XML_DEF = $(XML_BASENAME).def
-XML_A = $(XML_BASENAME)_a$(XML_SUFFIX).lib
-XML_A_DLL = $(XML_BASENAME)_a_dll$(XML_SUFFIX).lib
+XML_A = $(XML_BASENAME)_a.lib
+XML_A_DLL = $(XML_BASENAME)_a_dll.lib
 
 # Place where we let the compiler put its output.
 BINDIR = bin.msvc
@@ -49,7 +43,7 @@ CPPFLAGS = $(CPPFLAGS) /D "_REENTRANT"
 
 # The compiler and its options.
 CC = cl.exe
-CFLAGS = /nologo /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "HAVE_CONFIG_H" /D "NOLIBTOOL" /W1 $(CRUNTIME)
+CFLAGS = /nologo /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W1 $(CRUNTIME)
 CFLAGS = $(CFLAGS) /I$(XML_SRCDIR) /I$(XML_SRCDIR)\include /I$(INCPREFIX)
 !if "$(WITH_THREADS)" != "no"
 CFLAGS = $(CFLAGS) /D "_REENTRANT"
@@ -78,7 +72,7 @@ LIBS =
 LIBS = $(LIBS) wsock32.lib ws2_32.lib
 !endif 
 !if "$(WITH_ICONV)" == "1"
-LIBS = $(LIBS) libiconv.lib
+LIBS = $(LIBS) iconv.lib
 !endif 
 !if "$(WITH_ICU)" == "1"
 LIBS = $(LIBS) icu.lib
@@ -107,7 +101,7 @@ ARFLAGS = /nologo
 CFLAGS = $(CFLAGS) /D "_DEBUG" /Od /Z7
 LDFLAGS = $(LDFLAGS) /DEBUG
 !else
-CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 /Zi /Fd"libxml2"
+CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 
 # commented out as this break VC10 c.f. 634846
 # LDFLAGS = $(LDFLAGS) /OPT:NOWIN98
 LDFLAGS = $(LDFLAGS)

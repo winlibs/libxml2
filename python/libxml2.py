@@ -530,7 +530,7 @@ class xmlCoreDepthFirstItertor:
         self.parents = []
     def __iter__(self):
         return self
-    def next(self):
+    def __next__(self):
         while 1:
             if self.node:
                 ret = self.node
@@ -542,6 +542,7 @@ class xmlCoreDepthFirstItertor:
             except IndexError:
                 raise StopIteration
             self.node = parent.next
+    next = __next__
 
 #
 # implements the breadth-first iterator for libxml2 DOM tree
@@ -552,7 +553,7 @@ class xmlCoreBreadthFirstItertor:
         self.parents = []
     def __iter__(self):
         return self
-    def next(self):
+    def __next__(self):
         while 1:
             if self.node:
                 ret = self.node
@@ -564,6 +565,7 @@ class xmlCoreBreadthFirstItertor:
             except IndexError:
                 raise StopIteration
             self.node = parent.children
+    next = __next__
 
 #
 # converters to present a nicer view of the XPath returns
@@ -3363,8 +3365,10 @@ class xmlNode(xmlCore):
     def newNs(self, href, prefix):
         """Creation of a new Namespace. This function will refuse to
           create a namespace with a similar prefix than an existing
-          one present on this node. We use href==None in the case of
-           an element creation where the namespace was not defined. """
+          one present on this node. Note that for a default
+          namespace, @prefix should be None.  We use href==None in
+          the case of an element creation where the namespace was not
+           defined. """
         ret = libxml2mod.xmlNewNs(self._o, href, prefix)
         if ret is None:raise treeError('xmlNewNs() failed')
         __tmp = xmlNs(_obj=ret)
