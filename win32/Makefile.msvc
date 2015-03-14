@@ -113,10 +113,10 @@ ARFLAGS = /nologo
 CFLAGS = $(CFLAGS) /D "_DEBUG" /Od /Z7
 LDFLAGS = $(LDFLAGS) /DEBUG
 !else
-CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 
+CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 /Zi /Fd$(BINDIR)\libxml2.pdb
 # commented out as this break VC10 c.f. 634846
 # LDFLAGS = $(LDFLAGS) /OPT:NOWIN98
-LDFLAGS = $(LDFLAGS)
+LDFLAGS = $(LDFLAGS) /PDB:$(BINDIR)\libxml2.pdb
 !endif
 
 # Libxml object files.
