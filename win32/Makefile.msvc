@@ -34,6 +34,7 @@ XML_DEF = $(XML_BASENAME).def
 XML_A = $(XML_BASENAME)_a.lib
 XML_A_DLL = $(XML_BASENAME)_a_dll.lib
 !endif
+XML_DEF_SRC = $(XML_BASENAME).def
 
 # Place where we let the compiler put its output.
 BINDIR = bin.msvc
@@ -383,8 +384,8 @@ $(XML_OBJS_A) : $(XML_INTDIR_A)
 $(XML_OBJS_A_DLL) : $(XML_INTDIR_A_DLL) 
 
 # Creates the export definition file (DEF) for libxml.
-$(XML_INTDIR)\$(XML_DEF) : $(XML_INTDIR) $(XML_DEF).src
-	$(CPP) $(CPPFLAGS) $(XML_DEF).src > $(XML_INTDIR)\$(XML_DEF)
+$(XML_INTDIR)\$(XML_DEF) : $(XML_INTDIR) $(XML_DEF_SRC).src
+	$(CPP) $(CPPFLAGS) $(XML_DEF_SRC).src > $(XML_INTDIR)\$(XML_DEF)
 
 # Creates the libxml shared object.
 $(BINDIR)\$(XML_SO) : $(BINDIR) $(XML_OBJS) $(XML_INTDIR)\$(XML_DEF)
