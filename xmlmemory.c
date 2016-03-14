@@ -473,7 +473,7 @@ xmlMemFree(void *ptr)
 
 error:
     xmlGenericError(xmlGenericErrorContext,
-	    "xmlMemFree(%lX) error\n", (unsigned long) ptr);
+	    "xmlMemFree(%lX) error\n", (uintptr_t) ptr);
     xmlMallocBreakpoint();
     return;
 }
