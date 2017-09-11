@@ -44,6 +44,12 @@
  *     but is done here due to performance. Move it to an other layer
  *     is schema construction via an API is implemented.
  */
+
+/* To avoid EBCDIC trouble when parsing on zOS */
+#if defined(__MVS__)
+#pragma convert("ISO8859-1")
+#endif
+
 #define IN_LIBXML
 #include "libxml.h"
 
@@ -166,7 +172,7 @@ static const xmlChar *xmlNamespaceNs = (const xmlChar *)
 /*
 * Macros for attribute uses.
 */
-#define WXS_ATTRUSE_DECL(au) WXS_ATTR_CAST (WXS_ATTR_USE_CAST (au))->attrDecl
+#define WXS_ATTRUSE_DECL(au) (WXS_ATTR_USE_CAST (au))->attrDecl
 
 #define WXS_ATTRUSE_TYPEDEF(au) WXS_ATTR_TYPEDEF(WXS_ATTRUSE_DECL( WXS_ATTR_USE_CAST au))
 
@@ -363,6 +369,7 @@ typedef struct _xmlSchemaAbstractCtxt xmlSchemaAbstractCtxt;
 typedef xmlSchemaAbstractCtxt *xmlSchemaAbstractCtxtPtr;
 struct _xmlSchemaAbstractCtxt {
     int type; /* E.g. XML_SCHEMA_CTXT_VALIDATOR */
+    void *dummy; /* Fix alignment issues */
 };
 
 typedef struct _xmlSchemaBucket xmlSchemaBucket;
@@ -473,6 +480,7 @@ typedef struct _xmlSchemaBasicItem xmlSchemaBasicItem;
 typedef xmlSchemaBasicItem *xmlSchemaBasicItemPtr;
 struct _xmlSchemaBasicItem {
     xmlSchemaTypeType type;
+    void *dummy; /* Fix alignment issues */
 };
 
 /**
@@ -3168,9 +3176,8 @@ xmlSchemaPSimpleTypeErr(xmlSchemaParserCtxtPtr ctxt,
 		"valid.");
 	}
 	if (expected) {
-	    xmlChar *expectedEscaped;
+	    xmlChar *expectedEscaped = xmlCharStrdup(expected);
 	    msg = xmlStrcat(msg, BAD_CAST " Expected is '");
-	    expectedEscaped = xmlCharStrdup(expected);
 	    msg = xmlStrcat(msg, xmlEscapeFormatString(&expectedEscaped));
 	    FREE_AND_NULL(expectedEscaped);
 	    msg = xmlStrcat(msg, BAD_CAST "'.\n");
@@ -15891,7 +15898,7 @@ xmlSchemaParseCheckCOSValidDefault(xmlSchemaParserCtxtPtr pctxt,
  * STATUS: (seems) complete
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckCTPropsCorrect(xmlSchemaParserCtxtPtr pctxt,
@@ -16138,7 +16145,7 @@ xmlSchemaCheckCOSDerivedOK(xmlSchemaAbstractCtxtPtr actxt,
  *     (1.4.3.2.2.2) "Particle Valid (Extension)"
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckCOSCTExtends(xmlSchemaParserCtxtPtr ctxt,
@@ -16395,7 +16402,7 @@ xmlSchemaCheckCOSCTExtends(xmlSchemaParserCtxtPtr ctxt,
  * Validation Rule: Checking complex type subsumption
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckDerivationOKRestriction(xmlSchemaParserCtxtPtr ctxt,
@@ -16585,7 +16592,7 @@ xmlSchemaCheckDerivationOKRestriction(xmlSchemaParserCtxtPtr ctxt,
  * (3.4.6) Constraints on Complex Type Definition Schema Components
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckCTComponent(xmlSchemaParserCtxtPtr ctxt,
@@ -16615,7 +16622,7 @@ xmlSchemaCheckCTComponent(xmlSchemaParserCtxtPtr ctxt,
  * Complex Type Definition Representation OK (src-ct)
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckSRCCT(xmlSchemaParserCtxtPtr ctxt,
@@ -16784,7 +16791,7 @@ xmlSchemaCheckSRCCT(xmlSchemaParserCtxtPtr ctxt,
  * STATUS: complete
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckParticleRangeOK(int rmin, int rmax,
@@ -16814,7 +16821,7 @@ xmlSchemaCheckParticleRangeOK(int rmin, int rmax,
  *   CLARIFY: (3.2.2)
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckRCaseNameAndTypeOK(xmlSchemaParserCtxtPtr ctxt,
@@ -16919,7 +16926,7 @@ xmlSchemaCheckRCaseNameAndTypeOK(xmlSchemaParserCtxtPtr ctxt,
  * STATUS: complete
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckRCaseNSCompat(xmlSchemaParserCtxtPtr ctxt,
@@ -16963,7 +16970,7 @@ xmlSchemaCheckRCaseNSCompat(xmlSchemaParserCtxtPtr ctxt,
  * STATUS: TODO
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckRCaseRecurseAsIfGroup(xmlSchemaParserCtxtPtr ctxt,
@@ -16989,7 +16996,7 @@ xmlSchemaCheckRCaseRecurseAsIfGroup(xmlSchemaParserCtxtPtr ctxt,
  * STATUS: complete
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckRCaseNSSubset(xmlSchemaParserCtxtPtr ctxt,
@@ -17039,7 +17046,7 @@ xmlSchemaCheckRCaseNSSubset(xmlSchemaParserCtxtPtr ctxt,
  * STATUS: TODO
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckCOSParticleRestrict(xmlSchemaParserCtxtPtr ctxt,
@@ -17080,7 +17087,7 @@ xmlSchemaCheckCOSParticleRestrict(xmlSchemaParserCtxtPtr ctxt,
  * STATUS: TODO: subst-groups
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckRCaseNSRecurseCheckCardinality(xmlSchemaParserCtxtPtr ctxt,
@@ -17135,7 +17142,7 @@ xmlSchemaCheckRCaseNSRecurseCheckCardinality(xmlSchemaParserCtxtPtr ctxt,
  * TODO: subst-groups
  *
  * Returns 0 if the constraints are satisfied, a positive
- * error code if not and -1 if an internal error occured.
+ * error code if not and -1 if an internal error occurred.
  */
 static int
 xmlSchemaCheckRCaseRecurse(xmlSchemaParserCtxtPtr ctxt,
@@ -17765,7 +17772,7 @@ xmlSchemaDeriveAndValidateFacets(xmlSchemaParserCtxtPtr pctxt,
     return (0);
 internal_error:
     PERROR_INT("xmlSchemaDeriveAndValidateFacets",
-	"an error occured");
+	"an error occurred");
     return (-1);
 }
 
@@ -21414,7 +21421,7 @@ exit_failure:
 	ctxt->ownsConstructor = 0;
     }
     PERROR_INT2("xmlSchemaParse",
-	"An internal error occured");
+	"An internal error occurred");
     ctxt->schema = NULL;
     return(NULL);
 }
@@ -22030,7 +22037,7 @@ xmlSchemaAugmentIDC(xmlSchemaIDCPtr idcDef,
  * Creates an augmented IDC definition for the imported schema.
  */
 static void
-xmlSchemaAugmentImportedIDC(xmlSchemaImportPtr imported, xmlSchemaValidCtxtPtr vctxt) {
+xmlSchemaAugmentImportedIDC(xmlSchemaImportPtr imported, xmlSchemaValidCtxtPtr vctxt, xmlChar *name ATTRIBUTE_UNUSED) {
     if (imported->schema->idcDef != NULL) {
 	    xmlHashScan(imported->schema->idcDef ,
 	    (xmlHashScanner) xmlSchemaAugmentIDC, vctxt);
@@ -26095,7 +26102,7 @@ xmlSchemaValidatorPopElem(xmlSchemaValidCtxtPtr vctxt)
 
 	    /*
 	    * Get hold of the still expected content, since a further
-	    * call to xmlRegExecPushString() will loose this information.
+	    * call to xmlRegExecPushString() will lose this information.
 	    */
 	    xmlRegExecNextValues(inode->regexCtxt,
 		&nbval, &nbneg, &values[0], &terminal);
@@ -27151,7 +27158,7 @@ root_found:
 		    }
 		    if (ret < 0) {
 			/*
-			* VAL TODO: A reader error occured; what to do here?
+			* VAL TODO: A reader error occurred; what to do here?
 			*/
 			ret = 1;
 			goto exit;

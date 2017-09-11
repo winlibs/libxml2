@@ -21,20 +21,11 @@ AUTOCONF = .\config.msvc
 # Names of various input and output components.
 XML_NAME = xml2
 XML_BASENAME = lib$(XML_NAME)
-!if "$(DEBUG)" == "1"
-XML_SO = $(XML_BASENAME)_debug.dll
-XML_IMP = $(XML_BASENAME)_debug.lib
-XML_DEF = $(XML_BASENAME)_debug.def
-XML_A = $(XML_BASENAME)_a_debug.lib
-XML_A_DLL = $(XML_BASENAME)_a_dll_debug.lib
-!else
 XML_SO = $(XML_BASENAME).dll
 XML_IMP = $(XML_BASENAME).lib
 XML_DEF = $(XML_BASENAME).def
 XML_A = $(XML_BASENAME)_a.lib
 XML_A_DLL = $(XML_BASENAME)_a_dll.lib
-!endif
-XML_DEF_SRC = $(XML_BASENAME).def
 
 # Place where we let the compiler put its output.
 BINDIR = bin.msvc
@@ -81,12 +72,8 @@ LIBS =
 LIBS = $(LIBS) wsock32.lib ws2_32.lib
 !endif 
 !if "$(WITH_ICONV)" == "1"
-!if "$(DEBUG)" == "1"
-LIBS = $(LIBS) libiconv_debug.lib
-!else
-LIBS = $(LIBS) libiconv.lib
-!endif
-!endif
+LIBS = $(LIBS) iconv.lib
+!endif 
 !if "$(WITH_ICU)" == "1"
 LIBS = $(LIBS) icu.lib
 !endif
@@ -114,10 +101,10 @@ ARFLAGS = /nologo
 CFLAGS = $(CFLAGS) /D "_DEBUG" /Od /Z7
 LDFLAGS = $(LDFLAGS) /DEBUG
 !else
-CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 /Zi /Fd$(BINDIR)\libxml2.pdb
+CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 
 # commented out as this break VC10 c.f. 634846
 # LDFLAGS = $(LDFLAGS) /OPT:NOWIN98
-LDFLAGS = $(LDFLAGS) /PDB:$(BINDIR)\libxml2.pdb
+LDFLAGS = $(LDFLAGS)
 !endif
 
 # Libxml object files.
@@ -384,8 +371,8 @@ $(XML_OBJS_A) : $(XML_INTDIR_A)
 $(XML_OBJS_A_DLL) : $(XML_INTDIR_A_DLL) 
 
 # Creates the export definition file (DEF) for libxml.
-$(XML_INTDIR)\$(XML_DEF) : $(XML_INTDIR) $(XML_DEF_SRC).src
-	$(CPP) $(CPPFLAGS) $(XML_DEF_SRC).src > $(XML_INTDIR)\$(XML_DEF)
+$(XML_INTDIR)\$(XML_DEF) : $(XML_INTDIR) $(XML_DEF).src
+	$(CPP) $(CPPFLAGS) $(XML_DEF).src > $(XML_INTDIR)\$(XML_DEF)
 
 # Creates the libxml shared object.
 $(BINDIR)\$(XML_SO) : $(BINDIR) $(XML_OBJS) $(XML_INTDIR)\$(XML_DEF)

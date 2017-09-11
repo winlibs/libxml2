@@ -4089,8 +4089,9 @@ rollback:
 		    xmlFree(exec->errString);
 		exec->errString = xmlStrdup(value);
 		exec->errState = exec->state;
-		memcpy(exec->errCounts, exec->counts,
-		       exec->comp->nbCounters * sizeof(int));
+                if (exec->comp->nbCounters)
+                    memcpy(exec->errCounts, exec->counts,
+                           exec->comp->nbCounters * sizeof(int));
 	    }
 
 	    /*
@@ -4880,7 +4881,8 @@ xmlFAParseCharClassEsc(xmlRegParserCtxtPtr ctxt) {
 	}
 	NEXT;
 	xmlFAParseCharProp(ctxt);
-	ctxt->atom->neg = 1;
+        if (ctxt->atom != NULL)
+	    ctxt->atom->neg = 1;
 	if (CUR != '}') {
 	    ERROR("Expecting '}'");
 	    return;
@@ -5051,7 +5053,7 @@ xmlFAParseCharRange(xmlRegParserCtxtPtr ctxt) {
 		return;
 	}
         len = 1;
-    } else if ((cur != 0x5B) && (cur != 0x5D)) {
+    } else if ((cur != '\0') && (cur != 0x5B) && (cur != 0x5D)) {
         end = CUR_SCHAR(ctxt->cur, len);
     } else {
 	ERROR("Expecting the end of a char range");
