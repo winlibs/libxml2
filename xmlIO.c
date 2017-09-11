@@ -826,7 +826,7 @@ static int
 xmlFdRead (void * context, char * buffer, int len) {
     int ret;
 
-    ret = read((int) (long) context, &buffer[0], len);
+    ret = read((int) (intptr_t) context, &buffer[0], len);
     if (ret < 0) xmlIOErr(0, "read()");
     return(ret);
 }
@@ -847,7 +847,7 @@ xmlFdWrite (void * context, const char * buffer, int len) {
     int ret = 0;
 
     if (len > 0) {
-	ret = write((int) (long) context, &buffer[0], len);
+	ret = write((int) (intptr_t) context, &buffer[0], len);
 	if (ret < 0) xmlIOErr(0, "write()");
     }
     return(ret);
@@ -865,7 +865,7 @@ xmlFdWrite (void * context, const char * buffer, int len) {
 static int
 xmlFdClose (void * context) {
     int ret;
-    ret = close((int) (long) context);
+    ret = close((int) (intptr_t) context);
     if (ret < 0) xmlIOErr(0, "close()");
     return(ret);
 }
@@ -3008,7 +3008,7 @@ xmlParserInputBufferCreateFd(int fd, xmlCharEncoding enc) {
 
     ret = xmlAllocParserInputBuffer(enc);
     if (ret != NULL) {
-        ret->context = (void *) (long) fd;
+        ret->context = (void *) (intptr_t) fd;
 	ret->readcallback = xmlFdRead;
 	ret->closecallback = xmlFdClose;
     }
@@ -3114,7 +3114,7 @@ xmlOutputBufferCreateFd(int fd, xmlCharEncodingHandlerPtr encoder) {
 
     ret = xmlAllocOutputBufferInternal(encoder);
     if (ret != NULL) {
-        ret->context = (void *) (long) fd;
+        ret->context = (void *) (intptr_t) fd;
 	ret->writecallback = xmlFdWrite;
 	ret->closecallback = NULL;
     }
