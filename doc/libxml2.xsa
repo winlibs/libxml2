@@ -8,93 +8,24 @@
   </vendor>
   <product id="libxml2">
     <name>libxml2</name>
-    <version>2.9.4</version>
-    <last-release> May 23 2016</last-release>
+    <version>v2.9.6</version>
+    <last-release> Oct 06 2017</last-release>
     <info-url>http://xmlsoft.org/</info-url>
-    <changes>   - Security:
-  More format string warnings with possible format string vulnerability (David Kilzer),
-  Avoid building recursive entities (Daniel Veillard),
-  Heap-based buffer overread in htmlCurrentChar (Pranjal Jumde),
-  Heap-based buffer-underreads due to xmlParseName (David Kilzer),
-  Heap use-after-free in xmlSAX2AttributeNs (Pranjal Jumde),
-  Heap use-after-free in htmlParsePubidLiteral and htmlParseSystemiteral (Pranjal Jumde),
-  Fix some format string warnings with possible format string vulnerability (David Kilzer),
-  Detect change of encoding when parsing HTML names (Hugh Davenport),
-  Fix inappropriate fetch of entities content (Daniel Veillard),
-  Bug 759398: Heap use-after-free in xmlDictComputeFastKey &lt;https://bugzilla.gnome.org/show_bug.cgi?id=759398&gt; (Pranjal Jumde),
-  Bug 758605: Heap-based buffer overread in xmlDictAddString &lt;https://bugzilla.gnome.org/show_bug.cgi?id=758605&gt; (Pranjal Jumde),
-  Bug 758588: Heap-based buffer overread in xmlParserPrintFileContextInternal &lt;https://bugzilla.gnome.org/show_bug.cgi?id=758588&gt; (David Kilzer),
-  Bug 757711: heap-buffer-overflow in xmlFAParsePosCharGroup &lt;https://bugzilla.gnome.org/show_bug.cgi?id=757711&gt; (Pranjal Jumde),
-  Add missing increments of recursion depth counter to XML parser. (Peter Simons)
-  
-   - Documentation:
-  Fix typo: s{ ec -&gt; cr }cipt (Jan Pokorný),
-  Fix typos: dictio{ nn -&gt; n }ar{y,ies} (Jan Pokorný),
-  Fix typos: PATH_{ SEAPARATOR -&gt; SEPARATOR } (Jan Pokorný),
-  Correct a typo. (Shlomi Fish)
-  
-   - Portability:
-  Correct the usage of LDFLAGS (Mattias Hansson),
-  Revert the use of SAVE_LDFLAGS in configure.ac (Mattias Hansson),
-  libxml2 hardcodes -L/lib in zlib/lzma tests which breaks cross-compiles (Mike Frysinger),
-  Fix apibuild for a recently added construct (Daniel Veillard),
-  Use pkg-config to locate zlib when possible (Stewart Brodie),
-  Use pkg-config to locate ICU when possible (Stewart Brodie),
-  Portability to non C99 compliant compilers (Patrick Monnerat),
-  dict.h: Move xmlDictPtr definition before includes to allow direct inclusion. (Patrick Monnerat),
-  os400: tell about xmllint and xmlcatalog in README400. (Patrick Monnerat),
-  os400: properly process SGML add in XMLCATALOG command. (Patrick Monnerat),
-  os400: implement CL command XMLCATALOG. (Patrick Monnerat),
-  os400: compile and install program xmlcatalog (qshell-only). (Patrick Monnerat),
-  os400: expand tabs in sources, strip trailing blanks. (Patrick Monnerat),
-  os400: implement CL command XMLLINT. (Patrick Monnerat),
-  os400: compile and install program xmllint (qshell-only). (Patrick Monnerat),
-  os400: initscript make_module(): Use options instead of positional parameters. (Patrick Monnerat),
-  os400: c14n.rpgle: allow *omit for nullable reference parameters. (Patrick Monnerat),
-  os400: use like() for double type. (Patrick Monnerat),
-  os400: use like() for int type. (Patrick Monnerat),
-  os400: use like() for unsigned int type. (Patrick Monnerat),
-  os400: use like() for enum types. (Patrick Monnerat),
-  Add xz to xml2-config --libs output (Baruch Siach),
-  Bug 760190: configure.ac should be able to build --with-icu without icu-config tool &lt;https://bugzilla.gnome.org/show_bug.cgi?id=760190&gt; (David Kilzer),
-  win32\VC10\config.h and VS 2015 (Bruce Dawson),
-  Add configure maintainer mode (orzen)
+    <changes>   - Portability:
+  Change preprocessor OS tests to __linux__ (Nick Wellnhofer)
   
    - Bug Fixes:
-  Avoid an out of bound access when serializing malformed strings (Daniel Veillard),
-  Unsigned addition may overflow in xmlMallocAtomicLoc() (David Kilzer),
-  Integer signed/unsigned type mismatch in xmlParserInputGrow() (David Kilzer),
-  Bug 763071: heap-buffer-overflow in xmlStrncat &lt;https://bugzilla.gnome.org/show_bug.cgi?id=763071&gt; (Pranjal Jumde),
-  Integer overflow parsing port number in URI (Michael Paddon),
-  Fix an error with regexp on nullable counted char transition (Daniel Veillard),
-  Fix memory leak with XPath namespace nodes (Nick Wellnhofer),
-  Fix namespace axis traversal (Nick Wellnhofer),
-      Fix null pointer deref in docs with no root element (Hugh Davenport),
-  Fix XSD validation of URIs with ampersands (Alex Henrie),
-  xmlschemastypes.c: accept endOfDayFrag Times set to "24:00:00" mean "end of day" and should not cause an error. (Patrick Monnerat),
-  xmlcatalog: flush stdout before interactive shell input. (Patrick Monnerat),
-  xmllint: flush stdout before interactive shell input. (Patrick Monnerat),
-  Don't recurse into OP_VALUEs in xmlXPathOptimizeExpression (Nick Wellnhofer),
-  Fix namespace::node() XPath expression (Nick Wellnhofer),
-  Fix OOB write in xmlXPathEmptyNodeSet (Nick Wellnhofer),
-  Fix parsing of NCNames in XPath (Nick Wellnhofer),
-  Fix OOB read with invalid UTF-8 in xmlUTF8Strsize (Nick Wellnhofer),
-  Do normalize string-based datatype value in RelaxNG facet checking (Audric Schiltknecht),
-  Bug 760921: REGRESSION (8eb55d78): doc/examples/io1 test fails after fix for "xmlSaveUri() incorrectly recomposes URIs with rootless paths" &lt;https://bugzilla.gnome.org/show_bug.cgi?id=760921&gt; (David Kilzer),
-  Bug 760861: REGRESSION (bf9c1dad): Missing results for test/schemas/regexp-char-ref_[01].xsd &lt;https://bugzilla.gnome.org/show_bug.cgi?id=760861&gt; (David Kilzer),
-  error.c: *input-&gt;cur == 0 does not mean no error (Pavel Raiskup),
-  Add missing RNG test files (David Kilzer),
-  Bug 760183: REGRESSION (v2.9.3): XML push parser fails with bogus UTF-8 encoding error when multi-byte character in large CDATA section is split across buffer &lt;https://bugzilla.gnome.org/show_bug.cgi?id=760183&gt; (David Kilzer),
-  Bug 758572: ASAN crash in make check &lt;https://bugzilla.gnome.org/show_bug.cgi?id=758572&gt; (David Kilzer),
-  Bug 721158: Missing ICU string when doing --version on xmllint &lt;https://bugzilla.gnome.org/show_bug.cgi?id=721158&gt; (David Kilzer),
-  python 3: libxml2.c wrappers create Unicode str already (Michael Stahl),
-  Add autogen.sh to distrib (orzen),
-  Heap-based buffer overread in xmlNextChar (Daniel Veillard)
-  
-   - Improvements:
-  Add more debugging info to runtest (Daniel Veillard),
-  Implement "runtest -u" mode (David Kilzer),
-  Add a make rule to rebuild for ASAN (Daniel Veillard)
+  Fix XPath stack frame logic (Nick Wellnhofer),
+  Report undefined XPath variable error message (Nick Wellnhofer),
+  Fix regression with librsvg (Nick Wellnhofer),
+  Handle more invalid entity values in recovery mode (Nick Wellnhofer),
+  Fix structured validation errors (Nick Wellnhofer),
+  Fix memory leak in LZMA decompressor (Nick Wellnhofer),
+  Set memory limit for LZMA decompression (Nick Wellnhofer),
+  Handle illegal entity values in recovery mode (Nick Wellnhofer),
+  Fix debug dump of streaming XPath expressions (Nick Wellnhofer),
+  Fix memory leak in nanoftp (Nick Wellnhofer),
+  Fix memory leaks in SAX1 parser (Nick Wellnhofer)
   
 
 </changes>

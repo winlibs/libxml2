@@ -978,6 +978,7 @@ xmlTextReaderValidatePush(xmlTextReaderPtr reader ATTRIBUTE_UNUSED) {
 	     */
 	    node = xmlTextReaderExpand(reader);
 	    if (node == NULL) {
+printf("Expand failed !\n");
 	        ret = -1;
 	    } else {
 		ret = xmlRelaxNGValidateFullElement(reader->rngValidCtxt,

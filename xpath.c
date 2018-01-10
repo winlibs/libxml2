@@ -24,6 +24,7 @@
 
 #include <limits.h>
 #include <string.h>
+#include <stddef.h>
 
 #ifdef HAVE_SYS_TYPES_H
 #include <sys/types.h>
@@ -159,7 +160,7 @@ xmlXPathCmpNodesExt(xmlNodePtr node1, xmlNodePtr node2) {
     int misc = 0, precedence1 = 0, precedence2 = 0;
     xmlNodePtr miscNode1 = NULL, miscNode2 = NULL;
     xmlNodePtr cur, root;
-    long l1, l2;
+    ptrdiff_t l1, l2;
 
     if ((node1 == NULL) || (node2 == NULL))
 	return(-2);
@@ -173,12 +174,12 @@ xmlXPathCmpNodesExt(xmlNodePtr node1, xmlNodePtr node2) {
     switch (node1->type) {
 	case XML_ELEMENT_NODE:
 	    if (node2->type == XML_ELEMENT_NODE) {
-		if ((0 > (intptr_t) node1->content) && /* TODO: Would a != 0 suffice here? */
-		    (0 > (intptr_t) node2->content) &&
+		if ((0 > (ptrdiff_t) node1->content) &&
+		    (0 > (ptrdiff_t) node2->content) &&
 		    (node1->doc == node2->doc))
 		{
-		    l1 = -((intptr_t) node1->content);
-		    l2 = -((intptr_t) node2->content);
+		    l1 = -((ptrdiff_t) node1->content);
+		    l2 = -((ptrdiff_t) node2->content);
 		    if (l1 < l2)
 			return(1);
 		    if (l1 > l2)
@@ -223,7 +224,7 @@ xmlXPathCmpNodesExt(xmlNodePtr node1, xmlNodePtr node2) {
 		node1 = node1->parent;
 	    }
 	    if ((node1 == NULL) || (node1->type != XML_ELEMENT_NODE) ||
-		(0 <= (intptr_t) node1->content)) {
+		(0 <= (ptrdiff_t) node1->content)) {
 		/*
 		* Fallback for whatever case.
 		*/
@@ -273,7 +274,7 @@ xmlXPathCmpNodesExt(xmlNodePtr node1, xmlNodePtr node2) {
 		node2 = node2->parent;
 	    }
 	    if ((node2 == NULL) || (node2->type != XML_ELEMENT_NODE) ||
-		(0 <= (intptr_t) node2->content))
+		(0 <= (ptrdiff_t) node2->content))
 	    {
 		node2 = miscNode2;
 		precedence2 = 0;
@@ -346,12 +347,12 @@ xmlXPathCmpNodesExt(xmlNodePtr node1, xmlNodePtr node2) {
      */
     if ((node1->type == XML_ELEMENT_NODE) &&
 	(node2->type == XML_ELEMENT_NODE) &&
-	(0 > (intptr_t) node1->content) &&
-	(0 > (intptr_t) node2->content) &&
+	(0 > (ptrdiff_t) node1->content) &&
+	(0 > (ptrdiff_t) node2->content) &&
 	(node1->doc == node2->doc)) {
 
-	l1 = -((intptr_t) node1->content);
-	l2 = -((intptr_t) node2->content);
+	l1 = -((ptrdiff_t) node1->content);
+	l2 = -((ptrdiff_t) node2->content);
 	if (l1 < l2)
 	    return(1);
 	if (l1 > l2)
@@ -414,12 +415,12 @@ turtle_comparison:
      */
     if ((node1->type == XML_ELEMENT_NODE) &&
 	(node2->type == XML_ELEMENT_NODE) &&
-	(0 > (intptr_t) node1->content) &&
-	(0 > (intptr_t) node2->content) &&
+	(0 > (ptrdiff_t) node1->content) &&
+	(0 > (ptrdiff_t) node2->content) &&
 	(node1->doc == node2->doc)) {
 
-	l1 = -((intptr_t) node1->content);
-	l2 = -((intptr_t) node2->content);
+	l1 = -((ptrdiff_t) node1->content);
+	l2 = -((ptrdiff_t) node2->content);
 	if (l1 < l2)
 	    return(1);
 	if (l1 > l2)
@@ -1678,10 +1679,17 @@ xmlXPathDebugDumpCompExpr(FILE *output, xmlXPathCompExprPtr comp,
 
     fprintf(output, "%s", shift);
 
-    fprintf(output, "Compiled Expression : %d elements\n",
-	    comp->nbStep);
-    i = comp->last;
-    xmlXPathDebugDumpStepOp(output, comp, &comp->steps[i], depth + 1);
+#ifdef XPATH_STREAMING
+    if (comp->stream) {
+        fprintf(output, "Streaming Expression\n");
+    } else
+#endif
+    {
+        fprintf(output, "Compiled Expression : %d elements\n",
+                comp->nbStep);
+        i = comp->last;
+        xmlXPathDebugDumpStepOp(output, comp, &comp->steps[i], depth + 1);
+    }
 }
 
 #ifdef XP_DEBUG_OBJ_USAGE
@@ -3232,7 +3240,7 @@ xmlXPathFormatNumber(double number, char buffer[], int buffersize)
  */
 long
 xmlXPathOrderDocElems(xmlDocPtr doc) {
-    intptr_t count = 0;
+    ptrdiff_t count = 0;
     xmlNodePtr cur;
 
     if (doc == NULL)
@@ -3264,7 +3272,7 @@ xmlXPathOrderDocElems(xmlDocPtr doc) {
 	    }
 	} while (cur != NULL);
     }
-    return(count);
+    return((long) count);
 }
 
 /**
@@ -3332,13 +3340,13 @@ xmlXPathCmpNodes(xmlNodePtr node1, xmlNodePtr node2) {
      */
     if ((node1->type == XML_ELEMENT_NODE) &&
 	(node2->type == XML_ELEMENT_NODE) &&
-	(0 > (intptr_t) node1->content) &&
-	(0 > (intptr_t) node2->content) &&
+	(0 > (ptrdiff_t) node1->content) &&
+	(0 > (ptrdiff_t) node2->content) &&
 	(node1->doc == node2->doc)) {
-	intptr_t l1, l2;
+	ptrdiff_t l1, l2;
 
-	l1 = -((intptr_t) node1->content);
-	l2 = -((intptr_t) node2->content);
+	l1 = -((ptrdiff_t) node1->content);
+	l2 = -((ptrdiff_t) node2->content);
 	if (l1 < l2)
 	    return(1);
 	if (l1 > l2)
@@ -3395,13 +3403,13 @@ xmlXPathCmpNodes(xmlNodePtr node1, xmlNodePtr node2) {
      */
     if ((node1->type == XML_ELEMENT_NODE) &&
 	(node2->type == XML_ELEMENT_NODE) &&
-	(0 > (intptr_t) node1->content) &&
-	(0 > (intptr_t) node2->content) &&
+	(0 > (ptrdiff_t) node1->content) &&
+	(0 > (ptrdiff_t) node2->content) &&
 	(node1->doc == node2->doc)) {
-	intptr_t l1, l2;
+	ptrdiff_t l1, l2;
 
-	l1 = -((intptr_t) node1->content);
-	l2 = -((intptr_t) node2->content);
+	l1 = -((ptrdiff_t) node1->content);
+	l2 = -((ptrdiff_t) node2->content);
 	if (l1 < l2)
 	    return(1);
 	if (l1 > l2)
@@ -6393,16 +6401,12 @@ xmlXPathNodeValHash(xmlNodePtr node) {
     }
     while (tmp != NULL) {
 	switch (tmp->type) {
-	    case XML_COMMENT_NODE:
-	    case XML_PI_NODE:
 	    case XML_CDATA_SECTION_NODE:
 	    case XML_TEXT_NODE:
 		string = tmp->content;
 		break;
-	    case XML_NAMESPACE_DECL:
-		string = ((xmlNsPtr)tmp)->href;
-		break;
 	    default:
+                string = NULL;
 		break;
 	}
 	if ((string != NULL) && (string[0] != 0)) {
@@ -7038,7 +7042,7 @@ xmlXPathEqualValuesCommon(xmlXPathParserContextPtr ctxt,
 		    valuePush(ctxt, arg2);
 		    xmlXPathNumberFunction(ctxt, 1);
 		    arg2 = valuePop(ctxt);
-		    /* no break on purpose */
+                    /* Falls through. */
 		case XPATH_NUMBER:
 		    /* Hand check NaN and Infinity equalities */
 		    if (xmlXPathIsNaN(arg1->floatval) ||
@@ -11925,11 +11929,11 @@ xmlXPathCompOpEvalPositionalPredicate(xmlXPathParserContextPtr ctxt,
 		}
 	    }
 
-            frame = xmlXPathSetFrame(ctxt);
 	    valuePush(ctxt, contextObj);
+            frame = xmlXPathSetFrame(ctxt);
 	    res = xmlXPathCompOpEvalToBoolean(ctxt, exprOp, 1);
-            tmp = valuePop(ctxt);
             xmlXPathPopFrame(ctxt, frame);
+            tmp = valuePop(ctxt);
 
 	    if ((ctxt->error != XPATH_EXPRESSION_OK) || (res == -1)) {
                 while (tmp != contextObj) {
@@ -13524,10 +13528,8 @@ xmlXPathCompOpEval(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op)
                         xmlXPathCompOpEval(ctxt, &comp->steps[op->ch1]);
                 if (op->value5 == NULL) {
 		    val = xmlXPathVariableLookup(ctxt->context, op->value4);
-		    if (val == NULL) {
-			ctxt->error = XPATH_UNDEF_VARIABLE_ERROR;
-			return(0);
-		    }
+		    if (val == NULL)
+			XP_ERROR0(XPATH_UNDEF_VARIABLE_ERROR);
                     valuePush(ctxt, val);
 		} else {
                     const xmlChar *URI;
@@ -13542,10 +13544,8 @@ xmlXPathCompOpEval(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op)
                     }
 		    val = xmlXPathVariableLookupNS(ctxt->context,
                                                        op->value4, URI);
-		    if (val == NULL) {
-			ctxt->error = XPATH_UNDEF_VARIABLE_ERROR;
-			return(0);
-		    }
+		    if (val == NULL)
+			XP_ERROR0(XPATH_UNDEF_VARIABLE_ERROR);
                     valuePush(ctxt, val);
                 }
                 return (total);
