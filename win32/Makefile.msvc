@@ -21,12 +21,21 @@ AUTOCONF = .\config.msvc
 # Names of various input and output components.
 XML_NAME = xml2
 XML_BASENAME = lib$(XML_NAME)
+!if "$(DEBUG)" == "1"
+XML_SO = $(XML_BASENAME)_debug.dll
+XML_IMP = $(XML_BASENAME)_debug.lib
+XML_A = $(XML_BASENAME)_a_debug.lib
+XML_A_DLL = $(XML_BASENAME)_a_dll_debug.lib
+XML_PDB = $(XML_BASENAME)_debug.pdb
+!else
 XML_SO = $(XML_BASENAME).dll
-XML_RES = $(XML_BASENAME).res
 XML_IMP = $(XML_BASENAME).lib
-XML_DEF = $(XML_BASENAME).def
 XML_A = $(XML_BASENAME)_a.lib
 XML_A_DLL = $(XML_BASENAME)_a_dll.lib
+XML_PDB = $(XML_BASENAME).pdb
+!endif
+XML_RES = $(XML_BASENAME).res
+XML_DEF = $(XML_BASENAME).def
 
 # Place where we let the compiler put its output.
 BINDIR = bin.msvc
@@ -67,8 +76,12 @@ LIBS =
 LIBS = $(LIBS) wsock32.lib ws2_32.lib
 !endif 
 !if "$(WITH_ICONV)" == "1"
-LIBS = $(LIBS) iconv.lib
-!endif 
+!if "$(DEBUG)" == "1"
+LIBS = $(LIBS) libiconv_debug.lib
+!else
+LIBS = $(LIBS) libiconv.lib
+!endif
+!endif
 !if "$(WITH_ICU)" == "1"
 !if "$(STATIC)" == "1"
 LIBS = $(LIBS) advapi32.lib sicuuc.lib sicuin.lib sicudt.lib
@@ -100,7 +113,7 @@ ARFLAGS = /nologo
 CFLAGS = $(CFLAGS) /D "_DEBUG" /Od /Z7
 LDFLAGS = $(LDFLAGS) /DEBUG
 !else
-CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 
+CFLAGS = $(CFLAGS) /D "NDEBUG" /O2
 # commented out as this break VC10 c.f. 634846
 # LDFLAGS = $(LDFLAGS) /OPT:NOWIN98
 LDFLAGS = $(LDFLAGS)
@@ -353,15 +366,15 @@ $(XML_INTDIR_A_DLL) :
 
 # An implicit rule for libxml compilation.
 {$(XML_SRCDIR)}.c{$(XML_INTDIR)}.obj::
-	$(CC) $(CFLAGS) /Fo$(XML_INTDIR)\ /c $<
+	$(CC) $(CFLAGS) /Fo$(XML_INTDIR)\ /Zi /Fd$(BINDIR)\$(XML_PDB) /c $<
 
 # An implicit rule for static libxml compilation.
 {$(XML_SRCDIR)}.c{$(XML_INTDIR_A)}.obj::
-	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /Fo$(XML_INTDIR_A)\ /c $<
+	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /Fo$(XML_INTDIR_A)\ /Zi /Fd$(BINDIR)\$(XML_PDB) /c $<
 
 # An implicit rule for static for dll libxml compilation.
 {$(XML_SRCDIR)}.c{$(XML_INTDIR_A_DLL)}.obj::
-	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /D "LIBXML_STATIC_FOR_DLL" /Fo$(XML_INTDIR_A_DLL)\ /c $<
+	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /D "LIBXML_STATIC_FOR_DLL" /Fo$(XML_INTDIR_A_DLL)\ /Zi /Fd$(BINDIR)\$(XML_PDB) /c $<
 
 # Compiles libxml source. Uses the implicit rule for commands.
 $(XML_OBJS) : $(XML_INTDIR) 
