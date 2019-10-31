@@ -641,7 +641,7 @@ def checkLanguageID(lang):
       ([a-z] | [A-Z]) ([a-z] | [A-Z]) [36] IanaCode ::= ('i' |
       'I') '-' ([a-z] | [A-Z])+ [37] UserCode ::= ('x' | 'X') '-'
       ([a-z] | [A-Z])+ [38] Subcode ::= ([a-z] | [A-Z])+  The
-      current REC reference the sucessors of RFC 1766, currently
+      current REC reference the successors of RFC 1766, currently
       5646  http://www.rfc-editor.org/rfc/rfc5646.txt langtag    
       = language ["-" script] ["-" region] *("-" variant) *("-"
       extension) ["-" privateuse] language      = 2*3ALPHA       
@@ -848,7 +848,7 @@ def relaxNGCleanupTypes():
     libxml2mod.xmlRelaxNGCleanupTypes()
 
 def relaxNGInitTypes():
-    """Initilize the default type libraries. """
+    """Initialize the default type libraries. """
     ret = libxml2mod.xmlRelaxNGInitTypes()
     return ret
 
@@ -984,7 +984,7 @@ def buildRelativeURI(URI, base):
       img/pic1.gif                     ../img/pic1.gif
       http://site1.com/docs/pic1.gif  
       http://site1.com/docs/pic1.gif   Note: if the URI reference
-      is really wierd or complicated, it may be worthwhile to
+      is really weird or complicated, it may be worthwhile to
       first convert it into a "nice" one by calling xmlBuildURI
       (using 'base') before calling this routine, since this
       routine (for reasonable efficiency) assumes URI has already
@@ -3211,7 +3211,7 @@ class xmlDoc(xmlNode):
         libxml2mod.htmlDocContentDumpFormatOutput(buf__o, self._o, encoding, format)
 
     def htmlDocContentDumpOutput(self, buf, encoding):
-        """Dump an HTML document. Formating return/spaces are added. """
+        """Dump an HTML document. Formatting return/spaces are added. """
         if buf is None: buf__o = None
         else: buf__o = buf._o
         libxml2mod.htmlDocContentDumpOutput(buf__o, self._o, encoding)
@@ -3299,7 +3299,7 @@ class xmlDoc(xmlNode):
         libxml2mod.xmlDebugDumpDocument(output, self._o)
 
     def debugDumpDocumentHead(self, output):
-        """Dumps debug information cncerning the document, not
+        """Dumps debug information concerning the document, not
            recursive """
         libxml2mod.xmlDebugDumpDocumentHead(output, self._o)
 
@@ -3367,7 +3367,7 @@ class xmlDoc(xmlNode):
         """Create a new entity, this differs from xmlAddDocEntity()
           that if the document is None or has no internal subset
           defined, then an unlinked entity structure will be
-          returned, it is then the responsability of the caller to
+          returned, it is then the responsibility of the caller to
           link it to the document later or free it when not needed
            anymore. """
         ret = libxml2mod.xmlNewEntity(self._o, name, type, ExternalID, SystemID, content)
@@ -4459,10 +4459,10 @@ class parserCtxt(parserCtxtCore):
         libxml2mod.xmlParseDocTypeDecl(self._o)
 
     def parseElement(self):
-        """parse an XML element, this is highly recursive  [39]
-          element ::= EmptyElemTag | STag content ETag  [ WFC:
-          Element Type Match ] The Name in an element's end-tag must
-           match the element type in the start-tag. """
+        """parse an XML element  [39] element ::= EmptyElemTag | STag
+          content ETag  [ WFC: Element Type Match ] The Name in an
+          element's end-tag must match the element type in the
+           start-tag. """
         libxml2mod.xmlParseElement(self._o)
 
     def parseElementDecl(self):
@@ -4607,7 +4607,7 @@ class parserCtxt(parserCtxtCore):
     def parsePI(self):
         """parse an XML Processing Instruction.  [16] PI ::= '<?'
           PITarget (S (Char* - (Char* '?>' Char*)))? '?>'  The
-           processing is transfered to SAX once parsed. """
+           processing is transferred to SAX once parsed. """
         libxml2mod.xmlParsePI(self._o)
 
     def parsePITarget(self):
@@ -5255,7 +5255,7 @@ class outputBuffer(ioWriteWrapper):
         libxml2mod.htmlDocContentDumpFormatOutput(self._o, cur__o, encoding, format)
 
     def htmlDocContentDumpOutput(self, cur, encoding):
-        """Dump an HTML document. Formating return/spaces are added. """
+        """Dump an HTML document. Formatting return/spaces are added. """
         if cur is None: cur__o = None
         else: cur__o = cur._o
         libxml2mod.htmlDocContentDumpOutput(self._o, cur__o, encoding)
@@ -5439,7 +5439,8 @@ class relaxNgParserCtxt:
 
     def relaxNGParse(self):
         """parse a schema definition resource and build an internal
-           XML Shema struture which can be used to validate instances. """
+          XML Schema structure which can be used to validate
+           instances. """
         ret = libxml2mod.xmlRelaxNGParse(self._o)
         if ret is None:raise parserError('xmlRelaxNGParse() failed')
         __tmp = relaxNgSchema(_obj=ret)
@@ -5489,7 +5490,7 @@ class relaxNgSchema:
     def RelaxNGSetSchema(self, reader):
         """Use RelaxNG to validate the document as it is processed.
           Activation is only possible before the first Read(). if
-          @schema is None, then RelaxNG validation is desactivated. @
+          @schema is None, then RelaxNG validation is deactivated. @
           The @schema should not be freed until the reader is
            deallocated or its use has been deactivated. """
         if reader is None: reader__o = None
@@ -5583,7 +5584,8 @@ class SchemaParserCtxt:
 
     def schemaParse(self):
         """parse a schema definition resource and build an internal
-           XML Shema struture which can be used to validate instances. """
+          XML Schema structure which can be used to validate
+           instances. """
         ret = libxml2mod.xmlSchemaParse(self._o)
         if ret is None:raise parserError('xmlSchemaParse() failed')
         __tmp = Schema(_obj=ret)
@@ -5606,9 +5608,9 @@ class Schema:
     def SetSchema(self, reader):
         """Use XSD Schema to validate the document as it is processed.
           Activation is only possible before the first Read(). if
-          @schema is None, then Schema validation is desactivated. @
-          The @schema should not be freed until the reader is
-           deallocated or its use has been deactivated. """
+          @schema is None, then Schema validation is deactivated. The
+          @schema should not be freed until the reader is deallocated
+           or its use has been deactivated. """
         if reader is None: reader__o = None
         else: reader__o = reader._o
         ret = libxml2mod.xmlTextReaderSetSchema(reader__o, self._o)
@@ -5770,7 +5772,7 @@ class xmlTextReader(xmlTextReaderCore):
 
     def CurrentDoc(self):
         """Hacking interface allowing to get the xmlDocPtr
-          correponding to the current document being accessed by the
+          corresponding to the current document being accessed by the
           xmlTextReader. NOTE: as a result of this call, the reader
           will not destroy the associated XML document and calling
           xmlFreeDoc() on the result is needed once the reader
@@ -5782,7 +5784,7 @@ class xmlTextReader(xmlTextReaderCore):
 
     def CurrentNode(self):
         """Hacking interface allowing to get the xmlNodePtr
-          correponding to the current node being accessed by the
+          corresponding to the current node being accessed by the
           xmlTextReader. This is dangerous because the underlying
            node may be destroyed on the next Reads. """
         ret = libxml2mod.xmlTextReaderCurrentNode(self._o)
@@ -5846,9 +5848,9 @@ class xmlTextReader(xmlTextReaderCore):
           method stops the parser, set its state to End Of File and
           return the input stream with what is left that the parser
           did not use.  The implementation is not good, the parser
-          certainly procgressed past what's left in reader->input,
-          and there is an allocation problem. Best would be to
-           rewrite it differently. """
+          certainly progressed past what's left in reader->input, and
+          there is an allocation problem. Best would be to rewrite it
+           differently. """
         ret = libxml2mod.xmlTextReaderGetRemainder(self._o)
         if ret is None:raise treeError('xmlTextReaderGetRemainder() failed')
         __tmp = inputBuffer(_obj=ret)
@@ -6072,7 +6074,7 @@ class xmlTextReader(xmlTextReaderCore):
     def RelaxNGSetSchema(self, schema):
         """Use RelaxNG to validate the document as it is processed.
           Activation is only possible before the first Read(). if
-          @schema is None, then RelaxNG validation is desactivated. @
+          @schema is None, then RelaxNG validation is deactivated. @
           The @schema should not be freed until the reader is
            deallocated or its use has been deactivated. """
         if schema is None: schema__o = None
@@ -6126,9 +6128,9 @@ class xmlTextReader(xmlTextReaderCore):
     def SetSchema(self, schema):
         """Use XSD Schema to validate the document as it is processed.
           Activation is only possible before the first Read(). if
-          @schema is None, then Schema validation is desactivated. @
-          The @schema should not be freed until the reader is
-           deallocated or its use has been deactivated. """
+          @schema is None, then Schema validation is deactivated. The
+          @schema should not be freed until the reader is deallocated
+           or its use has been deactivated. """
         if schema is None: schema__o = None
         else: schema__o = schema._o
         ret = libxml2mod.xmlTextReaderSetSchema(self._o, schema__o)
@@ -8205,6 +8207,8 @@ XPATH_INVALID_CHAR_ERROR = 21
 XPATH_INVALID_CTXT = 22
 XPATH_STACK_ERROR = 23
 XPATH_FORBID_VARIABLE_ERROR = 24
+XPATH_OP_LIMIT_EXCEEDED = 25
+XPATH_RECURSION_LIMIT_EXCEEDED = 26
 
 # xmlTextReaderMode
 XML_TEXTREADER_MODE_INITIAL = 0
