@@ -1,5 +1,6 @@
 /* Generated */
 
+#define PY_SSIZE_T_CLEAN
 #include <Python.h>
 #include <libxml/xmlversion.h>
 #include <libxml/tree.h>
@@ -62,7 +63,7 @@ libxml_htmlCreateMemoryParserCtxt(PyObject *self ATTRIBUTE_UNUSED, PyObject *arg
     PyObject *py_retval;
     htmlParserCtxtPtr c_retval;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
 
     if (!PyArg_ParseTuple(args, (char *)"s#i:htmlCreateMemoryParserCtxt", &buffer, &py_buffsize0, &size))
@@ -149,7 +150,7 @@ libxml_htmlCtxtReadMemory(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     htmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
     char * URL;
     char * encoding;
@@ -555,7 +556,7 @@ libxml_htmlParseChunk(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     htmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
     char * chunk;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
     int terminate;
 
@@ -699,7 +700,7 @@ libxml_htmlReadMemory(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     htmlDocPtr c_retval;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
     char * URL;
     char * encoding;
@@ -1894,7 +1895,7 @@ libxml_xmlCreateMemoryParserCtxt(PyObject *self ATTRIBUTE_UNUSED, PyObject *args
     PyObject *py_retval;
     xmlParserCtxtPtr c_retval;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
 
     if (!PyArg_ParseTuple(args, (char *)"s#i:xmlCreateMemoryParserCtxt", &buffer, &py_buffsize0, &size))
@@ -1996,7 +1997,7 @@ libxml_xmlCtxtReadMemory(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
     char * URL;
     char * encoding;
@@ -2032,7 +2033,7 @@ libxml_xmlCtxtResetPush(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
     char * chunk;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
     char * filename;
     char * encoding;
@@ -4855,7 +4856,7 @@ libxml_xmlParseChunk(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
     char * chunk;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
     int terminate;
 
@@ -5152,7 +5153,7 @@ libxml_xmlParseMemory(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlDocPtr c_retval;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
 
     if (!PyArg_ParseTuple(args, (char *)"s#i:xmlParseMemory", &buffer, &py_buffsize0, &size))
@@ -5751,6 +5752,18 @@ libxml_xmlPopInput(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     return(py_retval);
 }
 
+#if defined(LIBXML_OUTPUT_ENABLED)
+PyObject *
+libxml_xmlPopOutputCallbacks(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+    PyObject *py_retval;
+    int c_retval;
+
+    c_retval = xmlPopOutputCallbacks();
+    py_retval = libxml_intWrap((int) c_retval);
+    return(py_retval);
+}
+
+#endif /* defined(LIBXML_OUTPUT_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED)
 PyObject *
 libxml_xmlPreviousElementSibling(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
@@ -5842,7 +5855,7 @@ libxml_xmlReadMemory(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlDocPtr c_retval;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
     char * URL;
     char * encoding;
@@ -6118,7 +6131,7 @@ libxml_xmlRecoverMemory(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlDocPtr c_retval;
     char * buffer;
-    int py_buffsize0;
+    Py_ssize_t  py_buffsize0;
     int size;
 
     if (!PyArg_ParseTuple(args, (char *)"s#i:xmlRecoverMemory", &buffer, &py_buffsize0, &size))

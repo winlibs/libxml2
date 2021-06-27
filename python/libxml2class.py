@@ -292,7 +292,7 @@ def boolToText(boolval):
     return ret
 
 def debugDumpString(output, str):
-    """Dumps informations about the string, shorten it if necessary """
+    """Dumps information about the string, shorten it if necessary """
     if output is not None: output.flush()
     libxml2mod.xmlDebugDumpString(output, str)
 
@@ -435,16 +435,16 @@ def thrDefTreeIndentString(v):
 
 def nanoFTPCleanup():
     """Cleanup the FTP protocol layer. This cleanup proxy
-       informations. """
+       information. """
     libxml2mod.xmlNanoFTPCleanup()
 
 def nanoFTPInit():
     """Initialize the FTP protocol layer. Currently it just checks
-       for proxy informations, and get the hostname """
+       for proxy information, and get the hostname """
     libxml2mod.xmlNanoFTPInit()
 
 def nanoFTPProxy(host, port, user, passwd, type):
-    """Setup the FTP proxy informations. This can also be done by
+    """Setup the FTP proxy information. This can also be done by
       using ftp_proxy ftp_proxy_user and ftp_proxy_password
        environment variables. """
     libxml2mod.xmlNanoFTPProxy(host, port, user, passwd, type)
@@ -453,7 +453,7 @@ def nanoFTPScanProxy(URL):
     """(Re)Initialize the FTP Proxy context by parsing the URL and
       finding the protocol host port it indicates. Should be like
       ftp://myproxy/ or ftp://myproxy:3128/ A None URL cleans up
-       proxy informations. """
+       proxy information. """
     libxml2mod.xmlNanoFTPScanProxy(URL)
 
 #
@@ -466,14 +466,14 @@ def nanoHTTPCleanup():
 
 def nanoHTTPInit():
     """Initialize the HTTP protocol layer. Currently it just
-       checks for proxy informations """
+       checks for proxy information """
     libxml2mod.xmlNanoHTTPInit()
 
 def nanoHTTPScanProxy(URL):
     """(Re)Initialize the HTTP Proxy context by parsing the URL
       and finding the protocol host port it indicates. Should be
       like http://myproxy/ or http://myproxy:3128/ A None URL
-       cleans up proxy informations. """
+       cleans up proxy information. """
     libxml2mod.xmlNanoHTTPScanProxy(URL)
 
 #
@@ -716,10 +716,7 @@ def htmlCreateFileParserCtxt(filename, encoding):
     return parserCtxt(_obj=ret)
 
 def htmlInitAutoClose():
-    """Initialize the htmlStartCloseIndex for fast lookup of
-      closing tags names. This is not reentrant. Call
-      xmlInitParser() once before processing in case of use in
-       multithreaded programs. """
+    """This is a no-op now. """
     libxml2mod.htmlInitAutoClose()
 
 def isLetter(c):
@@ -1116,6 +1113,12 @@ def normalizeWindowsPath(path):
 def parserGetDirectory(filename):
     """lookup the directory for that file """
     ret = libxml2mod.xmlParserGetDirectory(filename)
+    return ret
+
+def popOutputCallbacks():
+    """Remove the top output callbacks from the output stack. This
+       includes the compiled-in I/O. """
+    ret = libxml2mod.xmlPopOutputCallbacks()
     return ret
 
 def registerDefaultInputCallbacks():
@@ -3577,7 +3580,11 @@ class xmlDoc(xmlNode):
         return __tmp
 
     def newDocProp(self, name, value):
-        """Create a new property carried by a document. """
+        """Create a new property carried by a document. NOTE: @value
+          is supposed to be a piece of XML CDATA, so it allows entity
+          references, but XML special chars need to be escaped first
+          by using xmlEncodeEntitiesReentrant(). Use xmlNewProp() if
+           you don't need entities support. """
         ret = libxml2mod.xmlNewDocProp(self._o, name, value)
         if ret is None:raise treeError('xmlNewDocProp() failed')
         __tmp = xmlAttr(_obj=ret)
@@ -4446,8 +4453,9 @@ class parserCtxt(parserCtxtCore):
         libxml2mod.xmlParseComment(self._o)
 
     def parseContent(self):
-        """Parse a content:  [43] content ::= (element | CharData |
-           Reference | CDSect | PI | Comment)* """
+        """Parse a content sequence. Stops at EOF or '</'.  [43]
+          content ::= (element | CharData | Reference | CDSect | PI |
+           Comment)* """
         libxml2mod.xmlParseContent(self._o)
 
     def parseDocTypeDecl(self):
@@ -5447,7 +5455,7 @@ class relaxNgParserCtxt:
         return __tmp
 
     def relaxParserSetFlag(self, flags):
-        """Semi private function used to pass informations to a parser
+        """Semi private function used to pass information to a parser
            context which are a combination of xmlRelaxNGParserFlag . """
         ret = libxml2mod.xmlRelaxParserSetFlag(self._o, flags)
         return ret
@@ -6010,7 +6018,7 @@ class xmlTextReader(xmlTextReaderCore):
         """The value indicating whether to normalize white space and
           attribute values. Since attribute value and end of line
           normalizations are a MUST in the XML specification only the
-          value true is accepted. The broken bahaviour of accepting
+          value true is accepted. The broken behaviour of accepting
           out of range character entities like &#0; is of course not
            supported either. """
         ret = libxml2mod.xmlTextReaderNormalization(self._o)

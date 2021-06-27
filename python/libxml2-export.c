@@ -650,6 +650,9 @@
     { (char *)"xmlPathToURI", libxml_xmlPathToURI, METH_VARARGS, NULL },
     { (char *)"xmlPedanticParserDefault", libxml_xmlPedanticParserDefault, METH_VARARGS, NULL },
     { (char *)"xmlPopInput", libxml_xmlPopInput, METH_VARARGS, NULL },
+#if defined(LIBXML_OUTPUT_ENABLED)
+    { (char *)"xmlPopOutputCallbacks", libxml_xmlPopOutputCallbacks, METH_VARARGS, NULL },
+#endif /* defined(LIBXML_OUTPUT_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED)
     { (char *)"xmlPreviousElementSibling", libxml_xmlPreviousElementSibling, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_TREE_ENABLED) */

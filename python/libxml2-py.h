@@ -650,6 +650,9 @@ PyObject * libxml_xmlParserSetValidate(PyObject *self, PyObject *args);
 PyObject * libxml_xmlPathToURI(PyObject *self, PyObject *args);
 PyObject * libxml_xmlPedanticParserDefault(PyObject *self, PyObject *args);
 PyObject * libxml_xmlPopInput(PyObject *self, PyObject *args);
+#if defined(LIBXML_OUTPUT_ENABLED)
+PyObject * libxml_xmlPopOutputCallbacks(PyObject *self, PyObject *args);
+#endif /* defined(LIBXML_OUTPUT_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED)
 PyObject * libxml_xmlPreviousElementSibling(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_TREE_ENABLED) */

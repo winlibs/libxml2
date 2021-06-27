@@ -11,6 +11,7 @@
  *
  * daniel@veillard.com
  */
+#define PY_SSIZE_T_CLEAN
 #include <Python.h>
 #include <fileobject.h>
 /* #include "config.h" */
@@ -294,7 +295,7 @@ xmlPythonFileReadRaw (void * context, char * buffer, int len) {
 	lenread = PyBytes_Size(ret);
 	data = PyBytes_AsString(ret);
 #ifdef PyUnicode_Check
-    } else if PyUnicode_Check (ret) {
+    } else if (PyUnicode_Check (ret)) {
 #if PY_VERSION_HEX >= 0x03030000
         Py_ssize_t size;
 	const char *tmp;
@@ -359,7 +360,7 @@ xmlPythonFileRead (void * context, char * buffer, int len) {
 	lenread = PyBytes_Size(ret);
 	data = PyBytes_AsString(ret);
 #ifdef PyUnicode_Check
-    } else if PyUnicode_Check (ret) {
+    } else if (PyUnicode_Check (ret)) {
 #if PY_VERSION_HEX >= 0x03030000
         Py_ssize_t size;
 	const char *tmp;
@@ -1048,10 +1049,10 @@ pythonCharacters(void *user_data, const xmlChar * ch, int len)
     if (type != 0) {
         if (type == 1)
             result = PyObject_CallMethod(handler, (char *) "characters",
-                                         (char *) "s#", ch, len);
+                                         (char *) "s#", ch, (Py_ssize_t)len);
         else if (type == 2)
             result = PyObject_CallMethod(handler, (char *) "data",
-                                         (char *) "s#", ch, len);
+                                         (char *) "s#", ch, (Py_ssize_t)len);
         if (PyErr_Occurred())
             PyErr_Print();
         Py_XDECREF(result);
@@ -1078,11 +1079,11 @@ pythonIgnorableWhitespace(void *user_data, const xmlChar * ch, int len)
             result =
                 PyObject_CallMethod(handler,
                                     (char *) "ignorableWhitespace",
-                                    (char *) "s#", ch, len);
+                                    (char *) "s#", ch, (Py_ssize_t)len);
         else if (type == 2)
             result =
                 PyObject_CallMethod(handler, (char *) "data",
-                                    (char *) "s#", ch, len);
+                                    (char *) "s#", ch, (Py_ssize_t)len);
         Py_XDECREF(result);
     }
 }
@@ -1223,11 +1224,11 @@ pythonCdataBlock(void *user_data, const xmlChar * ch, int len)
         if (type == 1)
             result =
                 PyObject_CallMethod(handler, (char *) "cdataBlock",
-                                    (char *) "s#", ch, len);
+                                    (char *) "s#", ch, (Py_ssize_t)len);
         else if (type == 2)
             result =
                 PyObject_CallMethod(handler, (char *) "cdata",
-                                    (char *) "s#", ch, len);
+                                    (char *) "s#", ch, (Py_ssize_t)len);
         if (PyErr_Occurred())
             PyErr_Print();
         Py_XDECREF(result);
