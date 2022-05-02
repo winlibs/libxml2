@@ -3,15 +3,41 @@
 # Setup script for libxml2 and libxslt if found
 #
 import sys, os
+
+try:
+    import setuptools
+except ImportError:
+    pass
+
 from distutils.core import setup, Extension
 
 # Below ROOT, we expect to find include, include/libxml2, lib and bin.
 # On *nix, it is not needed (but should not harm),
 # on Windows, it is set by configure.js.
-ROOT = r'/usr'
+ROOT = r'/usr/local'
 
 # Thread-enabled libxml2
 with_threads = 1
+
+# Features of libxml2 requiring external DLLs
+with_iconv = 1
+with_zlib = 1
+with_lzma = 1
+with_icu = 0
+
+icu_series = 69
+
+if icu_series is not None:
+    icu_series_s = str(icu_series)
+else:
+    icu_series_s = ''
+
+# If bundling DLLs, check the following to ensure things are correct
+# (Check the value of `icu_series` above as well)
+iconv_dll = 'iconv.dll'
+zlib_dll = 'zlib1.dll'
+lzma_dll = 'liblzma.dll'
+icu_dlls = ['icuuc%s.dll' % icu_series_s, 'icudt%s.dll' % icu_series_s]
 
 # If this flag is set (windows only),
 # a private copy of the dlls are included in the package.
@@ -29,21 +55,6 @@ try:
 except:
     HOME="C:"
 
-if WITHDLLS:
-    # libxml dlls (expected in ROOT/bin)
-    dlls = [ 'iconv.dll','libxml2.dll','libxslt.dll','libexslt.dll' ]
-    dlls = [os.path.join(ROOT,'bin',dll) for dll in dlls]
-
-    # create __init__.py for the libxmlmods package
-    if not os.path.exists("libxmlmods"):
-        os.mkdir("libxmlmods")
-        open("libxmlmods/__init__.py","w").close()
-
-    def altImport(s):
-        s = s.replace("import libxml2mod","from libxmlmods import libxml2mod")
-        s = s.replace("import libxsltmod","from libxmlmods import libxsltmod")
-        return s
-
 if sys.platform.startswith('win'):
     libraryPrefix = 'lib'
     platformLibs = []
@@ -53,7 +64,6 @@ else:
 
 # those are examined to find
 # - libxml2/libxml/tree.h
-# - iconv.h
 # - libxslt/xsltconfig.h
 includes_dir = [
 "/usr/include",
@@ -71,16 +81,6 @@ for dir in includes_dir:
 
 if xml_includes == "":
     print("failed to find headers for libxml2: update includes_dir")
-    sys.exit(1)
-
-iconv_includes=""
-for dir in includes_dir:
-    if not missing(dir + "/iconv.h"):
-        iconv_includes=dir
-        break;
-
-if iconv_includes == "":
-    print("failed to find headers for libiconv: update includes_dir")
     sys.exit(1)
 
 # those are added in the linker search path for libraries
@@ -160,13 +160,41 @@ if with_xslt == 1:
         print("failed to find headers for libxslt: update includes_dir")
         with_xslt = 0
 
+if WITHDLLS:
+    # libxml dlls (expected in ROOT/bin)
+    dlls = [ 'libxml2.dll' ]
+
+    if with_zlib == 1:
+        dlls.append(zlib_dll)
+    if with_lzma == 1:
+        dlls.append(lzma_dll)
+    if with_iconv == 1:
+        dlls.append(iconv_dll)
+    if with_icu == 1:
+        dlls += icu_dlls
+    if with_xslt == 1:
+        dlls += ['libxslt.dll','libexslt.dll']
+
+    packaged_dlls = [os.path.join(ROOT,'bin',dll) for dll in dlls]
+
+    # create __init__.py for the libxmlmods package
+    if not os.path.exists("libxmlmods"):
+        os.mkdir("libxmlmods")
+        open("libxmlmods/__init__.py","w").close()
+
+    def altImport(s):
+        s = s.replace("import libxml2mod","from libxmlmods import libxml2mod")
+        s = s.replace("import libxsltmod","from libxmlmods import libxsltmod")
+        return s
+
+    packaged_dlls = [os.path.join(ROOT,'bin',dll) for dll in dlls]
 
 descr = "libxml2 package"
 modules = [ 'libxml2', 'drv_libxml2' ]
 if WITHDLLS:
     modules.append('libxmlmods.__init__')
 c_files = ['libxml2-py.c', 'libxml.c', 'types.c' ]
-includes= [xml_includes, iconv_includes]
+includes= [xml_includes]
 libs    = [libraryPrefix + "xml2"] + platformLibs
 macros  = []
 if with_threads:
@@ -218,7 +246,7 @@ if WITHDLLS:
         base = "lib/site-packages/"
     else:
         base = ""
-    data_files = [(base+"libxmlmods",dlls)]
+    data_files = [(base+"libxmlmods",packaged_dlls)]
 else:
     ext_package = None
     data_files = []
@@ -226,11 +254,11 @@ else:
 setup (name = "libxml2-python",
        # On *nix, the version number is created from setup.py.in
        # On windows, it is set by configure.js
-       version = "2.9.12",
+       version = "2.9.14",
        description = descr,
        author = "Daniel Veillard",
        author_email = "veillard@redhat.com",
-       url = "http://xmlsoft.org/python.html",
+       url = "https://gitlab.gnome.org/GNOME/libxml2",
        licence="MIT Licence",
        py_modules=modules,
        ext_modules=extens,

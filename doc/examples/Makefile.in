@@ -328,13 +328,12 @@ EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
 FTP_OBJ = @FTP_OBJ@
 GREP = @GREP@
-HAVE_ISINF = @HAVE_ISINF@
-HAVE_ISNAN = @HAVE_ISNAN@
 HTML_DIR = @HTML_DIR@
 HTML_OBJ = @HTML_OBJ@
 HTTP_OBJ = @HTTP_OBJ@
 ICONV_LIBS = @ICONV_LIBS@
 ICU_CFLAGS = @ICU_CFLAGS@
+ICU_DEFS = @ICU_DEFS@
 ICU_LIBS = @ICU_LIBS@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -519,6 +518,7 @@ prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -975,8 +975,8 @@ uninstall-am:
 @REBUILD_DOCS_TRUE@	-cd $(srcdir) && xmllint --valid --noout index.html
 
 install-data-local: 
-	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)
-	-$(INSTALL) -m 0644 $(srcdir)/*.html $(srcdir)/*.c $(srcdir)/*.xml $(srcdir)/*.xsl $(srcdir)/*.res $(DESTDIR)$(HTML_DIR)
+	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)/examples
+	-$(INSTALL) -m 0644 $(srcdir)/*.html $(srcdir)/*.c $(srcdir)/*.xml $(srcdir)/*.xsl $(srcdir)/*.res $(DESTDIR)$(HTML_DIR)/examples/
 
 clean-local:
 	test -f Makefile.am || rm -f test?.xml

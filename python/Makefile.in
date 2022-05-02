@@ -133,7 +133,9 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(pythondir)" "$(DESTDIR)$(docsdir)" \
 	"$(DESTDIR)$(pythondir)"
 LTLIBRARIES = $(python_LTLIBRARIES)
-libxml2mod_la_LIBADD =
+am__DEPENDENCIES_1 =
+@WITH_PYTHON_TRUE@libxml2mod_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+@WITH_PYTHON_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 am__libxml2mod_la_SOURCES_DIST = libxml.c libxml_wrap.h libxml2-py.h \
 	libxml2-py.c types.c
 @WITH_PYTHON_TRUE@am_libxml2mod_la_OBJECTS = libxml.lo libxml2-py.lo \
@@ -291,13 +293,12 @@ EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
 FTP_OBJ = @FTP_OBJ@
 GREP = @GREP@
-HAVE_ISINF = @HAVE_ISINF@
-HAVE_ISNAN = @HAVE_ISNAN@
 HTML_DIR = @HTML_DIR@
 HTML_OBJ = @HTML_OBJ@
 HTTP_OBJ = @HTTP_OBJ@
 ICONV_LIBS = @ICONV_LIBS@
 ICU_CFLAGS = @ICU_CFLAGS@
+ICU_DEFS = @ICU_DEFS@
 ICU_LIBS = @ICU_LIBS@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -482,6 +483,7 @@ prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -513,8 +515,9 @@ EXTRA_DIST = \
 @WITH_PYTHON_TRUE@python_LTLIBRARIES = libxml2mod.la
 @WITH_PYTHON_TRUE@libxml2mod_la_SOURCES = libxml.c libxml_wrap.h libxml2-py.h libxml2-py.c types.c
 @WITH_PYTHON_TRUE@libxml2mod_la_LDFLAGS = $(CYGWIN_EXTRA_LDFLAGS) $(WIN32_EXTRA_LDFLAGS) -module -avoid-version \
-@WITH_PYTHON_TRUE@        $(top_builddir)/libxml2.la $(CYGWIN_EXTRA_PYTHON_LIBADD) $(WIN32_EXTRA_PYTHON_LIBADD) $(PYTHON_LIBS)
+@WITH_PYTHON_TRUE@        $(top_builddir)/libxml2.la
 
+@WITH_PYTHON_TRUE@libxml2mod_la_LIBADD = $(CYGWIN_EXTRA_PYTHON_LIBADD) $(WIN32_EXTRA_PYTHON_LIBADD) $(PYTHON_LIBS)
 @WITH_PYTHON_TRUE@BUILT_SOURCES = libxml2-export.c libxml2-py.h libxml2-py.c
 @WITH_PYTHON_TRUE@dist_python_DATA = \
 @WITH_PYTHON_TRUE@	drv_libxml2.py \

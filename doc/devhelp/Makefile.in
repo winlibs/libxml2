@@ -188,13 +188,12 @@ EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
 FTP_OBJ = @FTP_OBJ@
 GREP = @GREP@
-HAVE_ISINF = @HAVE_ISINF@
-HAVE_ISNAN = @HAVE_ISNAN@
 HTML_DIR = @HTML_DIR@
 HTML_OBJ = @HTML_OBJ@
 HTTP_OBJ = @HTTP_OBJ@
 ICONV_LIBS = @ICONV_LIBS@
 ICU_CFLAGS = @ICU_CFLAGS@
+ICU_DEFS = @ICU_DEFS@
 ICU_LIBS = @ICU_LIBS@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -379,6 +378,7 @@ prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -389,7 +389,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 devhelpdir = $(datadir)/gtk-doc/html/libxml2
 dist_devhelp_DATA = \
-	libxml2.devhelp			\
+	libxml2.devhelp2		\
 	$(HTML_FILES)			\
 	$(EXTRA_FORMAT)
 
@@ -454,7 +454,7 @@ EXTRA_FORMAT = \
 	up.png				\
 	style.css
 
-EXTRA_DIST = devhelp.xsl html.xsl
+EXTRA_DIST = devhelp2.xsl html.xsl
 all: all-am
 
 .SUFFIXES:
@@ -675,13 +675,13 @@ uninstall-am: uninstall-dist_devhelpDATA
 .PRECIOUS: Makefile
 
 
-@REBUILD_DOCS_TRUE@rebuild: libxml2.devhelp $(HTML_FILES)
+@REBUILD_DOCS_TRUE@rebuild: libxml2.devhelp2 $(HTML_FILES)
 @REBUILD_DOCS_TRUE@.PHONY: rebuild
 
-@REBUILD_DOCS_TRUE@libxml2.devhelp $(HTML_FILES): devhelp.xsl html.xsl $(top_srcdir)/doc/libxml2-api.xml
+@REBUILD_DOCS_TRUE@libxml2.devhelp2 $(HTML_FILES): devhelp2.xsl html.xsl $(top_srcdir)/doc/libxml2-api.xml
 @REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo Rebuilding devhelp files ; \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet -o $(srcdir)/libxml2.devhelp $(srcdir)/devhelp.xsl $(top_srcdir)/doc/libxml2-api.xml ; fi );
+@REBUILD_DOCS_TRUE@	  echo Rebuilding devhelp2 files ; \
+@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet -o $(srcdir)/libxml2.devhelp2 $(srcdir)/devhelp2.xsl $(top_srcdir)/doc/libxml2-api.xml ; fi );
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -248,13 +248,12 @@ EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
 FTP_OBJ = @FTP_OBJ@
 GREP = @GREP@
-HAVE_ISINF = @HAVE_ISINF@
-HAVE_ISNAN = @HAVE_ISNAN@
 HTML_DIR = @HTML_DIR@
 HTML_OBJ = @HTML_OBJ@
 HTTP_OBJ = @HTTP_OBJ@
 ICONV_LIBS = @ICONV_LIBS@
 ICU_CFLAGS = @ICU_CFLAGS@
+ICU_DEFS = @ICU_DEFS@
 ICU_LIBS = @ICU_LIBS@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -439,6 +438,7 @@ prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
 pythondir = @pythondir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -473,7 +473,7 @@ APIPAGES = APIconstructors.html APIfiles.html APIfunctions.html \
 @REBUILD_DOCS_TRUE@    $(wildcard *.gif) w3c.png $(wildcard html/*.html) \
 @REBUILD_DOCS_TRUE@    $(wildcard html/*.png) libxml2-api.xml index.py search.php \
 @REBUILD_DOCS_TRUE@    apibuild.py libxml2.xsa xmllint.xml xmlcatalog_man.xml \
-@REBUILD_DOCS_TRUE@    README.docs symbols.xml
+@REBUILD_DOCS_TRUE@    symbols.xml
 
 
 # Expanded form of EXTRA_DIST_wc
@@ -513,13 +513,11 @@ EXTRA_DIST = \
 	APIfiles.html \
 	APIfunctions.html \
 	APIsymbols.html \
-	ChangeLog.xsl \
 	DOM.gif \
 	DOM.html \
 	FAQ.html \
 	Libxml2-Logo-180x168.gif \
 	Libxml2-Logo-90x34.gif \
-	README.docs \
 	XMLinfo.html \
 	XSLT.html \
 	api.xsl \
@@ -665,7 +663,6 @@ EXTRA_DIST = \
 	tutorial/includexpath.c \
 	tutorial/index.html \
 	tutorial/ix01.html \
-	tutorial/xmltutorial.pdf \
 	upgrade.html \
 	w3c.png \
 	wiki.xsl \
