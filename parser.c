@@ -14836,6 +14836,8 @@ xmlCtxtReset(xmlParserCtxtPtr ctxt)
     ctxt->nameNr = 0;
     ctxt->name = NULL;
 
+    ctxt->nsNr = 0;
+
     DICT_FREE(ctxt->version);
     ctxt->version = NULL;
     DICT_FREE(ctxt->encoding);
