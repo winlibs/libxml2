@@ -25,7 +25,6 @@ htmlNewDocNoDtD()
 # functions from module SAX2
 SAXDefaultVersion()
 defaultSAXHandlerInit()
-docbDefaultSAXHandlerInit()
 htmlDefaultSAXHandlerInit()
 
 # functions from module catalog

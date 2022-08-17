@@ -94,10 +94,10 @@ check_PROGRAMS = io1$(EXEEXT) io2$(EXEEXT) parse1$(EXEEXT) \
 	tree2$(EXEEXT) xpath1$(EXEEXT) xpath2$(EXEEXT)
 subdir = doc/examples
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/acinclude.m4 $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/ac_try_compile2.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -108,11 +108,7 @@ CONFIG_CLEAN_VPATH_FILES =
 am_io1_OBJECTS = io1.$(OBJEXT)
 io1_OBJECTS = $(am_io1_OBJECTS)
 io1_LDADD = $(LDADD)
-am__DEPENDENCIES_1 =
-io1_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+io1_DEPENDENCIES = $(top_builddir)/libxml2.la
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -120,101 +116,59 @@ am__v_lt_1 =
 am_io2_OBJECTS = io2.$(OBJEXT)
 io2_OBJECTS = $(am_io2_OBJECTS)
 io2_LDADD = $(LDADD)
-io2_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+io2_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_parse1_OBJECTS = parse1.$(OBJEXT)
 parse1_OBJECTS = $(am_parse1_OBJECTS)
 parse1_LDADD = $(LDADD)
-parse1_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+parse1_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_parse2_OBJECTS = parse2.$(OBJEXT)
 parse2_OBJECTS = $(am_parse2_OBJECTS)
 parse2_LDADD = $(LDADD)
-parse2_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+parse2_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_parse3_OBJECTS = parse3.$(OBJEXT)
 parse3_OBJECTS = $(am_parse3_OBJECTS)
 parse3_LDADD = $(LDADD)
-parse3_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+parse3_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_parse4_OBJECTS = parse4.$(OBJEXT)
 parse4_OBJECTS = $(am_parse4_OBJECTS)
 parse4_LDADD = $(LDADD)
-parse4_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+parse4_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_reader1_OBJECTS = reader1.$(OBJEXT)
 reader1_OBJECTS = $(am_reader1_OBJECTS)
 reader1_LDADD = $(LDADD)
-reader1_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+reader1_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_reader2_OBJECTS = reader2.$(OBJEXT)
 reader2_OBJECTS = $(am_reader2_OBJECTS)
 reader2_LDADD = $(LDADD)
-reader2_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+reader2_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_reader3_OBJECTS = reader3.$(OBJEXT)
 reader3_OBJECTS = $(am_reader3_OBJECTS)
 reader3_LDADD = $(LDADD)
-reader3_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+reader3_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_reader4_OBJECTS = reader4.$(OBJEXT)
 reader4_OBJECTS = $(am_reader4_OBJECTS)
 reader4_LDADD = $(LDADD)
-reader4_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+reader4_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_testWriter_OBJECTS = testWriter.$(OBJEXT)
 testWriter_OBJECTS = $(am_testWriter_OBJECTS)
 testWriter_LDADD = $(LDADD)
-testWriter_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+testWriter_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_tree1_OBJECTS = tree1.$(OBJEXT)
 tree1_OBJECTS = $(am_tree1_OBJECTS)
 tree1_LDADD = $(LDADD)
-tree1_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+tree1_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_tree2_OBJECTS = tree2.$(OBJEXT)
 tree2_OBJECTS = $(am_tree2_OBJECTS)
 tree2_LDADD = $(LDADD)
-tree2_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+tree2_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_xpath1_OBJECTS = xpath1.$(OBJEXT)
 xpath1_OBJECTS = $(am_xpath1_OBJECTS)
 xpath1_LDADD = $(LDADD)
-xpath1_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+xpath1_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_xpath2_OBJECTS = xpath2.$(OBJEXT)
 xpath2_OBJECTS = $(am_xpath2_OBJECTS)
 xpath2_LDADD = $(LDADD)
-xpath2_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/libxml2.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+xpath2_DEPENDENCIES = $(top_builddir)/libxml2.la
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -316,7 +270,6 @@ DEBUG_OBJ = @DEBUG_OBJ@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
 DLLTOOL = @DLLTOOL@
-DOCB_OBJ = @DOCB_OBJ@
 DSYMUTIL = @DSYMUTIL@
 DUMPBIN = @DUMPBIN@
 ECHO_C = @ECHO_C@
@@ -328,7 +281,6 @@ EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
 FTP_OBJ = @FTP_OBJ@
 GREP = @GREP@
-HTML_DIR = @HTML_DIR@
 HTML_OBJ = @HTML_OBJ@
 HTTP_OBJ = @HTTP_OBJ@
 ICONV_LIBS = @ICONV_LIBS@
@@ -342,6 +294,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LD = @LD@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
 LIBTOOL = @LIBTOOL@
@@ -365,7 +318,6 @@ MKDIR_P = @MKDIR_P@
 MODULE_EXTENSION = @MODULE_EXTENSION@
 MODULE_PLATFORM_LIBS = @MODULE_PLATFORM_LIBS@
 MV = @MV@
-M_LIBS = @M_LIBS@
 NM = @NM@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
@@ -385,40 +337,27 @@ PKG_CONFIG = @PKG_CONFIG@
 PKG_CONFIG_LIBDIR = @PKG_CONFIG_LIBDIR@
 PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
 PYTHON = @PYTHON@
-PYTHON_INCLUDES = @PYTHON_INCLUDES@
+PYTHON_CFLAGS = @PYTHON_CFLAGS@
+PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
 PYTHON_LIBS = @PYTHON_LIBS@
-PYTHON_SITE_PACKAGES = @PYTHON_SITE_PACKAGES@
-PYTHON_SUBDIR = @PYTHON_SUBDIR@
+PYTHON_PLATFORM = @PYTHON_PLATFORM@
+PYTHON_PREFIX = @PYTHON_PREFIX@
 PYTHON_TESTS = @PYTHON_TESTS@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RDL_LIBS = @RDL_LIBS@
-READER_TEST = @READER_TEST@
 RELDATE = @RELDATE@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
-STATIC_BINARIES = @STATIC_BINARIES@
 STRIP = @STRIP@
 TAR = @TAR@
-TEST_C14N = @TEST_C14N@
 TEST_CATALOG = @TEST_CATALOG@
 TEST_DEBUG = @TEST_DEBUG@
-TEST_HTML = @TEST_HTML@
-TEST_MODULES = @TEST_MODULES@
-TEST_PATTERN = @TEST_PATTERN@
-TEST_PHTML = @TEST_PHTML@
-TEST_PUSH = @TEST_PUSH@
 TEST_REGEXPS = @TEST_REGEXPS@
-TEST_SAX = @TEST_SAX@
-TEST_SCHEMAS = @TEST_SCHEMAS@
 TEST_SCHEMATRON = @TEST_SCHEMATRON@
-TEST_THREADS = @TEST_THREADS@
 TEST_VALID = @TEST_VALID@
 TEST_VTIME = @TEST_VTIME@
-TEST_XINCLUDE = @TEST_XINCLUDE@
-TEST_XPATH = @TEST_XPATH@
-TEST_XPTR = @TEST_XPTR@
 THREAD_CFLAGS = @THREAD_CFLAGS@
 THREAD_LIBS = @THREAD_LIBS@
 VERSION = @VERSION@
@@ -430,7 +369,6 @@ WIN32_EXTRA_PYTHON_LIBADD = @WIN32_EXTRA_PYTHON_LIBADD@
 WITH_C14N = @WITH_C14N@
 WITH_CATALOG = @WITH_CATALOG@
 WITH_DEBUG = @WITH_DEBUG@
-WITH_DOCB = @WITH_DOCB@
 WITH_FTP = @WITH_FTP@
 WITH_HTML = @WITH_HTML@
 WITH_HTTP = @WITH_HTTP@
@@ -459,6 +397,7 @@ WITH_WRITER = @WITH_WRITER@
 WITH_XINCLUDE = @WITH_XINCLUDE@
 WITH_XPATH = @WITH_XPATH@
 WITH_XPTR = @WITH_XPTR@
+WITH_XPTR_LOCS = @WITH_XPTR_LOCS@
 WITH_ZLIB = @WITH_ZLIB@
 XINCLUDE_OBJ = @XINCLUDE_OBJ@
 XMLLINT = @XMLLINT@
@@ -514,9 +453,12 @@ mandir = @mandir@
 mkdir_p = @mkdir_p@
 oldincludedir = @oldincludedir@
 pdfdir = @pdfdir@
+pkgpyexecdir = @pkgpyexecdir@
+pkgpythondir = @pkgpythondir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
+pyexecdir = @pyexecdir@
 pythondir = @pythondir@
 runstatedir = @runstatedir@
 sbindir = @sbindir@
@@ -527,29 +469,17 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-AM_CPPFLAGS = -I$(top_builddir)/include -I$(top_srcdir)/include -I$(srcdir)/include
-AM_CFLAGS = $(THREAD_CFLAGS) $(Z_CFLAGS)
-LDADD = $(RDL_LIBS) $(STATIC_BINARIES) $(top_builddir)/libxml2.la $(THREAD_LIBS) $(Z_LIBS) $(ICONV_LIBS) -lm $(WIN32_EXTRA_LIBADD)
+AM_CPPFLAGS = -I$(top_builddir)/include -I$(top_srcdir)/include
+LDADD = $(top_builddir)/libxml2.la
 CLEANFILES = *.tmp
 EXTRA_DIST = \
 	examples.xml \
 	examples.xsl \
 	index.html \
 	index.py \
-	io1.res \
-	io2.res \
-	reader1.res \
-	reader3.res \
-	reader4.res \
 	test1.xml \
 	test2.xml \
-	test3.xml \
-	tree1.res \
-	tree2.res \
-	tst.xml \
-	writer.xml \
-	xpath1.res \
-	xpath2.res
+	test3.xml
 
 io1_SOURCES = io1.c
 io2_SOURCES = io2.c
@@ -811,6 +741,7 @@ distdir-am: $(DISTFILES)
 	done
 check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS)
+	$(MAKE) $(AM_MAKEFLAGS) check-local
 check: check-am
 all-am: Makefile
 installdirs:
@@ -942,55 +873,59 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am:
+uninstall-am: uninstall-local
 
 .MAKE: check-am install-am install-strip
 
-.PHONY: CTAGS GTAGS TAGS all all-am am--depfiles check check-am clean \
-	clean-checkPROGRAMS clean-generic clean-libtool clean-local \
-	cscopelist-am ctags ctags-am distclean distclean-compile \
-	distclean-generic distclean-libtool distclean-tags distdir dvi \
-	dvi-am html html-am info info-am install install-am \
-	install-data install-data-am install-data-local install-dvi \
-	install-dvi-am install-exec install-exec-am install-html \
-	install-html-am install-info install-info-am install-man \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	maintainer-clean maintainer-clean-generic mostlyclean \
-	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
-	pdf pdf-am ps ps-am tags tags-am uninstall uninstall-am
+.PHONY: CTAGS GTAGS TAGS all all-am am--depfiles check check-am \
+	check-local clean clean-checkPROGRAMS clean-generic \
+	clean-libtool clean-local cscopelist-am ctags ctags-am \
+	distclean distclean-compile distclean-generic \
+	distclean-libtool distclean-tags distdir dvi dvi-am html \
+	html-am info info-am install install-am install-data \
+	install-data-am install-data-local install-dvi install-dvi-am \
+	install-exec install-exec-am install-html install-html-am \
+	install-info install-info-am install-man install-pdf \
+	install-pdf-am install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-compile \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	tags tags-am uninstall uninstall-am uninstall-local
 
 .PRECIOUS: Makefile
 
 
-@REBUILD_DOCS_TRUE@rebuild: examples.xml index.html
-@REBUILD_DOCS_TRUE@.PHONY: rebuild
+rebuild:
+	cd $(srcdir) && $(PYTHON) index.py
+	$(MAKE) Makefile
+	cd $(srcdir) && xsltproc examples.xsl examples.xml
+	-cd $(srcdir) && xmllint --valid --noout index.html
 
-@REBUILD_DOCS_TRUE@examples.xml: index.py $(check_PROGRAMS:=.c)
-@REBUILD_DOCS_TRUE@	cd $(srcdir) && $(PYTHON) index.py
-@REBUILD_DOCS_TRUE@	$(MAKE) Makefile
-
-@REBUILD_DOCS_TRUE@index.html: examples.xml examples.xsl
-@REBUILD_DOCS_TRUE@	cd $(srcdir) && xsltproc examples.xsl examples.xml && echo "Rebuilt web page"
-@REBUILD_DOCS_TRUE@	-cd $(srcdir) && xmllint --valid --noout index.html
+.PHONY: rebuild
 
 install-data-local: 
-	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)/examples
-	-$(INSTALL) -m 0644 $(srcdir)/*.html $(srcdir)/*.c $(srcdir)/*.xml $(srcdir)/*.xsl $(srcdir)/*.res $(DESTDIR)$(HTML_DIR)/examples/
+	$(MKDIR_P) $(DESTDIR)$(docdir)/examples
+	-$(INSTALL) -m 0644 $(srcdir)/*.html $(srcdir)/*.c $(DESTDIR)$(docdir)/examples/
+
+uninstall-local:
+	rm -f $(DESTDIR)$(docdir)/examples/*.c
+	rm -f $(DESTDIR)$(docdir)/examples/*.html
+	-rmdir $(DESTDIR)$(docdir)/examples
 
 clean-local:
 	test -f Makefile.am || rm -f test?.xml
+	rm -f .memdump
 
 valgrind: 
-	$(MAKE) CHECKER='valgrind' tests
+	$(MAKE) CHECKER='valgrind' check
 
-tests: $(check_PROGRAMS)
+check-local:
 	@test -f Makefile.am || test -f test1.xml || $(LN_S) $(srcdir)/test?.xml .
 	@(echo '## examples regression tests')
 	@(echo > .memdump)
-	@$(CHECKER) ./io1 > io1.tmp && diff io1.tmp $(srcdir)/io1.res
+	@$(CHECKER) ./io1 >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./io2 > io2.tmp && diff io2.tmp $(srcdir)/io2.res
+	@$(CHECKER) ./io2 >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./parse1 test1.xml
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
@@ -1000,25 +935,25 @@ tests: $(check_PROGRAMS)
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./parse4 test3.xml
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./reader1 test2.xml > reader1.tmp && diff reader1.tmp $(srcdir)/reader1.res
+	@$(CHECKER) ./reader1 test2.xml >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./reader2 test2.xml > reader1.tmp && diff reader1.tmp $(srcdir)/reader1.res
+	@$(CHECKER) ./reader2 test2.xml >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./reader3 > reader3.tmp && diff reader3.tmp $(srcdir)/reader3.res
+	@$(CHECKER) ./reader3 >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./reader4 test1.xml test2.xml test3.xml > reader4.tmp && diff reader4.tmp $(srcdir)/reader4.res
+	@$(CHECKER) ./reader4 test1.xml test2.xml test3.xml >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./testWriter && for i in 1 2 3 4 ; do diff $(srcdir)/writer.xml writer$$i.tmp || break ; done
+	@$(CHECKER) ./testWriter
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./tree1 test2.xml > tree1.tmp && diff tree1.tmp $(srcdir)/tree1.res
+	@$(CHECKER) ./tree1 test2.xml >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./tree2 > tree2.tmp && diff tree2.tmp $(srcdir)/tree2.res
+	@$(CHECKER) ./tree2 >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./xpath1 test3.xml '//child2' > xpath1.tmp && diff xpath1.tmp $(srcdir)/xpath1.res
+	@$(CHECKER) ./xpath1 test3.xml '//child2' >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./xpath2 test3.xml '//discarded' discarded > xpath2.tmp && diff xpath2.tmp $(srcdir)/xpath2.res
+	@$(CHECKER) ./xpath2 test3.xml '//discarded' discarded >/dev/null
 	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@rm *.tmp
+	@rm -f *.tmp
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

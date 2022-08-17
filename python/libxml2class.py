@@ -101,15 +101,15 @@ def SAXDefaultVersion(version):
     return ret
 
 def defaultSAXHandlerInit():
-    """Initialize the default SAX2 handler """
+    """DEPRECATED: This function will be made private. Call
+      xmlInitParser to initialize the library.  Initialize the
+       default SAX2 handler """
     libxml2mod.xmlDefaultSAXHandlerInit()
 
-def docbDefaultSAXHandlerInit():
-    """Initialize the default SAX handler """
-    libxml2mod.docbDefaultSAXHandlerInit()
-
 def htmlDefaultSAXHandlerInit():
-    """Initialize the default SAX handler """
+    """DEPRECATED: This function will be made private. Call
+      xmlInitParser to initialize the library.  Initialize the
+       default SAX handler """
     libxml2mod.htmlDefaultSAXHandlerInit()
 
 #
@@ -307,13 +307,18 @@ def shellPrintXPathError(errorType, arg):
 #
 
 def dictCleanup():
-    """Free the dictionary mutex. Do not call unless sure the
-       library is not in use anymore ! """
+    """DEPRECATED: This function will be made private. Call
+      xmlCleanupParser to free global state but see the warnings
+      there. xmlCleanupParser should be only called once at
+      program exit. In most cases, you don't have call cleanup
+      functions at all.  Free the dictionary mutex. Do not call
+       unless sure the library is not in use anymore ! """
     libxml2mod.xmlDictCleanup()
 
 def initializeDict():
-    """Do the dictionary mutex initialization. this function is
-       deprecated """
+    """DEPRECATED: This function will be made private. Call
+      xmlInitParser to initialize the library.  Do the dictionary
+       mutex initialization. """
     ret = libxml2mod.xmlInitializeDict()
     return ret
 
@@ -328,8 +333,13 @@ def addEncodingAlias(name, alias):
     return ret
 
 def cleanupCharEncodingHandlers():
-    """Cleanup the memory allocated for the char encoding support,
-       it unregisters all the encoding handlers and the aliases. """
+    """DEPRECATED: This function will be made private. Call
+      xmlCleanupParser to free global state but see the warnings
+      there. xmlCleanupParser should be only called once at
+      program exit. In most cases, you don't have call cleanup
+      functions at all.  Cleanup the memory allocated for the
+      char encoding support, it unregisters all the encoding
+       handlers and the aliases. """
     libxml2mod.xmlCleanupCharEncodingHandlers()
 
 def cleanupEncodingAliases():
@@ -347,10 +357,11 @@ def encodingAlias(alias):
     return ret
 
 def initCharEncodingHandlers():
-    """Initialize the char encoding support, it registers the
-      default encoding supported. NOTE: while public, this
-      function usually doesn't need to be called in normal
-       processing. """
+    """DEPRECATED: This function will be made private. Call
+      xmlInitParser to initialize the library.  Initialize the
+      char encoding support, it registers the default encoding
+      supported. NOTE: while public, this function usually
+       doesn't need to be called in normal processing. """
     libxml2mod.xmlInitCharEncodingHandlers()
 
 #
@@ -376,11 +387,17 @@ def predefinedEntity(name):
 #
 
 def cleanupGlobals():
-    """Additional cleanup for multi-threading """
+    """DEPRECATED: This function will be made private. Call
+      xmlCleanupParser to free global state but see the warnings
+      there. xmlCleanupParser should be only called once at
+      program exit. In most cases, you don't have call cleanup
+       functions at all.  Additional cleanup for multi-threading """
     libxml2mod.xmlCleanupGlobals()
 
 def initGlobals():
-    """Additional initialisation for multi-threading """
+    """DEPRECATED: This function will be made private. Call
+      xmlInitParser to initialize the library.  Additional
+       initialisation for multi-threading """
     libxml2mod.xmlInitGlobals()
 
 def thrDefDefaultBufferSize(v):
@@ -718,7 +735,9 @@ def htmlCreateFileParserCtxt(filename, encoding):
     return parserCtxt(_obj=ret)
 
 def htmlInitAutoClose():
-    """This is a no-op now. """
+    """DEPRECATED: This function will be made private. Call
+      xmlInitParser to initialize the library.  This is a no-op
+       now. """
     libxml2mod.htmlInitAutoClose()
 
 def isLetter(c):
@@ -842,8 +861,12 @@ def setEntityLoader(resolver):
 #
 
 def relaxNGCleanupTypes():
-    """Cleanup the default Schemas type library associated to
-       RelaxNG """
+    """DEPRECATED: This function will be made private. Call
+      xmlCleanupParser to free global state but see the warnings
+      there. xmlCleanupParser should be only called once at
+      program exit. In most cases, you don't have call cleanup
+      functions at all.  Cleanup the default Schemas type library
+       associated to RelaxNG """
     libxml2mod.xmlRelaxNGCleanupTypes()
 
 def relaxNGInitTypes():
@@ -888,7 +911,9 @@ def isXHTML(systemID, publicID):
     return ret
 
 def newComment(content):
-    """Creation of a new node containing a comment. """
+    """Use of this function is DISCOURAGED in favor of
+      xmlNewDocComment.  Creation of a new node containing a
+       comment. """
     ret = libxml2mod.xmlNewComment(content)
     if ret is None:raise treeError('xmlNewComment() failed')
     return xmlNode(_obj=ret)
@@ -900,21 +925,23 @@ def newDoc(version):
     return xmlDoc(_obj=ret)
 
 def newPI(name, content):
-    """Creation of a processing instruction element. Use
-       xmlDocNewPI preferably to get string interning """
+    """Creation of a processing instruction element.  Use of this
+       function is DISCOURAGED in favor of xmlNewDocPI. """
     ret = libxml2mod.xmlNewPI(name, content)
     if ret is None:raise treeError('xmlNewPI() failed')
     return xmlNode(_obj=ret)
 
 def newText(content):
-    """Creation of a new text node. """
+    """Creation of a new text node.  Use of this function is
+       DISCOURAGED in favor of xmlNewDocText. """
     ret = libxml2mod.xmlNewText(content)
     if ret is None:raise treeError('xmlNewText() failed')
     return xmlNode(_obj=ret)
 
 def newTextLen(content, len):
-    """Creation of a new text node with an extra parameter for the
-       content's length """
+    """Use of this function is DISCOURAGED in favor of
+      xmlNewDocTextLen.  Creation of a new text node with an
+       extra parameter for the content's length """
     ret = libxml2mod.xmlNewTextLen(content, len)
     if ret is None:raise treeError('xmlNewTextLen() failed')
     return xmlNode(_obj=ret)
@@ -1229,7 +1256,12 @@ def schemaNewParserCtxt(URL):
 #
 
 def schemaCleanupTypes():
-    """Cleanup the default XML Schemas type library """
+    """DEPRECATED: This function will be made private. Call
+      xmlCleanupParser to free global state but see the warnings
+      there. xmlCleanupParser should be only called once at
+      program exit. In most cases, you don't have call cleanup
+      functions at all.  Cleanup the default XML Schemas type
+       library """
     libxml2mod.xmlSchemaCleanupTypes()
 
 def schemaCollapseString(value):
@@ -2296,7 +2328,13 @@ class xmlNode(xmlCore):
           property) list merging adjacent TEXT nodes (in which case
           @cur is freed) If the new node is ATTRIBUTE, it is added
           into properties instead of children. If there is an
-           attribute with equal name, it is first destroyed. """
+          attribute with equal name, it is first destroyed.  All tree
+          manipulation functions can safely move nodes within a
+          document. But when moving nodes from one document to
+          another, references to namespaces in element or attribute
+          nodes are NOT fixed. In this case, you MUST call
+          xmlReconciliateNs after the move operation to avoid memory
+           errors. """
         if cur is None: cur__o = None
         else: cur__o = cur._o
         ret = libxml2mod.xmlAddChild(self._o, cur__o)
@@ -2306,7 +2344,8 @@ class xmlNode(xmlCore):
 
     def addChildList(self, cur):
         """Add a list of node at the end of the child list of the
-           parent merging adjacent TEXT nodes (@cur may be freed) """
+          parent merging adjacent TEXT nodes (@cur may be freed)  See
+           the note regarding namespaces in xmlAddChild. """
         if cur is None: cur__o = None
         else: cur__o = cur._o
         ret = libxml2mod.xmlAddChildList(self._o, cur__o)
@@ -2334,7 +2373,8 @@ class xmlNode(xmlCore):
           unlinked from its existing context. As a result of text
           merging @elem may be freed. If the new node is ATTRIBUTE,
           it is added into properties instead of children. If there
-           is an attribute with equal name, it is first destroyed. """
+          is an attribute with equal name, it is first destroyed. 
+           See the note regarding namespaces in xmlAddChild. """
         if elem is None: elem__o = None
         else: elem__o = elem._o
         ret = libxml2mod.xmlAddNextSibling(self._o, elem__o)
@@ -2349,7 +2389,8 @@ class xmlNode(xmlCore):
           unlinked from its existing context. If the new node is
           ATTRIBUTE, it is added into properties instead of children.
           If there is an attribute with equal name, it is first
-           destroyed. """
+          destroyed.  See the note regarding namespaces in
+           xmlAddChild. """
         if elem is None: elem__o = None
         else: elem__o = elem._o
         ret = libxml2mod.xmlAddPrevSibling(self._o, elem__o)
@@ -2361,7 +2402,8 @@ class xmlNode(xmlCore):
         """Add a new element @elem to the list of siblings of @cur
           merging adjacent TEXT nodes (@elem may be freed) If the new
           element was already inserted in a document it is first
-           unlinked from its existing context. """
+          unlinked from its existing context.  See the note regarding
+           namespaces in xmlAddChild. """
         if elem is None: elem__o = None
         else: elem__o = elem._o
         ret = libxml2mod.xmlAddSibling(self._o, elem__o)
@@ -2712,7 +2754,8 @@ class xmlNode(xmlCore):
     def replaceNode(self, cur):
         """Unlink the old node from its current context, prune the new
           one at the same place. If @cur was already inserted in a
-           document it is first unlinked from its existing context. """
+          document it is first unlinked from its existing context. 
+           See the note regarding namespaces in xmlAddChild. """
         if cur is None: cur__o = None
         else: cur__o = cur._o
         ret = libxml2mod.xmlReplaceNode(self._o, cur__o)
@@ -2871,9 +2914,10 @@ class xmlNode(xmlCore):
         return ret
 
     def isRef(self, doc, attr):
-        """Determine whether an attribute is of type Ref. In case we
-          have DTD(s) then this is simple, otherwise we use an
-           heuristic: name Ref (upper or lowercase). """
+        """DEPRECATED, do not use. This function will be removed from
+          the public API.  Determine whether an attribute is of type
+          Ref. In case we have DTD(s) then this is simple, otherwise
+           we use an heuristic: name Ref (upper or lowercase). """
         if doc is None: doc__o = None
         else: doc__o = doc._o
         if attr is None: attr__o = None
@@ -3841,9 +3885,10 @@ class xmlDoc(xmlNode):
         return ret
 
     def isRef(self, elem, attr):
-        """Determine whether an attribute is of type Ref. In case we
-          have DTD(s) then this is simple, otherwise we use an
-           heuristic: name Ref (upper or lowercase). """
+        """DEPRECATED, do not use. This function will be removed from
+          the public API.  Determine whether an attribute is of type
+          Ref. In case we have DTD(s) then this is simple, otherwise
+           we use an heuristic: name Ref (upper or lowercase). """
         if elem is None: elem__o = None
         else: elem__o = elem._o
         if attr is None: attr__o = None
@@ -3860,8 +3905,9 @@ class xmlDoc(xmlNode):
         return ret
 
     def removeRef(self, attr):
-        """Remove the given attribute from the Ref table maintained
-           internally. """
+        """DEPRECATED, do not use. This function will be removed from
+          the public API.  Remove the given attribute from the Ref
+           table maintained internally. """
         if attr is None: attr__o = None
         else: attr__o = attr._o
         ret = libxml2mod.xmlRemoveRef(self._o, attr__o)
@@ -4854,8 +4900,9 @@ class xmlAttr(xmlNode):
         return ret
 
     def removeRef(self, doc):
-        """Remove the given attribute from the Ref table maintained
-           internally. """
+        """DEPRECATED, do not use. This function will be removed from
+          the public API.  Remove the given attribute from the Ref
+           table maintained internally. """
         if doc is None: doc__o = None
         else: doc__o = doc._o
         ret = libxml2mod.xmlRemoveRef(doc__o, self._o)
@@ -5170,7 +5217,9 @@ class xmlNs(xmlNode):
         return __tmp
 
     def newNodeEatName(self, name):
-        """Creation of a new node element. @ns is optional (None). """
+        """Creation of a new node element. @ns is optional (None). 
+          Use of this function is DISCOURAGED in favor of
+           xmlNewDocNodeEatName. """
         ret = libxml2mod.xmlNewNodeEatName(self._o, name)
         if ret is None:raise treeError('xmlNewNodeEatName() failed')
         __tmp = xmlNode(_obj=ret)
@@ -7453,6 +7502,7 @@ XML_ERR_UNKNOWN_VERSION = 108
 XML_ERR_VERSION_MISMATCH = 109
 XML_ERR_NAME_TOO_LONG = 110
 XML_ERR_USER_STOP = 111
+XML_ERR_COMMENT_ABRUPTLY_ENDED = 112
 XML_NS_ERR_XML_NAMESPACE = 200
 XML_NS_ERR_UNDEFINED_NAMESPACE = 201
 XML_NS_ERR_QNAME = 202
@@ -7503,6 +7553,7 @@ XML_DTD_XMLID_TYPE = 540
 XML_DTD_DUP_TOKEN = 541
 XML_HTML_STRUCURE_ERROR = 800
 XML_HTML_UNKNOWN_TAG = 801
+XML_HTML_INCORRECTLY_OPENED_COMMENT = 802
 XML_RNGP_ANYNAME_ATTR_ANCESTOR = 1000
 XML_RNGP_ATTR_CONFLICT = 1001
 XML_RNGP_ATTRIBUTE_CHILDREN = 1002
@@ -8142,7 +8193,6 @@ XML_ENTITY_DECL = 17
 XML_NAMESPACE_DECL = 18
 XML_XINCLUDE_START = 19
 XML_XINCLUDE_END = 20
-XML_DOCB_DOCUMENT_NODE = 21
 
 # xlinkActuate
 XLINK_ACTUATE_NONE = 0

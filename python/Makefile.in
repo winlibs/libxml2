@@ -14,6 +14,8 @@
 
 @SET_MAKE@
 
+# Makefile for libxml2 python library
+
 
 VPATH = @srcdir@
 am__is_gnu_make = { \
@@ -91,14 +93,14 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = python
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/acinclude.m4 $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/ac_try_compile2.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
-DIST_COMMON = $(srcdir)/Makefile.am $(dist_docs_DATA) \
-	$(am__dist_python_DATA_DIST) $(am__DIST_COMMON)
+DIST_COMMON = $(srcdir)/Makefile.am $(am__python_PYTHON_DIST) \
+	$(dist_docs_DATA) $(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES = setup.py
@@ -130,12 +132,14 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(pythondir)" "$(DESTDIR)$(docsdir)" \
-	"$(DESTDIR)$(pythondir)"
-LTLIBRARIES = $(python_LTLIBRARIES)
+am__installdirs = "$(DESTDIR)$(pyexecdir)" "$(DESTDIR)$(pythondir)" \
+	"$(DESTDIR)$(docsdir)"
+LTLIBRARIES = $(pyexec_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-@WITH_PYTHON_TRUE@libxml2mod_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-@WITH_PYTHON_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+@WITH_PYTHON_TRUE@libxml2mod_la_DEPENDENCIES =  \
+@WITH_PYTHON_TRUE@	$(top_builddir)/libxml2.la \
+@WITH_PYTHON_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+@WITH_PYTHON_TRUE@	$(am__DEPENDENCIES_1)
 am__libxml2mod_la_SOURCES_DIST = libxml.c libxml_wrap.h libxml2-py.h \
 	libxml2-py.c types.c
 @WITH_PYTHON_TRUE@am_libxml2mod_la_OBJECTS = libxml.lo libxml2-py.lo \
@@ -148,7 +152,7 @@ am__v_lt_1 =
 libxml2mod_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(libxml2mod_la_LDFLAGS) $(LDFLAGS) -o $@
-@WITH_PYTHON_TRUE@am_libxml2mod_la_rpath = -rpath $(pythondir)
+@WITH_PYTHON_TRUE@am_libxml2mod_la_rpath = -rpath $(pyexecdir)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -200,8 +204,12 @@ am__can_run_installinfo = \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
-am__dist_python_DATA_DIST = drv_libxml2.py libxml2.py
-DATA = $(dist_docs_DATA) $(dist_python_DATA)
+am__python_PYTHON_DIST = drv_libxml2.py libxml2.py
+am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
+am__pep3147_tweak = \
+  sed -e 's|\.py$$||' -e 's|[^/]*$$|&.*.pyc\n&.*.pyo|'
+py_compile = $(top_srcdir)/py-compile
+DATA = $(dist_docs_DATA)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
@@ -231,7 +239,7 @@ ETAGS = etags
 CTAGS = ctags
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/setup.py.in \
-	$(top_srcdir)/depcomp README TODO
+	$(top_srcdir)/depcomp $(top_srcdir)/py-compile README TODO
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 am__relativize = \
   dir0=`pwd`; \
@@ -281,7 +289,6 @@ DEBUG_OBJ = @DEBUG_OBJ@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
 DLLTOOL = @DLLTOOL@
-DOCB_OBJ = @DOCB_OBJ@
 DSYMUTIL = @DSYMUTIL@
 DUMPBIN = @DUMPBIN@
 ECHO_C = @ECHO_C@
@@ -293,7 +300,6 @@ EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
 FTP_OBJ = @FTP_OBJ@
 GREP = @GREP@
-HTML_DIR = @HTML_DIR@
 HTML_OBJ = @HTML_OBJ@
 HTTP_OBJ = @HTTP_OBJ@
 ICONV_LIBS = @ICONV_LIBS@
@@ -307,6 +313,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LD = @LD@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
 LIBTOOL = @LIBTOOL@
@@ -330,7 +337,6 @@ MKDIR_P = @MKDIR_P@
 MODULE_EXTENSION = @MODULE_EXTENSION@
 MODULE_PLATFORM_LIBS = @MODULE_PLATFORM_LIBS@
 MV = @MV@
-M_LIBS = @M_LIBS@
 NM = @NM@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
@@ -350,40 +356,27 @@ PKG_CONFIG = @PKG_CONFIG@
 PKG_CONFIG_LIBDIR = @PKG_CONFIG_LIBDIR@
 PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
 PYTHON = @PYTHON@
-PYTHON_INCLUDES = @PYTHON_INCLUDES@
+PYTHON_CFLAGS = @PYTHON_CFLAGS@
+PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
 PYTHON_LIBS = @PYTHON_LIBS@
-PYTHON_SITE_PACKAGES = @PYTHON_SITE_PACKAGES@
-PYTHON_SUBDIR = @PYTHON_SUBDIR@
+PYTHON_PLATFORM = @PYTHON_PLATFORM@
+PYTHON_PREFIX = @PYTHON_PREFIX@
 PYTHON_TESTS = @PYTHON_TESTS@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RDL_LIBS = @RDL_LIBS@
-READER_TEST = @READER_TEST@
 RELDATE = @RELDATE@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
-STATIC_BINARIES = @STATIC_BINARIES@
 STRIP = @STRIP@
 TAR = @TAR@
-TEST_C14N = @TEST_C14N@
 TEST_CATALOG = @TEST_CATALOG@
 TEST_DEBUG = @TEST_DEBUG@
-TEST_HTML = @TEST_HTML@
-TEST_MODULES = @TEST_MODULES@
-TEST_PATTERN = @TEST_PATTERN@
-TEST_PHTML = @TEST_PHTML@
-TEST_PUSH = @TEST_PUSH@
 TEST_REGEXPS = @TEST_REGEXPS@
-TEST_SAX = @TEST_SAX@
-TEST_SCHEMAS = @TEST_SCHEMAS@
 TEST_SCHEMATRON = @TEST_SCHEMATRON@
-TEST_THREADS = @TEST_THREADS@
 TEST_VALID = @TEST_VALID@
 TEST_VTIME = @TEST_VTIME@
-TEST_XINCLUDE = @TEST_XINCLUDE@
-TEST_XPATH = @TEST_XPATH@
-TEST_XPTR = @TEST_XPTR@
 THREAD_CFLAGS = @THREAD_CFLAGS@
 THREAD_LIBS = @THREAD_LIBS@
 VERSION = @VERSION@
@@ -395,7 +388,6 @@ WIN32_EXTRA_PYTHON_LIBADD = @WIN32_EXTRA_PYTHON_LIBADD@
 WITH_C14N = @WITH_C14N@
 WITH_CATALOG = @WITH_CATALOG@
 WITH_DEBUG = @WITH_DEBUG@
-WITH_DOCB = @WITH_DOCB@
 WITH_FTP = @WITH_FTP@
 WITH_HTML = @WITH_HTML@
 WITH_HTTP = @WITH_HTTP@
@@ -424,6 +416,7 @@ WITH_WRITER = @WITH_WRITER@
 WITH_XINCLUDE = @WITH_XINCLUDE@
 WITH_XPATH = @WITH_XPATH@
 WITH_XPTR = @WITH_XPTR@
+WITH_XPTR_LOCS = @WITH_XPTR_LOCS@
 WITH_ZLIB = @WITH_ZLIB@
 XINCLUDE_OBJ = @XINCLUDE_OBJ@
 XMLLINT = @XMLLINT@
@@ -479,9 +472,12 @@ mandir = @mandir@
 mkdir_p = @mkdir_p@
 oldincludedir = @oldincludedir@
 pdfdir = @pdfdir@
+pkgpyexecdir = @pkgpyexecdir@
+pkgpythondir = @pkgpythondir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
+pyexecdir = @pyexecdir@
 pythondir = @pythondir@
 runstatedir = @runstatedir@
 sbindir = @sbindir@
@@ -492,11 +488,8 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-
-# Makefile for libxml2 python library
-AUTOMAKE_OPTIONS = 1.4 foreign
 SUBDIRS = . tests
-docsdir = $(datadir)/doc/libxml2-python-$(LIBXML_VERSION)
+docsdir = $(docdir)/python
 dist_docs_DATA = TODO
 EXTRA_DIST = \
 	setup.py		\
@@ -510,16 +503,14 @@ EXTRA_DIST = \
 @WITH_PYTHON_TRUE@AM_CPPFLAGS = \
 @WITH_PYTHON_TRUE@	-I$(top_builddir)/include \
 @WITH_PYTHON_TRUE@	-I$(top_srcdir)/include	\
-@WITH_PYTHON_TRUE@	-I$(PYTHON_INCLUDES)
+@WITH_PYTHON_TRUE@	$(PYTHON_CFLAGS)
 
-@WITH_PYTHON_TRUE@python_LTLIBRARIES = libxml2mod.la
+@WITH_PYTHON_TRUE@pyexec_LTLIBRARIES = libxml2mod.la
 @WITH_PYTHON_TRUE@libxml2mod_la_SOURCES = libxml.c libxml_wrap.h libxml2-py.h libxml2-py.c types.c
-@WITH_PYTHON_TRUE@libxml2mod_la_LDFLAGS = $(CYGWIN_EXTRA_LDFLAGS) $(WIN32_EXTRA_LDFLAGS) -module -avoid-version \
-@WITH_PYTHON_TRUE@        $(top_builddir)/libxml2.la
-
-@WITH_PYTHON_TRUE@libxml2mod_la_LIBADD = $(CYGWIN_EXTRA_PYTHON_LIBADD) $(WIN32_EXTRA_PYTHON_LIBADD) $(PYTHON_LIBS)
+@WITH_PYTHON_TRUE@libxml2mod_la_LDFLAGS = $(CYGWIN_EXTRA_LDFLAGS) $(WIN32_EXTRA_LDFLAGS) -module -avoid-version
+@WITH_PYTHON_TRUE@libxml2mod_la_LIBADD = $(top_builddir)/libxml2.la $(CYGWIN_EXTRA_PYTHON_LIBADD) $(WIN32_EXTRA_PYTHON_LIBADD) $(PYTHON_LIBS)
 @WITH_PYTHON_TRUE@BUILT_SOURCES = libxml2-export.c libxml2-py.h libxml2-py.c
-@WITH_PYTHON_TRUE@dist_python_DATA = \
+@WITH_PYTHON_TRUE@python_PYTHON = \
 @WITH_PYTHON_TRUE@	drv_libxml2.py \
 @WITH_PYTHON_TRUE@	libxml2.py
 
@@ -564,33 +555,33 @@ $(am__aclocal_m4_deps):
 setup.py: $(top_builddir)/config.status $(srcdir)/setup.py.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 
-install-pythonLTLIBRARIES: $(python_LTLIBRARIES)
+install-pyexecLTLIBRARIES: $(pyexec_LTLIBRARIES)
 	@$(NORMAL_INSTALL)
-	@list='$(python_LTLIBRARIES)'; test -n "$(pythondir)" || list=; \
+	@list='$(pyexec_LTLIBRARIES)'; test -n "$(pyexecdir)" || list=; \
 	list2=; for p in $$list; do \
 	  if test -f $$p; then \
 	    list2="$$list2 $$p"; \
 	  else :; fi; \
 	done; \
 	test -z "$$list2" || { \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(pythondir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(pythondir)" || exit 1; \
-	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 '$(DESTDIR)$(pythondir)'"; \
-	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 "$(DESTDIR)$(pythondir)"; \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(pyexecdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(pyexecdir)" || exit 1; \
+	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 '$(DESTDIR)$(pyexecdir)'"; \
+	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 "$(DESTDIR)$(pyexecdir)"; \
 	}
 
-uninstall-pythonLTLIBRARIES:
+uninstall-pyexecLTLIBRARIES:
 	@$(NORMAL_UNINSTALL)
-	@list='$(python_LTLIBRARIES)'; test -n "$(pythondir)" || list=; \
+	@list='$(pyexec_LTLIBRARIES)'; test -n "$(pyexecdir)" || list=; \
 	for p in $$list; do \
 	  $(am__strip_dir) \
-	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(DESTDIR)$(pythondir)/$$f'"; \
-	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(DESTDIR)$(pythondir)/$$f"; \
+	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(DESTDIR)$(pyexecdir)/$$f'"; \
+	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(DESTDIR)$(pyexecdir)/$$f"; \
 	done
 
-clean-pythonLTLIBRARIES:
-	-test -z "$(python_LTLIBRARIES)" || rm -f $(python_LTLIBRARIES)
-	@list='$(python_LTLIBRARIES)'; \
+clean-pyexecLTLIBRARIES:
+	-test -z "$(pyexec_LTLIBRARIES)" || rm -f $(pyexec_LTLIBRARIES)
+	@list='$(pyexec_LTLIBRARIES)'; \
 	locs=`for p in $$list; do echo $$p; done | \
 	      sed 's|^[^/]*$$|.|; s|/[^/]*$$||; s|$$|/so_locations|' | \
 	      sort -u`; \
@@ -644,6 +635,49 @@ mostlyclean-libtool:
 
 clean-libtool:
 	-rm -rf .libs _libs
+install-pythonPYTHON: $(python_PYTHON)
+	@$(NORMAL_INSTALL)
+	@list='$(python_PYTHON)'; dlist=; list2=; test -n "$(pythondir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(pythondir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(pythondir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then b=; else b="$(srcdir)/"; fi; \
+	  if test -f $$b$$p; then \
+	    $(am__strip_dir) \
+	    dlist="$$dlist $$f"; \
+	    list2="$$list2 $$b$$p"; \
+	  else :; fi; \
+	done; \
+	for file in $$list2; do echo $$file; done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pythondir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pythondir)" || exit $$?; \
+	done || exit $$?; \
+	if test -n "$$dlist"; then \
+	  $(am__py_compile) --destdir "$(DESTDIR)" \
+	                    --basedir "$(pythondir)" $$dlist; \
+	else :; fi
+
+uninstall-pythonPYTHON:
+	@$(NORMAL_UNINSTALL)
+	@list='$(python_PYTHON)'; test -n "$(pythondir)" || list=; \
+	py_files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	test -n "$$py_files" || exit 0; \
+	dir='$(DESTDIR)$(pythondir)'; \
+	pyc_files=`echo "$$py_files" | sed 's|$$|c|'`; \
+	pyo_files=`echo "$$py_files" | sed 's|$$|o|'`; \
+	st=0; \
+	for files in "$$py_files" "$$pyc_files" "$$pyo_files"; do \
+	  $(am__uninstall_files_from_dir) || st=$$?; \
+	done; \
+	dir='$(DESTDIR)$(pythondir)/__pycache__'; \
+	echo "$$py_files" | $(am__pep3147_tweak) | $(am__base_list) | \
+	  while read files; do \
+	    $(am__uninstall_files_from_dir) || st=$$?; \
+	  done || exit $$?; \
+	exit $$st
 install-dist_docsDATA: $(dist_docs_DATA)
 	@$(NORMAL_INSTALL)
 	@list='$(dist_docs_DATA)'; test -n "$(docsdir)" || list=; \
@@ -665,27 +699,6 @@ uninstall-dist_docsDATA:
 	@list='$(dist_docs_DATA)'; test -n "$(docsdir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 	dir='$(DESTDIR)$(docsdir)'; $(am__uninstall_files_from_dir)
-install-dist_pythonDATA: $(dist_python_DATA)
-	@$(NORMAL_INSTALL)
-	@list='$(dist_python_DATA)'; test -n "$(pythondir)" || list=; \
-	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(pythondir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(pythondir)" || exit 1; \
-	fi; \
-	for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  echo "$$d$$p"; \
-	done | $(am__base_list) | \
-	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pythondir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pythondir)" || exit $$?; \
-	done
-
-uninstall-dist_pythonDATA:
-	@$(NORMAL_UNINSTALL)
-	@list='$(dist_python_DATA)'; test -n "$(pythondir)" || list=; \
-	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(pythondir)'; $(am__uninstall_files_from_dir)
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.
@@ -847,10 +860,11 @@ distdir-am: $(DISTFILES)
 check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-recursive
-all-am: Makefile $(LTLIBRARIES) $(DATA)
+@WITH_PYTHON_FALSE@all-local:
+all-am: Makefile $(LTLIBRARIES) $(DATA) all-local
 installdirs: installdirs-recursive
 installdirs-am:
-	for dir in "$(DESTDIR)$(pythondir)" "$(DESTDIR)$(docsdir)" "$(DESTDIR)$(pythondir)"; do \
+	for dir in "$(DESTDIR)$(pyexecdir)" "$(DESTDIR)$(pythondir)" "$(DESTDIR)$(docsdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -889,7 +903,7 @@ maintainer-clean-generic:
 	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
 clean: clean-recursive
 
-clean-am: clean-generic clean-libtool clean-pythonLTLIBRARIES \
+clean-am: clean-generic clean-libtool clean-pyexecLTLIBRARIES \
 	mostlyclean-am
 
 distclean: distclean-recursive
@@ -912,14 +926,13 @@ info: info-recursive
 
 info-am:
 
-install-data-am: install-dist_docsDATA install-dist_pythonDATA \
-	install-pythonLTLIBRARIES
+install-data-am: install-dist_docsDATA install-pythonPYTHON
 
 install-dvi: install-dvi-recursive
 
 install-dvi-am:
 
-install-exec-am:
+install-exec-am: install-pyexecLTLIBRARIES
 
 install-html: install-html-recursive
 
@@ -961,28 +974,28 @@ ps: ps-recursive
 
 ps-am:
 
-uninstall-am: uninstall-dist_docsDATA uninstall-dist_pythonDATA \
-	uninstall-pythonLTLIBRARIES
+uninstall-am: uninstall-dist_docsDATA uninstall-pyexecLTLIBRARIES \
+	uninstall-pythonPYTHON
 
 .MAKE: $(am__recursive_targets) all check install install-am \
 	install-strip
 
-.PHONY: $(am__recursive_targets) CTAGS GTAGS TAGS all all-am \
+.PHONY: $(am__recursive_targets) CTAGS GTAGS TAGS all all-am all-local \
 	am--depfiles check check-am clean clean-generic clean-libtool \
-	clean-pythonLTLIBRARIES cscopelist-am ctags ctags-am distclean \
+	clean-pyexecLTLIBRARIES cscopelist-am ctags ctags-am distclean \
 	distclean-compile distclean-generic distclean-libtool \
 	distclean-tags distdir dvi dvi-am html html-am info info-am \
 	install install-am install-data install-data-am \
-	install-dist_docsDATA install-dist_pythonDATA install-dvi \
-	install-dvi-am install-exec install-exec-am install-html \
-	install-html-am install-info install-info-am install-man \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-pythonLTLIBRARIES install-strip installcheck \
+	install-dist_docsDATA install-dvi install-dvi-am install-exec \
+	install-exec-am install-html install-html-am install-info \
+	install-info-am install-man install-pdf install-pdf-am \
+	install-ps install-ps-am install-pyexecLTLIBRARIES \
+	install-pythonPYTHON install-strip installcheck \
 	installcheck-am installdirs installdirs-am maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags tags-am uninstall uninstall-am uninstall-dist_docsDATA \
-	uninstall-dist_pythonDATA uninstall-pythonLTLIBRARIES
+	uninstall-pyexecLTLIBRARIES uninstall-pythonPYTHON
 
 .PRECIOUS: Makefile
 
@@ -993,11 +1006,11 @@ uninstall-am: uninstall-dist_docsDATA uninstall-dist_pythonDATA \
 @WITH_PYTHON_TRUE@libxml2.py: $(srcdir)/libxml.py libxml2class.py
 @WITH_PYTHON_TRUE@	cat $(srcdir)/libxml.py `test -f libxml2class.py || echo $(srcdir)/`libxml2class.py > $@
 
+# Generated sources
+@WITH_PYTHON_TRUE@all-local: drv_libxml2.py libxml2.py
+
 @WITH_PYTHON_TRUE@$(GENERATED): $(srcdir)/generator.py $(API_DESC)
 @WITH_PYTHON_TRUE@	$(PYTHON) $(srcdir)/generator.py $(srcdir)
-
-tests test: all
-	cd tests && $(MAKE) tests
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

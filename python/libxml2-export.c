@@ -1,8 +1,5 @@
 /* Generated */
 
-#if defined(LIBXML_DOCB_ENABLED)
-    { (char *)"docbDefaultSAXHandlerInit", libxml_docbDefaultSAXHandlerInit, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_DOCB_ENABLED) */
 #if defined(LIBXML_HTML_ENABLED)
     { (char *)"htmlAutoCloseTag", libxml_htmlAutoCloseTag, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_HTML_ENABLED) */
@@ -1665,9 +1662,9 @@
 #if defined(LIBXML_VALID_ENABLED)
     { (char *)"xmlValidateElement", libxml_xmlValidateElement, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_VALID_ENABLED) */
-#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
+#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
     { (char *)"xmlValidateNCName", libxml_xmlValidateNCName, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
+#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
     { (char *)"xmlValidateNMToken", libxml_xmlValidateNMToken, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) */
@@ -2043,24 +2040,24 @@
 #if defined(LIBXML_XPTR_ENABLED)
     { (char *)"xmlXPtrEval", libxml_xmlXPtrEval, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
     { (char *)"xmlXPtrEvalRangePredicate", libxml_xmlXPtrEvalRangePredicate, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
     { (char *)"xmlXPtrNewCollapsedRange", libxml_xmlXPtrNewCollapsedRange, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_XPTR_ENABLED) */
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
 #if defined(LIBXML_XPTR_ENABLED)
     { (char *)"xmlXPtrNewContext", libxml_xmlXPtrNewContext, METH_VARARGS, NULL },
 #endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
     { (char *)"xmlXPtrNewLocationSetNodes", libxml_xmlXPtrNewLocationSetNodes, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
     { (char *)"xmlXPtrNewRange", libxml_xmlXPtrNewRange, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
     { (char *)"xmlXPtrNewRangeNodes", libxml_xmlXPtrNewRangeNodes, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
     { (char *)"xmlXPtrRangeToFunction", libxml_xmlXPtrRangeToFunction, METH_VARARGS, NULL },
-#endif /* defined(LIBXML_XPTR_ENABLED) */
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */

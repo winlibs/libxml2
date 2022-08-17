@@ -13,6 +13,7 @@
 # PARTICULAR PURPOSE.
 
 @SET_MAKE@
+
 VPATH = @srcdir@
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
@@ -89,13 +90,14 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = doc
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/acinclude.m4 $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/ac_try_compile2.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
-DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
+DIST_COMMON = $(srcdir)/Makefile.am $(nobase_dist_doc_DATA) \
+	$(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
@@ -155,9 +157,10 @@ am__uninstall_files_from_dir = { \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
 man1dir = $(mandir)/man1
-am__installdirs = "$(DESTDIR)$(man1dir)"
+am__installdirs = "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(docdir)"
 NROFF = nroff
-MANS = $(man_MANS)
+MANS = $(dist_man_MANS)
+DATA = $(nobase_dist_doc_DATA)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
@@ -186,7 +189,7 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DIST_SUBDIRS = $(SUBDIRS)
-am__DIST_COMMON = $(srcdir)/Makefile.in
+am__DIST_COMMON = $(dist_man_MANS) $(srcdir)/Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 am__relativize = \
   dir0=`pwd`; \
@@ -236,7 +239,6 @@ DEBUG_OBJ = @DEBUG_OBJ@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
 DLLTOOL = @DLLTOOL@
-DOCB_OBJ = @DOCB_OBJ@
 DSYMUTIL = @DSYMUTIL@
 DUMPBIN = @DUMPBIN@
 ECHO_C = @ECHO_C@
@@ -248,7 +250,6 @@ EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
 FTP_OBJ = @FTP_OBJ@
 GREP = @GREP@
-HTML_DIR = @HTML_DIR@
 HTML_OBJ = @HTML_OBJ@
 HTTP_OBJ = @HTTP_OBJ@
 ICONV_LIBS = @ICONV_LIBS@
@@ -262,6 +263,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LD = @LD@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
 LIBTOOL = @LIBTOOL@
@@ -285,7 +287,6 @@ MKDIR_P = @MKDIR_P@
 MODULE_EXTENSION = @MODULE_EXTENSION@
 MODULE_PLATFORM_LIBS = @MODULE_PLATFORM_LIBS@
 MV = @MV@
-M_LIBS = @M_LIBS@
 NM = @NM@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
@@ -305,40 +306,27 @@ PKG_CONFIG = @PKG_CONFIG@
 PKG_CONFIG_LIBDIR = @PKG_CONFIG_LIBDIR@
 PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
 PYTHON = @PYTHON@
-PYTHON_INCLUDES = @PYTHON_INCLUDES@
+PYTHON_CFLAGS = @PYTHON_CFLAGS@
+PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
 PYTHON_LIBS = @PYTHON_LIBS@
-PYTHON_SITE_PACKAGES = @PYTHON_SITE_PACKAGES@
-PYTHON_SUBDIR = @PYTHON_SUBDIR@
+PYTHON_PLATFORM = @PYTHON_PLATFORM@
+PYTHON_PREFIX = @PYTHON_PREFIX@
 PYTHON_TESTS = @PYTHON_TESTS@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RDL_LIBS = @RDL_LIBS@
-READER_TEST = @READER_TEST@
 RELDATE = @RELDATE@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
-STATIC_BINARIES = @STATIC_BINARIES@
 STRIP = @STRIP@
 TAR = @TAR@
-TEST_C14N = @TEST_C14N@
 TEST_CATALOG = @TEST_CATALOG@
 TEST_DEBUG = @TEST_DEBUG@
-TEST_HTML = @TEST_HTML@
-TEST_MODULES = @TEST_MODULES@
-TEST_PATTERN = @TEST_PATTERN@
-TEST_PHTML = @TEST_PHTML@
-TEST_PUSH = @TEST_PUSH@
 TEST_REGEXPS = @TEST_REGEXPS@
-TEST_SAX = @TEST_SAX@
-TEST_SCHEMAS = @TEST_SCHEMAS@
 TEST_SCHEMATRON = @TEST_SCHEMATRON@
-TEST_THREADS = @TEST_THREADS@
 TEST_VALID = @TEST_VALID@
 TEST_VTIME = @TEST_VTIME@
-TEST_XINCLUDE = @TEST_XINCLUDE@
-TEST_XPATH = @TEST_XPATH@
-TEST_XPTR = @TEST_XPTR@
 THREAD_CFLAGS = @THREAD_CFLAGS@
 THREAD_LIBS = @THREAD_LIBS@
 VERSION = @VERSION@
@@ -350,7 +338,6 @@ WIN32_EXTRA_PYTHON_LIBADD = @WIN32_EXTRA_PYTHON_LIBADD@
 WITH_C14N = @WITH_C14N@
 WITH_CATALOG = @WITH_CATALOG@
 WITH_DEBUG = @WITH_DEBUG@
-WITH_DOCB = @WITH_DOCB@
 WITH_FTP = @WITH_FTP@
 WITH_HTML = @WITH_HTML@
 WITH_HTTP = @WITH_HTTP@
@@ -379,6 +366,7 @@ WITH_WRITER = @WITH_WRITER@
 WITH_XINCLUDE = @WITH_XINCLUDE@
 WITH_XPATH = @WITH_XPATH@
 WITH_XPTR = @WITH_XPTR@
+WITH_XPTR_LOCS = @WITH_XPTR_LOCS@
 WITH_ZLIB = @WITH_ZLIB@
 XINCLUDE_OBJ = @XINCLUDE_OBJ@
 XMLLINT = @XMLLINT@
@@ -434,9 +422,12 @@ mandir = @mandir@
 mkdir_p = @mkdir_p@
 oldincludedir = @oldincludedir@
 pdfdir = @pdfdir@
+pkgpyexecdir = @pkgpyexecdir@
+pkgpythondir = @pkgpythondir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
+pyexecdir = @pyexecdir@
 pythondir = @pythondir@
 runstatedir = @runstatedir@
 sbindir = @sbindir@
@@ -448,172 +439,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = . devhelp examples
-
-# The top-level SGML file.
-DOC_MAIN_XML_FILE = gnome-xml.xml
-
-# The directory containing the source code (if it contains documentation).
-DOC_SOURCE_DIR = ..
-
-# A file in win32 depends upon one of the doc files
-WIN32_DIR = $(top_srcdir)/win32
-PAGES = architecture.html bugs.html contribs.html docs.html DOM.html \
-    downloads.html entities.html example.html help.html index.html \
-    interface.html intro.html library.html namespaces.html news.html \
-    tree.html xmldtd.html XMLinfo.html XSLT.html
-
-APIPAGES = APIconstructors.html APIfiles.html APIfunctions.html \
-    APIsymbols.html APIchunk0.html
-
-@REBUILD_DOCS_TRUE@EXTRA_DIST_wc = xmlcatalog_man.xml $(wildcard tutorial/*.html) \
-@REBUILD_DOCS_TRUE@    $(wildcard tutorial/*.c) $(wildcard tutorial/*.pdf) \
-@REBUILD_DOCS_TRUE@    $(wildcard tutorial/images/*.png) \
-@REBUILD_DOCS_TRUE@    $(wildcard tutorial/images/callouts/*.png) $(wildcard API*.html) \
-@REBUILD_DOCS_TRUE@    $(wildcard *.1) $(wildcard *.xsl) $(wildcard *.html) \
-@REBUILD_DOCS_TRUE@    $(wildcard *.gif) w3c.png $(wildcard html/*.html) \
-@REBUILD_DOCS_TRUE@    $(wildcard html/*.png) libxml2-api.xml index.py search.php \
-@REBUILD_DOCS_TRUE@    apibuild.py libxml2.xsa xmllint.xml xmlcatalog_man.xml \
-@REBUILD_DOCS_TRUE@    symbols.xml
-
-
-# Expanded form of EXTRA_DIST_wc
-#
-EXTRA_DIST = \
-	APIchunk0.html \
-	APIchunk1.html \
-	APIchunk2.html \
-	APIchunk3.html \
-	APIchunk4.html \
-	APIchunk5.html \
-	APIchunk6.html \
-	APIchunk7.html \
-	APIchunk8.html \
-	APIchunk9.html \
-	APIchunk10.html \
-	APIchunk11.html \
-	APIchunk12.html \
-	APIchunk13.html \
-	APIchunk14.html \
-	APIchunk15.html \
-	APIchunk16.html \
-	APIchunk17.html \
-	APIchunk18.html \
-	APIchunk19.html \
-	APIchunk20.html \
-	APIchunk21.html \
-	APIchunk22.html \
-	APIchunk23.html \
-	APIchunk24.html \
-	APIchunk25.html \
-	APIchunk26.html \
-	APIchunk27.html \
-	APIchunk28.html \
-	APIchunk29.html \
-	APIconstructors.html \
-	APIfiles.html \
-	APIfunctions.html \
-	APIsymbols.html \
-	DOM.gif \
-	DOM.html \
-	FAQ.html \
-	Libxml2-Logo-180x168.gif \
-	Libxml2-Logo-90x34.gif \
-	XMLinfo.html \
-	XSLT.html \
-	api.xsl \
-	apibuild.py \
-	architecture.html \
-	bugs.html \
-	catalog.gif \
-	catalog.html \
-	checkapisym.xsl \
-	contribs.html \
-	docs.html \
-	downloads.html \
-	elfgcchack.xsl \
-	encoding.html \
-	entities.html \
-	example.html \
-	guidelines.html \
-	help.html \
-	html/book1.html \
-	html/home.png \
-	html/index.html \
-	html/left.png \
-	html/libxml-DOCBparser.html \
-	html/libxml-HTMLparser.html \
-	html/libxml-HTMLtree.html \
-	html/libxml-SAX.html \
-	html/libxml-SAX2.html \
-	html/libxml-c14n.html \
-	html/libxml-catalog.html \
-	html/libxml-chvalid.html \
-	html/libxml-debugXML.html \
-	html/libxml-dict.html \
-	html/libxml-encoding.html \
-	html/libxml-entities.html \
-	html/libxml-globals.html \
-	html/libxml-hash.html \
-	html/libxml-lib.html \
-	html/libxml-list.html \
-	html/libxml-nanoftp.html \
-	html/libxml-nanohttp.html \
-	html/libxml-parser.html \
-	html/libxml-parserInternals.html \
-	html/libxml-pattern.html \
-	html/libxml-relaxng.html \
-	html/libxml-schemasInternals.html \
-	html/libxml-schematron.html \
-	html/libxml-threads.html \
-	html/libxml-tree.html \
-	html/libxml-uri.html \
-	html/libxml-valid.html \
-	html/libxml-xinclude.html \
-	html/libxml-xlink.html \
-	html/libxml-xmlIO.html \
-	html/libxml-xmlautomata.html \
-	html/libxml-xmlerror.html \
-	html/libxml-xmlexports.html \
-	html/libxml-xmlmemory.html \
-	html/libxml-xmlmodule.html \
-	html/libxml-xmlreader.html \
-	html/libxml-xmlregexp.html \
-	html/libxml-xmlsave.html \
-	html/libxml-xmlschemas.html \
-	html/libxml-xmlschemastypes.html \
-	html/libxml-xmlstring.html \
-	html/libxml-xmlunicode.html \
-	html/libxml-xmlversion.html \
-	html/libxml-xmlwriter.html \
-	html/libxml-xpath.html \
-	html/libxml-xpathInternals.html \
-	html/libxml-xpointer.html \
-	html/right.png \
-	html/up.png \
-	index.html \
-	index.py \
-	interface.html \
-	intro.html \
-	library.html \
-	libxml.gif \
-	libxml2-api.xml \
-	libxml2.xsa \
-	namespaces.html \
-	newapi.xsl \
-	news.html \
-	news.xsl \
-	python.html \
-	redhat.gif \
-	search.php \
-	searches.html \
-	searches.xsl \
-	site.xsl \
-	smallfootonly.gif \
-	structure.gif \
-	symbols.xml \
-	syms.xsl \
-	threads.html \
-	tree.html \
+nobase_dist_doc_DATA = \
 	tutorial/apa.html \
 	tutorial/apb.html \
 	tutorial/apc.html \
@@ -663,28 +489,20 @@ EXTRA_DIST = \
 	tutorial/includexpath.c \
 	tutorial/index.html \
 	tutorial/ix01.html \
-	upgrade.html \
-	w3c.png \
-	wiki.xsl \
-	xml.html \
-	xmlcatalog.1 \
-	xmlcatalog_man.html \
-	xmlcatalog_man.xml \
-	xmldtd.html \
-	xmlio.html \
-	xmllint.1 \
-	xmllint.html \
-	xmllint.xml \
-	xmlmem.html \
-	xmlreader.html \
-	xsa.xsl
+	xmlcatalog.html \
+	xmllint.html
 
-man_MANS = xmllint.1 xmlcatalog.1
-@REBUILD_DOCS_TRUE@source_file_deps = \
-@REBUILD_DOCS_TRUE@	$(filter-out %/xmlversion.h, $(wildcard $(top_srcdir)/include/libxml/*.h)) \
-@REBUILD_DOCS_TRUE@	$(top_srcdir)/include/libxml/xmlversion.h.in \
-@REBUILD_DOCS_TRUE@	$(wildcard $(top_srcdir)/*.c)
+dist_man_MANS = xml2-config.1 xmllint.1 xmlcatalog.1
+EXTRA_DIST = \
+	apibuild.py \
+	checkapisym.xsl \
+	libxml2-api.xml \
+	symbols.xml \
+	syms.xsl \
+	xmlcatalog.xml \
+	xmllint.xml
 
+DOCBOOK_HTML = http://docbook.sourceforge.net/release/xsl/current/html/docbook.xsl
 all: all-recursive
 
 .SUFFIXES:
@@ -723,10 +541,10 @@ mostlyclean-libtool:
 
 clean-libtool:
 	-rm -rf .libs _libs
-install-man1: $(man_MANS)
+install-man1: $(dist_man_MANS)
 	@$(NORMAL_INSTALL)
 	@list1=''; \
-	list2='$(man_MANS)'; \
+	list2='$(dist_man_MANS)'; \
 	test -n "$(man1dir)" \
 	  && test -n "`echo $$list1$$list2`" \
 	  || exit 0; \
@@ -761,11 +579,35 @@ uninstall-man1:
 	@$(NORMAL_UNINSTALL)
 	@list=''; test -n "$(man1dir)" || exit 0; \
 	files=`{ for i in $$list; do echo "$$i"; done; \
-	l2='$(man_MANS)'; for i in $$l2; do echo "$$i"; done | \
+	l2='$(dist_man_MANS)'; for i in $$l2; do echo "$$i"; done | \
 	  sed -n '/\.1[a-z]*$$/p'; \
 	} | sed -e 's,.*/,,;h;s,.*\.,,;s,^[^1][0-9a-z]*$$,1,;x' \
 	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,'`; \
 	dir='$(DESTDIR)$(man1dir)'; $(am__uninstall_files_from_dir)
+install-nobase_dist_docDATA: $(nobase_dist_doc_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(nobase_dist_doc_DATA)'; test -n "$(docdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(docdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(docdir)" || exit 1; \
+	fi; \
+	$(am__nobase_list) | while read dir files; do \
+	  xfiles=; for file in $$files; do \
+	    if test -f "$$file"; then xfiles="$$xfiles $$file"; \
+	    else xfiles="$$xfiles $(srcdir)/$$file"; fi; done; \
+	  test -z "$$xfiles" || { \
+	    test "x$$dir" = x. || { \
+	      echo " $(MKDIR_P) '$(DESTDIR)$(docdir)/$$dir'"; \
+	      $(MKDIR_P) "$(DESTDIR)$(docdir)/$$dir"; }; \
+	    echo " $(INSTALL_DATA) $$xfiles '$(DESTDIR)$(docdir)/$$dir'"; \
+	    $(INSTALL_DATA) $$xfiles "$(DESTDIR)$(docdir)/$$dir" || exit $$?; }; \
+	done
+
+uninstall-nobase_dist_docDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(nobase_dist_doc_DATA)'; test -n "$(docdir)" || list=; \
+	$(am__nobase_strip_setup); files=`$(am__nobase_strip)`; \
+	dir='$(DESTDIR)$(docdir)'; $(am__uninstall_files_from_dir)
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.
@@ -926,10 +768,10 @@ distdir-am: $(DISTFILES)
 	done
 check-am: all-am
 check: check-recursive
-all-am: Makefile $(MANS)
+all-am: Makefile $(MANS) $(DATA)
 installdirs: installdirs-recursive
 installdirs-am:
-	for dir in "$(DESTDIR)$(man1dir)"; do \
+	for dir in "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(docdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-recursive
@@ -964,7 +806,7 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 clean: clean-recursive
 
-clean-am: clean-generic clean-libtool clean-local mostlyclean-am
+clean-am: clean-generic clean-libtool mostlyclean-am
 
 distclean: distclean-recursive
 	-rm -f Makefile
@@ -982,7 +824,7 @@ info: info-recursive
 
 info-am:
 
-install-data-am: install-data-local install-man
+install-data-am: install-man install-nobase_dist_docDATA
 
 install-dvi: install-dvi-recursive
 
@@ -1012,8 +854,7 @@ installcheck-am:
 
 maintainer-clean: maintainer-clean-recursive
 	-rm -f Makefile
-maintainer-clean-am: distclean-am maintainer-clean-generic \
-	maintainer-clean-local
+maintainer-clean-am: distclean-am maintainer-clean-generic
 
 mostlyclean: mostlyclean-recursive
 
@@ -1027,139 +868,44 @@ ps: ps-recursive
 
 ps-am:
 
-uninstall-am: uninstall-man
+uninstall-am: uninstall-man uninstall-nobase_dist_docDATA
 
 uninstall-man: uninstall-man1
 
 .MAKE: $(am__recursive_targets) install-am install-strip
 
 .PHONY: $(am__recursive_targets) CTAGS GTAGS TAGS all all-am check \
-	check-am clean clean-generic clean-libtool clean-local \
-	cscopelist-am ctags ctags-am distclean distclean-generic \
-	distclean-libtool distclean-tags distdir dvi dvi-am html \
-	html-am info info-am install install-am install-data \
-	install-data-am install-data-local install-dvi install-dvi-am \
-	install-exec install-exec-am install-html install-html-am \
-	install-info install-info-am install-man install-man1 \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	installdirs-am maintainer-clean maintainer-clean-generic \
-	maintainer-clean-local mostlyclean mostlyclean-generic \
-	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am uninstall-man uninstall-man1
+	check-am clean clean-generic clean-libtool cscopelist-am ctags \
+	ctags-am distclean distclean-generic distclean-libtool \
+	distclean-tags distdir dvi dvi-am html html-am info info-am \
+	install install-am install-data install-data-am install-dvi \
+	install-dvi-am install-exec install-exec-am install-html \
+	install-html-am install-info install-info-am install-man \
+	install-man1 install-nobase_dist_docDATA install-pdf \
+	install-pdf-am install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs installdirs-am \
+	maintainer-clean maintainer-clean-generic mostlyclean \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	tags tags-am uninstall uninstall-am uninstall-man \
+	uninstall-man1 uninstall-nobase_dist_docDATA
 
 .PRECIOUS: Makefile
 
 
-@REBUILD_DOCS_TRUE@docs: web $(top_builddir)/NEWS libxml2.xsa $(man_MANS)
+rebuild:
+	cd $(srcdir) && ./apibuild.py
+	cd $(srcdir) && $(XSLTPROC) checkapisym.xsl libxml2-api.xml
+	cd $(srcdir) && $(XSLTPROC) -o ../libxml2.syms syms.xsl symbols.xml
+	cd $(srcdir) && $(XSLTPROC) -o ../win32/libxml2.def.src ../win32/defgen.xsl libxml2-api.xml
+	cd $(srcdir) && $(XSLTPROC) --nonet xmllint.xml
+	cd $(srcdir) && $(XSLTPROC) --nonet -o xmllint.html $(DOCBOOK_HTML) xmllint.xml
+	cd $(srcdir) && $(XSLTPROC) --nonet xmlcatalog.xml
+	cd $(srcdir) && $(XSLTPROC) --nonet -o xmlcatalog.html $(DOCBOOK_HTML) xmlcatalog.xml
+	cd devhelp && $(MAKE) rebuild
+	cd examples && $(MAKE) rebuild
+	cd .. && $(MAKE) rebuild_testapi
 
-@REBUILD_DOCS_TRUE@api: libxml2-api.xml libxml2-refs.xml $(APIPAGES) $(srcdir)/html/index.html $(WIN32_DIR)/libxml2.def.src ../elfgcchack.h $(srcdir)/site.xsl
-
-@REBUILD_DOCS_TRUE@web: $(PAGES) xmllint.html xmlcatalog_man.html
-
-@REBUILD_DOCS_TRUE@../elfgcchack.h: $(srcdir)/elfgcchack.xsl $(srcdir)/libxml2-api.xml
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Rebuilding the elfgcchack.h header" ; \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet $(srcdir)/elfgcchack.xsl $(srcdir)/libxml2-api.xml > elfgcchack.h ; \
-@REBUILD_DOCS_TRUE@	  if [ "`diff -q elfgcchack.h ../elfgcchack.h`" ] ; then \
-@REBUILD_DOCS_TRUE@	    echo "updating ../elfgcchack.h"; \
-@REBUILD_DOCS_TRUE@	    cp elfgcchack.h ../elfgcchack.h; \
-@REBUILD_DOCS_TRUE@	  fi ; rm -f elfgcchack.h ;  fi );
-
-@REBUILD_DOCS_TRUE@$(PAGES): xml.html $(srcdir)/site.xsl
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Rebuilding the HTML Web pages from xml.html" ; \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet --html --path $(srcdir) $(srcdir)/site.xsl $(srcdir)/xml.html > index.html ; fi );
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XMLLINT) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Validating the HTML Web pages" ; \
-@REBUILD_DOCS_TRUE@	  $(XMLLINT) --nonet --valid --noout $(PAGES) ; fi );
-
-@REBUILD_DOCS_TRUE@$(top_builddir)/NEWS: $(srcdir)/news.xsl $(srcdir)/news.html
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet $(srcdir)/news.xsl $(srcdir)/news.html > $(top_builddir)/NEWS ; fi );
-
-@REBUILD_DOCS_TRUE@libxml2.xsa: $(srcdir)/xsa.xsl $(srcdir)/news.html
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Rebuilding the NEWS file" ; \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet $(srcdir)/xsa.xsl $(srcdir)/news.html > libxml2.xsa ; fi );
-
-@REBUILD_DOCS_TRUE@$(APIPAGES): libxml2-api.xml libxml2-refs.xml $(srcdir)/site.xsl $(srcdir)/api.xsl
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Rebuilding the HTML API pages from libxml2-refs.xml" ; \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet --html $(srcdir)/api.xsl \
-@REBUILD_DOCS_TRUE@	                     $(srcdir)/xml.html ; fi );
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XMLLINT) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Validating the HTML API pages" ; \
-@REBUILD_DOCS_TRUE@	  $(XMLLINT) --nonet --valid --noout API*.html ; fi );
-
-@REBUILD_DOCS_TRUE@$(srcdir)/html/index.html: libxml2-api.xml $(srcdir)/newapi.xsl
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Rebuilding the HTML pages from the XML API" ; \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) --nonet $(srcdir)/newapi.xsl $(srcdir)/libxml2-api.xml ; fi )
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XMLLINT) ] ; then \
-@REBUILD_DOCS_TRUE@	  echo "Validating the resulting XHTML pages" ; \
-@REBUILD_DOCS_TRUE@	  $(XMLLINT) --nonet --valid --noout html/*.html ; fi );
-
-@REBUILD_DOCS_TRUE@wiki: libxml2-api.xml $(srcdir)/wiki.xsl
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@		echo "Rebuilding the wiki HTML pages from the XML API" ; \
-@REBUILD_DOCS_TRUE@		$(XSLTPROC) --nonet $(srcdir)/wiki.xsl $(srcdir)/libxml2-api.xml; fi )
-
-@REBUILD_DOCS_TRUE@$(WIN32_DIR)/libxml2.def.src: libxml2-api.xml
-@REBUILD_DOCS_TRUE@	-@(if [ -x $(XSLTPROC) ] ; then \
-@REBUILD_DOCS_TRUE@	  $(XSLTPROC) -o $(WIN32_DIR)/libxml2.def.src \
-@REBUILD_DOCS_TRUE@	  --nonet $(WIN32_DIR)/defgen.xsl libxml2-api.xml ; fi )
-
-@REBUILD_DOCS_TRUE@libxml2-api.xml libxml2-refs.xml ../libxml2.syms: apibuild.py symbols.xml syms.xsl checkapisym.xsl $(source_file_deps)
-@REBUILD_DOCS_TRUE@	test -f $(top_srcdir)/include/libxml/xmlversion.h
-@REBUILD_DOCS_TRUE@	(cd $(srcdir) && ./apibuild.py)
-@REBUILD_DOCS_TRUE@	($(XSLTPROC) $(srcdir)/checkapisym.xsl $(srcdir)/libxml2-api.xml)
-@REBUILD_DOCS_TRUE@	($(XSLTPROC) -o ../libxml2.syms $(srcdir)/syms.xsl $(srcdir)/symbols.xml)
-@REBUILD_DOCS_TRUE@	-@(cd .. ; $(MAKE) rebuild_testapi)
-
-@REBUILD_DOCS_TRUE@xmllint.1: xmllint.xml
-@REBUILD_DOCS_TRUE@	-@($(XSLTPROC) --nonet xmllint.xml)
-
-@REBUILD_DOCS_TRUE@xmllint.html: xmllint.xml
-@REBUILD_DOCS_TRUE@	-@($(XSLTPROC) --nonet -o $@ http://docbook.sourceforge.net/release/xsl/current/html/docbook.xsl xmllint.xml)
-
-@REBUILD_DOCS_TRUE@xmlcatalog.1: xmlcatalog_man.xml
-@REBUILD_DOCS_TRUE@	-@($(XSLTPROC) --nonet xmlcatalog_man.xml)
-
-@REBUILD_DOCS_TRUE@xmlcatalog_man.html: xmlcatalog_man.xml
-@REBUILD_DOCS_TRUE@	-@($(XSLTPROC) --nonet -o $@ http://docbook.sourceforge.net/release/xsl/current/html/docbook.xsl xmlcatalog_man.xml)
-
-@REBUILD_DOCS_TRUE@check-extra-dist:
-@REBUILD_DOCS_TRUE@	for f in $(EXTRA_DIST_wc) ; do echo $$f; done | sort -u >tmp.EXTRA_DIST_wc
-@REBUILD_DOCS_TRUE@	for f in $(EXTRA_DIST) ;    do echo $$f; done | sort    >tmp.EXTRA_DIST
-@REBUILD_DOCS_TRUE@	diff -u tmp.EXTRA_DIST_wc tmp.EXTRA_DIST
-@REBUILD_DOCS_TRUE@	rm -f tmp.EXTRA_DIST_wc tmp.EXTRA_DIST
-
-clean-local:
-	rm -f *~ *.bak *.hierarchy *.signals *-unused.txt
-
-maintainer-clean-local: clean-local
-	rm -rf libxml-decl-list.txt libxml-decl.txt 
-
-rebuild: api docs
-
-install-data-local: 
-	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)
-	-$(INSTALL) -m 0644 $(srcdir)/xml.html $(srcdir)/encoding.html $(srcdir)/FAQ.html $(srcdir)/structure.gif $(srcdir)/DOM.gif $(srcdir)/smallfootonly.gif $(srcdir)/redhat.gif $(srcdir)/libxml.gif $(srcdir)/w3c.png $(srcdir)/Libxml2-Logo-180x168.gif $(srcdir)/Libxml2-Logo-90x34.gif $(DESTDIR)$(HTML_DIR)
-	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)/html
-	-$(INSTALL) -m 0644 $(srcdir)/html/*.html $(DESTDIR)$(HTML_DIR)/html
-	-$(INSTALL) -m 0644 $(srcdir)/html/*.png $(DESTDIR)$(HTML_DIR)/html
-	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)/tutorial
-	-$(INSTALL) -m 0644 $(srcdir)/tutorial/*.* \
-		$(DESTDIR)$(HTML_DIR)/tutorial
-	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)/tutorial/images
-	-$(INSTALL) -m 0644 $(srcdir)/tutorial/images/*.* \
-		$(DESTDIR)$(HTML_DIR)/tutorial/images
-	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)/tutorial/images/callouts
-	-$(INSTALL) -m 0644 $(srcdir)/tutorial/images/callouts/*.* \
-		$(DESTDIR)$(HTML_DIR)/tutorial/images/callouts
-
-.PHONY: docs api web wiki rebuild
+.PHONY: rebuild
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

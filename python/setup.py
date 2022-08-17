@@ -1,4 +1,4 @@
-#!/usr/bin/python -u
+#!/usr/bin/env python
 #
 # Setup script for libxml2 and libxslt if found
 #
@@ -254,7 +254,7 @@ else:
 setup (name = "libxml2-python",
        # On *nix, the version number is created from setup.py.in
        # On windows, it is set by configure.js
-       version = "2.9.14",
+       version = "2.10.0",
        description = descr,
        author = "Daniel Veillard",
        author_email = "veillard@redhat.com",

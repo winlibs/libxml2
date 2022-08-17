@@ -1,8 +1,5 @@
 /* Generated */
 
-#if defined(LIBXML_DOCB_ENABLED)
-PyObject * libxml_docbDefaultSAXHandlerInit(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_DOCB_ENABLED) */
 #if defined(LIBXML_HTML_ENABLED)
 PyObject * libxml_htmlAutoCloseTag(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_HTML_ENABLED) */
@@ -1665,9 +1662,9 @@ PyObject * libxml_xmlValidateDtdFinal(PyObject *self, PyObject *args);
 #if defined(LIBXML_VALID_ENABLED)
 PyObject * libxml_xmlValidateElement(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_VALID_ENABLED) */
-#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
+#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
 PyObject * libxml_xmlValidateNCName(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
+#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
 PyObject * libxml_xmlValidateNMToken(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) */
@@ -2043,24 +2040,24 @@ PyObject * libxml_xmlXPatherror(PyObject *self, PyObject *args);
 #if defined(LIBXML_XPTR_ENABLED)
 PyObject * libxml_xmlXPtrEval(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
 PyObject * libxml_xmlXPtrEvalRangePredicate(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
 PyObject * libxml_xmlXPtrNewCollapsedRange(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_XPTR_ENABLED) */
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
 #if defined(LIBXML_XPTR_ENABLED)
 PyObject * libxml_xmlXPtrNewContext(PyObject *self, PyObject *args);
 #endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
 PyObject * libxml_xmlXPtrNewLocationSetNodes(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
 PyObject * libxml_xmlXPtrNewRange(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
 PyObject * libxml_xmlXPtrNewRangeNodes(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
 PyObject * libxml_xmlXPtrRangeToFunction(PyObject *self, PyObject *args);
-#endif /* defined(LIBXML_XPTR_ENABLED) */
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */

@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <api name='libxml2'>
   <files>
-    <file name='DOCBparser'>
-     <summary>old DocBook SGML parser</summary>
-     <description>interface for a DocBook SGML non-verifying parser This code is DEPRECATED, and should not be used anymore. </description>
-     <author>Daniel Veillard </author>
-     <deprecated/>
-     <exports symbol='docbParserInputPtr' type='typedef'/>
-     <exports symbol='docbParserCtxt' type='typedef'/>
-     <exports symbol='docbParserCtxtPtr' type='typedef'/>
-     <exports symbol='docbParserInput' type='typedef'/>
-     <exports symbol='docbDocPtr' type='typedef'/>
-     <exports symbol='docbSAXHandler' type='typedef'/>
-     <exports symbol='docbSAXHandlerPtr' type='typedef'/>
-     <exports symbol='docbFreeParserCtxt' type='function'/>
-     <exports symbol='docbParseDoc' type='function'/>
-     <exports symbol='docbCreateFileParserCtxt' type='function'/>
-     <exports symbol='docbSAXParseFile' type='function'/>
-     <exports symbol='docbSAXParseDoc' type='function'/>
-     <exports symbol='docbCreatePushParserCtxt' type='function'/>
-     <exports symbol='docbEncodeEntities' type='function'/>
-     <exports symbol='docbParseFile' type='function'/>
-     <exports symbol='docbParseDocument' type='function'/>
-     <exports symbol='docbParseChunk' type='function'/>
-    </file>
     <file name='HTMLparser'>
      <summary>interface for an HTML 4.0 non-verifying parser</summary>
      <description>this module implements an HTML 4.0 non-verifying parser with API compatible with the XML parser ones. It should be able to parse &quot;real world&quot; HTML, even if severely broken from a specification point of view. </description>
@@ -161,11 +138,10 @@
      <exports symbol='processingInstruction' type='function'/>
      <exports symbol='endElement' type='function'/>
      <exports symbol='namespaceDecl' type='function'/>
-     <exports symbol='initdocbDefaultSAXHandler' type='function'/>
+     <exports symbol='startElement' type='function'/>
      <exports symbol='getEntity' type='function'/>
      <exports symbol='characters' type='function'/>
      <exports symbol='elementDecl' type='function'/>
-     <exports symbol='startElement' type='function'/>
      <exports symbol='getParameterEntity' type='function'/>
      <exports symbol='attributeDecl' type='function'/>
      <exports symbol='isStandalone' type='function'/>
@@ -185,7 +161,6 @@
      <exports symbol='xmlSAX2GetColumnNumber' type='function'/>
      <exports symbol='xmlSAX2GetEntity' type='function'/>
      <exports symbol='xmlSAX2UnparsedEntityDecl' type='function'/>
-     <exports symbol='xmlSAX2InitDocbDefaultSAXHandler' type='function'/>
      <exports symbol='xmlSAXVersion' type='function'/>
      <exports symbol='xmlSAX2IgnorableWhitespace' type='function'/>
      <exports symbol='xmlSAX2NotationDecl' type='function'/>
@@ -209,7 +184,6 @@
      <exports symbol='xmlSAX2GetLineNumber' type='function'/>
      <exports symbol='xmlSAX2HasInternalSubset' type='function'/>
      <exports symbol='xmlSAX2InitHtmlDefaultSAXHandler' type='function'/>
-     <exports symbol='docbDefaultSAXHandlerInit' type='function'/>
      <exports symbol='xmlDefaultSAXHandlerInit' type='function'/>
      <exports symbol='xmlSAX2InitDefaultSAXHandler' type='function'/>
      <exports symbol='xmlSAX2GetParameterEntity' type='function'/>
@@ -390,7 +364,6 @@
      <summary>interface for the encoding conversion functions</summary>
      <description>interface for the encoding conversion functions needed for XML basic encoding and iconv() support.  Related specs are rfc2044        (UTF-8 and UTF-16) F. Yergeau Alis Technologies [ISO-10646]    UTF-8 and UTF-16 in Annexes [ISO-8859-1]   ISO Latin-1 characters codes. [UNICODE]      The Unicode Consortium, &quot;The Unicode Standard -- Worldwide Character Encoding -- Version 1.0&quot;, Addison- Wesley, Volume 1, 1991, Volume 2, 1992.  UTF-8 is described in Unicode Technical Report #4. [US-ASCII]     Coded Character Set--7-bit American Standard Code for Information Interchange, ANSI X3.4-1986. </description>
      <author>Daniel Veillard </author>
-     <exports symbol='ICU_PIVOT_BUF_SIZE' type='macro'/>
      <exports symbol='XML_CHAR_ENCODING_UCS4LE' type='enum'/>
      <exports symbol='XML_CHAR_ENCODING_ERROR' type='enum'/>
      <exports symbol='XML_CHAR_ENCODING_8859_5' type='enum'/>
@@ -415,12 +388,10 @@
      <exports symbol='XML_CHAR_ENCODING_8859_1' type='enum'/>
      <exports symbol='XML_CHAR_ENCODING_UTF8' type='enum'/>
      <exports symbol='XML_CHAR_ENCODING_UCS2' type='enum'/>
-     <exports symbol='uconv_t' type='typedef'/>
      <exports symbol='xmlCharEncoding' type='typedef'/>
      <exports symbol='xmlCharEncodingHandler' type='typedef'/>
      <exports symbol='xmlCharEncodingHandlerPtr' type='typedef'/>
      <exports symbol='_xmlCharEncodingHandler' type='struct'/>
-     <exports symbol='_uconv_t' type='struct'/>
      <exports symbol='xmlDelEncodingAlias' type='function'/>
      <exports symbol='xmlGetEncodingAlias' type='function'/>
      <exports symbol='xmlRegisterCharEncodingHandler' type='function'/>
@@ -487,7 +458,6 @@
      <exports symbol='xmlDefaultBufferSize' type='variable'/>
      <exports symbol='xmlRegisterNodeDefaultValue' type='variable'/>
      <exports symbol='xmlGetWarningsDefaultValue' type='variable'/>
-     <exports symbol='docbDefaultSAXHandler' type='variable'/>
      <exports symbol='xmlGenericErrorContext' type='variable'/>
      <exports symbol='xmlDeregisterNodeDefaultValue' type='variable'/>
      <exports symbol='xmlGenericError' type='variable'/>
@@ -498,7 +468,7 @@
      <exports symbol='xmlDoValidityCheckingDefaultValue' type='variable'/>
      <exports symbol='xmlOutputBufferCreateFilenameValue' type='variable'/>
      <exports symbol='xmlPedanticParserDefaultValue' type='variable'/>
-     <exports symbol='oldXMLWDcompatibility' type='variable'/>
+     <exports symbol='xmlParserDebugEntities' type='variable'/>
      <exports symbol='xmlRealloc' type='variable'/>
      <exports symbol='xmlMemStrdup' type='variable'/>
      <exports symbol='htmlDefaultSAXHandler' type='variable'/>
@@ -508,7 +478,7 @@
      <exports symbol='xmlSubstituteEntitiesDefaultValue' type='variable'/>
      <exports symbol='xmlMallocAtomic' type='variable'/>
      <exports symbol='xmlBufferAllocScheme' type='variable'/>
-     <exports symbol='xmlParserDebugEntities' type='variable'/>
+     <exports symbol='oldXMLWDcompatibility' type='variable'/>
      <exports symbol='xmlFree' type='variable'/>
      <exports symbol='xmlLoadExtDtdDefaultValue' type='variable'/>
      <exports symbol='xmlLastError' type='variable'/>
@@ -623,8 +593,9 @@
     </file>
     <file name='nanoftp'>
      <summary>minimal FTP implementation</summary>
-     <description>minimal FTP implementation allowing to fetch resources like external subset. </description>
+     <description>minimal FTP implementation allowing to fetch resources like external subset. This module is DEPRECATED, do not use any of its functions. </description>
      <author>Daniel Veillard </author>
+     <deprecated/>
      <exports symbol='INVALID_SOCKET' type='macro'/>
      <exports symbol='SOCKET' type='macro'/>
      <exports symbol='xmlNanoFTPQuit' type='function'/>
@@ -1355,7 +1326,7 @@
      <exports symbol='xmlSchemaFreeWildcard' type='function'/>
     </file>
     <file name='schematron'>
-     <summary>XML Schemastron implementation</summary>
+     <summary>XML Schematron implementation</summary>
      <description>interface to the XML Schematron validity checking. </description>
      <author>Daniel Veillard </author>
      <exports symbol='XML_SCHEMATRON_OUT_IO' type='enum'/>
@@ -1415,6 +1386,7 @@
      <description>this module describes the structures found in an tree resulting from an XML or HTML parsing, as well as the API provided for various processing on that tree </description>
      <author>Daniel Veillard </author>
      <exports symbol='XML_LOCAL_NAMESPACE' type='macro'/>
+     <exports symbol='XML_DOCB_DOCUMENT_NODE' type='macro'/>
      <exports symbol='BASE_BUFFER_SIZE' type='macro'/>
      <exports symbol='XML_XML_ID' type='macro'/>
      <exports symbol='xmlRootNode' type='macro'/>
@@ -1468,7 +1440,6 @@
      <exports symbol='XML_HTML_DOCUMENT_NODE' type='enum'/>
      <exports symbol='XML_ELEMENT_TYPE_UNDEFINED' type='enum'/>
      <exports symbol='XML_DOCUMENT_NODE' type='enum'/>
-     <exports symbol='XML_DOCB_DOCUMENT_NODE' type='enum'/>
      <exports symbol='XML_COMMENT_NODE' type='enum'/>
      <exports symbol='XML_ATTRIBUTE_NONE' type='enum'/>
      <exports symbol='XML_DTD_NODE' type='enum'/>
@@ -1745,8 +1716,8 @@
      <summary>The DTD validation</summary>
      <description>API for the DTD handling and the validity checking </description>
      <author>Daniel Veillard </author>
-     <exports symbol='XML_CTXT_FINISH_DTD_0' type='macro'/>
-     <exports symbol='XML_CTXT_FINISH_DTD_1' type='macro'/>
+     <exports symbol='XML_VCTXT_DTD_VALIDATED' type='macro'/>
+     <exports symbol='XML_VCTXT_USE_PCTXT' type='macro'/>
      <exports symbol='xmlElementTable' type='typedef'/>
      <exports symbol='xmlValidStatePtr' type='typedef'/>
      <exports symbol='xmlIDTablePtr' type='typedef'/>
@@ -2288,6 +2259,7 @@
      <exports symbol='XML_SCHEMAP_COS_ST_DERIVED_OK_2_1' type='enum'/>
      <exports symbol='XML_CHECK_NOT_NS_DECL' type='enum'/>
      <exports symbol='XML_RNGP_PAT_DATA_EXCEPT_ELEM' type='enum'/>
+     <exports symbol='XML_ERR_COMMENT_ABRUPTLY_ENDED' type='enum'/>
      <exports symbol='XML_IO_NETWORK_ATTEMPT' type='enum'/>
      <exports symbol='XML_MODULE_CLOSE' type='enum'/>
      <exports symbol='XML_RNGP_PAT_START_EMPTY' type='enum'/>
@@ -2489,7 +2461,7 @@
      <exports symbol='XML_SCHEMAP_IMPORT_REDEFINE_NSNAME' type='enum'/>
      <exports symbol='XML_SCHEMAP_UNKNOWN_ATTR_CHILD' type='enum'/>
      <exports symbol='XML_ERR_UNKNOWN_ENCODING' type='enum'/>
-     <exports symbol='XML_RNGP_REF_NO_NAME' type='enum'/>
+     <exports symbol='XML_HTML_INCORRECTLY_OPENED_COMMENT' type='enum'/>
      <exports symbol='XML_C14N_UNKNOW_NODE' type='enum'/>
      <exports symbol='XML_SCHEMAP_REF_AND_SUBTYPE' type='enum'/>
      <exports symbol='XML_RNGP_PAT_ONEMORE_INTERLEAVE_ATTR' type='enum'/>
@@ -2647,6 +2619,7 @@
      <exports symbol='XML_SCHEMAP_COS_ST_RESTRICTS_3_1' type='enum'/>
      <exports symbol='XML_DTD_ID_REDEFINED' type='enum'/>
      <exports symbol='XML_XPATH_ENCODING_ERROR' type='enum'/>
+     <exports symbol='XML_RNGP_REF_NO_NAME' type='enum'/>
      <exports symbol='XML_SCHEMAP_SRC_INCLUDE' type='enum'/>
      <exports symbol='XML_RNGP_NSNAME_ATTR_ANCESTOR' type='enum'/>
      <exports symbol='XML_SCHEMAP_SRC_REDEFINE' type='enum'/>
@@ -3387,6 +3360,7 @@
      <exports symbol='LIBXML_MODULES_ENABLED' type='macro'/>
      <exports symbol='LIBXML_LEGACY_ENABLED' type='macro'/>
      <exports symbol='LIBXML_LZMA_ENABLED' type='macro'/>
+     <exports symbol='XML_DEPRECATED' type='macro'/>
      <exports symbol='LIBXML_READER_ENABLED' type='macro'/>
      <exports symbol='LIBXML_THREAD_ENABLED' type='macro'/>
      <exports symbol='LIBXML_DOTTED_VERSION' type='macro'/>
@@ -3394,7 +3368,7 @@
      <exports symbol='LIBXML_DEBUG_ENABLED' type='macro'/>
      <exports symbol='LIBXML_XINCLUDE_ENABLED' type='macro'/>
      <exports symbol='ATTRIBUTE_UNUSED' type='macro'/>
-     <exports symbol='LIBXML_DOCB_ENABLED' type='macro'/>
+     <exports symbol='LIBXML_XPTR_LOCS_ENABLED' type='macro'/>
      <exports symbol='LIBXML_PUSH_ENABLED' type='macro'/>
      <exports symbol='LIBXML_SAX1_ENABLED' type='macro'/>
      <exports symbol='WITHOUT_TRIO' type='macro'/>
@@ -3524,11 +3498,11 @@
      <summary>XML Path Language implementation</summary>
      <description>API for the XML Path Language implementation  XML Path Language implementation XPath is a language for addressing parts of an XML document, designed to be used by both XSLT and XPointer</description>
      <author>Daniel Veillard </author>
-     <exports symbol='xmlXPathNodeSetGetLength' type='macro'/>
-     <exports symbol='XML_XPATH_CHECKNS' type='macro'/>
-     <exports symbol='XML_XPATH_NOVAR' type='macro'/>
-     <exports symbol='xmlXPathNodeSetItem' type='macro'/>
      <exports symbol='xmlXPathNodeSetIsEmpty' type='macro'/>
+     <exports symbol='xmlXPathNodeSetItem' type='macro'/>
+     <exports symbol='XML_XPATH_CHECKNS' type='macro'/>
+     <exports symbol='xmlXPathNodeSetGetLength' type='macro'/>
+     <exports symbol='XML_XPATH_NOVAR' type='macro'/>
      <exports symbol='XPATH_NUMBER_ERROR' type='enum'/>
      <exports symbol='XPATH_BOOLEAN' type='enum'/>
      <exports symbol='XPATH_START_LITERAL_ERROR' type='enum'/>
@@ -3883,8 +3857,6 @@
     <macro name='HTML_TEXT_NODE' file='HTMLtree'>
       <info>Macro. A text node in a HTML document is really implemented the same way as a text node in an XML document.</info>
     </macro>
-    <macro name='ICU_PIVOT_BUF_SIZE' file='encoding'>
-    </macro>
     <macro name='INPUT_CHUNK' file='parserInternals'>
       <info>The parser tries to always have that amount of input ready. One of the point is providing context when reporting errors.</info>
     </macro>
@@ -3993,9 +3965,6 @@
     </macro>
     <macro name='LIBXML_DLL_IMPORT' file='xmlexports'>
     </macro>
-    <macro name='LIBXML_DOCB_ENABLED' file='xmlversion'>
-      <info>Whether the SGML Docbook support is configured in</info>
-    </macro>
     <macro name='LIBXML_DOTTED_VERSION' file='xmlversion'>
       <info>the version string like &quot;1.2.3&quot;</info>
     </macro>
@@ -4095,6 +4064,9 @@
     <macro name='LIBXML_XPTR_ENABLED' file='xmlversion'>
       <info>Whether XPointer is configured in</info>
     </macro>
+    <macro name='LIBXML_XPTR_LOCS_ENABLED' file='xmlversion'>
+      <info>Whether support for XPointer locations is configured in</info>
+    </macro>
     <macro name='LIBXML_ZLIB_ENABLED' file='xmlversion'>
       <info>Whether the Zlib support is compiled in</info>
     </macro>
@@ -4177,17 +4149,16 @@
     <macro name='XML_COMPLETE_ATTRS' file='parser'>
       <info>Bit in the loadsubset context field to tell to do complete the elements attributes lists with the ones defaulted from the DTDs. Use it to initialize xmlLoadExtDtdDefaultValue.</info>
     </macro>
-    <macro name='XML_CTXT_FINISH_DTD_0' file='valid'>
-      <info>Special value for finishDtd field when embedded in an xmlParserCtxt</info>
-    </macro>
-    <macro name='XML_CTXT_FINISH_DTD_1' file='valid'>
-      <info>Special value for finishDtd field when embedded in an xmlParserCtxt</info>
-    </macro>
     <macro name='XML_DEFAULT_VERSION' file='parser'>
       <info>The default version of XML used: 1.0</info>
     </macro>
+    <macro name='XML_DEPRECATED' file='xmlversion'>
+      <info>Macro used to indicate that a function, variable, type or struct member is deprecated.</info>
+    </macro>
     <macro name='XML_DETECT_IDS' file='parser'>
       <info>Bit in the loadsubset context field to tell to do ID/REFs lookups. Use it to initialize xmlLoadExtDtdDefaultValue.</info>
+    </macro>
+    <macro name='XML_DOCB_DOCUMENT_NODE' file='tree'>
     </macro>
     <macro name='XML_GET_CONTENT' file='tree'>
       <info>Macro to extract the content pointer of a node.</info>
@@ -4477,6 +4448,12 @@
     <macro name='XML_SUBSTITUTE_REF' file='parserInternals'>
       <info>Whether general entities need to be substituted.</info>
     </macro>
+    <macro name='XML_VCTXT_DTD_VALIDATED' file='valid'>
+      <info>Set after xmlValidateDtdFinal was called.</info>
+    </macro>
+    <macro name='XML_VCTXT_USE_PCTXT' file='valid'>
+      <info>Set if the validation context is part of a parser context.</info>
+    </macro>
     <macro name='XML_XML_ID' file='tree'>
       <info>This is the name for the special xml:id attribute</info>
     </macro>
@@ -4488,6 +4465,12 @@
     </macro>
     <macro name='XML_XPATH_NOVAR' file='xpath'>
       <info>forbid variables in expression</info>
+    </macro>
+    <macro name='XPATH_LOCATIONSET' file='xpath'>
+    </macro>
+    <macro name='XPATH_POINT' file='xpath'>
+    </macro>
+    <macro name='XPATH_RANGE' file='xpath'>
     </macro>
     <macro name='XP_ERROR' file='xpathInternals'>
       <info>Macro to raise an XPath error and return.</info>
@@ -4807,7 +4790,6 @@
     <enum name='XML_CHECK_WRONG_PARENT' file='xmlerror' value='5029' type='xmlParserErrors' info='5029'/>
     <enum name='XML_CHECK_WRONG_PREV' file='xmlerror' value='5019' type='xmlParserErrors' info='5019'/>
     <enum name='XML_COMMENT_NODE' file='tree' value='8' type='xmlElementType'/>
-    <enum name='XML_DOCB_DOCUMENT_NODE' file='tree' value='21' type='xmlElementType'/>
     <enum name='XML_DOCUMENT_FRAG_NODE' file='tree' value='11' type='xmlElementType'/>
     <enum name='XML_DOCUMENT_NODE' file='tree' value='9' type='xmlElementType'/>
     <enum name='XML_DOCUMENT_TYPE_NODE' file='tree' value='10' type='xmlElementType'/>
@@ -4892,6 +4874,7 @@ and not by parsing an instance'/>
     <enum name='XML_ERR_CHARREF_IN_DTD' file='xmlerror' value='13' type='xmlParserErrors' info='13'/>
     <enum name='XML_ERR_CHARREF_IN_EPILOG' file='xmlerror' value='12' type='xmlParserErrors' info='12'/>
     <enum name='XML_ERR_CHARREF_IN_PROLOG' file='xmlerror' value='11' type='xmlParserErrors' info='11'/>
+    <enum name='XML_ERR_COMMENT_ABRUPTLY_ENDED' file='xmlerror' value='112' type='xmlParserErrors' info='112'/>
     <enum name='XML_ERR_COMMENT_NOT_FINISHED' file='xmlerror' value='45' type='xmlParserErrors' info='45'/>
     <enum name='XML_ERR_CONDSEC_INVALID' file='xmlerror' value='83' type='xmlParserErrors' info='83'/>
     <enum name='XML_ERR_CONDSEC_INVALID_KEYWORD' file='xmlerror' value='95' type='xmlParserErrors' info='95'/>
@@ -5033,6 +5016,7 @@ and not by parsing an instance'/>
     <enum name='XML_FTP_PASV_ANSWER' file='xmlerror' value='2000' type='xmlParserErrors'/>
     <enum name='XML_FTP_URL_SYNTAX' file='xmlerror' value='2003' type='xmlParserErrors' info='2003'/>
     <enum name='XML_HTML_DOCUMENT_NODE' file='tree' value='13' type='xmlElementType'/>
+    <enum name='XML_HTML_INCORRECTLY_OPENED_COMMENT' file='xmlerror' value='802' type='xmlParserErrors' info='802'/>
     <enum name='XML_HTML_STRUCURE_ERROR' file='xmlerror' value='800' type='xmlParserErrors'/>
     <enum name='XML_HTML_UNKNOWN_TAG' file='xmlerror' value='801' type='xmlParserErrors' info='801'/>
     <enum name='XML_HTTP_UNKNOWN_HOST' file='xmlerror' value='2022' type='xmlParserErrors' info='2022'/>
@@ -5839,7 +5823,7 @@ crash if you try to modify the tree)'/>
     <enum name='XML_WITH_ZLIB' file='parser' value='31' type='xmlFeature'/>
     <enum name='XML_XINCLUDE_BUILD_FAILED' file='xmlerror' value='1609' type='xmlParserErrors' info='1609'/>
     <enum name='XML_XINCLUDE_DEPRECATED_NS' file='xmlerror' value='1617' type='xmlParserErrors' info='1617'/>
-    <enum name='XML_XINCLUDE_END' file='tree' value='20' type='xmlElementType'/>
+    <enum name='XML_XINCLUDE_END' file='tree' value='20' type='xmlElementType' info=' XML_DOCB_DOCUMENT_NODE=	21 removed'/>
     <enum name='XML_XINCLUDE_ENTITY_DEF_MISMATCH' file='xmlerror' value='1602' type='xmlParserErrors' info='1602'/>
     <enum name='XML_XINCLUDE_FALLBACKS_IN_INCLUDE' file='xmlerror' value='1615' type='xmlParserErrors' info='1615'/>
     <enum name='XML_XINCLUDE_FALLBACK_NOT_IN_INCLUDE' file='xmlerror' value='1616' type='xmlParserErrors' info='1616'/>
@@ -5921,13 +5905,6 @@ crash if you try to modify the tree)'/>
     <enum name='XPTR_RESOURCE_ERROR' file='xpath' value='17' type='xmlXPathError'/>
     <enum name='XPTR_SUB_RESOURCE_ERROR' file='xpath' value='18' type='xmlXPathError'/>
     <enum name='XPTR_SYNTAX_ERROR' file='xpath' value='16' type='xmlXPathError'/>
-    <typedef name='docbDocPtr' file='DOCBparser' type='xmlDocPtr'/>
-    <typedef name='docbParserCtxt' file='DOCBparser' type='xmlParserCtxt'/>
-    <typedef name='docbParserCtxtPtr' file='DOCBparser' type='xmlParserCtxtPtr'/>
-    <typedef name='docbParserInput' file='DOCBparser' type='xmlParserInput'/>
-    <typedef name='docbParserInputPtr' file='DOCBparser' type='xmlParserInputPtr'/>
-    <typedef name='docbSAXHandler' file='DOCBparser' type='xmlSAXHandler'/>
-    <typedef name='docbSAXHandlerPtr' file='DOCBparser' type='xmlSAXHandlerPtr'/>
     <typedef name='htmlDocPtr' file='HTMLparser' type='xmlDocPtr'/>
     <struct name='htmlElemDesc' file='HTMLparser' type='struct _htmlElemDesc'>
       <field name='name' type='const char *' info=' The tag name'/>
@@ -5972,13 +5949,6 @@ if necessary or NULL'/>
     <typedef name='htmlSAXHandler' file='HTMLparser' type='xmlSAXHandler'/>
     <typedef name='htmlSAXHandlerPtr' file='HTMLparser' type='xmlSAXHandlerPtr'/>
     <typedef name='htmlStatus' file='HTMLparser' type='enum'/>
-    <struct name='uconv_t' file='encoding' type='struct _uconv_t'>
-      <field name='uconv' type='UConverter *' info=' for conversion between an encoding and UTF-16'/>
-      <field name='utf8' type='UConverter *' info=' for conversion between UTF-8 and UTF-16'/>
-      <field name='pivot_buf' type='UCharpivot_buf[ICU_PIVOT_BUF_SIZE]' info=''/>
-      <field name='pivot_source' type='UChar *' info=''/>
-      <field name='pivot_target' type='UChar *' info=''/>
-    </struct>
     <typedef name='xlinkActuate' file='xlink' type='enum'/>
     <typedef name='xlinkHRef' file='xlink' type='xmlChar *'/>
     <struct name='xlinkHandler' file='xlink' type='struct _xlinkHandler'>
@@ -6082,8 +6052,8 @@ if necessary or NULL'/>
       <field name='output' type='xmlCharEncodingOutputFunc' info=''/>
       <field name='iconv_in' type='iconv_t' info=''/>
       <field name='iconv_out' type='iconv_t' info=''/>
-      <field name='uconv_in' type='uconv_t *' info=''/>
-      <field name='uconv_out' type='uconv_t *' info=''/>
+      <field name='uconv_in' type='struct _uconv_t *' info=''/>
+      <field name='uconv_out' type='struct _uconv_t *' info=''/>
     </struct>
     <typedef name='xmlCharEncodingHandlerPtr' file='encoding' type='xmlCharEncodingHandler *'/>
     <struct name='xmlDOMWrapCtxt' file='tree' type='struct _xmlDOMWrapCtxt'>
@@ -6249,7 +6219,7 @@ set at the end of parsing'/>
       <field name='xmlParserVersion' type='const char *' info=''/>
       <field name='xmlDefaultSAXLocator' type='xmlSAXLocator' info=''/>
       <field name='xmlDefaultSAXHandler' type='xmlSAXHandlerV1' info=''/>
-      <field name='docbDefaultSAXHandler' type='xmlSAXHandlerV1' info=''/>
+      <field name='docbDefaultSAXHandler' type='xmlSAXHandlerV1' info=' unused'/>
       <field name='htmlDefaultSAXHandler' type='xmlSAXHandlerV1' info=''/>
       <field name='xmlFree' type='xmlFreeFunc' info=''/>
       <field name='xmlMalloc' type='xmlMallocFunc' info=''/>
@@ -6374,7 +6344,7 @@ set at the end of parsing'/>
       <field name='version' type='const xmlChar *' info=' the XML version string'/>
       <field name='encoding' type='const xmlChar *' info=' the declared encoding, if any'/>
       <field name='standalone' type='int' info=' standalone document'/>
-      <field name='html' type='int' info=' an HTML(1)/Docbook(2) document
+      <field name='html' type='int' info=' an HTML(1) document
 * 3 is HTML after &lt;head&gt;
 * 10 is HTML after &lt;body&gt;
 * Input stream stack'/>
@@ -6878,7 +6848,7 @@ Could we use @subtypes for this?'/>
       <field name='nodeNr' type='int' info=' Depth of the parsing stack'/>
       <field name='nodeMax' type='int' info=' Max depth of the parsing stack'/>
       <field name='nodeTab' type='xmlNodePtr *' info=' array of nodes'/>
-      <field name='finishDtd' type='unsigned int' info=' finished validating the Dtd ?'/>
+      <field name='flags' type='unsigned int' info=' internal flags'/>
       <field name='doc' type='xmlDocPtr' info=' the document'/>
       <field name='valid' type='int' info=' temporary validity check result state state used for non-determinist content validation'/>
       <field name='vstate' type='xmlValidState *' info=' current state'/>
@@ -6991,7 +6961,6 @@ Could we use @subtypes for this?'/>
       <field name='value' type='xmlXPathObjectPtr' info=' the value'/>
     </struct>
     <typedef name='xmlXPathVariablePtr' file='xpath' type='xmlXPathVariable *'/>
-    <variable name='docbDefaultSAXHandler' file='globals' type='xmlSAXHandlerV1'/>
     <variable name='emptyExp' file='xmlregexp' type='xmlExpNodePtr'/>
     <variable name='forbiddenExp' file='xmlregexp' type='xmlExpNodePtr'/>
     <variable name='htmlDefaultSAXHandler' file='globals' type='xmlSAXHandlerV1'/>
@@ -7146,92 +7115,6 @@ Could we use @subtypes for this?'/>
       <arg name='ctx' type='void *' info='the user data (XML parser context)'/>
       <arg name='value' type='const xmlChar *' info='the comment content'/>
     </functype>
-    <function name='docbCreateFileParserCtxt' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Create a parser context for a file content. Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.</info>
-      <return type='docbParserCtxtPtr' info='the new parser context or NULL'/>
-      <arg name='filename' type='const char *' info='the filename'/>
-      <arg name='encoding' type='const char *' info='the SGML document encoding, or NULL'/>
-    </function>
-    <function name='docbCreatePushParserCtxt' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Create a parser context for using the DocBook SGML parser in push mode To allow content encoding detection, @size should be &gt;= 4 The value of @filename is used for fetching external entities and error/warning reports.</info>
-      <return type='docbParserCtxtPtr' info='the new parser context or NULL'/>
-      <arg name='sax' type='docbSAXHandlerPtr' info='a SAX handler'/>
-      <arg name='user_data' type='void *' info='The user data returned on SAX callbacks'/>
-      <arg name='chunk' type='const char *' info='a pointer to an array of chars'/>
-      <arg name='size' type='int' info='number of chars in the array'/>
-      <arg name='filename' type='const char *' info='an optional file name or URI'/>
-      <arg name='enc' type='xmlCharEncoding' info='an optional encoding'/>
-    </function>
-    <function name='docbDefaultSAXHandlerInit' file='SAX2' module='SAX2'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Initialize the default SAX handler</info>
-      <return type='void'/>
-    </function>
-    <function name='docbEncodeEntities' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Take a block of UTF-8 chars in and try to convert it to an ASCII plus SGML entities block of chars out.</info>
-      <return type='int' info='0 if success, -2 if the transcoding fails, or -1 otherwise The value of @inlen after return is the number of octets consumed as the return value is positive, else unpredictable. The value of @outlen after return is the number of octets consumed.'/>
-      <arg name='out' type='unsigned char *' info='a pointer to an array of bytes to store the result'/>
-      <arg name='outlen' type='int *' info='the length of @out'/>
-      <arg name='in' type='const unsigned char *' info='a pointer to an array of UTF-8 chars'/>
-      <arg name='inlen' type='int *' info='the length of @in'/>
-      <arg name='quoteChar' type='int' info='the quote character to escape (&apos; or &quot;) or zero.'/>
-    </function>
-    <function name='docbFreeParserCtxt' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Free all the memory used by a parser context. However the parsed document in ctxt-&gt;myDoc is not freed.</info>
-      <return type='void'/>
-      <arg name='ctxt' type='docbParserCtxtPtr' info='an SGML parser context'/>
-    </function>
-    <function name='docbParseChunk' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Parse a Chunk of memory</info>
-      <return type='int' info='zero if no error, the xmlParserErrors otherwise.'/>
-      <arg name='ctxt' type='docbParserCtxtPtr' info='an XML parser context'/>
-      <arg name='chunk' type='const char *' info='an char array'/>
-      <arg name='size' type='int' info='the size in byte of the chunk'/>
-      <arg name='terminate' type='int' info='last chunk indicator'/>
-    </function>
-    <function name='docbParseDoc' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>parse an SGML in-memory document and build a tree.</info>
-      <return type='docbDocPtr' info='the resulting document tree'/>
-      <arg name='cur' type='xmlChar *' info='a pointer to an array of xmlChar'/>
-      <arg name='encoding' type='const char *' info='a free form C string describing the SGML document encoding, or NULL'/>
-    </function>
-    <function name='docbParseDocument' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>parse an SGML document (and build a tree if using the standard SAX interface).</info>
-      <return type='int' info='0, -1 in case of error. the parser context is augmented as a result of the parsing.'/>
-      <arg name='ctxt' type='docbParserCtxtPtr' info='an SGML parser context'/>
-    </function>
-    <function name='docbParseFile' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>parse a Docbook SGML file and build a tree. Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.</info>
-      <return type='docbDocPtr' info='the resulting document tree'/>
-      <arg name='filename' type='const char *' info='the filename'/>
-      <arg name='encoding' type='const char *' info='a free form C string describing document encoding, or NULL'/>
-    </function>
-    <function name='docbSAXParseDoc' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>parse an SGML in-memory document and build a tree. It use the given SAX function block to handle the parsing callback. If sax is NULL, fallback to the default DOM tree building routines.</info>
-      <return type='docbDocPtr' info='the resulting document tree'/>
-      <arg name='cur' type='xmlChar *' info='a pointer to an array of xmlChar'/>
-      <arg name='encoding' type='const char *' info='a free form C string describing the SGML document encoding, or NULL'/>
-      <arg name='sax' type='docbSAXHandlerPtr' info='the SAX handler block'/>
-      <arg name='userData' type='void *' info='if using SAX, this pointer will be provided on callbacks.'/>
-    </function>
-    <function name='docbSAXParseFile' file='DOCBparser' module='DOCBparser'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>parse an SGML file and build a tree. Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time. It use the given SAX function block to handle the parsing callback. If sax is NULL, fallback to the default DOM tree building routines.</info>
-      <return type='docbDocPtr' info='the resulting document tree'/>
-      <arg name='filename' type='const char *' info='the filename'/>
-      <arg name='encoding' type='const char *' info='a free form C string describing the SGML document encoding, or NULL'/>
-      <arg name='sax' type='docbSAXHandlerPtr' info='the SAX handler block'/>
-      <arg name='userData' type='void *' info='if using SAX, this pointer will be provided on callbacks.'/>
-    </function>
     <function name='elementDecl' file='SAX' module='legacy'>
       <cond>defined(LIBXML_LEGACY_ENABLED)</cond>
       <info>An element definition has been parsed DEPRECATED: use xmlSAX2ElementDecl()</info>
@@ -7552,7 +7435,7 @@ Could we use @subtypes for this?'/>
     </function>
     <function name='htmlDefaultSAXHandlerInit' file='SAX2' module='SAX2'>
       <cond>defined(LIBXML_HTML_ENABLED)</cond>
-      <info>Initialize the default SAX handler</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  Initialize the default SAX handler</info>
       <return type='void'/>
     </function>
     <function name='htmlDocContentDumpFormatOutput' file='HTMLtree' module='HTMLtree'>
@@ -7652,7 +7535,7 @@ Could we use @subtypes for this?'/>
     </function>
     <function name='htmlInitAutoClose' file='parserInternals' module='HTMLparser'>
       <cond>defined(LIBXML_HTML_ENABLED)</cond>
-      <info>This is a no-op now.</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  This is a no-op now.</info>
       <return type='void'/>
     </function>
     <function name='htmlIsAutoClosed' file='HTMLparser' module='HTMLparser'>
@@ -7914,12 +7797,6 @@ Could we use @subtypes for this?'/>
       <info>Set or reset (if NULL) the default handler for generic errors to the builtin error function.</info>
       <return type='void'/>
       <arg name='handler' type='xmlGenericErrorFunc *' info='the handler'/>
-    </function>
-    <function name='initdocbDefaultSAXHandler' file='SAX' module='SAX'>
-      <cond>defined(LIBXML_LEGACY_ENABLED) &amp;&amp; defined(LIBXML_SAX1_ENABLED) &amp;&amp; defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Initialize the default DocBook SAX version 1 handler DEPRECATED: use xmlSAX2InitDocbDefaultSAXHandler() for the new SAX2 blocks</info>
-      <return type='void'/>
-      <arg name='hdlr' type='xmlSAXHandlerV1 *' info='the SAX handler'/>
     </function>
     <function name='inithtmlDefaultSAXHandler' file='SAX' module='SAX'>
       <cond>defined(LIBXML_LEGACY_ENABLED) &amp;&amp; defined(LIBXML_SAX1_ENABLED) &amp;&amp; defined(LIBXML_HTML_ENABLED)</cond>
@@ -8312,13 +8189,13 @@ Could we use @subtypes for this?'/>
       <arg name='tree' type='xmlEnumerationPtr' info='if it&apos;s an enumeration, the associated list'/>
     </function>
     <function name='xmlAddChild' file='tree' module='tree'>
-      <info>Add a new node to @parent, at the end of the child (or property) list merging adjacent TEXT nodes (in which case @cur is freed) If the new node is ATTRIBUTE, it is added into properties instead of children. If there is an attribute with equal name, it is first destroyed.</info>
+      <info>Add a new node to @parent, at the end of the child (or property) list merging adjacent TEXT nodes (in which case @cur is freed) If the new node is ATTRIBUTE, it is added into properties instead of children. If there is an attribute with equal name, it is first destroyed.  All tree manipulation functions can safely move nodes within a document. But when moving nodes from one document to another, references to namespaces in element or attribute nodes are NOT fixed. In this case, you MUST call xmlReconciliateNs after the move operation to avoid memory errors.</info>
       <return type='xmlNodePtr' info='the child or NULL in case of error.'/>
       <arg name='parent' type='xmlNodePtr' info='the parent node'/>
       <arg name='cur' type='xmlNodePtr' info='the child node'/>
     </function>
     <function name='xmlAddChildList' file='tree' module='tree'>
-      <info>Add a list of node at the end of the child list of the parent merging adjacent TEXT nodes (@cur may be freed)</info>
+      <info>Add a list of node at the end of the child list of the parent merging adjacent TEXT nodes (@cur may be freed)  See the note regarding namespaces in xmlAddChild.</info>
       <return type='xmlNodePtr' info='the last child or NULL in case of error.'/>
       <arg name='parent' type='xmlNodePtr' info='the parent node'/>
       <arg name='cur' type='xmlNodePtr' info='the first node in the list'/>
@@ -8367,7 +8244,7 @@ Could we use @subtypes for this?'/>
       <arg name='attr' type='xmlAttrPtr' info='the attribute holding the ID'/>
     </function>
     <function name='xmlAddNextSibling' file='tree' module='tree'>
-      <info>Add a new node @elem as the next sibling of @cur If the new node was already inserted in a document it is first unlinked from its existing context. As a result of text merging @elem may be freed. If the new node is ATTRIBUTE, it is added into properties instead of children. If there is an attribute with equal name, it is first destroyed.</info>
+      <info>Add a new node @elem as the next sibling of @cur If the new node was already inserted in a document it is first unlinked from its existing context. As a result of text merging @elem may be freed. If the new node is ATTRIBUTE, it is added into properties instead of children. If there is an attribute with equal name, it is first destroyed.  See the note regarding namespaces in xmlAddChild.</info>
       <return type='xmlNodePtr' info='the new node or NULL in case of error.'/>
       <arg name='cur' type='xmlNodePtr' info='the child node'/>
       <arg name='elem' type='xmlNodePtr' info='the new node'/>
@@ -8383,13 +8260,13 @@ Could we use @subtypes for this?'/>
     </function>
     <function name='xmlAddPrevSibling' file='tree' module='tree'>
       <cond>defined(LIBXML_TREE_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_XINCLUDE_ENABLED)</cond>
-      <info>Add a new node @elem as the previous sibling of @cur merging adjacent TEXT nodes (@elem may be freed) If the new node was already inserted in a document it is first unlinked from its existing context. If the new node is ATTRIBUTE, it is added into properties instead of children. If there is an attribute with equal name, it is first destroyed.</info>
+      <info>Add a new node @elem as the previous sibling of @cur merging adjacent TEXT nodes (@elem may be freed) If the new node was already inserted in a document it is first unlinked from its existing context. If the new node is ATTRIBUTE, it is added into properties instead of children. If there is an attribute with equal name, it is first destroyed.  See the note regarding namespaces in xmlAddChild.</info>
       <return type='xmlNodePtr' info='the new node or NULL in case of error.'/>
       <arg name='cur' type='xmlNodePtr' info='the child node'/>
       <arg name='elem' type='xmlNodePtr' info='the new node'/>
     </function>
     <function name='xmlAddRef' file='valid' module='valid'>
-      <info>Register a new ref declaration</info>
+      <info>DEPRECATED, do not use. This function will be removed from the public API.  Register a new ref declaration</info>
       <return type='xmlRefPtr' info='NULL if not, otherwise the new xmlRefPtr'/>
       <arg name='ctxt' type='xmlValidCtxtPtr' info='the validation context'/>
       <arg name='doc' type='xmlDocPtr' info='pointer to the document'/>
@@ -8397,7 +8274,7 @@ Could we use @subtypes for this?'/>
       <arg name='attr' type='xmlAttrPtr' info='the attribute holding the Ref'/>
     </function>
     <function name='xmlAddSibling' file='tree' module='tree'>
-      <info>Add a new element @elem to the list of siblings of @cur merging adjacent TEXT nodes (@elem may be freed) If the new element was already inserted in a document it is first unlinked from its existing context.</info>
+      <info>Add a new element @elem to the list of siblings of @cur merging adjacent TEXT nodes (@elem may be freed) If the new element was already inserted in a document it is first unlinked from its existing context.  See the note regarding namespaces in xmlAddChild.</info>
       <return type='xmlNodePtr' info='the new element or NULL in case of error.'/>
       <arg name='cur' type='xmlNodePtr' info='the child node'/>
       <arg name='elem' type='xmlNodePtr' info='the new node'/>
@@ -9035,7 +8912,7 @@ Could we use @subtypes for this?'/>
       <arg name='parent' type='xmlNodePtr' info='the parent node'/>
     </function>
     <function name='xmlCleanupCharEncodingHandlers' file='encoding' module='encoding'>
-      <info>Cleanup the memory allocated for the char encoding support, it unregisters all the encoding handlers and the aliases.</info>
+      <info>DEPRECATED: This function will be made private. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all.  Cleanup the memory allocated for the char encoding support, it unregisters all the encoding handlers and the aliases.</info>
       <return type='void'/>
     </function>
     <function name='xmlCleanupEncodingAliases' file='encoding' module='encoding'>
@@ -9043,7 +8920,7 @@ Could we use @subtypes for this?'/>
       <return type='void'/>
     </function>
     <function name='xmlCleanupGlobals' file='globals' module='globals'>
-      <info>Additional cleanup for multi-threading</info>
+      <info>DEPRECATED: This function will be made private. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all.  Additional cleanup for multi-threading</info>
       <return type='void'/>
     </function>
     <function name='xmlCleanupInputCallbacks' file='xmlIO' module='xmlIO'>
@@ -9051,7 +8928,7 @@ Could we use @subtypes for this?'/>
       <return type='void'/>
     </function>
     <function name='xmlCleanupMemory' file='xmlmemory' module='xmlmemory'>
-      <info>Free up all the memory allocated by the library for its own use. This should not be called by user level code.</info>
+      <info>DEPRECATED: This function will be made private. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all.  Free up all the memory allocated by the library for its own use. This should not be called by user level code.</info>
       <return type='void'/>
     </function>
     <function name='xmlCleanupOutputCallbacks' file='xmlIO' module='xmlIO'>
@@ -9069,7 +8946,7 @@ Could we use @subtypes for this?'/>
       <return type='void'/>
     </function>
     <function name='xmlCleanupThreads' file='threads' module='threads'>
-      <info>xmlCleanupThreads() is used to to cleanup all the thread related data of the libxml2 library once processing has ended.  WARNING: if your application is multithreaded or has plugin support calling this may crash the application if another thread or a plugin is still using libxml2. It&apos;s sometimes very hard to guess if libxml2 is in use in the application, some libraries or plugins may use it without notice. In case of doubt abstain from calling this function or do it just before calling exit() to avoid leak reports from valgrind !</info>
+      <info>DEPRECATED: This function will be made private. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all.  xmlCleanupThreads() is used to to cleanup all the thread related data of the libxml2 library once processing has ended.  WARNING: if your application is multithreaded or has plugin support calling this may crash the application if another thread or a plugin is still using libxml2. It&apos;s sometimes very hard to guess if libxml2 is in use in the application, some libraries or plugins may use it without notice. In case of doubt abstain from calling this function or do it just before calling exit() to avoid leak reports from valgrind !</info>
       <return type='void'/>
     </function>
     <function name='xmlClearNodeInfoSeq' file='parser' module='parserInternals'>
@@ -9495,7 +9372,7 @@ Could we use @subtypes for this?'/>
       <arg name='end3' type='xmlChar' info='an end marker xmlChar, 0 if none'/>
     </function>
     <function name='xmlDefaultSAXHandlerInit' file='SAX2' module='SAX2'>
-      <info>Initialize the default SAX2 handler</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  Initialize the default SAX2 handler</info>
       <return type='void'/>
     </function>
     <function name='xmlDelEncodingAlias' file='encoding' module='encoding'>
@@ -9520,7 +9397,7 @@ Could we use @subtypes for this?'/>
       <arg name='len' type='int' info='pointer to the length of the buffer'/>
     </function>
     <function name='xmlDictCleanup' file='dict' module='dict'>
-      <info>Free the dictionary mutex. Do not call unless sure the library is not in use anymore !</info>
+      <info>DEPRECATED: This function will be made private. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all.  Free the dictionary mutex. Do not call unless sure the library is not in use anymore !</info>
       <return type='void'/>
     </function>
     <function name='xmlDictCreate' file='dict' module='dict'>
@@ -10081,7 +9958,7 @@ Could we use @subtypes for this?'/>
       <arg name='tok' type='xmlRMutexPtr' info='the reentrant mutex'/>
     </function>
     <function name='xmlFreeRefTable' file='valid' module='valid'>
-      <info>Deallocate the memory used by an Ref hash table.</info>
+      <info>DEPRECATED, do not use. This function will be removed from the public API.  Deallocate the memory used by an Ref hash table.</info>
       <return type='void'/>
       <arg name='table' type='xmlRefTablePtr' info='An ref table'/>
     </function>
@@ -10305,7 +10182,7 @@ Could we use @subtypes for this?'/>
       <arg name='name' type='const xmlChar *' info='the attribute name'/>
     </function>
     <function name='xmlGetRefs' file='valid' module='valid'>
-      <info>Find the set of references for the supplied ID.</info>
+      <info>DEPRECATED, do not use. This function will be removed from the public API.  Find the set of references for the supplied ID.</info>
       <return type='xmlListPtr' info='NULL if not found, otherwise node set for the ID.'/>
       <arg name='doc' type='xmlDocPtr' info='pointer to the document'/>
       <arg name='ID' type='const xmlChar *' info='the ID value'/>
@@ -10632,15 +10509,15 @@ Could we use @subtypes for this?'/>
       <arg name='enc' type='xmlCharEncoding' info='the charset encoding if known'/>
     </function>
     <function name='xmlInitCharEncodingHandlers' file='encoding' module='encoding'>
-      <info>Initialize the char encoding support, it registers the default encoding supported. NOTE: while public, this function usually doesn&apos;t need to be called in normal processing.</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  Initialize the char encoding support, it registers the default encoding supported. NOTE: while public, this function usually doesn&apos;t need to be called in normal processing.</info>
       <return type='void'/>
     </function>
     <function name='xmlInitGlobals' file='globals' module='globals'>
-      <info>Additional initialisation for multi-threading</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  Additional initialisation for multi-threading</info>
       <return type='void'/>
     </function>
     <function name='xmlInitMemory' file='xmlmemory' module='xmlmemory'>
-      <info>Initialize the memory layer.</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  Initialize the memory layer.</info>
       <return type='int' info='0 on success'/>
     </function>
     <function name='xmlInitNodeInfoSeq' file='parser' module='parserInternals'>
@@ -10658,7 +10535,7 @@ Could we use @subtypes for this?'/>
       <arg name='ctxt' type='xmlParserCtxtPtr' info='an XML parser context'/>
     </function>
     <function name='xmlInitThreads' file='threads' module='threads'>
-      <info>xmlInitThreads() is used to to initialize all the thread related data of the libxml2 library.</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  xmlInitThreads() is used to to initialize all the thread related data of the libxml2 library.</info>
       <return type='void'/>
     </function>
     <function name='xmlInitializeCatalog' file='catalog' module='catalog'>
@@ -10667,7 +10544,7 @@ Could we use @subtypes for this?'/>
       <return type='void'/>
     </function>
     <function name='xmlInitializeDict' file='dict' module='dict'>
-      <info>Do the dictionary mutex initialization. this function is deprecated</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  Do the dictionary mutex initialization.</info>
       <return type='int' info='0 if initialization was already done, and 1 if that call led to the initialization'/>
     </function>
     <function name='xmlInitializeGlobalState' file='globals' module='globals'>
@@ -10770,7 +10647,7 @@ Could we use @subtypes for this?'/>
       <arg name='ch' type='unsigned int' info='character to validate'/>
     </function>
     <function name='xmlIsRef' file='valid' module='valid'>
-      <info>Determine whether an attribute is of type Ref. In case we have DTD(s) then this is simple, otherwise we use an heuristic: name Ref (upper or lowercase).</info>
+      <info>DEPRECATED, do not use. This function will be removed from the public API.  Determine whether an attribute is of type Ref. In case we have DTD(s) then this is simple, otherwise we use an heuristic: name Ref (upper or lowercase).</info>
       <return type='int' info='0 or 1 depending on the lookup result'/>
       <arg name='doc' type='xmlDocPtr' info='the document'/>
       <arg name='elem' type='xmlNodePtr' info='the element carrying the attribute'/>
@@ -11464,7 +11341,7 @@ Could we use @subtypes for this?'/>
       <arg name='content' type='const xmlChar *' info='the XML content of the child if any.'/>
     </function>
     <function name='xmlNewComment' file='tree' module='tree'>
-      <info>Creation of a new node containing a comment.</info>
+      <info>Use of this function is DISCOURAGED in favor of xmlNewDocComment.  Creation of a new node containing a comment.</info>
       <return type='xmlNodePtr' info='a pointer to the new node object.'/>
       <arg name='content' type='const xmlChar *' info='the comment content'/>
     </function>
@@ -11605,13 +11482,13 @@ Could we use @subtypes for this?'/>
       <return type='xmlMutexPtr' info='a new simple mutex pointer or NULL in case of error'/>
     </function>
     <function name='xmlNewNode' file='tree' module='tree'>
-      <info>Creation of a new node element. @ns is optional (NULL).</info>
+      <info>Creation of a new node element. @ns is optional (NULL).  Use of this function is DISCOURAGED in favor of xmlNewDocNode.</info>
       <return type='xmlNodePtr' info='a pointer to the new node object. Uses xmlStrdup() to make copy of @name.'/>
       <arg name='ns' type='xmlNsPtr' info='namespace if any'/>
       <arg name='name' type='const xmlChar *' info='the node name'/>
     </function>
     <function name='xmlNewNodeEatName' file='tree' module='tree'>
-      <info>Creation of a new node element. @ns is optional (NULL).</info>
+      <info>Creation of a new node element. @ns is optional (NULL).  Use of this function is DISCOURAGED in favor of xmlNewDocNodeEatName.</info>
       <return type='xmlNodePtr' info='a pointer to the new node object, with pointer @name as new node&apos;s name. Use xmlNewNode() if a copy of @name string is is needed as new node&apos;s name.'/>
       <arg name='ns' type='xmlNsPtr' info='namespace if any'/>
       <arg name='name' type='xmlChar *' info='the node name'/>
@@ -11640,7 +11517,7 @@ Could we use @subtypes for this?'/>
       <arg name='value' type='const xmlChar *' info='the value of the attribute'/>
     </function>
     <function name='xmlNewPI' file='tree' module='tree'>
-      <info>Creation of a processing instruction element. Use xmlDocNewPI preferably to get string interning</info>
+      <info>Creation of a processing instruction element.  Use of this function is DISCOURAGED in favor of xmlNewDocPI.</info>
       <return type='xmlNodePtr' info='a pointer to the new node object.'/>
       <arg name='name' type='const xmlChar *' info='the processing instruction name'/>
       <arg name='content' type='const xmlChar *' info='the PI content'/>
@@ -11674,7 +11551,7 @@ Could we use @subtypes for this?'/>
       <arg name='buffer' type='const xmlChar *' info='an memory buffer'/>
     </function>
     <function name='xmlNewText' file='tree' module='tree'>
-      <info>Creation of a new text node.</info>
+      <info>Creation of a new text node.  Use of this function is DISCOURAGED in favor of xmlNewDocText.</info>
       <return type='xmlNodePtr' info='a pointer to the new node object.'/>
       <arg name='content' type='const xmlChar *' info='the text content'/>
     </function>
@@ -11688,7 +11565,7 @@ Could we use @subtypes for this?'/>
       <arg name='content' type='const xmlChar *' info='the text content of the child if any.'/>
     </function>
     <function name='xmlNewTextLen' file='tree' module='tree'>
-      <info>Creation of a new text node with an extra parameter for the content&apos;s length</info>
+      <info>Use of this function is DISCOURAGED in favor of xmlNewDocTextLen.  Creation of a new text node with an extra parameter for the content&apos;s length</info>
       <return type='xmlNodePtr' info='a pointer to the new node object.'/>
       <arg name='content' type='const xmlChar *' info='the text content'/>
       <arg name='len' type='int' info='the text len.'/>
@@ -13004,7 +12881,7 @@ Could we use @subtypes for this?'/>
     </function>
     <function name='xmlRelaxNGCleanupTypes' file='relaxng' module='relaxng'>
       <cond>defined(LIBXML_SCHEMAS_ENABLED)</cond>
-      <info>Cleanup the default Schemas type library associated to RelaxNG</info>
+      <info>DEPRECATED: This function will be made private. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all.  Cleanup the default Schemas type library associated to RelaxNG</info>
       <return type='void'/>
     </function>
     <function name='xmlRelaxNGDump' file='relaxng' module='relaxng'>
@@ -13201,14 +13078,14 @@ Could we use @subtypes for this?'/>
       <arg name='cur' type='xmlAttrPtr' info='an attribute'/>
     </function>
     <function name='xmlRemoveRef' file='valid' module='valid'>
-      <info>Remove the given attribute from the Ref table maintained internally.</info>
+      <info>DEPRECATED, do not use. This function will be removed from the public API.  Remove the given attribute from the Ref table maintained internally.</info>
       <return type='int' info='-1 if the lookup failed and 0 otherwise'/>
       <arg name='doc' type='xmlDocPtr' info='the document'/>
       <arg name='attr' type='xmlAttrPtr' info='the attribute'/>
     </function>
     <function name='xmlReplaceNode' file='tree' module='tree'>
       <cond>defined(LIBXML_TREE_ENABLED) || defined(LIBXML_WRITER_ENABLED)</cond>
-      <info>Unlink the old node from its current context, prune the new one at the same place. If @cur was already inserted in a document it is first unlinked from its existing context.</info>
+      <info>Unlink the old node from its current context, prune the new one at the same place. If @cur was already inserted in a document it is first unlinked from its existing context.  See the note regarding namespaces in xmlAddChild.</info>
       <return type='xmlNodePtr' info='the @old node'/>
       <arg name='old' type='xmlNodePtr' info='the old node'/>
       <arg name='cur' type='xmlNodePtr' info='the node'/>
@@ -13267,7 +13144,7 @@ Could we use @subtypes for this?'/>
       <arg name='ctx' type='void *' info='the user data (XML parser context)'/>
     </function>
     <function name='xmlSAX2EndElement' file='SAX2' module='SAX2'>
-      <cond>defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)</cond>
+      <cond>defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED)</cond>
       <info>called when the end of an element has been detected.</info>
       <return type='void'/>
       <arg name='ctx' type='void *' info='the user data (XML parser context)'/>
@@ -13354,12 +13231,6 @@ Could we use @subtypes for this?'/>
       <arg name='hdlr' type='xmlSAXHandler *' info='the SAX handler'/>
       <arg name='warning' type='int' info='flag if non-zero sets the handler warning procedure'/>
     </function>
-    <function name='xmlSAX2InitDocbDefaultSAXHandler' file='SAX2' module='SAX2'>
-      <cond>defined(LIBXML_DOCB_ENABLED)</cond>
-      <info>Initialize the default DocBook SAX2 handler</info>
-      <return type='void'/>
-      <arg name='hdlr' type='xmlSAXHandler *' info='the SAX handler'/>
-    </function>
     <function name='xmlSAX2InitHtmlDefaultSAXHandler' file='SAX2' module='SAX2'>
       <cond>defined(LIBXML_HTML_ENABLED)</cond>
       <info>Initialize the default HTML SAX2 handler</info>
@@ -13419,7 +13290,7 @@ Could we use @subtypes for this?'/>
       <arg name='ctx' type='void *' info='the user data (XML parser context)'/>
     </function>
     <function name='xmlSAX2StartElement' file='SAX2' module='SAX2'>
-      <cond>defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)</cond>
+      <cond>defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED)</cond>
       <info>called when an opening tag has been processed.</info>
       <return type='void'/>
       <arg name='ctx' type='void *' info='the user data (XML parser context)'/>
@@ -13681,7 +13552,7 @@ Could we use @subtypes for this?'/>
     </function>
     <function name='xmlSchemaCleanupTypes' file='xmlschemastypes' module='xmlschemastypes'>
       <cond>defined(LIBXML_SCHEMAS_ENABLED)</cond>
-      <info>Cleanup the default XML Schemas type library</info>
+      <info>DEPRECATED: This function will be made private. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all.  Cleanup the default XML Schemas type library</info>
       <return type='void'/>
     </function>
     <function name='xmlSchemaCollapseString' file='xmlschemastypes' module='xmlschemastypes'>
@@ -14725,7 +14596,7 @@ Could we use @subtypes for this?'/>
       <arg name='enc' type='xmlCharEncoding' info='the encoding value (number)'/>
     </function>
     <function name='xmlSwitchInputEncoding' file='parserInternals' module='parserInternals'>
-      <info>change the input functions when discovering the character encoding of a given entity.</info>
+      <info>DEPRECATED: Use xmlSwitchToEncoding  change the input functions when discovering the character encoding of a given entity.</info>
       <return type='int' info='0 in case of success, -1 otherwise'/>
       <arg name='ctxt' type='xmlParserCtxtPtr' info='the parser context'/>
       <arg name='input' type='xmlParserInputPtr' info='the input stream'/>
@@ -17105,7 +16976,7 @@ Could we use @subtypes for this?'/>
       <arg name='elem' type='xmlElementPtr' info='an element definition'/>
     </function>
     <function name='xmlValidateNCName' file='tree' module='tree'>
-      <cond>defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)</cond>
+      <cond>defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED)</cond>
       <info>Check that a value conforms to the lexical space of NCName</info>
       <return type='int' info='0 if this validates, a positive error code number otherwise and -1 in case of internal or API error.'/>
       <arg name='value' type='const xmlChar *' info='the value to check'/>
@@ -17715,7 +17586,7 @@ Could we use @subtypes for this?'/>
     </function>
     <function name='xmlXPathInit' file='xpath' module='xpath'>
       <cond>defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)</cond>
-      <info>Initialize the XPath environment</info>
+      <info>DEPRECATED: This function will be made private. Call xmlInitParser to initialize the library.  Initialize the XPath environment</info>
       <return type='void'/>
     </function>
     <function name='xmlXPathIntersection' file='xpathInternals' module='xpath'>
@@ -18396,7 +18267,7 @@ Could we use @subtypes for this?'/>
       <arg name='no' type='int' info='the error number'/>
     </function>
     <function name='xmlXPtrBuildNodeList' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Build a node list tree copy of the XPointer result. This will drop Attributes and Namespace declarations.</info>
       <return type='xmlNodePtr' info='an xmlNodePtr list or NULL. the caller has to free the node tree.'/>
       <arg name='obj' type='xmlXPathObjectPtr' info='the XPointer result from the evaluation.'/>
@@ -18409,53 +18280,53 @@ Could we use @subtypes for this?'/>
       <arg name='ctx' type='xmlXPathContextPtr' info='the XPointer context'/>
     </function>
     <function name='xmlXPtrEvalRangePredicate' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>[8]   Predicate ::=   &apos;[&apos; PredicateExpr &apos;]&apos; [9]   PredicateExpr ::=   Expr  Evaluate a predicate as in xmlXPathEvalPredicate() but for a Location Set instead of a node set</info>
       <return type='void'/>
       <arg name='ctxt' type='xmlXPathParserContextPtr' info='the XPointer Parser context'/>
     </function>
     <function name='xmlXPtrFreeLocationSet' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Free the LocationSet compound (not the actual ranges !).</info>
       <return type='void'/>
       <arg name='obj' type='xmlLocationSetPtr' info='the xmlLocationSetPtr to free'/>
     </function>
     <function name='xmlXPtrLocationSetAdd' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>add a new xmlXPathObjectPtr to an existing LocationSet If the location already exist in the set @val is freed.</info>
       <return type='void'/>
       <arg name='cur' type='xmlLocationSetPtr' info='the initial range set'/>
       <arg name='val' type='xmlXPathObjectPtr' info='a new xmlXPathObjectPtr'/>
     </function>
     <function name='xmlXPtrLocationSetCreate' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlLocationSetPtr of type double and of value @val</info>
       <return type='xmlLocationSetPtr' info='the newly created object.'/>
       <arg name='val' type='xmlXPathObjectPtr' info='an initial xmlXPathObjectPtr, or NULL'/>
     </function>
     <function name='xmlXPtrLocationSetDel' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Removes an xmlXPathObjectPtr from an existing LocationSet</info>
       <return type='void'/>
       <arg name='cur' type='xmlLocationSetPtr' info='the initial range set'/>
       <arg name='val' type='xmlXPathObjectPtr' info='an xmlXPathObjectPtr'/>
     </function>
     <function name='xmlXPtrLocationSetMerge' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Merges two rangesets, all ranges from @val2 are added to @val1</info>
       <return type='xmlLocationSetPtr' info='val1 once extended or NULL in case of error.'/>
       <arg name='val1' type='xmlLocationSetPtr' info='the first LocationSet'/>
       <arg name='val2' type='xmlLocationSetPtr' info='the second LocationSet'/>
     </function>
     <function name='xmlXPtrLocationSetRemove' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Removes an entry from an existing LocationSet list.</info>
       <return type='void'/>
       <arg name='cur' type='xmlLocationSetPtr' info='the initial range set'/>
       <arg name='val' type='int' info='the index to remove'/>
     </function>
     <function name='xmlXPtrNewCollapsedRange' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type range using a single nodes</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlNodePtr' info='the starting and ending node'/>
@@ -18469,20 +18340,20 @@ Could we use @subtypes for this?'/>
       <arg name='origin' type='xmlNodePtr' info='the element from which a user or program initiated traversal of the link, or NULL.'/>
     </function>
     <function name='xmlXPtrNewLocationSetNodeSet' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type LocationSet and initialize it with all the nodes from @set</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='set' type='xmlNodeSetPtr' info='a node set'/>
     </function>
     <function name='xmlXPtrNewLocationSetNodes' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type LocationSet and initialize it with the single range made of the two nodes @start and @end</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlNodePtr' info='the start NodePtr value'/>
       <arg name='end' type='xmlNodePtr' info='the end NodePtr value or NULL'/>
     </function>
     <function name='xmlXPtrNewRange' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type range</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlNodePtr' info='the starting node'/>
@@ -18491,49 +18362,49 @@ Could we use @subtypes for this?'/>
       <arg name='endindex' type='int' info='the ending index'/>
     </function>
     <function name='xmlXPtrNewRangeNodeObject' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type range from a not to an object</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlNodePtr' info='the starting node'/>
       <arg name='end' type='xmlXPathObjectPtr' info='the ending object'/>
     </function>
     <function name='xmlXPtrNewRangeNodePoint' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type range from a node to a point</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlNodePtr' info='the starting node'/>
       <arg name='end' type='xmlXPathObjectPtr' info='the ending point'/>
     </function>
     <function name='xmlXPtrNewRangeNodes' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type range using 2 nodes</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlNodePtr' info='the starting node'/>
       <arg name='end' type='xmlNodePtr' info='the ending node'/>
     </function>
     <function name='xmlXPtrNewRangePointNode' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type range from a point to a node</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlXPathObjectPtr' info='the starting point'/>
       <arg name='end' type='xmlNodePtr' info='the ending node'/>
     </function>
     <function name='xmlXPtrNewRangePoints' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Create a new xmlXPathObjectPtr of type range using 2 Points</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='start' type='xmlXPathObjectPtr' info='the starting point'/>
       <arg name='end' type='xmlXPathObjectPtr' info='the ending point'/>
     </function>
     <function name='xmlXPtrRangeToFunction' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Implement the range-to() XPointer function  Obsolete. range-to is not a real function but a special type of location step which is handled in xpath.c.</info>
       <return type='void'/>
       <arg name='ctxt' type='xmlXPathParserContextPtr' info='the XPointer Parser context'/>
       <arg name='nargs' type='int' info='the number of args'/>
     </function>
     <function name='xmlXPtrWrapLocationSet' file='xpointer' module='xpointer'>
-      <cond>defined(LIBXML_XPTR_ENABLED)</cond>
+      <cond>defined(LIBXML_XPTR_ENABLED) &amp;&amp; defined(LIBXML_XPTR_LOCS_ENABLED)</cond>
       <info>Wrap the LocationSet @val in a new xmlXPathObjectPtr</info>
       <return type='xmlXPathObjectPtr' info='the newly created object.'/>
       <arg name='val' type='xmlLocationSetPtr' info='the LocationSet value'/>

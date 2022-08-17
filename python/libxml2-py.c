@@ -8,16 +8,6 @@
 #include "libxml_wrap.h"
 #include "libxml2-py.h"
 
-#if defined(LIBXML_DOCB_ENABLED)
-PyObject *
-libxml_docbDefaultSAXHandlerInit(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
-
-    docbDefaultSAXHandlerInit();
-    Py_INCREF(Py_None);
-    return(Py_None);
-}
-
-#endif /* defined(LIBXML_DOCB_ENABLED) */
 #if defined(LIBXML_HTML_ENABLED)
 PyObject *
 libxml_htmlAutoCloseTag(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
@@ -202,13 +192,18 @@ libxml_htmlCtxtUseOptions(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 
 #endif /* defined(LIBXML_HTML_ENABLED) */
 #if defined(LIBXML_HTML_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_htmlDefaultSAXHandlerInit(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("htmlDefaultSAXHandlerInit") == -1)
+        return(NULL);
 
     htmlDefaultSAXHandlerInit();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_HTML_ENABLED) */
 #if defined(LIBXML_HTML_ENABLED) && defined(LIBXML_OUTPUT_ENABLED)
@@ -325,13 +320,18 @@ libxml_htmlHandleOmittedElem(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 
 #endif /* defined(LIBXML_HTML_ENABLED) */
 #if defined(LIBXML_HTML_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_htmlInitAutoClose(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("htmlInitAutoClose") == -1)
+        return(NULL);
 
     htmlInitAutoClose();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_HTML_ENABLED) */
 #if defined(LIBXML_HTML_ENABLED)
@@ -1553,13 +1553,18 @@ libxml_xmlCheckVersion(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     return(Py_None);
 }
 
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlCleanupCharEncodingHandlers(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlCleanupCharEncodingHandlers") == -1)
+        return(NULL);
 
     xmlCleanupCharEncodingHandlers();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 PyObject *
 libxml_xmlCleanupEncodingAliases(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
@@ -1569,13 +1574,18 @@ libxml_xmlCleanupEncodingAliases(PyObject *self ATTRIBUTE_UNUSED, PyObject *args
     return(Py_None);
 }
 
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlCleanupGlobals(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlCleanupGlobals") == -1)
+        return(NULL);
 
     xmlCleanupGlobals();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 PyObject *
 libxml_xmlCleanupInputCallbacks(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
@@ -2290,6 +2300,7 @@ libxml_xmlDebugDumpString(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 
 #endif /* defined(LIBXML_DEBUG_ENABLED) */
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlDecodeEntities(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -2302,6 +2313,9 @@ libxml_xmlDecodeEntities(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlChar end2;
     xmlChar end3;
 
+    if (libxml_deprecationWarning("xmlDecodeEntities") == -1)
+        return(NULL);
+
     if (!PyArg_ParseTuple(args, (char *)"Oiiccc:xmlDecodeEntities", &pyobj_ctxt, &len, &what, &end, &end2, &end3))
         return(NULL);
     ctxt = (xmlParserCtxtPtr) PyparserCtxt_Get(pyobj_ctxt);
@@ -2310,15 +2324,21 @@ libxml_xmlDecodeEntities(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlCharPtrWrap((xmlChar *) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlDefaultSAXHandlerInit(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlDefaultSAXHandlerInit") == -1)
+        return(NULL);
 
     xmlDefaultSAXHandlerInit();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 PyObject *
 libxml_xmlDelEncodingAlias(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
@@ -2334,13 +2354,18 @@ libxml_xmlDelEncodingAlias(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     return(py_retval);
 }
 
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlDictCleanup(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlDictCleanup") == -1)
+        return(NULL);
 
     xmlDictCleanup();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 PyObject *
 libxml_xmlDocCopyNode(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
@@ -2487,6 +2512,7 @@ libxml_xmlElemDump(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 
 #endif /* defined(LIBXML_OUTPUT_ENABLED) */
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlEncodeEntities(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -2494,6 +2520,9 @@ libxml_xmlEncodeEntities(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlDocPtr doc;
     PyObject *pyobj_doc;
     xmlChar * input;
+
+    if (libxml_deprecationWarning("xmlEncodeEntities") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"Oz:xmlEncodeEntities", &pyobj_doc, &input))
         return(NULL);
@@ -2503,6 +2532,7 @@ libxml_xmlEncodeEntities(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlCharPtrConstWrap((const xmlChar *) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 PyObject *
@@ -3146,12 +3176,16 @@ libxml_xmlGetProp(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlHandleEntity(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
     xmlEntityPtr entity;
     PyObject *pyobj_entity;
+
+    if (libxml_deprecationWarning("xmlHandleEntity") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"OO:xmlHandleEntity", &pyobj_ctxt, &pyobj_entity))
         return(NULL);
@@ -3162,6 +3196,7 @@ libxml_xmlHandleEntity(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 PyObject *
@@ -3231,21 +3266,31 @@ libxml_xmlIOHTTPMatch(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #endif /* defined(LIBXML_HTTP_ENABLED) */
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlInitCharEncodingHandlers(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlInitCharEncodingHandlers") == -1)
+        return(NULL);
 
     xmlInitCharEncodingHandlers();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlInitGlobals(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlInitGlobals") == -1)
+        return(NULL);
 
     xmlInitGlobals();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 PyObject *
 libxml_xmlInitParser(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
@@ -3281,24 +3326,34 @@ libxml_xmlInitializeCatalog(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTR
 }
 
 #endif /* defined(LIBXML_CATALOG_ENABLED) */
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlInitializeDict(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
     PyObject *py_retval;
     int c_retval;
 
+    if (libxml_deprecationWarning("xmlInitializeDict") == -1)
+        return(NULL);
+
     c_retval = xmlInitializeDict();
     py_retval = libxml_intWrap((int) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlInitializePredefinedEntities(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlInitializePredefinedEntities") == -1)
+        return(NULL);
 
     xmlInitializePredefinedEntities();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 PyObject *
@@ -3482,6 +3537,7 @@ libxml_xmlIsPubidChar(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     return(py_retval);
 }
 
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlIsRef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -3493,6 +3549,9 @@ libxml_xmlIsRef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlAttrPtr attr;
     PyObject *pyobj_attr;
 
+    if (libxml_deprecationWarning("xmlIsRef") == -1)
+        return(NULL);
+
     if (!PyArg_ParseTuple(args, (char *)"OOO:xmlIsRef", &pyobj_doc, &pyobj_elem, &pyobj_attr))
         return(NULL);
     doc = (xmlDocPtr) PyxmlNode_Get(pyobj_doc);
@@ -3503,6 +3562,7 @@ libxml_xmlIsRef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_intWrap((int) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 PyObject *
 libxml_xmlIsXHTML(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
@@ -3666,12 +3726,16 @@ libxml_xmlLsOneNode(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 
 #endif /* defined(LIBXML_DEBUG_ENABLED) */
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlNamespaceParseNCName(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlChar * c_retval;
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
+
+    if (libxml_deprecationWarning("xmlNamespaceParseNCName") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlNamespaceParseNCName", &pyobj_ctxt))
         return(NULL);
@@ -3681,15 +3745,20 @@ libxml_xmlNamespaceParseNCName(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) 
     py_retval = libxml_xmlCharPtrWrap((xmlChar *) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlNamespaceParseNSDef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlChar * c_retval;
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
+
+    if (libxml_deprecationWarning("xmlNamespaceParseNSDef") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlNamespaceParseNSDef", &pyobj_ctxt))
         return(NULL);
@@ -3699,29 +3768,41 @@ libxml_xmlNamespaceParseNSDef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlCharPtrWrap((xmlChar *) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_FTP_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlNanoFTPCleanup(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlNanoFTPCleanup") == -1)
+        return(NULL);
 
     xmlNanoFTPCleanup();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_FTP_ENABLED) */
 #if defined(LIBXML_FTP_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlNanoFTPInit(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlNanoFTPInit") == -1)
+        return(NULL);
 
     xmlNanoFTPInit();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_FTP_ENABLED) */
 #if defined(LIBXML_FTP_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlNanoFTPProxy(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     char * host;
@@ -3730,6 +3811,9 @@ libxml_xmlNanoFTPProxy(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     char * passwd;
     int type;
 
+    if (libxml_deprecationWarning("xmlNanoFTPProxy") == -1)
+        return(NULL);
+
     if (!PyArg_ParseTuple(args, (char *)"zizzi:xmlNanoFTPProxy", &host, &port, &user, &passwd, &type))
         return(NULL);
 
@@ -3737,12 +3821,17 @@ libxml_xmlNanoFTPProxy(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_FTP_ENABLED) */
 #if defined(LIBXML_FTP_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlNanoFTPScanProxy(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     char * URL;
+
+    if (libxml_deprecationWarning("xmlNanoFTPScanProxy") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"z:xmlNanoFTPScanProxy", &URL))
         return(NULL);
@@ -3751,6 +3840,7 @@ libxml_xmlNanoFTPScanProxy(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_FTP_ENABLED) */
 #if defined(LIBXML_HTTP_ENABLED)
@@ -4101,6 +4191,7 @@ libxml_xmlNewEntity(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlNewGlobalNs(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -4110,6 +4201,9 @@ libxml_xmlNewGlobalNs(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlChar * href;
     xmlChar * prefix;
 
+    if (libxml_deprecationWarning("xmlNewGlobalNs") == -1)
+        return(NULL);
+
     if (!PyArg_ParseTuple(args, (char *)"Ozz:xmlNewGlobalNs", &pyobj_doc, &href, &prefix))
         return(NULL);
     doc = (xmlDocPtr) PyxmlNode_Get(pyobj_doc);
@@ -4118,6 +4212,7 @@ libxml_xmlNewGlobalNs(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlNsPtrWrap((xmlNsPtr) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 PyObject *
@@ -5196,10 +5291,14 @@ libxml_xmlParseName(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlParseNamespace(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
+
+    if (libxml_deprecationWarning("xmlParseNamespace") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlParseNamespace", &pyobj_ctxt))
         return(NULL);
@@ -5209,6 +5308,7 @@ libxml_xmlParseNamespace(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 PyObject *
@@ -5302,12 +5402,16 @@ libxml_xmlParsePubidLiteral(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlParseQuotedString(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlChar * c_retval;
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
+
+    if (libxml_deprecationWarning("xmlParseQuotedString") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlParseQuotedString", &pyobj_ctxt))
         return(NULL);
@@ -5317,6 +5421,7 @@ libxml_xmlParseQuotedString(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlCharPtrWrap((xmlChar *) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 PyObject *
@@ -5566,10 +5671,14 @@ libxml_xmlParserHandlePEReference(PyObject *self ATTRIBUTE_UNUSED, PyObject *arg
 }
 
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlParserHandleReference(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
+
+    if (libxml_deprecationWarning("xmlParserHandleReference") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlParserHandleReference", &pyobj_ctxt))
         return(NULL);
@@ -5579,6 +5688,7 @@ libxml_xmlParserHandleReference(PyObject *self ATTRIBUTE_UNUSED, PyObject *args)
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 PyObject *
@@ -6263,13 +6373,18 @@ libxml_xmlRegisterHTTPPostCallbacks(PyObject *self ATTRIBUTE_UNUSED, PyObject *a
 #if defined(LIBXML_XPATH_ENABLED)
 #endif
 #if defined(LIBXML_SCHEMAS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlRelaxNGCleanupTypes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlRelaxNGCleanupTypes") == -1)
+        return(NULL);
 
     xmlRelaxNGCleanupTypes();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_SCHEMAS_ENABLED) */
 #if defined(LIBXML_SCHEMAS_ENABLED) && defined(LIBXML_OUTPUT_ENABLED)
@@ -6345,15 +6460,20 @@ libxml_xmlRelaxNGFreeParserCtxt(PyObject *self ATTRIBUTE_UNUSED, PyObject *args)
 
 #endif /* defined(LIBXML_SCHEMAS_ENABLED) */
 #if defined(LIBXML_SCHEMAS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlRelaxNGInitTypes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
     PyObject *py_retval;
     int c_retval;
 
+    if (libxml_deprecationWarning("xmlRelaxNGInitTypes") == -1)
+        return(NULL);
+
     c_retval = xmlRelaxNGInitTypes();
     py_retval = libxml_intWrap((int) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_SCHEMAS_ENABLED) */
 #if defined(LIBXML_SCHEMAS_ENABLED)
@@ -6610,6 +6730,7 @@ libxml_xmlRemoveProp(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     return(py_retval);
 }
 
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlRemoveRef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -6618,6 +6739,9 @@ libxml_xmlRemoveRef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *pyobj_doc;
     xmlAttrPtr attr;
     PyObject *pyobj_attr;
+
+    if (libxml_deprecationWarning("xmlRemoveRef") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"OO:xmlRemoveRef", &pyobj_doc, &pyobj_attr))
         return(NULL);
@@ -6628,6 +6752,7 @@ libxml_xmlRemoveRef(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_intWrap((int) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_WRITER_ENABLED)
 PyObject *
@@ -6785,12 +6910,16 @@ libxml_xmlSaveUri(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #if defined(LIBXML_LEGACY_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlScanName(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlChar * c_retval;
     xmlParserCtxtPtr ctxt;
     PyObject *pyobj_ctxt;
+
+    if (libxml_deprecationWarning("xmlScanName") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlScanName", &pyobj_ctxt))
         return(NULL);
@@ -6800,16 +6929,22 @@ libxml_xmlScanName(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlCharPtrWrap((xmlChar *) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_SCHEMAS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlSchemaCleanupTypes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlSchemaCleanupTypes") == -1)
+        return(NULL);
 
     xmlSchemaCleanupTypes();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_SCHEMAS_ENABLED) */
 #if defined(LIBXML_SCHEMAS_ENABLED)
@@ -6881,13 +7016,18 @@ libxml_xmlSchemaFreeParserCtxt(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) 
 
 #endif /* defined(LIBXML_SCHEMAS_ENABLED) */
 #if defined(LIBXML_SCHEMAS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlSchemaInitTypes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlSchemaInitTypes") == -1)
+        return(NULL);
 
     xmlSchemaInitTypes();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_SCHEMAS_ENABLED) */
 #if defined(LIBXML_SCHEMAS_ENABLED)
@@ -12397,7 +12537,7 @@ libxml_xmlValidateElement(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #endif /* defined(LIBXML_VALID_ENABLED) */
-#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
+#if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED)
 PyObject *
 libxml_xmlValidateNCName(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -12413,7 +12553,7 @@ libxml_xmlValidateNCName(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     return(py_retval);
 }
 
-#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_DOCB_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
+#endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) || defined(LIBXML_DEBUG_ENABLED) || defined (LIBXML_HTML_ENABLED) || defined(LIBXML_SAX1_ENABLED) || defined(LIBXML_HTML_ENABLED) || defined(LIBXML_WRITER_ENABLED) || defined(LIBXML_LEGACY_ENABLED) */
 #if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
 PyObject *
 libxml_xmlValidateNMToken(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
@@ -13389,13 +13529,18 @@ libxml_xmlXPathIdFunction(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 
 #endif /* defined(LIBXML_XPATH_ENABLED) */
 #if defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlXPathInit(PyObject *self ATTRIBUTE_UNUSED, PyObject *args ATTRIBUTE_UNUSED) {
+
+    if (libxml_deprecationWarning("xmlXPathInit") == -1)
+        return(NULL);
 
     xmlXPathInit();
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
 #endif /* defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED) */
 #if defined(LIBXML_XPATH_ENABLED) || defined(LIBXML_SCHEMAS_ENABLED)
@@ -14660,11 +14805,15 @@ libxml_xmlXPtrEval(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlXPtrEvalRangePredicate(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlXPathParserContextPtr ctxt;
     PyObject *pyobj_ctxt;
+
+    if (libxml_deprecationWarning("xmlXPtrEvalRangePredicate") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlXPtrEvalRangePredicate", &pyobj_ctxt))
         return(NULL);
@@ -14674,15 +14823,20 @@ libxml_xmlXPtrEvalRangePredicate(PyObject *self ATTRIBUTE_UNUSED, PyObject *args
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlXPtrNewCollapsedRange(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
     xmlXPathObjectPtr c_retval;
     xmlNodePtr start;
     PyObject *pyobj_start;
+
+    if (libxml_deprecationWarning("xmlXPtrNewCollapsedRange") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"O:xmlXPtrNewCollapsedRange", &pyobj_start))
         return(NULL);
@@ -14692,8 +14846,9 @@ libxml_xmlXPtrNewCollapsedRange(PyObject *self ATTRIBUTE_UNUSED, PyObject *args)
     py_retval = libxml_xmlXPathObjectPtrWrap((xmlXPathObjectPtr) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
-#endif /* defined(LIBXML_XPTR_ENABLED) */
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
 #if defined(LIBXML_XPTR_ENABLED)
 PyObject *
 libxml_xmlXPtrNewContext(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
@@ -14718,7 +14873,8 @@ libxml_xmlXPtrNewContext(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
 }
 
 #endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlXPtrNewLocationSetNodes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -14727,6 +14883,9 @@ libxml_xmlXPtrNewLocationSetNodes(PyObject *self ATTRIBUTE_UNUSED, PyObject *arg
     PyObject *pyobj_start;
     xmlNodePtr end;
     PyObject *pyobj_end;
+
+    if (libxml_deprecationWarning("xmlXPtrNewLocationSetNodes") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"OO:xmlXPtrNewLocationSetNodes", &pyobj_start, &pyobj_end))
         return(NULL);
@@ -14737,9 +14896,11 @@ libxml_xmlXPtrNewLocationSetNodes(PyObject *self ATTRIBUTE_UNUSED, PyObject *arg
     py_retval = libxml_xmlXPathObjectPtrWrap((xmlXPathObjectPtr) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlXPtrNewRange(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -14751,6 +14912,9 @@ libxml_xmlXPtrNewRange(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *pyobj_end;
     int endindex;
 
+    if (libxml_deprecationWarning("xmlXPtrNewRange") == -1)
+        return(NULL);
+
     if (!PyArg_ParseTuple(args, (char *)"OiOi:xmlXPtrNewRange", &pyobj_start, &startindex, &pyobj_end, &endindex))
         return(NULL);
     start = (xmlNodePtr) PyxmlNode_Get(pyobj_start);
@@ -14760,9 +14924,11 @@ libxml_xmlXPtrNewRange(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlXPathObjectPtrWrap((xmlXPathObjectPtr) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlXPtrNewRangeNodes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *py_retval;
@@ -14771,6 +14937,9 @@ libxml_xmlXPtrNewRangeNodes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     PyObject *pyobj_start;
     xmlNodePtr end;
     PyObject *pyobj_end;
+
+    if (libxml_deprecationWarning("xmlXPtrNewRangeNodes") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"OO:xmlXPtrNewRangeNodes", &pyobj_start, &pyobj_end))
         return(NULL);
@@ -14781,14 +14950,19 @@ libxml_xmlXPtrNewRangeNodes(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     py_retval = libxml_xmlXPathObjectPtrWrap((xmlXPathObjectPtr) c_retval);
     return(py_retval);
 }
+XML_POP_WARNINGS
 
-#endif /* defined(LIBXML_XPTR_ENABLED) */
-#if defined(LIBXML_XPTR_ENABLED)
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
+#if defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED)
+XML_IGNORE_DEPRECATION_WARNINGS
 PyObject *
 libxml_xmlXPtrRangeToFunction(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     xmlXPathParserContextPtr ctxt;
     PyObject *pyobj_ctxt;
     int nargs;
+
+    if (libxml_deprecationWarning("xmlXPtrRangeToFunction") == -1)
+        return(NULL);
 
     if (!PyArg_ParseTuple(args, (char *)"Oi:xmlXPtrRangeToFunction", &pyobj_ctxt, &nargs))
         return(NULL);
@@ -14798,5 +14972,6 @@ libxml_xmlXPtrRangeToFunction(PyObject *self ATTRIBUTE_UNUSED, PyObject *args) {
     Py_INCREF(Py_None);
     return(Py_None);
 }
+XML_POP_WARNINGS
 
-#endif /* defined(LIBXML_XPTR_ENABLED) */
+#endif /* defined(LIBXML_XPTR_ENABLED) && defined(LIBXML_XPTR_LOCS_ENABLED) */
