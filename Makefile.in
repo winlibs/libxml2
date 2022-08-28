@@ -755,7 +755,6 @@ testModule_LDADD = $(LDADDS)
 noinst_LTLIBRARIES = testdso.la
 testdso_la_SOURCES = testdso.c
 testdso_la_LDFLAGS = -module -no-undefined -avoid-version -rpath $(libdir)
-BUILT_SOURCES = testapi.c
 testapi_SOURCES = testapi.c
 testapi_LDFLAGS = 
 testapi_DEPENDENCIES = $(DEPS)
@@ -798,7 +797,7 @@ examples_DATA = xmllint.c
 #
 LCOV = /usr/bin/lcov
 GENHTML = /usr/bin/genhtml
-all: $(BUILT_SOURCES) config.h
+all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
 .SUFFIXES:
@@ -1898,8 +1897,7 @@ distcleancheck: distclean
 check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS)
 	$(MAKE) $(AM_MAKEFLAGS) check-local
-check: $(BUILT_SOURCES)
-	$(MAKE) $(AM_MAKEFLAGS) check-recursive
+check: check-recursive
 all-am: Makefile $(PROGRAMS) $(LTLIBRARIES) $(SCRIPTS) $(DATA) \
 		config.h
 install-binPROGRAMS: install-libLTLIBRARIES
@@ -1909,8 +1907,7 @@ installdirs-am:
 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(cmakedir)" "$(DESTDIR)$(examplesdir)" "$(DESTDIR)$(m4datadir)" "$(DESTDIR)$(pkgconfigdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
-install: $(BUILT_SOURCES)
-	$(MAKE) $(AM_MAKEFLAGS) install-recursive
+install: install-recursive
 install-exec: install-exec-recursive
 install-data: install-data-recursive
 uninstall: uninstall-recursive
@@ -1942,7 +1939,6 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
-	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 clean: clean-recursive
 
 clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
@@ -2141,8 +2137,7 @@ uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
 	uninstall-libLTLIBRARIES uninstall-m4dataDATA \
 	uninstall-pkgconfigDATA
 
-.MAKE: $(am__recursive_targets) all check check-am install install-am \
-	install-strip
+.MAKE: $(am__recursive_targets) all check-am install-am install-strip
 
 .PHONY: $(am__recursive_targets) CTAGS GTAGS TAGS all all-am \
 	am--depfiles am--refresh check check-am check-local clean \
@@ -2174,12 +2169,6 @@ uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
 
 # that one forces the rebuild when "make rebuild" is run on doc/
 rebuild_testapi:
-	-@(if [ "$(PYTHON)" != "" ] ; then \
-	    $(PYTHON) $(srcdir)/gentest.py $(srcdir) ; fi )
-
-# that one is just to make sure it is rebuilt if missing
-# but adding the dependances generate mess
-testapi.c: $(srcdir)/gentest.py
 	-@(if [ "$(PYTHON)" != "" ] ; then \
 	    $(PYTHON) $(srcdir)/gentest.py $(srcdir) ; fi )
 
