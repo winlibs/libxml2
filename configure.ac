@@ -3,7 +3,7 @@ AC_PREREQ([2.63])
 
 m4_define([MAJOR_VERSION], 2)
 m4_define([MINOR_VERSION], 10)
-m4_define([MICRO_VERSION], 1)
+m4_define([MICRO_VERSION], 2)
 
 AC_INIT([libxml2],[MAJOR_VERSION.MINOR_VERSION.MICRO_VERSION])
 AC_CONFIG_SRCDIR([entities.c])
@@ -39,7 +39,7 @@ AC_SUBST(LIBXML_VERSION_EXTRA)
 
 VERSION=${LIBXML_VERSION}
 
-AM_INIT_AUTOMAKE([1.15 foreign no-dist-gzip dist-xz])
+AM_INIT_AUTOMAKE([1.16.3 foreign no-dist-gzip dist-xz])
 AM_MAINTAINER_MODE([enable])
 AM_SILENT_RULES([yes])
 

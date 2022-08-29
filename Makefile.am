@@ -28,7 +28,7 @@ check_PROGRAMS = \
 
 bin_PROGRAMS = xmllint xmlcatalog
 
-bin_SCRIPTS=xml2-config
+nodist_bin_SCRIPTS = xml2-config
 
 lib_LTLIBRARIES = libxml2.la
 libxml2_la_CFLAGS = $(EXTRA_CFLAGS) $(THREAD_CFLAGS) $(Z_CFLAGS) $(LZMA_CFLAGS)
@@ -173,9 +173,6 @@ check-valgrind valgrind:
 asan:
 	@echo '## rebuilding for ASAN'
 	./configure CFLAGS="-fsanitize=address,undefined -Wformat -Werror=format-security -Werror=array-bounds -g" CXXFLAGS="-fsanitize=address,undefined -Wformat -Werror=format-security -Werror=array-bounds -g" LDFLAGS="-fsanitize=address,undefined" CC="clang" CXX="clang++" --disable-shared ; OptimOff  ; $(MAKE) clean ; $(MAKE)
-
-clean-local:
-	rm -f missing.xml # created by testapi
 
 # Old test suite. This should be ported to C.
 tests: $(TEST_DEBUG) $(TEST_CATALOG) $(TEST_REGEXPS) $(TEST_SCHEMATRON) Timingtests $(TEST_VTIME) $(PYTHON_TESTS)
@@ -365,8 +362,7 @@ cleanup:
 	-@(find . -name \*.gcda -o -name \*.gcno -exec rm -f {} \;)
 	-@(find . -name \*.orig -o -name \*.rej -o -name \*.old -exec rm -f {} \;)
 
-dist-hook: cleanup libxml2.spec
-	-cp libxml2.spec $(distdir)
+dist-hook: cleanup
 	(cd $(srcdir) ; tar -cf - --exclude .git win32 os400 vms test result) | (cd $(distdir); tar xf -)
 
 dist-source: distdir
@@ -387,7 +383,7 @@ rpm: cleanup cleantar
 CLEANFILES = runxmlconf.log test.out *.gcda *.gcno *.res
 DISTCLEANFILES = COPYING missing.lst
 
-EXTRA_DIST = xml2-config.in libxml.spec.in libxml2.spec \
+EXTRA_DIST = xml2-config.in libxml.spec.in \
              libxml.m4 Copyright check-xml-test-suite.py gentest.py \
 	     check-relaxng-test-suite.py check-relaxng-test-suite2.py \
 	     check-xsddata-test-suite.py check-xinclude-test-suite.py \
@@ -404,7 +400,7 @@ EXTRA_DIST = xml2-config.in libxml.spec.in libxml2.spec \
 
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = libxml-2.0.pc
+nodist_pkgconfig_DATA = libxml-2.0.pc
 
 cmakedir = $(libdir)/cmake/libxml2
 cmake_DATA = libxml2-config.cmake
