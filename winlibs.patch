@@ -1,0 +1,216 @@
+ README.md           | 127 +++++-----------------------------------------------
+ win32/Makefile.msvc |  29 ++++++++----
+ 2 files changed, 31 insertions(+), 125 deletions(-)
+
+diff --git a/README.md b/README.md
+index ad423e68..ac7e2b8b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,126 +1,19 @@
+ # libxml2
+ 
+-libxml2 is an XML toolkit implemented in C, originally developed for
+-the GNOME Project.
++libxml2 is the XML C parser and toolkit developed for the Gnome project from
++[http://www.xmlsoft.org/](http://www.xmlsoft.org/)
+ 
+-Full documentation is available at
+-<https://gitlab.gnome.org/GNOME/libxml2/-/wikis>.
++PHP 5.3/5.4 currently use version 2.7.8 released 2010.11.04
++PHP 5.5 currently uses version 2.9.1 released 2013.04.19
+ 
+-Bugs should be reported at
+-<https://gitlab.gnome.org/GNOME/libxml2/-/issues>.
++# Building for PHP with VC9/VC11
+ 
+-A mailing list xml@gnome.org is available. You can subscribe at
+-<https://mail.gnome.org/mailman/listinfo/xml>. The list archive is at
+-<https://mail.gnome.org/archives/xml/>.
++Configure line non debug:
+ 
+-## License
++    cscript configure.js lib="<path to iconv lib dir>" include="<path to iconv header dir>" vcmanifest=yes
+ 
+-This code is released under the MIT License, see the Copyright file.
++Configure line with debug:
+ 
+-## Build instructions
+-
+-libxml2 can be built with GNU Autotools, CMake, or several other build
+-systems in platform-specific subdirectories.
+-
+-### Autotools (for POSIX systems like Linux, BSD, macOS)
+-
+-If you build from a Git tree, you have to install Autotools and start
+-by generating the configuration files with:
+-
+-    ./autogen.sh
+-
+-If you build from a source tarball, extract the archive with:
+-
+-    tar xf libxml2-xxx.tar.gz
+-    cd libxml2-xxx
+-
+-To see a list of build options:
+-
+-    ./configure --help
+-
+-Also see the INSTALL file for additional instructions. Then you can
+-configure and build the library:
+-
+-    ./configure [possible options]
+-    make
+-
+-Note that by default, no optimization options are used. You have to
+-enable them manually, for example with:
+-
+-    CFLAGS='-O2 -fno-semantic-interposition' ./configure
+-
+-Now you can run the test suite with:
+-
+-    make check
+-
+-Please report test failures to the mailing list or bug tracker.
+-
+-Then you can install the library:
+-
+-    make install
+-
+-At that point you may have to rerun ldconfig or a similar utility to
+-update your list of installed shared libs.
+-
+-### CMake (mainly for Windows)
+-
+-Another option for compiling libxml is using CMake:
+-
+-    cmake -E tar xf libxml2-xxx.tar.gz
+-    cmake -S libxml2-xxx -B libxml2-xxx-build [possible options]
+-    cmake --build libxml2-xxx-build
+-    cmake --install libxml2-xxx-build
+-
+-Common CMake options include:
+-
+-    -D BUILD_SHARED_LIBS=OFF            # build static libraries
+-    -D CMAKE_BUILD_TYPE=Release         # specify build type
+-    -D CMAKE_INSTALL_PREFIX=/usr/local  # specify the install path
+-    -D LIBXML2_WITH_ICONV=OFF           # disable iconv
+-    -D LIBXML2_WITH_LZMA=OFF            # disable liblzma
+-    -D LIBXML2_WITH_PYTHON=OFF          # disable Python
+-    -D LIBXML2_WITH_ZLIB=OFF            # disable libz
+-
+-You can also open the libxml source directory with its CMakeLists.txt
+-directly in various IDEs such as CLion, QtCreator, or Visual Studio.
+-
+-## Dependencies
+-
+-Libxml does not require any other libraries. A platform with somewhat
+-recent POSIX support should be sufficient (please report any violation
+-to this rule you may find).
+-
+-However, if found at configuration time, libxml will detect and use
+-the following libraries:
+-
+-- [libz](https://zlib.net/), a highly portable and widely available
+-  compression library.
+-- [liblzma](https://tukaani.org/xz/), another compression library.
+-- [libiconv](https://www.gnu.org/software/libiconv/), a character encoding
+-  conversion library. The iconv function is part of POSIX.1-2001, so
+-  libiconv isn't required on modern UNIX-like systems like Linux, BSD or
+-  macOS.
+-- [ICU](https://icu.unicode.org/), a Unicode library. Mainly useful as an
+-  alternative to iconv on Windows. Unnecessary on most other systems.
+-
+-## Contributing
+-
+-The current version of the code can be found in GNOME's GitLab at 
+-at <https://gitlab.gnome.org/GNOME/libxml2>. The best way to get involved
+-is by creating issues and merge requests on GitLab. Alternatively, you can
+-start discussions and send patches to the mailing list. If you want to
+-work with patches, please format them with git-format-patch and use plain
+-text attachments.
+-
+-All code must conform to C89 and pass the GitLab CI tests. Add regression
+-tests if possible.
+-
+-## Authors
+-
+-- Daniel Veillard
+-- Bjorn Reese
+-- William Brack
+-- Igor Zlatkovic for the Windows port
+-- Aleksey Sanin
+-- Nick Wellnhofer
++    cscript configure.js lib="<path to iconv lib dir>" include="<path to iconv header dir>"  debug=yes mem_debug=yes  vcmanifest=yes
+ 
++libxml2_a_dll.lib **MUST** be used with PHP.
+diff --git a/win32/Makefile.msvc b/win32/Makefile.msvc
+index 80e64e22..471006d1 100644
+--- a/win32/Makefile.msvc
++++ b/win32/Makefile.msvc
+@@ -21,12 +21,21 @@ AUTOCONF = .\config.msvc
+ # Names of various input and output components.
+ XML_NAME = xml2
+ XML_BASENAME = lib$(XML_NAME)
++!if "$(DEBUG)" == "1"
++XML_SO = $(XML_BASENAME)_debug.dll
++XML_IMP = $(XML_BASENAME)_debug.lib
++XML_A = $(XML_BASENAME)_a_debug.lib
++XML_A_DLL = $(XML_BASENAME)_a_dll_debug.lib
++XML_PDB = $(XML_BASENAME)_debug.pdb
++!else
+ XML_SO = $(XML_BASENAME).dll
+-XML_RES = $(XML_BASENAME).res
+ XML_IMP = $(XML_BASENAME).lib
+-XML_DEF = $(XML_BASENAME).def
+ XML_A = $(XML_BASENAME)_a.lib
+ XML_A_DLL = $(XML_BASENAME)_a_dll.lib
++XML_PDB = $(XML_BASENAME).pdb
++!endif
++XML_RES = $(XML_BASENAME).res
++XML_DEF = $(XML_BASENAME).def
+ 
+ # Place where we let the compiler put its output.
+ BINDIR = bin.msvc
+@@ -67,8 +76,12 @@ LIBS =
+ LIBS = $(LIBS) wsock32.lib ws2_32.lib
+ !endif 
+ !if "$(WITH_ICONV)" == "1"
+-LIBS = $(LIBS) iconv.lib
+-!endif 
++!if "$(DEBUG)" == "1"
++LIBS = $(LIBS) libiconv_debug.lib
++!else
++LIBS = $(LIBS) libiconv.lib
++!endif
++!endif
+ !if "$(WITH_ICU)" == "1"
+ !if "$(STATIC)" == "1"
+ LIBS = $(LIBS) advapi32.lib sicuuc.lib sicuin.lib sicudt.lib
+@@ -100,7 +113,7 @@ ARFLAGS = /nologo
+ CFLAGS = $(CFLAGS) /D "_DEBUG" /Od /Z7
+ LDFLAGS = $(LDFLAGS) /DEBUG
+ !else
+-CFLAGS = $(CFLAGS) /D "NDEBUG" /O2 
++CFLAGS = $(CFLAGS) /D "NDEBUG" /O2
+ # commented out as this break VC10 c.f. 634846
+ # LDFLAGS = $(LDFLAGS) /OPT:NOWIN98
+ LDFLAGS = $(LDFLAGS)
+@@ -349,15 +362,15 @@ $(XML_INTDIR_A_DLL) :
+ 
+ # An implicit rule for libxml compilation.
+ {$(XML_SRCDIR)}.c{$(XML_INTDIR)}.obj::
+-	$(CC) $(CFLAGS) /Fo$(XML_INTDIR)\ /c $<
++	$(CC) $(CFLAGS) /Fo$(XML_INTDIR)\ /Zi /Fd$(BINDIR)\$(XML_PDB) /c $<
+ 
+ # An implicit rule for static libxml compilation.
+ {$(XML_SRCDIR)}.c{$(XML_INTDIR_A)}.obj::
+-	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /Fo$(XML_INTDIR_A)\ /c $<
++	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /Fo$(XML_INTDIR_A)\ /Zi /Fd$(BINDIR)\$(XML_PDB) /c $<
+ 
+ # An implicit rule for static for dll libxml compilation.
+ {$(XML_SRCDIR)}.c{$(XML_INTDIR_A_DLL)}.obj::
+-	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /D "LIBXML_STATIC_FOR_DLL" /Fo$(XML_INTDIR_A_DLL)\ /c $<
++	$(CC) $(CFLAGS) /D "LIBXML_STATIC" /D "LIBXML_STATIC_FOR_DLL" /Fo$(XML_INTDIR_A_DLL)\ /Zi /Fd$(BINDIR)\$(XML_PDB) /c $<
+ 
+ # Compiles libxml source. Uses the implicit rule for commands.
+ $(XML_OBJS) : $(XML_INTDIR) 
