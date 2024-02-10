@@ -650,7 +650,7 @@ void	<a href="#xmlXPatherror">xmlXPatherror</a>			(<a href="libxml2-xpath.html#x
 </tr>
 <tr>
 <td><span class="term"><i><tt>Returns</tt></i>:</span></td>
-<td>the number of items on the value stack, or -1 in case of error.</td>
+<td>the number of items on the value stack, or -1 in case of error. The object is destroyed in case of error.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1227,7 +1227,7 @@ void	<a href="#xmlXPatherror">xmlXPatherror</a>			(<a href="libxml2-xpath.html#x
 <a name="xmlXPathLangFunction"></a>xmlXPathLangFunction ()</h3>
 <pre class="programlisting">void	xmlXPathLangFunction		(<a href="libxml2-xpath.html#xmlXPathParserContextPtr">xmlXPathParserContextPtr</a> ctxt, <br>					 int nargs)<br>
 </pre>
-<p>Implement the lang() XPath function boolean lang(string) The lang function returns true or false depending on whether the language of the context node as specified by xml:lang attributes is the same as or is a sublanguage of the language specified by the argument string. The language of the context node is determined by the value of the xml:lang <a href="libxml2-SAX.html#attribute">attribute</a> on the context node, or, if the context node has no xml:lang attribute, by the value of the xml:lang <a href="libxml2-SAX.html#attribute">attribute</a> on the nearest ancestor of the context node that has an xml:lang attribute. If there is no such attribute, then lang</p>
+<p>Implement the lang() XPath function boolean lang(string) The lang function returns true or false depending on whether the language of the context node as specified by xml:lang attributes is the same as or is a sublanguage of the language specified by the argument string. The language of the context node is determined by the value of the xml:lang <a href="libxml2-SAX.html#attribute">attribute</a> on the context node, or, if the context node has no xml:lang attribute, by the value of the xml:lang <a href="libxml2-SAX.html#attribute">attribute</a> on the nearest ancestor of the context node that has an xml:lang <a href="libxml2-SAX.html#attribute">attribute</a>. If there is no such attribute, then lang</p>
 <div class="variablelist"><table border="0">
 <col align="left">
 <tbody>
@@ -2095,7 +2095,7 @@ void	<a href="#xmlXPatherror">xmlXPatherror</a>			(<a href="libxml2-xpath.html#x
 </tr>
 <tr>
 <td><span class="term"><i><tt>Returns</tt></i>:</span></td>
-<td>@val1 once extended or NULL in case of error.</td>
+<td>@val1 once extended or NULL in case of error. Frees @val1 in case of error.</td>
 </tr>
 </tbody>
 </table></div>
@@ -3164,7 +3164,7 @@ void	<a href="#xmlXPatherror">xmlXPatherror</a>			(<a href="libxml2-xpath.html#x
 </tr>
 <tr>
 <td><span class="term"><i><tt>Returns</tt></i>:</span></td>
-<td>the newly created object.</td>
+<td>the newly created object. In case of error the node set is destroyed and NULL is returned.</td>
 </tr>
 </tbody>
 </table></div>
@@ -3185,7 +3185,7 @@ void	<a href="#xmlXPatherror">xmlXPatherror</a>			(<a href="libxml2-xpath.html#x
 </tr>
 <tr>
 <td><span class="term"><i><tt>Returns</tt></i>:</span></td>
-<td>the newly created object.</td>
+<td>the newly created object. Frees @val in case of error.</td>
 </tr>
 </tbody>
 </table></div>

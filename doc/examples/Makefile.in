@@ -95,6 +95,10 @@ check_PROGRAMS = io1$(EXEEXT) io2$(EXEEXT) parse1$(EXEEXT) \
 subdir = doc/examples
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ac_try_compile2.m4 \
+	$(top_srcdir)/m4/ax_append_flag.m4 \
+	$(top_srcdir)/m4/ax_append_link_flags.m4 \
+	$(top_srcdir)/m4/ax_check_link_flag.m4 \
+	$(top_srcdir)/m4/ax_require_defined.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
 	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/configure.ac
@@ -247,26 +251,22 @@ am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
+AM_CFLAGS = @AM_CFLAGS@
 AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
+AM_LDFLAGS = @AM_LDFLAGS@
 AR = @AR@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
 BASE_THREAD_LIBS = @BASE_THREAD_LIBS@
-C14N_OBJ = @C14N_OBJ@
-CATALOG_OBJ = @CATALOG_OBJ@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
-CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CSCOPE = @CSCOPE@
 CTAGS = @CTAGS@
 CYGPATH_W = @CYGPATH_W@
-CYGWIN_EXTRA_LDFLAGS = @CYGWIN_EXTRA_LDFLAGS@
-CYGWIN_EXTRA_PYTHON_LIBADD = @CYGWIN_EXTRA_PYTHON_LIBADD@
-DEBUG_OBJ = @DEBUG_OBJ@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
 DLLTOOL = @DLLTOOL@
@@ -278,13 +278,10 @@ ECHO_T = @ECHO_T@
 EGREP = @EGREP@
 ETAGS = @ETAGS@
 EXEEXT = @EXEEXT@
-EXTRA_CFLAGS = @EXTRA_CFLAGS@
 FGREP = @FGREP@
-FTP_OBJ = @FTP_OBJ@
+FILECMD = @FILECMD@
 GREP = @GREP@
-HTML_OBJ = @HTML_OBJ@
-HTTP_OBJ = @HTTP_OBJ@
-ICONV_LIBS = @ICONV_LIBS@
+ICONV_CFLAGS = @ICONV_CFLAGS@
 ICU_CFLAGS = @ICU_CFLAGS@
 ICU_DEFS = @ICU_DEFS@
 ICU_LIBS = @ICU_LIBS@
@@ -318,7 +315,6 @@ MANIFEST_TOOL = @MANIFEST_TOOL@
 MKDIR_P = @MKDIR_P@
 MODULE_EXTENSION = @MODULE_EXTENSION@
 MODULE_PLATFORM_LIBS = @MODULE_PLATFORM_LIBS@
-MV = @MV@
 NM = @NM@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
@@ -340,12 +336,13 @@ PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
 PYTHON = @PYTHON@
 PYTHON_CFLAGS = @PYTHON_CFLAGS@
 PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
+PYTHON_LDFLAGS = @PYTHON_LDFLAGS@
 PYTHON_LIBS = @PYTHON_LIBS@
 PYTHON_PLATFORM = @PYTHON_PLATFORM@
 PYTHON_PREFIX = @PYTHON_PREFIX@
-PYTHON_TESTS = @PYTHON_TESTS@
 PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
+RDL_CFLAGS = @RDL_CFLAGS@
 RDL_LIBS = @RDL_LIBS@
 RELDATE = @RELDATE@
 SED = @SED@
@@ -353,20 +350,11 @@ SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
 TAR = @TAR@
-TEST_CATALOG = @TEST_CATALOG@
-TEST_DEBUG = @TEST_DEBUG@
-TEST_REGEXPS = @TEST_REGEXPS@
-TEST_SCHEMATRON = @TEST_SCHEMATRON@
-TEST_VALID = @TEST_VALID@
-TEST_VTIME = @TEST_VTIME@
 THREAD_CFLAGS = @THREAD_CFLAGS@
 THREAD_LIBS = @THREAD_LIBS@
 VERSION = @VERSION@
 VERSION_SCRIPT_FLAGS = @VERSION_SCRIPT_FLAGS@
 WGET = @WGET@
-WIN32_EXTRA_LDFLAGS = @WIN32_EXTRA_LDFLAGS@
-WIN32_EXTRA_LIBADD = @WIN32_EXTRA_LIBADD@
-WIN32_EXTRA_PYTHON_LIBADD = @WIN32_EXTRA_PYTHON_LIBADD@
 WITH_C14N = @WITH_C14N@
 WITH_CATALOG = @WITH_CATALOG@
 WITH_DEBUG = @WITH_DEBUG@
@@ -385,7 +373,6 @@ WITH_PATTERN = @WITH_PATTERN@
 WITH_PUSH = @WITH_PUSH@
 WITH_READER = @WITH_READER@
 WITH_REGEXPS = @WITH_REGEXPS@
-WITH_RUN_DEBUG = @WITH_RUN_DEBUG@
 WITH_SAX1 = @WITH_SAX1@
 WITH_SCHEMAS = @WITH_SCHEMAS@
 WITH_SCHEMATRON = @WITH_SCHEMATRON@
@@ -400,16 +387,13 @@ WITH_XPATH = @WITH_XPATH@
 WITH_XPTR = @WITH_XPTR@
 WITH_XPTR_LOCS = @WITH_XPTR_LOCS@
 WITH_ZLIB = @WITH_ZLIB@
-XINCLUDE_OBJ = @XINCLUDE_OBJ@
-XMLLINT = @XMLLINT@
 XML_CFLAGS = @XML_CFLAGS@
 XML_INCLUDEDIR = @XML_INCLUDEDIR@
 XML_LIBDIR = @XML_LIBDIR@
 XML_LIBS = @XML_LIBS@
 XML_LIBTOOLLIBS = @XML_LIBTOOLLIBS@
+XML_PRIVATE_CFLAGS = @XML_PRIVATE_CFLAGS@
 XML_PRIVATE_LIBS = @XML_PRIVATE_LIBS@
-XPATH_OBJ = @XPATH_OBJ@
-XPTR_OBJ = @XPTR_OBJ@
 XSLTPROC = @XSLTPROC@
 Z_CFLAGS = @Z_CFLAGS@
 Z_LIBS = @Z_LIBS@
@@ -914,7 +898,6 @@ uninstall-local:
 
 clean-local:
 	test -f Makefile.am || rm -f test?.xml
-	rm -f .memdump
 
 valgrind: 
 	$(MAKE) CHECKER='valgrind' check
@@ -922,37 +905,20 @@ valgrind:
 check-local:
 	@test -f Makefile.am || test -f test1.xml || $(LN_S) $(srcdir)/test?.xml .
 	@(echo '## examples regression tests')
-	@(echo > .memdump)
 	@$(CHECKER) ./io1 >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./io2 >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./parse1 test1.xml
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./parse2 test2.xml
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./parse3
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./parse4 test3.xml
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./reader1 test2.xml >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./reader2 test2.xml >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./reader3 >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./reader4 test1.xml test2.xml test3.xml >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./testWriter
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./tree1 test2.xml >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./tree2 >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
-	@$(CHECKER) ./xpath1 test3.xml '//child2' >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@$(CHECKER) ./xpath2 test3.xml '//discarded' discarded >/dev/null
-	@grep "MORY ALLO" .memdump | grep -v "MEMORY ALLOCATED : 0" ; exit 0
 	@rm -f *.tmp
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
