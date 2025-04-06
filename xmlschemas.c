@@ -23632,7 +23632,7 @@ xmlSchemaIDCFillNodeTables(xmlSchemaValidCtxtPtr vctxt,
 			j++;
 		    } while (j < nbDupls);
 		}
-		if (nbNodeTable) {
+		if (bind->nbNodes) {
 		    j = 0;
 		    do {
 			if (nbFields == 1) {
@@ -23683,7 +23683,7 @@ xmlSchemaIDCFillNodeTables(xmlSchemaValidCtxtPtr vctxt,
 
 next_node_table_entry:
 			j++;
-		    } while (j < nbNodeTable);
+		    } while (j < bind->nbNodes);
 		}
 		/*
 		* If everything is fine, then add the IDC target-node to
