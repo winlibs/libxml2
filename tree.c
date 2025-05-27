@@ -48,6 +48,10 @@
 #include "buf.h"
 #include "save.h"
 
+#ifndef SIZE_MAX
+  #define SIZE_MAX ((size_t)-1)
+#endif
+
 int __xmlRegisterCallbacks = 0;
 
 /************************************************************************
