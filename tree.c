@@ -21,6 +21,7 @@
 #include <string.h> /* for memset() only ! */
 #include <stddef.h>
 #include <limits.h>
+#include <stdint.h>
 #ifdef HAVE_CTYPE_H
 #include <ctype.h>
 #endif
