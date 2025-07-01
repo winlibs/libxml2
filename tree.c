@@ -23,6 +23,7 @@
 #include <limits.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #ifdef LIBXML_ZLIB_ENABLED
 #include <zlib.h>
