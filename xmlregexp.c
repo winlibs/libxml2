@@ -48,6 +48,8 @@
 /* #define DEBUG_PUSH */
 /* #define DEBUG_COMPACTION */
 
+#define XML_MAX_ITEMS 1000000000 /* 1 billion */
+
 #define MAX_PUSH 10000000
 
 #ifdef ERROR
