@@ -33,6 +33,7 @@
 
 #include "private/error.h"
 #include "private/regexp.h"
+#include "private/memory.h"
 
 #ifndef SIZE_MAX
 #define SIZE_MAX ((size_t) -1)
