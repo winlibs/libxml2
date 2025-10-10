@@ -137,6 +137,10 @@ XMLPUBFUN int
 		    xmlRelaxParserSetFlag	(xmlRelaxNGParserCtxtPtr ctxt,
 						 int flag);
 
+XMLPUBFUN int
+		    xmlRelaxParserSetIncLImit	(xmlRelaxNGParserCtxt *ctxt,
+						 int limit);
+
 XMLPUBFUN void
 		    xmlRelaxNGFreeParserCtxt	(xmlRelaxNGParserCtxtPtr ctxt);
 XMLPUBFUN void
