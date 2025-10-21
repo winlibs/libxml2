@@ -1,0 +1,507 @@
+libxml.lo: libxml.c /usr/include/stdc-predef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/timesize.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /usr/include/python3.13/Python.h /usr/include/python3.13/patchlevel.h \
+ /usr/include/python3.13/pyconfig.h \
+ /usr/include/x86_64-linux-gnu/python3.13/pyconfig.h \
+ /usr/include/python3.13/pymacconfig.h /usr/include/assert.h \
+ /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endianness.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/lib/linux/uapi/x86/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/ctype.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/python3.13/pyport.h /usr/include/python3.13/exports.h \
+ /usr/include/python3.13/pymacro.h /usr/include/python3.13/pymath.h \
+ /usr/include/python3.13/pymem.h /usr/include/python3.13/cpython/pymem.h \
+ /usr/include/python3.13/pytypedefs.h /usr/include/python3.13/pybuffer.h \
+ /usr/include/python3.13/pystats.h /usr/include/python3.13/pyatomic.h \
+ /usr/include/python3.13/cpython/pyatomic.h \
+ /usr/include/python3.13/cpython/pyatomic_gcc.h \
+ /usr/include/python3.13/lock.h /usr/include/python3.13/cpython/lock.h \
+ /usr/include/python3.13/object.h \
+ /usr/include/python3.13/cpython/object.h \
+ /usr/include/python3.13/objimpl.h \
+ /usr/include/python3.13/cpython/objimpl.h \
+ /usr/include/python3.13/typeslots.h /usr/include/python3.13/pyhash.h \
+ /usr/include/python3.13/cpython/pyhash.h \
+ /usr/include/python3.13/cpython/pydebug.h \
+ /usr/include/python3.13/bytearrayobject.h \
+ /usr/include/python3.13/cpython/bytearrayobject.h \
+ /usr/include/python3.13/bytesobject.h \
+ /usr/include/python3.13/cpython/bytesobject.h \
+ /usr/include/python3.13/unicodeobject.h \
+ /usr/include/python3.13/cpython/unicodeobject.h \
+ /usr/include/python3.13/pyerrors.h \
+ /usr/include/python3.13/cpython/pyerrors.h \
+ /usr/include/python3.13/longobject.h \
+ /usr/include/python3.13/cpython/longobject.h \
+ /usr/include/python3.13/cpython/longintrepr.h \
+ /usr/include/python3.13/boolobject.h \
+ /usr/include/python3.13/floatobject.h \
+ /usr/include/python3.13/cpython/floatobject.h \
+ /usr/include/python3.13/complexobject.h \
+ /usr/include/python3.13/cpython/complexobject.h \
+ /usr/include/python3.13/rangeobject.h \
+ /usr/include/python3.13/memoryobject.h \
+ /usr/include/python3.13/cpython/memoryobject.h \
+ /usr/include/python3.13/tupleobject.h \
+ /usr/include/python3.13/cpython/tupleobject.h \
+ /usr/include/python3.13/listobject.h \
+ /usr/include/python3.13/cpython/listobject.h \
+ /usr/include/python3.13/dictobject.h \
+ /usr/include/python3.13/cpython/dictobject.h \
+ /usr/include/python3.13/cpython/odictobject.h \
+ /usr/include/python3.13/enumobject.h /usr/include/python3.13/setobject.h \
+ /usr/include/python3.13/cpython/setobject.h \
+ /usr/include/python3.13/methodobject.h \
+ /usr/include/python3.13/cpython/methodobject.h \
+ /usr/include/python3.13/moduleobject.h \
+ /usr/include/python3.13/monitoring.h \
+ /usr/include/python3.13/cpython/monitoring.h \
+ /usr/include/python3.13/cpython/funcobject.h \
+ /usr/include/python3.13/cpython/classobject.h \
+ /usr/include/python3.13/fileobject.h \
+ /usr/include/python3.13/cpython/fileobject.h \
+ /usr/include/python3.13/pycapsule.h \
+ /usr/include/python3.13/cpython/code.h /usr/include/python3.13/pyframe.h \
+ /usr/include/python3.13/cpython/pyframe.h \
+ /usr/include/python3.13/traceback.h \
+ /usr/include/python3.13/cpython/traceback.h \
+ /usr/include/python3.13/sliceobject.h \
+ /usr/include/python3.13/cpython/cellobject.h \
+ /usr/include/python3.13/iterobject.h \
+ /usr/include/python3.13/cpython/initconfig.h \
+ /usr/include/python3.13/pystate.h \
+ /usr/include/python3.13/cpython/pystate.h \
+ /usr/include/python3.13/cpython/genobject.h \
+ /usr/include/python3.13/descrobject.h \
+ /usr/include/python3.13/cpython/descrobject.h \
+ /usr/include/python3.13/genericaliasobject.h \
+ /usr/include/python3.13/warnings.h \
+ /usr/include/python3.13/cpython/warnings.h \
+ /usr/include/python3.13/weakrefobject.h \
+ /usr/include/python3.13/cpython/weakrefobject.h \
+ /usr/include/python3.13/structseq.h \
+ /usr/include/python3.13/cpython/picklebufobject.h \
+ /usr/include/python3.13/cpython/pytime.h \
+ /usr/include/python3.13/codecs.h /usr/include/python3.13/pythread.h \
+ /usr/include/python3.13/cpython/pythread.h /usr/include/pthread.h \
+ /usr/include/sched.h /usr/include/x86_64-linux-gnu/bits/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+ /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+ /usr/include/python3.13/cpython/context.h \
+ /usr/include/python3.13/modsupport.h \
+ /usr/include/python3.13/cpython/modsupport.h \
+ /usr/include/python3.13/compile.h \
+ /usr/include/python3.13/cpython/compile.h \
+ /usr/include/python3.13/pythonrun.h \
+ /usr/include/python3.13/cpython/pythonrun.h \
+ /usr/include/python3.13/pylifecycle.h \
+ /usr/include/python3.13/cpython/pylifecycle.h \
+ /usr/include/python3.13/ceval.h /usr/include/python3.13/cpython/ceval.h \
+ /usr/include/python3.13/sysmodule.h \
+ /usr/include/python3.13/cpython/sysmodule.h \
+ /usr/include/python3.13/osmodule.h /usr/include/python3.13/intrcheck.h \
+ /usr/include/python3.13/import.h \
+ /usr/include/python3.13/cpython/import.h \
+ /usr/include/python3.13/abstract.h \
+ /usr/include/python3.13/cpython/abstract.h \
+ /usr/include/python3.13/bltinmodule.h \
+ /usr/include/python3.13/critical_section.h \
+ /usr/include/python3.13/cpython/critical_section.h \
+ /usr/include/python3.13/cpython/pyctype.h \
+ /usr/include/python3.13/pystrtod.h /usr/include/python3.13/pystrcmp.h \
+ /usr/include/python3.13/fileutils.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/python3.13/cpython/fileutils.h \
+ /usr/include/python3.13/cpython/pyfpe.h \
+ /usr/include/python3.13/cpython/tracemalloc.h \
+ /usr/include/python3.13/fileobject.h ../include/libxml/xmlmemory.h \
+ ../include/libxml/xmlversion.h ../include/libxml/xmlexports.h \
+ ../include/libxml/threads.h ../include/libxml/globals.h \
+ ../include/libxml/parser.h ../include/libxml/tree.h \
+ ../include/libxml/xmlstring.h ../include/libxml/xmlregexp.h \
+ ../include/libxml/dict.h ../include/libxml/hash.h \
+ ../include/libxml/valid.h ../include/libxml/xmlerror.h \
+ ../include/libxml/list.h ../include/libxml/xmlautomata.h \
+ ../include/libxml/entities.h ../include/libxml/encoding.h \
+ /usr/include/iconv.h ../include/libxml/xmlIO.h ../include/libxml/SAX2.h \
+ ../include/libxml/xpath.h ../include/libxml/xpathInternals.h \
+ ../include/libxml/c14n.h ../include/libxml/xmlreader.h \
+ ../include/libxml/relaxng.h ../include/libxml/xmlschemas.h \
+ ../include/libxml/xmlsave.h libxml_wrap.h \
+ ../include/libxml/parserInternals.h ../include/libxml/HTMLparser.h \
+ ../include/libxml/chvalid.h ../include/libxml/catalog.h \
+ ../include/libxml/nanoftp.h ../include/libxml/nanohttp.h \
+ ../include/libxml/uri.h ../include/libxml/debugXML.h \
+ ../include/libxml/HTMLtree.h ../include/libxml/xinclude.h \
+ ../include/libxml/xpointer.h ../include/libxml/xmlunicode.h libxml2-py.h \
+ libxml2-export.c
+/usr/include/stdc-predef.h:
+/usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h:
+/usr/include/stdint.h:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+/usr/include/features.h:
+/usr/include/features-time64.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+/usr/include/python3.13/Python.h:
+/usr/include/python3.13/patchlevel.h:
+/usr/include/python3.13/pyconfig.h:
+/usr/include/x86_64-linux-gnu/python3.13/pyconfig.h:
+/usr/include/python3.13/pymacconfig.h:
+/usr/include/assert.h:
+/usr/include/inttypes.h:
+/usr/lib/gcc/x86_64-linux-gnu/14/include/limits.h:
+/usr/lib/gcc/x86_64-linux-gnu/14/include/syslimits.h:
+/usr/include/limits.h:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+/usr/include/linux/limits.h:
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+/usr/include/math.h:
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+/usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h:
+/usr/include/wchar.h:
+/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+/usr/include/x86_64-linux-gnu/sys/types.h:
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+/usr/include/endian.h:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
+/usr/include/x86_64-linux-gnu/bits/select.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+/usr/include/errno.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/include/linux/errno.h:
+/usr/lib/linux/uapi/x86/asm/errno.h:
+/usr/include/asm-generic/errno.h:
+/usr/include/asm-generic/errno-base.h:
+/usr/include/stdio.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+/usr/include/stdlib.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+/usr/include/alloca.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+/usr/include/string.h:
+/usr/include/strings.h:
+/usr/include/ctype.h:
+/usr/include/unistd.h:
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+/usr/include/python3.13/pyport.h:
+/usr/include/python3.13/exports.h:
+/usr/include/python3.13/pymacro.h:
+/usr/include/python3.13/pymath.h:
+/usr/include/python3.13/pymem.h:
+/usr/include/python3.13/cpython/pymem.h:
+/usr/include/python3.13/pytypedefs.h:
+/usr/include/python3.13/pybuffer.h:
+/usr/include/python3.13/pystats.h:
+/usr/include/python3.13/pyatomic.h:
+/usr/include/python3.13/cpython/pyatomic.h:
+/usr/include/python3.13/cpython/pyatomic_gcc.h:
+/usr/include/python3.13/lock.h:
+/usr/include/python3.13/cpython/lock.h:
+/usr/include/python3.13/object.h:
+/usr/include/python3.13/cpython/object.h:
+/usr/include/python3.13/objimpl.h:
+/usr/include/python3.13/cpython/objimpl.h:
+/usr/include/python3.13/typeslots.h:
+/usr/include/python3.13/pyhash.h:
+/usr/include/python3.13/cpython/pyhash.h:
+/usr/include/python3.13/cpython/pydebug.h:
+/usr/include/python3.13/bytearrayobject.h:
+/usr/include/python3.13/cpython/bytearrayobject.h:
+/usr/include/python3.13/bytesobject.h:
+/usr/include/python3.13/cpython/bytesobject.h:
+/usr/include/python3.13/unicodeobject.h:
+/usr/include/python3.13/cpython/unicodeobject.h:
+/usr/include/python3.13/pyerrors.h:
+/usr/include/python3.13/cpython/pyerrors.h:
+/usr/include/python3.13/longobject.h:
+/usr/include/python3.13/cpython/longobject.h:
+/usr/include/python3.13/cpython/longintrepr.h:
+/usr/include/python3.13/boolobject.h:
+/usr/include/python3.13/floatobject.h:
+/usr/include/python3.13/cpython/floatobject.h:
+/usr/include/python3.13/complexobject.h:
+/usr/include/python3.13/cpython/complexobject.h:
+/usr/include/python3.13/rangeobject.h:
+/usr/include/python3.13/memoryobject.h:
+/usr/include/python3.13/cpython/memoryobject.h:
+/usr/include/python3.13/tupleobject.h:
+/usr/include/python3.13/cpython/tupleobject.h:
+/usr/include/python3.13/listobject.h:
+/usr/include/python3.13/cpython/listobject.h:
+/usr/include/python3.13/dictobject.h:
+/usr/include/python3.13/cpython/dictobject.h:
+/usr/include/python3.13/cpython/odictobject.h:
+/usr/include/python3.13/enumobject.h:
+/usr/include/python3.13/setobject.h:
+/usr/include/python3.13/cpython/setobject.h:
+/usr/include/python3.13/methodobject.h:
+/usr/include/python3.13/cpython/methodobject.h:
+/usr/include/python3.13/moduleobject.h:
+/usr/include/python3.13/monitoring.h:
+/usr/include/python3.13/cpython/monitoring.h:
+/usr/include/python3.13/cpython/funcobject.h:
+/usr/include/python3.13/cpython/classobject.h:
+/usr/include/python3.13/fileobject.h:
+/usr/include/python3.13/cpython/fileobject.h:
+/usr/include/python3.13/pycapsule.h:
+/usr/include/python3.13/cpython/code.h:
+/usr/include/python3.13/pyframe.h:
+/usr/include/python3.13/cpython/pyframe.h:
+/usr/include/python3.13/traceback.h:
+/usr/include/python3.13/cpython/traceback.h:
+/usr/include/python3.13/sliceobject.h:
+/usr/include/python3.13/cpython/cellobject.h:
+/usr/include/python3.13/iterobject.h:
+/usr/include/python3.13/cpython/initconfig.h:
+/usr/include/python3.13/pystate.h:
+/usr/include/python3.13/cpython/pystate.h:
+/usr/include/python3.13/cpython/genobject.h:
+/usr/include/python3.13/descrobject.h:
+/usr/include/python3.13/cpython/descrobject.h:
+/usr/include/python3.13/genericaliasobject.h:
+/usr/include/python3.13/warnings.h:
+/usr/include/python3.13/cpython/warnings.h:
+/usr/include/python3.13/weakrefobject.h:
+/usr/include/python3.13/cpython/weakrefobject.h:
+/usr/include/python3.13/structseq.h:
+/usr/include/python3.13/cpython/picklebufobject.h:
+/usr/include/python3.13/cpython/pytime.h:
+/usr/include/python3.13/codecs.h:
+/usr/include/python3.13/pythread.h:
+/usr/include/python3.13/cpython/pythread.h:
+/usr/include/pthread.h:
+/usr/include/sched.h:
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+/usr/include/time.h:
+/usr/include/x86_64-linux-gnu/bits/time.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+/usr/include/python3.13/cpython/context.h:
+/usr/include/python3.13/modsupport.h:
+/usr/include/python3.13/cpython/modsupport.h:
+/usr/include/python3.13/compile.h:
+/usr/include/python3.13/cpython/compile.h:
+/usr/include/python3.13/pythonrun.h:
+/usr/include/python3.13/cpython/pythonrun.h:
+/usr/include/python3.13/pylifecycle.h:
+/usr/include/python3.13/cpython/pylifecycle.h:
+/usr/include/python3.13/ceval.h:
+/usr/include/python3.13/cpython/ceval.h:
+/usr/include/python3.13/sysmodule.h:
+/usr/include/python3.13/cpython/sysmodule.h:
+/usr/include/python3.13/osmodule.h:
+/usr/include/python3.13/intrcheck.h:
+/usr/include/python3.13/import.h:
+/usr/include/python3.13/cpython/import.h:
+/usr/include/python3.13/abstract.h:
+/usr/include/python3.13/cpython/abstract.h:
+/usr/include/python3.13/bltinmodule.h:
+/usr/include/python3.13/critical_section.h:
+/usr/include/python3.13/cpython/critical_section.h:
+/usr/include/python3.13/cpython/pyctype.h:
+/usr/include/python3.13/pystrtod.h:
+/usr/include/python3.13/pystrcmp.h:
+/usr/include/python3.13/fileutils.h:
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+/usr/include/python3.13/cpython/fileutils.h:
+/usr/include/python3.13/cpython/pyfpe.h:
+/usr/include/python3.13/cpython/tracemalloc.h:
+/usr/include/python3.13/fileobject.h:
+../include/libxml/xmlmemory.h:
+../include/libxml/xmlversion.h:
+../include/libxml/xmlexports.h:
+../include/libxml/threads.h:
+../include/libxml/globals.h:
+../include/libxml/parser.h:
+../include/libxml/tree.h:
+../include/libxml/xmlstring.h:
+../include/libxml/xmlregexp.h:
+../include/libxml/dict.h:
+../include/libxml/hash.h:
+../include/libxml/valid.h:
+../include/libxml/xmlerror.h:
+../include/libxml/list.h:
+../include/libxml/xmlautomata.h:
+../include/libxml/entities.h:
+../include/libxml/encoding.h:
+/usr/include/iconv.h:
+../include/libxml/xmlIO.h:
+../include/libxml/SAX2.h:
+../include/libxml/xpath.h:
+../include/libxml/xpathInternals.h:
+../include/libxml/c14n.h:
+../include/libxml/xmlreader.h:
+../include/libxml/relaxng.h:
+../include/libxml/xmlschemas.h:
+../include/libxml/xmlsave.h:
+libxml_wrap.h:
+../include/libxml/parserInternals.h:
+../include/libxml/HTMLparser.h:
+../include/libxml/chvalid.h:
+../include/libxml/catalog.h:
+../include/libxml/nanoftp.h:
+../include/libxml/nanohttp.h:
+../include/libxml/uri.h:
+../include/libxml/debugXML.h:
+../include/libxml/HTMLtree.h:
+../include/libxml/xinclude.h:
+../include/libxml/xpointer.h:
+../include/libxml/xmlunicode.h:
+libxml2-py.h:
+libxml2-export.c:

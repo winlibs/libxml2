@@ -33,7 +33,6 @@
 
 #include "private/error.h"
 #include "private/regexp.h"
-#include "private/memory.h"
 
 #ifndef SIZE_MAX
 #define SIZE_MAX ((size_t) -1)
@@ -433,17 +432,14 @@ static int xmlFAComputesDeterminism(xmlRegParserCtxtPtr ctxt);
  */
 static void*
 xmlRegCalloc2(size_t dim1, size_t dim2, size_t elemSize) {
-    size_t numElems, totalSize;
+    size_t totalSize;
     void *ret;
 
     /* Check for overflow */
     if ((dim2 == 0) || (elemSize == 0) ||
         (dim1 > SIZE_MAX / dim2 / elemSize))
         return (NULL);
-    numElems = dim1 * dim2;
-    if (numElems > XML_MAX_ITEMS)
-        return NULL;
-    totalSize = numElems * elemSize;
+    totalSize = dim1 * dim2 * elemSize;
     ret = xmlMalloc(totalSize);
     if (ret != NULL)
         memset(ret, 0, totalSize);

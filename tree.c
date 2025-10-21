@@ -17,9 +17,9 @@
 
 #define IN_LIBXML
 #include "libxml.h"
-
 #include <string.h> /* for memset() only ! */
 #include <stddef.h>
+#include <stdint.h>
 #include <limits.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -48,10 +48,6 @@
 #include "private/entities.h"
 #include "private/error.h"
 #include "private/tree.h"
-
-#ifndef SIZE_MAX
-  #define SIZE_MAX ((size_t)-1)
-#endif
 
 int __xmlRegisterCallbacks = 0;
 
