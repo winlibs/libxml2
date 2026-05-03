@@ -1,6 +1,3 @@
-exampledir = $(docdir)/python/examples
-dist_example_DATA = $(PYTESTS) $(XMLS)
-
 PYTESTS=	\
     build.py	\
     attribs.py	\
@@ -48,13 +45,16 @@ PYTESTS=	\
     validRNG.py \
     compareNodes.py \
     xpathns.py \
-    xpathleak.py
+    xpathleak.py \
+    unicode.py
 
 XMLS=		\
     tst.xml	\
     valid.xml	\
     invalid.xml	\
     test.dtd
+
+EXTRA_DIST = $(PYTESTS) $(XMLS) setup_test.py
 
 CLEANFILES = core tmp.xml *.pyc
 

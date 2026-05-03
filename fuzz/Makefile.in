@@ -87,20 +87,19 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-EXTRA_PROGRAMS = genSeed$(EXEEXT) html$(EXEEXT) regexp$(EXEEXT) \
-	schema$(EXEEXT) uri$(EXEEXT) valid$(EXEEXT) xinclude$(EXEEXT) \
-	xml$(EXEEXT) xpath$(EXEEXT)
+EXTRA_PROGRAMS = genSeed$(EXEEXT) api$(EXEEXT) html$(EXEEXT) \
+	lint$(EXEEXT) reader$(EXEEXT) regexp$(EXEEXT) schema$(EXEEXT) \
+	uri$(EXEEXT) valid$(EXEEXT) xinclude$(EXEEXT) xml$(EXEEXT) \
+	xpath$(EXEEXT)
 check_PROGRAMS = testFuzzer$(EXEEXT)
 subdir = fuzz
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ac_try_compile2.m4 \
-	$(top_srcdir)/m4/ax_append_flag.m4 \
-	$(top_srcdir)/m4/ax_append_link_flags.m4 \
-	$(top_srcdir)/m4/ax_check_link_flag.m4 \
-	$(top_srcdir)/m4/ax_require_defined.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_gcc_func_attribute.m4 \
+	$(top_srcdir)/m4/ax_recursive_eval.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
-	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/VERSION \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -108,14 +107,21 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-am_genSeed_OBJECTS = genSeed.$(OBJEXT) fuzz.$(OBJEXT)
-genSeed_OBJECTS = $(am_genSeed_OBJECTS)
-genSeed_LDADD = $(LDADD)
-genSeed_DEPENDENCIES = $(top_builddir)/libxml2.la
+am_api_OBJECTS = api.$(OBJEXT) fuzz.$(OBJEXT)
+api_OBJECTS = $(am_api_OBJECTS)
+api_LDADD = $(LDADD)
+api_DEPENDENCIES = $(top_builddir)/libxml2.la
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
+api_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(api_LDFLAGS) $(LDFLAGS) -o $@
+am_genSeed_OBJECTS = genSeed.$(OBJEXT) fuzz.$(OBJEXT)
+genSeed_OBJECTS = $(am_genSeed_OBJECTS)
+genSeed_LDADD = $(LDADD)
+genSeed_DEPENDENCIES = $(top_builddir)/libxml2.la
 am_html_OBJECTS = html.$(OBJEXT) fuzz.$(OBJEXT)
 html_OBJECTS = $(am_html_OBJECTS)
 html_LDADD = $(LDADD)
@@ -123,6 +129,22 @@ html_DEPENDENCIES = $(top_builddir)/libxml2.la
 html_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(html_LDFLAGS) $(LDFLAGS) -o $@
+am__dirstamp = $(am__leading_dot)dirstamp
+am_lint_OBJECTS = lint.$(OBJEXT) fuzz.$(OBJEXT) ../xmllint.$(OBJEXT) \
+	../shell.$(OBJEXT)
+lint_OBJECTS = $(am_lint_OBJECTS)
+lint_LDADD = $(LDADD)
+lint_DEPENDENCIES = $(top_builddir)/libxml2.la
+lint_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(lint_LDFLAGS) $(LDFLAGS) -o $@
+am_reader_OBJECTS = reader.$(OBJEXT) fuzz.$(OBJEXT)
+reader_OBJECTS = $(am_reader_OBJECTS)
+reader_LDADD = $(LDADD)
+reader_DEPENDENCIES = $(top_builddir)/libxml2.la
+reader_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(reader_LDFLAGS) $(LDFLAGS) -o $@
 am_regexp_OBJECTS = regexp.$(OBJEXT) fuzz.$(OBJEXT)
 regexp_OBJECTS = $(am_regexp_OBJECTS)
 regexp_LDADD = $(LDADD)
@@ -191,12 +213,13 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = ./$(DEPDIR)/fuzz.Po ./$(DEPDIR)/genSeed.Po \
-	./$(DEPDIR)/html.Po ./$(DEPDIR)/regexp.Po \
-	./$(DEPDIR)/schema.Po ./$(DEPDIR)/testFuzzer.Po \
-	./$(DEPDIR)/uri.Po ./$(DEPDIR)/valid.Po \
-	./$(DEPDIR)/xinclude.Po ./$(DEPDIR)/xml.Po \
-	./$(DEPDIR)/xpath.Po
+am__depfiles_remade = ../$(DEPDIR)/shell.Po ../$(DEPDIR)/xmllint.Po \
+	./$(DEPDIR)/api.Po ./$(DEPDIR)/fuzz.Po ./$(DEPDIR)/genSeed.Po \
+	./$(DEPDIR)/html.Po ./$(DEPDIR)/lint.Po ./$(DEPDIR)/reader.Po \
+	./$(DEPDIR)/regexp.Po ./$(DEPDIR)/schema.Po \
+	./$(DEPDIR)/testFuzzer.Po ./$(DEPDIR)/uri.Po \
+	./$(DEPDIR)/valid.Po ./$(DEPDIR)/xinclude.Po \
+	./$(DEPDIR)/xml.Po ./$(DEPDIR)/xpath.Po
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -216,11 +239,13 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(genSeed_SOURCES) $(html_SOURCES) $(regexp_SOURCES) \
+SOURCES = $(api_SOURCES) $(genSeed_SOURCES) $(html_SOURCES) \
+	$(lint_SOURCES) $(reader_SOURCES) $(regexp_SOURCES) \
 	$(schema_SOURCES) $(testFuzzer_SOURCES) $(uri_SOURCES) \
 	$(valid_SOURCES) $(xinclude_SOURCES) $(xml_SOURCES) \
 	$(xpath_SOURCES)
-DIST_SOURCES = $(genSeed_SOURCES) $(html_SOURCES) $(regexp_SOURCES) \
+DIST_SOURCES = $(api_SOURCES) $(genSeed_SOURCES) $(html_SOURCES) \
+	$(lint_SOURCES) $(reader_SOURCES) $(regexp_SOURCES) \
 	$(schema_SOURCES) $(testFuzzer_SOURCES) $(uri_SOURCES) \
 	$(valid_SOURCES) $(xinclude_SOURCES) $(xml_SOURCES) \
 	$(xpath_SOURCES)
@@ -246,7 +271,8 @@ am__define_uniq_tagged_files = \
   unique=`for i in $$list; do \
     if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
   done | $(am__uniquify_input)`
-am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp README
+am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp \
+	README.md
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
@@ -258,7 +284,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BASE_THREAD_LIBS = @BASE_THREAD_LIBS@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -269,6 +294,7 @@ CYGPATH_W = @CYGPATH_W@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
 DLLTOOL = @DLLTOOL@
+DOXYGEN = @DOXYGEN@
 DSYMUTIL = @DSYMUTIL@
 DUMPBIN = @DUMPBIN@
 ECHO_C = @ECHO_C@
@@ -280,6 +306,8 @@ EXEEXT = @EXEEXT@
 FGREP = @FGREP@
 FILECMD = @FILECMD@
 GREP = @GREP@
+HISTORY_CFLAGS = @HISTORY_CFLAGS@
+HISTORY_LIBS = @HISTORY_LIBS@
 ICONV_CFLAGS = @ICONV_CFLAGS@
 ICU_CFLAGS = @ICU_CFLAGS@
 ICU_DEFS = @ICU_DEFS@
@@ -306,14 +334,11 @@ LIPO = @LIPO@
 LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 LT_SYS_LIBRARY_PATH = @LT_SYS_LIBRARY_PATH@
-LZMA_CFLAGS = @LZMA_CFLAGS@
-LZMA_LIBS = @LZMA_LIBS@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
 MANIFEST_TOOL = @MANIFEST_TOOL@
 MKDIR_P = @MKDIR_P@
 MODULE_EXTENSION = @MODULE_EXTENSION@
-MODULE_PLATFORM_LIBS = @MODULE_PLATFORM_LIBS@
 NM = @NM@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
@@ -328,7 +353,6 @@ PACKAGE_TARNAME = @PACKAGE_TARNAME@
 PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PERL = @PERL@
 PKG_CONFIG = @PKG_CONFIG@
 PKG_CONFIG_LIBDIR = @PKG_CONFIG_LIBDIR@
 PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
@@ -343,56 +367,45 @@ PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 RDL_CFLAGS = @RDL_CFLAGS@
 RDL_LIBS = @RDL_LIBS@
-RELDATE = @RELDATE@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-TAR = @TAR@
-THREAD_CFLAGS = @THREAD_CFLAGS@
 THREAD_LIBS = @THREAD_LIBS@
 VERSION = @VERSION@
-VERSION_SCRIPT_FLAGS = @VERSION_SCRIPT_FLAGS@
-WGET = @WGET@
 WITH_C14N = @WITH_C14N@
 WITH_CATALOG = @WITH_CATALOG@
 WITH_DEBUG = @WITH_DEBUG@
-WITH_FTP = @WITH_FTP@
 WITH_HTML = @WITH_HTML@
 WITH_HTTP = @WITH_HTTP@
 WITH_ICONV = @WITH_ICONV@
 WITH_ICU = @WITH_ICU@
 WITH_ISO8859X = @WITH_ISO8859X@
-WITH_LEGACY = @WITH_LEGACY@
-WITH_LZMA = @WITH_LZMA@
-WITH_MEM_DEBUG = @WITH_MEM_DEBUG@
 WITH_MODULES = @WITH_MODULES@
 WITH_OUTPUT = @WITH_OUTPUT@
 WITH_PATTERN = @WITH_PATTERN@
 WITH_PUSH = @WITH_PUSH@
 WITH_READER = @WITH_READER@
 WITH_REGEXPS = @WITH_REGEXPS@
+WITH_RELAXNG = @WITH_RELAXNG@
 WITH_SAX1 = @WITH_SAX1@
 WITH_SCHEMAS = @WITH_SCHEMAS@
 WITH_SCHEMATRON = @WITH_SCHEMATRON@
 WITH_THREADS = @WITH_THREADS@
 WITH_THREAD_ALLOC = @WITH_THREAD_ALLOC@
-WITH_TREE = @WITH_TREE@
-WITH_TRIO = @WITH_TRIO@
 WITH_VALID = @WITH_VALID@
 WITH_WRITER = @WITH_WRITER@
 WITH_XINCLUDE = @WITH_XINCLUDE@
 WITH_XPATH = @WITH_XPATH@
 WITH_XPTR = @WITH_XPTR@
-WITH_XPTR_LOCS = @WITH_XPTR_LOCS@
 WITH_ZLIB = @WITH_ZLIB@
 XML_CFLAGS = @XML_CFLAGS@
 XML_INCLUDEDIR = @XML_INCLUDEDIR@
 XML_LIBDIR = @XML_LIBDIR@
 XML_LIBS = @XML_LIBS@
-XML_LIBTOOLLIBS = @XML_LIBTOOLLIBS@
 XML_PRIVATE_CFLAGS = @XML_PRIVATE_CFLAGS@
 XML_PRIVATE_LIBS = @XML_PRIVATE_LIBS@
+XML_STATIC_CFLAGS = @XML_STATIC_CFLAGS@
 XSLTPROC = @XSLTPROC@
 Z_CFLAGS = @Z_CFLAGS@
 Z_LIBS = @Z_LIBS@
@@ -473,6 +486,8 @@ XML_SEED_CORPUS_SRC = \
     '$(top_srcdir)/test/valid/*.xml' \
     '$(top_srcdir)/test/VC/*' \
     '$(top_srcdir)/test/VCM/*' \
+    '$(top_srcdir)/test/XInclude/docs/*' \
+    '$(top_srcdir)/test/XInclude/without-reader/*' \
     '$(top_srcdir)/test/xmlid/*'
 
 testFuzzer_SOURCES = testFuzzer.c fuzz.c
@@ -487,6 +502,14 @@ xinclude_SOURCES = xinclude.c fuzz.c
 xinclude_LDFLAGS = $(AM_LDFLAGS) -fsanitize=fuzzer
 html_SOURCES = html.c fuzz.c
 html_LDFLAGS = $(AM_LDFLAGS) -fsanitize=fuzzer
+reader_SOURCES = reader.c fuzz.c
+reader_LDFLAGS = $(AM_LDFLAGS) -fsanitize=fuzzer
+lint_SOURCES = lint.c fuzz.c ../xmllint.c ../shell.c
+lint_LDFLAGS = -fsanitize=fuzzer
+
+# API fuzzer
+api_SOURCES = api.c fuzz.c
+api_LDFLAGS = -fsanitize=fuzzer
 regexp_SOURCES = regexp.c fuzz.c
 regexp_LDFLAGS = $(AM_LDFLAGS) -fsanitize=fuzzer
 uri_SOURCES = uri.c fuzz.c
@@ -538,6 +561,10 @@ clean-checkPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
+api$(EXEEXT): $(api_OBJECTS) $(api_DEPENDENCIES) $(EXTRA_api_DEPENDENCIES) 
+	@rm -f api$(EXEEXT)
+	$(AM_V_CCLD)$(api_LINK) $(api_OBJECTS) $(api_LDADD) $(LIBS)
+
 genSeed$(EXEEXT): $(genSeed_OBJECTS) $(genSeed_DEPENDENCIES) $(EXTRA_genSeed_DEPENDENCIES) 
 	@rm -f genSeed$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(genSeed_OBJECTS) $(genSeed_LDADD) $(LIBS)
@@ -545,6 +572,22 @@ genSeed$(EXEEXT): $(genSeed_OBJECTS) $(genSeed_DEPENDENCIES) $(EXTRA_genSeed_DEP
 html$(EXEEXT): $(html_OBJECTS) $(html_DEPENDENCIES) $(EXTRA_html_DEPENDENCIES) 
 	@rm -f html$(EXEEXT)
 	$(AM_V_CCLD)$(html_LINK) $(html_OBJECTS) $(html_LDADD) $(LIBS)
+../$(am__dirstamp):
+	@$(MKDIR_P) ..
+	@: > ../$(am__dirstamp)
+../$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) ../$(DEPDIR)
+	@: > ../$(DEPDIR)/$(am__dirstamp)
+../xmllint.$(OBJEXT): ../$(am__dirstamp) ../$(DEPDIR)/$(am__dirstamp)
+../shell.$(OBJEXT): ../$(am__dirstamp) ../$(DEPDIR)/$(am__dirstamp)
+
+lint$(EXEEXT): $(lint_OBJECTS) $(lint_DEPENDENCIES) $(EXTRA_lint_DEPENDENCIES) 
+	@rm -f lint$(EXEEXT)
+	$(AM_V_CCLD)$(lint_LINK) $(lint_OBJECTS) $(lint_LDADD) $(LIBS)
+
+reader$(EXEEXT): $(reader_OBJECTS) $(reader_DEPENDENCIES) $(EXTRA_reader_DEPENDENCIES) 
+	@rm -f reader$(EXEEXT)
+	$(AM_V_CCLD)$(reader_LINK) $(reader_OBJECTS) $(reader_LDADD) $(LIBS)
 
 regexp$(EXEEXT): $(regexp_OBJECTS) $(regexp_DEPENDENCIES) $(EXTRA_regexp_DEPENDENCIES) 
 	@rm -f regexp$(EXEEXT)
@@ -580,13 +623,19 @@ xpath$(EXEEXT): $(xpath_OBJECTS) $(xpath_DEPENDENCIES) $(EXTRA_xpath_DEPENDENCIE
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
+	-rm -f ../*.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@../$(DEPDIR)/shell.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@../$(DEPDIR)/xmllint.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/api.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fuzz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/genSeed.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/html.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/lint.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/reader.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/regexp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/schema.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testFuzzer.Po@am__quote@ # am--include-marker
@@ -603,22 +652,25 @@ $(am__depfiles_remade):
 am--depfiles: $(am__depfiles_remade)
 
 .c.o:
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
+@am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+@am__fastdepCC_TRUE@	$(am__mv) $$depbase.Tpo $$depbase.Po
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
+@am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
+@am__fastdepCC_TRUE@	$(am__mv) $$depbase.Tpo $$depbase.Po
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+@am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
+@am__fastdepCC_TRUE@	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+@am__fastdepCC_TRUE@	$(am__mv) $$depbase.Tpo $$depbase.Plo
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
@@ -746,6 +798,8 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
+	-rm -f ../$(DEPDIR)/$(am__dirstamp)
+	-rm -f ../$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -756,9 +810,14 @@ clean-am: clean-checkPROGRAMS clean-generic clean-libtool clean-local \
 	mostlyclean-am
 
 distclean: distclean-am
-		-rm -f ./$(DEPDIR)/fuzz.Po
+		-rm -f ../$(DEPDIR)/shell.Po
+	-rm -f ../$(DEPDIR)/xmllint.Po
+	-rm -f ./$(DEPDIR)/api.Po
+	-rm -f ./$(DEPDIR)/fuzz.Po
 	-rm -f ./$(DEPDIR)/genSeed.Po
 	-rm -f ./$(DEPDIR)/html.Po
+	-rm -f ./$(DEPDIR)/lint.Po
+	-rm -f ./$(DEPDIR)/reader.Po
 	-rm -f ./$(DEPDIR)/regexp.Po
 	-rm -f ./$(DEPDIR)/schema.Po
 	-rm -f ./$(DEPDIR)/testFuzzer.Po
@@ -810,9 +869,14 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-		-rm -f ./$(DEPDIR)/fuzz.Po
+		-rm -f ../$(DEPDIR)/shell.Po
+	-rm -f ../$(DEPDIR)/xmllint.Po
+	-rm -f ./$(DEPDIR)/api.Po
+	-rm -f ./$(DEPDIR)/fuzz.Po
 	-rm -f ./$(DEPDIR)/genSeed.Po
 	-rm -f ./$(DEPDIR)/html.Po
+	-rm -f ./$(DEPDIR)/lint.Po
+	-rm -f ./$(DEPDIR)/reader.Po
 	-rm -f ./$(DEPDIR)/regexp.Po
 	-rm -f ./$(DEPDIR)/schema.Po
 	-rm -f ./$(DEPDIR)/testFuzzer.Po
@@ -861,8 +925,9 @@ uninstall-am:
 
 .PHONY: corpus clean-corpus
 
-corpus: seed/html.stamp seed/regexp.stamp seed/schema.stamp seed/uri.stamp \
-    seed/valid.stamp seed/xinclude.stamp seed/xml.stamp seed/xpath.stamp
+corpus: seed/html.stamp seed/lint.stamp seed/reader.stamp seed/regexp.stamp \
+    seed/schema.stamp seed/uri.stamp seed/valid.stamp seed/xinclude.stamp \
+    seed/xml.stamp seed/xpath.stamp
 
 check-local: corpus
 	./testFuzzer$(EXEEXT)
@@ -882,10 +947,9 @@ seed/xml.stamp: genSeed$(EXEEXT)
 fuzz-xml: xml$(EXEEXT) seed/xml.stamp
 	@mkdir -p corpus/xml
 	./xml$(EXEEXT) \
-	    -dict=xml.dict \
+	    -dict=$(srcdir)/xml.dict \
 	    -max_len=$(XML_MAX_LEN) \
-	    -timeout=20 \
-	    -rss_limit_mb=4096 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/xml seed/xml
 
 # DTD validation fuzzer
@@ -898,28 +962,24 @@ seed/valid.stamp: genSeed$(EXEEXT)
 fuzz-valid: valid$(EXEEXT) seed/valid.stamp
 	@mkdir -p corpus/valid
 	./valid$(EXEEXT) \
-	    -dict=xml.dict \
+	    -dict=$(srcdir)/xml.dict \
 	    -max_len=$(XML_MAX_LEN) \
-	    -timeout=20 \
-	    -rss_limit_mb=4096 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/valid seed/valid
 
 # XInclude fuzzer
 
 seed/xinclude.stamp: genSeed$(EXEEXT)
 	@mkdir -p seed/xinclude
-	./genSeed$(EXEEXT) xinclude \
-	    '$(top_srcdir)/test/XInclude/docs/*' \
-	    '$(top_srcdir)/test/XInclude/without-reader/*'
+	./genSeed$(EXEEXT) xinclude $(XML_SEED_CORPUS_SRC)
 	@touch seed/xinclude.stamp
 
 fuzz-xinclude: xinclude$(EXEEXT) seed/xinclude.stamp
 	@mkdir -p corpus/xinclude
 	./xinclude$(EXEEXT) \
-	    -dict=xml.dict \
+	    -dict=$(srcdir)/xml.dict \
 	    -max_len=$(XML_MAX_LEN) \
-	    -timeout=20 \
-	    -rss_limit_mb=4096 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/xinclude seed/xinclude
 
 # HTML fuzzer
@@ -932,11 +992,47 @@ seed/html.stamp: genSeed$(EXEEXT)
 fuzz-html: html$(EXEEXT) seed/html.stamp
 	@mkdir -p corpus/html
 	./html$(EXEEXT) \
-	    -dict=html.dict \
+	    -dict=$(srcdir)/html.dict \
 	    -max_len=1000000 \
-	    -timeout=10 \
-	    -rss_limit_mb=4096 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/html seed/html
+
+# Reader fuzzer
+
+seed/reader.stamp: genSeed$(EXEEXT)
+	@mkdir -p seed/reader
+	./genSeed$(EXEEXT) reader $(XML_SEED_CORPUS_SRC)
+	@touch seed/reader.stamp
+
+fuzz-reader: reader$(EXEEXT) seed/reader.stamp
+	@mkdir -p corpus/reader
+	./reader$(EXEEXT) \
+	    -dict=$(srcdir)/xml.dict \
+	    -max_len=$(XML_MAX_LEN) \
+	    $$XML_FUZZ_OPTIONS \
+	    corpus/reader seed/reader
+
+# xmllint fuzzer
+
+seed/lint.stamp: genSeed$(EXEEXT)
+	@mkdir -p seed/lint
+	./genSeed$(EXEEXT) lint $(XML_SEED_CORPUS_SRC)
+	@touch seed/lint.stamp
+
+fuzz-lint: lint$(EXEEXT) seed/lint.stamp
+	@mkdir -p corpus/lint
+	./lint$(EXEEXT) \
+	    -dict=$(srcdir)/xml.dict \
+	    -max_len=$(XML_MAX_LEN) \
+	    $$XML_FUZZ_OPTIONS \
+	    corpus/lint seed/lint
+
+fuzz-api: api$(EXEEXT)
+	@mkdir -p corpus/api
+	./api$(EXEEXT) \
+	    -max_len=100 \
+	    $$XML_FUZZ_OPTIONS \
+	    corpus/api
 
 # Regexp fuzzer
 
@@ -948,9 +1044,9 @@ seed/regexp.stamp:
 fuzz-regexp: regexp$(EXEEXT) seed/regexp.stamp
 	@mkdir -p corpus/regexp
 	./regexp$(EXEEXT) \
-	    -dict=regexp.dict \
+	    -dict=$(srcdir)/regexp.dict \
 	    -max_len=200 \
-	    -timeout=5 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/regexp seed/regexp
 
 # URI fuzzer
@@ -964,7 +1060,7 @@ fuzz-uri: uri$(EXEEXT) seed/uri.stamp
 	@mkdir -p corpus/uri
 	./uri$(EXEEXT) \
 	    -max_len=10000 \
-	    -timeout=2 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/uri seed/uri
 
 # XML Schema fuzzer
@@ -977,10 +1073,9 @@ seed/schema.stamp: genSeed$(EXEEXT)
 fuzz-schema: schema$(EXEEXT) seed/schema.stamp
 	@mkdir -p corpus/schema
 	./schema$(EXEEXT) \
-	    -dict=schema.dict \
+	    -dict=$(srcdir)/schema.dict \
 	    -max_len=$(XML_MAX_LEN) \
-	    -timeout=20 \
-	    -rss_limit_mb=4096 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/schema seed/schema
 
 # XPath fuzzer
@@ -993,10 +1088,9 @@ seed/xpath.stamp: genSeed$(EXEEXT)
 fuzz-xpath: xpath$(EXEEXT) seed/xpath.stamp
 	@mkdir -p corpus/xpath
 	./xpath$(EXEEXT) \
-	    -dict=xpath.dict \
+	    -dict=$(srcdir)/xpath.dict \
 	    -max_len=10000 \
-	    -timeout=20 \
-	    -rss_limit_mb=4096 \
+	    $$XML_FUZZ_OPTIONS \
 	    corpus/xpath seed/xpath
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
