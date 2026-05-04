@@ -610,7 +610,7 @@ xmlTextReaderStartElement(void *ctx, const xmlChar *fullname,
 	if ((ctxt->node != NULL) && (ctxt->input != NULL) &&
 	    (ctxt->input->cur != NULL) && (ctxt->input->cur[0] == '/') &&
 	    (ctxt->input->cur[1] == '>'))
-	    ctxt->node->extra = NODE_IS_EMPTY;
+	    XML_NODE_SET_EXTRA(ctxt->node, NODE_IS_EMPTY);
     }
     if (reader != NULL)
 	reader->state = XML_TEXTREADER_ELEMENT;
@@ -675,7 +675,7 @@ xmlTextReaderStartElementNs(void *ctx,
 	if ((ctxt->node != NULL) && (ctxt->input != NULL) &&
 	    (ctxt->input->cur != NULL) && (ctxt->input->cur[0] == '/') &&
 	    (ctxt->input->cur[1] == '>'))
-	    ctxt->node->extra = NODE_IS_EMPTY;
+	    XML_NODE_SET_EXTRA(ctxt->node, NODE_IS_EMPTY);
     }
     if (reader != NULL)
 	reader->state = XML_TEXTREADER_ELEMENT;
@@ -1075,7 +1075,7 @@ skip_children:
 	        xmlNodePtr tmp;
 		if (reader->entNr == 0) {
 		    while ((tmp = node->last) != NULL) {
-			if ((tmp->extra & NODE_IS_PRESERVED) == 0) {
+			if ((XML_NODE_GET_EXTRA(tmp) & NODE_IS_PRESERVED) == 0) {
 			    xmlUnlinkNode(tmp);
 			    xmlTextReaderFreeNode(reader, tmp);
 			} else
@@ -1327,7 +1327,7 @@ get_next_node:
 	if ((oldstate == XML_TEXTREADER_ELEMENT) &&
             (reader->node->type == XML_ELEMENT_NODE) &&
 	    (reader->node->children == NULL) &&
-	    ((reader->node->extra & NODE_IS_EMPTY) == 0)
+	    ((XML_NODE_GET_EXTRA(reader->node) & NODE_IS_EMPTY) == 0)
 #ifdef LIBXML_XINCLUDE_ENABLED
 	    && (reader->in_xinclude <= 0)
 #endif
@@ -1341,7 +1341,7 @@ get_next_node:
 	    xmlTextReaderValidatePop(reader);
 #endif /* LIBXML_REGEXP_ENABLED */
         if ((reader->preserves > 0) &&
-	    (reader->node->extra & NODE_IS_SPRESERVED))
+	    (XML_NODE_GET_EXTRA(reader->node) & NODE_IS_SPRESERVED))
 	    reader->preserves--;
 	reader->node = reader->node->next;
 	reader->state = XML_TEXTREADER_ELEMENT;
@@ -1357,7 +1357,7 @@ get_next_node:
 	    (reader->node->prev != NULL) &&
             (reader->node->prev->type != XML_DTD_NODE)) {
 	    xmlNodePtr tmp = reader->node->prev;
-	    if ((tmp->extra & NODE_IS_PRESERVED) == 0) {
+	    if ((XML_NODE_GET_EXTRA(tmp) & NODE_IS_PRESERVED) == 0) {
                 if (oldnode == tmp)
                     oldnode = NULL;
 		xmlUnlinkNode(tmp);
@@ -1370,7 +1370,7 @@ get_next_node:
     if ((oldstate == XML_TEXTREADER_ELEMENT) &&
 	(reader->node->type == XML_ELEMENT_NODE) &&
 	(reader->node->children == NULL) &&
-	((reader->node->extra & NODE_IS_EMPTY) == 0)) {;
+	((XML_NODE_GET_EXTRA(reader->node) & NODE_IS_EMPTY) == 0)) {;
 	reader->state = XML_TEXTREADER_END;
 	goto node_found;
     }
@@ -1379,7 +1379,7 @@ get_next_node:
 	xmlTextReaderValidatePop(reader);
 #endif /* LIBXML_REGEXP_ENABLED */
     if ((reader->preserves > 0) &&
-	(reader->node->extra & NODE_IS_SPRESERVED))
+	(XML_NODE_GET_EXTRA(reader->node) & NODE_IS_SPRESERVED))
 	reader->preserves--;
     reader->node = reader->node->parent;
     if ((reader->node == NULL) ||
@@ -1403,7 +1403,7 @@ get_next_node:
 #endif
 	    (reader->entNr == 0) &&
 	    (oldnode->type != XML_DTD_NODE) &&
-	    ((oldnode->extra & NODE_IS_PRESERVED) == 0)) {
+	    ((XML_NODE_GET_EXTRA(oldnode) & NODE_IS_PRESERVED) == 0)) {
 	    xmlUnlinkNode(oldnode);
 	    xmlTextReaderFreeNode(reader, oldnode);
 	}
@@ -1416,7 +1416,7 @@ get_next_node:
 #endif
 	(reader->entNr == 0) &&
         (reader->node->last != NULL) &&
-        ((reader->node->last->extra & NODE_IS_PRESERVED) == 0)) {
+        ((XML_NODE_GET_EXTRA(reader->node->last) & NODE_IS_PRESERVED) == 0)) {
 	xmlNodePtr tmp = reader->node->last;
 	xmlUnlinkNode(tmp);
 	xmlTextReaderFreeNode(reader, tmp);
@@ -1600,7 +1600,7 @@ xmlTextReaderNext(xmlTextReaderPtr reader) {
         return(xmlTextReaderRead(reader));
     if (reader->state == XML_TEXTREADER_END || reader->state == XML_TEXTREADER_BACKTRACK)
         return(xmlTextReaderRead(reader));
-    if (cur->extra & NODE_IS_EMPTY)
+    if (XML_NODE_GET_EXTRA(cur) & NODE_IS_EMPTY)
         return(xmlTextReaderRead(reader));
     do {
         ret = xmlTextReaderRead(reader);
@@ -3023,7 +3023,7 @@ xmlTextReaderIsEmptyElement(xmlTextReaderPtr reader) {
     if (reader->in_xinclude > 0)
         return(1);
 #endif
-    return((reader->node->extra & NODE_IS_EMPTY) != 0);
+    return((XML_NODE_GET_EXTRA(reader->node) & NODE_IS_EMPTY) != 0);
 }
 
 /**
@@ -3885,15 +3885,15 @@ xmlTextReaderPreserve(xmlTextReaderPtr reader) {
         return(NULL);
 
     if ((cur->type != XML_DOCUMENT_NODE) && (cur->type != XML_DTD_NODE)) {
-	cur->extra |= NODE_IS_PRESERVED;
-	cur->extra |= NODE_IS_SPRESERVED;
+	XML_NODE_ADD_EXTRA(cur, NODE_IS_PRESERVED);
+	XML_NODE_ADD_EXTRA(cur, NODE_IS_SPRESERVED);
     }
     reader->preserves++;
 
     parent = cur->parent;;
     while (parent != NULL) {
         if (parent->type == XML_ELEMENT_NODE)
-	    parent->extra |= NODE_IS_PRESERVED;
+	    XML_NODE_ADD_EXTRA(parent, NODE_IS_PRESERVED);
 	parent = parent->parent;
     }
     return(cur);
