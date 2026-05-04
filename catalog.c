@@ -84,7 +84,8 @@ unsigned long __stdcall GetModuleFileNameA(void*, char*, unsigned long);
 #endif
 
 static xmlChar *xmlCatalogNormalizePublic(const xmlChar *pubID);
-static int xmlExpandCatalog(xmlCatalogPtr catal, const char *filename);
+static int xmlExpandCatalog(xmlCatalogPtr catal, const char *filename,
+                            int depth);
 
 /************************************************************************
  *									*
@@ -2345,6 +2346,7 @@ xmlGetSGMLCatalogEntryType(const xmlChar *name) {
  * @file:  the filepath for the catalog
  * @super:  should this be handled as a Super Catalog in which case
  *          parsing is not recursive
+ * @depth:  the current depth of the catalog
  *
  * Parse an SGML catalog content and fill up the @catal hash table with
  * the new entries found.
@@ -2353,13 +2355,16 @@ xmlGetSGMLCatalogEntryType(const xmlChar *name) {
  */
 static int
 xmlParseSGMLCatalog(xmlCatalogPtr catal, const xmlChar *value,
-	            const char *file, int super) {
+	            const char *file, int super, int depth) {
     const xmlChar *cur = value;
     xmlChar *base = NULL;
     int res;
 
     if ((cur == NULL) || (file == NULL))
         return(-1);
+    if (depth > MAX_CATAL_DEPTH)
+        return(-1);
+
     base = xmlStrdup((const xmlChar *) file);
 
     while ((cur != NULL) && (cur[0] != 0)) {
@@ -2537,7 +2542,7 @@ xmlParseSGMLCatalog(xmlCatalogPtr catal, const xmlChar *value,
 
 		    filename = xmlBuildURI(sysid, base);
 		    if (filename != NULL) {
-			xmlExpandCatalog(catal, (const char *)filename);
+			xmlExpandCatalog(catal, (const char *)filename, depth);
 			xmlFree(filename);
 		    }
 		}
@@ -2687,7 +2692,7 @@ xmlLoadSGMLSuperCatalog(const char *filename)
 	return(NULL);
     }
 
-    ret = xmlParseSGMLCatalog(catal, content, filename, 1);
+    ret = xmlParseSGMLCatalog(catal, content, filename, 1, 0);
     xmlFree(content);
     if (ret < 0) {
 	xmlFreeCatalog(catal);
@@ -2733,7 +2738,7 @@ xmlLoadACatalog(const char *filename)
 	    xmlFree(content);
 	    return(NULL);
 	}
-        ret = xmlParseSGMLCatalog(catal, content, filename, 0);
+        ret = xmlParseSGMLCatalog(catal, content, filename, 0, 0);
 	if (ret < 0) {
 	    xmlFreeCatalog(catal);
 	    xmlFree(content);
@@ -2756,6 +2761,7 @@ xmlLoadACatalog(const char *filename)
  * xmlExpandCatalog:
  * @catal:  a catalog
  * @filename:  a file path
+ * @depth:  the current depth of the catalog
  *
  * Load the catalog and expand the existing catal structure.
  * This can be either an XML Catalog or an SGML Catalog
@@ -2763,11 +2769,13 @@ xmlLoadACatalog(const char *filename)
  * Returns 0 in case of success, -1 in case of error
  */
 static int
-xmlExpandCatalog(xmlCatalogPtr catal, const char *filename)
+xmlExpandCatalog(xmlCatalogPtr catal, const char *filename, int depth)
 {
     int ret;
 
     if ((catal == NULL) || (filename == NULL))
+	return(-1);
+    if (depth > MAX_CATAL_DEPTH)
 	return(-1);
 
 
@@ -2778,7 +2786,7 @@ xmlExpandCatalog(xmlCatalogPtr catal, const char *filename)
 	if (content == NULL)
 	    return(-1);
 
-        ret = xmlParseSGMLCatalog(catal, content, filename, 0);
+        ret = xmlParseSGMLCatalog(catal, content, filename, 0, depth + 1);
 	if (ret < 0) {
 	    xmlFree(content);
 	    return(-1);
@@ -3246,7 +3254,7 @@ xmlLoadCatalog(const char *filename)
 	return(0);
     }
 
-    ret = xmlExpandCatalog(xmlDefaultCatalog, filename);
+    ret = xmlExpandCatalog(xmlDefaultCatalog, filename, 0);
     xmlRMutexUnlock(xmlCatalogMutex);
     return(ret);
 }
