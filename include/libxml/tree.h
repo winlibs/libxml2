@@ -365,7 +365,6 @@ struct _xmlElement {
 #endif
 };
 
-
 /**
  * XML_LOCAL_NAMESPACE:
  *
@@ -446,6 +445,10 @@ struct _xmlAttr {
     void            *psvi;	/* for type/PSVI information */
 };
 
+#define XML_ATTR_CLEAR_ATYPE(attr) (((attr)->atype) = 0)
+#define XML_ATTR_GET_ATYPE(attr) (((attr)->atype) & ~(15U << 27))
+#define XML_ATTR_SET_ATYPE(attr, type) ((attr)->atype = ((((attr)->atype) & (15U << 27)) | ((type) & ~(15U << 27))))
+
 /**
  * xmlID:
  *
@@ -506,6 +509,11 @@ struct _xmlNode {
     unsigned short   line;	/* line number */
     unsigned short   extra;	/* extra data for XPath/XSLT */
 };
+
+#define XML_NODE_ADD_EXTRA(node, type) ((node)->extra |= ((type) & ~(15U << 12)))
+#define XML_NODE_CLEAR_EXTRA(node) (((node)->extra) = 0)
+#define XML_NODE_GET_EXTRA(node) (((node)->extra) & ~(15U << 12))
+#define XML_NODE_SET_EXTRA(node, type) ((node)->extra = ((((node)->extra) & (15U << 12)) | ((type) & ~(15U << 12))))
 
 /**
  * XML_GET_CONTENT:
@@ -585,6 +593,10 @@ struct _xmlDoc {
 				   set at the end of parsing */
 };
 
+#define XML_DOC_ADD_PROPERTIES(doc, type) ((doc)->properties |= ((type) & ~(15U << 27)))
+#define XML_DOC_CLEAR_PROPERTIES(doc) (((doc)->properties) = 0)
+#define XML_DOC_GET_PROPERTIES(doc) (((doc)->properties) & ~(15U << 27))
+#define XML_DOC_SET_PROPERTIES(doc, type) ((doc)->properties = ((((doc)->properties) & (15U << 27)) | ((type) & ~(15U << 27))))
 
 typedef struct _xmlDOMWrapCtxt xmlDOMWrapCtxt;
 typedef xmlDOMWrapCtxt *xmlDOMWrapCtxtPtr;

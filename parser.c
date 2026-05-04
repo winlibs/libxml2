@@ -5518,7 +5518,7 @@ xmlParseEntityDecl(xmlParserCtxtPtr ctxt) {
 			    xmlErrMemory(ctxt, "New Doc failed");
 			    return;
 			}
-			ctxt->myDoc->properties = XML_DOC_INTERNAL;
+			XML_DOC_SET_PROPERTIES(ctxt->myDoc, XML_DOC_INTERNAL);
 		    }
 		    if (ctxt->myDoc->intSubset == NULL)
 			ctxt->myDoc->intSubset = xmlNewDtd(ctxt->myDoc,
@@ -5589,7 +5589,7 @@ xmlParseEntityDecl(xmlParserCtxtPtr ctxt) {
 			        xmlErrMemory(ctxt, "New Doc failed");
 				return;
 			    }
-			    ctxt->myDoc->properties = XML_DOC_INTERNAL;
+			    XML_DOC_SET_PROPERTIES(ctxt->myDoc, XML_DOC_INTERNAL);
 			}
 
 			if (ctxt->myDoc->intSubset == NULL)
@@ -7030,7 +7030,7 @@ xmlParseExternalSubset(xmlParserCtxtPtr ctxt, const xmlChar *ExternalID,
 	    xmlErrMemory(ctxt, "New Doc failed");
 	    return;
 	}
-	ctxt->myDoc->properties = XML_DOC_INTERNAL;
+	XML_DOC_SET_PROPERTIES(ctxt->myDoc, XML_DOC_INTERNAL);
     }
     if ((ctxt->myDoc != NULL) && (ctxt->myDoc->intSubset == NULL))
         xmlCreateIntSubset(ctxt->myDoc, NULL, ExternalID, SystemID);
@@ -7415,7 +7415,7 @@ xmlParseReference(xmlParserCtxtPtr ctxt) {
 			    (nw != NULL) &&
 			    (nw->type == XML_ELEMENT_NODE) &&
 			    (nw->children == NULL))
-			    nw->extra = 1;
+			    XML_NODE_SET_EXTRA(nw, 1);
 
 			break;
 		    }

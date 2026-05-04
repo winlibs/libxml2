@@ -1891,7 +1891,7 @@ xmlScanIDAttributeDecl(xmlValidCtxtPtr ctxt, xmlElementPtr elem, int err) {
     if (elem == NULL) return(0);
     cur = elem->attributes;
     while (cur != NULL) {
-        if (cur->atype == XML_ATTRIBUTE_ID) {
+        if (XML_ATTR_GET_ATYPE(cur) == XML_ATTRIBUTE_ID) {
 	    ret ++;
 	    if ((ret > 1) && (err))
 		xmlErrValidNode(ctxt, (xmlNodePtr) elem, XML_DTD_MULTIPLE_ID,
@@ -2264,7 +2264,7 @@ xmlDumpAttributeDecl(xmlBufferPtr buf, xmlAttributePtr attr) {
 	xmlBufferWriteChar(buf, ":");
     }
     xmlBufferWriteCHAR(buf, attr->name);
-    switch (attr->atype) {
+    switch (XML_ATTR_GET_ATYPE(attr)) {
 	case XML_ATTRIBUTE_CDATA:
 	    xmlBufferWriteChar(buf, " CDATA");
 	    break;
@@ -2737,7 +2737,7 @@ xmlAddID(xmlValidCtxtPtr ctxt, xmlDocPtr doc, const xmlChar *value,
 	return(NULL);
     }
     if (attr != NULL)
-	attr->atype = XML_ATTRIBUTE_ID;
+	XML_ATTR_SET_ATYPE(attr, XML_ATTRIBUTE_ID);
     return(ret);
 }
 
@@ -2816,7 +2816,7 @@ xmlIsID(xmlDocPtr doc, xmlNodePtr elem, xmlAttrPtr attr) {
 	if ((fullelemname != felem) && (fullelemname != elem->name))
 	    xmlFree(fullelemname);
 
-        if ((attrDecl != NULL) && (attrDecl->atype == XML_ATTRIBUTE_ID))
+        if ((attrDecl != NULL) && (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_ID))
 	    return(1);
     }
     return(0);
@@ -2857,7 +2857,7 @@ xmlRemoveID(xmlDocPtr doc, xmlAttrPtr attr) {
 
     xmlHashRemoveEntry(table, ID, xmlFreeIDTableEntry);
     xmlFree(ID);
-    attr->atype = 0;
+    XML_ATTR_CLEAR_ATYPE(attr);
     return(0);
 }
 
@@ -3142,8 +3142,8 @@ xmlIsRef(xmlDocPtr doc, xmlNodePtr elem, xmlAttrPtr attr) {
 		                         elem->name, attr->name);
 
 	if ((attrDecl != NULL) &&
-	    (attrDecl->atype == XML_ATTRIBUTE_IDREF ||
-	     attrDecl->atype == XML_ATTRIBUTE_IDREFS))
+	    (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_IDREF ||
+	     XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_IDREFS))
 	return(1);
     }
     return(0);
@@ -3521,7 +3521,7 @@ xmlIsMixedElement(xmlDocPtr doc, const xmlChar *name) {
 
 static int
 xmlIsDocNameStartChar(xmlDocPtr doc, int c) {
-    if ((doc == NULL) || (doc->properties & XML_DOC_OLD10) == 0) {
+    if ((doc == NULL) || (XML_DOC_GET_PROPERTIES(doc) & XML_DOC_OLD10) == 0) {
         /*
 	 * Use the new checks of production [4] [4a] amd [5] of the
 	 * Update 5 of XML-1.0
@@ -3551,7 +3551,7 @@ xmlIsDocNameStartChar(xmlDocPtr doc, int c) {
 
 static int
 xmlIsDocNameChar(xmlDocPtr doc, int c) {
-    if ((doc == NULL) || (doc->properties & XML_DOC_OLD10) == 0) {
+    if ((doc == NULL) || (XML_DOC_GET_PROPERTIES(doc) & XML_DOC_OLD10) == 0) {
         /*
 	 * Use the new checks of production [4] [4a] amd [5] of the
 	 * Update 5 of XML-1.0
@@ -4101,7 +4101,7 @@ xmlValidCtxtNormalizeAttributeValue(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
 
     if (attrDecl == NULL)
 	return(NULL);
-    if (attrDecl->atype == XML_ATTRIBUTE_CDATA)
+    if (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_CDATA)
 	return(NULL);
 
     ret = xmlStrdup(value);
@@ -4163,7 +4163,7 @@ xmlValidNormalizeAttributeValue(xmlDocPtr doc, xmlNodePtr elem,
 
     if (attrDecl == NULL)
 	return(NULL);
-    if (attrDecl->atype == XML_ATTRIBUTE_CDATA)
+    if (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_CDATA)
 	return(NULL);
 
     ret = xmlStrdup(value);
@@ -4178,7 +4178,7 @@ xmlValidateAttributeIdCallback(void *payload, void *data,
 	                       const xmlChar *name ATTRIBUTE_UNUSED) {
     xmlAttributePtr attr = (xmlAttributePtr) payload;
     int *count = (int *) data;
-    if (attr->atype == XML_ATTRIBUTE_ID) (*count)++;
+    if (XML_ATTR_GET_ATYPE(attr) == XML_ATTRIBUTE_ID) (*count)++;
 }
 
 /**
@@ -4210,7 +4210,7 @@ xmlValidateAttributeDecl(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
     /* Attribute Default Legal */
     /* Enumeration */
     if (attr->defaultValue != NULL) {
-	val = xmlValidateAttributeValueInternal(doc, attr->atype,
+	val = xmlValidateAttributeValueInternal(doc, XML_ATTR_GET_ATYPE(attr),
 	                                        attr->defaultValue);
 	if (val == 0) {
 	    xmlErrValidNode(ctxt, (xmlNodePtr) attr, XML_DTD_ATTRIBUTE_DEFAULT,
@@ -4221,7 +4221,7 @@ xmlValidateAttributeDecl(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
     }
 
     /* ID Attribute Default */
-    if ((attr->atype == XML_ATTRIBUTE_ID)&&
+    if ((XML_ATTR_GET_ATYPE(attr) == XML_ATTRIBUTE_ID)&&
         (attr->def != XML_ATTRIBUTE_IMPLIED) &&
 	(attr->def != XML_ATTRIBUTE_REQUIRED)) {
 	xmlErrValidNode(ctxt, (xmlNodePtr) attr, XML_DTD_ID_FIXED,
@@ -4231,7 +4231,7 @@ xmlValidateAttributeDecl(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
     }
 
     /* One ID per Element Type */
-    if (attr->atype == XML_ATTRIBUTE_ID) {
+    if (XML_ATTR_GET_ATYPE(attr) == XML_ATTRIBUTE_ID) {
         int nbId;
 
 	/* the trick is that we parse DtD as their own internal subset */
@@ -4490,9 +4490,9 @@ xmlValidateOneAttribute(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
 	       attr->name, elem->name, NULL);
 	return(0);
     }
-    attr->atype = attrDecl->atype;
+    XML_ATTR_SET_ATYPE(attr, attrDecl->atype);
 
-    val = xmlValidateAttributeValueInternal(doc, attrDecl->atype, value);
+    val = xmlValidateAttributeValueInternal(doc, XML_ATTR_GET_ATYPE(attrDecl), value);
     if (val == 0) {
 	    xmlErrValidNode(ctxt, elem, XML_DTD_ATTRIBUTE_VALUE,
 	   "Syntax of value for attribute %s of %s is not valid\n",
@@ -4511,19 +4511,19 @@ xmlValidateOneAttribute(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
     }
 
     /* Validity Constraint: ID uniqueness */
-    if (attrDecl->atype == XML_ATTRIBUTE_ID) {
+    if (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_ID) {
         if (xmlAddID(ctxt, doc, value, attr) == NULL)
 	    ret = 0;
     }
 
-    if ((attrDecl->atype == XML_ATTRIBUTE_IDREF) ||
-	(attrDecl->atype == XML_ATTRIBUTE_IDREFS)) {
+    if ((XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_IDREF) ||
+	(XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_IDREFS)) {
         if (xmlAddRef(ctxt, doc, value, attr) == NULL)
 	    ret = 0;
     }
 
     /* Validity Constraint: Notation Attributes */
-    if (attrDecl->atype == XML_ATTRIBUTE_NOTATION) {
+    if (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_NOTATION) {
         xmlEnumerationPtr tree = attrDecl->tree;
         xmlNotationPtr nota;
 
@@ -4553,7 +4553,7 @@ xmlValidateOneAttribute(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
     }
 
     /* Validity Constraint: Enumeration */
-    if (attrDecl->atype == XML_ATTRIBUTE_ENUMERATION) {
+    if (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_ENUMERATION) {
         xmlEnumerationPtr tree = attrDecl->tree;
 	while (tree != NULL) {
 	    if (xmlStrEqual(tree->name, value)) break;
@@ -4578,7 +4578,7 @@ xmlValidateOneAttribute(xmlValidCtxtPtr ctxt, xmlDocPtr doc,
 
     /* Extra check for the attribute value */
     ret &= xmlValidateAttributeValue2(ctxt, doc, attr->name,
-				      attrDecl->atype, value);
+				      XML_ATTR_GET_ATYPE(attrDecl), value);
 
     return(ret);
 }
@@ -4677,7 +4677,7 @@ xmlNodePtr elem, const xmlChar *prefix, xmlNsPtr ns, const xmlChar *value) {
 	return(0);
     }
 
-    val = xmlValidateAttributeValueInternal(doc, attrDecl->atype, value);
+    val = xmlValidateAttributeValueInternal(doc, XML_ATTR_GET_ATYPE(attrDecl), value);
     if (val == 0) {
 	if (ns->prefix != NULL) {
 	    xmlErrValidNode(ctxt, elem, XML_DTD_INVALID_DEFAULT,
@@ -4727,7 +4727,7 @@ xmlNodePtr elem, const xmlChar *prefix, xmlNsPtr ns, const xmlChar *value) {
 #endif
 
     /* Validity Constraint: Notation Attributes */
-    if (attrDecl->atype == XML_ATTRIBUTE_NOTATION) {
+    if (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_NOTATION) {
         xmlEnumerationPtr tree = attrDecl->tree;
         xmlNotationPtr nota;
 
@@ -4769,7 +4769,7 @@ xmlNodePtr elem, const xmlChar *prefix, xmlNsPtr ns, const xmlChar *value) {
     }
 
     /* Validity Constraint: Enumeration */
-    if (attrDecl->atype == XML_ATTRIBUTE_ENUMERATION) {
+    if (XML_ATTR_GET_ATYPE(attrDecl) == XML_ATTRIBUTE_ENUMERATION) {
         xmlEnumerationPtr tree = attrDecl->tree;
 	while (tree != NULL) {
 	    if (xmlStrEqual(tree->name, value)) break;
@@ -4807,10 +4807,10 @@ xmlNodePtr elem, const xmlChar *prefix, xmlNsPtr ns, const xmlChar *value) {
     /* Extra check for the attribute value */
     if (ns->prefix != NULL) {
 	ret &= xmlValidateAttributeValue2(ctxt, doc, ns->prefix,
-					  attrDecl->atype, value);
+					  XML_ATTR_GET_ATYPE(attrDecl), value);
     } else {
 	ret &= xmlValidateAttributeValue2(ctxt, doc, BAD_CAST "xmlns",
-					  attrDecl->atype, value);
+					  XML_ATTR_GET_ATYPE(attrDecl), value);
     }
 
     return(ret);
@@ -6560,7 +6560,7 @@ xmlValidateRef(xmlRefPtr ref, xmlValidCtxtPtr ctxt,
 	    while (IS_BLANK_CH(*cur)) cur++;
 	}
 	xmlFree(dup);
-    } else if (attr->atype == XML_ATTRIBUTE_IDREF) {
+    } else if (XML_ATTR_GET_ATYPE(attr) == XML_ATTRIBUTE_IDREF) {
 	id = xmlGetID(ctxt->doc, name);
 	if (id == NULL) {
 	    xmlErrValidNode(ctxt, attr->parent, XML_DTD_UNKNOWN_ID,
@@ -6568,7 +6568,7 @@ xmlValidateRef(xmlRefPtr ref, xmlValidCtxtPtr ctxt,
 		   attr->name, name, NULL);
 	    ctxt->valid = 0;
 	}
-    } else if (attr->atype == XML_ATTRIBUTE_IDREFS) {
+    } else if (XML_ATTR_GET_ATYPE(attr) == XML_ATTRIBUTE_IDREFS) {
 	xmlChar *dup, *str = NULL, *cur, save;
 
 	dup = xmlStrdup(name);
@@ -6768,7 +6768,7 @@ xmlValidateAttributeCallback(void *payload, void *data,
 
     if (cur == NULL)
 	return;
-    switch (cur->atype) {
+    switch (XML_ATTR_GET_ATYPE(cur)) {
 	case XML_ATTRIBUTE_CDATA:
 	case XML_ATTRIBUTE_ID:
 	case XML_ATTRIBUTE_IDREF	:
@@ -6783,7 +6783,7 @@ xmlValidateAttributeCallback(void *payload, void *data,
 	    if (cur->defaultValue != NULL) {
 
 		ret = xmlValidateAttributeValue2(ctxt, ctxt->doc, cur->name,
-			                         cur->atype, cur->defaultValue);
+			                         XML_ATTR_GET_ATYPE(cur), cur->defaultValue);
 		if ((ret == 0) && (ctxt->valid == 1))
 		    ctxt->valid = 0;
 	    }
@@ -6791,14 +6791,14 @@ xmlValidateAttributeCallback(void *payload, void *data,
 		xmlEnumerationPtr tree = cur->tree;
 		while (tree != NULL) {
 		    ret = xmlValidateAttributeValue2(ctxt, ctxt->doc,
-				    cur->name, cur->atype, tree->name);
+				    cur->name, XML_ATTR_GET_ATYPE(cur), tree->name);
 		    if ((ret == 0) && (ctxt->valid == 1))
 			ctxt->valid = 0;
 		    tree = tree->next;
 		}
 	    }
     }
-    if (cur->atype == XML_ATTRIBUTE_NOTATION) {
+    if (XML_ATTR_GET_ATYPE(cur) == XML_ATTRIBUTE_NOTATION) {
 	doc = cur->doc;
 	if (cur->elem == NULL) {
 	    xmlErrValid(ctxt, XML_ERR_INTERNAL_ERROR,
