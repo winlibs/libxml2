@@ -516,6 +516,17 @@ if(LIBXML2_WITH_TESTS)
 	add_test(NAME testdict COMMAND testdict)
 	add_test(NAME testrecurse COMMAND testrecurse WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 	add_test(NAME testThreads COMMAND testThreads WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+	if(LIBXML2_WITH_PROGRAMS)
+		add_test(
+			NAME xmlcatalog-shell-overflow
+			COMMAND
+			${CMAKE_COMMAND}
+			"-DXMLCATALOG=$<TARGET_FILE:xmlcatalog>"
+			"-DCATALOG=${CMAKE_CURRENT_SOURCE_DIR}/test/catalogs/docbook.xml"
+			"-DTEST_OUTPUT_DIR=${CMAKE_CURRENT_BINARY_DIR}"
+			-P ${CMAKE_CURRENT_SOURCE_DIR}/test/catalogs/test-shell-overflow.cmake
+		)
+	endif()
 endif()
 
 if(LIBXML2_WITH_PYTHON)
