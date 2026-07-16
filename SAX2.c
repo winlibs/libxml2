@@ -384,6 +384,9 @@ xmlSAX2ExternalSubset(void *ctx, const xmlChar *name,
 	int oldcharset;
 	const xmlChar *oldencoding;
 
+	unsigned long consumed;
+	size_t buffered;
+
 	/*
 	 * Ask the Entity resolver to load the damn thing
 	 */
@@ -451,6 +454,18 @@ xmlSAX2ExternalSubset(void *ctx, const xmlChar *name,
 
 	while (ctxt->inputNr > 1)
 	    xmlPopInput(ctxt);
+
+	consumed = ctxt->input->consumed;
+	buffered = ctxt->input->cur - ctxt->input->base;
+	if (buffered > ULONG_MAX - consumed)
+		consumed = ULONG_MAX;
+	else
+		consumed += buffered;
+	if (consumed > ULONG_MAX - ctxt->sizeentities)
+		ctxt->sizeentities = ULONG_MAX;
+	else
+		ctxt->sizeentities += consumed;
+
 	xmlFreeInputStream(ctxt->input);
         xmlFree(ctxt->inputTab);
 

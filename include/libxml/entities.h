@@ -30,6 +30,11 @@ typedef enum {
     XML_INTERNAL_PREDEFINED_ENTITY = 6
 } xmlEntityType;
 
+#define XML_ENT_PARSED      (1u << 0)
+#define XML_ENT_CHECKED     (1u << 1)
+#define XML_ENT_VALIDATED   (1u << 2)
+#define XML_ENT_EXPANDING   (1u << 3)
+
 /*
  * An unit of storage for an entity, contains the string, the value
  * and the linkind data needed for the linking in the hash table.
@@ -60,6 +65,8 @@ struct _xmlEntity {
 					/* this is also used to count entities
 					 * references done from that entity
 					 * and if it contains '<' */
+	int                    flags;       /* various flags */
+	unsigned long expandedSize;
 };
 
 /*
