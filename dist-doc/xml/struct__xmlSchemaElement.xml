@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaElement" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaElement</compoundname>
     <includes local="no">schemasInternals.h</includes>
@@ -373,7 +373,7 @@
 <para>An element definition. </para>
     </briefdescription>
     <detaileddescription>
-<para>xmlSchemaType, xmlSchemaFacet and xmlSchemaElement start of structures must be kept similar </para>
+<para><ref refid="schemasInternals_8h_1a91d281210143bd7e73a3556fe96bb576" kindref="member">xmlSchemaType</ref>, <ref refid="schemasInternals_8h_1a537bdafcb533f6f1641260d0123102f2" kindref="member">xmlSchemaFacet</ref> and <ref refid="schemasInternals_8h_1ae2cb6e61d404349e6c185676b6015d97" kindref="member">xmlSchemaElement</ref> start of structures must be kept similar </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="10">

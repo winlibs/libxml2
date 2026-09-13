@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="parserInternals_8h" kind="file" language="C++">
     <compoundname>parserInternals.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -378,7 +378,8 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>[2] Char ::= #x9 | #xA | #xD | [#x20...]
-</verbatim> any byte character in the accepted range</para>
+</verbatim></para>
+<para>any byte character in the accepted range</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>c</parametername>
@@ -404,7 +405,8 @@
         <detaileddescription>
 <para><verbatim>[2] Char ::= #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD]
                  | [#x10000-#x10FFFF]
-</verbatim> any Unicode character, excluding the surrogate blocks, FFFE, and FFFF.</para>
+</verbatim></para>
+<para>any Unicode character, excluding the surrogate blocks, FFFE, and FFFF.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>c</parametername>
@@ -433,7 +435,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar (usually an unsigned char) </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> (usually an unsigned char) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -480,7 +482,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar value (normally unsigned char) </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> value (normally unsigned char) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -551,7 +553,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar value (usually an unsigned char) </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> value (usually an unsigned char) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -590,7 +592,7 @@
         <param><defname>c</defname></param>
         <initializer>0</initializer>
         <briefdescription>
-<para>Always false (all combining chars &gt; 0xff) </para>
+<para>Always false (all combining chars &gt; 0xff). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -598,7 +600,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar (usually an unsigned char) </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> (usually an unsigned char) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -647,7 +649,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar value (usually an unsigned char) </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> value (usually an unsigned char) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -718,7 +720,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar value (normally unsigned char) </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> value (normally unsigned char) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -742,7 +744,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar value </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -765,7 +767,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar value </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -813,7 +815,7 @@
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlChar value (normally unsigned char) </para>
+<para>an <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> value (normally unsigned char) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -857,7 +859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="259" column="26" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="584" bodyend="586" declfile="parserInternals.h" declline="259" declcolumn="26"/>
+        <location file="parserInternals.h" line="259" column="25" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="584" bodyend="586" declfile="parserInternals.h" declline="259" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ab87bc2a3add29053728e6e6cc3a5797b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -873,7 +875,7 @@
         </briefdescription>
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.</para>
-<para><xrefsect id="deprecated_1_deprecated000245"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1ab730009088cf3642152ff832fa5e79dc" kindref="member">xmlNewParserCtxt</ref> and xmlCtxtReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000245"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1ab730009088cf3642152ff832fa5e79dc" kindref="member">xmlNewParserCtxt</ref> and <ref refid="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" kindref="member">xmlCtxtReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -890,7 +892,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="265" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12462" bodyend="12465" declfile="parserInternals.h" declline="265" declcolumn="1"/>
+        <location file="parserInternals.h" line="265" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12498" bodyend="12501" declfile="parserInternals.h" declline="265" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a93e684b5457875ae5ebdf9c032936f02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -910,7 +912,7 @@
         </briefdescription>
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time and for file accesses</para>
-<para><xrefsect id="deprecated_1_deprecated000244"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1ab730009088cf3642152ff832fa5e79dc" kindref="member">xmlNewParserCtxt</ref> and xmlCtxtReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000244"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1ab730009088cf3642152ff832fa5e79dc" kindref="member">xmlNewParserCtxt</ref> and <ref refid="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" kindref="member">xmlCtxtReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -925,7 +927,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -935,7 +937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="267" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12426" bodyend="12449" declfile="parserInternals.h" declline="267" declcolumn="1"/>
+        <location file="parserInternals.h" line="267" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12462" bodyend="12485" declfile="parserInternals.h" declline="267" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a847cff610f9bbc46fd15490148381dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -978,7 +980,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="270" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12701" bodyend="12724" declfile="parserInternals.h" declline="270" declcolumn="1"/>
+        <location file="parserInternals.h" line="270" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12737" bodyend="12760" declfile="parserInternals.h" declline="270" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a677f733f0eceb7dc8577c91f27813582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -1034,7 +1036,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="274" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12372" bodyend="12406" declfile="parserInternals.h" declline="274" declcolumn="1"/>
+        <location file="parserInternals.h" line="274" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12408" bodyend="12442" declfile="parserInternals.h" declline="274" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a5e9ef911862c16dfa11ff31558f649c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1272,7 +1274,7 @@
 <para>Create a new input stream based on a memory buffer. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000273"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlNewInputFromString.</para>
+<para><xrefsect id="deprecated_1_deprecated000273"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a0a4d6fd6fa0bca9a7cc3249b4730e67b" kindref="member">xmlNewInputFromString</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1314,7 +1316,7 @@
           <defname>ent</defname>
         </param>
         <briefdescription>
-<para>Create a new input stream based on an xmlEntity. </para>
+<para>Create a new input stream based on an <ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000272"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, do not use.</para>
@@ -1385,7 +1387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="305" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="1891" bodyend="1950" declfile="parserInternals.h" declline="305" declcolumn="1"/>
+        <location file="parserInternals.h" line="305" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="1928" bodyend="1987" declfile="parserInternals.h" declline="305" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a771fb43c79ecd39f4dec9d4d97761543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> *</type>
@@ -1415,7 +1417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="308" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="1959" bodyend="1975" declfile="parserInternals.h" declline="308" declcolumn="1"/>
+        <location file="parserInternals.h" line="308" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="1996" bodyend="2012" declfile="parserInternals.h" declline="308" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1acc386ce9b623700973abed94d9e0e395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1459,7 +1461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="311" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2501" bodyend="2511" declfile="parserInternals.h" declline="311" declcolumn="1"/>
+        <location file="parserInternals.h" line="311" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2538" bodyend="2548" declfile="parserInternals.h" declline="311" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ab1e6cdaaee3a5f97a63116832ae4be1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref></type>
@@ -1484,13 +1486,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the current xmlChar in the parser context </para>
+<simplesect kind="return"><para>the current <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> in the parser context </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="315" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2480" bodyend="2489" declfile="parserInternals.h" declline="315" declcolumn="1"/>
+        <location file="parserInternals.h" line="315" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2517" bodyend="2526" declfile="parserInternals.h" declline="315" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a6868edbb67fd7a0506be54b2bafdfa0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1510,7 +1512,7 @@
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserInput </para>
+<para>an <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1538,7 +1540,7 @@
         </briefdescription>
         <detaileddescription>
 <para>Unlike the default external entity loader, this function doesn&apos;t use XML catalogs.</para>
-<para><xrefsect id="deprecated_1_deprecated000275"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlNewInputFromUrl.</para>
+<para><xrefsect id="deprecated_1_deprecated000275"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a07aefa97e2d3a6e3735accb899f1a154" kindref="member">xmlNewInputFromUrl</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1578,7 +1580,7 @@
 <para>Create a new input stream structure. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000271"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlNewInputFromUrl or similar functions.</para>
+<para><xrefsect id="deprecated_1_deprecated000271"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a07aefa97e2d3a6e3735accb899f1a154" kindref="member">xmlNewInputFromUrl</ref> or similar functions.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1642,7 +1644,7 @@
 <parametername>prefixOut</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar ** </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> ** </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1652,7 +1654,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="328" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2903" bodyend="2920" declfile="parserInternals.h" declline="328" declcolumn="1"/>
+        <location file="parserInternals.h" line="328" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2940" bodyend="2957" declfile="parserInternals.h" declline="328" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a696026fecdefd0686855ca1ecf33f9d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1674,7 +1676,8 @@
 [5] Name ::= (Letter | &apos;_&apos; | &apos;:&apos;) (NameChar)*
 
 [6] Names ::= Name (#x20 Name)*
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -1689,7 +1692,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="337" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="3150" bodyend="3190" declfile="parserInternals.h" declline="337" declcolumn="1"/>
+        <location file="parserInternals.h" line="337" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="3187" bodyend="3227" declfile="parserInternals.h" declline="337" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a3c291536caea8ab68da77090bc1d215b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1708,7 +1711,8 @@
 </xrefdescription></xrefsect><verbatim>[7] Nmtoken ::= (NameChar)+
 
 [8] Nmtokens ::= Nmtoken (#x20 Nmtoken)*
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -1723,7 +1727,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="340" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="3380" bodyend="3448" declfile="parserInternals.h" declline="340" declcolumn="1"/>
+        <location file="parserInternals.h" line="340" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="3417" bodyend="3485" declfile="parserInternals.h" declline="340" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a8665f1906c0aa10997a5bd9b6fbe68bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1745,7 +1749,8 @@
 <para><xrefsect id="deprecated_1_deprecated000197"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[9] EntityValue ::= &apos;&quot;&apos; ([^%&amp;&quot;] | PEReference | Reference)* &apos;&quot;&apos; |
                     &quot;&apos;&quot; ([^%&amp;&apos;] | PEReference | Reference)* &quot;&apos;&quot;
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -1768,7 +1773,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="343" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="3610" bodyend="3681" declfile="parserInternals.h" declline="343" declcolumn="1"/>
+        <location file="parserInternals.h" line="343" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="3647" bodyend="3718" declfile="parserInternals.h" declline="343" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a113da76c866822c0d8eeb904ecd07879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1786,7 +1791,8 @@
 <para><xrefsect id="deprecated_1_deprecated000198"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[10] AttValue ::= &apos;&quot;&apos; ([^&lt;&amp;&quot;] | Reference)* &apos;&quot;&apos; |
                   &quot;&apos;&quot; ([^&lt;&amp;&apos;] | Reference)* &quot;&apos;&quot;
-</verbatim> 3.3.3 Attribute-Value Normalization:</para>
+</verbatim></para>
+<para>3.3.3 Attribute-Value Normalization:</para>
 <para>Before the value of an attribute is passed to the application or checked for validity, the XML processor must normalize it as follows:</para>
 <para><itemizedlist>
 <listitem><para>a character reference is processed by appending the referenced character to the attribute value</para>
@@ -1811,7 +1817,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="347" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4296" bodyend="4299" declfile="parserInternals.h" declline="347" declcolumn="1"/>
+        <location file="parserInternals.h" line="347" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4333" bodyend="4336" declfile="parserInternals.h" declline="347" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a79126728fb3d057c5684e6901f2ec887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1828,7 +1834,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000199"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[11] SystemLiteral ::= (&apos;&quot;&apos; [^&quot;]* &apos;&quot;&apos;) | (&quot;&apos;&quot; [^&apos;]* &quot;&apos;&quot;)
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -1843,7 +1850,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="350" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4313" bodyend="4371" declfile="parserInternals.h" declline="350" declcolumn="1"/>
+        <location file="parserInternals.h" line="350" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4350" bodyend="4408" declfile="parserInternals.h" declline="350" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a54613fb6abb15bf10742ab35108c3068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1860,7 +1867,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000200"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[12] PubidLiteral ::= &apos;&quot;&apos; PubidChar* &apos;&quot;&apos; | &quot;&apos;&quot; (PubidChar - &quot;&apos;&quot;)* &quot;&apos;&quot;
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -1875,7 +1883,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="353" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4385" bodyend="4443" declfile="parserInternals.h" declline="353" declcolumn="1"/>
+        <location file="parserInternals.h" line="353" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4422" bodyend="4480" declfile="parserInternals.h" declline="353" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a8d82c35c0b9a708439d22a2cec469869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1915,7 +1923,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="356" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4728" bodyend="4730" declfile="parserInternals.h" declline="356" declcolumn="1"/>
+        <location file="parserInternals.h" line="356" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4765" bodyend="4767" declfile="parserInternals.h" declline="356" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ad429738ee3feb013aa8702cc3a0b490f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1940,11 +1948,12 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000202"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
 </xrefdescription></xrefsect></para>
-<para>NOTE: Productions [75] and [83] interact badly since [75] can generate <lsquo/>&apos;PUBLIC<rsquo/> S PubidLiteral S SystemLiteral<lsquo/> <verbatim>[75] ExternalID ::= &apos;SYSTEM&amp;rsquo; S SystemLiteral
+<para>NOTE: Productions [75] and [83] interact badly since [75] can generate <computeroutput>&apos;PUBLIC&apos; S PubidLiteral S SystemLiteral</computeroutput> <verbatim>[75] ExternalID ::= &apos;SYSTEM&apos; S SystemLiteral
                   | &apos;PUBLIC&apos; S PubidLiteral S SystemLiteral
 
 [83] PublicID ::= &apos;PUBLIC&apos; S PubidLiteral
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -1975,7 +1984,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="360" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4755" bodyend="4803" declfile="parserInternals.h" declline="360" declcolumn="1"/>
+        <location file="parserInternals.h" line="360" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4792" bodyend="4840" declfile="parserInternals.h" declline="360" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1aff6284ec3eb6a4ae1324b6763cb0e2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2008,7 +2017,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="365" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4932" bodyend="5069" declfile="parserInternals.h" declline="365" declcolumn="1"/>
+        <location file="parserInternals.h" line="365" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="4969" bodyend="5106" declfile="parserInternals.h" declline="365" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a0a2a62aad5c659822d392e036bd21dc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2025,7 +2034,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000204"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[17] PITarget ::= Name - ((&apos;X&apos; | &apos;x&apos;) (&apos;M&apos; | &apos;m&apos;) (&apos;L&apos; | &apos;l&apos;))
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -2040,7 +2050,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="368" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5084" bodyend="5116" declfile="parserInternals.h" declline="368" declcolumn="1"/>
+        <location file="parserInternals.h" line="368" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5121" bodyend="5153" declfile="parserInternals.h" declline="368" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a211d6c9a8e9822e6482ab88ff71bd636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2057,7 +2067,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000205"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[16] PI ::= &apos;&lt;?&apos; PITarget (S (Char* - (Char* &apos;?&gt;&apos; Char*)))? &apos;?&gt;&apos;
-</verbatim> The processing is transferred to SAX once parsed.</para>
+</verbatim></para>
+<para>The processing is transferred to SAX once parsed.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2071,7 +2082,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="371" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5198" bodyend="5300" declfile="parserInternals.h" declline="371" declcolumn="1"/>
+        <location file="parserInternals.h" line="371" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5235" bodyend="5337" declfile="parserInternals.h" declline="371" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a631fa7691d66b885ec1ea5c5107798ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2090,10 +2101,12 @@
 <para><xrefsect id="deprecated_1_deprecated000206"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[82] NotationDecl ::= &apos;&lt;!NOTATION&apos; S Name S (ExternalID |  PublicID)
                       S? &apos;&gt;&apos;
-</verbatim> Hence there is actually 3 choices: <verbatim>&apos;PUBLIC&apos; S PubidLiteral
+</verbatim></para>
+<para>Hence there is actually 3 choices: <verbatim>&apos;PUBLIC&apos; S PubidLiteral
 &apos;PUBLIC&apos; S PubidLiteral S SystemLiteral
 &apos;SYSTEM&apos; S SystemLiteral
-</verbatim> See the NOTE on xmlParseExternalID.</para>
+</verbatim></para>
+<para>See the NOTE on <ref refid="parserInternals_8h_1ad429738ee3feb013aa8702cc3a0b490f" kindref="member">xmlParseExternalID</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2107,7 +2120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="374" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5322" bodyend="5384" declfile="parserInternals.h" declline="374" declcolumn="1"/>
+        <location file="parserInternals.h" line="374" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5359" bodyend="5421" declfile="parserInternals.h" declline="374" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a22727ebf379767be066b9bb615dd3144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2135,7 +2148,8 @@
 [74] PEDef ::= EntityValue | ExternalID
 
 [76] NDataDecl ::= S &apos;NDATA&apos; S Name
-</verbatim> [ VC: Notation Declared ] The Name must match the declared name of a notation.</para>
+</verbatim></para>
+<para>[ VC: Notation Declared ] The Name must match the declared name of a notation.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2149,7 +2163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="377" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5410" bodyend="5630" declfile="parserInternals.h" declline="377" declcolumn="1"/>
+        <location file="parserInternals.h" line="377" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5447" bodyend="5667" declfile="parserInternals.h" declline="377" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a9ef72842014e646758c63893b450ad28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2170,10 +2184,11 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000208"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[60] DefaultDecl ::= &apos;#REQUIRED&apos; | &apos;#IMPLIED&apos; | ((&apos;#FIXED&apos; S)? AttValue)
-</verbatim> [ VC: Required Attribute ] if the default declaration is the keyword #REQUIRED, then the attribute must be specified for all elements of the type in the attribute-list declaration.</para>
+</verbatim></para>
+<para>[ VC: Required Attribute ] if the default declaration is the keyword #REQUIRED, then the attribute must be specified for all elements of the type in the attribute-list declaration.</para>
 <para>[ VC: Attribute Default Legal ] The declared default value must meet the lexical constraints of the declared attribute type c.f. <ref refid="valid_8h_1a8b11da80c11151c00b4eaa6bc75ac296" kindref="member">xmlValidateAttributeDecl</ref></para>
 <para>[ VC: Fixed Attribute Default ] if an attribute has a default value declared with the #FIXED keyword, instances of that attribute must match the default value.</para>
-<para>[ WFC: No &lt; in Attribute Values ] handled in xmlParseAttValue</para>
+<para>[ WFC: No &lt; in Attribute Values ] handled in <ref refid="parserInternals_8h_1a113da76c866822c0d8eeb904ecd07879" kindref="member">xmlParseAttValue</ref></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2197,7 +2212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="380" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5662" bodyend="5691" declfile="parserInternals.h" declline="380" declcolumn="1"/>
+        <location file="parserInternals.h" line="380" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5699" bodyend="5728" declfile="parserInternals.h" declline="380" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a95858e3ddfda8a03aaad6159949f7280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1acfc4ea75665f49d9af693257ea1178e8" kindref="member">xmlEnumeration</ref> *</type>
@@ -2215,7 +2230,8 @@
 <para><xrefsect id="deprecated_1_deprecated000209"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
 </xrefdescription></xrefsect></para>
 <para>Note: the leading &apos;NOTATION&apos; S part has already being parsed... <verbatim>[58] NotationType ::= &apos;NOTATION&apos; S &apos;(&apos; S? Name (S? &apos;|&apos; S? Name)* S? &apos;)&apos;
-</verbatim> [ VC: Notation Attributes ] Values of this type must match one of the notation names included in the declaration; all notation names in the declaration must be declared.</para>
+</verbatim></para>
+<para>[ VC: Notation Attributes ] Values of this type must match one of the notation names included in the declaration; all notation names in the declaration must be declared.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2231,7 +2247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="384" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5711" bodyend="5768" declfile="parserInternals.h" declline="384" declcolumn="1"/>
+        <location file="parserInternals.h" line="384" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5748" bodyend="5805" declfile="parserInternals.h" declline="384" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a22736908df364314fdb9f99eee9e1ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1acfc4ea75665f49d9af693257ea1178e8" kindref="member">xmlEnumeration</ref> *</type>
@@ -2248,7 +2264,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000210"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[59] Enumeration ::= &apos;(&apos; S? Nmtoken (S? &apos;|&apos; S? Nmtoken)* S? &apos;)&apos;
-</verbatim> [ VC: Enumeration ] Values of this type must match one of the Nmtoken tokens in the declaration</para>
+</verbatim></para>
+<para>[ VC: Enumeration ] Values of this type must match one of the Nmtoken tokens in the declaration</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2264,7 +2281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="387" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5786" bodyend="5842" declfile="parserInternals.h" declline="387" declcolumn="1"/>
+        <location file="parserInternals.h" line="387" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5823" bodyend="5879" declfile="parserInternals.h" declline="387" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ac4c2da852dcc69d4a73e6b144928cdd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2287,7 +2304,8 @@
 </xrefdescription></xrefsect><verbatim>[57] EnumeratedType ::= NotationType | Enumeration
 
 [58] NotationType ::= &apos;NOTATION&apos; S &apos;(&apos; S? Name (S? &apos;|&apos; S? Name)* S? &apos;)&apos;
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -2310,7 +2328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="390" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5859" bodyend="5874" declfile="parserInternals.h" declline="390" declcolumn="1"/>
+        <location file="parserInternals.h" line="390" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5896" bodyend="5911" declfile="parserInternals.h" declline="390" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a9e4d4784d5ca4fe382c4d9762095f8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2336,7 +2354,8 @@
 
 [56] TokenizedType ::= &apos;ID&apos; | &apos;IDREF&apos; | &apos;IDREFS&apos; | &apos;ENTITY&apos; |
                        &apos;ENTITIES&apos; | &apos;NMTOKEN&apos; | &apos;NMTOKENS&apos;
-</verbatim> Validity constraints for attribute values syntax are checked in <ref refid="valid_8h_1ac43985bb8501949b696d320626603305" kindref="member">xmlValidateAttributeValue</ref></para>
+</verbatim></para>
+<para>Validity constraints for attribute values syntax are checked in <ref refid="valid_8h_1ac43985bb8501949b696d320626603305" kindref="member">xmlValidateAttributeValue</ref></para>
 <para>[ VC: ID ] Values of type ID must match the Name production. A name must not appear more than once in an XML document as a value of this type; i.e., ID values must uniquely identify the elements which bear them.</para>
 <para>[ VC: One ID per Element Type ] No element type may have more than one ID attribute specified.</para>
 <para>[ VC: ID Attribute Default ] An ID attribute must have a declared default of #IMPLIED or #REQUIRED.</para>
@@ -2366,7 +2385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="394" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5922" bodyend="5949" declfile="parserInternals.h" declline="394" declcolumn="1"/>
+        <location file="parserInternals.h" line="394" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5959" bodyend="5986" declfile="parserInternals.h" declline="394" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a36abcdaa6a26768ead26201dd1ee0460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2399,7 +2418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="398" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5962" bodyend="6077" declfile="parserInternals.h" declline="398" declcolumn="1"/>
+        <location file="parserInternals.h" line="398" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="5999" bodyend="6114" declfile="parserInternals.h" declline="398" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a6c63e453b471eae3342ea102bffc7f5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a43d7c30835afce6963189de976e668e4" kindref="member">xmlElementContent</ref> *</type>
@@ -2416,13 +2435,14 @@
           <defname>openInputNr</defname>
         </param>
         <briefdescription>
-<para>Parse the declaration for a Mixed Element content The leading &apos;(&apos; and spaces have been skipped in xmlParseElementContentDecl. </para>
+<para>Parse the declaration for a Mixed Element content The leading &apos;(&apos; and spaces have been skipped in <ref refid="parserInternals_8h_1ab2d24c55433683e79e5bacdc0e096899" kindref="member">xmlParseElementContentDecl</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000214"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[51] Mixed ::= &apos;(&apos; S? &apos;#PCDATA&apos; (S? &apos;|&apos; S? Name)* S? &apos;)*&apos; |
                &apos;(&apos; S? &apos;#PCDATA&apos; S? &apos;)&apos;
-</verbatim> [ VC: Proper Group/PE Nesting ] applies to [51] too (see [49])</para>
+</verbatim></para>
+<para>[ VC: Proper Group/PE Nesting ] applies to [51] too (see [49])</para>
 <para>[ VC: No Duplicate Types ] The same name must not appear more than once in a single mixed-content declaration.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2441,13 +2461,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the list of the xmlElementContent describing the element choices </para>
+<simplesect kind="return"><para>the list of the <ref refid="tree_8h_1a43d7c30835afce6963189de976e668e4" kindref="member">xmlElementContent</ref> describing the element choices </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="401" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6142" bodyend="6237" declfile="parserInternals.h" declline="401" declcolumn="1"/>
+        <location file="parserInternals.h" line="401" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6179" bodyend="6274" declfile="parserInternals.h" declline="401" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a811b1c03b691c4e2ce03fdf9dbb46e64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a43d7c30835afce6963189de976e668e4" kindref="member">xmlElementContent</ref> *</type>
@@ -2463,7 +2483,7 @@
           <declname>inputchk</declname>
         </param>
         <briefdescription>
-<para>Parse the declaration for a Mixed Element content The leading &apos;(&apos; and spaces have been skipped in xmlParseElementContentDecl. </para>
+<para>Parse the declaration for a Mixed Element content The leading &apos;(&apos; and spaces have been skipped in <ref refid="parserInternals_8h_1ab2d24c55433683e79e5bacdc0e096899" kindref="member">xmlParseElementContentDecl</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000215"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
@@ -2474,7 +2494,8 @@
 [49] choice ::= &apos;(&apos; S? cp ( S? &apos;|&apos; S? cp )* S? &apos;)&apos;
 
 [50] seq ::= &apos;(&apos; S? cp ( S? &apos;,&apos; S? cp )* S? &apos;)&apos;
-</verbatim> [ VC: Proper Group/PE Nesting ] applies to [49] and [50] TODO Parameter-entity replacement text must be properly nested with parenthesized groups. That is to say, if either of the opening or closing parentheses in a choice, seq, or Mixed construct is contained in the replacement text for a parameter entity, both must be contained in the same replacement text. For interoperability, if a parameter-entity reference appears in a choice, seq, or Mixed construct, its replacement text should not be empty, and neither the first nor last non-blank character of the replacement text should be a connector (| or ,).</para>
+</verbatim></para>
+<para>[ VC: Proper Group/PE Nesting ] applies to [49] and [50] TODO Parameter-entity replacement text must be properly nested with parenthesized groups. That is to say, if either of the opening or closing parentheses in a choice, seq, or Mixed construct is contained in the replacement text for a parameter entity, both must be contained in the same replacement text. For interoperability, if a parameter-entity reference appears in a choice, seq, or Mixed construct, its replacement text should not be empty, and neither the first nor last non-blank character of the replacement text should be a connector (| or ,).</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2492,13 +2513,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the tree of xmlElementContent describing the element hierarchy. </para>
+<simplesect kind="return"><para>the tree of <ref refid="tree_8h_1a43d7c30835afce6963189de976e668e4" kindref="member">xmlElementContent</ref> describing the element hierarchy. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="406" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6571" bodyend="6574" declfile="parserInternals.h" declline="406" declcolumn="1"/>
+        <location file="parserInternals.h" line="406" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6608" bodyend="6611" declfile="parserInternals.h" declline="406" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ab2d24c55433683e79e5bacdc0e096899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2518,12 +2539,13 @@
           <declname>result</declname>
         </param>
         <briefdescription>
-<para>Parse the declaration for an Element content either Mixed or Children, the cases EMPTY and ANY are handled directly in xmlParseElementDecl. </para>
+<para>Parse the declaration for an Element content either Mixed or Children, the cases EMPTY and ANY are handled directly in <ref refid="parserInternals_8h_1a1fbe1c4a2c0df6f3532579da0ce36e1c" kindref="member">xmlParseElementDecl</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000216"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[46] contentspec ::= &apos;EMPTY&apos; | &apos;ANY&apos; | Mixed | children
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -2548,13 +2570,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlElementTypeVal value or -1 on error </para>
+<simplesect kind="return"><para>an <ref refid="tree_8h_1ac65cd24be7a1b5a07da3747794118837" kindref="member">xmlElementTypeVal</ref> value or -1 on error </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="411" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6591" bodyend="6619" declfile="parserInternals.h" declline="411" declcolumn="1"/>
+        <location file="parserInternals.h" line="411" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6628" bodyend="6656" declfile="parserInternals.h" declline="411" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a1fbe1c4a2c0df6f3532579da0ce36e1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2572,7 +2594,8 @@
 <para>Always consumes &apos;&lt;!&apos;.</para>
 <para><xrefsect id="deprecated_1_deprecated000217"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[45] elementdecl ::= &apos;&lt;!ELEMENT&apos; S Name S contentspec S? &apos;&gt;&apos;
-</verbatim> [ VC: Unique Element Type Declaration ] No element type may be declared more than once</para>
+</verbatim></para>
+<para>[ VC: Unique Element Type Declaration ] No element type may be declared more than once</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2588,7 +2611,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="416" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6635" bodyend="6731" declfile="parserInternals.h" declline="416" declcolumn="1"/>
+        <location file="parserInternals.h" line="416" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6672" bodyend="6768" declfile="parserInternals.h" declline="416" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a9776b8d5fca0bef6896d697fd481558b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2607,7 +2630,8 @@
 <para><xrefsect id="deprecated_1_deprecated000218"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[29] markupdecl ::= elementdecl | AttlistDecl | EntityDecl |
                     NotationDecl | PI | Comment
-</verbatim> [ VC: Proper Declaration/PE Nesting ] Parameter-entity replacement text must be properly nested with markup declarations. That is to say, if either the first character or the last character of a markup declaration (markupdecl above) is contained in the replacement text for a parameter-entity reference, both must be contained in the same replacement text.</para>
+</verbatim></para>
+<para>[ VC: Proper Declaration/PE Nesting ] Parameter-entity replacement text must be properly nested with markup declarations. That is to say, if either the first character or the last character of a markup declaration (markupdecl above) is contained in the replacement text for a parameter-entity reference, both must be contained in the same replacement text.</para>
 <para>[ WFC: PEs in Internal Subset ] In the internal DTD subset, parameter-entity references can occur only where markup declarations can occur, not within markup declarations. (This does not apply to references that occur in external parameter entities or to the external subset.)</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2622,7 +2646,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="419" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6906" bodyend="6941" declfile="parserInternals.h" declline="419" declcolumn="1"/>
+        <location file="parserInternals.h" line="419" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6943" bodyend="6978" declfile="parserInternals.h" declline="419" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a4a88eaf11996c2f3ede51ac7c4c1096f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2641,7 +2665,8 @@
 <para><xrefsect id="deprecated_1_deprecated000190"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[66] CharRef ::= &apos;&amp;#&apos; [0-9]+ &apos;;&apos; |
                  &apos;&amp;#x&apos; [0-9a-fA-F]+ &apos;;&apos;
-</verbatim> [ WFC: Legal Character ] Characters referred to using character references must match the production for Char.</para>
+</verbatim></para>
+<para>[ WFC: Legal Character ] Characters referred to using character references must match the production for Char.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2657,7 +2682,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="422" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2529" bodyend="2615" declfile="parserInternals.h" declline="422" declcolumn="1"/>
+        <location file="parserInternals.h" line="422" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2566" bodyend="2652" declfile="parserInternals.h" declline="422" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a8798f47b3168d1310749e5a6e0dfa7fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref> *</type>
@@ -2682,13 +2707,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlEntity if found, or NULL otherwise. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref> if found, or NULL otherwise. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="425" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7493" bodyend="7504" declfile="parserInternals.h" declline="425" declcolumn="1"/>
+        <location file="parserInternals.h" line="425" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7530" bodyend="7541" declfile="parserInternals.h" declline="425" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a62c102b6a87fac9a7a8fffae85fe16d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2720,7 +2745,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="428" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7096" bodyend="7331" declfile="parserInternals.h" declline="428" declcolumn="1"/>
+        <location file="parserInternals.h" line="428" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7133" bodyend="7368" declfile="parserInternals.h" declline="428" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a935e2988ee7a5c382f51dc1fc00c05f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2750,7 +2775,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="431" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7686" bodyend="7688" declfile="parserInternals.h" declline="431" declcolumn="1"/>
+        <location file="parserInternals.h" line="431" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7723" bodyend="7725" declfile="parserInternals.h" declline="431" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1aa9550d3e801b23ccee8d2589bc89068c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2768,7 +2793,8 @@
 <para><xrefsect id="deprecated_1_deprecated000224"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[28] doctypedecl ::= &apos;&lt;!DOCTYPE&apos; S Name (S ExternalID)? S?
                      (&apos;[&apos; (markupdecl | PEReference | S)* &apos;]&apos; S?)? &apos;&gt;&apos;
-</verbatim> [ VC: Root Element Type ] The Name in the document type declaration must match the element type of the root element.</para>
+</verbatim></para>
+<para>[ VC: Root Element Type ] The Name in the document type declaration must match the element type of the root element.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2782,7 +2808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="434" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7934" bodyend="7984" declfile="parserInternals.h" declline="434" declcolumn="1"/>
+        <location file="parserInternals.h" line="434" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7971" bodyend="8021" declfile="parserInternals.h" declline="434" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a0e5978e23f67fe45e83b333fe83339ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2803,11 +2829,14 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000225"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[41] Attribute ::= Name Eq AttValue
-</verbatim> [ WFC: No External Entity References ] Attribute values cannot contain direct or indirect entity references to external entities.</para>
+</verbatim></para>
+<para>[ WFC: No External Entity References ] Attribute values cannot contain direct or indirect entity references to external entities.</para>
 <para>[ WFC: No &lt; in Attribute Values ] The replacement text of any entity referred to directly or indirectly in an attribute value (other than &quot;&amp;lt;&quot;) must not contain a &lt;.</para>
 <para>[ VC: Attribute Value Type ] The attribute must have been declared; the value must be of the type declared for it. <verbatim>[25] Eq ::= S? &apos;=&apos; S?
-</verbatim> With namespace: <verbatim>[NS 11] Attribute ::= QName Eq AttValue
-</verbatim> Also the case QName == xmlns:??? is handled independently as a namespace definition.</para>
+</verbatim></para>
+<para>With namespace: <verbatim>[NS 11] Attribute ::= QName Eq AttValue
+</verbatim></para>
+<para>Also the case QName == xmlns:??? is handled independently as a namespace definition.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2821,7 +2850,7 @@
 <parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar ** used to store the value of the attribute </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> ** used to store the value of the attribute </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2831,7 +2860,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="438" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="8090" bodyend="8147" declfile="parserInternals.h" declline="438" declcolumn="1"/>
+        <location file="parserInternals.h" line="438" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="8127" bodyend="8184" declfile="parserInternals.h" declline="438" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1accecac577901df7f6c599bb6c771d223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2849,12 +2878,15 @@
 <para>Always consumes &apos;&lt;&apos;.</para>
 <para><xrefsect id="deprecated_1_deprecated000226"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[40] STag ::= &apos;&lt;&apos; Name (S Attribute)* S? &apos;&gt;&apos;
-</verbatim> [ WFC: Unique Att Spec ] No attribute name may appear more than once in the same start-tag or empty-element tag. <verbatim>[44] EmptyElemTag ::= &apos;&lt;&apos; Name (S Attribute)* S? &apos;/&gt;&apos;
-</verbatim> [ WFC: Unique Att Spec ] No attribute name may appear more than once in the same start-tag or empty-element tag.</para>
+</verbatim></para>
+<para>[ WFC: Unique Att Spec ] No attribute name may appear more than once in the same start-tag or empty-element tag. <verbatim>[44] EmptyElemTag ::= &apos;&lt;&apos; Name (S Attribute)* S? &apos;/&gt;&apos;
+</verbatim></para>
+<para>[ WFC: Unique Att Spec ] No attribute name may appear more than once in the same start-tag or empty-element tag.</para>
 <para>With namespace: <verbatim>[NS 8] STag ::= &apos;&lt;&apos; QName (S Attribute)* S? &apos;&gt;&apos;
 
 [NS 10] EmptyElement ::= &apos;&lt;&apos; QName (S Attribute)* S? &apos;/&gt;&apos;
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -2869,7 +2901,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="442" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="8177" bodyend="8292" declfile="parserInternals.h" declline="442" declcolumn="1"/>
+        <location file="parserInternals.h" line="442" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="8214" bodyend="8329" declfile="parserInternals.h" declline="442" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a5466ca7b20345c86cd7d24f61cacf3f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2886,7 +2918,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000227"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[42] ETag ::= &apos;&lt;/&apos; Name S? &apos;&gt;&apos;
-</verbatim> With namespace <verbatim>[NS 9] ETag ::= &apos;&lt;/&apos; QName S? &apos;&gt;&apos;
+</verbatim></para>
+<para>With namespace <verbatim>[NS 9] ETag ::= &apos;&lt;/&apos; QName S? &apos;&gt;&apos;
 </verbatim> <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2900,7 +2933,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="445" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="8368" bodyend="8370" declfile="parserInternals.h" declline="445" declcolumn="1"/>
+        <location file="parserInternals.h" line="445" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="8405" bodyend="8407" declfile="parserInternals.h" declline="445" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a2ba9053cb6fee6e2f987df6c6d26be26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2937,7 +2970,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="449" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9443" bodyend="9530" declfile="parserInternals.h" declline="449" declcolumn="1"/>
+        <location file="parserInternals.h" line="449" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9480" bodyend="9567" declfile="parserInternals.h" declline="449" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1adbf9a66d284c76bac8003c1c2ff3881f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2952,7 +2985,7 @@
 <para>Parse XML element content. </para>
         </briefdescription>
         <detaileddescription>
-<para>This is useful if you&apos;re only interested in custom SAX callbacks. If you want a node list, use xmlCtxtParseContent.</para>
+<para>This is useful if you&apos;re only interested in custom SAX callbacks. If you want a node list, use <ref refid="parser_8h_1ad9556fdbc45d529e94fa524298724fb8" kindref="member">xmlCtxtParseContent</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2966,7 +2999,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="451" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9644" bodyend="9653" declfile="parserInternals.h" declline="451" declcolumn="1"/>
+        <location file="parserInternals.h" line="451" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9681" bodyend="9690" declfile="parserInternals.h" declline="451" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a240422524ccb3fe68049095b4393c542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2983,7 +3016,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000229"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[39] element ::= EmptyElemTag | STag content ETag
-</verbatim> [ WFC: Element Type Match ] The Name in an element&apos;s end-tag must match the element type in the start-tag.</para>
+</verbatim></para>
+<para>[ WFC: Element Type Match ] The Name in an element&apos;s end-tag must match the element type in the start-tag.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2997,7 +3031,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="454" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9670" bodyend="9688" declfile="parserInternals.h" declline="454" declcolumn="1"/>
+        <location file="parserInternals.h" line="454" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9707" bodyend="9725" declfile="parserInternals.h" declline="454" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a670797843631a84ebac39cf046700fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3014,7 +3048,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000230"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[26] VersionNum ::= &apos;1.&apos; [0-9]+
-</verbatim> In practice allow [0-9].[0-9]+ at that level</para>
+</verbatim></para>
+<para>In practice allow [0-9].[0-9]+ at that level</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -3030,7 +3065,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="457" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9868" bodyend="9923" declfile="parserInternals.h" declline="457" declcolumn="1"/>
+        <location file="parserInternals.h" line="457" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9905" bodyend="9960" declfile="parserInternals.h" declline="457" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1aaaca1aa2b74c34eed201cb4cc125408d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3049,7 +3084,8 @@
 </xrefdescription></xrefsect><verbatim>[24] VersionInfo ::= S &apos;version&apos; Eq (&apos; VersionNum &apos; | &quot; VersionNum &quot;)
 
 [25] Eq ::= S? &apos;=&apos; S?
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -3064,7 +3100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="460" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9939" bodyend="9970" declfile="parserInternals.h" declline="460" declcolumn="1"/>
+        <location file="parserInternals.h" line="460" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9976" bodyend="10007" declfile="parserInternals.h" declline="460" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ac0c11ec1b39b0a5c7b7db9769ceb38c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3081,7 +3117,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000232"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[81] EncName ::= [A-Za-z] ([A-Za-z0-9._] | &apos;-&apos;)*
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -3096,7 +3133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="463" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="9983" bodyend="10037" declfile="parserInternals.h" declline="463" declcolumn="1"/>
+        <location file="parserInternals.h" line="463" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10020" bodyend="10074" declfile="parserInternals.h" declline="463" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a1c16987945067e7bd8bbcf0c4add92d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3114,7 +3151,8 @@
 <para><xrefsect id="deprecated_1_deprecated000233"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[80] EncodingDecl ::= S &apos;encoding&apos; Eq (&apos;&quot;&apos; EncName &apos;&quot;&apos; | 
                       &quot;&apos;&quot; EncName &quot;&apos;&quot;)
-</verbatim> this setups the conversion filters.</para>
+</verbatim></para>
+<para>this setups the conversion filters.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -3130,7 +3168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="466" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10054" bodyend="10097" declfile="parserInternals.h" declline="466" declcolumn="1"/>
+        <location file="parserInternals.h" line="466" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10091" bodyend="10134" declfile="parserInternals.h" declline="466" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a84c5e8622ff68f42cbddbfc23f639da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3148,7 +3186,8 @@
 <para><xrefsect id="deprecated_1_deprecated000234"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[32] SDDecl ::= S &apos;standalone&apos; Eq
                 ((&quot;&apos;&quot; (&apos;yes&apos; | &apos;no&apos;) &quot;&apos;&quot;) | (&apos;&quot;&apos; (&apos;yes&apos; | &apos;no&apos;)&apos;&quot;&apos;))
-</verbatim> [ VC: Standalone Document Declaration ] TODO The standalone document declaration must have the value &quot;no&quot; if any external markup declarations contain declarations of:<itemizedlist>
+</verbatim></para>
+<para>[ VC: Standalone Document Declaration ] TODO The standalone document declaration must have the value &quot;no&quot; if any external markup declarations contain declarations of:<itemizedlist>
 <listitem><para>attributes with default values, if elements to which these attributes apply appear in the document without specifications of values for these attributes, or</para>
 </listitem><listitem><para>entities (other than amp, lt, gt, apos, quot), if references to those entities appear in the document, or</para>
 </listitem><listitem><para>attributes with values subject to normalization, where the attribute appears in the document with a value which will change as a result of normalization, or</para>
@@ -3170,7 +3209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="469" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10131" bodyend="10181" declfile="parserInternals.h" declline="469" declcolumn="1"/>
+        <location file="parserInternals.h" line="469" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10168" bodyend="10218" declfile="parserInternals.h" declline="469" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a097e1b2fcd4ec9aaa525018ecc509f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3200,7 +3239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="472" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10193" bodyend="10296" declfile="parserInternals.h" declline="472" declcolumn="1"/>
+        <location file="parserInternals.h" line="472" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10230" bodyend="10333" declfile="parserInternals.h" declline="472" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ad8eccb1639a0f6dc363ceb98af78f5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3230,7 +3269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="475" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6953" bodyend="7011" declfile="parserInternals.h" declline="475" declcolumn="1"/>
+        <location file="parserInternals.h" line="475" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="6990" bodyend="7048" declfile="parserInternals.h" declline="475" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a0db98df0598c0943243e45b32db03437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3260,7 +3299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="478" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10336" bodyend="10348" declfile="parserInternals.h" declline="478" declcolumn="1"/>
+        <location file="parserInternals.h" line="478" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10373" bodyend="10385" declfile="parserInternals.h" declline="478" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1aff10a036cd8393b6efb8d2d4261da491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3317,7 +3356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="481" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7027" bodyend="7080" declfile="parserInternals.h" declline="481" declcolumn="1"/>
+        <location file="parserInternals.h" line="481" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="7064" bodyend="7117" declfile="parserInternals.h" declline="481" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1abd1f838f7aefd25d61420f6d63b3f504" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3382,7 +3421,7 @@
 <parametername>end</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an end marker xmlChar, 0 if none </para>
+<para>an end marker <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>, 0 if none </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3390,7 +3429,7 @@
 <parametername>end2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an end marker xmlChar, 0 if none </para>
+<para>an end marker <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>, 0 if none </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3398,7 +3437,7 @@
 <parametername>end3</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an end marker xmlChar, 0 if none </para>
+<para>an end marker <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>, 0 if none </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3408,7 +3447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="493" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2786" bodyend="2796" declfile="parserInternals.h" declline="493" declcolumn="1"/>
+        <location file="parserInternals.h" line="493" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2823" bodyend="2833" declfile="parserInternals.h" declline="493" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ae736cf9a2ac5fa5b9c1148b431d11f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3485,7 +3524,7 @@
 <parametername>end</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an end marker xmlChar, 0 if none </para>
+<para>an end marker <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>, 0 if none </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3493,7 +3532,7 @@
 <parametername>end2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an end marker xmlChar, 0 if none </para>
+<para>an end marker <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>, 0 if none </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3501,7 +3540,7 @@
 <parametername>end3</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an end marker xmlChar, 0 if none </para>
+<para>an end marker <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>, 0 if none </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3511,7 +3550,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="501" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2760" bodyend="2771" declfile="parserInternals.h" declline="501" declcolumn="1"/>
+        <location file="parserInternals.h" line="501" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2797" bodyend="2808" declfile="parserInternals.h" declline="501" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a72465e56811f83b1bf546cadfdea7c69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3543,7 +3582,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="513" column="7" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2318" bodyend="2344" declfile="parserInternals.h" declline="513" declcolumn="7"/>
+        <location file="parserInternals.h" line="513" column="6" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2355" bodyend="2381" declfile="parserInternals.h" declline="513" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a0ce0d0667b687571e31e56d19a7b74b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3599,7 +3638,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="515" column="7" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="1062" bodyend="1074" declfile="parserInternals.h" declline="515" declcolumn="7"/>
+        <location file="parserInternals.h" line="515" column="6" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="1062" bodyend="1074" declfile="parserInternals.h" declline="515" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a93a38df31ca2aaed815e95b634083210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3614,7 +3653,8 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>[69] PEReference ::= &apos;%&apos; Name &apos;;&apos;
-</verbatim> <xrefsect id="deprecated_1_deprecated000191"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, do not use.</para>
+</verbatim></para>
+<para><xrefsect id="deprecated_1_deprecated000191"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, do not use.</para>
 </xrefdescription></xrefsect></para>
 <para>[ WFC: No Recursion ] A parsed entity must not contain a recursive reference to itself, either directly or indirectly.</para>
 <para>[ WFC: Entity Declared ] In a document without any DTD, a document with only an internal DTD subset which contains no parameter entity references, or a document with &quot;standalone=&apos;yes&apos;&quot;, ... ... The declaration of a parameter entity must precede any reference to it...</para>
@@ -3637,7 +3677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="519" column="8" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2742" bodyend="2744" declfile="parserInternals.h" declline="519" declcolumn="8"/>
+        <location file="parserInternals.h" line="519" column="7" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="2779" bodyend="2781" declfile="parserInternals.h" declline="519" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ad71fb1ba67d4363dbba8b72777e64d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3660,7 +3700,8 @@
 [36] IanaCode ::= (&apos;i&apos; | &apos;I&apos;) &apos;-&apos; ([a-z] | [A-Z])+
 [37] UserCode ::= (&apos;x&apos; | &apos;X&apos;) &apos;-&apos; ([a-z] | [A-Z])+
 [38] Subcode ::= ([a-z] | [A-Z])+
-</verbatim> The current REC reference the successors of RFC 1766, currently 5646</para>
+</verbatim></para>
+<para>The current REC reference the successors of RFC 1766, currently 5646</para>
 <para><ulink url="http://www.rfc-editor.org/rfc/rfc5646.txt">http://www.rfc-editor.org/rfc/rfc5646.txt</ulink> <verbatim>langtag       = language
                 [&quot;-&quot; script]
                 [&quot;-&quot; region]
@@ -3693,7 +3734,8 @@ singleton     = DIGIT               ; 0 - 9
               / %x59-5A             ; Y - Z
               / %x61-77             ; a - w
               / %x79-7A             ; y - z
-</verbatim> it sounds right to still allow Irregular i-xxx IANA and user codes too The parser below doesn&apos;t try to cope with extension or privateuse that could be added but that&apos;s not interoperable anyway</para>
+</verbatim></para>
+<para>it sounds right to still allow Irregular i-xxx IANA and user codes too The parser below doesn&apos;t try to cope with extension or privateuse that could be added but that&apos;s not interoperable anyway</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>lang</parametername>
@@ -3709,7 +3751,7 @@ singleton     = DIGIT               ; 0 - 9
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="521" column="7" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="1266" bodyend="1399" declfile="parserInternals.h" declline="521" declcolumn="7"/>
+        <location file="parserInternals.h" line="521" column="6" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="1303" bodyend="1436" declfile="parserInternals.h" declline="521" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a0e00d86aefe659e1f1579ddafc782a1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3756,7 +3798,7 @@ singleton     = DIGIT               ; 0 - 9
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="527" column="7" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="924" bodyend="1047" declfile="parserInternals.h" declline="527" declcolumn="7"/>
+        <location file="parserInternals.h" line="527" column="6" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="924" bodyend="1047" declfile="parserInternals.h" declline="527" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a1300d25f4b5a2a8bcf9dc44766a51311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3782,7 +3824,7 @@ singleton     = DIGIT               ; 0 - 9
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an array of xmlChar </para>
+<para>pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3794,13 +3836,13 @@ singleton     = DIGIT               ; 0 - 9
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of xmlChar written </para>
+<simplesect kind="return"><para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> written </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="530" column="7" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="1086" bodyend="1115" declfile="parserInternals.h" declline="530" declcolumn="7"/>
+        <location file="parserInternals.h" line="530" column="6" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="1086" bodyend="1115" declfile="parserInternals.h" declline="530" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1a4ea1fa643a3a34af05a7e30f4beeed49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3838,7 +3880,7 @@ singleton     = DIGIT               ; 0 - 9
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an array of xmlChar </para>
+<para>pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3850,13 +3892,13 @@ singleton     = DIGIT               ; 0 - 9
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of xmlChar written </para>
+<simplesect kind="return"><para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> written </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="533" column="7" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="1129" bodyend="1137" declfile="parserInternals.h" declline="533" declcolumn="7"/>
+        <location file="parserInternals.h" line="533" column="6" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="1129" bodyend="1137" declfile="parserInternals.h" declline="533" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ac604226f3919b9dc3971c7e1162d7ae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3886,7 +3928,7 @@ singleton     = DIGIT               ; 0 - 9
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="537" column="8" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="817" bodyend="901" declfile="parserInternals.h" declline="537" declcolumn="8"/>
+        <location file="parserInternals.h" line="537" column="7" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="817" bodyend="901" declfile="parserInternals.h" declline="537" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8h_1ad93a96de5af50bda1122a4b9290690d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3916,7 +3958,7 @@ singleton     = DIGIT               ; 0 - 9
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parserInternals.h" line="539" column="8" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="779" bodyend="800" declfile="parserInternals.h" declline="539" declcolumn="8"/>
+        <location file="parserInternals.h" line="539" column="7" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="779" bodyend="800" declfile="parserInternals.h" declline="539" declcolumn="7"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

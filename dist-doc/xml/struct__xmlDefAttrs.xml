@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlDefAttrs" kind="struct" language="C++" prot="public">
     <compoundname>_xmlDefAttrs</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parser.c" line="961" column="9" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="961" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/parser.c" line="962" column="9" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="962" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlDefAttrs_1a05b1281d84d121f1aa56a32948621e51" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parser.c" line="962" column="9" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="962" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/parser.c" line="963" column="9" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="963" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlDefAttrs_1ab60be2ffd6f0438c4fb7dceb66d44dc9" prot="public" static="no" mutable="no">
         <type>xmlDefAttr</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parser.c" line="967" column="16" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="967" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/parser.c" line="968" column="16" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="968" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -61,7 +61,7 @@
         <label>xmlDefAttr</label>
       </node>
     </collaborationgraph>
-    <location file="/builds/GNOME/libxml2/parser.c" line="960" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="960" bodyend="969"/>
+    <location file="/builds/GNOME/libxml2/parser.c" line="961" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="961" bodyend="970"/>
     <listofallmembers>
       <member refid="struct__xmlDefAttrs_1ab60be2ffd6f0438c4fb7dceb66d44dc9" prot="public" virt="non-virtual"><scope>_xmlDefAttrs</scope><name>attrs</name></member>
       <member refid="struct__xmlDefAttrs_1a05b1281d84d121f1aa56a32948621e51" prot="public" virt="non-virtual"><scope>_xmlDefAttrs</scope><name>maxAttrs</name></member>

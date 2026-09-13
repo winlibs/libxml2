@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xpathInternals_8h" kind="file" language="C++">
     <compoundname>xpathInternals.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -155,7 +155,7 @@
         <name>xmlXPathSetError</name>
         <param><defname>ctxt</defname></param>
         <param><defname>err</defname></param>
-        <initializer>    { <ref refid="xpathInternals_8h_1ae6384ad043f70300fd2a2900a85e0dfc" kindref="member">xmlXPatherror</ref>((ctxt), __FILE__, __LINE__, (err));			\
+        <initializer>    { <ref refid="xpathInternals_8h_1ae6384ad043f70300fd2a2900a85e0dfc" kindref="member">xmlXPatherror</ref>((ctxt), __FILE__, __LINE__, (err));         \
       if ((ctxt) != NULL) (ctxt)-&gt;error = (err); }</initializer>
         <briefdescription>
 <para>Raises an error. </para>
@@ -174,7 +174,7 @@
 <parametername>err</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlXPathError code </para>
+<para>an <ref refid="xpath_8h_1a7da199d2e6655cca09f2a1de26dc93f4" kindref="member">xmlXPathError</ref> code </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -585,8 +585,8 @@
       <memberdef kind="define" id="xpathInternals_8h_1a3b979306dd34060a9a911f0267412c69" prot="public" static="no">
         <name>xmlXPathStackIsNodeSet</name>
         <param><defname>ctxt</defname></param>
-        <initializer>    (((ctxt)-&gt;value != NULL)						\
-     &amp;&amp; (((ctxt)-&gt;value-&gt;type == XPATH_NODESET)				\
+        <initializer>    (((ctxt)-&gt;value != NULL)                        \
+     &amp;&amp; (((ctxt)-&gt;value-&gt;type == XPATH_NODESET)             \
          || ((ctxt)-&gt;value-&gt;type == XPATH_XSLT_TREE)))</initializer>
         <briefdescription>
 <para>Check if the current value on the XPath stack is a node set or an XSLT value tree. </para>
@@ -612,7 +612,7 @@
       <memberdef kind="define" id="xpathInternals_8h_1a94cbcf5d5a87d4365f2fba138c899c0d" prot="public" static="no">
         <name>xmlXPathStackIsExternal</name>
         <param><defname>ctxt</defname></param>
-        <initializer>	((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type == XPATH_USERS))</initializer>
+        <initializer>    ((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type == XPATH_USERS))</initializer>
         <briefdescription>
 <para>Checks if the current value on the XPath stack is an external object. </para>
         </briefdescription>
@@ -730,7 +730,7 @@
       <memberdef kind="define" id="xpathInternals_8h_1a7414bc334523da00d11d976d7f086775" prot="public" static="no">
         <name>CHECK_TYPE</name>
         <param><defname>typeval</defname></param>
-        <initializer>    if ((ctxt-&gt;value == NULL) || (ctxt-&gt;value-&gt;type != typeval))	\
+        <initializer>    if ((ctxt-&gt;value == NULL) || (ctxt-&gt;value-&gt;type != typeval))    \
         <ref refid="xpathInternals_8h_1a76ab288f52e6b49606b163770b63491c" kindref="member">XP_ERROR</ref>(XPATH_INVALID_TYPE)</initializer>
         <briefdescription>
 <para>Macro to check that the value on top of the XPath stack is of a given type. </para>
@@ -754,7 +754,7 @@
       <memberdef kind="define" id="xpathInternals_8h_1ae933a10b8ec66918784fbb27e42295f2" prot="public" static="no">
         <name>CHECK_TYPE0</name>
         <param><defname>typeval</defname></param>
-        <initializer>    if ((ctxt-&gt;value == NULL) || (ctxt-&gt;value-&gt;type != typeval))	\
+        <initializer>    if ((ctxt-&gt;value == NULL) || (ctxt-&gt;value-&gt;type != typeval))    \
         <ref refid="xpathInternals_8h_1a61c62f777c082b056779ee79ec1088a6" kindref="member">XP_ERROR0</ref>(XPATH_INVALID_TYPE)</initializer>
         <briefdescription>
 <para>Macro to check that the value on top of the XPath stack is of a given type. </para>
@@ -779,10 +779,10 @@
       <memberdef kind="define" id="xpathInternals_8h_1abc76ca9283e8c040bd642027db3d1608" prot="public" static="no">
         <name>CHECK_ARITY</name>
         <param><defname>x</defname></param>
-        <initializer>    if (ctxt == NULL) return;						\
-    if (nargs != (x))							\
-        <ref refid="xpathInternals_8h_1a76ab288f52e6b49606b163770b63491c" kindref="member">XP_ERROR</ref>(XPATH_INVALID_ARITY);					\
-    if (ctxt-&gt;valueNr &lt; (x))						\
+        <initializer>    if (ctxt == NULL) return;                       \
+    if (nargs != (x))                           \
+        <ref refid="xpathInternals_8h_1a76ab288f52e6b49606b163770b63491c" kindref="member">XP_ERROR</ref>(XPATH_INVALID_ARITY);                  \
+    if (ctxt-&gt;valueNr &lt; (x))                        \
         <ref refid="xpathInternals_8h_1a76ab288f52e6b49606b163770b63491c" kindref="member">XP_ERROR</ref>(XPATH_STACK_ERROR);</initializer>
         <briefdescription>
 <para>Macro to check that the number of args passed to an XPath function matches. </para>
@@ -805,7 +805,7 @@
       </memberdef>
       <memberdef kind="define" id="xpathInternals_8h_1a6a329f67ad6c8a0941761d1063b9ad12" prot="public" static="no">
         <name>CAST_TO_STRING</name>
-        <initializer>    if ((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type != XPATH_STRING))	\
+        <initializer>    if ((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type != XPATH_STRING))   \
         <ref refid="xpathInternals_8h_1afdd4e13dfc2f360c2e2d5aea14515965" kindref="member">xmlXPathStringFunction</ref>(ctxt, 1);</initializer>
         <briefdescription>
 <para>Macro to try to cast the value on the top of the XPath stack to a string. </para>
@@ -818,7 +818,7 @@
       </memberdef>
       <memberdef kind="define" id="xpathInternals_8h_1a96966c77d8ec46ac07c05d9f397d7ecf" prot="public" static="no">
         <name>CAST_TO_NUMBER</name>
-        <initializer>    if ((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type != XPATH_NUMBER))	\
+        <initializer>    if ((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type != XPATH_NUMBER))   \
         <ref refid="xpathInternals_8h_1a1f0bf9e5239a94e4bd6df081250c1267" kindref="member">xmlXPathNumberFunction</ref>(ctxt, 1);</initializer>
         <briefdescription>
 <para>Macro to try to cast the value on the top of the XPath stack to a number. </para>
@@ -831,7 +831,7 @@
       </memberdef>
       <memberdef kind="define" id="xpathInternals_8h_1a77bd8afbaebdb00c377eefd2a8d7b109" prot="public" static="no">
         <name>CAST_TO_BOOLEAN</name>
-        <initializer>    if ((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type != XPATH_BOOLEAN))	\
+        <initializer>    if ((ctxt-&gt;value != NULL) &amp;&amp; (ctxt-&gt;value-&gt;type != XPATH_BOOLEAN))  \
         <ref refid="xpathInternals_8h_1ab676a2744f1daa42293da6df94ac6323" kindref="member">xmlXPathBooleanFunction</ref>(ctxt, 1);</initializer>
         <briefdescription>
 <para>Macro to try to cast the value on the top of the XPath stack to a boolean. </para>
@@ -1369,7 +1369,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets difference() function: node-set set:difference (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets difference() function: node-set set:difference (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1411,7 +1411,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets intersection() function: node-set set:intersection (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets intersection() function: node-set set:intersection (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1449,7 +1449,7 @@
           <declname>nodes</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets distinct() function: node-set set:distinct (node-set) </para>
+<para>Implements the EXSLT - Sets distinct() function: node-set set:distinct (node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1513,7 +1513,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets has-same-nodes function: boolean set:has-same-node(node-set, node-set) </para>
+<para>Implements the EXSLT - Sets has-same-nodes function: boolean set:has-same-node(node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1555,7 +1555,7 @@
           <declname>node</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1597,7 +1597,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1723,7 +1723,7 @@
           <declname>node</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1765,7 +1765,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1807,7 +1807,7 @@
           <declname>node</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes</computeroutput> is sorted by document order, then xmlXPathNodeTrailingSorted is called. </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes</computeroutput> is sorted by document order, then <ref refid="xpathInternals_8h_1aeb2b250c234c721cac0f9da2d79dab1b" kindref="member">xmlXPathNodeTrailingSorted</ref> is called. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1849,7 +1849,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes1</computeroutput> and <computeroutput>nodes2</computeroutput> are sorted by document order, then xmlXPathTrailingSorted is called. </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes1</computeroutput> and <computeroutput>nodes2</computeroutput> are sorted by document order, then <ref refid="xpathInternals_8h_1ac97e04415a121b3fb6bc8eeae01f2ac7" kindref="member">xmlXPathTrailingSorted</ref> is called. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2281,7 +2281,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathFunction or NULL if not found </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1af14b092a07fae2df72d32daec7e0eecc" kindref="member">xmlXPathFunction</ref> or NULL if not found </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2335,7 +2335,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathFunction or NULL if not found </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1af14b092a07fae2df72d32daec7e0eecc" kindref="member">xmlXPathFunction</ref> or NULL if not found </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2530,7 +2530,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathParserContext just allocated. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a7288215d1b5913fa6c3ba96456da35fc" kindref="member">xmlXPathParserContext</ref> just allocated. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2548,7 +2548,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Free up an xmlXPathParserContext. </para>
+<para>Free up an <ref refid="xpath_8h_1a7288215d1b5913fa6c3ba96456da35fc" kindref="member">xmlXPathParserContext</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2650,7 +2650,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type string and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type string and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2658,7 +2658,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * value </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2680,7 +2680,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type string and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type string and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2719,7 +2719,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * value </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2771,7 +2771,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type double and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type double and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2801,7 +2801,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type boolean and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type boolean and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2831,7 +2831,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type NodeSet and initialize it with the single Node <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type NodeSet and initialize it with the single Node <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2861,7 +2861,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type Value Tree (XSLT) and initialize it with the tree root <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type Value Tree (XSLT) and initialize it with the tree root <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2895,7 +2895,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>add a new xmlNode to an existing NodeSet </para>
+<para>add a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> to an existing NodeSet </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2911,7 +2911,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a new xmlNode </para>
+<para>a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2937,7 +2937,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>add a new xmlNode to an existing NodeSet, optimized version when we are sure the node is not already in the set. </para>
+<para>add a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> to an existing NodeSet, optimized version when we are sure the node is not already in the set. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2953,7 +2953,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a new xmlNode </para>
+<para>a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3284,7 +3284,7 @@
           <declname>val2</declname>
         </param>
         <briefdescription>
-<para>Merges two nodesets, all nodes from <computeroutput>val2</computeroutput> are added to <computeroutput>val1</computeroutput> if <computeroutput>val1</computeroutput> is NULL, a new set is created and copied from <computeroutput>val2</computeroutput> </para>
+<para>Merges two nodesets, all nodes from <computeroutput>val2</computeroutput> are added to <computeroutput>val1</computeroutput> if <computeroutput>val1</computeroutput> is NULL, a new set is created and copied from <computeroutput>val2</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Frees <computeroutput>val1</computeroutput> in case of error.</para>
@@ -3327,7 +3327,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Removes an xmlNode from an existing NodeSet. </para>
+<para>Removes an <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> from an existing NodeSet. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3343,7 +3343,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlNode </para>
+<para>an <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3403,7 +3403,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type NodeSet and initialize it with the Nodeset <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type NodeSet and initialize it with the Nodeset <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3433,7 +3433,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Wrap the Nodeset <computeroutput>val</computeroutput> in a new xmlXPathObject. </para>
+<para>Wrap the Nodeset <computeroutput>val</computeroutput> in a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>In case of error the node set is destroyed and NULL is returned.</para>
@@ -3494,7 +3494,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput> </para>
+<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3512,7 +3512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="528" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5702" bodyend="5766" declfile="xpathInternals.h" declline="528" declcolumn="8"/>
+        <location file="xpathInternals.h" line="528" column="7" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5702" bodyend="5766" declfile="xpathInternals.h" declline="528" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a9a3bda1b42af8caedbfba8d78c9472f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3524,7 +3524,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput> </para>
+<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3542,7 +3542,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="529" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5775" bodyend="5839" declfile="xpathInternals.h" declline="529" declcolumn="8"/>
+        <location file="xpathInternals.h" line="529" column="7" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5775" bodyend="5839" declfile="xpathInternals.h" declline="529" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1ace4a750a2c33c267d217c9c22f60d070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3597,7 +3597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="530" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5864" bodyend="5966" declfile="xpathInternals.h" declline="530" declcolumn="8"/>
+        <location file="xpathInternals.h" line="530" column="7" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5864" bodyend="5966" declfile="xpathInternals.h" declline="530" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a3592f6d9969fc062ad05bdd8c925da89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3625,7 +3625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="531" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5976" bodyend="5981" declfile="xpathInternals.h" declline="531" declcolumn="9"/>
+        <location file="xpathInternals.h" line="531" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5976" bodyend="5981" declfile="xpathInternals.h" declline="531" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1ae0a3f5186736cde0eceb126226c74eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3653,7 +3653,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="532" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5991" bodyend="6003" declfile="xpathInternals.h" declline="532" declcolumn="9"/>
+        <location file="xpathInternals.h" line="532" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="5991" bodyend="6003" declfile="xpathInternals.h" declline="532" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a1adcad9faad7067006b0821330abd7af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3681,7 +3681,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="533" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6013" bodyend="6025" declfile="xpathInternals.h" declline="533" declcolumn="9"/>
+        <location file="xpathInternals.h" line="533" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6013" bodyend="6025" declfile="xpathInternals.h" declline="533" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1adbc7f8c5c7a746df7bc198c090950563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3709,7 +3709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="534" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6035" bodyend="6047" declfile="xpathInternals.h" declline="534" declcolumn="9"/>
+        <location file="xpathInternals.h" line="534" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6035" bodyend="6047" declfile="xpathInternals.h" declline="534" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1aa82149aa27ae8608f4aa0a6aa655383d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3738,7 +3738,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="535" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6058" bodyend="6070" declfile="xpathInternals.h" declline="535" declcolumn="9"/>
+        <location file="xpathInternals.h" line="535" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6058" bodyend="6070" declfile="xpathInternals.h" declline="535" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1aaca1cb35f240a367d0ae95e5c4b24dcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3766,7 +3766,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="536" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6080" bodyend="6097" declfile="xpathInternals.h" declline="536" declcolumn="9"/>
+        <location file="xpathInternals.h" line="536" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6080" bodyend="6097" declfile="xpathInternals.h" declline="536" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a81f65fe041d74301aa0dd555405710b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3797,7 +3797,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="538" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8548" bodyend="8561" declfile="xpathInternals.h" declline="538" declcolumn="8"/>
+        <location file="xpathInternals.h" line="538" column="7" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8548" bodyend="8561" declfile="xpathInternals.h" declline="538" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a5e01a2d83187035cf9c9a9bceab32d15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -3839,7 +3839,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="543" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6138" bodyend="6143" declfile="xpathInternals.h" declline="543" declcolumn="12"/>
+        <location file="xpathInternals.h" line="543" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6138" bodyend="6143" declfile="xpathInternals.h" declline="543" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a099c7364489b00468960cea44be83989" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -3881,7 +3881,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="545" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6154" bodyend="6189" declfile="xpathInternals.h" declline="545" declcolumn="12"/>
+        <location file="xpathInternals.h" line="545" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6154" bodyend="6189" declfile="xpathInternals.h" declline="545" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a0fd7151b722e672687497208c771bac2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -3923,7 +3923,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="547" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6271" bodyend="6320" declfile="xpathInternals.h" declline="547" declcolumn="12"/>
+        <location file="xpathInternals.h" line="547" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6271" bodyend="6320" declfile="xpathInternals.h" declline="547" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a6399996c0d24d9e731052a5f1856d6b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -3965,7 +3965,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="549" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6334" bodyend="6346" declfile="xpathInternals.h" declline="549" declcolumn="12"/>
+        <location file="xpathInternals.h" line="549" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6334" bodyend="6346" declfile="xpathInternals.h" declline="549" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a39e55ada282525f3108e31c2b973e67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4007,7 +4007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="551" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6357" bodyend="6410" declfile="xpathInternals.h" declline="551" declcolumn="12"/>
+        <location file="xpathInternals.h" line="551" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6357" bodyend="6410" declfile="xpathInternals.h" declline="551" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a3a6050c2850842bc3b9080a5d045944c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4049,7 +4049,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="553" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6541" bodyend="6546" declfile="xpathInternals.h" declline="553" declcolumn="12"/>
+        <location file="xpathInternals.h" line="553" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6541" bodyend="6546" declfile="xpathInternals.h" declline="553" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a05976f32d8ecbd08eff79ae4fef5840d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4091,7 +4091,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="555" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6558" bodyend="6574" declfile="xpathInternals.h" declline="555" declcolumn="12"/>
+        <location file="xpathInternals.h" line="555" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6558" bodyend="6574" declfile="xpathInternals.h" declline="555" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a99399f1dc2ef8dc63b562f4980dc9816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4133,7 +4133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="557" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6622" bodyend="6663" declfile="xpathInternals.h" declline="557" declcolumn="12"/>
+        <location file="xpathInternals.h" line="557" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6622" bodyend="6663" declfile="xpathInternals.h" declline="557" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a5451d9778c42b44dad49710de68adb07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4176,7 +4176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="559" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6814" bodyend="6841" declfile="xpathInternals.h" declline="559" declcolumn="12"/>
+        <location file="xpathInternals.h" line="559" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6814" bodyend="6841" declfile="xpathInternals.h" declline="559" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1af75ff4460ed427e726bdf8125cec6708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4218,7 +4218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="561" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6852" bodyend="6864" declfile="xpathInternals.h" declline="561" declcolumn="12"/>
+        <location file="xpathInternals.h" line="561" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6852" bodyend="6864" declfile="xpathInternals.h" declline="561" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1afd8254c069300b813ae161f7c815bdca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4260,7 +4260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="563" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6705" bodyend="6738" declfile="xpathInternals.h" declline="563" declcolumn="12"/>
+        <location file="xpathInternals.h" line="563" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6705" bodyend="6738" declfile="xpathInternals.h" declline="563" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1ace2cefc82c9cace7bb2388292f469bb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4302,7 +4302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="565" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6425" bodyend="6527" declfile="xpathInternals.h" declline="565" declcolumn="12"/>
+        <location file="xpathInternals.h" line="565" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6425" bodyend="6527" declfile="xpathInternals.h" declline="565" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a8d2650b83f00ce98bec29511dcb4839c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4344,7 +4344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="567" column="12" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6587" bodyend="6608" declfile="xpathInternals.h" declline="567" declcolumn="12"/>
+        <location file="xpathInternals.h" line="567" column="11" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6587" bodyend="6608" declfile="xpathInternals.h" declline="567" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1acdd54429eea94aeea8a1a7e62f3edd1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4384,7 +4384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="572" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6911" bodyend="6919" declfile="xpathInternals.h" declline="572" declcolumn="9"/>
+        <location file="xpathInternals.h" line="572" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6911" bodyend="6919" declfile="xpathInternals.h" declline="572" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1acad14cfecc0b1a3f022f3ab842e85230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4425,7 +4425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="573" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6932" bodyend="6940" declfile="xpathInternals.h" declline="573" declcolumn="9"/>
+        <location file="xpathInternals.h" line="573" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6932" bodyend="6940" declfile="xpathInternals.h" declline="573" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a14c87282d69fe67b78a71a1c6f1d33ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4441,7 +4441,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the count() XPath function number count(node-set) </para>
+<para>Implement the count() XPath function number count(node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4465,7 +4465,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="574" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6950" bodyend="6966" declfile="xpathInternals.h" declline="574" declcolumn="9"/>
+        <location file="xpathInternals.h" line="574" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6950" bodyend="6966" declfile="xpathInternals.h" declline="574" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1ac2654c2c6a2c519e8d40d1038bafc769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4506,7 +4506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="575" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7047" bodyend="7093" declfile="xpathInternals.h" declline="575" declcolumn="9"/>
+        <location file="xpathInternals.h" line="575" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7047" bodyend="7093" declfile="xpathInternals.h" declline="575" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a8cd2d6631b99dc2eca5bf37f4139a480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4547,7 +4547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="576" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7108" bodyend="7148" declfile="xpathInternals.h" declline="576" declcolumn="9"/>
+        <location file="xpathInternals.h" line="576" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7108" bodyend="7148" declfile="xpathInternals.h" declline="576" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a70135553f370ff6690cf06765ccc16e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4588,7 +4588,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="577" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7164" bodyend="7198" declfile="xpathInternals.h" declline="577" declcolumn="9"/>
+        <location file="xpathInternals.h" line="577" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7164" bodyend="7198" declfile="xpathInternals.h" declline="577" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1afdd4e13dfc2f360c2e2d5aea14515965" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4644,7 +4644,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="578" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7312" bodyend="7336" declfile="xpathInternals.h" declline="578" declcolumn="9"/>
+        <location file="xpathInternals.h" line="578" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7312" bodyend="7336" declfile="xpathInternals.h" declline="578" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1aeef7fcef703712fc7863d7e8be56e4ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4685,7 +4685,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="579" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7350" bodyend="7377" declfile="xpathInternals.h" declline="579" declcolumn="9"/>
+        <location file="xpathInternals.h" line="579" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7350" bodyend="7377" declfile="xpathInternals.h" declline="579" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a6537f284bcf52cadc52aead435d27097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4725,7 +4725,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="580" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7388" bodyend="7422" declfile="xpathInternals.h" declline="580" declcolumn="9"/>
+        <location file="xpathInternals.h" line="580" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7388" bodyend="7422" declfile="xpathInternals.h" declline="580" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1ad82bdd2c21d4077d2a9783a245de21d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4765,7 +4765,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="581" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7434" bodyend="7455" declfile="xpathInternals.h" declline="581" declcolumn="9"/>
+        <location file="xpathInternals.h" line="581" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7434" bodyend="7455" declfile="xpathInternals.h" declline="581" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a915600485f61e82c4cae87998f6b923b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4805,7 +4805,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="582" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7467" bodyend="7490" declfile="xpathInternals.h" declline="582" declcolumn="9"/>
+        <location file="xpathInternals.h" line="582" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7467" bodyend="7490" declfile="xpathInternals.h" declline="582" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a6f64db9fe362ed28ff1544358f85e92f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4854,7 +4854,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="583" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7520" bodyend="7592" declfile="xpathInternals.h" declline="583" declcolumn="9"/>
+        <location file="xpathInternals.h" line="583" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7520" bodyend="7592" declfile="xpathInternals.h" declline="583" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a1f461c88524b13f7261221909b03c178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4895,7 +4895,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="584" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7607" bodyend="7636" declfile="xpathInternals.h" declline="584" declcolumn="9"/>
+        <location file="xpathInternals.h" line="584" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7607" bodyend="7636" declfile="xpathInternals.h" declline="584" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a7fa3d15a15120157b449e410e9236018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4936,7 +4936,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="585" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7652" bodyend="7681" declfile="xpathInternals.h" declline="585" declcolumn="9"/>
+        <location file="xpathInternals.h" line="585" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7652" bodyend="7681" declfile="xpathInternals.h" declline="585" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a62640542b285f7547c386be9fb40c66c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4977,7 +4977,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="586" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7697" bodyend="7738" declfile="xpathInternals.h" declline="586" declcolumn="9"/>
+        <location file="xpathInternals.h" line="586" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7697" bodyend="7738" declfile="xpathInternals.h" declline="586" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a0c3d0434021a6b558c775857ccbf2cc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5018,7 +5018,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="587" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7762" bodyend="7848" declfile="xpathInternals.h" declline="587" declcolumn="9"/>
+        <location file="xpathInternals.h" line="587" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7762" bodyend="7848" declfile="xpathInternals.h" declline="587" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a5a1e59a6f0867a8a9fe99385cf318ecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5058,7 +5058,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="588" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7888" bodyend="7893" declfile="xpathInternals.h" declline="588" declcolumn="9"/>
+        <location file="xpathInternals.h" line="588" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7888" bodyend="7893" declfile="xpathInternals.h" declline="588" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a7a3e752f52d1b3c1f2003f350327bd1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5074,7 +5074,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the true() XPath function boolean true() </para>
+<para>Implement the true() XPath function boolean true(). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5098,7 +5098,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="589" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7903" bodyend="7906" declfile="xpathInternals.h" declline="589" declcolumn="9"/>
+        <location file="xpathInternals.h" line="589" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7903" bodyend="7906" declfile="xpathInternals.h" declline="589" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1afa63a4d28cc77129e5efcb8870cadbc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5114,7 +5114,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the false() XPath function boolean false() </para>
+<para>Implement the false() XPath function boolean false(). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5138,7 +5138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="590" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7916" bodyend="7919" declfile="xpathInternals.h" declline="590" declcolumn="9"/>
+        <location file="xpathInternals.h" line="590" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7916" bodyend="7919" declfile="xpathInternals.h" declline="590" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1aa59c3d11549c030132571a35e69f2ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5179,7 +5179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="591" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7942" bodyend="7977" declfile="xpathInternals.h" declline="591" declcolumn="9"/>
+        <location file="xpathInternals.h" line="591" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7942" bodyend="7977" declfile="xpathInternals.h" declline="591" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a1f0bf9e5239a94e4bd6df081250c1267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5195,7 +5195,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the number() XPath function number number(object?) </para>
+<para>Implement the number() XPath function number number(object?). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5219,7 +5219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="592" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7987" bodyend="8017" declfile="xpathInternals.h" declline="592" declcolumn="9"/>
+        <location file="xpathInternals.h" line="592" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7987" bodyend="8017" declfile="xpathInternals.h" declline="592" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a3b67d860dc6d48ca629b56dafa17d627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5259,7 +5259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="593" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8029" bodyend="8049" declfile="xpathInternals.h" declline="593" declcolumn="9"/>
+        <location file="xpathInternals.h" line="593" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8029" bodyend="8049" declfile="xpathInternals.h" declline="593" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a314b7c7d1e8c7207e88d898d8cb2d129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5299,7 +5299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="594" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8061" bodyend="8067" declfile="xpathInternals.h" declline="594" declcolumn="9"/>
+        <location file="xpathInternals.h" line="594" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8061" bodyend="8067" declfile="xpathInternals.h" declline="594" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a518fbc8a273670d0fe74e7c8fa9132ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5339,7 +5339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="595" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8079" bodyend="8090" declfile="xpathInternals.h" declline="595" declcolumn="9"/>
+        <location file="xpathInternals.h" line="595" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8079" bodyend="8090" declfile="xpathInternals.h" declline="595" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1ae3b2b038d37b204eefed5527adc18edd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5380,7 +5380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="596" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8103" bodyend="8122" declfile="xpathInternals.h" declline="596" declcolumn="9"/>
+        <location file="xpathInternals.h" line="596" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="8103" bodyend="8122" declfile="xpathInternals.h" declline="596" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1ab676a2744f1daa42293da6df94ac6323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5426,7 +5426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="597" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7863" bodyend="7876" declfile="xpathInternals.h" declline="597" declcolumn="9"/>
+        <location file="xpathInternals.h" line="597" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="7863" bodyend="7876" declfile="xpathInternals.h" declline="597" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xpathInternals_8h_1a39e0447df3578ec1b4d9d1c4a36c93be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5456,7 +5456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpathInternals.h" line="602" column="9" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="2647" bodyend="2658" declfile="xpathInternals.h" declline="602" declcolumn="9"/>
+        <location file="xpathInternals.h" line="602" column="8" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="2647" bodyend="2658" declfile="xpathInternals.h" declline="602" declcolumn="8"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

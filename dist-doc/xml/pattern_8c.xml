@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="pattern_8c" kind="file" language="C++">
     <compoundname>pattern.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -441,9 +441,9 @@
       </memberdef>
       <memberdef kind="define" id="pattern_8c_1a1732ec6c4f5a76f507ab823ef334b928" prot="public" static="no">
         <name>XML_PATTERN_NOTPATTERN</name>
-        <initializer>				 (XML_PATTERN_XPATH | \
-				 XML_PATTERN_XSSEL | \
-				 XML_PATTERN_XSFIELD)</initializer>
+        <initializer>                 (XML_PATTERN_XPATH | \
+                 XML_PATTERN_XSSEL | \
+                 XML_PATTERN_XSFIELD)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -495,7 +495,7 @@
         <param><defname>r</defname></param>
         <param><defname>nsname</defname></param>
         <initializer>    if ((c)-&gt;comp-&gt;dict) \
-	r = (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) <ref refid="dict_8h_1a84f7c91566b9ad4859c0b3674e9e3111" kindref="member">xmlDictLookup</ref>((c)-&gt;comp-&gt;dict, <ref refid="xmlstring_8h_1ad0a78338bf196a676079310a7b9c7599" kindref="member">BAD_CAST</ref> nsname, -1); \
+    r = (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) <ref refid="dict_8h_1a84f7c91566b9ad4859c0b3674e9e3111" kindref="member">xmlDictLookup</ref>((c)-&gt;comp-&gt;dict, <ref refid="xmlstring_8h_1ad0a78338bf196a676079310a7b9c7599" kindref="member">BAD_CAST</ref> nsname, -1); \
     else r = <ref refid="xmlstring_8h_1ae4beae949ad19f3ba61b010ba5bcf5c6" kindref="member">xmlStrdup</ref>(<ref refid="xmlstring_8h_1ad0a78338bf196a676079310a7b9c7599" kindref="member">BAD_CAST</ref> nsname);</initializer>
         <briefdescription>
         </briefdescription>
@@ -922,7 +922,7 @@
 <para>Create a new XSLT Pattern. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>the newly allocated xmlPattern or NULL in case of error </para>
+<para><simplesect kind="return"><para>the newly allocated <ref refid="pattern_8h_1ab90eb710cd869b8620373f1b62c5d543" kindref="member">xmlPattern</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -940,7 +940,7 @@
           <declname>comp</declname>
         </param>
         <briefdescription>
-<para>Free up the memory allocated by <computeroutput>comp</computeroutput> </para>
+<para>Free up the memory allocated by <computeroutput>comp</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -985,7 +985,7 @@
           <declname>comp</declname>
         </param>
         <briefdescription>
-<para>Free up the memory allocated by all the elements of <computeroutput>comp</computeroutput> </para>
+<para>Free up the memory allocated by all the elements of <computeroutput>comp</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1067,7 +1067,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Free up the memory allocated by <computeroutput>ctxt</computeroutput> </para>
+<para>Free up the memory allocated by <computeroutput>ctxt</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1224,7 +1224,7 @@
           <declname>step</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -1245,7 +1245,7 @@
           <declname>comp</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -1381,7 +1381,7 @@
 <para>Compile the Step Pattern and generates a precompiled form suitable for fast matching. </para>
         </briefdescription>
         <detaileddescription>
-<para>[3] Step ::= &apos;.&apos; | NameTest [4] NameTest ::= QName | &apos;*&apos; | NCName &apos;:&apos; &apos;*&apos;</para>
+<para>[3] Step ::= &apos;.&apos; | NameTest [4] NameTest ::= QName | &apos;<emphasis>&apos; | NCName &apos;:&apos; &apos;</emphasis>&apos;</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -1730,7 +1730,7 @@
 <para>Push new data onto the stream. </para>
         </briefdescription>
         <detaileddescription>
-<para>NOTE: if the call xmlPatterncompile indicated a dictionary, then strings for name and ns will be expected to come from the dictionary. Both <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> being NULL means the / i.e. the root of the document. This can also act as a reset.</para>
+<para>NOTE: if the call <ref refid="pattern_8h_1adad9188fd6810270fb0896b75291f817" kindref="member">xmlPatterncompile</ref> indicated a dictionary, then strings for name and ns will be expected to come from the dictionary. Both <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> being NULL means the / i.e. the root of the document. This can also act as a reset.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>stream</parametername>
@@ -1793,7 +1793,7 @@
 <para>Push new data onto the stream. </para>
         </briefdescription>
         <detaileddescription>
-<para>NOTE: if the call xmlPatterncompile indicated a dictionary, then strings for name and ns will be expected to come from the dictionary. Both <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> being NULL means the / i.e. the root of the document. This can also act as a reset. Otherwise the function will act as if it has been given an element-node.</para>
+<para>NOTE: if the call <ref refid="pattern_8h_1adad9188fd6810270fb0896b75291f817" kindref="member">xmlPatterncompile</ref> indicated a dictionary, then strings for name and ns will be expected to come from the dictionary. Both <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> being NULL means the / i.e. the root of the document. This can also act as a reset. Otherwise the function will act as if it has been given an element-node.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>stream</parametername>
@@ -1852,7 +1852,7 @@
 <para>Push new data onto the stream. </para>
         </briefdescription>
         <detaileddescription>
-<para>NOTE: if the call xmlPatterncompile indicated a dictionary, then strings for name and ns will be expected to come from the dictionary. Both <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> being NULL means the / i.e. the root of the document. This can also act as a reset. Different from xmlStreamPush this function can be fed with nodes of type: element-, attribute-, text-, cdata-section-, comment- and processing-instruction-node.</para>
+<para>NOTE: if the call <ref refid="pattern_8h_1adad9188fd6810270fb0896b75291f817" kindref="member">xmlPatterncompile</ref> indicated a dictionary, then strings for name and ns will be expected to come from the dictionary. Both <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> being NULL means the / i.e. the root of the document. This can also act as a reset. Different from <ref refid="pattern_8h_1afacfcf0c465a75527a40718893550461" kindref="member">xmlStreamPush</ref> this function can be fed with nodes of type: element-, attribute-, text-, cdata-section-, comment- and processing-instruction-node.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>stream</parametername>
@@ -1915,7 +1915,7 @@
 <para>Push new attribute data onto the stream. </para>
         </briefdescription>
         <detaileddescription>
-<para>NOTE: If the call to xmlPatterncompile indicated a dictionary, then strings for <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> will be expected to come from the dictionary.</para>
+<para>NOTE: If the call to <ref refid="pattern_8h_1adad9188fd6810270fb0896b75291f817" kindref="member">xmlPatterncompile</ref> indicated a dictionary, then strings for <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> will be expected to come from the dictionary.</para>
 <para>Both <computeroutput>name</computeroutput> and <computeroutput>ns</computeroutput> being NULL means the root of the document. This can also act as a reset. Otherwise the function will act as if it has been given an attribute-node.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2063,7 +2063,7 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>compilation flags, see xmlPatternFlags </para>
+<para>compilation flags, see <ref refid="pattern_8h_1ab16e18ec27cc560a78950a161958aba6" kindref="member">xmlPatternFlags</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2137,7 +2137,7 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>compilation flags, see xmlPatternFlags </para>
+<para>compilation flags, see <ref refid="pattern_8h_1ab16e18ec27cc560a78950a161958aba6" kindref="member">xmlPatternFlags</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2209,7 +2209,7 @@
           <declname>comp</declname>
         </param>
         <briefdescription>
-<para>Get a streaming context for that pattern Use xmlFreeStreamCtxt to free the context. </para>
+<para>Get a streaming context for that pattern Use <ref refid="pattern_8h_1ab5594822914fd8080c4f9f1fd77288f0" kindref="member">xmlFreeStreamCtxt</ref> to free the context. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2242,7 +2242,7 @@
 <para>Check if the pattern is streamable i.e. </para>
         </briefdescription>
         <detaileddescription>
-<para>xmlPatternGetStreamCtxt should work.</para>
+<para><ref refid="pattern_8h_1a70c14ecbf34ae4f57265237142a9f2d0" kindref="member">xmlPatternGetStreamCtxt</ref> should work.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>comp</parametername>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaSAXPlug" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaSAXPlug</compoundname>
     <sectiondef kind="public-attrib">
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="27780" column="18" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="27780" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaSAXPlug_1a8ded0106be4c8c23cd645a26a9d7ac0e" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSAXHandler" kindref="compound">xmlSAXHandlerPtr</ref> *</type>
+        <type>xmlSAXHandlerPtr *</type>
         <definition>xmlSAXHandlerPtr* user_sax_ptr</definition>
         <argsstring></argsstring>
         <name>user_sax_ptr</name>
@@ -32,7 +32,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="27783" column="26" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="27783" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaSAXPlug_1a607a688b8a503b6b09bd09b21f33a0c6" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSAXHandler" kindref="compound">xmlSAXHandlerPtr</ref></type>
+        <type>xmlSAXHandlerPtr</type>
         <definition>xmlSAXHandlerPtr user_sax</definition>
         <argsstring></argsstring>
         <name>user_sax</name>

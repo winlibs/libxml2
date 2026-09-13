@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlIO_8h" kind="file" language="C++">
     <compoundname>xmlIO.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -477,7 +477,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlParserInputBuffer in case of success or NULL if no method was found. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1a7a0ca7c6b30d7a9103b28626f820cab9" kindref="member">xmlParserInputBuffer</ref> in case of success or NULL if no method was found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -519,7 +519,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlOutputBuffer in case of success or NULL if no method was found. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> in case of success or NULL if no method was found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -545,7 +545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="190" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2836" bodyend="2841" declfile="xmlIO.h" declline="190" declcolumn="1"/>
+        <location file="xmlIO.h" line="190" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2851" bodyend="2856" declfile="xmlIO.h" declline="190" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a0f79f193d2c448db827708d2baaa86ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -566,7 +566,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="193" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2819" bodyend="2829" declfile="xmlIO.h" declline="193" declcolumn="1"/>
+        <location file="xmlIO.h" line="193" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2834" bodyend="2844" declfile="xmlIO.h" declline="193" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a36ba105c4e61e78a254ad071abc60770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -583,7 +583,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="196" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2808" bodyend="2810" declfile="xmlIO.h" declline="196" declcolumn="1"/>
+        <location file="xmlIO.h" line="196" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2823" bodyend="2825" declfile="xmlIO.h" declline="196" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a6a67882f88f54233581a9c147540011d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a7a0ca7c6b30d7a9103b28626f820cab9" kindref="member">xmlParserInputBuffer</ref> *</type>
@@ -636,7 +636,7 @@
         </briefdescription>
         <detaileddescription>
 <para>Do an encoding check if enc == XML_CHAR_ENCODING_NONE</para>
-<para>Allows the actual function to be overridden with xmlParserInputBufferCreateFilenameDefault.</para>
+<para>Allows the actual function to be overridden with <ref refid="xmlIO_8h_1a69305091df0800559923f17822353d9c" kindref="member">xmlParserInputBufferCreateFilenameDefault</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000367"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a07aefa97e2d3a6e3735accb899f1a154" kindref="member">xmlNewInputFromUrl</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -777,7 +777,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000370"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a8ec1d739fb500cffed62c06ac139678b" kindref="member">xmlNewInputFromMemory</ref>.</para>
 </xrefdescription></xrefsect></para>
-<para>This function makes a copy of the whole input buffer. If you are sure that the contents of the buffer will remain valid until the document was parsed, you can avoid the copy by using xmlParserInputBufferCreateStatic.</para>
+<para>This function makes a copy of the whole input buffer. If you are sure that the contents of the buffer will remain valid until the document was parsed, you can avoid the copy by using <ref refid="xmlIO_8h_1a22d52dea00d0edd647dd4c674b3bbfde" kindref="member">xmlParserInputBufferCreateStatic</ref>.</para>
 <para>The encoding argument is deprecated and should be set to XML_CHAR_ENCODING_NONE. The encoding can be changed with <ref refid="parserInternals_8h_1a35adfb42f069a1b7d349c2f2a914f15c" kindref="member">xmlSwitchEncoding</ref> or <ref refid="parserInternals_8h_1a44cbd8a2c4ce40d42141e7a4c58c7d7a" kindref="member">xmlSwitchEncodingName</ref> later on.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -835,7 +835,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000371"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a8ec1d739fb500cffed62c06ac139678b" kindref="member">xmlNewInputFromMemory</ref>.</para>
 </xrefdescription></xrefsect></para>
-<para>This functions assumes that the contents of the input buffer remain valid until the document was parsed. Use xmlParserInputBufferCreateMem otherwise.</para>
+<para>This functions assumes that the contents of the input buffer remain valid until the document was parsed. Use <ref refid="xmlIO_8h_1a263adb1cfd43b3a27bd35412b1ccd511" kindref="member">xmlParserInputBufferCreateMem</ref> otherwise.</para>
 <para>The encoding argument is deprecated and should be set to XML_CHAR_ENCODING_NONE. The encoding can be changed with <ref refid="parserInternals_8h_1a35adfb42f069a1b7d349c2f2a914f15c" kindref="member">xmlSwitchEncoding</ref> or <ref refid="parserInternals_8h_1a44cbd8a2c4ce40d42141e7a4c58c7d7a" kindref="member">xmlSwitchEncodingName</ref> later on.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -953,7 +953,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>Same as xmlParserInputBufferGrow. </para>
+<para>Same as <ref refid="xmlIO_8h_1aff2ee36f13f2191588555057e31a03c3" kindref="member">xmlParserInputBufferGrow</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000377"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -1139,7 +1139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="237" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2697" bodyend="2726" declfile="xmlIO.h" declline="237" declcolumn="1"/>
+        <location file="xmlIO.h" line="237" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2712" bodyend="2741" declfile="xmlIO.h" declline="237" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1ab6b38e75f9858b2872ae51a06909fbdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1173,7 +1173,7 @@
 <parametername>matchFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlInputMatchCallback </para>
+<para>the <ref refid="xmlIO_8h_1a3a8cabd3e9b31b64ca167af7c2eeef4e" kindref="member">xmlInputMatchCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1181,7 +1181,7 @@
 <parametername>openFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlInputOpenCallback </para>
+<para>the <ref refid="xmlIO_8h_1a043e89ab49ba926ef27f60b3e2d4e4a9" kindref="member">xmlInputOpenCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1189,7 +1189,7 @@
 <parametername>readFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlInputReadCallback </para>
+<para>the <ref refid="xmlIO_8h_1a8b061791258369d9e2c6624158e018e4" kindref="member">xmlInputReadCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1197,7 +1197,7 @@
 <parametername>closeFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlInputCloseCallback </para>
+<para>the <ref refid="xmlIO_8h_1a9c0f6d110f2f87b9c3600328505f32ab" kindref="member">xmlInputCloseCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1207,7 +1207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="240" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2789" bodyend="2802" declfile="xmlIO.h" declline="240" declcolumn="1"/>
+        <location file="xmlIO.h" line="240" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2804" bodyend="2817" declfile="xmlIO.h" declline="240" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a441e1c289918a75a3e50bd3fef11d52b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a7a0ca7c6b30d7a9103b28626f820cab9" kindref="member">xmlParserInputBuffer</ref> *</type>
@@ -1227,7 +1227,7 @@
         </briefdescription>
         <detaileddescription>
 <para>Do an encoding check if enc == XML_CHAR_ENCODING_NONE</para>
-<para>Internal implementation, never uses the callback installed with xmlParserInputBufferCreateFilenameDefault.</para>
+<para>Internal implementation, never uses the callback installed with <ref refid="xmlIO_8h_1a69305091df0800559923f17822353d9c" kindref="member">xmlParserInputBufferCreateFilenameDefault</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000366"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a07aefa97e2d3a6e3735accb899f1a154" kindref="member">xmlNewInputFromUrl</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1271,7 +1271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="254" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2901" bodyend="2906" declfile="xmlIO.h" declline="254" declcolumn="1"/>
+        <location file="xmlIO.h" line="254" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2916" bodyend="2921" declfile="xmlIO.h" declline="254" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a38ed0d15588740de8359c85ce49da877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1292,7 +1292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="256" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2884" bodyend="2894" declfile="xmlIO.h" declline="256" declcolumn="1"/>
+        <location file="xmlIO.h" line="256" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2899" bodyend="2909" declfile="xmlIO.h" declline="256" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a2205f363ce9f6217e0d48041a828bfa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1309,7 +1309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="258" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2873" bodyend="2875" declfile="xmlIO.h" declline="258" declcolumn="1"/>
+        <location file="xmlIO.h" line="258" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2888" bodyend="2890" declfile="xmlIO.h" declline="258" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a6b15ac7dfb7c07344f0f84432d147863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> *</type>
@@ -1360,12 +1360,12 @@
           <declname>compression</declname>
         </param>
         <briefdescription>
-<para>Create a buffered output for the progressive saving of a file If filename is <computeroutput>&quot;-&quot;</computeroutput> then we use stdout as the output. </para>
+<para>Create a buffered output for the progressive saving of a file If filename is <computeroutput>"-"</computeroutput> then we use stdout as the output. </para>
         </briefdescription>
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.</para>
 <para>Consumes <computeroutput>encoder</computeroutput> but not in error case.</para>
-<para>Allows the actual function to be overridden with xmlOutputBufferCreateFilenameDefault.</para>
+<para>Allows the actual function to be overridden with <ref refid="xmlIO_8h_1a7c0abd74c8c0b2ca8459cb81b7f030ab" kindref="member">xmlOutputBufferCreateFilenameDefault</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>URI</parametername>
@@ -1456,7 +1456,7 @@
           <declname>encoder</declname>
         </param>
         <briefdescription>
-<para>Create a buffered output for the progressive saving to a xmlBuffer. </para>
+<para>Create a buffered output for the progressive saving to a <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Consumes <computeroutput>encoder</computeroutput> but not in error case.</para>
@@ -1465,7 +1465,7 @@
 <parametername>buffer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlBuffer </para>
+<para>a <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1613,7 +1613,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlOutputBuffer </para>
+<para>an <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1643,7 +1643,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlOutputBuffer </para>
+<para>an <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1709,7 +1709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="292" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2395" bodyend="2479" declfile="xmlIO.h" declline="292" declcolumn="1"/>
+        <location file="xmlIO.h" line="292" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2395" bodyend="2484" declfile="xmlIO.h" declline="292" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a080e80caa4c82bcaa00a514d0b462e17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1752,7 +1752,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="296" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2567" bodyend="2578" declfile="xmlIO.h" declline="296" declcolumn="1"/>
+        <location file="xmlIO.h" line="296" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2572" bodyend="2583" declfile="xmlIO.h" declline="296" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a03eb7be26de6bd321f910c4aa86ac892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1807,7 +1807,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="299" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2495" bodyend="2553" declfile="xmlIO.h" declline="299" declcolumn="1"/>
+        <location file="xmlIO.h" line="299" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2500" bodyend="2558" declfile="xmlIO.h" declline="299" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a063c136b29324f139672f08f8149634d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1837,7 +1837,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="304" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2642" bodyend="2687" declfile="xmlIO.h" declline="304" declcolumn="1"/>
+        <location file="xmlIO.h" line="304" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2647" bodyend="2702" declfile="xmlIO.h" declline="304" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a36fe9cce2bb1dff29f251a993ccb745c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1861,7 +1861,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of byte written or a negative xmlParserErrors code in case of error. </para>
+<simplesect kind="return"><para>the number of byte written or a negative <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1899,7 +1899,7 @@
 <parametername>matchFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlOutputMatchCallback </para>
+<para>the <ref refid="xmlIO_8h_1aff7688b09fcdd451000a6780073b2898" kindref="member">xmlOutputMatchCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1907,7 +1907,7 @@
 <parametername>openFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlOutputOpenCallback </para>
+<para>the <ref refid="xmlIO_8h_1ae76959417bcb567c921557784460bb96" kindref="member">xmlOutputOpenCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1915,7 +1915,7 @@
 <parametername>writeFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlOutputWriteCallback </para>
+<para>the <ref refid="xmlIO_8h_1a77e13204f2024d8643f29f98ec6f2f2b" kindref="member">xmlOutputWriteCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1923,7 +1923,7 @@
 <parametername>closeFunc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlOutputCloseCallback </para>
+<para>the <ref refid="xmlIO_8h_1a1b78d8c2e0fa02f8aa1a2fd4dc9f6f57" kindref="member">xmlOutputCloseCallback</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1933,7 +1933,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="309" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2854" bodyend="2867" declfile="xmlIO.h" declline="309" declcolumn="1"/>
+        <location file="xmlIO.h" line="309" column="1" bodyfile="/builds/GNOME/libxml2/xmlIO.c" bodystart="2869" bodyend="2882" declfile="xmlIO.h" declline="309" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1ae12bf56a818fd7c9deeeff7d8d7593de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> *</type>
@@ -1953,12 +1953,12 @@
           <declname>compression</declname>
         </param>
         <briefdescription>
-<para>Create a buffered output for the progressive saving of a file If filename is <computeroutput>&quot;-&quot;</computeroutput> then we use stdout as the output. </para>
+<para>Create a buffered output for the progressive saving of a file If filename is <computeroutput>"-"</computeroutput> then we use stdout as the output. </para>
         </briefdescription>
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.</para>
 <para>Consumes <computeroutput>encoder</computeroutput> but not in error case.</para>
-<para>Internal implementation, never uses the callback installed with xmlOutputBufferCreateFilenameDefault.</para>
+<para>Internal implementation, never uses the callback installed with <ref refid="xmlIO_8h_1a7c0abd74c8c0b2ca8459cb81b7f030ab" kindref="member">xmlOutputBufferCreateFilenameDefault</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>URI</parametername>
@@ -2084,7 +2084,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new allocated xmlParserInput, or NULL. </para>
+<simplesect kind="return"><para>a new allocated <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref>, or NULL. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2395,7 +2395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="390" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1121" bodyend="1136" declfile="xmlIO.h" declline="390" declcolumn="1"/>
+        <location file="xmlIO.h" line="390" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1143" bodyend="1158" declfile="xmlIO.h" declline="390" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlIO_8h_1a76b82f56c1f44b0eb1f78dca6799be7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlIO_8h_1a3d74afc4eb6b1aa8b5521b2690459714" kindref="member">xmlParserInputBufferCreateFilenameFunc</ref></type>
@@ -2427,7 +2427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlIO.h" line="394" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1095" bodyend="1109" declfile="xmlIO.h" declline="394" declcolumn="1"/>
+        <location file="xmlIO.h" line="394" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1117" bodyend="1131" declfile="xmlIO.h" declline="394" declcolumn="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

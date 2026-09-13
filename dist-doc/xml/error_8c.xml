@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="error_8c" kind="file" language="C++">
     <compoundname>error.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -330,7 +330,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -403,7 +403,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -475,7 +475,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -602,9 +602,9 @@
 <para>Set the thread-local &quot;generic&quot; handler and context for error messages. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000129"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See xmlSetStructuredErrorFunc for alternatives.</para>
+<para><xrefsect id="deprecated_1_deprecated000129"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See <ref refid="xmlerror_8h_1a45950b585823204441216f768579b5f4" kindref="member">xmlSetStructuredErrorFunc</ref> for alternatives.</para>
 </xrefdescription></xrefsect></para>
-<para>If you only want to disable parser errors being printed to stderr, use xmlParserOption XML_PARSE_NOERROR.</para>
+<para>If you only want to disable parser errors being printed to stderr, use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOERROR.</para>
 <para>The generic error handler will only receive fragments of error messages which should be concatenated or printed to a stream.</para>
 <para>If <computeroutput>handler</computeroutput> is NULL, use the built-in default handler which prints to stderr.</para>
 <para>Since this is a thread-local setting, it&apos;s a good idea to reset the error handler to its default value after collecting the errors you&apos;re interested in. To get the original values, you have to access xmlGenericError and xmlGenericErrorContext directly, making this function kind of useless.</para>
@@ -651,7 +651,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000130"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a per-context error handler.</para>
 </xrefdescription></xrefsect></para>
-<para>If you only want to disable parser errors being printed to stderr, use xmlParserOption XML_PARSE_NOERROR.</para>
+<para>If you only want to disable parser errors being printed to stderr, use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOERROR.</para>
 <para>It&apos;s recommended to use the per-context error handlers instead:</para>
 <para><itemizedlist>
 <listitem><para><ref refid="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" kindref="member">xmlCtxtSetErrorHandler</ref> (since 2.13.0)</para>
@@ -704,14 +704,14 @@
 <para>Displays the associated file and line information for the current input. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000131"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlFormatError.</para>
+<para><xrefsect id="deprecated_1_deprecated000131"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserInput input </para>
+<para>an <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> input </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -727,7 +727,7 @@
         <argsstring>(xmlParserInputPtr input, xmlGenericErrorFunc channel, void *data)</argsstring>
         <name>xmlParserPrintFileContextInternal</name>
         <param>
-          <type><ref refid="struct__xmlParserInput" kindref="compound">xmlParserInputPtr</ref></type>
+          <type>xmlParserInputPtr</type>
           <declname>input</declname>
         </param>
         <param>
@@ -747,7 +747,7 @@
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserInput input </para>
+<para>an <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> input </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -786,14 +786,14 @@
 <para>Displays current context within the input content for error reporting. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000132"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlFormatError.</para>
+<para><xrefsect id="deprecated_1_deprecated000132"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserInput input </para>
+<para>an <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> input </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1073,7 +1073,7 @@
 <parametername>level</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlErrorLevel for the error </para>
+<para>the <ref refid="xmlerror_8h_1a99cf79f750085bec4b5c3f2e188f47ae" kindref="member">xmlErrorLevel</ref> for the error </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1294,7 +1294,7 @@
 <parametername>level</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlErrorLevel for the error </para>
+<para>the <ref refid="xmlerror_8h_1a99cf79f750085bec4b5c3f2e188f47ae" kindref="member">xmlErrorLevel</ref> for the error </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1427,7 +1427,7 @@
 <para>This is the default SAX error handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, errors will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, errors will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000133"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an error message with additional detail from the parser context and print to generic error handler.</para>
@@ -1482,7 +1482,7 @@
 <para>This is the default SAX warning handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, warnings will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, warnings will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000134"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an warning message with additional detail from the parser context and print to generic error handler.</para>
@@ -1537,7 +1537,7 @@
 <para>This is the default validity error handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, errors will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, errors will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000135"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an error message with additional detail from the parser context and print to generic error handler.</para>
@@ -1592,7 +1592,7 @@
 <para>This is the default validity warning handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, warnings will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, warnings will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000136"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an warning message with additional detail from the parser context and print to generic error handler.</para>
@@ -1751,7 +1751,7 @@
 <parametername>code</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserErrors code </para>
+<para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>

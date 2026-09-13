@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="schematron_8c" kind="file" language="C++">
     <compoundname>schematron.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -13,6 +13,7 @@
     <includes refid="pattern_8h" local="no">libxml/pattern.h</includes>
     <includes refid="schematron_8h" local="no">libxml/schematron.h</includes>
     <includes local="yes">private/error.h</includes>
+    <includes local="yes">private/memory.h</includes>
     <incdepgraph>
       <node id="25">
         <label>libxml/SAX2.h</label>
@@ -267,6 +268,8 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>libxml.h</label>
@@ -279,6 +282,9 @@
       </node>
       <node id="32">
         <label>private/error.h</label>
+      </node>
+      <node id="33">
+        <label>private/memory.h</label>
       </node>
       <node id="12">
         <label>stdarg.h</label>
@@ -323,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="40" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="40" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="41" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="schematron_8c_1a0b83c3b87f920b6f2b794f6118096354" prot="public" static="no">
         <name>SCT_OLD_NS</name>
@@ -334,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="42" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="42" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="43" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="schematron_8c_1a24c667f5633dcc252fbfb22297c285a8" prot="public" static="no">
         <name>XML_SCHEMATRON_NS</name>
@@ -345,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="44" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="44" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="45" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="schematron_8c_1aad6b7b286d1802db29bbf00c9808feb2" prot="public" static="no">
         <name>IS_SCHEMATRON</name>
@@ -362,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="50" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="50" bodyend="55"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="51" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="51" bodyend="56"/>
       </memberdef>
       <memberdef kind="define" id="schematron_8c_1a2ed201e9f4a244035b0a64c14f19a5c4" prot="public" static="no">
         <name>NEXT_SCHEMATRON</name>
@@ -380,7 +386,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="57" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="57" bodyend="64"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="58" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="58" bodyend="65"/>
       </memberdef>
       <memberdef kind="define" id="schematron_8c_1a7cf179a76b8c64300f63e09fed3d379e" prot="public" static="no">
         <name>XML_STRON_CTXT_PARSER</name>
@@ -391,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="206" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="206" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="207" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="207" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="schematron_8c_1ac52205275550d27f560fd846dada5e3f" prot="public" static="no">
         <name>XML_STRON_CTXT_VALIDATOR</name>
@@ -402,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="207" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="207" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="208" column="9" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="208" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="enum">
@@ -431,7 +437,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="66" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="66" bodyend="69"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="67" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="67" bodyend="70"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -447,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="74" column="32" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="74" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="75" column="32" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="schematron_8c_1a9ffb361d3455732a1bb3a11aa7ac5566" prot="public" static="no">
         <type>xmlSchematronLet *</type>
@@ -460,7 +466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="75" column="26" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="75" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="76" column="26" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="schematron_8c_1a56e494d9daacfc58b0818c1f9d3d4a6f" prot="public" static="no">
         <type>struct _xmlSchematronTest</type>
@@ -474,7 +480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="85" column="33" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="85" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="86" column="33" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="schematron_8c_1a492e91c0fd6611b3c505da2939d51bd6" prot="public" static="no">
         <type>xmlSchematronTest *</type>
@@ -487,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="86" column="27" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="86" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="87" column="27" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="schematron_8c_1a1e41339b2de89eab677eb6b65a7f3164" prot="public" static="no">
         <type>struct _xmlSchematronRule</type>
@@ -501,7 +507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="99" column="33" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="99" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="100" column="33" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="schematron_8c_1ab2ce164aa3073d6eb550fe0a5ebf1634" prot="public" static="no">
         <type>xmlSchematronRule *</type>
@@ -514,7 +520,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="100" column="27" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="100" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="101" column="27" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="schematron_8c_1abc09b06b4a92ca2b795edf62c082755c" prot="public" static="no">
         <type>struct _xmlSchematronPattern</type>
@@ -528,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="115" column="36" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="115" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="116" column="36" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="schematron_8c_1a9c6187c0fd44d00594a1d1ef4caf2869" prot="public" static="no">
         <type>xmlSchematronPattern *</type>
@@ -541,7 +547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="116" column="30" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="116" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="117" column="30" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="117" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -550,21 +556,7 @@
         <definition>const xmlChar* xmlSchematronNs</definition>
         <argsstring></argsstring>
         <name>xmlSchematronNs</name>
-        <initializer>=   (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;http://purl.oclc.org/dsdl/schematron&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="47" column="22" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="47" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="schematron_8c_1a685a0bc21d43d6eda54fad7b6e18fbf7" prot="public" static="yes" mutable="no">
-        <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
-        <definition>const xmlChar* xmlOldSchematronNs</definition>
-        <argsstring></argsstring>
-        <name>xmlOldSchematronNs</name>
-        <initializer>=   (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;http://www.ascc.net/xml/schematron&quot;</initializer>
+        <initializer>= (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;http://purl.oclc.org/dsdl/schematron&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -572,6 +564,20 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/builds/GNOME/libxml2/schematron.c" line="48" column="22" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="schematron_8c_1a685a0bc21d43d6eda54fad7b6e18fbf7" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
+        <definition>const xmlChar* xmlOldSchematronNs</definition>
+        <argsstring></argsstring>
+        <name>xmlOldSchematronNs</name>
+        <initializer>= (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;http://www.ascc.net/xml/schematron&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="49" column="22" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="49" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -601,7 +607,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="221" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="221" bodyend="226"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="222" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="222" bodyend="227"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1aa2f5c648fa3d757422aaad9123f312f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -613,7 +619,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -689,7 +695,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="239" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="239" bodyend="265"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="240" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="240" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1ae158e9599c9b5a011fe0e73668f3c4b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -717,7 +723,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="273" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="273" bodyend="280"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="274" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="274" bodyend="281"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a2b0d447d8ae4e9e6a21ce4338cca29df" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -781,7 +787,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="291" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="291" bodyend="317"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="292" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="292" bodyend="318"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a53810263414b1fbb9d6fd561d76fa2ff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlSchematronTestPtr</type>
@@ -801,7 +807,7 @@
           <declname>rule</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -871,7 +877,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="337" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="337" bodyend="384"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="338" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="338" bodyend="385"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1ada1d819e893fe4d80074940b3b3ee0dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -899,7 +905,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="392" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="392" bodyend="406"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="393" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="393" bodyend="407"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a9ad4533159f26b5d978c0b4ce1f7dfc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -927,7 +933,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="414" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="414" bodyend="426"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="415" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="415" bodyend="427"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1aff14e730e77857deac46d6c52fda3ea7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlSchematronRulePtr</type>
@@ -947,7 +953,7 @@
           <declname>pat</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -1017,7 +1023,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="440" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="440" bodyend="495"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="441" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="441" bodyend="496"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a3e59d27b95fdf59e6db3084439feea3c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1045,7 +1051,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="503" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="503" bodyend="521"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="504" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="504" bodyend="522"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a2ff2306f3e5d3633a358fb12c48b97f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlSchematronPatternPtr</type>
@@ -1061,7 +1067,7 @@
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -1111,7 +1117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="533" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="533" bodyend="559"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="534" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="534" bodyend="560"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a23a9266ee36d19da1e92721f30eac8ee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1139,7 +1145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="567" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="567" bodyend="577"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="568" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="568" bodyend="578"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1acd454a1dea335989346bafe3e56c4fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlSchematronPtr</type>
@@ -1169,7 +1175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="586" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="586" bodyend="600"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="587" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="587" bodyend="601"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a68eb5fd617240e236d624e2fa87f891d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1197,7 +1203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="608" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="608" bodyend="623"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="609" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="609" bodyend="624"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1acdad0143ffe1b636b649ffab3a83b6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1add30ab4331d57071e2e7c18461b38cbc" kindref="member">xmlSchematronParserCtxt</ref> *</type>
@@ -1227,7 +1233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="633" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="633" bodyend="660"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="634" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="634" bodyend="661"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a0a01a23788b54b6cb9ce2cfb719481ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1add30ab4331d57071e2e7c18461b38cbc" kindref="member">xmlSchematronParserCtxt</ref> *</type>
@@ -1269,7 +1275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="671" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="671" bodyend="696"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="672" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="672" bodyend="697"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a7d5cde2d168a5b37ed1acc31e456f0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1add30ab4331d57071e2e7c18461b38cbc" kindref="member">xmlSchematronParserCtxt</ref> *</type>
@@ -1300,7 +1306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="706" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="706" bodyend="733"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="707" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="707" bodyend="734"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1ab57ee2ace830a40da34354115c9c11b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1328,7 +1334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="741" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="741" bodyend="754"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="742" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="742" bodyend="755"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a1269fbdcbf3580c88e93bd1363ab28bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1380,7 +1386,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="830" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="830" bodyend="863"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="830" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="830" bodyend="862"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1adca9dc92032949425f19aae990c8166e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1392,7 +1398,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>con</declname>
         </param>
         <briefdescription>
@@ -1420,7 +1426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="872" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="872" bodyend="912"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="871" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="871" bodyend="911"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1acf4a2f395f35dd243e87e33102f9dd39" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1436,7 +1442,7 @@
           <declname>pattern</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>rule</declname>
         </param>
         <briefdescription>
@@ -1472,7 +1478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="922" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="922" bodyend="1095"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="921" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="921" bodyend="1094"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a680a227c9eafa1d7e797fe1f53b3aa25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1484,7 +1490,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>pat</declname>
         </param>
         <briefdescription>
@@ -1512,7 +1518,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1104" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1104" bodyend="1142"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1103" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1103" bodyend="1141"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1ab947b7f0d51bbb56d59feac0098b75fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1adda7fc895133f8b277ef9e2d89d2f1c9" kindref="member">xmlSchematron</ref> *</type>
@@ -1542,10 +1548,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1218" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1218" bodyend="1375"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1217" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1217" bodyend="1374"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a502358fd815e9a9085da90e578a63b01" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlSchematronGetNode</definition>
         <argsstring>(xmlSchematronValidCtxtPtr ctxt, xmlNodePtr cur, const xmlChar *xpath)</argsstring>
         <name>xmlSchematronGetNode</name>
@@ -1554,7 +1560,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -1567,7 +1573,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1384" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1384" bodyend="1392"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1383" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1383" bodyend="1391"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1aa33b3ebe33de79ca6c992e21ec5af67a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1579,7 +1585,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -1619,7 +1625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1402" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1402" bodyend="1407"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1401" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1401" bodyend="1406"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1adc74289cbb7d2f2ec42e78ee64c007eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1631,11 +1637,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>test</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1673,7 +1679,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1419" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1419" bodyend="1554"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1418" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1418" bodyend="1553"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1acfa15b9445bfa2a0d49729b015f84b28" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1689,7 +1695,7 @@
           <declname>test</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -1749,7 +1755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1567" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1567" bodyend="1644"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1566" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1566" bodyend="1643"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a4fd3e937d4f28e4361d525769e829d7c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1789,7 +1795,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1653" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1653" bodyend="1669"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1652" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1652" bodyend="1668"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a6b1158c2a9aabf5481104fc8af6104e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1841,7 +1847,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1686" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1686" bodyend="1695"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1685" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1685" bodyend="1694"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1ae041c96b507947a0d12f63aba473fc03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1a0ee76ce4548aaa22741adf1a826df3d1" kindref="member">xmlSchematronValidCtxt</ref> *</type>
@@ -1873,7 +1879,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlSchematronValidOptions </para>
+<para>a set of <ref refid="schematron_8h_1af73b22af2a6af6225c5fe5082e54af71" kindref="member">xmlSchematronValidOptions</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1883,7 +1889,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1705" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1705" bodyend="1736"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1704" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1704" bodyend="1735"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a97a4f050f918828dc0623e7ba5751084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1911,15 +1917,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1744" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1744" bodyend="1753"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1743" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1743" bodyend="1752"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a098ddbc00be8d7497996e7c11c279075" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr xmlSchematronNextNode</definition>
         <argsstring>(xmlNodePtr cur)</argsstring>
         <name>xmlSchematronNextNode</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1928,7 +1934,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1756" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1756" bodyend="1788"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1755" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1755" bodyend="1787"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a6db6c21259a28eaee718d55b08f58fb0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1944,11 +1950,11 @@
           <declname>test</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>instance</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -2006,7 +2012,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1801" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1801" bodyend="1849"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1800" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1800" bodyend="1848"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1ae156ff97f4384c501e0a54ac01f3e1ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2018,7 +2024,7 @@
           <declname>vctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathContext" kindref="compound">xmlXPathContextPtr</ref></type>
+          <type>xmlXPathContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2026,15 +2032,15 @@
           <declname>let</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>instance</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
-<para>Registers a list of let variables to the current context of <computeroutput>cur</computeroutput> </para>
+<para>Registers a list of let variables to the current context of <computeroutput>cur</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2084,7 +2090,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1862" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1862" bodyend="1887"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1861" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1861" bodyend="1886"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1ad89b25bb743c6090a9ae98e2ec4f66c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2096,7 +2102,7 @@
           <declname>vctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathContext" kindref="compound">xmlXPathContextPtr</ref></type>
+          <type>xmlXPathContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2138,7 +2144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1898" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1898" bodyend="1911"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1897" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1897" bodyend="1910"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8c_1a0e8113b6f6e06a05363e79ba2fd3bbf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2180,7 +2186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/schematron.c" line="1922" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1922" bodyend="2012"/>
+        <location file="/builds/GNOME/libxml2/schematron.c" line="1921" column="1" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1921" bodyend="2011"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlC14NCtx" kind="struct" language="C++" prot="public">
     <compoundname>_xmlC14NCtx</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct__xmlC14NCtx_1acb7e0779c02127031b073502aca38a8c" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr doc</definition>
         <argsstring></argsstring>
         <name>doc</name>
@@ -60,7 +60,7 @@
         <location file="/builds/GNOME/libxml2/c14n.c" line="56" column="9" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlC14NCtx_1a894b772bdd757a6511455cab22fc7bc8" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+        <type>xmlOutputBufferPtr</type>
         <definition>xmlOutputBufferPtr buf</definition>
         <argsstring></argsstring>
         <name>buf</name>

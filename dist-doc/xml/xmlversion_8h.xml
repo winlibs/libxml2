@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlversion_8h" kind="file" language="C++">
     <compoundname>xmlversion.h</compoundname>
     <includes local="no">libxml/xmlexports.h</includes>
@@ -466,7 +466,7 @@
     <sectiondef kind="define">
       <memberdef kind="define" id="xmlversion_8h_1a99ebbf7a469c5cf2f57b40a2cb9f4f86" prot="public" static="no">
         <name>LIBXML_DOTTED_VERSION</name>
-        <initializer>&quot;2.15.3&quot;</initializer>
+        <initializer>&quot;2.15.4&quot;</initializer>
         <briefdescription>
 <para>the version string like &quot;1.2.3&quot; </para>
         </briefdescription>
@@ -478,7 +478,7 @@
       </memberdef>
       <memberdef kind="define" id="xmlversion_8h_1acb82d8f83d004ac7f1e2c986921cd47c" prot="public" static="no">
         <name>LIBXML_VERSION</name>
-        <initializer>21503</initializer>
+        <initializer>21504</initializer>
         <briefdescription>
 <para>the version number: 1.2.3 value is 10203 </para>
         </briefdescription>
@@ -490,7 +490,7 @@
       </memberdef>
       <memberdef kind="define" id="xmlversion_8h_1af0e51c4a13524c1ecded2cbbe3d17724" prot="public" static="no">
         <name>LIBXML_VERSION_STRING</name>
-        <initializer>&quot;21503&quot;</initializer>
+        <initializer>&quot;21504&quot;</initializer>
         <briefdescription>
 <para>the version number string, 1.2.3 value is &quot;10203&quot; </para>
         </briefdescription>
@@ -514,7 +514,7 @@
       </memberdef>
       <memberdef kind="define" id="xmlversion_8h_1a3ff59c8d65d4751ebbf14e08d55a99f2" prot="public" static="no">
         <name>LIBXML_TEST_VERSION</name>
-        <initializer>xmlCheckVersion(21503);</initializer>
+        <initializer>xmlCheckVersion(21504);</initializer>
         <briefdescription>
 <para>Macro to check that the libxml version in use is compatible with the version the software has been compiled against. </para>
         </briefdescription>
@@ -582,7 +582,7 @@
       <memberdef kind="define" id="xmlversion_8h_1a17e0b579a89fa5c7335206ea268560a5" prot="public" static="no">
         <name>LIBXML_PATTERN_ENABLED</name>
         <briefdescription>
-<para>Whether the xmlPattern node selection interface is configured in. </para>
+<para>Whether the <ref refid="pattern_8h_1ab90eb710cd869b8620373f1b62c5d543" kindref="member">xmlPattern</ref> node selection interface is configured in. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

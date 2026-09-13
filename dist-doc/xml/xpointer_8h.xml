@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xpointer_8h" kind="file" language="C++">
     <compoundname>xpointer.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -169,13 +169,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathContext just allocated. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a61100c9bec26c0de1d0329962c85c091" kindref="member">xmlXPathContext</ref> just allocated. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpointer.h" line="40" column="5" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="576" bodyend="586" declfile="xpointer.h" declline="40" declcolumn="5"/>
+        <location file="xpointer.h" line="40" column="5" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="583" bodyend="593" declfile="xpointer.h" declline="40" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xpointer_8h_1a20078f45c75ddf4a44d8ff835439e980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> *</type>
@@ -212,13 +212,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathObject resulting from the evaluation or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> resulting from the evaluation or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xpointer.h" line="44" column="5" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="600" bodyend="663" declfile="xpointer.h" declline="44" declcolumn="5"/>
+        <location file="xpointer.h" line="44" column="5" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="607" bodyend="670" declfile="xpointer.h" declline="44" declcolumn="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

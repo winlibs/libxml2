@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlTextReader" kind="struct" language="C++" prot="public">
     <compoundname>_xmlTextReader</compoundname>
     <sectiondef kind="public-attrib">
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="99" column="8" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="99" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1acb7e0779c02127031b073502aca38a8c" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr doc</definition>
         <argsstring></argsstring>
         <name>doc</name>
@@ -74,7 +74,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="103" column="23" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1a550253c56239724fc21073c749d68544" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+        <type>xmlParserCtxtPtr</type>
         <definition>xmlParserCtxtPtr ctxt</definition>
         <argsstring></argsstring>
         <name>ctxt</name>
@@ -88,7 +88,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="104" column="21" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1a517841f0d0c4fb2024d0547da8f6b2d7" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSAXHandler" kindref="compound">xmlSAXHandlerPtr</ref></type>
+        <type>xmlSAXHandlerPtr</type>
         <definition>xmlSAXHandlerPtr sax</definition>
         <argsstring></argsstring>
         <name>sax</name>
@@ -102,7 +102,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="105" column="21" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1ae1cc77fb3f96e5a7eabbb80d2987d4f1" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlParserInputBuffer" kindref="compound">xmlParserInputBufferPtr</ref></type>
+        <type>xmlParserInputBufferPtr</type>
         <definition>xmlParserInputBufferPtr input</definition>
         <argsstring></argsstring>
         <name>input</name>
@@ -228,7 +228,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="114" column="17" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1af22243a9342e852a5bcc0b878913a289" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr node</definition>
         <argsstring></argsstring>
         <name>node</name>
@@ -242,7 +242,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="115" column="15" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="115" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1ac507f9ad0551eb949081b598919c5a09" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr curnode</definition>
         <argsstring></argsstring>
         <name>curnode</name>
@@ -270,7 +270,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="117" column="8" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1abd43a0fdf8fd99ce20c1e4dc2ce29caf" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr faketext</definition>
         <argsstring></argsstring>
         <name>faketext</name>
@@ -326,7 +326,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="121" column="15" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1ab2cd2bc901e556aa42bfef73d19ce840" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr ent</definition>
         <argsstring></argsstring>
         <name>ent</name>
@@ -368,7 +368,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="126" column="24" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1acdf9f333b11ff473d90e1574759b6274" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+        <type>xmlNodePtr *</type>
         <definition>xmlNodePtr* entTab</definition>
         <argsstring></argsstring>
         <name>entTab</name>
@@ -466,7 +466,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="138" column="28" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1a1833a909c97cc0d5e097f3f1d3feb4e8" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr rngFullNode</definition>
         <argsstring></argsstring>
         <name>rngFullNode</name>
@@ -480,7 +480,7 @@
         <location file="/builds/GNOME/libxml2/xmlreader.c" line="139" column="28" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextReader_1a5ed067ea58a966e1d47f63c353a887c7" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+        <type>xmlSchemaPtr</type>
         <definition>xmlSchemaPtr xsdSchemas</definition>
         <argsstring></argsstring>
         <name>xsdSchemas</name>

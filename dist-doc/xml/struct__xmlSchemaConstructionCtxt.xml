@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaConstructionCtxt" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaConstructionCtxt</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct__xmlSchemaConstructionCtxt_1a1b44cc75d61ecc521006e01b61b28bb6" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+        <type>xmlSchemaPtr</type>
         <definition>xmlSchemaPtr mainSchema</definition>
         <argsstring></argsstring>
         <name>mainSchema</name>

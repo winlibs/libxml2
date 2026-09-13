@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlCharEncodingHandler" kind="struct" language="C++" prot="public">
     <compoundname>_xmlCharEncodingHandler</compoundname>
     <includes local="no">encoding.h</includes>
@@ -46,7 +46,7 @@
         </inbodydescription>
         <location file="encoding.h" line="203" column="34" bodyfile="encoding.h" bodystart="203" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__xmlCharEncodingHandler_1ae46f8df83ad27d16520c1c3bec277d1e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct__xmlCharEncodingHandler_1a2b1403f3a51c151b1caa095bdf87e040" prot="public" static="no" mutable="no">
         <type>union <ref refid="struct__xmlCharEncodingHandler" kindref="compound">_xmlCharEncodingHandler</ref></type>
         <definition>union _xmlCharEncodingHandler input</definition>
         <argsstring></argsstring>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="encoding.h" line="204" column="14"/>
+        <location file="encoding.h" line="204" column="13"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlCharEncodingHandler_1a7fd0bb53e8270a2f7f124288f1820e38" prot="public" static="no" mutable="no">
         <type><ref refid="encoding_8h_1a167ac51fa3e644243494671248c56b67" kindref="member">xmlCharEncodingOutputFunc</ref></type>
@@ -74,7 +74,7 @@
         </inbodydescription>
         <location file="encoding.h" line="207" column="35" bodyfile="encoding.h" bodystart="207" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__xmlCharEncodingHandler_1a2d2fea6595303d7b4ee9b1c48f79e66a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct__xmlCharEncodingHandler_1aeafb950d783a09268d55f2f50c2ae215" prot="public" static="no" mutable="no">
         <type>union <ref refid="struct__xmlCharEncodingHandler" kindref="compound">_xmlCharEncodingHandler</ref></type>
         <definition>union _xmlCharEncodingHandler output</definition>
         <argsstring></argsstring>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="encoding.h" line="208" column="15"/>
+        <location file="encoding.h" line="208" column="14"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlCharEncodingHandler_1a3861a22085dd8d2ef13500e199f86145" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -156,12 +156,12 @@
       <member refid="struct__xmlCharEncodingHandler_1a2d527f7bfa560fc129325e2f755e47ab" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>ctxtDtor</name></member>
       <member refid="struct__xmlCharEncodingHandler_1ac8bf36fe0577cba66bccda3a6f7e80a4" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>flags</name></member>
       <member refid="struct__xmlCharEncodingHandler_1af77cac82a0d7e18c9e06cf9a2bdf9af6" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>func</name></member>
-      <member refid="struct__xmlCharEncodingHandler_1ae46f8df83ad27d16520c1c3bec277d1e" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>input</name></member>
+      <member refid="struct__xmlCharEncodingHandler_1a2b1403f3a51c151b1caa095bdf87e040" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>input</name></member>
       <member refid="struct__xmlCharEncodingHandler_1a3861a22085dd8d2ef13500e199f86145" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>inputCtxt</name></member>
       <member refid="struct__xmlCharEncodingHandler_1aa68753840e53e4335fee1fee8f9b0354" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>legacyFunc</name></member>
       <member refid="struct__xmlCharEncodingHandler_1a7fd0bb53e8270a2f7f124288f1820e38" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>legacyFunc</name></member>
       <member refid="struct__xmlCharEncodingHandler_1a5ac083a645d964373f022d03df4849c8" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>name</name></member>
-      <member refid="struct__xmlCharEncodingHandler_1a2d2fea6595303d7b4ee9b1c48f79e66a" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>output</name></member>
+      <member refid="struct__xmlCharEncodingHandler_1aeafb950d783a09268d55f2f50c2ae215" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>output</name></member>
       <member refid="struct__xmlCharEncodingHandler_1af2e80ed02c6235e2e55adb2bfd62b612" prot="public" virt="non-virtual"><scope>_xmlCharEncodingHandler</scope><name>outputCtxt</name></member>
     </listofallmembers>
   </compounddef>

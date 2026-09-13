@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="structxmlRemoveMemo__t" kind="struct" language="C++" prot="public">
     <compoundname>xmlRemoveMemo_t</compoundname>
     <sectiondef kind="public-attrib">
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/valid.c" line="2455" column="12" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="2455" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structxmlRemoveMemo__t_1a3f27e02c78c16fde564d96ce579fe4b4" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+        <type>xmlAttrPtr</type>
         <definition>xmlAttrPtr ap</definition>
         <argsstring></argsstring>
         <name>ap</name>

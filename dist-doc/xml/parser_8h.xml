@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="parser_8h" kind="file" language="C++">
     <compoundname>parser.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -780,7 +780,7 @@
 <para>Enable XInclude processing. </para>
           </briefdescription>
           <detaileddescription>
-<para>This option only affects the xmlTextReader and XInclude interfaces. </para>
+<para>This option only affects the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> and XInclude interfaces. </para>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="parser_8h_1a7d2daaf67df051ca5ef0b319b640442ca5c4e109aa639c9d8d5bb2f7922453566" prot="public">
@@ -827,7 +827,7 @@
 <para>Don&apos;t generate XInclude start/end nodes when expanding inclusions. </para>
           </briefdescription>
           <detaileddescription>
-<para>This option only affects the xmlTextReader and XInclude interfaces. </para>
+<para>This option only affects the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> and XInclude interfaces. </para>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="parser_8h_1a7d2daaf67df051ca5ef0b319b640442ca4e1e1a94e4dfaa60e4c29165464edd9b" prot="public">
@@ -857,7 +857,7 @@
 <para>Don&apos;t fix up XInclude xml:base URIs. </para>
           </briefdescription>
           <detaileddescription>
-<para>This option only affects the xmlTextReader and XInclude interfaces. </para>
+<para>This option only affects the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> and XInclude interfaces. </para>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="parser_8h_1a7d2daaf67df051ca5ef0b319b640442ca818189d96d210abc76667c3e966b9faf" prot="public">
@@ -1389,7 +1389,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1432,7 +1432,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlParserInput if inlined or NULL for DOM behaviour. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> if inlined or NULL for DOM behaviour. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1562,7 +1562,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlEntity if found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref> if found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1596,7 +1596,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlEntity if found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref> if found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2141,7 +2141,7 @@
 <parametername>ch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar string </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2149,7 +2149,7 @@
 <parametername>len</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the number of xmlChar </para>
+<para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2181,7 +2181,7 @@
 <parametername>ch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar string </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2189,7 +2189,7 @@
 <parametername>len</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the number of xmlChar </para>
+<para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2733,7 +2733,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1255" column="27" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="191" bodyend="-1" declfile="parser.h" declline="1255" declcolumn="27"/>
+        <location file="parser.h" line="1255" column="26" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="191" bodyend="-1" declfile="parser.h" declline="1255" declcolumn="26"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -2916,14 +2916,14 @@
         </briefdescription>
         <detaileddescription>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000259"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlReadDoc.</para>
+<para><xrefsect id="deprecated_1_deprecated000259"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1abafd139b6651421e3c8b2a7f2525e183" kindref="member">xmlReadDoc</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to an array of xmlChar </para>
+<para>a pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2933,7 +2933,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1406" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12982" bodyend="12984" declfile="parser.h" declline="1406" declcolumn="1"/>
+        <location file="parser.h" line="1406" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13018" bodyend="13020" declfile="parser.h" declline="1406" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a60cc171f8a0f6e13ead2c28a13360a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -2950,7 +2950,7 @@
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000249"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000249"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a1f86eefcbde10975fcf8d5cec5b0cae7" kindref="member">xmlReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2967,7 +2967,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1408" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12579" bodyend="12581" declfile="parser.h" declline="1408" declcolumn="1"/>
+        <location file="parser.h" line="1408" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12615" bodyend="12617" declfile="parser.h" declline="1408" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a1e5cd56788b6ebb7a527be0eb725b775" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -2987,7 +2987,7 @@
         </briefdescription>
         <detaileddescription>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000255"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlReadMemory.</para>
+<para><xrefsect id="deprecated_1_deprecated000255"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a783c647cf82b51f93a5cd27faf5fbe2f" kindref="member">xmlReadMemory</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3012,7 +3012,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1410" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12817" bodyend="12819" declfile="parser.h" declline="1410" declcolumn="1"/>
+        <location file="parser.h" line="1410" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12853" bodyend="12855" declfile="parser.h" declline="1410" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1acf14c9a79459dbc52c8c986cffba536f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3044,7 +3044,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1415" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3721" bodyend="3726" declfile="parser.h" declline="1415" declcolumn="1"/>
+        <location file="parser.h" line="1415" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3714" bodyend="3719" declfile="parser.h" declline="1415" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a4dac6ea02c12e14236d983a585a621f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3076,7 +3076,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1417" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3738" bodyend="3747" declfile="parser.h" declline="1417" declcolumn="1"/>
+        <location file="parser.h" line="1417" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3731" bodyend="3740" declfile="parser.h" declline="1417" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ac8f08dc2974a39af78b68e6cdd018d4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3104,7 +3104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1419" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11391" bodyend="11409" declfile="parser.h" declline="1419" declcolumn="1"/>
+        <location file="parser.h" line="1419" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11428" bodyend="11446" declfile="parser.h" declline="1419" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aafb28d9ba022b6d851d224cabe0ff512" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3136,7 +3136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1422" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3690" bodyend="3695" declfile="parser.h" declline="1422" declcolumn="1"/>
+        <location file="parser.h" line="1422" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3683" bodyend="3688" declfile="parser.h" declline="1422" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ae04283f4733c035b7cac5bb3841aa60a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3168,7 +3168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1425" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3707" bodyend="3709" declfile="parser.h" declline="1425" declcolumn="1"/>
+        <location file="parser.h" line="1425" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3700" bodyend="3702" declfile="parser.h" declline="1425" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ae2e7b0e5f8db606038c38eae63c13663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3183,7 +3183,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000153"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_NOENT.</para>
+<para><xrefsect id="deprecated_1_deprecated000153"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOENT.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3200,7 +3200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1429" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1030" bodyend="1037" declfile="parser.h" declline="1429" declcolumn="17"/>
+        <location file="parser.h" line="1429" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1052" bodyend="1059" declfile="parser.h" declline="1429" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a0a1df3e4c96db656f4b97d8a5b63bc95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3215,7 +3215,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000149"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Whitespace is kept by default. Use xmlParserOption XML_PARSE_NOBLANKS to remove whitespace.</para>
+<para><xrefsect id="deprecated_1_deprecated000149"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Whitespace is kept by default. Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOBLANKS to remove whitespace.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3232,7 +3232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1432" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="967" bodyend="974" declfile="parser.h" declline="1432" declcolumn="1"/>
+        <location file="parser.h" line="1432" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="989" bodyend="996" declfile="parser.h" declline="1432" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a488e4b86741fc86f96c909de67bde87d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3247,7 +3247,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000152"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_PEDANTIC.</para>
+<para><xrefsect id="deprecated_1_deprecated000152"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_PEDANTIC.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3264,7 +3264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1435" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1013" bodyend="1020" declfile="parser.h" declline="1435" declcolumn="17"/>
+        <location file="parser.h" line="1435" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1035" bodyend="1042" declfile="parser.h" declline="1435" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aa9008805db392e631bc73865ee71e4f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3296,7 +3296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1438" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="984" bodyend="986" declfile="parser.h" declline="1438" declcolumn="17"/>
+        <location file="parser.h" line="1438" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1006" bodyend="1008" declfile="parser.h" declline="1438" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a245dd5654f2c6538e305a1fb99766365" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3311,7 +3311,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000144"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_DTDVALID.</para>
+<para><xrefsect id="deprecated_1_deprecated000144"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_DTDVALID.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3328,7 +3328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1441" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="878" bodyend="885" declfile="parser.h" declline="1441" declcolumn="17"/>
+        <location file="parser.h" line="1441" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="900" bodyend="907" declfile="parser.h" declline="1441" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a7d47fb3082b2f1078c677ce728c8bd8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3343,7 +3343,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000145"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_NOWARNING.</para>
+<para><xrefsect id="deprecated_1_deprecated000145"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOWARNING.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3360,7 +3360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1444" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="895" bodyend="902" declfile="parser.h" declline="1444" declcolumn="17"/>
+        <location file="parser.h" line="1444" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="917" bodyend="924" declfile="parser.h" declline="1444" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a55b6f562caa0000ed8132a29206e98db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3375,7 +3375,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000151"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_DTDLOAD.</para>
+<para><xrefsect id="deprecated_1_deprecated000151"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_DTDLOAD.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3392,7 +3392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1447" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="996" bodyend="1003" declfile="parser.h" declline="1447" declcolumn="17"/>
+        <location file="parser.h" line="1447" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="1018" bodyend="1025" declfile="parser.h" declline="1447" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a96c51daa43cb979147d4b59a7df5539f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3409,14 +3409,14 @@
         <detaileddescription>
 <para>In the case the document is not Well Formed, a attempt to build a tree is tried anyway</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT | XML_PARSE_RECOVER.</para>
-<para><xrefsect id="deprecated_1_deprecated000248"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlReadDoc with XML_PARSE_RECOVER.</para>
+<para><xrefsect id="deprecated_1_deprecated000248"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1abafd139b6651421e3c8b2a7f2525e183" kindref="member">xmlReadDoc</ref> with XML_PARSE_RECOVER.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to an array of xmlChar </para>
+<para>a pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3426,7 +3426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1455" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12560" bodyend="12562" declfile="parser.h" declline="1455" declcolumn="1"/>
+        <location file="parser.h" line="1455" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12596" bodyend="12598" declfile="parser.h" declline="1455" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aca94dcb236daaa298bf1cf7dc347d568" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3447,7 +3447,7 @@
         <detaileddescription>
 <para>In the case the document is not Well Formed, an attempt to build a tree is tried anyway</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT | XML_PARSE_RECOVER.</para>
-<para><xrefsect id="deprecated_1_deprecated000256"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlReadMemory with XML_PARSE_RECOVER.</para>
+<para><xrefsect id="deprecated_1_deprecated000256"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a783c647cf82b51f93a5cd27faf5fbe2f" kindref="member">xmlReadMemory</ref> with XML_PARSE_RECOVER.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3472,7 +3472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1458" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12836" bodyend="12838" declfile="parser.h" declline="1458" declcolumn="1"/>
+        <location file="parser.h" line="1458" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12872" bodyend="12874" declfile="parser.h" declline="1458" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a0a29dbed6b9b6c37bba110af0fe3c8cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3489,7 +3489,7 @@
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time. In the case the document is not Well Formed, it attempts to build a tree anyway</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT | XML_PARSE_RECOVER.</para>
-<para><xrefsect id="deprecated_1_deprecated000250"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlReadFile with XML_PARSE_RECOVER.</para>
+<para><xrefsect id="deprecated_1_deprecated000250"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a1f86eefcbde10975fcf8d5cec5b0cae7" kindref="member">xmlReadFile</ref> with XML_PARSE_RECOVER.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3506,7 +3506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1462" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12599" bodyend="12601" declfile="parser.h" declline="1462" declcolumn="1"/>
+        <location file="parser.h" line="1462" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12635" bodyend="12637" declfile="parser.h" declline="1462" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a9715fdf5856a6c888126444b0200f373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3521,7 +3521,7 @@
 <para>Parse an XML document and invoke the SAX handlers. </para>
         </briefdescription>
         <detaileddescription>
-<para>This is useful if you&apos;re only interested in custom SAX callbacks. If you want a document tree, use xmlCtxtParseDocument.</para>
+<para>This is useful if you&apos;re only interested in custom SAX callbacks. If you want a document tree, use <ref refid="parser_8h_1a3392ecd9fb78c14323393059d3ae9652" kindref="member">xmlCtxtParseDocument</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -3537,7 +3537,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1469" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10381" bodyend="10489" declfile="parser.h" declline="1469" declcolumn="1"/>
+        <location file="parser.h" line="1469" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10418" bodyend="10526" declfile="parser.h" declline="1469" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a44e0f2d4959c20b2ea1451313877a083" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3554,7 +3554,8 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000237"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[78] extParsedEnt ::= TextDecl? content
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -3569,7 +3570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1472" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10506" bodyend="10560" declfile="parser.h" declline="1472" declcolumn="1"/>
+        <location file="parser.h" line="1472" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10543" bodyend="10597" declfile="parser.h" declline="1472" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a137fee3c89112868c8868d1c30638fa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3594,7 +3595,7 @@
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000252"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and xmlCtxtReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000252"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and <ref refid="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" kindref="member">xmlCtxtReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3627,7 +3628,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1476" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12649" bodyend="12683" declfile="parser.h" declline="1476" declcolumn="1"/>
+        <location file="parser.h" line="1476" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12685" bodyend="12719" declfile="parser.h" declline="1476" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a45831bf156ea6a5bfb2c0c89fd1d016c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3655,7 +3656,7 @@
         </briefdescription>
         <detaileddescription>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000257"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and xmlCtxtReadMemory.</para>
+<para><xrefsect id="deprecated_1_deprecated000257"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and <ref refid="parser_8h_1aa02be1c2cbed349fd725aa920f1a65a1" kindref="member">xmlCtxtReadMemory</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3696,7 +3697,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1481" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12854" bodyend="12888" declfile="parser.h" declline="1481" declcolumn="1"/>
+        <location file="parser.h" line="1481" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12890" bodyend="12924" declfile="parser.h" declline="1481" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ac20b6ea78cc873dc87755631d02c38b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3721,7 +3722,7 @@
         <detaileddescription>
 <para>It use the given SAX function block to handle the parsing callback. If sax is NULL, fallback to the default DOM tree building routines.</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000258"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and xmlCtxtReadDoc.</para>
+<para><xrefsect id="deprecated_1_deprecated000258"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and <ref refid="parser_8h_1a75b5ec9558b29e6371557c491fb888c0" kindref="member">xmlCtxtReadDoc</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3736,7 +3737,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to an array of xmlChar </para>
+<para>a pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3754,7 +3755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1487" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12939" bodyend="12967" declfile="parser.h" declline="1487" declcolumn="1"/>
+        <location file="parser.h" line="1487" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12975" bodyend="13003" declfile="parser.h" declline="1487" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ad617a1cf77ce670322fcf3d2a6a5166b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3783,7 +3784,7 @@
         <detaileddescription>
 <para>If sax is NULL, fallback to the default DOM tree building routines.</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000254"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and xmlCtxtReadMemory.</para>
+<para><xrefsect id="deprecated_1_deprecated000254"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and <ref refid="parser_8h_1aa02be1c2cbed349fd725aa920f1a65a1" kindref="member">xmlCtxtReadMemory</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3824,7 +3825,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1492" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12799" bodyend="12802" declfile="parser.h" declline="1492" declcolumn="1"/>
+        <location file="parser.h" line="1492" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12835" bodyend="12838" declfile="parser.h" declline="1492" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a922a3ab00ea5be53abf48fd4db1946f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3857,7 +3858,7 @@
         <detaileddescription>
 <para>If sax is NULL, fallback to the default DOM tree building routines.</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000253"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and xmlCtxtReadMemory.</para>
+<para><xrefsect id="deprecated_1_deprecated000253"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and <ref refid="parser_8h_1aa02be1c2cbed349fd725aa920f1a65a1" kindref="member">xmlCtxtReadMemory</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para>User data (void *) is stored within the parser context in the context&apos;s _private member, so it is available nearly everywhere in libxml</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -3907,7 +3908,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1498" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12750" bodyend="12779" declfile="parser.h" declline="1498" declcolumn="1"/>
+        <location file="parser.h" line="1498" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12786" bodyend="12815" declfile="parser.h" declline="1498" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aff4f6a873195e22bb8a7a428be4e26a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3932,7 +3933,7 @@
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time. It use the given SAX function block to handle the parsing callback. If sax is NULL, fallback to the default DOM tree building routines.</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000247"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and xmlCtxtReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000247"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and <ref refid="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" kindref="member">xmlCtxtReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3965,7 +3966,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1505" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12540" bodyend="12543" declfile="parser.h" declline="1505" declcolumn="1"/>
+        <location file="parser.h" line="1505" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12576" bodyend="12579" declfile="parser.h" declline="1505" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1af8557c82ccb023f8f2fd1a13df63ba6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -3994,7 +3995,7 @@
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time. It use the given SAX function block to handle the parsing callback. If sax is NULL, fallback to the default DOM tree building routines.</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000246"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and xmlCtxtReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000246"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a036f5369ee016ac90287ec7012f9cb25" kindref="member">xmlNewSAXParserCtxt</ref> and <ref refid="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" kindref="member">xmlCtxtReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para>User data (void *) is stored within the parser context in the context&apos;s _private member, so it is available nearly everywhere in libxml</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -4036,7 +4037,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1510" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12491" bodyend="12519" declfile="parser.h" declline="1510" declcolumn="1"/>
+        <location file="parser.h" line="1510" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12527" bodyend="12555" declfile="parser.h" declline="1510" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ac750de15aae13432df21102d0502038f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -4058,7 +4059,8 @@
 <para>It use the given SAX function block to handle the parsing callback. If sax is NULL, fallback to the default DOM tree building routines.</para>
 <para><xrefsect id="deprecated_1_deprecated000241"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Don&apos;t use. </para>
 </xrefdescription></xrefsect><verbatim>[78] extParsedEnt ::= TextDecl? content
-</verbatim> This correspond to a &quot;Well Balanced&quot; chunk</para>
+</verbatim></para>
+<para>This correspond to a &quot;Well Balanced&quot; chunk</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -4083,7 +4085,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1516" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12305" bodyend="12335" declfile="parser.h" declline="1516" declcolumn="1"/>
+        <location file="parser.h" line="1516" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12341" bodyend="12371" declfile="parser.h" declline="1516" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a02d0860cff17ad4eba809a5f5125b1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -4099,7 +4101,8 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>[78] extParsedEnt ::= TextDecl? content
-</verbatim> This correspond to a &quot;Well Balanced&quot; chunk</para>
+</verbatim></para>
+<para>This correspond to a &quot;Well Balanced&quot; chunk</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
 <para><xrefsect id="deprecated_1_deprecated000242"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Don&apos;t use.</para>
 </xrefdescription></xrefsect></para>
@@ -4118,7 +4121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1520" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12354" bodyend="12356" declfile="parser.h" declline="1520" declcolumn="1"/>
+        <location file="parser.h" line="1520" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12390" bodyend="12392" declfile="parser.h" declline="1520" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ab2fea6618db56eec2054ffa7a3a96484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> *</type>
@@ -4181,13 +4184,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the resulting xmlDtd or NULL in case of error. <computeroutput>input</computeroutput> will be freed by the function in any case. </para>
+<simplesect kind="return"><para>the resulting <ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> or NULL in case of error. <computeroutput>input</computeroutput> will be freed by the function in any case. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1525" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11475" bodyend="11534" declfile="parser.h" declline="1525" declcolumn="1"/>
+        <location file="parser.h" line="1525" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11512" bodyend="11571" declfile="parser.h" declline="1525" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a78f8254d62233d6bdff644747111d1f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4206,7 +4209,7 @@
 <para>Validate a document. </para>
         </briefdescription>
         <detaileddescription>
-<para>Like xmlValidateDocument but uses the parser context&apos;s error handler.</para>
+<para>Like <ref refid="valid_8h_1a8d744c751b6f7acafca60dcec1ecc41b" kindref="member">xmlValidateDocument</ref> but uses the parser context&apos;s error handler.</para>
 <para>Option XML_PARSE_DTDLOAD should be enabled in the parser context to make external entities work.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
 </simplesect>
@@ -4233,7 +4236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1530" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6368" bodyend="6375" declfile="parser.h" declline="1530" declcolumn="1"/>
+        <location file="parser.h" line="1530" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6380" bodyend="6387" declfile="parser.h" declline="1530" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ad3b7d78af3201bb6351271e601ac3a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4256,7 +4259,7 @@
 <para>Validate a document against a DTD. </para>
         </briefdescription>
         <detaileddescription>
-<para>Like xmlValidateDtd but uses the parser context&apos;s error handler.</para>
+<para>Like <ref refid="valid_8h_1a0d29ed3a8118fc66496ebe71f9970d61" kindref="member">xmlValidateDtd</ref> but uses the parser context&apos;s error handler.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -4290,7 +4293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1533" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6106" bodyend="6113" declfile="parser.h" declline="1533" declcolumn="1"/>
+        <location file="parser.h" line="1533" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6118" bodyend="6125" declfile="parser.h" declline="1533" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a7b05a96c8a3d1a5250134ba201997831" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> *</type>
@@ -4313,7 +4316,7 @@
 <para>Load and parse an external subset. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000239"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlCtxtParseDtd.</para>
+<para><xrefsect id="deprecated_1_deprecated000239"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1ab2fea6618db56eec2054ffa7a3a96484" kindref="member">xmlCtxtParseDtd</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -4340,13 +4343,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the resulting xmlDtd or NULL in case of error. </para>
+<simplesect kind="return"><para>the resulting <ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1538" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11598" bodyend="11645" declfile="parser.h" declline="1538" declcolumn="1"/>
+        <location file="parser.h" line="1538" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11634" bodyend="11681" declfile="parser.h" declline="1538" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a80d75ad9fbfe0e99531bdd9fbb6afb4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> *</type>
@@ -4382,13 +4385,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the resulting xmlDtd or NULL in case of error. </para>
+<simplesect kind="return"><para>the resulting <ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1542" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11657" bodyend="11659" declfile="parser.h" declline="1542" declcolumn="1"/>
+        <location file="parser.h" line="1542" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11693" bodyend="11695" declfile="parser.h" declline="1542" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a9ce418ac9417f048700417af1af8a8e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> *</type>
@@ -4411,7 +4414,7 @@
 <para>Load and parse a DTD. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000238"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlCtxtParseDtd.</para>
+<para><xrefsect id="deprecated_1_deprecated000238"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1ab2fea6618db56eec2054ffa7a3a96484" kindref="member">xmlCtxtParseDtd</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -4438,13 +4441,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the resulting xmlDtd or NULL in case of error. <computeroutput>input</computeroutput> will be freed by the function in any case. </para>
+<simplesect kind="return"><para>the resulting <ref refid="tree_8h_1af3e371049fefe3bc6aa9d3caaa651a0d" kindref="member">xmlDtd</ref> or NULL in case of error. <computeroutput>input</computeroutput> will be freed by the function in any case. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1545" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11549" bodyend="11584" declfile="parser.h" declline="1545" declcolumn="1"/>
+        <location file="parser.h" line="1545" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11586" bodyend="11620" declfile="parser.h" declline="1545" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ab0a8614315479e526e848fe371c9a014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4481,7 +4484,8 @@
         <detaileddescription>
 <para><verbatim>[43] content ::= (element | CharData | Reference | CDSect | PI |
                   Comment)*
-</verbatim> This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
+</verbatim></para>
+<para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
@@ -4537,7 +4541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1551" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11983" bodyend="11987" declfile="parser.h" declline="1551" declcolumn="1"/>
+        <location file="parser.h" line="1551" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12019" bodyend="12023" declfile="parser.h" declline="1551" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ac5cc0e4b5de7a6fe886cd4a34a665012" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref></type>
@@ -4571,7 +4575,8 @@
         <detaileddescription>
 <para>The allowed sequence for the data is a Well Balanced Chunk defined by the content production in the XML grammar: <verbatim>[43] content ::= (element | CharData | Reference | CDSect | PI |
                   Comment)*
-</verbatim> This function assumes the encoding of <computeroutput>node</computeroutput>&apos;s document which is typically not what you want. A better alternative is xmlCtxtParseContent.</para>
+</verbatim></para>
+<para>This function assumes the encoding of <computeroutput>node</computeroutput>&apos;s document which is typically not what you want. A better alternative is <ref refid="parser_8h_1ad9556fdbc45d529e94fa524298724fb8" kindref="member">xmlCtxtParseContent</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>node</parametername>
@@ -4601,7 +4606,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4619,7 +4624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1559" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12151" bodyend="12205" declfile="parser.h" declline="1559" declcolumn="1"/>
+        <location file="parser.h" line="1559" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12187" bodyend="12241" declfile="parser.h" declline="1559" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ac091b1b1acf58fff8348308ab0adb6e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4661,7 +4666,8 @@
         <detaileddescription>
 <para>The allowed sequence for the Well Balanced Chunk is the one defined by the content production in the XML grammar: <verbatim>[43] content ::= (element | CharData | Reference | CDSect | PI |
                   Comment)*
-</verbatim> In case recover is set to 1, the nodelist will not be empty even if the parsed chunk is not well balanced, assuming the parsing succeeded to some extent.</para>
+</verbatim></para>
+<para>In case recover is set to 1, the nodelist will not be empty even if the parsed chunk is not well balanced, assuming the parsing succeeded to some extent.</para>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -4726,7 +4732,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1566" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12235" bodyend="12283" declfile="parser.h" declline="1566" declcolumn="1"/>
+        <location file="parser.h" line="1566" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12271" bodyend="12319" declfile="parser.h" declline="1566" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a3582384112e3c98c95a4c002546f61b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4767,9 +4773,10 @@
         </briefdescription>
         <detaileddescription>
 <para>This function uses deprecated global variables to set parser options which default to XML_PARSE_NODICT.</para>
-<para><xrefsect id="deprecated_1_deprecated000240"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParseCtxtExternalEntity. </para>
+<para><xrefsect id="deprecated_1_deprecated000240"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a882b085ddf37b967bfeb055f33d366a0" kindref="member">xmlParseCtxtExternalEntity</ref>. </para>
 </xrefdescription></xrefsect><verbatim>[78] extParsedEnt ::= TextDecl? content
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
 </parameternamelist>
@@ -4832,7 +4839,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1575" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11937" bodyend="11958" declfile="parser.h" declline="1575" declcolumn="1"/>
+        <location file="parser.h" line="1575" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11973" bodyend="11994" declfile="parser.h" declline="1575" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a882b085ddf37b967bfeb055f33d366a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4862,7 +4869,8 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>[78] extParsedEnt ::= TextDecl? content
-</verbatim> <parameterlist kind="param"><parameteritem>
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
 </parameternamelist>
@@ -4901,7 +4909,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1584" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11884" bodyend="11910" declfile="parser.h" declline="1584" declcolumn="1"/>
+        <location file="parser.h" line="1584" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11920" bodyend="11946" declfile="parser.h" declline="1584" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ab730009088cf3642152ff832fa5e79dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -4915,7 +4923,7 @@
 <para>Allocate and initialize a new parser context. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>the xmlParserCtxt or NULL </para>
+<para><simplesect kind="return"><para>the <ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -4943,7 +4951,7 @@
 <para>If userData is NULL, the parser context will be passed as user data.</para>
 <para><simplesect kind="since"><para>2.11.0</para>
 </simplesect>
-If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt and set ctxt-&gt;sax with struct assignment.</para>
+If you want support older versions, it&apos;s best to invoke <ref refid="parser_8h_1ab730009088cf3642152ff832fa5e79dc" kindref="member">xmlNewParserCtxt</ref> and set ctxt-&gt;sax with struct assignment.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>sax</parametername>
@@ -4961,7 +4969,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlParserCtxt or NULL if memory allocation failed. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> or NULL if memory allocation failed. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -5029,7 +5037,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1601" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3506" bodyend="3509" declfile="parser.h" declline="1601" declcolumn="1"/>
+        <location file="parser.h" line="1601" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3499" bodyend="3502" declfile="parser.h" declline="1601" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a39e4f53698570be6a917a2d12f3a0d26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5097,7 +5105,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <parametername>buffer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar * buffer </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * buffer </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5113,7 +5121,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1607" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12616" bodyend="12632" declfile="parser.h" declline="1607" declcolumn="1"/>
+        <location file="parser.h" line="1607" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12652" bodyend="12668" declfile="parser.h" declline="1607" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a0f6046599c6c4f28e9fd7320753f8075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -5134,7 +5142,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to an array of xmlChar </para>
+<para>a pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5144,7 +5152,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1612" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12898" bodyend="12918" declfile="parser.h" declline="1612" declcolumn="1"/>
+        <location file="parser.h" line="1612" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12934" bodyend="12954" declfile="parser.h" declline="1612" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a8db6d6bb17223e76909f42f391cb306a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -5175,7 +5183,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <para>Create a parser context for using the XML parser in push mode. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlParseChunk.</para>
+<para>See <ref refid="parser_8h_1a77247b6884cf9784f6add908ac434d76" kindref="member">xmlParseChunk</ref>.</para>
 <para>Passing an initial chunk is useless and deprecated.</para>
 <para>The push parser doesn&apos;t support recovery mode or the XML_PARSE_NOBLANKS option.</para>
 <para><computeroutput>filename</computeroutput> is used as base URI to fetch external entities and for error reports.</para>
@@ -5226,7 +5234,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1619" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11358" bodyend="11382" declfile="parser.h" declline="1619" declcolumn="1"/>
+        <location file="parser.h" line="1619" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11395" bodyend="11419" declfile="parser.h" declline="1619" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a77247b6884cf9784f6add908ac434d76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5253,9 +5261,9 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <para>Parse a chunk of memory in push parser mode. </para>
         </briefdescription>
         <detaileddescription>
-<para>Assumes that the parser context was initialized with xmlCreatePushParserCtxt.</para>
+<para>Assumes that the parser context was initialized with <ref refid="parser_8h_1a8db6d6bb17223e76909f42f391cb306a" kindref="member">xmlCreatePushParserCtxt</ref>.</para>
 <para>The last chunk, which will often be empty, must be marked with the <computeroutput>terminate</computeroutput> flag. With the default SAX callbacks, the resulting document will be available in ctxt-&gt;myDoc. This pointer will not be freed when calling <ref refid="parser_8h_1a39e4f53698570be6a917a2d12f3a0d26" kindref="member">xmlFreeParserCtxt</ref> and must be freed by the caller. If the document isn&apos;t well-formed, it will still be returned in ctxt-&gt;myDoc.</para>
-<para>As an exception, xmlCtxtResetPush will free the document in ctxt-&gt;myDoc. So ctxt-&gt;myDoc should be set to NULL after extracting the document.</para>
+<para>As an exception, <ref refid="parser_8h_1a5622de790857d73d44c65cce2bf74ae5" kindref="member">xmlCtxtResetPush</ref> will free the document in ctxt-&gt;myDoc. So ctxt-&gt;myDoc should be set to NULL after extracting the document.</para>
 <para>Since 2.14.0, <ref refid="parser_8h_1a298011fdad3362493ce7afcb0abdd572" kindref="member">xmlCtxtGetDocument</ref> can be used to retrieve the result document.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -5290,13 +5298,13 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code (0 on success). </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code (0 on success). </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1625" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11237" bodyend="11328" declfile="parser.h" declline="1625" declcolumn="1"/>
+        <location file="parser.h" line="1625" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11274" bodyend="11365" declfile="parser.h" declline="1625" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a8aebd9f7b642f30f623b271aa217f5a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> *</type>
@@ -5386,7 +5394,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1636" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11424" bodyend="11450" declfile="parser.h" declline="1636" declcolumn="1"/>
+        <location file="parser.h" line="1636" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="11461" bodyend="11487" declfile="parser.h" declline="1636" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ac8a5c804b0ba7ed964f8dd27b8e9f433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> *</type>
@@ -5486,7 +5494,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1653" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3522" bodyend="3535" declfile="parser.h" declline="1653" declcolumn="1"/>
+        <location file="parser.h" line="1653" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3515" bodyend="3528" declfile="parser.h" declline="1653" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1adf45d26e222cba480fa3ad80cc19da9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5516,7 +5524,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1657" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3546" bodyend="3553" declfile="parser.h" declline="1657" declcolumn="1"/>
+        <location file="parser.h" line="1657" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3539" bodyend="3546" declfile="parser.h" declline="1657" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ab7dbc56de3c39559171d2bccaf609030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5546,7 +5554,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1660" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3563" bodyend="3570" declfile="parser.h" declline="1660" declcolumn="1"/>
+        <location file="parser.h" line="1660" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3556" bodyend="3563" declfile="parser.h" declline="1660" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a3b4a41cab9cf503570f2352b16498858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -5590,7 +5598,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1663" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3583" bodyend="3611" declfile="parser.h" declline="1663" declcolumn="1"/>
+        <location file="parser.h" line="1663" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3576" bodyend="3604" declfile="parser.h" declline="1663" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aa31bf49d0534d8c8e02bdd4e65193406" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5632,7 +5640,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1667" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3623" bodyend="3673" declfile="parser.h" declline="1667" declcolumn="1"/>
+        <location file="parser.h" line="1667" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3616" bodyend="3666" declfile="parser.h" declline="1667" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a3e0a3ea3ee3338c9c5ff6b98903dbd9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5647,7 +5655,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <para>Changes the default external entity resolver function for the application. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000277"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is a global setting and not thread-safe. Use xmlCtxtSetResourceLoader or similar functions.</para>
+<para><xrefsect id="deprecated_1_deprecated000277"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is a global setting and not thread-safe. Use <ref refid="parser_8h_1a5e0c3103a2d3b1e9003760479e1e8704" kindref="member">xmlCtxtSetResourceLoader</ref> or similar functions.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -5676,7 +5684,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <para>Get the default external entity resolver function for the application. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000278"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See xmlSetExternalEntityLoader.</para>
+<para><xrefsect id="deprecated_1_deprecated000278"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See <ref refid="parser_8h_1a3e0a3ea3ee3338c9c5ff6b98903dbd9c" kindref="member">xmlSetExternalEntityLoader</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><simplesect kind="return"><para>the <ref refid="parser_8h_1a6bbf92ce0c6b32b1cd373193d0f5f5f1" kindref="member">xmlExternalEntityLoader</ref> function pointer </para>
 </simplesect>
@@ -5712,8 +5720,8 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <para><computeroutput>publicId</computeroutput> is an optional XML public ID, typically from a doctype declaration. It is used for catalog lookups.</para>
 <para>If catalog lookup is enabled (default is yes) and URL or ID are found in system or local XML catalogs, URL is replaced with the result. Then the following resource loaders will be called if they were registered (in order of precedence):</para>
 <para><itemizedlist>
-<listitem><para>the resource loader set with xmlCtxtSetResourceLoader</para>
-</listitem><listitem><para>the global external entity loader set with xmlSetExternalEntityLoader (without catalog resolution, deprecated)</para>
+<listitem><para>the resource loader set with <ref refid="parser_8h_1a5e0c3103a2d3b1e9003760479e1e8704" kindref="member">xmlCtxtSetResourceLoader</ref></para>
+</listitem><listitem><para>the global external entity loader set with <ref refid="parser_8h_1a3e0a3ea3ee3338c9c5ff6b98903dbd9c" kindref="member">xmlSetExternalEntityLoader</ref> (without catalog resolution, deprecated)</para>
 </listitem><listitem><para>the per-thread <ref refid="xmlIO_8h_1a3d74afc4eb6b1aa8b5521b2690459714" kindref="member">xmlParserInputBufferCreateFilenameFunc</ref> set with <ref refid="xmlIO_8h_1a69305091df0800559923f17822353d9c" kindref="member">xmlParserInputBufferCreateFilenameDefault</ref> (deprecated)</para>
 </listitem><listitem><para>the default loader which will return<itemizedlist>
 <listitem><para>the result from a matching global input callback set with <ref refid="xmlIO_8h_1ab6b38e75f9858b2872ae51a06909fbdc" kindref="member">xmlRegisterInputCallbacks</ref> (deprecated)</para>
@@ -5747,7 +5755,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlParserInput or NULL </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -5814,7 +5822,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1891" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12999" bodyend="13093" declfile="parser.h" declline="1891" declcolumn="1"/>
+        <location file="parser.h" line="1891" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13035" bodyend="13129" declfile="parser.h" declline="1891" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a5622de790857d73d44c65cce2bf74ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5892,7 +5900,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1893" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13106" bodyend="13129" declfile="parser.h" declline="1893" declcolumn="1"/>
+        <location file="parser.h" line="1893" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13142" bodyend="13165" declfile="parser.h" declline="1893" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a539694793176574f4318fadc71468165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5924,7 +5932,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1899" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13235" bodyend="13241" declfile="parser.h" declline="1899" declcolumn="1"/>
+        <location file="parser.h" line="1899" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13271" bodyend="13277" declfile="parser.h" declline="1899" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a0e34a099a124079abeeac709a2445279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5946,7 +5954,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 <para>Unset options are cleared.</para>
 <para><simplesect kind="since"><para>2.13.0</para>
 </simplesect>
-With older versions, you can use xmlCtxtUseOptions.</para>
+With older versions, you can use <ref refid="parser_8h_1ae47f76b45b93114d3fc9d6f627f061ef" kindref="member">xmlCtxtUseOptions</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -5960,7 +5968,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a bitmask of xmlParserOption values </para>
+<para>a bitmask of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5970,7 +5978,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1901" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13216" bodyend="13224" declfile="parser.h" declline="1901" declcolumn="1"/>
+        <location file="parser.h" line="1901" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13252" bodyend="13260" declfile="parser.h" declline="1901" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ae47f76b45b93114d3fc9d6f627f061ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6002,7 +6010,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 </listitem><listitem><para>XML_PARSE_OLDSAX</para>
 </listitem><listitem><para>XML_PARSE_IGNORE_ENC</para>
 </listitem><listitem><para>XML_PARSE_BIG_LINES</para>
-<para><xrefsect id="deprecated_1_deprecated000260"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlCtxtSetOptions.</para>
+<para><xrefsect id="deprecated_1_deprecated000260"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a0e34a099a124079abeeac709a2445279" kindref="member">xmlCtxtSetOptions</ref>.</para>
 </xrefdescription></xrefsect></para>
 </listitem></itemizedlist>
 </para>
@@ -6019,7 +6027,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -6029,7 +6037,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1904" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13267" bodyend="13292" declfile="parser.h" declline="1904" declcolumn="1"/>
+        <location file="parser.h" line="1904" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13303" bodyend="13328" declfile="parser.h" declline="1904" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a416b57ce9df30de4eb36507648b3987b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -6324,7 +6332,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1924" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3191" bodyend="3205" declfile="parser.h" declline="1924" declcolumn="1"/>
+        <location file="parser.h" line="1924" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3191" bodyend="3198" declfile="parser.h" declline="1924" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a298011fdad3362493ce7afcb0abdd572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -6355,7 +6363,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1927" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3216" bodyend="3235" declfile="parser.h" declline="1927" declcolumn="1"/>
+        <location file="parser.h" line="1927" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3209" bodyend="3228" declfile="parser.h" declline="1927" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a92077b375fcf9e241c9751c3c91f65ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6386,7 +6394,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1929" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3244" bodyend="3249" declfile="parser.h" declline="1929" declcolumn="1"/>
+        <location file="parser.h" line="1929" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3237" bodyend="3242" declfile="parser.h" declline="1929" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a42c2fb7c292c2b60900aeddbe412a194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6419,7 +6427,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1931" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3263" bodyend="3268" declfile="parser.h" declline="1931" declcolumn="1"/>
+        <location file="parser.h" line="1931" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3256" bodyend="3261" declfile="parser.h" declline="1931" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aa1523d418cd92068a5819d7aa47c743e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6459,10 +6467,10 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1933" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3287" bodyend="3292" declfile="parser.h" declline="1933" declcolumn="1"/>
+        <location file="parser.h" line="1933" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3280" bodyend="3285" declfile="parser.h" declline="1933" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aaacf2733f3e40fc30dab089ee1355ebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+        <type>xmlValidCtxt *</type>
         <definition>xmlValidCtxt * xmlCtxtGetValidCtxt</definition>
         <argsstring>(xmlParserCtxt *ctxt)</argsstring>
         <name>xmlCtxtGetValidCtxt</name>
@@ -6490,7 +6498,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1936" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3302" bodyend="3307" declfile="parser.h" declline="1936" declcolumn="1"/>
+        <location file="parser.h" line="1936" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3295" bodyend="3300" declfile="parser.h" declline="1936" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aeb4d40a990cc73c7dfc15cc7d9f7d2aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -6521,7 +6529,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1939" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10305" bodyend="10310" declfile="parser.h" declline="1939" declcolumn="1"/>
+        <location file="parser.h" line="1939" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10342" bodyend="10347" declfile="parser.h" declline="1939" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a94d9434a8bdcc2348feca88552f95a0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -6583,7 +6591,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1943" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10319" bodyend="10324" declfile="parser.h" declline="1943" declcolumn="1"/>
+        <location file="parser.h" line="1943" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="10356" bodyend="10361" declfile="parser.h" declline="1943" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1af2c13485b4f93dac83e915cc21b2122c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="parser_8h_1a14fa3a3a961854f140a3e5403954abc1" kindref="member">xmlParserStatus</ref></type>
@@ -6649,7 +6657,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1947" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3322" bodyend="3327" declfile="parser.h" declline="1947" declcolumn="1"/>
+        <location file="parser.h" line="1947" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3315" bodyend="3320" declfile="parser.h" declline="1947" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ae847f35d4d290e3a76f93b99afb3636e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -6683,7 +6691,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1949" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3345" bodyend="3352" declfile="parser.h" declline="1949" declcolumn="1"/>
+        <location file="parser.h" line="1949" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3338" bodyend="3345" declfile="parser.h" declline="1949" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ac457f016ceaa7cea92f3bf823a09c362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6752,7 +6760,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1951" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3368" bodyend="3383" declfile="parser.h" declline="1951" declcolumn="1"/>
+        <location file="parser.h" line="1951" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3361" bodyend="3376" declfile="parser.h" declline="1951" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ad28619d7a08511e570dc279dd38bf0fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6849,7 +6857,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1956" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3409" bodyend="3443" declfile="parser.h" declline="1956" declcolumn="1"/>
+        <location file="parser.h" line="1956" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3402" bodyend="3436" declfile="parser.h" declline="1956" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aaed78db63b3868f3e682ca0a72cbc22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6931,7 +6939,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1963" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3468" bodyend="3490" declfile="parser.h" declline="1963" declcolumn="1"/>
+        <location file="parser.h" line="1963" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3461" bodyend="3483" declfile="parser.h" declline="1963" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6955,10 +6963,10 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para>If handler is NULL, the error handler will be deactivated.</para>
-<para>If you only want to disable parser errors being printed to stderr, use xmlParserOption XML_PARSE_NOERROR.</para>
+<para>If you only want to disable parser errors being printed to stderr, use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOERROR.</para>
 <para>This is the recommended way to collect errors from the parser and takes precedence over all other error reporting mechanisms. These are (in order of precedence):</para>
 <para><itemizedlist>
-<listitem><para>per-context structured handler (xmlCtxtSetErrorHandler)</para>
+<listitem><para>per-context structured handler (<ref refid="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" kindref="member">xmlCtxtSetErrorHandler</ref>)</para>
 </listitem><listitem><para>per-context structured &quot;serror&quot; SAX handler</para>
 </listitem><listitem><para>global structured handler (<ref refid="xmlerror_8h_1a45950b585823204441216f768579b5f4" kindref="member">xmlSetStructuredErrorFunc</ref>)</para>
 </listitem><listitem><para>per-context generic &quot;error&quot; and &quot;warning&quot; SAX handlers</para>
@@ -7149,7 +7157,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1981" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13307" bodyend="13312" declfile="parser.h" declline="1981" declcolumn="1"/>
+        <location file="parser.h" line="1981" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13343" bodyend="13350" declfile="parser.h" declline="1981" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1abafd139b6651421e3c8b2a7f2525e183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7176,7 +7184,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <para>Convenience function to parse an XML document from a zero-terminated string. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlCtxtReadDoc for details.</para>
+<para>See <ref refid="parser_8h_1a75b5ec9558b29e6371557c491fb888c0" kindref="member">xmlCtxtReadDoc</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cur</parametername>
@@ -7206,7 +7214,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7216,7 +7224,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1984" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13368" bodyend="13389" declfile="parser.h" declline="1984" declcolumn="1"/>
+        <location file="parser.h" line="1984" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13406" bodyend="13427" declfile="parser.h" declline="1984" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a1f86eefcbde10975fcf8d5cec5b0cae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7241,7 +7249,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para>If a &quot;-&quot; filename is passed, the function will read from stdin. This feature is potentially insecure and might be removed from later versions.</para>
-<para>See xmlCtxtReadFile for details.</para>
+<para>See <ref refid="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" kindref="member">xmlCtxtReadFile</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>filename</parametername>
@@ -7263,7 +7271,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7273,7 +7281,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1989" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13407" bodyend="13435" declfile="parser.h" declline="1989" declcolumn="1"/>
+        <location file="parser.h" line="1989" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13445" bodyend="13473" declfile="parser.h" declline="1989" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a783c647cf82b51f93a5cd27faf5fbe2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7306,7 +7314,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para>The input buffer must not contain a terminating null byte.</para>
-<para>See xmlCtxtReadMemory for details.</para>
+<para>See <ref refid="parser_8h_1aa02be1c2cbed349fd725aa920f1a65a1" kindref="member">xmlCtxtReadMemory</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buffer</parametername>
@@ -7344,7 +7352,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7354,7 +7362,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1993" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13451" bodyend="13475" declfile="parser.h" declline="1993" declcolumn="1"/>
+        <location file="parser.h" line="1993" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13489" bodyend="13513" declfile="parser.h" declline="1993" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a5f1ffeb994696a11b8aa015bd69e1205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7381,7 +7389,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <para>Parse an XML from a file descriptor and build a tree. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlCtxtReadFd for details.</para>
+<para>See <ref refid="parser_8h_1a4dc2c051a0d059776df8c4261f8bcdda" kindref="member">xmlCtxtReadFd</ref> for details.</para>
 <para>NOTE that the file descriptor will not be closed when the context is freed or reset.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -7412,7 +7420,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7422,7 +7430,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="1999" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13492" bodyend="13511" declfile="parser.h" declline="1999" declcolumn="1"/>
+        <location file="parser.h" line="1999" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13530" bodyend="13549" declfile="parser.h" declline="1999" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a183ee5d8f9c0d2041bb17dbd104aea19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7457,7 +7465,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <para>Parse an XML document from I/O functions and context and build a tree. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlCtxtReadIO for details.</para>
+<para>See <ref refid="parser_8h_1abfade32247691b852243fc71690c4c87" kindref="member">xmlCtxtReadIO</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ioread</parametername>
@@ -7503,7 +7511,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7513,7 +7521,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2004" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13527" bodyend="13548" declfile="parser.h" declline="2004" declcolumn="1"/>
+        <location file="parser.h" line="2004" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13565" bodyend="13586" declfile="parser.h" declline="2004" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a3392ecd9fb78c14323393059d3ae9652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7558,7 +7566,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2011" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13325" bodyend="13353" declfile="parser.h" declline="2011" declcolumn="1"/>
+        <location file="parser.h" line="2011" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13363" bodyend="13391" declfile="parser.h" declline="2011" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1ad9556fdbc45d529e94fa524298724fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -7628,7 +7636,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2014" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12007" bodyend="12126" declfile="parser.h" declline="2014" declcolumn="1"/>
+        <location file="parser.h" line="2014" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="12043" bodyend="12162" declfile="parser.h" declline="2014" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a75b5ec9558b29e6371557c491fb888c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7698,7 +7706,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7708,7 +7716,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2019" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13564" bodyend="13581" declfile="parser.h" declline="2019" declcolumn="1"/>
+        <location file="parser.h" line="2019" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13602" bodyend="13619" declfile="parser.h" declline="2019" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7764,7 +7772,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7774,7 +7782,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2025" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13594" bodyend="13610" declfile="parser.h" declline="2025" declcolumn="1"/>
+        <location file="parser.h" line="2025" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13632" bodyend="13648" declfile="parser.h" declline="2025" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1aa02be1c2cbed349fd725aa920f1a65a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7856,7 +7864,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7866,7 +7874,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2030" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13628" bodyend="13645" declfile="parser.h" declline="2030" declcolumn="1"/>
+        <location file="parser.h" line="2030" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13666" bodyend="13683" declfile="parser.h" declline="2030" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a4dc2c051a0d059776df8c4261f8bcdda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -7936,7 +7944,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -7946,7 +7954,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2037" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13664" bodyend="13680" declfile="parser.h" declline="2037" declcolumn="1"/>
+        <location file="parser.h" line="2037" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13702" bodyend="13718" declfile="parser.h" declline="2037" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1abfade32247691b852243fc71690c4c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -8040,7 +8048,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -8050,7 +8058,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2043" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13699" bodyend="13718" declfile="parser.h" declline="2043" declcolumn="1"/>
+        <location file="parser.h" line="2043" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="13737" bodyend="13756" declfile="parser.h" declline="2043" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="parser_8h_1a07aefa97e2d3a6e3735accb899f1a154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref></type>
@@ -8112,7 +8120,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -8338,7 +8346,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para><computeroutput>url</computeroutput> is used as base to resolve external entities and for error reporting.</para>
-<para><computeroutput>ioRead</computeroutput> is called to read new data into a provided buffer. It must return the number of bytes written into the buffer ot a negative xmlParserErrors code on failure.</para>
+<para><computeroutput>ioRead</computeroutput> is called to read new data into a provided buffer. It must return the number of bytes written into the buffer ot a negative <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code on failure.</para>
 <para><computeroutput>ioClose</computeroutput> is called after parsing has finished.</para>
 <para><computeroutput>ioCtxt</computeroutput> is an opaque pointer passed to the callbacks.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
@@ -8427,7 +8435,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -8463,7 +8471,7 @@ With older versions, you can use xmlCtxtUseOptions.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="parser.h" line="2156" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="494" bodyend="665" declfile="parser.h" declline="2156" declcolumn="1"/>
+        <location file="parser.h" line="2156" column="1" bodyfile="/builds/GNOME/libxml2/parser.c" bodystart="495" bodyend="666" declfile="parser.h" declline="2156" declcolumn="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="schemasInternals_8h" kind="file" language="C++">
     <compoundname>schemasInternals.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -2263,7 +2263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schemasInternals.h" line="797" column="17" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="3902" bodyend="3935" declfile="schemasInternals.h" declline="797" declcolumn="17"/>
+        <location file="schemasInternals.h" line="797" column="16" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="3902" bodyend="3935" declfile="schemasInternals.h" declline="797" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="schemasInternals_8h_1a4549908811d25e4c5e7a9be2f85cfd3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2291,7 +2291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schemasInternals.h" line="798" column="17" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="3751" bodyend="3762" declfile="schemasInternals.h" declline="798" declcolumn="17"/>
+        <location file="schemasInternals.h" line="798" column="16" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="3751" bodyend="3762" declfile="schemasInternals.h" declline="798" declcolumn="16"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

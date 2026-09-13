@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlTextWriter" kind="struct" language="C++" prot="public">
     <compoundname>_xmlTextWriter</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct__xmlTextWriter_1aa54d4328172fc17c9fb3785b0765cc53" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+        <type>xmlOutputBufferPtr</type>
         <definition>xmlOutputBufferPtr out</definition>
         <argsstring></argsstring>
         <name>out</name>
@@ -116,7 +116,7 @@
         <location file="/builds/GNOME/libxml2/xmlwriter.c" line="88" column="10" bodyfile="/builds/GNOME/libxml2/xmlwriter.c" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextWriter_1a550253c56239724fc21073c749d68544" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+        <type>xmlParserCtxtPtr</type>
         <definition>xmlParserCtxtPtr ctxt</definition>
         <argsstring></argsstring>
         <name>ctxt</name>
@@ -144,7 +144,7 @@
         <location file="/builds/GNOME/libxml2/xmlwriter.c" line="90" column="9" bodyfile="/builds/GNOME/libxml2/xmlwriter.c" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlTextWriter_1acb7e0779c02127031b073502aca38a8c" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr doc</definition>
         <argsstring></argsstring>
         <name>doc</name>

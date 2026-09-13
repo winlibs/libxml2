@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlregexp_8h" kind="file" language="C++">
     <compoundname>xmlregexp.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -384,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="43" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5482" bodyend="5522" declfile="xmlregexp.h" declline="43" declcolumn="5"/>
+        <location file="xmlregexp.h" line="43" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5486" bodyend="5526" declfile="xmlregexp.h" declline="43" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1abf53df7110900c8fee268bd669372764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="44" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5593" bodyend="5623" declfile="xmlregexp.h" declline="44" declcolumn="9"/>
+        <location file="xmlregexp.h" line="44" column="8" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5597" bodyend="5627" declfile="xmlregexp.h" declline="44" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1a5e0c170af074d858b976e44072ad4af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -455,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="46" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5532" bodyend="5536" declfile="xmlregexp.h" declline="46" declcolumn="5"/>
+        <location file="xmlregexp.h" line="46" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5536" bodyend="5540" declfile="xmlregexp.h" declline="46" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1a8aadb15b7eeccd9bee96c10443542168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -497,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="50" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5467" bodyend="5469" declfile="xmlregexp.h" declline="50" declcolumn="5"/>
+        <location file="xmlregexp.h" line="50" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5471" bodyend="5473" declfile="xmlregexp.h" declline="50" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1aefb205d1f1d6a9cfc19216057a092adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -531,7 +531,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="53" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5554" bodyend="5585" declfile="xmlregexp.h" declline="53" declcolumn="5"/>
+        <location file="xmlregexp.h" line="53" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5558" bodyend="5589" declfile="xmlregexp.h" declline="53" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1a80d66451d4743bef56e3775f54e2ec98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlregexp_8h_1a7cb5c3cf63762a6f1a597d31db016278" kindref="member">xmlRegExecCtxt</ref> *</type>
@@ -587,7 +587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="73" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3611" bodyend="3660" declfile="xmlregexp.h" declline="73" declcolumn="5"/>
+        <location file="xmlregexp.h" line="73" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3615" bodyend="3664" declfile="xmlregexp.h" declline="73" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1aa23396f612f65ff669d96fa8bac005e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -617,7 +617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="78" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3670" bodyend="3698" declfile="xmlregexp.h" declline="78" declcolumn="5"/>
+        <location file="xmlregexp.h" line="78" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3674" bodyend="3702" declfile="xmlregexp.h" declline="78" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1a32f09398adfba57d35b00153711e4f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -673,7 +673,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="81" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4192" bodyend="4195" declfile="xmlregexp.h" declline="81" declcolumn="5"/>
+        <location file="xmlregexp.h" line="81" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4196" bodyend="4199" declfile="xmlregexp.h" declline="81" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1ab4ef3d51c07c4067b2e6b5f816499c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -741,7 +741,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="86" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4210" bodyend="4251" declfile="xmlregexp.h" declline="86" declcolumn="5"/>
+        <location file="xmlregexp.h" line="86" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4214" bodyend="4255" declfile="xmlregexp.h" declline="86" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1ace04ce949ad8be60b51a3b507688af7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -822,7 +822,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="93" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4427" bodyend="4430" declfile="xmlregexp.h" declline="93" declcolumn="5"/>
+        <location file="xmlregexp.h" line="93" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4431" bodyend="4434" declfile="xmlregexp.h" declline="93" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8h_1a525c4e91e0b3318f191ded4edce4a888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -915,7 +915,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlregexp.h" line="100" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4452" bodyend="4463" declfile="xmlregexp.h" declline="100" declcolumn="5"/>
+        <location file="xmlregexp.h" line="100" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4456" bodyend="4467" declfile="xmlregexp.h" declline="100" declcolumn="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

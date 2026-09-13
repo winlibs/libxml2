@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="parserInternals_8c" kind="file" language="C++">
     <compoundname>parserInternals.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -515,10 +515,10 @@
         </briefdescription>
         <detaileddescription>
 <para>If handler is NULL, the error handler will be deactivated.</para>
-<para>If you only want to disable parser errors being printed to stderr, use xmlParserOption XML_PARSE_NOERROR.</para>
+<para>If you only want to disable parser errors being printed to stderr, use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOERROR.</para>
 <para>This is the recommended way to collect errors from the parser and takes precedence over all other error reporting mechanisms. These are (in order of precedence):</para>
 <para><itemizedlist>
-<listitem><para>per-context structured handler (xmlCtxtSetErrorHandler)</para>
+<listitem><para>per-context structured handler (<ref refid="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" kindref="member">xmlCtxtSetErrorHandler</ref>)</para>
 </listitem><listitem><para>per-context structured &quot;serror&quot; SAX handler</para>
 </listitem><listitem><para>global structured handler (<ref refid="xmlerror_8h_1a45950b585823204441216f768579b5f4" kindref="member">xmlSetStructuredErrorFunc</ref>)</para>
 </listitem><listitem><para>per-context generic &quot;error&quot; and &quot;warning&quot; SAX handlers</para>
@@ -684,7 +684,7 @@
 <parametername>code</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>xmlParserErrors code </para>
+<para><ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -821,7 +821,7 @@
 <parametername>level</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlErrorLevel for the error </para>
+<para>the <ref refid="xmlerror_8h_1a99cf79f750085bec4b5c3f2e188f47ae" kindref="member">xmlErrorLevel</ref> for the error </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -968,7 +968,7 @@
 <parametername>level</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlErrorLevel for the error </para>
+<para>the <ref refid="xmlerror_8h_1a99cf79f750085bec4b5c3f2e188f47ae" kindref="member">xmlErrorLevel</ref> for the error </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1583,7 +1583,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an array of xmlChar </para>
+<para>pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1595,7 +1595,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of xmlChar written </para>
+<simplesect kind="return"><para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> written </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1639,7 +1639,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an array of xmlChar </para>
+<para>pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1651,7 +1651,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of xmlChar written </para>
+<simplesect kind="return"><para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> written </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1720,11 +1720,11 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlCharEncodingHandlerPtr *hout)</argsstring>
         <name>xmlDetectEBCDIC</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlCharEncodingHandler" kindref="compound">xmlCharEncodingHandlerPtr</ref> *</type>
+          <type>xmlCharEncodingHandlerPtr *</type>
           <declname>hout</declname>
         </param>
         <briefdescription>
@@ -1785,11 +1785,11 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserInputPtr input, const char *encoding)</argsstring>
         <name>xmlSwitchInputEncodingName</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlParserInput" kindref="compound">xmlParserInputPtr</ref></type>
+          <type>xmlParserInputPtr</type>
           <declname>input</declname>
         </param>
         <param>
@@ -1913,7 +1913,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2169,7 +2169,7 @@
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserInput </para>
+<para>an <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2192,7 +2192,7 @@
 <para>Create a new input stream structure. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000271"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlNewInputFromUrl or similar functions.</para>
+<para><xrefsect id="deprecated_1_deprecated000271"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a07aefa97e2d3a6e3735accb899f1a154" kindref="member">xmlNewInputFromUrl</ref> or similar functions.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2290,12 +2290,12 @@
         <location file="/builds/GNOME/libxml2/parserInternals.c" line="1816" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="1816" bodyend="1832"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a036d112c72e887236a1b085df4b018b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlParserInput" kindref="compound">xmlParserInputPtr</ref></type>
+        <type>xmlParserInputPtr</type>
         <definition>static xmlParserInputPtr xmlNewInputInternal</definition>
         <argsstring>(xmlParserInputBufferPtr buf, const char *filename)</argsstring>
         <name>xmlNewInputInternal</name>
         <param>
-          <type><ref refid="struct__xmlParserInputBuffer" kindref="compound">xmlParserInputBufferPtr</ref></type>
+          <type>xmlParserInputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
@@ -2792,7 +2792,7 @@
         </briefdescription>
         <detaileddescription>
 <para><computeroutput>url</computeroutput> is used as base to resolve external entities and for error reporting.</para>
-<para><computeroutput>ioRead</computeroutput> is called to read new data into a provided buffer. It must return the number of bytes written into the buffer ot a negative xmlParserErrors code on failure.</para>
+<para><computeroutput>ioRead</computeroutput> is called to read new data into a provided buffer. It must return the number of bytes written into the buffer ot a negative <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code on failure.</para>
 <para><computeroutput>ioClose</computeroutput> is called after parsing has finished.</para>
 <para><computeroutput>ioCtxt</computeroutput> is an opaque pointer passed to the callbacks.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
@@ -3069,7 +3069,7 @@
           <declname>ent</declname>
         </param>
         <briefdescription>
-<para>Create a new input stream based on an xmlEntity. </para>
+<para>Create a new input stream based on an <ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000272"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, do not use.</para>
@@ -3116,7 +3116,7 @@
 <para>Create a new input stream based on a memory buffer. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000273"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlNewInputFromString.</para>
+<para><xrefsect id="deprecated_1_deprecated000273"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a0a4d6fd6fa0bca9a7cc3249b4730e67b" kindref="member">xmlNewInputFromString</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3213,7 +3213,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3227,7 +3227,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const char *url, const char *publicId)</argsstring>
         <name>xmlCtxtResolveFromCatalog</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -3349,7 +3349,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3375,7 +3375,7 @@
         </briefdescription>
         <detaileddescription>
 <para>Unlike the default external entity loader, this function doesn&apos;t use XML catalogs.</para>
-<para><xrefsect id="deprecated_1_deprecated000275"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlNewInputFromUrl.</para>
+<para><xrefsect id="deprecated_1_deprecated000275"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a07aefa97e2d3a6e3735accb899f1a154" kindref="member">xmlNewInputFromUrl</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3403,7 +3403,7 @@
         <location file="/builds/GNOME/libxml2/parserInternals.c" line="2505" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="2505" bodyend="2525"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1ab877b6b46168298d9a5d91a4fde7fe04" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlParserInput" kindref="compound">xmlParserInputPtr</ref></type>
+        <type>xmlParserInputPtr</type>
         <definition>static xmlParserInputPtr xmlDefaultExternalEntityLoader</definition>
         <argsstring>(const char *url, const char *publicId, xmlParserCtxtPtr ctxt)</argsstring>
         <name>xmlDefaultExternalEntityLoader</name>
@@ -3416,7 +3416,7 @@
           <declname>publicId</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -3448,7 +3448,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new allocated xmlParserInput, or NULL. </para>
+<simplesect kind="return"><para>a new allocated <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref>, or NULL. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3504,7 +3504,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new allocated xmlParserInput, or NULL. </para>
+<simplesect kind="return"><para>a new allocated <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref>, or NULL. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3525,7 +3525,7 @@
 <para>Changes the default external entity resolver function for the application. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000277"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is a global setting and not thread-safe. Use xmlCtxtSetResourceLoader or similar functions.</para>
+<para><xrefsect id="deprecated_1_deprecated000277"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is a global setting and not thread-safe. Use <ref refid="parser_8h_1a5e0c3103a2d3b1e9003760479e1e8704" kindref="member">xmlCtxtSetResourceLoader</ref> or similar functions.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3554,7 +3554,7 @@
 <para>Get the default external entity resolver function for the application. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000278"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See xmlSetExternalEntityLoader.</para>
+<para><xrefsect id="deprecated_1_deprecated000278"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See <ref refid="parser_8h_1a3e0a3ea3ee3338c9c5ff6b98903dbd9c" kindref="member">xmlSetExternalEntityLoader</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><simplesect kind="return"><para>the <ref refid="parser_8h_1a6bbf92ce0c6b32b1cd373193d0f5f5f1" kindref="member">xmlExternalEntityLoader</ref> function pointer </para>
 </simplesect>
@@ -3676,7 +3676,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlParserInput or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3709,8 +3709,8 @@
 <para><computeroutput>publicId</computeroutput> is an optional XML public ID, typically from a doctype declaration. It is used for catalog lookups.</para>
 <para>If catalog lookup is enabled (default is yes) and URL or ID are found in system or local XML catalogs, URL is replaced with the result. Then the following resource loaders will be called if they were registered (in order of precedence):</para>
 <para><itemizedlist>
-<listitem><para>the resource loader set with xmlCtxtSetResourceLoader</para>
-</listitem><listitem><para>the global external entity loader set with xmlSetExternalEntityLoader (without catalog resolution, deprecated)</para>
+<listitem><para>the resource loader set with <ref refid="parser_8h_1a5e0c3103a2d3b1e9003760479e1e8704" kindref="member">xmlCtxtSetResourceLoader</ref></para>
+</listitem><listitem><para>the global external entity loader set with <ref refid="parser_8h_1a3e0a3ea3ee3338c9c5ff6b98903dbd9c" kindref="member">xmlSetExternalEntityLoader</ref> (without catalog resolution, deprecated)</para>
 </listitem><listitem><para>the per-thread <ref refid="xmlIO_8h_1a3d74afc4eb6b1aa8b5521b2690459714" kindref="member">xmlParserInputBufferCreateFilenameFunc</ref> set with <ref refid="xmlIO_8h_1a69305091df0800559923f17822353d9c" kindref="member">xmlParserInputBufferCreateFilenameDefault</ref> (deprecated)</para>
 </listitem><listitem><para>the default loader which will return<itemizedlist>
 <listitem><para>the result from a matching global input callback set with <ref refid="xmlIO_8h_1ab6b38e75f9858b2872ae51a06909fbdc" kindref="member">xmlRegisterInputCallbacks</ref> (deprecated)</para>
@@ -3744,7 +3744,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlParserInput or NULL </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3758,7 +3758,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlSAXHandler *sax, void *userData)</argsstring>
         <name>xmlInitSAXParserCtxt</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -3879,7 +3879,7 @@
 <para>Allocate and initialize a new parser context. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>the xmlParserCtxt or NULL </para>
+<para><simplesect kind="return"><para>the <ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3907,7 +3907,7 @@
 <para>If userData is NULL, the parser context will be passed as user data.</para>
 <para><simplesect kind="since"><para>2.11.0</para>
 </simplesect>
-If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt and set ctxt-&gt;sax with struct assignment.</para>
+If you want support older versions, it&apos;s best to invoke <ref refid="parser_8h_1ab730009088cf3642152ff832fa5e79dc" kindref="member">xmlNewParserCtxt</ref> and set ctxt-&gt;sax with struct assignment.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>sax</parametername>
@@ -3925,7 +3925,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlParserCtxt or NULL if memory allocation failed. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> or NULL if memory allocation failed. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -4226,7 +4226,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3191" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3191" bodyend="3205"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3191" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3191" bodyend="3198"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a298011fdad3362493ce7afcb0abdd572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -4257,7 +4257,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3216" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3216" bodyend="3235"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3209" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3209" bodyend="3228"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a92077b375fcf9e241c9751c3c91f65ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4288,7 +4288,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3244" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3244" bodyend="3249"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3237" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3237" bodyend="3242"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a42c2fb7c292c2b60900aeddbe412a194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4321,7 +4321,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3263" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3263" bodyend="3268"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3256" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3256" bodyend="3261"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1aa1523d418cd92068a5819d7aa47c743e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4361,10 +4361,10 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3287" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3287" bodyend="3292"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3280" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3280" bodyend="3285"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1aaacf2733f3e40fc30dab089ee1355ebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+        <type>xmlValidCtxt *</type>
         <definition>xmlValidCtxt * xmlCtxtGetValidCtxt</definition>
         <argsstring>(xmlParserCtxt *ctxt)</argsstring>
         <name>xmlCtxtGetValidCtxt</name>
@@ -4392,7 +4392,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3302" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3302" bodyend="3307"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3295" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3295" bodyend="3300"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1abd7ac198c80839e8808f233d29e02fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -4425,7 +4425,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3322" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3322" bodyend="3327"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3315" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3315" bodyend="3320"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1ae847f35d4d290e3a76f93b99afb3636e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -4459,7 +4459,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3345" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3345" bodyend="3352"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3338" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3338" bodyend="3345"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1ac457f016ceaa7cea92f3bf823a09c362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4528,7 +4528,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3368" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3368" bodyend="3383"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3361" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3361" bodyend="3376"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a6b24e37ca8381acc29ad48088d7cfdee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4623,7 +4623,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3409" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3409" bodyend="3443"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3402" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3402" bodyend="3436"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1aaed78db63b3868f3e682ca0a72cbc22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4705,7 +4705,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3468" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3468" bodyend="3490"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3461" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3461" bodyend="3483"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1aef6ab3a68e206bf96da3a613ee2f8cce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4735,7 +4735,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3506" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3506" bodyend="3509"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3499" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3499" bodyend="3502"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a89cf3e80b4f80025ec2d50b89e8abbbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const xmlParserNodeInfo *</type>
@@ -4779,7 +4779,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3522" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3522" bodyend="3535"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3515" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3515" bodyend="3528"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1adf45d26e222cba480fa3ad80cc19da9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4809,7 +4809,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3546" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3546" bodyend="3553"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3539" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3539" bodyend="3546"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1ab7dbc56de3c39559171d2bccaf609030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4839,7 +4839,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3563" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3563" bodyend="3570"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3556" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3556" bodyend="3563"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a3b4a41cab9cf503570f2352b16498858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -4883,7 +4883,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3583" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3583" bodyend="3611"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3576" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3576" bodyend="3604"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1aa31bf49d0534d8c8e02bdd4e65193406" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4925,7 +4925,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3623" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3623" bodyend="3673"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3616" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3616" bodyend="3666"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1aafb28d9ba022b6d851d224cabe0ff512" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4957,7 +4957,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3690" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3690" bodyend="3695"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3683" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3683" bodyend="3688"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1ae04283f4733c035b7cac5bb3841aa60a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4989,7 +4989,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3707" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3707" bodyend="3709"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3700" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3700" bodyend="3702"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1acf14c9a79459dbc52c8c986cffba536f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5021,7 +5021,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3721" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3721" bodyend="3726"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3714" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3714" bodyend="3719"/>
       </memberdef>
       <memberdef kind="function" id="parserInternals_8c_1a4dac6ea02c12e14236d983a585a621f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5053,7 +5053,7 @@ If you want support older versions, it&apos;s best to invoke xmlNewParserCtxt an
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3738" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3738" bodyend="3747"/>
+        <location file="/builds/GNOME/libxml2/parserInternals.c" line="3731" column="1" bodyfile="/builds/GNOME/libxml2/parserInternals.c" bodystart="3731" bodyend="3740"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

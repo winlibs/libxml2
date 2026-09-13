@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlPatParserContext" kind="struct" language="C++" prot="public">
     <compoundname>_xmlPatParserContext</compoundname>
     <sectiondef kind="public-attrib">
@@ -74,7 +74,7 @@
         <location file="/builds/GNOME/libxml2/pattern.c" line="183" column="20" bodyfile="/builds/GNOME/libxml2/pattern.c" bodystart="183" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlPatParserContext_1a0fb5ed61a5a122a5564aeda053482c08" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr elem</definition>
         <argsstring></argsstring>
         <name>elem</name>

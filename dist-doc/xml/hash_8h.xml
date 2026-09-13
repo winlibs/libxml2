@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="hash_8h" kind="file" language="C++">
     <compoundname>hash.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -634,7 +634,7 @@
         </briefdescription>
         <detaileddescription>
 <para>If an entry with this key already exists, payload will not be updated and -1 is returned. This return value can&apos;t be distinguished from out-of-memory errors, so this function should be used with care.</para>
-<para>NOTE: This function doesn&apos;t allow to distinguish malloc failures from existing entries. Use xmlHashAdd instead.</para>
+<para>NOTE: This function doesn&apos;t allow to distinguish malloc failures from existing entries. Use <ref refid="hash_8h_1a0f94b19866fd0190e3233358d221093b" kindref="member">xmlHashAdd</ref> instead.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hash</parametername>
@@ -765,7 +765,7 @@
 <para>Add a hash table entry with two strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashAdd.</para>
+<para>See <ref refid="hash_8h_1a0f94b19866fd0190e3233358d221093b" kindref="member">xmlHashAdd</ref>.</para>
 <para><simplesect kind="since"><para>2.13.0</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -837,7 +837,7 @@
 <para>Add a hash table entry with two strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashAddEntry.</para>
+<para>See <ref refid="hash_8h_1af016fca8f6c785a19206f103b4aa5cfe" kindref="member">xmlHashAddEntry</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hash</parametername>
@@ -911,7 +911,7 @@
 <para>Add a hash table entry with two strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashUpdateEntry.</para>
+<para>See <ref refid="hash_8h_1ae89d7c6a953173c54d289538b8d1b9d0" kindref="member">xmlHashUpdateEntry</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hash</parametername>
@@ -994,7 +994,7 @@
 <para>Add a hash table entry with three strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashAdd.</para>
+<para>See <ref refid="hash_8h_1a0f94b19866fd0190e3233358d221093b" kindref="member">xmlHashAdd</ref>.</para>
 <para><simplesect kind="since"><para>2.13.0</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1079,7 +1079,7 @@
 <para>Add a hash table entry with three strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashAddEntry.</para>
+<para>See <ref refid="hash_8h_1af016fca8f6c785a19206f103b4aa5cfe" kindref="member">xmlHashAddEntry</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hash</parametername>
@@ -1166,7 +1166,7 @@
 <para>Add a hash table entry with three strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashUpdateEntry.</para>
+<para>See <ref refid="hash_8h_1ae89d7c6a953173c54d289538b8d1b9d0" kindref="member">xmlHashUpdateEntry</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hash</parametername>
@@ -1307,7 +1307,7 @@
 <para>Remove an entry with two strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashRemoveEntry.</para>
+<para>See <ref refid="hash_8h_1a0ea7cc65cea2525368594f53cfbab740" kindref="member">xmlHashRemoveEntry</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hash</parametername>
@@ -1381,7 +1381,7 @@
 <para>Remove an entry with three strings as key. </para>
         </briefdescription>
         <detaileddescription>
-<para>See xmlHashRemoveEntry.</para>
+<para>See <ref refid="hash_8h_1a0ea7cc65cea2525368594f53cfbab740" kindref="member">xmlHashRemoveEntry</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hash</parametername>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaModelGroupDef" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaModelGroupDef</compoundname>
     <sectiondef kind="public-attrib">
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="690" column="23" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="690" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaModelGroupDef_1a5a3b73dc812812437ee4c23583e95c7b" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref></type>
+        <type>xmlSchemaAnnotPtr</type>
         <definition>xmlSchemaAnnotPtr annot</definition>
         <argsstring></argsstring>
         <name>annot</name>
@@ -88,7 +88,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="695" column="19" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="695" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaModelGroupDef_1af22243a9342e852a5bcc0b878913a289" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr node</definition>
         <argsstring></argsstring>
         <name>node</name>

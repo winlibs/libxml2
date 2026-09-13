@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="HTMLparser_8c" kind="file" language="C++">
     <compoundname>HTMLparser.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -535,8 +535,8 @@
         <name>SHRINK</name>
         <initializer>    if ((!PARSER_PROGRESSIVE(ctxt)) &amp;&amp; \
         (ctxt-&gt;input-&gt;cur - ctxt-&gt;input-&gt;base &gt; 2 * INPUT_CHUNK) &amp;&amp; \
-	(ctxt-&gt;input-&gt;end - ctxt-&gt;input-&gt;cur &lt; 2 * INPUT_CHUNK)) \
-	xmlParserShrink(ctxt);</initializer>
+    (ctxt-&gt;input-&gt;end - ctxt-&gt;input-&gt;cur &lt; 2 * INPUT_CHUNK)) \
+    xmlParserShrink(ctxt);</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -549,7 +549,7 @@
         <name>GROW</name>
         <initializer>    if ((!PARSER_PROGRESSIVE(ctxt)) &amp;&amp; \
         (ctxt-&gt;input-&gt;end - ctxt-&gt;input-&gt;cur &lt; INPUT_CHUNK)) \
-	xmlParserGrow(ctxt);</initializer>
+    xmlParserGrow(ctxt);</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -1015,7 +1015,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseElementInternal</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1043,7 +1043,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlErrMemory</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1071,7 +1071,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserErrors error, const char *msg, const xmlChar *str1, const xmlChar *str2)</argsstring>
         <name>htmlParseErr</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1148,7 +1148,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const xmlChar *value)</argsstring>
         <name>htmlnamePush</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1190,7 +1190,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlnamePop</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1220,7 +1220,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, htmlParserNodeInfo *value)</argsstring>
         <name>htmlNodeInfoPush</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1262,7 +1262,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlNodeInfoPop</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1292,7 +1292,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlFindEncoding</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1345,7 +1345,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *str, size_t len, int partial)</argsstring>
         <name>htmlValidateUtf8</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1374,7 +1374,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlSkipBlankChars</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1404,7 +1404,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParserFinishElementParsing</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1584,7 +1584,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const xmlChar *newtag)</argsstring>
         <name>htmlAutoCloseOnClose</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1624,7 +1624,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlAutoCloseOnEnd</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1652,7 +1652,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const xmlChar *newtag)</argsstring>
         <name>htmlAutoClose</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1795,7 +1795,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const xmlChar *newtag)</argsstring>
         <name>htmlCheckImplied</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1835,7 +1835,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlStartCharData</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2130,7 +2130,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const xmlChar *str, int len)</argsstring>
         <name>areBlanks</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2158,7 +2158,7 @@
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar * </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2268,7 +2268,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, int attr)</argsstring>
         <name>htmlParseHTMLName</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2368,7 +2368,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, htmlAsciiMask mask, int comment, int refs, int maxLength)</argsstring>
         <name>htmlParseData</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2489,7 +2489,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseAttValue</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2519,7 +2519,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const xmlChar *buf, int size, int mode)</argsstring>
         <name>htmlCharDataSAXCallback</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2548,7 +2548,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, int partial)</argsstring>
         <name>htmlParseCharData</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2590,7 +2590,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, int bogus)</argsstring>
         <name>htmlParseComment</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2661,7 +2661,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseDoctypeLiteral</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2691,7 +2691,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlSkipBogusDoctype</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2708,7 +2708,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseDocTypeDecl</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2736,7 +2736,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, xmlChar **value)</argsstring>
         <name>htmlParseAttribute</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2765,7 +2765,7 @@
 <parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar ** used to store the value of the attribute </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> ** used to store the value of the attribute </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2804,7 +2804,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const xmlChar **atts)</argsstring>
         <name>htmlCheckMeta</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2844,7 +2844,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, unsigned size, const xmlChar *name, unsigned hashValue, int aindex)</argsstring>
         <name>htmlAttrHashInsert</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2922,7 +2922,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseStartTag</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2958,7 +2958,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseEndTag</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2991,7 +2991,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseContent</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -3098,7 +3098,7 @@
 <para>Parse an HTML document and invoke the SAX handlers. </para>
         </briefdescription>
         <detaileddescription>
-<para>This is useful if you&apos;re only interested in custom SAX callbacks. If you want a document tree, use htmlCtxtParseDocument.</para>
+<para>This is useful if you&apos;re only interested in custom SAX callbacks. If you want a document tree, use <ref refid="HTMLparser_8h_1ae2699376dcd5a1c68fdeebf7648a90c1" kindref="member">htmlCtxtParseDocument</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -3122,7 +3122,7 @@
         <argsstring>(htmlParserCtxtPtr ctxt, const htmlSAXHandler *sax, void *userData)</argsstring>
         <name>htmlInitParserCtxt</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -3212,10 +3212,10 @@
         </briefdescription>
         <detaileddescription>
 <para>This can be used to parse HTML documents into DOM trees with functions like <ref refid="parser_8h_1a0cd872bfb02c708cc137fb5877cd25e1" kindref="member">xmlCtxtReadFile</ref> or <ref refid="parser_8h_1aa02be1c2cbed349fd725aa920f1a65a1" kindref="member">xmlCtxtReadMemory</ref>.</para>
-<para>See htmlCtxtUseOptions for parser options.</para>
+<para>See <ref refid="HTMLparser_8h_1a704c275082cb61c6b35cabab333e5ea9" kindref="member">htmlCtxtUseOptions</ref> for parser options.</para>
 <para>See <ref refid="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" kindref="member">xmlCtxtSetErrorHandler</ref> for advanced error handling.</para>
-<para>See htmlNewSAXParserCtxt for custom SAX parsers.</para>
-<para><simplesect kind="return"><para>the htmlParserCtxt or NULL in case of allocation error </para>
+<para>See <ref refid="HTMLparser_8h_1ac1e41ad44c7fc5a68f312b0165088fc5" kindref="member">htmlNewSAXParserCtxt</ref> for custom SAX parsers.</para>
+<para><simplesect kind="return"><para>the <ref refid="HTMLparser_8h_1a7da3aab7a3a152aebfea651c29fe29fd" kindref="member">htmlParserCtxt</ref> or NULL in case of allocation error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3243,8 +3243,8 @@
 <para>If <computeroutput>userData</computeroutput> is NULL, the parser context will be passed as user data.</para>
 <para><simplesect kind="since"><para>2.11.0</para>
 </simplesect>
-If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt and set <computeroutput>ctxt-&gt;sax</computeroutput> with struct assignment.</para>
-<para>Also see htmlNewParserCtxt.</para>
+If you want support older versions, it&apos;s best to invoke <ref refid="HTMLparser_8h_1a951f666dbf44e6184e58024631a2fefd" kindref="member">htmlNewParserCtxt</ref> and set <computeroutput>ctxt-&gt;sax</computeroutput> with struct assignment.</para>
+<para>Also see <ref refid="HTMLparser_8h_1a951f666dbf44e6184e58024631a2fefd" kindref="member">htmlNewParserCtxt</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>sax</parametername>
@@ -3262,7 +3262,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the htmlParserCtxt or NULL in case of allocation error </para>
+<simplesect kind="return"><para>the <ref refid="HTMLparser_8h_1a7da3aab7a3a152aebfea651c29fe29fd" kindref="member">htmlParserCtxt</ref> or NULL in case of allocation error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3271,7 +3271,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         <location file="/builds/GNOME/libxml2/HTMLparser.c" line="4624" column="1" bodyfile="/builds/GNOME/libxml2/HTMLparser.c" bodystart="4624" bodyend="4639"/>
       </memberdef>
       <memberdef kind="function" id="HTMLparser_8c_1aa265bcf04b6d2b0cbd51af53e48938a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+        <type>htmlParserCtxtPtr</type>
         <definition>static htmlParserCtxtPtr htmlCreateMemoryParserCtxtInternal</definition>
         <argsstring>(const char *url, const char *buffer, size_t size, const char *encoding)</argsstring>
         <name>htmlCreateMemoryParserCtxtInternal</name>
@@ -3317,7 +3317,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         </briefdescription>
         <detaileddescription>
 <para>The input buffer must not contain any terminating null bytes.</para>
-<para><xrefsect id="deprecated_1_deprecated000171"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use htmlNewParserCtxt and htmlCtxtReadMemory.</para>
+<para><xrefsect id="deprecated_1_deprecated000171"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="HTMLparser_8h_1a951f666dbf44e6184e58024631a2fefd" kindref="member">htmlNewParserCtxt</ref> and <ref refid="HTMLparser_8h_1ace0473af24ab42e75e01b61c2fe06798" kindref="member">htmlCtxtReadMemory</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -3345,7 +3345,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         <location file="/builds/GNOME/libxml2/HTMLparser.c" line="4681" column="1" bodyfile="/builds/GNOME/libxml2/HTMLparser.c" bodystart="4681" bodyend="4686"/>
       </memberdef>
       <memberdef kind="function" id="HTMLparser_8c_1a6f67aaa428096ced60b6d618f0ffc915" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+        <type>htmlParserCtxtPtr</type>
         <definition>static htmlParserCtxtPtr htmlCreateDocParserCtxt</definition>
         <argsstring>(const xmlChar *str, const char *url, const char *encoding)</argsstring>
         <name>htmlCreateDocParserCtxt</name>
@@ -3370,7 +3370,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to an array of xmlChar </para>
+<para>a pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3404,7 +3404,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         <argsstring>(xmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseLookupGt</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -3433,7 +3433,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         <argsstring>(xmlParserCtxtPtr ctxt, size_t startDelta, const char *str, size_t strLen, size_t extraLen)</argsstring>
         <name>htmlParseLookupString</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -3509,7 +3509,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         <argsstring>(htmlParserCtxtPtr ctxt)</argsstring>
         <name>htmlParseLookupCommentEnd</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -3539,7 +3539,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         <argsstring>(htmlParserCtxtPtr ctxt, int terminate)</argsstring>
         <name>htmlParseTryOrFinish</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">htmlParserCtxtPtr</ref></type>
+          <type>htmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -3600,7 +3600,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 <para>Parse a chunk of memory in push parser mode. </para>
         </briefdescription>
         <detaileddescription>
-<para>Assumes that the parser context was initialized with htmlCreatePushParserCtxt.</para>
+<para>Assumes that the parser context was initialized with <ref refid="HTMLparser_8h_1a0fd0f76d315acc77c96e5319fa32a0c9" kindref="member">htmlCreatePushParserCtxt</ref>.</para>
 <para>The last chunk, which will often be empty, must be marked with the <computeroutput>terminate</computeroutput> flag. With the default SAX callbacks, the resulting document will be available in <computeroutput>ctxt-&gt;myDoc</computeroutput>. This pointer will not be freed by the library.</para>
 <para>If the document isn&apos;t well-formed, <computeroutput>ctxt-&gt;myDoc</computeroutput> is set to NULL.</para>
 <para>Since 2.14.0, <ref refid="parser_8h_1a298011fdad3362493ce7afcb0abdd572" kindref="member">xmlCtxtGetDocument</ref> can be used to retrieve the result document.</para>
@@ -3637,7 +3637,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code (0 on success). </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code (0 on success). </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3761,14 +3761,14 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         </briefdescription>
         <detaileddescription>
 <para>If sax is not NULL, use the SAX callbacks to handle parse events. If sax is NULL, fallback to the default DOM behavior and return a tree.</para>
-<para><xrefsect id="deprecated_1_deprecated000172"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use htmlNewSAXParserCtxt and htmlCtxtReadDoc.</para>
+<para><xrefsect id="deprecated_1_deprecated000172"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="HTMLparser_8h_1ac1e41ad44c7fc5a68f312b0165088fc5" kindref="member">htmlNewSAXParserCtxt</ref> and <ref refid="HTMLparser_8h_1af53063a6aa56789fce452027e49e0a2a" kindref="member">htmlCtxtReadDoc</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to an array of xmlChar </para>
+<para>a pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3821,7 +3821,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 <para>Parse an HTML in-memory document and build a tree. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000173"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use htmlReadDoc.</para>
+<para><xrefsect id="deprecated_1_deprecated000173"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="HTMLparser_8h_1a842a285bb09c1386db8bf36cc50e5868" kindref="member">htmlReadDoc</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para>This function uses deprecated global parser options.</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -3829,7 +3829,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to an array of xmlChar </para>
+<para>a pointer to an array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3866,7 +3866,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 <para>Create a parser context to read from a file. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000174"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use htmlNewParserCtxt and htmlCtxtReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000174"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="HTMLparser_8h_1a951f666dbf44e6184e58024631a2fefd" kindref="member">htmlNewParserCtxt</ref> and <ref refid="HTMLparser_8h_1a430f103da6c143db4aceb47e6930f452" kindref="member">htmlCtxtReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para>A non-NULL encoding overrides encoding declarations in the document.</para>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.</para>
@@ -3921,7 +3921,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         </briefdescription>
         <detaileddescription>
 <para>Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time. It use the given SAX function block to handle the parsing callback. If sax is NULL, fallback to the default DOM tree building routines.</para>
-<para><xrefsect id="deprecated_1_deprecated000175"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use htmlNewSAXParserCtxt and htmlCtxtReadFile.</para>
+<para><xrefsect id="deprecated_1_deprecated000175"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="HTMLparser_8h_1ac1e41ad44c7fc5a68f312b0165088fc5" kindref="member">htmlNewSAXParserCtxt</ref> and <ref refid="HTMLparser_8h_1a430f103da6c143db4aceb47e6930f452" kindref="member">htmlCtxtReadFile</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -4202,7 +4202,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 <parametername>node</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlNode in a tree </para>
+<para>an <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> in a tree </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4257,7 +4257,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
         <argsstring>(xmlParserCtxtPtr ctxt, int options, int keepMask)</argsstring>
         <name>htmlCtxtSetOptionsInternal</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -4296,7 +4296,7 @@ If you want support older versions, it&apos;s best to invoke htmlNewParserCtxt a
 <para>Unset options are cleared.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
 </simplesect>
-With older versions, you can use htmlCtxtUseOptions.</para>
+With older versions, you can use <ref refid="HTMLparser_8h_1a704c275082cb61c6b35cabab333e5ea9" kindref="member">htmlCtxtUseOptions</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -4310,7 +4310,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a bitmask of htmlParserOption values </para>
+<para>a bitmask of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4340,7 +4340,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para>The following options are never cleared and can only be enabled:</para>
-<para><xrefsect id="deprecated_1_deprecated000181"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use htmlCtxtSetOptions.</para>
+<para><xrefsect id="deprecated_1_deprecated000181"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="HTMLparser_8h_1aacb5d309a35c751ad5f652bab347ce95" kindref="member">htmlCtxtSetOptions</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><itemizedlist>
 <listitem><para>HTML_PARSE_NODEFDTD</para>
@@ -4366,7 +4366,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4447,7 +4447,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <para>Convenience function to parse an HTML document from a zero-terminated string. </para>
         </briefdescription>
         <detaileddescription>
-<para>See htmlCtxtReadDoc for details.</para>
+<para>See <ref refid="HTMLparser_8h_1af53063a6aa56789fce452027e49e0a2a" kindref="member">htmlCtxtReadDoc</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>str</parametername>
@@ -4477,7 +4477,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4510,7 +4510,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <para>Convenience function to parse an HTML file from the filesystem, the network or a global user-defined resource loader. </para>
         </briefdescription>
         <detaileddescription>
-<para>See htmlCtxtReadFile for details.</para>
+<para>See <ref refid="HTMLparser_8h_1a430f103da6c143db4aceb47e6930f452" kindref="member">htmlCtxtReadFile</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>filename</parametername>
@@ -4532,7 +4532,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4574,7 +4574,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para>The input buffer must not contain any terminating null bytes.</para>
-<para>See htmlCtxtReadMemory for details.</para>
+<para>See <ref refid="HTMLparser_8h_1ace0473af24ab42e75e01b61c2fe06798" kindref="member">htmlCtxtReadMemory</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buffer</parametername>
@@ -4612,7 +4612,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4650,7 +4650,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para>NOTE that the file descriptor will not be closed when the context is freed or reset.</para>
-<para>See htmlCtxtReadFd for details.</para>
+<para>See <ref refid="HTMLparser_8h_1a8e00404387e63ec8ccb5edd93d78bd8b" kindref="member">htmlCtxtReadFd</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fd</parametername>
@@ -4680,7 +4680,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4725,7 +4725,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <para>Convenience function to parse an HTML document from I/O functions and context. </para>
         </briefdescription>
         <detaileddescription>
-<para>See htmlCtxtReadIO for details.</para>
+<para>See <ref refid="HTMLparser_8h_1af1941762a6e11c2696fe8abe93168737" kindref="member">htmlCtxtReadIO</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ioread</parametername>
@@ -4771,7 +4771,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4812,7 +4812,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <para>Parse an HTML in-memory document and build a tree. </para>
         </briefdescription>
         <detaileddescription>
-<para>See htmlCtxtUseOptions for details.</para>
+<para>See <ref refid="HTMLparser_8h_1a704c275082cb61c6b35cabab333e5ea9" kindref="member">htmlCtxtUseOptions</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -4850,7 +4850,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4887,7 +4887,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <para>Parse an HTML file from the filesystem, the network or a user-defined resource loader. </para>
         </briefdescription>
         <detaileddescription>
-<para>See htmlCtxtUseOptions for details.</para>
+<para>See <ref refid="HTMLparser_8h_1a704c275082cb61c6b35cabab333e5ea9" kindref="member">htmlCtxtUseOptions</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -4917,7 +4917,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4963,7 +4963,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
         </briefdescription>
         <detaileddescription>
 <para>The input buffer must not contain any terminating null bytes.</para>
-<para>See htmlCtxtUseOptions for details.</para>
+<para>See <ref refid="HTMLparser_8h_1a704c275082cb61c6b35cabab333e5ea9" kindref="member">htmlCtxtUseOptions</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -5009,7 +5009,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5050,7 +5050,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <para>Parse an HTML from a file descriptor and build a tree. </para>
         </briefdescription>
         <detaileddescription>
-<para>See htmlCtxtUseOptions for details.</para>
+<para>See <ref refid="HTMLparser_8h_1a704c275082cb61c6b35cabab333e5ea9" kindref="member">htmlCtxtUseOptions</ref> for details.</para>
 <para>NOTE that the file descriptor will not be closed when the context is freed or reset.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -5089,7 +5089,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5138,7 +5138,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <para>Parse an HTML document from I/O functions and source and build a tree. </para>
         </briefdescription>
         <detaileddescription>
-<para>See htmlCtxtUseOptions for details.</para>
+<para>See <ref refid="HTMLparser_8h_1a704c275082cb61c6b35cabab333e5ea9" kindref="member">htmlCtxtUseOptions</ref> for details.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -5192,7 +5192,7 @@ With older versions, you can use htmlCtxtUseOptions.</para>
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of htmlParserOption values </para>
+<para>a combination of <ref refid="HTMLparser_8h_1a7120adfabbd532998e80018a58ea09d4" kindref="member">htmlParserOption</ref> values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>

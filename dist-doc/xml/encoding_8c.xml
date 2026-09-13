@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="encoding_8c" kind="file" language="C++">
     <compoundname>encoding.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -506,7 +506,7 @@
         <location file="/builds/GNOME/libxml2/encoding.c" line="319" column="37" bodyfile="/builds/GNOME/libxml2/encoding.c" bodystart="319" bodyend="352"/>
       </memberdef>
       <memberdef kind="variable" id="encoding_8c_1a0b77a10bb2ca5f0d91e198bb18f5132c" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlCharEncodingHandler" kindref="compound">xmlCharEncodingHandlerPtr</ref> *</type>
+        <type>xmlCharEncodingHandlerPtr *</type>
         <definition>xmlCharEncodingHandlerPtr* globalHandlers</definition>
         <argsstring></argsstring>
         <name>globalHandlers</name>
@@ -1038,7 +1038,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a xmlCharEncoding value. </para>
+<simplesect kind="return"><para>a <ref refid="encoding_8h_1a662791d23b3d1e0a37244d35c57a02e5" kindref="member">xmlCharEncoding</ref> value. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1235,7 +1235,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>one of the xmlCharEncoding values or XML_CHAR_ENCODING_NONE if not recognized. </para>
+<simplesect kind="return"><para>one of the <ref refid="encoding_8h_1a662791d23b3d1e0a37244d35c57a02e5" kindref="member">xmlCharEncoding</ref> values or XML_CHAR_ENCODING_NONE if not recognized. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1292,7 +1292,7 @@
           <declname>output</declname>
         </param>
         <briefdescription>
-<para>Create and registers an xmlCharEncodingHandler. </para>
+<para>Create and registers an <ref refid="encoding_8h_1ab7a2ebb635d1329533900e404576e1f3" kindref="member">xmlCharEncodingHandler</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000117"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function modifies global state and is not thread-safe. See <ref refid="parser_8h_1ac734aadfdb03544bbcb81778778ecc9b" kindref="member">xmlCtxtSetCharEncConvImpl</ref> for an alternative.</para>
@@ -1310,7 +1310,7 @@
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlCharEncodingInputFunc to read that encoding </para>
+<para>the <ref refid="encoding_8h_1ad3c1740abcc2cbbaa74bc5936c5b4840" kindref="member">xmlCharEncodingInputFunc</ref> to read that encoding </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1318,11 +1318,11 @@
 <parametername>output</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlCharEncodingOutputFunc to write that encoding </para>
+<para>the <ref refid="encoding_8h_1a167ac51fa3e644243494671248c56b67" kindref="member">xmlCharEncodingOutputFunc</ref> to write that encoding </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlCharEncodingHandler created (or NULL in case of error). </para>
+<simplesect kind="return"><para>the <ref refid="encoding_8h_1ab7a2ebb635d1329533900e404576e1f3" kindref="member">xmlCharEncodingHandler</ref> created (or NULL in case of error). </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1364,7 +1364,7 @@
           <declname>out</declname>
         </param>
         <briefdescription>
-<para>Create a custom xmlCharEncodingHandler. </para>
+<para>Create a custom <ref refid="encoding_8h_1ab7a2ebb635d1329533900e404576e1f3" kindref="member">xmlCharEncodingHandler</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1424,7 +1424,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1506,7 +1506,7 @@
 <parametername>handler</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlCharEncodingHandler handler block </para>
+<para>the <ref refid="encoding_8h_1ab7a2ebb635d1329533900e404576e1f3" kindref="member">xmlCharEncodingHandler</ref> handler block </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1598,7 +1598,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors error code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> error code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1631,7 +1631,7 @@
 </listitem><listitem><para>ICU if enabled</para>
 </listitem></itemizedlist>
 </para>
-<para>The handler must be closed with xmlCharEncCloseFunc.</para>
+<para>The handler must be closed with <ref refid="encoding_8h_1a464305f13dfff8d7d68bfd88f4314b7d" kindref="member">xmlCharEncCloseFunc</ref>.</para>
 <para>If the encoding is UTF-8, a NULL handler and no error code will be returned.</para>
 <para><simplesect kind="since"><para>2.13.0</para>
 </simplesect>
@@ -1640,7 +1640,7 @@
 <parametername>enc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlCharEncoding value. </para>
+<para>an <ref refid="encoding_8h_1a662791d23b3d1e0a37244d35c57a02e5" kindref="member">xmlCharEncoding</ref> value. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1652,7 +1652,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>XML_ERR_OK, XML_ERR_UNSUPPORTED_ENCODING or another xmlParserErrors error code. </para>
+<simplesect kind="return"><para>XML_ERR_OK, XML_ERR_UNSUPPORTED_ENCODING or another <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> error code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1672,14 +1672,14 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000121"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlLookupCharEncodingHandler which has better error reporting.</para>
+<para><xrefsect id="deprecated_1_deprecated000121"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="encoding_8h_1aa562a04aafc51696623af161b6972a85" kindref="member">xmlLookupCharEncodingHandler</ref> which has better error reporting.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>enc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlCharEncoding value. </para>
+<para>an <ref refid="encoding_8h_1a662791d23b3d1e0a37244d35c57a02e5" kindref="member">xmlCharEncoding</ref> value. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1729,7 +1729,7 @@
 </listitem><listitem><para>ICU if enabled</para>
 </listitem></itemizedlist>
 </para>
-<para>The handler must be closed with xmlCharEncCloseFunc.</para>
+<para>The handler must be closed with <ref refid="encoding_8h_1a464305f13dfff8d7d68bfd88f4314b7d" kindref="member">xmlCharEncCloseFunc</ref>.</para>
 <para>If the encoding is UTF-8, a NULL handler and no error code will be returned.</para>
 <para><computeroutput>flags</computeroutput> can contain XML_ENC_INPUT, XML_ENC_OUTPUT or both.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
@@ -1775,7 +1775,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>XML_ERR_OK, XML_ERR_UNSUPPORTED_ENCODING or another xmlParserErrors error code. </para>
+<simplesect kind="return"><para>XML_ERR_OK, XML_ERR_UNSUPPORTED_ENCODING or another <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> error code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1812,7 +1812,7 @@
 </listitem><listitem><para>ICU if enabled</para>
 </listitem></itemizedlist>
 </para>
-<para>The handler must be closed with xmlCharEncCloseFunc.</para>
+<para>The handler must be closed with <ref refid="encoding_8h_1a464305f13dfff8d7d68bfd88f4314b7d" kindref="member">xmlCharEncCloseFunc</ref>.</para>
 <para>If the encoding is UTF-8, a NULL handler and no error code will be returned.</para>
 <para><simplesect kind="since"><para>2.13.0</para>
 </simplesect>
@@ -1841,7 +1841,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>XML_ERR_OK, XML_ERR_UNSUPPORTED_ENCODING or another xmlParserErrors error code. </para>
+<simplesect kind="return"><para>XML_ERR_OK, XML_ERR_UNSUPPORTED_ENCODING or another <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> error code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1862,7 +1862,7 @@
 <para>If the encoding is UTF-8, this will return a no-op handler that shouldn&apos;t be used. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000122"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlOpenCharEncodingHandler which has better error reporting.</para>
+<para><xrefsect id="deprecated_1_deprecated000122"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="encoding_8h_1a91556ecf36fe2ba7f225a250011132f4" kindref="member">xmlOpenCharEncodingHandler</ref> which has better error reporting.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1964,7 +1964,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlCharEncError code. </para>
+<simplesect kind="return"><para>an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1999,7 +1999,7 @@
           <declname>code</declname>
         </param>
         <briefdescription>
-<para>Convert xmlCharEncError to xmlParserErrors code. </para>
+<para>Convert <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> to <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2007,7 +2007,7 @@
 <parametername>code</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>xmlCharEncError code </para>
+<para><ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2100,7 +2100,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlCharEncError code. </para>
+<simplesect kind="return"><para>an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2179,7 +2179,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlCharEncError code. </para>
+<simplesect kind="return"><para>an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2221,7 +2221,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuffer for the output. </para>
+<para>an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> for the output. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2229,11 +2229,11 @@
 <parametername>in</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuffer for the input </para>
+<para>an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> for the input </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of bytes written or an xmlCharEncError code. </para>
+<simplesect kind="return"><para>the number of bytes written or an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2288,7 +2288,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlCharEncError code. </para>
+<simplesect kind="return"><para>an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2330,7 +2330,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuffer for the output. </para>
+<para>an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> for the output. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2338,11 +2338,11 @@
 <parametername>in</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuffer for the input </para>
+<para>an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> for the input </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of bytes written or an xmlCharEncError code. </para>
+<simplesect kind="return"><para>the number of bytes written or an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2407,7 +2407,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of bytes written or an xmlCharEncError code. </para>
+<simplesect kind="return"><para>the number of bytes written or an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2451,7 +2451,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuffer for the output. </para>
+<para>an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> for the output. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2459,11 +2459,11 @@
 <parametername>in</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuffer for the input </para>
+<para>an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> for the input </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of bytes written or an xmlCharEncError code. </para>
+<simplesect kind="return"><para>the number of bytes written or an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2481,7 +2481,7 @@
           <declname>handler</declname>
         </param>
         <briefdescription>
-<para>Releases an xmlCharEncodingHandler. </para>
+<para>Releases an <ref refid="encoding_8h_1ab7a2ebb635d1329533900e404576e1f3" kindref="member">xmlCharEncodingHandler</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Must be called after a handler is no longer in use.</para>
@@ -2594,7 +2594,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of bytes written or an xmlCharEncError code. </para>
+<simplesect kind="return"><para>the number of bytes written or an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2661,7 +2661,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of bytes written or an xmlCharEncError code. </para>
+<simplesect kind="return"><para>the number of bytes written or an <ref refid="encoding_8h_1a7d722be91a73fd9f6f9791d88a23a37b" kindref="member">xmlCharEncError</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>

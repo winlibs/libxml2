@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="uri_8h" kind="file" language="C++">
     <compoundname>uri.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -100,7 +100,7 @@
           <type>void</type>
         </param>
         <briefdescription>
-<para>Simply creates an empty xmlURI. </para>
+<para>Simply creates an empty <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>the new structure or NULL in case of error </para>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="55" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1970" bodyend="2318" declfile="uri.h" declline="55" declcolumn="1"/>
+        <location file="uri.h" line="55" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1972" bodyend="2320" declfile="uri.h" declline="55" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="uri_8h_1a6334686e706235baf07ea115fa8c8d2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="59" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2334" bodyend="2339" declfile="uri.h" declline="59" declcolumn="1"/>
+        <location file="uri.h" line="59" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2336" bodyend="2341" declfile="uri.h" declline="59" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="uri_8h_1a7aa14f7dd11cc0479e053ed54dae313c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -247,7 +247,8 @@ docs/pic1.gif                    pic1.gif
 docs/img/pic1.gif                img/pic1.gif
 img/pic1.gif                     ../img/pic1.gif
 http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
-</verbatim> <simplesect kind="since"><para>2.13.0</para>
+</verbatim></para>
+<para><simplesect kind="since"><para>2.13.0</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -280,7 +281,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="62" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2489" bodyend="2707" declfile="uri.h" declline="62" declcolumn="1"/>
+        <location file="uri.h" line="62" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2491" bodyend="2709" declfile="uri.h" declline="62" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="uri_8h_1a4a8312eacdcb89055884b76e5cb81252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -296,7 +297,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
           <declname>base</declname>
         </param>
         <briefdescription>
-<para>See xmlBuildRelativeURISafe. </para>
+<para>See <ref refid="uri_8h_1a7aa14f7dd11cc0479e053ed54dae313c" kindref="member">xmlBuildRelativeURISafe</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -322,7 +323,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="66" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2718" bodyend="2724" declfile="uri.h" declline="66" declcolumn="1"/>
+        <location file="uri.h" line="66" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2720" bodyend="2726" declfile="uri.h" declline="66" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="uri_8h_1a4aff5eec35266e0089db4b6c8e5ce08d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> *</type>
@@ -347,7 +348,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a newly built xmlURI or NULL in case of error </para>
+<simplesect kind="return"><para>a newly built <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -436,7 +437,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a newly built xmlURI or NULL in case of error </para>
+<simplesect kind="return"><para>a newly built <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -505,7 +506,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
 <parametername>uri</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an xmlURI </para>
+<para>pointer to an <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -547,7 +548,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
 <parametername>uri</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an xmlURI </para>
+<para>pointer to an <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -597,7 +598,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="85" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1637" bodyend="1696" declfile="uri.h" declline="85" declcolumn="1"/>
+        <location file="uri.h" line="85" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1637" bodyend="1698" declfile="uri.h" declline="85" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="uri_8h_1a196cf546672f4802b62a87cbebc2dc72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -695,10 +696,11 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
           <declname>str</declname>
         </param>
         <briefdescription>
-<para>Escaping routine, does not do validity checks ! It will try to escape the chars needing this, but this is heuristic based it&apos;s impossible to be sure. </para>
+<para>Escaping routine, does not do validity checks ! </para>
         </briefdescription>
         <detaileddescription>
-<para>25 May 2001 Uses xmlParseURI and xmlURIEscapeStr to try to escape correctly according to RFC2396.<itemizedlist>
+<para>It will try to escape the chars needing this, but this is heuristic based it&apos;s impossible to be sure.</para>
+<para>25 May 2001 Uses <ref refid="uri_8h_1a4aff5eec35266e0089db4b6c8e5ce08d" kindref="member">xmlParseURI</ref> and <ref refid="uri_8h_1a1ce4f41a5ee6008746eaa0ac315ff114" kindref="member">xmlURIEscapeStr</ref> to try to escape correctly according to RFC2396.<itemizedlist>
 <listitem><para>Carl Douglas <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>str</parametername>
@@ -716,7 +718,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="94" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1711" bodyend="1826" declfile="uri.h" declline="94" declcolumn="1"/>
+        <location file="uri.h" line="94" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1713" bodyend="1828" declfile="uri.h" declline="94" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="uri_8h_1a37180976cc2330cadea9932b5fd42024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -728,7 +730,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
           <declname>uri</declname>
         </param>
         <briefdescription>
-<para>Free up the xmlURI struct. </para>
+<para>Free up the <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> struct. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -736,7 +738,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
 <parametername>uri</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an xmlURI </para>
+<para>pointer to an <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -777,7 +779,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="98" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2744" bodyend="2766" declfile="uri.h" declline="98" declcolumn="1"/>
+        <location file="uri.h" line="98" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2746" bodyend="2768" declfile="uri.h" declline="98" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="uri_8h_1a47f20ab34321fc18df02e0b4b14dc3c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -807,7 +809,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="uri.h" line="100" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2778" bodyend="2781" declfile="uri.h" declline="100" declcolumn="1"/>
+        <location file="uri.h" line="100" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2780" bodyend="2783" declfile="uri.h" declline="100" declcolumn="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

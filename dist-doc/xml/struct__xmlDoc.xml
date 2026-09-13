@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlDoc" kind="struct" language="C++" prot="public">
     <compoundname>_xmlDoc</compoundname>
     <includes local="no">tree.h</includes>
@@ -348,7 +348,7 @@
         <name>parseFlags</name>
         <qualifiedname>_xmlDoc::parseFlags</qualifiedname>
         <briefdescription>
-<para>xmlParserOption enum used to parse the document </para>
+<para><ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> enum used to parse the document </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -363,7 +363,7 @@
         <name>properties</name>
         <qualifiedname>_xmlDoc::properties</qualifiedname>
         <briefdescription>
-<para>xmlDocProperties of the document </para>
+<para><ref refid="tree_8h_1a9ed6ce70618f74331a16293a8e309306" kindref="member">xmlDocProperties</ref> of the document </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

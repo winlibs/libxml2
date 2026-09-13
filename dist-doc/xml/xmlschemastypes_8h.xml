@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlschemastypes_8h" kind="file" language="C++">
     <compoundname>xmlschemastypes.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="48" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3648" bodyend="3651" declfile="xmlschemastypes.h" declline="48" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="48" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3667" bodyend="3670" declfile="xmlschemastypes.h" declline="48" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1ad502351831f2db11396f2c5673618748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -490,7 +490,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="52" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3612" bodyend="3616" declfile="xmlschemastypes.h" declline="52" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="52" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3631" bodyend="3635" declfile="xmlschemastypes.h" declline="52" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1a93bb37f3450809b82c5ca4c74da0fc7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -556,7 +556,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="57" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5679" bodyend="5698" declfile="xmlschemastypes.h" declline="57" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="57" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5698" bodyend="5717" declfile="xmlschemastypes.h" declline="57" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1a25f8ed86120772ff0ed4a1a3629fd66e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -647,7 +647,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="62" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5716" bodyend="5725" declfile="xmlschemastypes.h" declline="62" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="62" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5735" bodyend="5744" declfile="xmlschemastypes.h" declline="62" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1aff3ab8f0482bc12215d896fc6c4ef819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -833,7 +833,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="80" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5083" bodyend="5104" declfile="xmlschemastypes.h" declline="80" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="80" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5102" bodyend="5123" declfile="xmlschemastypes.h" declline="80" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1acd8b0ca8bb93c7acf6f9d11e912fd911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schemasInternals_8h_1a91d281210143bd7e73a3556fe96bb576" kindref="member">xmlSchemaType</ref> *</type>
@@ -929,7 +929,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="85" column="5" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5229" bodyend="5266" declfile="xmlschemastypes.h" declline="85" declcolumn="5"/>
+        <location file="xmlschemastypes.h" line="85" column="5" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5248" bodyend="5285" declfile="xmlschemastypes.h" declline="85" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1ad3515738f7330f3f96e08c40f62a08ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schemasInternals_8h_1a91d281210143bd7e73a3556fe96bb576" kindref="member">xmlSchemaType</ref> *</type>
@@ -1031,7 +1031,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="95" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2223" bodyend="2264" declfile="xmlschemastypes.h" declline="95" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="95" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2242" bodyend="2283" declfile="xmlschemastypes.h" declline="95" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1abec9e60f86abf971b567e0f497c3e33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1061,7 +1061,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="97" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2190" bodyend="2214" declfile="xmlschemastypes.h" declline="97" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="97" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2209" bodyend="2233" declfile="xmlschemastypes.h" declline="97" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1a3e74db35ecb48c99c0b4b806ab03110f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -1091,7 +1091,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="99" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5207" bodyend="5216" declfile="xmlschemastypes.h" declline="99" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="99" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5226" bodyend="5235" declfile="xmlschemastypes.h" declline="99" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1a9f93f07c975b4b41ee0424c1c7ac8348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1169,7 +1169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="101" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5396" bodyend="5407" declfile="xmlschemastypes.h" declline="101" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="101" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5415" bodyend="5426" declfile="xmlschemastypes.h" declline="101" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1ab22822bbb452791acee2e3aada879a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1259,7 +1259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="107" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5423" bodyend="5432" declfile="xmlschemastypes.h" declline="107" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="107" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5442" bodyend="5451" declfile="xmlschemastypes.h" declline="107" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1a3fb6bf6dd3eeb56446a087138258e6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1326,7 +1326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="114" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3631" bodyend="3635" declfile="xmlschemastypes.h" declline="114" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="114" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3650" bodyend="3654" declfile="xmlschemastypes.h" declline="114" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1ac6faa9a2a534feb30a5b46e205a8c188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1371,7 +1371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="119" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5745" bodyend="6062" declfile="xmlschemastypes.h" declline="119" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="119" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5764" bodyend="6081" declfile="xmlschemastypes.h" declline="119" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1a9dde7b1c17fde1151bf413df174218d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1426,7 +1426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="122" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6075" bodyend="6113" declfile="xmlschemastypes.h" declline="122" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="122" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6094" bodyend="6132" declfile="xmlschemastypes.h" declline="122" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1aff5ec20d3df49745b759df4213e4b97a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1753,7 +1753,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="144" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5117" bodyend="5126" declfile="xmlschemastypes.h" declline="144" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="144" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5136" bodyend="5145" declfile="xmlschemastypes.h" declline="144" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1af5d0297c5c86f9ebbff10f0235f73169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> *</type>
@@ -1784,7 +1784,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="149" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3801" bodyend="3898" declfile="xmlschemastypes.h" declline="149" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="149" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3820" bodyend="3917" declfile="xmlschemastypes.h" declline="149" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8h_1a1dcf9a0e3fb35af05ca8ec944d2c911c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schemasInternals_8h_1a8d804852736ab90dc07a88a45acfffcd" kindref="member">xmlSchemaValType</ref></type>
@@ -1808,13 +1808,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlSchemaValType of the value </para>
+<simplesect kind="return"><para>the <ref refid="schemasInternals_8h_1a8d804852736ab90dc07a88a45acfffcd" kindref="member">xmlSchemaValType</ref> of the value </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlschemastypes.h" line="151" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6122" bodyend="6127" declfile="xmlschemastypes.h" declline="151" declcolumn="1"/>
+        <location file="xmlschemastypes.h" line="151" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6141" bodyend="6146" declfile="xmlschemastypes.h" declline="151" declcolumn="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="list_8h" kind="file" language="C++">
     <compoundname>list.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -349,7 +349,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Search the list for an existing value of <computeroutput>data</computeroutput> </para>
+<para>Search the list for an existing value of <computeroutput>data</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -391,7 +391,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Search the list in reverse order for an existing value of <computeroutput>data</computeroutput> </para>
+<para>Search the list in reverse order for an existing value of <computeroutput>data</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlC14NVisibleNsStack" kind="struct" language="C++" prot="public">
     <compoundname>_xmlC14NVisibleNsStack</compoundname>
     <sectiondef kind="public-attrib">
@@ -60,7 +60,7 @@
         <location file="/builds/GNOME/libxml2/c14n.c" line="46" column="9" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlC14NVisibleNsStack_1a16e6b582c6c07c09df77b5e54b2d647b" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref> *</type>
+        <type>xmlNsPtr *</type>
         <definition>xmlNsPtr* nsTab</definition>
         <argsstring></argsstring>
         <name>nsTab</name>
@@ -74,7 +74,7 @@
         <location file="/builds/GNOME/libxml2/c14n.c" line="47" column="13" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlC14NVisibleNsStack_1a00b65a74571749401c015aba99b888bd" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+        <type>xmlNodePtr *</type>
         <definition>xmlNodePtr* nodeTab</definition>
         <argsstring></argsstring>
         <name>nodeTab</name>

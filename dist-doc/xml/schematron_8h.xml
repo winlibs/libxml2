@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="schematron_8h" kind="file" language="C++">
     <compoundname>schematron.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -119,7 +119,7 @@
           <name>XML_SCHEMATRON_OUT_ERROR</name>
           <initializer>= 1 &lt;&lt; 3</initializer>
           <briefdescription>
-<para>output via xmlStructuredErrorFunc </para>
+<para>output via <ref refid="xmlerror_8h_1a43ce1e8b08b983fe847fdf074b021127" kindref="member">xmlStructuredErrorFunc</ref> </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -353,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="82" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="633" bodyend="660" declfile="schematron.h" declline="82" declcolumn="5"/>
+        <location file="schematron.h" line="82" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="634" bodyend="661" declfile="schematron.h" declline="82" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1a0a01a23788b54b6cb9ce2cfb719481ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1add30ab4331d57071e2e7c18461b38cbc" kindref="member">xmlSchematronParserCtxt</ref> *</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="84" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="671" bodyend="696" declfile="schematron.h" declline="84" declcolumn="5"/>
+        <location file="schematron.h" line="84" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="672" bodyend="697" declfile="schematron.h" declline="84" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1a7d5cde2d168a5b37ed1acc31e456f0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1add30ab4331d57071e2e7c18461b38cbc" kindref="member">xmlSchematronParserCtxt</ref> *</type>
@@ -426,7 +426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="87" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="706" bodyend="733" declfile="schematron.h" declline="87" declcolumn="5"/>
+        <location file="schematron.h" line="87" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="707" bodyend="734" declfile="schematron.h" declline="87" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1ab57ee2ace830a40da34354115c9c11b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -454,7 +454,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="89" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="741" bodyend="754" declfile="schematron.h" declline="89" declcolumn="5"/>
+        <location file="schematron.h" line="89" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="742" bodyend="755" declfile="schematron.h" declline="89" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1ab947b7f0d51bbb56d59feac0098b75fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1adda7fc895133f8b277ef9e2d89d2f1c9" kindref="member">xmlSchematron</ref> *</type>
@@ -484,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="105" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1218" bodyend="1375" declfile="schematron.h" declline="105" declcolumn="5"/>
+        <location file="schematron.h" line="105" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1217" bodyend="1374" declfile="schematron.h" declline="105" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1a68eb5fd617240e236d624e2fa87f891d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -512,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="107" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="608" bodyend="623" declfile="schematron.h" declline="107" declcolumn="5"/>
+        <location file="schematron.h" line="107" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="609" bodyend="624" declfile="schematron.h" declline="107" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1a6b1158c2a9aabf5481104fc8af6104e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -564,7 +564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="112" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1686" bodyend="1695" declfile="schematron.h" declline="112" declcolumn="5"/>
+        <location file="schematron.h" line="112" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1685" bodyend="1694" declfile="schematron.h" declline="112" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1ae041c96b507947a0d12f63aba473fc03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schematron_8h_1a0ee76ce4548aaa22741adf1a826df3d1" kindref="member">xmlSchematronValidCtxt</ref> *</type>
@@ -596,7 +596,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlSchematronValidOptions </para>
+<para>a set of <ref refid="schematron_8h_1af73b22af2a6af6225c5fe5082e54af71" kindref="member">xmlSchematronValidOptions</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -606,7 +606,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="138" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1705" bodyend="1736" declfile="schematron.h" declline="138" declcolumn="5"/>
+        <location file="schematron.h" line="138" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1704" bodyend="1735" declfile="schematron.h" declline="138" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1a97a4f050f918828dc0623e7ba5751084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -634,7 +634,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="141" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1744" bodyend="1753" declfile="schematron.h" declline="141" declcolumn="5"/>
+        <location file="schematron.h" line="141" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1743" bodyend="1752" declfile="schematron.h" declline="141" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="schematron_8h_1a0e8113b6f6e06a05363e79ba2fd3bbf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -676,7 +676,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="schematron.h" line="143" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1922" bodyend="2012" declfile="schematron.h" declline="143" declcolumn="5"/>
+        <location file="schematron.h" line="143" column="5" bodyfile="/builds/GNOME/libxml2/schematron.c" bodystart="1921" bodyend="2011" declfile="schematron.h" declline="143" declcolumn="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

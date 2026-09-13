@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaValidCtxt" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaValidCtxt</compoundname>
     <sectiondef kind="public-attrib">
@@ -74,7 +74,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="940" column="28" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="940" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1aaa0763391f5c0e9767a9c29745f8721e" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+        <type>xmlSchemaPtr</type>
         <definition>xmlSchemaPtr schema</definition>
         <argsstring></argsstring>
         <name>schema</name>
@@ -88,7 +88,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="942" column="18" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="942" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1acb7e0779c02127031b073502aca38a8c" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr doc</definition>
         <argsstring></argsstring>
         <name>doc</name>
@@ -102,7 +102,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="943" column="15" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="943" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1ae1cc77fb3f96e5a7eabbb80d2987d4f1" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlParserInputBuffer" kindref="compound">xmlParserInputBufferPtr</ref></type>
+        <type>xmlParserInputBufferPtr</type>
         <definition>xmlParserInputBufferPtr input</definition>
         <argsstring></argsstring>
         <name>input</name>
@@ -130,7 +130,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="945" column="21" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="945" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1a517841f0d0c4fb2024d0547da8f6b2d7" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSAXHandler" kindref="compound">xmlSAXHandlerPtr</ref></type>
+        <type>xmlSAXHandlerPtr</type>
         <definition>xmlSAXHandlerPtr sax</definition>
         <argsstring></argsstring>
         <name>sax</name>
@@ -144,7 +144,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="946" column="22" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="946" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1a090fcec94fee9c02a852a8cd93261971" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+        <type>xmlParserCtxtPtr</type>
         <definition>xmlParserCtxtPtr parserCtxt</definition>
         <argsstring></argsstring>
         <name>parserCtxt</name>
@@ -214,7 +214,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="952" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="952" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1af22243a9342e852a5bcc0b878913a289" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr node</definition>
         <argsstring></argsstring>
         <name>node</name>
@@ -228,7 +228,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="954" column="16" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="954" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1a6e8f513112d1a1d542c6aa4c5c1bb1e4" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr cur</definition>
         <argsstring></argsstring>
         <name>cur</name>
@@ -298,7 +298,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="962" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="962" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaValidCtxt_1a2c50e90dcfced373c33d049b64b3695b" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr validationRoot</definition>
         <argsstring></argsstring>
         <name>validationRoot</name>

@@ -13,7 +13,7 @@ var searchData=
   ['error_10',['error',['../struct__xmlSAXHandler.html#a5967328166d93d99eae85f23603f4b8b',1,'_xmlSAXHandler::error'],['../struct__xmlXPathParserContext.html#a11614f44ef4d939bdd984953346a7572',1,'_xmlXPathParserContext::error']]],
   ['etype_11',['etype',['../struct__xmlEntity.html#af76cc1f1cb7092176790601561cc9f04',1,'_xmlEntity::etype'],['../struct__xmlElement.html#a724667a46208cc09df2334ad647bee0d',1,'_xmlElement::etype']]],
   ['expandedsize_12',['expandedSize',['../struct__xmlEntity.html#a126c9dd99b0e8ab47b821754f9427114',1,'_xmlEntity']]],
-  ['externalid_13',['externalid',['../struct__xmlEntity.html#aa62583214ac1842ed1878911111f8169',1,'_xmlEntity::ExternalID'],['../struct__xmlDtd.html#a040308e6df5845d4d2559a3c91359b73',1,'_xmlDtd::ExternalID']]],
+  ['externalid_13',['ExternalID',['../struct__xmlEntity.html#aa62583214ac1842ed1878911111f8169',1,'_xmlEntity::ExternalID'],['../struct__xmlDtd.html#a040308e6df5845d4d2559a3c91359b73',1,'_xmlDtd::ExternalID']]],
   ['externalsubset_14',['externalSubset',['../struct__xmlSAXHandler.html#a2e5ac62ed929bc447ab06a6e57677968',1,'_xmlSAXHandler']]],
   ['extra_15',['extra',['../struct__xmlNode.html#a8a26dccda5fcb814d7a17cf674b1dfb8',1,'_xmlNode']]],
   ['extsubset_16',['extSubset',['../struct__xmlDoc.html#afe8c6d7a88e762f4ebd4e7cede378716',1,'_xmlDoc']]],

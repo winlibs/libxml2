@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="list_8c" kind="file" language="C++">
     <compoundname>list.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -96,7 +96,7 @@
           <declname>lk</declname>
         </param>
         <briefdescription>
-<para>Unlink and deallocate <computeroutput>lk</computeroutput> from list <computeroutput>l</computeroutput> </para>
+<para>Unlink and deallocate <computeroutput>lk</computeroutput> from list <computeroutput>l</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -388,7 +388,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Search the list for an existing value of <computeroutput>data</computeroutput> </para>
+<para>Search the list for an existing value of <computeroutput>data</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -430,7 +430,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Search the list in reverse order for an existing value of <computeroutput>data</computeroutput> </para>
+<para>Search the list in reverse order for an existing value of <computeroutput>data</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

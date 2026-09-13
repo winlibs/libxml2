@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="HTMLtree_8h" kind="file" language="C++">
     <compoundname>HTMLtree.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -405,10 +405,10 @@
           <declname>size</declname>
         </param>
         <briefdescription>
-<para>Same as htmlDocDumpMemoryFormat with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
+<para>Same as <ref refid="HTMLtree_8h_1a7c0fae1dbb4bd47a913fbd5c566a83ff" kindref="member">htmlDocDumpMemoryFormat</ref> with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
         </briefdescription>
         <detaileddescription>
-<para>Also see the warnings there. Use of this function is DISCOURAGED in favor of htmlDocContentDumpFormatOutput.</para>
+<para>Also see the warnings there. Use of this function is DISCOURAGED in favor of <ref refid="HTMLtree_8h_1ab03e04763f3f00e642efba0265574d52" kindref="member">htmlDocContentDumpFormatOutput</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cur</parametername>
@@ -523,8 +523,8 @@
 <para>Serialize an HTML document to a file. </para>
         </briefdescription>
         <detaileddescription>
-<para>Same as htmlSaveFileFormat with <computeroutput>encoding</computeroutput> set to NULL and <computeroutput>format</computeroutput> set to 1 which is typically undesired.</para>
-<para>Use of this function is DISCOURAGED in favor of htmlSaveFileFormat.</para>
+<para>Same as <ref refid="HTMLtree_8h_1aab894feca6c0113650cfd15ab365c44f" kindref="member">htmlSaveFileFormat</ref> with <computeroutput>encoding</computeroutput> set to NULL and <computeroutput>format</computeroutput> set to 1 which is typically undesired.</para>
+<para>Use of this function is DISCOURAGED in favor of <ref refid="HTMLtree_8h_1aab894feca6c0113650cfd15ab365c44f" kindref="member">htmlSaveFileFormat</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>filename</parametername>
@@ -571,7 +571,7 @@
 <para>Serialize an HTML document to a file. </para>
         </briefdescription>
         <detaileddescription>
-<para>Same as htmlSaveFileFormat with <computeroutput>format</computeroutput> set to 1 which is typically undesired. Also see the warnings there. Use of this function is DISCOURAGED in favor of htmlSaveFileFormat.</para>
+<para>Same as <ref refid="HTMLtree_8h_1aab894feca6c0113650cfd15ab365c44f" kindref="member">htmlSaveFileFormat</ref> with <computeroutput>format</computeroutput> set to 1 which is typically undesired. Also see the warnings there. Use of this function is DISCOURAGED in favor of <ref refid="HTMLtree_8h_1aab894feca6c0113650cfd15ab365c44f" kindref="member">htmlSaveFileFormat</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>filename</parametername>
@@ -630,7 +630,7 @@
 <para>Serialize an HTML document to a file using a given encoding. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>filename</computeroutput> is <computeroutput>&quot;-&quot;</computeroutput>, stdout is used. This is potentially insecure and might be changed in a future version.</para>
+<para>If <computeroutput>filename</computeroutput> is <computeroutput>"-"</computeroutput>, stdout is used. This is potentially insecure and might be changed in a future version.</para>
 <para>If encoding is NULL, ASCII with HTML 4.0 named character entities will be used. This is inefficient compared to UTF-8 and might be changed in a future version.</para>
 <para>Sets or updates meta tags containing the character encoding.</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -692,7 +692,7 @@
           <declname>cur</declname>
         </param>
         <briefdescription>
-<para>Serialize an HTML node to an xmlBuffer. </para>
+<para>Serialize an HTML node to an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Always uses UTF-8.</para>
@@ -748,7 +748,7 @@
         <detaileddescription>
 <para>Uses the encoding of the document. If the document has no encoding, ASCII with HTML 4.0 named character entities will be used. This is inefficient compared to UTF-8 and might be changed in a future version.</para>
 <para>Enables &quot;formatting&quot; unconditionally which is typically undesired.</para>
-<para>Use of this function is DISCOURAGED in favor of htmlNodeDumpFileFormat.</para>
+<para>Use of this function is DISCOURAGED in favor of <ref refid="HTMLtree_8h_1a47fa2ea0f8f2af9b823855917e3a307a" kindref="member">htmlNodeDumpFileFormat</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>f</parametername>
@@ -792,10 +792,10 @@
           <declname>cur</declname>
         </param>
         <briefdescription>
-<para>Same as htmlNodeDumpFileFormat with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
+<para>Same as <ref refid="HTMLtree_8h_1a47fa2ea0f8f2af9b823855917e3a307a" kindref="member">htmlNodeDumpFileFormat</ref> with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
         </briefdescription>
         <detaileddescription>
-<para>Use of this function is DISCOURAGED in favor of htmlNodeDumpFileFormat.</para>
+<para>Use of this function is DISCOURAGED in favor of <ref refid="HTMLtree_8h_1a47fa2ea0f8f2af9b823855917e3a307a" kindref="member">htmlNodeDumpFileFormat</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>out</parametername>
@@ -853,7 +853,7 @@
           <declname>format</declname>
         </param>
         <briefdescription>
-<para>Serialize an HTML node to an xmlBuffer. </para>
+<para>Serialize an HTML node to an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>If encoding is NULL, ASCII with HTML 4.0 named character entities will be used. This is inefficient compared to UTF-8 and might be changed in a future version.</para>
@@ -928,10 +928,10 @@
           <declname>encoding</declname>
         </param>
         <briefdescription>
-<para>Same as htmlNodeDumpFormatOutput with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
+<para>Same as <ref refid="HTMLtree_8h_1aac437ae981d846058aa22b8f03907d70" kindref="member">htmlNodeDumpFormatOutput</ref> with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
         </briefdescription>
         <detaileddescription>
-<para>Use of this function is DISCOURAGED in favor of htmlNodeDumpFormatOutput.</para>
+<para>Use of this function is DISCOURAGED in favor of <ref refid="HTMLtree_8h_1aac437ae981d846058aa22b8f03907d70" kindref="member">htmlNodeDumpFormatOutput</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
@@ -1065,10 +1065,10 @@
           <declname>encoding</declname>
         </param>
         <briefdescription>
-<para>Same as htmlDocContentDumpFormatOutput with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
+<para>Same as <ref refid="HTMLtree_8h_1ab03e04763f3f00e642efba0265574d52" kindref="member">htmlDocContentDumpFormatOutput</ref> with <computeroutput>format</computeroutput> set to 1 which is typically undesired. </para>
         </briefdescription>
         <detaileddescription>
-<para>Use of this function is DISCOURAGED in favor of htmlDocContentDumpFormatOutput.</para>
+<para>Use of this function is DISCOURAGED in favor of <ref refid="HTMLtree_8h_1ab03e04763f3f00e642efba0265574d52" kindref="member">htmlDocContentDumpFormatOutput</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>

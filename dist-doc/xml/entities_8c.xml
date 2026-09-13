@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="entities_8c" kind="file" language="C++">
     <compoundname>entities.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -326,9 +326,9 @@
         <argsstring></argsstring>
         <name>xmlEntityLt</name>
         <initializer>= {
-    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;lt&quot;,
+    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;lt&quot;,
     NULL, NULL, NULL, NULL, NULL, NULL,
-     (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&lt;&quot;,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&lt;&quot;, 1,
+    (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&lt;&quot;, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&lt;&quot;, 1,
     <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3aa1c4c38566da907f4b479191c31fb181e" kindref="member">XML_INTERNAL_PREDEFINED_ENTITY</ref>,
     NULL, NULL, NULL, NULL, 0, 0, 0
 }</initializer>
@@ -346,9 +346,9 @@
         <argsstring></argsstring>
         <name>xmlEntityGt</name>
         <initializer>= {
-    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;gt&quot;,
+    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;gt&quot;,
     NULL, NULL, NULL, NULL, NULL, NULL,
-     (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&gt;&quot;,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&gt;&quot;, 1,
+    (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&gt;&quot;, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&gt;&quot;, 1,
     <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3aa1c4c38566da907f4b479191c31fb181e" kindref="member">XML_INTERNAL_PREDEFINED_ENTITY</ref>,
     NULL, NULL, NULL, NULL, 0, 0, 0
 }</initializer>
@@ -366,9 +366,9 @@
         <argsstring></argsstring>
         <name>xmlEntityAmp</name>
         <initializer>= {
-    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;amp&quot;,
+    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;amp&quot;,
     NULL, NULL, NULL, NULL, NULL, NULL,
-     (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&amp;&quot;,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&amp;&quot;, 1,
+    (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&amp;&quot;, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&amp;&quot;, 1,
     <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3aa1c4c38566da907f4b479191c31fb181e" kindref="member">XML_INTERNAL_PREDEFINED_ENTITY</ref>,
     NULL, NULL, NULL, NULL, 0, 0, 0
 }</initializer>
@@ -386,9 +386,9 @@
         <argsstring></argsstring>
         <name>xmlEntityQuot</name>
         <initializer>= {
-    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;quot&quot;,
+    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;quot&quot;,
     NULL, NULL, NULL, NULL, NULL, NULL,
-     (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;\&quot;&quot;,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;\&quot;&quot;, 1,
+    (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;\&quot;&quot;, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;\&quot;&quot;, 1,
     <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3aa1c4c38566da907f4b479191c31fb181e" kindref="member">XML_INTERNAL_PREDEFINED_ENTITY</ref>,
     NULL, NULL, NULL, NULL, 0, 0, 0
 }</initializer>
@@ -406,9 +406,9 @@
         <argsstring></argsstring>
         <name>xmlEntityApos</name>
         <initializer>= {
-    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;apos&quot;,
+    NULL, <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fca0956c291375432e641b006ba38091b5f" kindref="member">XML_ENTITY_DECL</ref>, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;apos&quot;,
     NULL, NULL, NULL, NULL, NULL, NULL,
-     (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&apos;&quot;,  (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;&apos;&quot;, 1,
+    (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&apos;&quot;, (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;&apos;&quot;, 1,
     <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3aa1c4c38566da907f4b479191c31fb181e" kindref="member">XML_INTERNAL_PREDEFINED_ENTITY</ref>,
     NULL, NULL, NULL, NULL, 0, 0, 0
 }</initializer>
@@ -451,12 +451,12 @@
         <location file="/builds/GNOME/libxml2/entities.c" line="84" column="1" bodyfile="/builds/GNOME/libxml2/entities.c" bodystart="84" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="entities_8c_1a16803159e32ce881649f2e7dbd67cabc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlEntity" kindref="compound">xmlEntityPtr</ref></type>
+        <type>xmlEntityPtr</type>
         <definition>static xmlEntityPtr xmlCreateEntity</definition>
         <argsstring>(xmlDocPtr doc, const xmlChar *name, int type, const xmlChar *publicId, const xmlChar *systemId, const xmlChar *content)</argsstring>
         <name>xmlCreateEntity</name>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
@@ -559,7 +559,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -595,7 +595,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors error code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> error code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -666,7 +666,7 @@
 <para>Add a new entity to the document&apos;s external subset. </para>
         </briefdescription>
         <detaileddescription>
-<para>xmlAddEntity offers better error handling.</para>
+<para><ref refid="entities_8h_1a17c6a4404cc87ad3c67e32e6a802c006" kindref="member">xmlAddEntity</ref> offers better error handling.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
@@ -688,7 +688,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -757,7 +757,7 @@
 <para>Add a new entity to the document&apos;s internal subset. </para>
         </briefdescription>
         <detaileddescription>
-<para>xmlAddEntity offers better error handling.</para>
+<para><ref refid="entities_8h_1a17c6a4404cc87ad3c67e32e6a802c006" kindref="member">xmlAddEntity</ref> offers better error handling.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
@@ -779,7 +779,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -848,7 +848,7 @@
 <para>Create a new entity. </para>
         </briefdescription>
         <detaileddescription>
-<para>Like xmlAddDocEntity, but if <computeroutput>doc</computeroutput> is NULL or has no internal subset defined, an unlinked entity will be returned. It is then the responsibility of the caller to link it to the document later or free it when not needed anymore.</para>
+<para>Like <ref refid="entities_8h_1a639b25facc829da206ffbbd2ca3483dc" kindref="member">xmlAddDocEntity</ref>, but if <computeroutput>doc</computeroutput> is NULL or has no internal subset defined, an unlinked entity will be returned. It is then the responsibility of the caller to link it to the document later or free it when not needed anymore.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
@@ -870,7 +870,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -907,7 +907,7 @@
         <location file="/builds/GNOME/libxml2/entities.c" line="396" column="1" bodyfile="/builds/GNOME/libxml2/entities.c" bodystart="396" bodyend="405"/>
       </memberdef>
       <memberdef kind="function" id="entities_8c_1a782d11e99d7e711386d6252c345b12c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlEntity" kindref="compound">xmlEntityPtr</ref></type>
+        <type>xmlEntityPtr</type>
         <definition>static xmlEntityPtr xmlGetEntityFromTable</definition>
         <argsstring>(xmlEntitiesTablePtr table, const xmlChar *name)</argsstring>
         <name>xmlGetEntityFromTable</name>
@@ -1095,7 +1095,7 @@
 <para>If <computeroutput>doc</computeroutput> is NULL or an XML document, replaces <computeroutput>&lt;</computeroutput>, <computeroutput>&gt;</computeroutput> and <computeroutput>&amp;</computeroutput> with predefined entities. Carriage return is replaced with <computeroutput>&amp;#13;</computeroutput>. If <computeroutput>doc</computeroutput> or its encoding are NULL, non-ASCII characters are replaced with a hexadecimal character reference.</para>
 <para>If <computeroutput>doc</computeroutput> is an HTML document, follows the HTML serialization rules.</para>
 <para>Silently removes some invalid characters like ASCII control codes.</para>
-<para>See xmlEncodeSpecialChars for an alternative.</para>
+<para>See <ref refid="entities_8h_1ac1c6e5ab272e7a6043c786a6e4ba3536" kindref="member">xmlEncodeSpecialChars</ref> for an alternative.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>

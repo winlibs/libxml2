@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="structxmlNsMapItem" kind="struct" language="C++" prot="public">
     <compoundname>xmlNsMapItem</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/tree.c" line="6734" column="21" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6734" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/tree.c" line="6741" column="21" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6741" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structxmlNsMapItem_1ad9ab36b30cc2a09d16220539a2fcee33" prot="public" static="no" mutable="no">
         <type>xmlNsMapItemPtr</type>
@@ -29,10 +29,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/tree.c" line="6735" column="21" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6735" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/tree.c" line="6742" column="21" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6742" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structxmlNsMapItem_1a3b34f3e8b31a03105d35413f5dbea933" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref></type>
+        <type>xmlNsPtr</type>
         <definition>xmlNsPtr oldNs</definition>
         <argsstring></argsstring>
         <name>oldNs</name>
@@ -43,10 +43,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/tree.c" line="6736" column="14" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6736" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/tree.c" line="6743" column="14" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6743" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structxmlNsMapItem_1ae8139612f9bb5546fb50c37fbf2f3218" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref></type>
+        <type>xmlNsPtr</type>
         <definition>xmlNsPtr newNs</definition>
         <argsstring></argsstring>
         <name>newNs</name>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/tree.c" line="6737" column="14" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6737" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/tree.c" line="6744" column="14" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6744" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structxmlNsMapItem_1a6a43d99150f4380889d72e9249c9f8b9" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/tree.c" line="6738" column="9" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6738" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/tree.c" line="6745" column="9" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6745" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structxmlNsMapItem_1acb5ba97551079e0b072c62c21d784ac5" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/tree.c" line="6747" column="9" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6747" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/tree.c" line="6754" column="9" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6754" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -224,7 +224,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/builds/GNOME/libxml2/tree.c" line="6733" column="1" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6733" bodyend="6748"/>
+    <location file="/builds/GNOME/libxml2/tree.c" line="6740" column="1" bodyfile="/builds/GNOME/libxml2/tree.c" bodystart="6740" bodyend="6755"/>
     <listofallmembers>
       <member refid="structxmlNsMapItem_1acb5ba97551079e0b072c62c21d784ac5" prot="public" virt="non-virtual"><scope>xmlNsMapItem</scope><name>depth</name></member>
       <member refid="structxmlNsMapItem_1ae8139612f9bb5546fb50c37fbf2f3218" prot="public" virt="non-virtual"><scope>xmlNsMapItem</scope><name>newNs</name></member>

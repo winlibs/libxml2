@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSaveCtxt" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSaveCtxt</compoundname>
     <sectiondef kind="public-attrib">
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/xmlsave.c" line="36" column="19" bodyfile="/builds/GNOME/libxml2/xmlsave.c" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSaveCtxt_1a6793e35bbee7364228c3940f6aa054a6" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlCharEncodingHandler" kindref="compound">xmlCharEncodingHandlerPtr</ref></type>
+        <type>xmlCharEncodingHandlerPtr</type>
         <definition>xmlCharEncodingHandlerPtr handler</definition>
         <argsstring></argsstring>
         <name>handler</name>
@@ -32,7 +32,7 @@
         <location file="/builds/GNOME/libxml2/xmlsave.c" line="37" column="31" bodyfile="/builds/GNOME/libxml2/xmlsave.c" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSaveCtxt_1a894b772bdd757a6511455cab22fc7bc8" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+        <type>xmlOutputBufferPtr</type>
         <definition>xmlOutputBufferPtr buf</definition>
         <argsstring></argsstring>
         <name>buf</name>

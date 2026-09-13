@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaAttributeGroup" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaAttributeGroup</compoundname>
     <includes local="no">schemasInternals.h</includes>
@@ -219,7 +219,7 @@
 <para>An attribute group definition. </para>
     </briefdescription>
     <detaileddescription>
-<para>xmlSchemaAttribute and xmlSchemaAttributeGroup start of structures must be kept similar </para>
+<para><ref refid="schemasInternals_8h_1a7880be4c4333fc23cfa93e2c212b87a5" kindref="member">xmlSchemaAttribute</ref> and <ref refid="schemasInternals_8h_1a0a4256ef4875b3ad61002a07e26cc443" kindref="member">xmlSchemaAttributeGroup</ref> start of structures must be kept similar </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="10">

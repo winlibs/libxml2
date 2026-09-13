@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaParserCtxt" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaParserCtxt</compoundname>
     <sectiondef kind="public-attrib">
@@ -130,7 +130,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="592" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="592" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaParserCtxt_1aaa0763391f5c0e9767a9c29745f8721e" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+        <type>xmlSchemaPtr</type>
         <definition>xmlSchemaPtr schema</definition>
         <argsstring></argsstring>
         <name>schema</name>
@@ -172,7 +172,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="600" column="19" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="600" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaParserCtxt_1acb7e0779c02127031b073502aca38a8c" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr doc</definition>
         <argsstring></argsstring>
         <name>doc</name>
@@ -298,7 +298,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="615" column="16" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="615" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaParserCtxt_1a5d78ff0c2b950c4c9babd89960d53e46" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr ctxtType</definition>
         <argsstring></argsstring>
         <name>ctxtType</name>

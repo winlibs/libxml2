@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlschemastypes_8c" kind="file" language="C++">
     <compoundname>xmlschemastypes.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -407,8 +407,8 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1ad492a40b5cba52fa9822fdaa7d415520" prot="public" static="no">
         <name>IS_WSP_REPLACE_CH</name>
         <param><defname>c</defname></param>
-        <initializer>				 ((((c) == 0x9) || ((c) == 0xa)) || \
-				 ((c) == 0xd))</initializer>
+        <initializer>                 ((((c) == 0x9) || ((c) == 0xa)) || \
+                 ((c) == 0xd))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -455,7 +455,7 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1ae1a2af507cf2c2a408acd4cd1b1ea04b" prot="public" static="no">
         <name>IS_TZO_CHAR</name>
         <param><defname>c</defname></param>
-        <initializer>	((c == 0) || (c == &apos;Z&apos;) || (c == &apos;+&apos;) || (c == &apos;-&apos;))</initializer>
+        <initializer>    ((c == 0) || (c == &apos;Z&apos;) || (c == &apos;+&apos;) || (c == &apos;-&apos;))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -551,7 +551,7 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1a27e8daa26568168da0701c09af8eb2f8" prot="public" static="no">
         <name>IS_LEAP</name>
         <param><defname>y</defname></param>
-        <initializer>	(((y % 4 == 0) &amp;&amp; (y % 100 != 0)) || (y % 400 == 0))</initializer>
+        <initializer>    (((y % 4 == 0) &amp;&amp; (y % 100 != 0)) || (y % 400 == 0))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -576,9 +576,9 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1abf86daad42edd47c69e5d7f58fbaa82c" prot="public" static="no">
         <name>VALID_MDAY</name>
         <param><defname>dt</defname></param>
-        <initializer>	(IS_LEAP(dt-&gt;year) ?				        \
-	    (dt-&gt;day &lt;= daysInMonthLeap[dt-&gt;mon - 1]) :	        \
-	    (dt-&gt;day &lt;= daysInMonth[dt-&gt;mon - 1]))</initializer>
+        <initializer>    (IS_LEAP(dt-&gt;year) ?                        \
+        (dt-&gt;day &lt;= daysInMonthLeap[dt-&gt;mon - 1]) :         \
+        (dt-&gt;day &lt;= daysInMonth[dt-&gt;mon - 1]))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -590,7 +590,7 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1ab4a68f6f2384a033c99f043b9711acf5" prot="public" static="no">
         <name>VALID_DATE</name>
         <param><defname>dt</defname></param>
-        <initializer>	(VALID_YEAR(dt-&gt;year) &amp;&amp; VALID_MONTH(dt-&gt;mon) &amp;&amp; VALID_MDAY(dt))</initializer>
+        <initializer>    (VALID_YEAR(dt-&gt;year) &amp;&amp; VALID_MONTH(dt-&gt;mon) &amp;&amp; VALID_MDAY(dt))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -602,7 +602,7 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1ab5e8a80f3c98fead6d43c5f3a2964a63" prot="public" static="no">
         <name>VALID_END_OF_DAY</name>
         <param><defname>dt</defname></param>
-        <initializer>	((dt)-&gt;hour == 24 &amp;&amp; (dt)-&gt;min == 0 &amp;&amp; (dt)-&gt;sec == 0)</initializer>
+        <initializer>    ((dt)-&gt;hour == 24 &amp;&amp; (dt)-&gt;min == 0 &amp;&amp; (dt)-&gt;sec == 0)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -614,9 +614,9 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1a92c1d2e5d59eae61dc8905e0368ccc54" prot="public" static="no">
         <name>VALID_TIME</name>
         <param><defname>dt</defname></param>
-        <initializer>	((((dt-&gt;hour &lt; 24) &amp;&amp; (dt-&gt;min &lt; 60) &amp;&amp;           \
-	  VALID_SEC(dt-&gt;sec)) || VALID_END_OF_DAY(dt)) &amp;&amp;	\
-	 VALID_TZO(dt-&gt;tzo))</initializer>
+        <initializer>    ((((dt-&gt;hour &lt; 24) &amp;&amp; (dt-&gt;min &lt; 60) &amp;&amp;           \
+      VALID_SEC(dt-&gt;sec)) || VALID_END_OF_DAY(dt)) &amp;&amp;   \
+     VALID_TZO(dt-&gt;tzo))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -628,7 +628,7 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1ab40c88d9853ac085aaf09027c82e51b3" prot="public" static="no">
         <name>VALID_DATETIME</name>
         <param><defname>dt</defname></param>
-        <initializer>	(VALID_DATE(dt) &amp;&amp; VALID_TIME(dt))</initializer>
+        <initializer>    (VALID_DATE(dt) &amp;&amp; VALID_TIME(dt))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -708,8 +708,8 @@
         <param><defname>day</defname></param>
         <param><defname>month</defname></param>
         <param><defname>year</defname></param>
-        <initializer>        ((IS_LEAP(year) ?					\
-                dayInLeapYearByMonth[month - 1] :		\
+        <initializer>        ((IS_LEAP(year) ?                   \
+                dayInLeapYearByMonth[month - 1] :       \
                 dayInYearByMonth[month - 1]) + day)</initializer>
         <briefdescription>
         </briefdescription>
@@ -724,12 +724,12 @@
         <param><defname>num</defname></param>
         <param><defname>cur</defname></param>
         <param><defname>invalid</defname></param>
-        <initializer>	if ((cur[0] &lt; &apos;0&apos;) || (cur[0] &gt; &apos;9&apos;) ||			\
-	    (cur[1] &lt; &apos;0&apos;) || (cur[1] &gt; &apos;9&apos;))			\
-	    invalid = 1;					\
-	else							\
-	    num = (cur[0] - &apos;0&apos;) * 10 + (cur[1] - &apos;0&apos;);		\
-	cur += 2;</initializer>
+        <initializer>    if ((cur[0] &lt; &apos;0&apos;) || (cur[0] &gt; &apos;9&apos;) ||         \
+        (cur[1] &lt; &apos;0&apos;) || (cur[1] &gt; &apos;9&apos;))           \
+        invalid = 1;                    \
+    else                            \
+        num = (cur[0] - &apos;0&apos;) * 10 + (cur[1] - &apos;0&apos;);     \
+    cur += 2;</initializer>
         <briefdescription>
 <para>Parses a 2-digits integer and updates <computeroutput>num</computeroutput> with the value. </para>
         </briefdescription>
@@ -748,7 +748,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an #xmlChar * </para>
+<para>an #<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -771,18 +771,18 @@
         <param><defname>num</defname></param>
         <param><defname>cur</defname></param>
         <param><defname>invalid</defname></param>
-        <initializer>	PARSE_2_DIGITS(num, cur, invalid);			\
-	if (!invalid &amp;&amp; (*cur == &apos;.&apos;)) {			\
-	    double mult = 1;				        \
-	    cur++;						\
-	    if ((*cur &lt; &apos;0&apos;) || (*cur &gt; &apos;9&apos;))			\
-		invalid = 1;					\
-	    while ((*cur &gt;= &apos;0&apos;) &amp;&amp; (*cur &lt;= &apos;9&apos;)) {		\
-		mult /= 10;					\
-		num += (*cur - &apos;0&apos;) * mult;			\
-		cur++;						\
-	    }							\
-	}</initializer>
+        <initializer>    PARSE_2_DIGITS(num, cur, invalid);          \
+    if (!invalid &amp;&amp; (*cur == &apos;.&apos;)) {            \
+        double mult = 1;                        \
+        cur++;                      \
+        if ((*cur &lt; &apos;0&apos;) || (*cur &gt; &apos;9&apos;))           \
+        invalid = 1;                    \
+        while ((*cur &gt;= &apos;0&apos;) &amp;&amp; (*cur &lt;= &apos;9&apos;)) {        \
+        mult /= 10;                 \
+        num += (*cur - &apos;0&apos;) * mult;         \
+        cur++;                      \
+        }                           \
+    }</initializer>
         <briefdescription>
 <para>Parses a float and updates <computeroutput>num</computeroutput> with the value. </para>
         </briefdescription>
@@ -801,7 +801,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an #xmlChar * </para>
+<para>an #<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -824,12 +824,12 @@
         <param><defname>num</defname></param>
         <param><defname>cur</defname></param>
         <param><defname>num_type</defname></param>
-        <initializer>	if ((*cur &lt; &apos;0&apos;) || (*cur &gt; &apos;9&apos;))			\
-	    num_type = -1;					\
+        <initializer>    if ((*cur &lt; &apos;0&apos;) || (*cur &gt; &apos;9&apos;))           \
+        num_type = -1;                  \
         else                                                    \
-	    while ((*cur &gt;= &apos;0&apos;) &amp;&amp; (*cur &lt;= &apos;9&apos;)) {		\
-	        num = num * 10 + (*cur - &apos;0&apos;);		        \
-	        cur++;                                          \
+        while ((*cur &gt;= &apos;0&apos;) &amp;&amp; (*cur &lt;= &apos;9&apos;)) {        \
+            num = num * 10 + (*cur - &apos;0&apos;);              \
+            cur++;                                          \
             }</initializer>
         <briefdescription>
 <para>Parses a digits integer and updates <computeroutput>num</computeroutput> with the value. </para>
@@ -849,7 +849,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an #xmlChar * </para>
+<para>an #<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -873,20 +873,20 @@
         <param><defname>cur</defname></param>
         <param><defname>num_type</defname></param>
         <initializer>        num = 0;                                                \
-	PARSE_DIGITS(num, cur, num_type);	                \
-	if (!num_type &amp;&amp; (*cur == &apos;.&apos;)) {			\
-	    double mult = 1;				        \
-	    cur++;						\
-	    if ((*cur &lt; &apos;0&apos;) || (*cur &gt; &apos;9&apos;))			\
-		num_type = -1;					\
+    PARSE_DIGITS(num, cur, num_type);                   \
+    if (!num_type &amp;&amp; (*cur == &apos;.&apos;)) {           \
+        double mult = 1;                        \
+        cur++;                      \
+        if ((*cur &lt; &apos;0&apos;) || (*cur &gt; &apos;9&apos;))           \
+        num_type = -1;                  \
             else                                                \
                 num_type = 1;                                   \
-	    while ((*cur &gt;= &apos;0&apos;) &amp;&amp; (*cur &lt;= &apos;9&apos;)) {		\
-		mult /= 10;					\
-		num += (*cur - &apos;0&apos;) * mult;			\
-		cur++;						\
-	    }							\
-	}</initializer>
+        while ((*cur &gt;= &apos;0&apos;) &amp;&amp; (*cur &lt;= &apos;9&apos;)) {        \
+        mult /= 10;                 \
+        num += (*cur - &apos;0&apos;) * mult;         \
+        cur++;                      \
+        }                           \
+    }</initializer>
         <briefdescription>
 <para>Parses a float or integer and updates <computeroutput>num</computeroutput> with the value. </para>
         </briefdescription>
@@ -905,7 +905,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an #xmlChar * </para>
+<para>an #<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -926,14 +926,22 @@
       <memberdef kind="define" id="xmlschemastypes_8c_1a2c8f78a50e6ca29f64d1cee8929baede" prot="public" static="no">
         <name>RETURN_TYPE_IF_VALID</name>
         <param><defname>t</defname></param>
-        <initializer>    if (IS_TZO_CHAR(*cur)) {					\
-	ret = _xmlSchemaParseTimeZone(&amp;(dt-&gt;value.date), &amp;cur);	\
-	if (ret == 0) {						\
-	    if (*cur != 0)					\
-		goto error;					\
-	    dt-&gt;type = t;					\
-	    goto done;						\
-	}							\
+        <initializer>    if (IS_TZO_CHAR(*cur)) {                    \
+    ret = _xmlSchemaParseTimeZone(&amp;(dt-&gt;value.date), &amp;cur); \
+    if (ret == 0) {                     \
+        if (collapse)                   \
+        while IS_WSP_BLANK_CH(*cur) cur++;      \
+        if (*cur != 0)                  \
+        goto error;                 \
+        dt-&gt;type = t;                   \
+        goto done;                      \
+    }                           \
+    } else if (collapse &amp;&amp; IS_WSP_BLANK_CH(*cur)) {     \
+    while IS_WSP_BLANK_CH(*cur) cur++;          \
+    if (*cur != 0)                      \
+        goto error;                     \
+    dt-&gt;type = t;                       \
+    goto done;                      \
     }</initializer>
         <briefdescription>
         </briefdescription>
@@ -941,7 +949,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="1785" column="9"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="1786" column="9"/>
       </memberdef>
       <memberdef kind="define" id="xmlschemastypes_8c_1a931973529ea034ace8dfff6f1f2a32fe" prot="public" static="no">
         <name>FQUOTIENT</name>
@@ -954,7 +962,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3770" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3770" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3789" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3789" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlschemastypes_8c_1a2e023ca1e7224b1df618c23b18b75fed" prot="public" static="no">
         <name>MODULO</name>
@@ -967,7 +975,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3771" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3771" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3790" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3790" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlschemastypes_8c_1aebde12abbd212dd36b4e9b4f709cbb68" prot="public" static="no">
         <name>FQUOTIENT_RANGE</name>
@@ -981,7 +989,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3772" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3772" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3791" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3791" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlschemastypes_8c_1ab5b8f88a16364e31add82b3e0b75640b" prot="public" static="no">
         <name>MODULO_RANGE</name>
@@ -995,14 +1003,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3773" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3773" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3792" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3792" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlschemastypes_8c_1a1612d6b43024da66d2ee82633b55abaf" prot="public" static="no">
         <name>TIME_TO_NUMBER</name>
         <param><defname>dt</defname></param>
         <initializer>    ((double)((dt-&gt;value.date.hour * SECS_PER_HOUR) +   \
-              (dt-&gt;value.date.min * SECS_PER_MIN) +	\
-              (dt-&gt;value.date.tzo * SECS_PER_MIN)) +	\
+              (dt-&gt;value.date.min * SECS_PER_MIN) + \
+              (dt-&gt;value.date.tzo * SECS_PER_MIN)) +    \
                dt-&gt;value.date.sec)</initializer>
         <briefdescription>
 <para>Calculates the number of seconds in the time portion of <computeroutput>dt</computeroutput>. </para>
@@ -1013,7 +1021,7 @@
 <parametername>dt</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlSchemaVal </para>
+<para>an <ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1023,7 +1031,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4129" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4129" bodyend="4133"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4148" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4148" bodyend="4152"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -1183,19 +1191,6 @@
         </inbodydescription>
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="102" column="28" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="102" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="xmlschemastypes_8c_1a31ff504a74ce27ff0376c5c073c5a798" prot="public" static="no">
-        <type>struct _xmlSchemaTreeItem</type>
-        <definition>typedef struct _xmlSchemaTreeItem xmlSchemaTreeItem</definition>
-        <argsstring></argsstring>
-        <name>xmlSchemaTreeItem</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="426" column="33" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="426" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="typedef" id="xmlschemastypes_8c_1a79688ec7008f425e93a99e101a2a37ca" prot="public" static="no">
         <type>xmlSchemaTreeItem *</type>
         <definition>typedef xmlSchemaTreeItem* xmlSchemaTreeItemPtr</definition>
@@ -1209,19 +1204,6 @@
         </inbodydescription>
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="427" column="27" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="427" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="xmlschemastypes_8c_1aa488b796345971666e52cca1d3383390" prot="public" static="no">
-        <type>struct _xmlSchemaParticle</type>
-        <definition>typedef struct _xmlSchemaParticle xmlSchemaParticle</definition>
-        <argsstring></argsstring>
-        <name>xmlSchemaParticle</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="435" column="33" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="435" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="typedef" id="xmlschemastypes_8c_1a568313a8766a2ef5ea381b58401899a4" prot="public" static="no">
         <type>xmlSchemaParticle *</type>
         <definition>typedef xmlSchemaParticle* xmlSchemaParticlePtr</definition>
@@ -1234,19 +1216,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="436" column="27" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="436" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="xmlschemastypes_8c_1ac115941b82b4f75a8add91e01d29d261" prot="public" static="no">
-        <type>struct _xmlSchemaModelGroup</type>
-        <definition>typedef struct _xmlSchemaModelGroup xmlSchemaModelGroup</definition>
-        <argsstring></argsstring>
-        <name>xmlSchemaModelGroup</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="447" column="35" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="447" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlschemastypes_8c_1aabf014758670bd27358c918da3a3f3e9" prot="public" static="no">
         <type>xmlSchemaModelGroup *</type>
@@ -1334,7 +1303,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="131" column="24" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a8d7b920af6a633d75971612d44d0fca5" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeStringDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeStringDef</name>
@@ -1348,7 +1317,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="136" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="136" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1ad898850c1d1c147eba5e24117264e51a" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeAnyTypeDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeAnyTypeDef</name>
@@ -1362,7 +1331,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="137" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a1f1f4aa6249e1441580c101895031a47" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeAnySimpleTypeDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeAnySimpleTypeDef</name>
@@ -1376,7 +1345,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="138" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a4d3dbb7f87e11a2a5b6e1eb86a083bac" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeDecimalDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeDecimalDef</name>
@@ -1390,7 +1359,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="139" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a8135b37d0a11d0e4c43410d95f5b02ef" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeDatetimeDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeDatetimeDef</name>
@@ -1404,7 +1373,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="140" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="140" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a73c4ce0828514b91242859b6401039ed" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeDateDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeDateDef</name>
@@ -1418,7 +1387,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="141" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="141" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a9afd04ee49fabdec09f0fde89df5e5d1" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeTimeDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeTimeDef</name>
@@ -1432,7 +1401,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="142" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="142" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a10a70f7db07f459496a6d49f22d3b38f" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeGYearDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeGYearDef</name>
@@ -1446,7 +1415,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="143" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1aab9f1cbb26ef69cedb5c36df2354edd1" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeGYearMonthDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeGYearMonthDef</name>
@@ -1460,7 +1429,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="144" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="144" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a43c150b1be8c551931c9350b5dc132b7" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeGDayDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeGDayDef</name>
@@ -1474,7 +1443,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="145" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="145" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a5f6edf5807c3001492815698b292a0e9" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeGMonthDayDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeGMonthDayDef</name>
@@ -1488,7 +1457,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="146" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="146" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1ab5ad9f9d5087ee6e69272cb92ad5fffa" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeGMonthDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeGMonthDef</name>
@@ -1502,7 +1471,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="147" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="147" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a6aa522fd23e286f32deb109b42368266" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeDurationDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeDurationDef</name>
@@ -1516,7 +1485,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="148" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="148" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a3e06e9a7f37986cd4e3e1453465125e4" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeFloatDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeFloatDef</name>
@@ -1530,7 +1499,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="149" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="149" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a01e1f08cf36f345b73aa2b69a2a721db" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeBooleanDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeBooleanDef</name>
@@ -1544,7 +1513,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="150" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="150" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a24b8ec3e39181acb4a8e67c72818efc6" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeDoubleDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeDoubleDef</name>
@@ -1558,7 +1527,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="151" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="151" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a09c1ba541dbd821c7466dd0c723e6f11" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeHexBinaryDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeHexBinaryDef</name>
@@ -1572,7 +1541,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="152" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a42bb38825430d3afbc843d11e9560451" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeBase64BinaryDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeBase64BinaryDef</name>
@@ -1586,7 +1555,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="153" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a0697de81721289112bd60d006221774f" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeAnyURIDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeAnyURIDef</name>
@@ -1600,7 +1569,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="154" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="154" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a0275d2f9c74d70e2461bc0e43e0dce5f" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypePositiveIntegerDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypePositiveIntegerDef</name>
@@ -1614,7 +1583,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="159" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="159" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a33e5b232aae7a0a8e17b917ed931de68" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNonPositiveIntegerDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNonPositiveIntegerDef</name>
@@ -1628,7 +1597,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="160" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="160" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1ab62074ddf13b6d8d71027f2ce7323b71" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNegativeIntegerDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNegativeIntegerDef</name>
@@ -1642,7 +1611,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="161" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="161" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a97de959b08439c56054f05510e2dab02" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNonNegativeIntegerDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNonNegativeIntegerDef</name>
@@ -1656,7 +1625,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="162" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="162" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a86bd294d6bf43b70a92f9835e34d2c27" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeIntegerDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeIntegerDef</name>
@@ -1670,7 +1639,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="163" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="163" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a9733ce0520a7f64bf93a79c40a329305" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeLongDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeLongDef</name>
@@ -1684,7 +1653,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="164" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="164" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1ad0a290ba019981f651b38e83c73ab548" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeIntDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeIntDef</name>
@@ -1698,7 +1667,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="165" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="165" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1af9d4ef1807fb7dd14f72e9477e449244" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeShortDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeShortDef</name>
@@ -1712,7 +1681,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="166" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="166" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a2415dc00aa61e8b4c448fdb7a4e9141a" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeByteDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeByteDef</name>
@@ -1726,7 +1695,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="167" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="167" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a8522a82197bf7b4d7a1eac33e26fa3e8" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeUnsignedLongDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeUnsignedLongDef</name>
@@ -1740,7 +1709,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="168" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="168" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1ad0de05122c3c792b9f4ff52f73c6ced0" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeUnsignedIntDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeUnsignedIntDef</name>
@@ -1754,7 +1723,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="169" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="169" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1af648030b7b8b10de4dfffb5410959884" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeUnsignedShortDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeUnsignedShortDef</name>
@@ -1768,7 +1737,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="170" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="170" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1aebec3ece415b0747c07bcd4ce282c910" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeUnsignedByteDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeUnsignedByteDef</name>
@@ -1782,7 +1751,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="171" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="171" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1ae1b3aaf9cdccfbc126e8d7c1af2b17a4" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNormStringDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNormStringDef</name>
@@ -1796,7 +1765,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="172" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="172" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1ace26be0f42ed1b0c1fc03fe3078796e6" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeTokenDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeTokenDef</name>
@@ -1810,7 +1779,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="173" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="173" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1aea09f2a328e22f5ebde8f90cd3279528" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeLanguageDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeLanguageDef</name>
@@ -1824,7 +1793,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="174" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="174" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a4ec3a72b827630d8ab4cd5ec6682c067" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNameDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNameDef</name>
@@ -1838,7 +1807,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="175" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="175" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a1ab2c9003b3300df032714c36c8df12e" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeQNameDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeQNameDef</name>
@@ -1852,7 +1821,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="176" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="176" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a607b8a8e6a540fc59547b78d0ccf31eb" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNCNameDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNCNameDef</name>
@@ -1866,7 +1835,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="177" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="177" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a469eacdc7355fd2ad894efa5fc18e350" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeIdDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeIdDef</name>
@@ -1880,7 +1849,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="178" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="178" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1aec2364e0221de97078d735e3bc13fa37" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeIdrefDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeIdrefDef</name>
@@ -1894,7 +1863,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="179" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="179" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a4e6388c9c6d474f3cbb187d1bbc97504" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeIdrefsDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeIdrefsDef</name>
@@ -1908,7 +1877,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="180" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="180" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a811130d3789626c075340bf01b975ecc" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeEntityDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeEntityDef</name>
@@ -1922,7 +1891,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="181" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="181" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a77cbb2cba749f1ded82352dd8658ba69" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeEntitiesDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeEntitiesDef</name>
@@ -1936,7 +1905,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="182" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="182" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1aa2ea44efd96cf7be0a5130aa73696083" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNotationDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNotationDef</name>
@@ -1950,7 +1919,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="183" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="183" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1a1b7912769af0d6c4606be209aa2191b5" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNmtokenDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNmtokenDef</name>
@@ -1964,7 +1933,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="184" column="25" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="184" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="xmlschemastypes_8c_1afcd30acde7bd8ac38072bfe95f8cf509" prot="public" static="yes" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr xmlSchemaTypeNmtokensDef</definition>
         <argsstring></argsstring>
         <name>xmlSchemaTypeNmtokensDef</name>
@@ -1996,7 +1965,7 @@
         <argsstring>[12]</argsstring>
         <name>daysInMonth</name>
         <initializer>=
-	{ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }</initializer>
+    { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2011,7 +1980,7 @@
         <argsstring>[12]</argsstring>
         <name>daysInMonthLeap</name>
         <initializer>=
-	{ 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }</initializer>
+    { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2026,7 +1995,7 @@
         <argsstring>[12]</argsstring>
         <name>dayInYearByMonth</name>
         <initializer>=
-	{ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334 }</initializer>
+    { 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334 }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2041,7 +2010,7 @@
         <argsstring>[12]</argsstring>
         <name>dayInLeapYearByMonth</name>
         <initializer>=
-	{ 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335 }</initializer>
+    { 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335 }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2100,7 +2069,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="214" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="214" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a1d896ecba569819e64e13294e5dee652" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+        <type>xmlSchemaFacetPtr</type>
         <definition>static xmlSchemaFacetPtr xmlSchemaNewMinLengthFacet</definition>
         <argsstring>(int value)</argsstring>
         <name>xmlSchemaNewMinLengthFacet</name>
@@ -2117,7 +2086,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="227" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="227" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a329e38afca4034a26a4f17cbf8a01930" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaInitBasicType</definition>
         <argsstring>(const char *name, xmlSchemaValType type, xmlSchemaTypePtr baseType)</argsstring>
         <name>xmlSchemaInitBasicType</name>
@@ -2130,7 +2099,7 @@
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>baseType</declname>
         </param>
         <briefdescription>
@@ -3104,7 +3073,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="1778" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="1778" bodyend="1986"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="1778" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="1778" bodyend="1998"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a784385165c0225a8de9ae8c0d7bb5303" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3112,7 +3081,7 @@
         <argsstring>(xmlSchemaTypePtr type, const xmlChar *duration, xmlSchemaValPtr *val, int collapse)</argsstring>
         <name>xmlSchemaValidateDuration</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -3171,7 +3140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2000" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2000" bodyend="2159"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2012" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2012" bodyend="2178"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1aaeb1013d6ee81401ce2d9e0d068c5e62" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3201,7 +3170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2168" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2168" bodyend="2181"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2187" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2187" bodyend="2200"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1abec9e60f86abf971b567e0f497c3e33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3231,7 +3200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2190" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2190" bodyend="2214"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2209" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2209" bodyend="2233"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ae53bbf3f979c75fc62322399da3fcb45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3261,7 +3230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2223" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2223" bodyend="2264"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2242" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2242" bodyend="2283"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1abfd6413ca9c103e8dd944971d0650ac0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3269,7 +3238,7 @@
         <argsstring>(xmlSchemaTypePtr type, const xmlChar *value, xmlSchemaValPtr *ret, xmlNodePtr node)</argsstring>
         <name>xmlSchemaValAtomicListNode</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -3281,7 +3250,7 @@
           <declname>ret</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -3328,7 +3297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2278" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2278" bodyend="2332"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2297" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2297" bodyend="2351"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ae32b8ecbc0853ca36e47e4d9ce74469f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3370,7 +3339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2342" column="12" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2342" bodyend="2378"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2361" column="12" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2361" bodyend="2397"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ad106c0f05e478224b94d390e572d55e2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3387,7 +3356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2388" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2388" bodyend="2414"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2407" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2407" bodyend="2433"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a27d179f78da2bde2408a5788b5309a6d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3395,7 +3364,7 @@
         <argsstring>(xmlSchemaTypePtr type, const xmlChar *value, xmlSchemaValPtr *val, xmlNodePtr node, int flags, xmlSchemaWhitespaceValueType ws, int normOnTheFly, int applyNorm, int createStringValue)</argsstring>
         <name>xmlSchemaValAtomicType</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -3407,7 +3376,7 @@
           <declname>val</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -3514,7 +3483,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2434" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2434" bodyend="3598"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="2453" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="2453" bodyend="3617"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ad502351831f2db11396f2c5673618748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3581,7 +3550,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3612" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3612" bodyend="3616"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3631" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3631" bodyend="3635"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a3fb6bf6dd3eeb56446a087138258e6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3648,7 +3617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3631" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3631" bodyend="3635"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3650" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3650" bodyend="3654"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a089638c1722ca65cb9f51fe45856bf74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3703,7 +3672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3648" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3648" bodyend="3651"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3667" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3667" bodyend="3670"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a2ff83e1c71ca9e0778debf0fbb17a598" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3745,7 +3714,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3661" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3661" bodyend="3673"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3680" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3680" bodyend="3692"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a45b861a9c21fd35a828dc7981b3d7a6b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3787,7 +3756,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3684" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3684" bodyend="3765"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3703" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3703" bodyend="3784"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a77219cb99e5a2ed1c0f5dca5cd3828ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlSchemaValPtr</type>
@@ -3808,17 +3777,17 @@
 <parametername>v</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the #xmlSchemaVal value to duplicate </para>
+<para>the #<ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> value to duplicate </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a pointer to a duplicated #xmlSchemaVal or NULL if error. </para>
+<simplesect kind="return"><para>a pointer to a duplicated #<ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> or NULL if error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3783" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3783" bodyend="3792"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3802" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3802" bodyend="3811"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1af5d0297c5c86f9ebbff10f0235f73169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> *</type>
@@ -3849,7 +3818,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3801" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3801" bodyend="3898"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3820" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3820" bodyend="3917"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a949f61c589b32a27c18350305ef78977" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlSchemaValPtr</type>
@@ -3868,13 +3837,13 @@
 <para>Compute a new date/time from <computeroutput>dt</computeroutput> and <computeroutput>dur</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function assumes <computeroutput>dt</computeroutput> is either #XML_SCHEMAS_DATETIME, #XML_SCHEMAS_DATE, #XML_SCHEMAS_GYEARMONTH, or #XML_SCHEMAS_GYEAR. The returned #xmlSchemaVal is the same type as <computeroutput>dt</computeroutput>. The calling program is responsible for freeing the returned value.</para>
+<para>This function assumes <computeroutput>dt</computeroutput> is either #XML_SCHEMAS_DATETIME, #XML_SCHEMAS_DATE, #XML_SCHEMAS_GYEARMONTH, or #XML_SCHEMAS_GYEAR. The returned #<ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> is the same type as <computeroutput>dt</computeroutput>. The calling program is responsible for freeing the returned value.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dt</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlSchemaVal </para>
+<para>an <ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3882,17 +3851,17 @@
 <parametername>dur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlSchemaVal of type #XS_DURATION </para>
+<para>an <ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> of type #XS_DURATION </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a pointer to a new xmlSchemaVal or NULL if error. </para>
+<simplesect kind="return"><para>a pointer to a new <ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> or NULL if error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3911" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3911" bodyend="4051"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="3930" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="3930" bodyend="4070"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a0b9ea25052b7783e11ff4e1d783cabc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlSchemaValPtr</type>
@@ -3917,7 +3886,7 @@
 <parametername>dt</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an #xmlSchemaVal of a date/time type value. </para>
+<para>an #<ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> of a date/time type value. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3935,7 +3904,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4062" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4062" bodyend="4089"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4081" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4081" bodyend="4108"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ac5a462def9aa473177c6fa3d0d7cb2f0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -3956,7 +3925,7 @@
 <parametername>dt</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlSchemaVal </para>
+<para>an <ref refid="schemasInternals_8h_1a4450e4734a3cbfa4c985ee3d695e1d6e" kindref="member">xmlSchemaVal</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3966,7 +3935,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4101" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4101" bodyend="4121"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4120" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4120" bodyend="4140"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1aa235a64a2eaf35cf4ccd457ab4a6eede" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4008,7 +3977,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4144" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4144" bodyend="4424"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4163" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4163" bodyend="4443"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a4c2979d0d4f5efb984d1f7b643e28e18" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4063,7 +4032,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4439" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4439" bodyend="4491"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4458" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4458" bodyend="4510"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a8322fb82963872ae2ce4bdbe9dd74d03" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4118,7 +4087,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4506" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4506" bodyend="4579"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4525" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4525" bodyend="4598"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1aec54adfc58eaae106b4052b6c552164c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4173,7 +4142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4594" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4594" bodyend="4675"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4613" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4613" bodyend="4694"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a71b0cc2869c0a90579c61ba586c6119b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4215,7 +4184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4687" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4687" bodyend="4721"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4706" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4706" bodyend="4740"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ac8ee4136ba632d5ec8953d5d0b28ff44" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4257,7 +4226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4732" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4732" bodyend="4765"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4751" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4751" bodyend="4784"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a427c3b78a25712b5cbda9b1515d7fcfa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4299,7 +4268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4776" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4776" bodyend="4822"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4795" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4795" bodyend="4841"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1af6529a5926cd463ea7d0b3ffe8025f39" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4413,7 +4382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4839" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4839" bodyend="5072"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="4858" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="4858" bodyend="5091"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a21c99eaaa8651f33cbc8eebb13e0f2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4455,7 +4424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5083" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5083" bodyend="5104"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5102" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5102" bodyend="5123"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1af3a4922a267e8aa1e65fd720365b5054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4521,7 +4490,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5117" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5117" bodyend="5126"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5136" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5136" bodyend="5145"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a2769c0a8d76a584b8359f4ebf7da2e17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4635,7 +4604,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5143" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5143" bodyend="5154"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5162" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5162" bodyend="5173"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a5a8d501263b29a50136486a55befeffe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4665,7 +4634,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5163" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5163" bodyend="5198"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5182" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5182" bodyend="5217"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a3e74db35ecb48c99c0b4b806ab03110f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -4695,7 +4664,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5207" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5207" bodyend="5216"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5226" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5226" bodyend="5235"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1aa714f0ba5db957d10aa39f22c155998a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4761,7 +4730,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5229" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5229" bodyend="5266"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5248" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5248" bodyend="5285"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1af0700a2544ffd2df9050f7e09891bc63" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4769,7 +4738,7 @@
         <argsstring>(xmlSchemaFacetPtr facet, xmlSchemaValType valType, const xmlChar *value, xmlSchemaValPtr val, unsigned long *length, xmlSchemaWhitespaceValueType ws)</argsstring>
         <name>xmlSchemaValidateLengthFacetInternal</name>
         <param>
-          <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+          <type>xmlSchemaFacetPtr</type>
           <declname>facet</declname>
         </param>
         <param>
@@ -4851,7 +4820,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5282" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5282" bodyend="5381"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5301" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5301" bodyend="5400"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a9f93f07c975b4b41ee0424c1c7ac8348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4929,7 +4898,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5396" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5396" bodyend="5407"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5415" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5415" bodyend="5426"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ab22822bbb452791acee2e3aada879a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5019,7 +4988,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5423" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5423" bodyend="5432"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5442" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5442" bodyend="5451"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a48f45d12fb318d8b96c836bc504c5f66" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5027,7 +4996,7 @@
         <argsstring>(xmlSchemaFacetPtr facet, xmlSchemaWhitespaceValueType fws, xmlSchemaValType valType, const xmlChar *value, xmlSchemaValPtr val, xmlSchemaWhitespaceValueType ws)</argsstring>
         <name>xmlSchemaValidateFacetInternal</name>
         <param>
-          <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+          <type>xmlSchemaFacetPtr</type>
           <declname>facet</declname>
         </param>
         <param>
@@ -5109,7 +5078,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5447" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5447" bodyend="5666"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5466" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5466" bodyend="5685"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a93bb37f3450809b82c5ca4c74da0fc7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5175,7 +5144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5679" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5679" bodyend="5698"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5698" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5698" bodyend="5717"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a25f8ed86120772ff0ed4a1a3629fd66e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5266,7 +5235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5716" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5716" bodyend="5725"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5735" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5735" bodyend="5744"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1ac6faa9a2a534feb30a5b46e205a8c188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5311,7 +5280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5745" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5745" bodyend="6062"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="5764" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="5764" bodyend="6081"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a9dde7b1c17fde1151bf413df174218d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5366,7 +5335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="6075" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6075" bodyend="6113"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="6094" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6094" bodyend="6132"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemastypes_8c_1a1dcf9a0e3fb35af05ca8ec944d2c911c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="schemasInternals_8h_1a8d804852736ab90dc07a88a45acfffcd" kindref="member">xmlSchemaValType</ref></type>
@@ -5390,13 +5359,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlSchemaValType of the value </para>
+<simplesect kind="return"><para>the <ref refid="schemasInternals_8h_1a8d804852736ab90dc07a88a45acfffcd" kindref="member">xmlSchemaValType</ref> of the value </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="6122" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6122" bodyend="6127"/>
+        <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="6141" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="6141" bodyend="6146"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

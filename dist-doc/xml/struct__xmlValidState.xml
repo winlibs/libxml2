@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlValidState" kind="struct" language="C++" prot="public">
     <compoundname>_xmlValidState</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct__xmlValidState_1a6fa8aa23fd601f176cf3e07340f44b89" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+        <type>xmlElementPtr</type>
         <definition>xmlElementPtr elemDecl</definition>
         <argsstring></argsstring>
         <name>elemDecl</name>
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/valid.c" line="209" column="19" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlValidState_1af22243a9342e852a5bcc0b878913a289" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr node</definition>
         <argsstring></argsstring>
         <name>node</name>

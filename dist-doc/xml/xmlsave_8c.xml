@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlsave_8c" kind="file" language="C++">
     <compoundname>xmlsave.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -367,7 +367,7 @@
         <argsstring>(xmlOutputBufferPtr out)</argsstring>
         <name>xmlSaveErrMemory</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>out</declname>
         </param>
         <briefdescription>
@@ -395,7 +395,7 @@
         <argsstring>(xmlOutputBufferPtr out, int code, xmlNodePtr node, const char *extra)</argsstring>
         <name>xmlSaveErr</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>out</declname>
         </param>
         <param>
@@ -403,7 +403,7 @@
           <declname>code</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -615,7 +615,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <briefdescription>
@@ -651,11 +651,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlNotationPtr nota)</argsstring>
         <name>xmlBufDumpNotationDecl</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNotation" kindref="compound">xmlNotationPtr</ref></type>
+          <type>xmlNotationPtr</type>
           <declname>nota</declname>
         </param>
         <briefdescription>
@@ -743,7 +743,7 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlNotationTablePtr table)</argsstring>
         <name>xmlBufDumpNotationTable</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
@@ -759,7 +759,7 @@
 <parametername>buf</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuf output </para>
+<para>an <ref refid="tree_8h_1a8a549ab0cfa53cd9e4c47eeb7ceb7094" kindref="member">xmlBuf</ref> output </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -783,11 +783,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlElementContentPtr cur)</argsstring>
         <name>xmlBufDumpElementOccur</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElementContent" kindref="compound">xmlElementContentPtr</ref></type>
+          <type>xmlElementContentPtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -823,11 +823,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlElementContentPtr content)</argsstring>
         <name>xmlBufDumpElementContent</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElementContent" kindref="compound">xmlElementContentPtr</ref></type>
+          <type>xmlElementContentPtr</type>
           <declname>content</declname>
         </param>
         <briefdescription>
@@ -863,11 +863,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlElementPtr elem)</argsstring>
         <name>xmlBufDumpElementDecl</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+          <type>xmlElementPtr</type>
           <declname>elem</declname>
         </param>
         <briefdescription>
@@ -879,7 +879,7 @@
 <parametername>buf</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuf output </para>
+<para>an <ref refid="tree_8h_1a8a549ab0cfa53cd9e4c47eeb7ceb7094" kindref="member">xmlBuf</ref> output </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -903,11 +903,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlEnumerationPtr cur)</argsstring>
         <name>xmlBufDumpEnumeration</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlEnumeration" kindref="compound">xmlEnumerationPtr</ref></type>
+          <type>xmlEnumerationPtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -947,7 +947,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttribute" kindref="compound">xmlAttributePtr</ref></type>
+          <type>xmlAttributePtr</type>
           <declname>attr</declname>
         </param>
         <briefdescription>
@@ -983,7 +983,7 @@
         <argsstring>(xmlOutputBufferPtr buf, const xmlChar *content)</argsstring>
         <name>xmlBufDumpEntityContent</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
@@ -1023,11 +1023,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlEntityPtr ent)</argsstring>
         <name>xmlBufDumpEntityDecl</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlEntity" kindref="compound">xmlEntityPtr</ref></type>
+          <type>xmlEntityPtr</type>
           <declname>ent</declname>
         </param>
         <briefdescription>
@@ -1039,7 +1039,7 @@
 <parametername>buf</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlBuf output </para>
+<para>an <ref refid="tree_8h_1a8a549ab0cfa53cd9e4c47eeb7ceb7094" kindref="member">xmlBuf</ref> output </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1105,7 +1105,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1145,7 +1145,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1185,7 +1185,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -1294,11 +1294,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlNsPtr cur, xmlSaveCtxtPtr ctxt)</argsstring>
         <name>xmlNsDumpOutput</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref></type>
+          <type>xmlNsPtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -1351,7 +1351,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref></type>
+          <type>xmlNsPtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1432,7 +1432,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDtd" kindref="compound">xmlDtdPtr</ref></type>
+          <type>xmlDtdPtr</type>
           <declname>dtd</declname>
         </param>
         <briefdescription>
@@ -1472,7 +1472,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1512,7 +1512,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1548,7 +1548,7 @@
         <argsstring>(xmlNodePtr node)</argsstring>
         <name>xhtmlIsEmpty</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -1582,7 +1582,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1633,7 +1633,7 @@
 <para>Create a document saving context serializing to a file descriptor with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1689,7 +1689,7 @@
 <para>Create a document saving context serializing to a filename with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1745,7 +1745,7 @@
 <para>Create a document saving context serializing to a buffer with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1809,7 +1809,7 @@
 <para>Create a document saving context serializing to a file descriptor with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2117,7 +2117,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2287,7 +2287,7 @@
           <declname>string</declname>
         </param>
         <briefdescription>
-<para>Serialize attribute text to an xmlBuffer. </para>
+<para>Serialize attribute text to an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2355,12 +2355,12 @@
           <declname>format</declname>
         </param>
         <briefdescription>
-<para>Serialize an XML node to an xmlBuffer. </para>
+<para>Serialize an XML node to an <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Uses the document&apos;s encoding. If the document has no encoding, uses ASCII without an encoding declaration.</para>
 <para>Note that <computeroutput>format</computeroutput> only works if the document was parsed with XML_PARSE_NOBLANKS.</para>
-<para>Since this is using xmlBuffer structures it is limited to 2GB and somewhat deprecated, use xmlNodeDumpOutput instead.</para>
+<para>Since this is using <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> structures it is limited to 2GB and somewhat deprecated, use <ref refid="tree_8h_1aaa733674a2c2ea881f63144e033691fe" kindref="member">xmlNodeDumpOutput</ref> instead.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
@@ -2436,7 +2436,7 @@
           <declname>format</declname>
         </param>
         <briefdescription>
-<para>Serialize an XML node to an xmlBuf. </para>
+<para>Serialize an XML node to an <ref refid="tree_8h_1a8a549ab0cfa53cd9e4c47eeb7ceb7094" kindref="member">xmlBuf</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Uses the document&apos;s encoding. If the document has no encoding, uses ASCII without an encoding declaration.</para>
@@ -2639,11 +2639,11 @@
         <argsstring>(xmlOutputBufferPtr buf, xmlDocPtr doc, const char *encoding, int format)</argsstring>
         <name>xmlDocDumpInternal</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
@@ -2759,7 +2759,7 @@
           <declname>size</declname>
         </param>
         <briefdescription>
-<para>Same as xmlDocDumpFormatMemoryEnc with <computeroutput>encoding</computeroutput> set to NULL and <computeroutput>format</computeroutput> set to 0. </para>
+<para>Same as <ref refid="tree_8h_1ac309b449ccf0e615c6f1bbb9da16aa52" kindref="member">xmlDocDumpFormatMemoryEnc</ref> with <computeroutput>encoding</computeroutput> set to NULL and <computeroutput>format</computeroutput> set to 0. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2815,7 +2815,7 @@
           <declname>format</declname>
         </param>
         <briefdescription>
-<para>Same as xmlDocDumpFormatMemoryEnc with <computeroutput>encoding</computeroutput> set to NULL. </para>
+<para>Same as <ref refid="tree_8h_1ac309b449ccf0e615c6f1bbb9da16aa52" kindref="member">xmlDocDumpFormatMemoryEnc</ref> with <computeroutput>encoding</computeroutput> set to NULL. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2879,7 +2879,7 @@
           <declname>txt_encoding</declname>
         </param>
         <briefdescription>
-<para>Same as xmlDocDumpFormatMemoryEnc with <computeroutput>format</computeroutput> set to 0. </para>
+<para>Same as <ref refid="tree_8h_1ac309b449ccf0e615c6f1bbb9da16aa52" kindref="member">xmlDocDumpFormatMemoryEnc</ref> with <computeroutput>format</computeroutput> set to 0. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3038,7 +3038,7 @@
           <declname>encoding</declname>
         </param>
         <briefdescription>
-<para>Same as xmlSaveFormatFileTo with <computeroutput>format</computeroutput> set to 0. </para>
+<para>Same as <ref refid="tree_8h_1a26a3f60010e119bb566e3c94ef80f820" kindref="member">xmlSaveFormatFileTo</ref> with <computeroutput>format</computeroutput> set to 0. </para>
         </briefdescription>
         <detaileddescription>
 <para>WARNING: This calls <ref refid="xmlIO_8h_1a36fe9cce2bb1dff29f251a993ccb745c" kindref="member">xmlOutputBufferClose</ref> and frees <computeroutput>buf</computeroutput>.</para>
@@ -3169,7 +3169,7 @@
 <para>Serialize an XML document to a file using the given encoding. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>filename</computeroutput> is <computeroutput>&quot;-&quot;</computeroutput>, stdout is used. This is potentially insecure and might be changed in a future version.</para>
+<para>If <computeroutput>filename</computeroutput> is <computeroutput>"-"</computeroutput>, stdout is used. This is potentially insecure and might be changed in a future version.</para>
 <para>If <computeroutput>encoding</computeroutput> is NULL, uses the document&apos;s encoding. If the document has no encoding, serializes as ASCII without an encoding declaration.</para>
 <para>Note that <computeroutput>format</computeroutput> only works if the document was parsed with XML_PARSE_NOBLANKS.</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -3231,7 +3231,7 @@
           <declname>encoding</declname>
         </param>
         <briefdescription>
-<para>Same as xmlSaveFormatFileEnc with <computeroutput>format</computeroutput> set to 0. </para>
+<para>Same as <ref refid="tree_8h_1ac5c9bf5e6faa3fca384f340bf9f5faba" kindref="member">xmlSaveFormatFileEnc</ref> with <computeroutput>format</computeroutput> set to 0. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3285,7 +3285,7 @@
           <declname>format</declname>
         </param>
         <briefdescription>
-<para>Same as xmlSaveFormatFileEnc with <computeroutput>encoding</computeroutput> set to NULL. </para>
+<para>Same as <ref refid="tree_8h_1ac5c9bf5e6faa3fca384f340bf9f5faba" kindref="member">xmlSaveFormatFileEnc</ref> with <computeroutput>encoding</computeroutput> set to NULL. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3335,7 +3335,7 @@
           <declname>cur</declname>
         </param>
         <briefdescription>
-<para>Same as xmlSaveFormatFileEnc with <computeroutput>encoding</computeroutput> set to NULL and <computeroutput>format</computeroutput> set to 0. </para>
+<para>Same as <ref refid="tree_8h_1ac5c9bf5e6faa3fca384f340bf9f5faba" kindref="member">xmlSaveFormatFileEnc</ref> with <computeroutput>encoding</computeroutput> set to NULL and <computeroutput>format</computeroutput> set to 0. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

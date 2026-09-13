@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaNodeInfo" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaNodeInfo</compoundname>
     <sectiondef kind="public-attrib">
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="853" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="853" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaNodeInfo_1af22243a9342e852a5bcc0b878913a289" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr node</definition>
         <argsstring></argsstring>
         <name>node</name>
@@ -102,7 +102,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="859" column="21" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="859" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaNodeInfo_1afa57ffe3a221463e73aa59abdf770b54" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr typeDef</definition>
         <argsstring></argsstring>
         <name>typeDef</name>
@@ -158,7 +158,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="865" column="9" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="865" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaNodeInfo_1ad0c67a83dc557bbe6858d4ba34095484" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+        <type>xmlSchemaElementPtr</type>
         <definition>xmlSchemaElementPtr decl</definition>
         <argsstring></argsstring>
         <name>decl</name>

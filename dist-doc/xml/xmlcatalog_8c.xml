@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlcatalog_8c" kind="file" language="C++">
     <compoundname>xmlcatalog.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -484,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlcatalog.c" line="113" column="13" bodyfile="/builds/GNOME/libxml2/xmlcatalog.c" bodystart="113" bodyend="306"/>
+        <location file="/builds/GNOME/libxml2/xmlcatalog.c" line="113" column="13" bodyfile="/builds/GNOME/libxml2/xmlcatalog.c" bodystart="113" bodyend="322"/>
       </memberdef>
       <memberdef kind="function" id="xmlcatalog_8c_1ab24984492570c9e0e802e45300d2eb82" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlcatalog.c" line="313" column="13" bodyfile="/builds/GNOME/libxml2/xmlcatalog.c" bodystart="313" bodyend="335"/>
+        <location file="/builds/GNOME/libxml2/xmlcatalog.c" line="329" column="13" bodyfile="/builds/GNOME/libxml2/xmlcatalog.c" bodystart="329" bodyend="351"/>
       </memberdef>
       <memberdef kind="function" id="xmlcatalog_8c_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlcatalog.c" line="336" column="5" bodyfile="/builds/GNOME/libxml2/xmlcatalog.c" bodystart="336" bodyend="663"/>
+        <location file="/builds/GNOME/libxml2/xmlcatalog.c" line="352" column="5" bodyfile="/builds/GNOME/libxml2/xmlcatalog.c" bodystart="352" bodyend="684"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

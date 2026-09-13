@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSAXHandler" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSAXHandler</compoundname>
     <includes local="no">parser.h</includes>
@@ -238,8 +238,8 @@
 <para>Legacy start tag handler. </para>
         </briefdescription>
         <detaileddescription>
-<para><computeroutput>startElement</computeroutput> and <computeroutput>endElement</computeroutput> are only used by the legacy SAX1 interface and should not be used in new software. If you really have to enable SAX1, the preferred way is set the <computeroutput>initialized</computeroutput> member to 1 instead of XML_SAX2_MAGIC.</para>
-<para>For backward compatibility, it&apos;s also possible to set the <computeroutput>startElementNs</computeroutput> and <computeroutput>endElementNs</computeroutput> handlers to NULL.</para>
+<para><computeroutput><ref refid="struct__xmlSAXHandler_1ad07098e48b100419b1e1a3fe0ed3dd4a" kindref="member">startElement</ref></computeroutput> and <computeroutput><ref refid="struct__xmlSAXHandler_1ac4ffac749d80f063c01798627551d149" kindref="member">endElement</ref></computeroutput> are only used by the legacy SAX1 interface and should not be used in new software. If you really have to enable SAX1, the preferred way is set the <computeroutput><ref refid="struct__xmlSAXHandler_1af00a707f65afa5d0f6cf27ec821bb763" kindref="member">initialized</ref></computeroutput> member to 1 instead of XML_SAX2_MAGIC.</para>
+<para>For backward compatibility, it&apos;s also possible to set the <computeroutput><ref refid="struct__xmlSAXHandler_1aaf43d1875333606c6188f443e6f84b72" kindref="member">startElementNs</ref></computeroutput> and <computeroutput><ref refid="struct__xmlSAXHandler_1a1bdf787dd35ae08fe50c65719eddd1e8" kindref="member">endElementNs</ref></computeroutput> handlers to NULL.</para>
 <para>You can also set the XML_PARSE_SAX1 parser option, but versions older than 2.12.0 will probably crash if this option is provided together with custom SAX callbacks. </para>
         </detaileddescription>
         <inbodydescription>
@@ -301,7 +301,7 @@
 <para>Called after &quot;ignorable&quot; whitespace was parsed. </para>
         </briefdescription>
         <detaileddescription>
-<para><computeroutput>ignorableWhitespace</computeroutput> should always be set to the same value as <computeroutput>characters</computeroutput>. Otherwise, the parser will try to detect whitespace which is unreliable. </para>
+<para><computeroutput><ref refid="struct__xmlSAXHandler_1a731ec4c733960aa456c70442da00c86a" kindref="member">ignorableWhitespace</ref></computeroutput> should always be set to the same value as <computeroutput><ref refid="struct__xmlSAXHandler_1a4eb00512f53e8f493633ce79a10ca238" kindref="member">characters</ref></computeroutput>. Otherwise, the parser will try to detect whitespace which is unreliable. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -374,7 +374,7 @@
         <name>fatalError</name>
         <qualifiedname>_xmlSAXHandler::fatalError</qualifiedname>
         <briefdescription>
-<para>Unused, all errors go to <computeroutput>error</computeroutput>. </para>
+<para>Unused, all errors go to <computeroutput><ref refid="struct__xmlSAXHandler_1a5967328166d93d99eae85f23603f4b8b" kindref="member">error</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -439,7 +439,7 @@
 <para>Legacy magic value. </para>
         </briefdescription>
         <detaileddescription>
-<para><computeroutput>initialized</computeroutput> should always be set to XML_SAX2_MAGIC to enable the modern SAX2 interface. </para>
+<para><computeroutput><ref refid="struct__xmlSAXHandler_1af00a707f65afa5d0f6cf27ec821bb763" kindref="member">initialized</ref></computeroutput> should always be set to XML_SAX2_MAGIC to enable the modern SAX2 interface. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -500,7 +500,7 @@
 <para>Structured error handler. </para>
         </briefdescription>
         <detaileddescription>
-<para>Takes precedence over <computeroutput>error</computeroutput> or <computeroutput>warning</computeroutput>, but modern code should use <ref refid="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" kindref="member">xmlCtxtSetErrorHandler()</ref>. </para>
+<para>Takes precedence over <computeroutput><ref refid="struct__xmlSAXHandler_1a5967328166d93d99eae85f23603f4b8b" kindref="member">error</ref></computeroutput> or <computeroutput><ref refid="struct__xmlSAXHandler_1a0c544f0ab99445b0a1f6a3aa2d08264c" kindref="member">warning</ref></computeroutput>, but modern code should use <ref refid="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" kindref="member">xmlCtxtSetErrorHandler()</ref>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

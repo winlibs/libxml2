@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xpath_8c" kind="file" language="C++">
     <compoundname>xpath.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -392,7 +392,7 @@
       <memberdef kind="define" id="xpath_8c_1acc558e777d04fc0df78ea1710107fec2" prot="public" static="no">
         <name>WITH_TIM_SORT</name>
         <briefdescription>
-<para>Use the Timsort algorithm provided in timsort.h to sort nodeset as this is a great improvement over the old Shell sort used in xmlXPathNodeSetSort. </para>
+<para>Use the Timsort algorithm provided in timsort.h to sort nodeset as this is a great improvement over the old Shell sort used in <ref refid="xpathInternals_8h_1a2383170f4f0b6a7fbcd1e75c753d2134" kindref="member">xmlXPathNodeSetSort</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -511,7 +511,7 @@
       </memberdef>
       <memberdef kind="define" id="xpath_8c_1a3ea926a2b105916d5f0b2a32cdb611cc" prot="public" static="no">
         <name>SORT_TYPE</name>
-        <initializer><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></initializer>
+        <initializer>xmlNodePtr</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -558,8 +558,8 @@
       </memberdef>
       <memberdef kind="define" id="xpath_8c_1a8e86a9e7ef810c9acf6d9a41257a761e" prot="public" static="no">
         <name>MAXERRNO</name>
-        <initializer>		   ((int)(sizeof(xmlXPathErrorMessages) /	\
-		   sizeof(xmlXPathErrorMessages[0])) - 1)</initializer>
+        <initializer>           ((int)(sizeof(xmlXPathErrorMessages) /   \
+           sizeof(xmlXPathErrorMessages[0])) - 1)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -591,8 +591,8 @@
         <param><defname>val3</defname></param>
         <param><defname>val4</defname></param>
         <param><defname>val5</defname></param>
-        <initializer>    xmlXPathCompExprAdd(ctxt, (op1), (op2),			\
-	                (op), (val), (val2), (val3), (val4), (val5))</initializer>
+        <initializer>    xmlXPathCompExprAdd(ctxt, (op1), (op2),         \
+                    (op), (val), (val2), (val3), (val4), (val5))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -609,8 +609,8 @@
         <param><defname>val3</defname></param>
         <param><defname>val4</defname></param>
         <param><defname>val5</defname></param>
-        <initializer>    xmlXPathCompExprAdd(ctxt, ctxt-&gt;comp-&gt;last, -1,		\
-	                (op), (val), (val2), (val3), (val4), (val5))</initializer>
+        <initializer>    xmlXPathCompExprAdd(ctxt, ctxt-&gt;comp-&gt;last, -1,     \
+                    (op), (val), (val2), (val3), (val4), (val5))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -655,8 +655,8 @@
         <param><defname>ch2</defname></param>
         <param><defname>val</defname></param>
         <param><defname>val2</defname></param>
-        <initializer>xmlXPathCompExprAdd(ctxt, (ch1), (ch2), (op),			\
-			(val), (val2), 0 ,NULL ,NULL)</initializer>
+        <initializer>xmlXPathCompExprAdd(ctxt, (ch1), (ch2), (op),           \
+            (val), (val2), 0 ,NULL ,NULL)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -868,14 +868,14 @@
       <memberdef kind="define" id="xpath_8c_1ade40660e0d2a6e2bdf79cf0e7a6ba5df" prot="public" static="no">
         <name>XP_TEST_HIT</name>
         <initializer>    if (hasAxisRange != 0) { \
-	if (++pos == maxPos) { \
-	    if (addNode(seq, cur) &lt; 0) \
-	        xmlXPathPErrMemory(ctxt); \
-	    goto axis_range_end; } \
+    if (++pos == maxPos) { \
+        if (addNode(seq, cur) &lt; 0) \
+            xmlXPathPErrMemory(ctxt); \
+        goto axis_range_end; } \
     } else { \
-	if (addNode(seq, cur) &lt; 0) \
-	    xmlXPathPErrMemory(ctxt); \
-	if (breakOnFirstHit) goto first_hit; }</initializer>
+    if (addNode(seq, cur) &lt; 0) \
+        xmlXPathPErrMemory(ctxt); \
+    if (breakOnFirstHit) goto first_hit; }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -887,16 +887,16 @@
       <memberdef kind="define" id="xpath_8c_1a3eec942d5b4f11f6579056c3e04376ae" prot="public" static="no">
         <name>XP_TEST_HIT_NS</name>
         <initializer>    if (hasAxisRange != 0) { \
-	if (++pos == maxPos) { \
-	    hasNsNodes = 1; \
-	    if (<ref refid="xpathInternals_8h_1a992dac9eaae8a828d076634640fde298" kindref="member">xmlXPathNodeSetAddNs</ref>(seq, xpctxt-&gt;node, (<ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref>) cur) &lt; 0) \
-	        xmlXPathPErrMemory(ctxt); \
-	goto axis_range_end; } \
+    if (++pos == maxPos) { \
+        hasNsNodes = 1; \
+        if (<ref refid="xpathInternals_8h_1a992dac9eaae8a828d076634640fde298" kindref="member">xmlXPathNodeSetAddNs</ref>(seq, xpctxt-&gt;node, (xmlNsPtr) cur) &lt; 0) \
+            xmlXPathPErrMemory(ctxt); \
+    goto axis_range_end; } \
     } else { \
-	hasNsNodes = 1; \
-	if (<ref refid="xpathInternals_8h_1a992dac9eaae8a828d076634640fde298" kindref="member">xmlXPathNodeSetAddNs</ref>(seq, xpctxt-&gt;node, (<ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref>) cur) &lt; 0) \
-	    xmlXPathPErrMemory(ctxt); \
-	if (breakOnFirstHit) goto first_hit; }</initializer>
+    hasNsNodes = 1; \
+    if (<ref refid="xpathInternals_8h_1a992dac9eaae8a828d076634640fde298" kindref="member">xmlXPathNodeSetAddNs</ref>(seq, xpctxt-&gt;node, (xmlNsPtr) cur) &lt; 0) \
+        xmlXPathPErrMemory(ctxt); \
+    if (breakOnFirstHit) goto first_hit; }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -1371,7 +1371,7 @@
         </inbodydescription>
         <location file="/builds/GNOME/libxml2/xpath.c" line="134" column="22" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="134" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="xpath_8c_1a28caba80ede960ab06adb377955e13f3" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="xpath_8c_1a3e69a306e7d853b78bc35580e050351b" prot="public" static="yes" mutable="no">
         <type>const struct </type>
         <definition>const struct  xmlXPathStandardFunctions[]</definition>
         <argsstring>[]</argsstring>
@@ -1476,8 +1476,8 @@
         <initializer>= {
     NULL,
     <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fcac92e046e63098ecdb5b8797171c0cf04" kindref="member">XML_NAMESPACE_DECL</ref>,
-     (const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;http://www.w3.org/XML/1998/namespace&quot; ,
-     (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)  &quot;xml&quot;,
+    (const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;http://www.w3.org/XML/1998/namespace&quot; ,
+    (<ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *) &quot;xml&quot;,
     NULL,
     NULL
 }</initializer>
@@ -1536,7 +1536,7 @@
     &quot;Forbidden variable&quot;,
     &quot;Operation limit exceeded&quot;,
     &quot;Recursion limit exceeded&quot;,
-    &quot;?? Unknown error ??&quot;	
+    &quot;?? Unknown error ??&quot;   
 }</initializer>
         <briefdescription>
         </briefdescription>
@@ -1554,7 +1554,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int nargs)</argsstring>
         <name>xmlXPathNameFunction</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1707,7 +1707,7 @@
         <argsstring>(xmlNodeSetPtr set, int hasNsNodes)</argsstring>
         <name>xmlXPathNodeSetClear</name>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set</declname>
         </param>
         <param>
@@ -1748,11 +1748,11 @@
         <argsstring>(xmlNodePtr node1, xmlNodePtr node2)</argsstring>
         <name>xmlXPathCmpNodesExt</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node1</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node2</declname>
         </param>
         <briefdescription>
@@ -1791,11 +1791,11 @@
         <argsstring>(xmlNodePtr x, xmlNodePtr y)</argsstring>
         <name>wrap_cmp</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>x</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>y</declname>
         </param>
         <briefdescription>
@@ -2056,7 +2056,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, unsigned long opCount)</argsstring>
         <name>xmlXPathCheckOpLimit</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2097,11 +2097,11 @@
         <argsstring>(xmlXPathContextPtr ctxt, xmlXPathObjectPtr obj)</argsstring>
         <name>xmlXPathReleaseObject</name>
         <param>
-          <type><ref refid="struct__xmlXPathContext" kindref="compound">xmlXPathContextPtr</ref></type>
+          <type>xmlXPathContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>obj</declname>
         </param>
         <briefdescription>
@@ -2121,7 +2121,7 @@
 <parametername>obj</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlXPathObject to free or to cache </para>
+<para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> to free or to cache </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2137,7 +2137,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op, xmlNodePtr *first)</argsstring>
         <name>xmlXPathCompOpEvalFirst</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2145,7 +2145,7 @@
           <declname>op</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+          <type>xmlNodePtr *</type>
           <declname>first</declname>
         </param>
         <briefdescription>
@@ -2191,7 +2191,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op, int isPredicate)</argsstring>
         <name>xmlXPathCompOpEvalToBoolean</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2272,7 +2272,7 @@
 <para>Create a new Xpath component. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>the newly allocated xmlXPathCompExpr or NULL in case of error </para>
+<para><simplesect kind="return"><para>the newly allocated <ref refid="xpath_8h_1ae35edb5539f59b16b27c7bb75f637ac8" kindref="member">xmlXPathCompExpr</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2290,7 +2290,7 @@
           <declname>comp</declname>
         </param>
         <briefdescription>
-<para>Free up the memory allocated by <computeroutput>comp</computeroutput> </para>
+<para>Free up the memory allocated by <computeroutput>comp</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2314,7 +2314,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int ch1, int ch2, xmlXPathOp op, int value, int value2, int value3, void *value4, void *value5)</argsstring>
         <name>xmlXPathCompExprAdd</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2444,7 +2444,7 @@
           <declname>output</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -2469,7 +2469,7 @@
           <declname>output</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -2494,7 +2494,7 @@
           <declname>output</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -2519,7 +2519,7 @@
           <declname>output</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -2693,7 +2693,7 @@
         <argsstring>(xmlXPathObjectPtr list)</argsstring>
         <name>xmlXPathCacheFreeObjectList</name>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>list</declname>
         </param>
         <briefdescription>
@@ -2746,7 +2746,7 @@
 <para>Creates/frees an object cache on the XPath context. </para>
         </briefdescription>
         <detaileddescription>
-<para>If activates XPath objects (xmlXPathObject) will be cached internally to be reused.</para>
+<para>If activates XPath objects (<ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref>) will be cached internally to be reused.</para>
 <para><computeroutput>options</computeroutput> must be set to 0 to enable XPath object caching. Other values for <computeroutput>options</computeroutput> have currently no effect.</para>
 <para><computeroutput>value</computeroutput> sets the maximum number of XPath objects to be cached per slot. There are two slots for node-set and misc objects. Use &lt;0 for the default number (100).</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -2791,23 +2791,23 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1577" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1577" bodyend="1606"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1aeb83cee9c0a846c4d5902248e2956ace" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheWrapNodeSet</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, xmlNodeSetPtr val)</argsstring>
         <name>xmlXPathCacheWrapNodeSet</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathWrapNodeSet. </para>
+<para>This is the cached version of <ref refid="xpathInternals_8h_1ab15c1688e6c3e4ebcafccda9b939595e" kindref="member">xmlXPathWrapNodeSet</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>Wrap the Nodeset <computeroutput>val</computeroutput> in a new xmlXPathObject</para>
+<para>Wrap the Nodeset <computeroutput>val</computeroutput> in a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref></para>
 <para>In case of error the node set is destroyed and NULL is returned.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2835,12 +2835,12 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1619" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1619" bodyend="1643"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a91a98f67f0950f0e0c21a9b194a844ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheWrapString</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, xmlChar *val)</argsstring>
         <name>xmlXPathCacheWrapString</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
@@ -2848,7 +2848,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathWrapString. </para>
+<para>This is the cached version of <ref refid="xpathInternals_8h_1acc6981ff5ca33e21d5ea3da9de877629" kindref="member">xmlXPathWrapString</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Wraps the <computeroutput>val</computeroutput> string into an XPath object.</para>
@@ -2865,7 +2865,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * value </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2878,23 +2878,23 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1654" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1654" bodyend="1676"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a3bba6adba53f8ed380d47ed15779ad54" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheNewNodeSet</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, xmlNodePtr val)</argsstring>
         <name>xmlXPathCacheNewNodeSet</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathNewNodeSet. </para>
+<para>This is the cached version of <ref refid="xpathInternals_8h_1a50e34ddc64932d888eb705afb3cce557" kindref="member">xmlXPathNewNodeSet</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>Acquire an xmlXPathObject of type NodeSet and initialize it with the single Node <computeroutput>val</computeroutput></para>
+<para>Acquire an <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type NodeSet and initialize it with the single Node <computeroutput>val</computeroutput></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pctxt</parametername>
@@ -2921,12 +2921,12 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1688" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1688" bodyend="1744"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a8539f7e8adb6e5bbdb936a5b898d5a2e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheNewString</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, const xmlChar *val)</argsstring>
         <name>xmlXPathCacheNewString</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
@@ -2934,10 +2934,10 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathNewString. </para>
+<para>This is the cached version of <ref refid="xpathInternals_8h_1ab24fade916295d95e807d24eba414f17" kindref="member">xmlXPathNewString</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>Acquire an xmlXPathObject of type string and of value <computeroutput>val</computeroutput></para>
+<para>Acquire an <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type string and of value <computeroutput>val</computeroutput></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pctxt</parametername>
@@ -2951,7 +2951,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * value </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2964,12 +2964,12 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1755" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1755" bodyend="1787"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a49abb62c2b2e355be43e3e4acfc88cd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheNewCString</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, const char *val)</argsstring>
         <name>xmlXPathCacheNewCString</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
@@ -2977,10 +2977,10 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathNewCString. </para>
+<para>This is the cached version of <ref refid="xpathInternals_8h_1a31886595cc3e24d8aa1504b66f207268" kindref="member">xmlXPathNewCString</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>Acquire an xmlXPathObject of type string and of value <computeroutput>val</computeroutput></para>
+<para>Acquire an <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type string and of value <computeroutput>val</computeroutput></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pctxt</parametername>
@@ -3007,12 +3007,12 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1798" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1798" bodyend="1801"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1afffd53639994475ad6f271b8831b3bb3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheNewBoolean</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, int val)</argsstring>
         <name>xmlXPathCacheNewBoolean</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
@@ -3020,10 +3020,10 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathNewBoolean. </para>
+<para>This is the cached version of <ref refid="xpathInternals_8h_1a8ea839abcc3b37ee2dd1f0afa82fd408" kindref="member">xmlXPathNewBoolean</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>Acquires an xmlXPathObject of type boolean and of value <computeroutput>val</computeroutput></para>
+<para>Acquires an <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type boolean and of value <computeroutput>val</computeroutput></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pctxt</parametername>
@@ -3050,12 +3050,12 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1812" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1812" bodyend="1835"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a4f2d135c6472870e54b47aa21a0cc484" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheNewFloat</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, double val)</argsstring>
         <name>xmlXPathCacheNewFloat</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
@@ -3063,10 +3063,10 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathNewFloat. </para>
+<para>This is the cached version of <ref refid="xpathInternals_8h_1ae69ff30fc25dadcad1b3015db68149cb" kindref="member">xmlXPathNewFloat</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>Acquires an xmlXPathObject of type double and of value <computeroutput>val</computeroutput></para>
+<para>Acquires an <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type double and of value <computeroutput>val</computeroutput></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pctxt</parametername>
@@ -3093,20 +3093,20 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1846" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1846" bodyend="1869"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a3724e2a6b032f245c6f9bfffbab1afb2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>static xmlXPathObjectPtr xmlXPathCacheObjectCopy</definition>
         <argsstring>(xmlXPathParserContextPtr pctxt, xmlXPathObjectPtr val)</argsstring>
         <name>xmlXPathCacheObjectCopy</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>This is the cached version of xmlXPathObjectCopy. </para>
+<para>This is the cached version of <ref refid="xpath_8h_1a28236dc8726e59a247d0c0d9a5ac38d5" kindref="member">xmlXPathObjectCopy</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Acquire a copy of a given object</para>
@@ -3141,11 +3141,11 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathObjectPtr val)</argsstring>
         <name>xmlXPathCastToNumberInternal</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>val</declname>
         </param>
         <briefdescription>
@@ -3562,16 +3562,16 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="2552" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="2552" bodyend="2591"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a334d3574e55f06afca3874b78db93192" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr xmlXPathNodeSetDupNs</definition>
         <argsstring>(xmlNodePtr node, xmlNsPtr ns)</argsstring>
         <name>xmlXPathNodeSetDupNs</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref></type>
+          <type>xmlNsPtr</type>
           <declname>ns</declname>
         </param>
         <briefdescription>
@@ -3644,7 +3644,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlNodeSet of type double and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a97cc375e3d58372cb9d9db078d25e6e1" kindref="member">xmlNodeSet</ref> of type double and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3652,7 +3652,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an initial xmlNode, or NULL </para>
+<para>an initial <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref>, or NULL </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3713,7 +3713,7 @@
         <argsstring>(xmlNodeSetPtr cur)</argsstring>
         <name>xmlXPathNodeSetGrow</name>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -3792,7 +3792,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>add a new xmlNode to an existing NodeSet </para>
+<para>add a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> to an existing NodeSet </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3808,7 +3808,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a new xmlNode </para>
+<para>a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3834,7 +3834,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>add a new xmlNode to an existing NodeSet, optimized version when we are sure the node is not already in the set. </para>
+<para>add a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> to an existing NodeSet, optimized version when we are sure the node is not already in the set. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3850,7 +3850,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a new xmlNode </para>
+<para>a new <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3876,7 +3876,7 @@
           <declname>val2</declname>
         </param>
         <briefdescription>
-<para>Merges two nodesets, all nodes from <computeroutput>val2</computeroutput> are added to <computeroutput>val1</computeroutput> if <computeroutput>val1</computeroutput> is NULL, a new set is created and copied from <computeroutput>val2</computeroutput> </para>
+<para>Merges two nodesets, all nodes from <computeroutput>val2</computeroutput> are added to <computeroutput>val1</computeroutput> if <computeroutput>val1</computeroutput> is NULL, a new set is created and copied from <computeroutput>val2</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Frees <computeroutput>val1</computeroutput> in case of error.</para>
@@ -3906,16 +3906,16 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="2880" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="2880" bodyend="2943"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a8dcbb93ae8b71e7a376b4fa7d776df00" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+        <type>xmlNodeSetPtr</type>
         <definition>static xmlNodeSetPtr xmlXPathNodeSetMergeAndClear</definition>
         <argsstring>(xmlNodeSetPtr set1, xmlNodeSetPtr set2)</argsstring>
         <name>xmlXPathNodeSetMergeAndClear</name>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set1</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set2</declname>
         </param>
         <briefdescription>
@@ -3950,16 +3950,16 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="2957" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="2957" bodyend="3007"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a77b41a790ddb47923205e9299b6e3512" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+        <type>xmlNodeSetPtr</type>
         <definition>static xmlNodeSetPtr xmlXPathNodeSetMergeAndClearNoDupls</definition>
         <argsstring>(xmlNodeSetPtr set1, xmlNodeSetPtr set2)</argsstring>
         <name>xmlXPathNodeSetMergeAndClearNoDupls</name>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set1</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set2</declname>
         </param>
         <briefdescription>
@@ -4007,7 +4007,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Removes an xmlNode from an existing NodeSet. </para>
+<para>Removes an <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> from an existing NodeSet. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4023,7 +4023,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlNode </para>
+<para>an <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4091,7 +4091,7 @@
 <parametername>obj</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlNodeSet to free </para>
+<para>the <ref refid="xpath_8h_1a97cc375e3d58372cb9d9db078d25e6e1" kindref="member">xmlNodeSet</ref> to free </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4107,7 +4107,7 @@
         <argsstring>(xmlNodeSetPtr set, int pos, int hasNsNodes)</argsstring>
         <name>xmlXPathNodeSetClearFromPos</name>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set</declname>
         </param>
         <param>
@@ -4160,7 +4160,7 @@
         <argsstring>(xmlNodeSetPtr set)</argsstring>
         <name>xmlXPathNodeSetKeepLast</name>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set</declname>
         </param>
         <briefdescription>
@@ -4193,7 +4193,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type NodeSet and initialize it with the single Node <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type NodeSet and initialize it with the single Node <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4223,7 +4223,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type Value Tree (XSLT) and initialize it with the tree root <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type Value Tree (XSLT) and initialize it with the tree root <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4253,7 +4253,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type NodeSet and initialize it with the Nodeset <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type NodeSet and initialize it with the Nodeset <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4283,7 +4283,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Wrap the Nodeset <computeroutput>val</computeroutput> in a new xmlXPathObject. </para>
+<para>Wrap the Nodeset <computeroutput>val</computeroutput> in a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>In case of error the node set is destroyed and NULL is returned.</para>
@@ -4314,7 +4314,7 @@
           <declname>obj</declname>
         </param>
         <briefdescription>
-<para>Free up the xmlXPathObject <computeroutput>obj</computeroutput> but don&apos;t deallocate the objects in the list contrary to xmlXPathFreeObject. </para>
+<para>Free up the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> <computeroutput>obj</computeroutput> but don&apos;t deallocate the objects in the list contrary to <ref refid="xpath_8h_1adf1422264090145823f6a66769d25557" kindref="member">xmlXPathFreeObject</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4346,7 +4346,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets difference() function: node-set set:difference (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets difference() function: node-set set:difference (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4388,7 +4388,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets intersection() function: node-set set:intersection (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets intersection() function: node-set set:intersection (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4426,7 +4426,7 @@
           <declname>nodes</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets distinct() function: node-set set:distinct (node-set) </para>
+<para>Implements the EXSLT - Sets distinct() function: node-set set:distinct (node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4490,7 +4490,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets has-same-nodes function: boolean set:has-same-node(node-set, node-set) </para>
+<para>Implements the EXSLT - Sets has-same-nodes function: boolean set:has-same-node(node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4532,7 +4532,7 @@
           <declname>node</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4616,7 +4616,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets leading() function: node-set set:leading (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4700,7 +4700,7 @@
           <declname>node</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4742,7 +4742,7 @@
           <declname>node</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes</computeroutput> is sorted by document order, then xmlXPathNodeTrailingSorted is called. </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes</computeroutput> is sorted by document order, then <ref refid="xpathInternals_8h_1aeb2b250c234c721cac0f9da2d79dab1b" kindref="member">xmlXPathNodeTrailingSorted</ref> is called. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4784,7 +4784,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -4826,7 +4826,7 @@
           <declname>nodes2</declname>
         </param>
         <briefdescription>
-<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes1</computeroutput> and <computeroutput>nodes2</computeroutput> are sorted by document order, then xmlXPathTrailingSorted is called. </para>
+<para>Implements the EXSLT - Sets trailing() function: node-set set:trailing (node-set, node-set) <computeroutput>nodes1</computeroutput> and <computeroutput>nodes2</computeroutput> are sorted by document order, then <ref refid="xpathInternals_8h_1ac97e04415a121b3fb6bc8eeae01f2ac7" kindref="member">xmlXPathTrailingSorted</ref> is called. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5062,7 +5062,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathFunction or NULL if not found </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1af14b092a07fae2df72d32daec7e0eecc" kindref="member">xmlXPathFunction</ref> or NULL if not found </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -5116,7 +5116,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathFunction or NULL if not found </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1af14b092a07fae2df72d32daec7e0eecc" kindref="member">xmlXPathFunction</ref> or NULL if not found </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -5586,7 +5586,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type double and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type double and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5616,7 +5616,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type boolean and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type boolean and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5646,7 +5646,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type string and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type string and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5654,7 +5654,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * value </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5685,7 +5685,7 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * value </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5707,7 +5707,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathObject of type string and of value <computeroutput>val</computeroutput> </para>
+<para>Create a new <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> of type string and of value <computeroutput>val</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5827,7 +5827,7 @@
           <declname>obj</declname>
         </param>
         <briefdescription>
-<para>Free up an xmlXPathObject object. </para>
+<para>Free up an <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> object. </para>
         </briefdescription>
         <detaileddescription>
 <para>Objects and Nodesets handling.</para>
@@ -6092,11 +6092,11 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlNodePtr node)</argsstring>
         <name>xmlXPathNodeToNumberInternal</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -6409,7 +6409,7 @@
           <declname>doc</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathContext. </para>
+<para>Create a new <ref refid="xpath_8h_1a61100c9bec26c0de1d0329962c85c091" kindref="member">xmlXPathContext</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Context handling.</para>
@@ -6422,7 +6422,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathContext just allocated. The caller will need to free it. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a61100c9bec26c0de1d0329962c85c091" kindref="member">xmlXPathContext</ref> just allocated. The caller will need to free it. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -6440,7 +6440,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Free up an xmlXPathContext. </para>
+<para>Free up an <ref refid="xpath_8h_1a61100c9bec26c0de1d0329962c85c091" kindref="member">xmlXPathContext</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -6527,7 +6527,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathParserContext. </para>
+<para>Create a new <ref refid="xpath_8h_1a7288215d1b5913fa6c3ba96456da35fc" kindref="member">xmlXPathParserContext</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Utilities to extend XPath.</para>
@@ -6548,7 +6548,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathParserContext just allocated. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a7288215d1b5913fa6c3ba96456da35fc" kindref="member">xmlXPathParserContext</ref> just allocated. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -6557,7 +6557,7 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="4807" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="4807" bodyend="4832"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a66c7196e9fed3f72db1b2ee158377e92" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+        <type>xmlXPathParserContextPtr</type>
         <definition>static xmlXPathParserContextPtr xmlXPathCompParserContext</definition>
         <argsstring>(xmlXPathCompExprPtr comp, xmlXPathContextPtr ctxt)</argsstring>
         <name>xmlXPathCompParserContext</name>
@@ -6566,11 +6566,11 @@
           <declname>comp</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathContext" kindref="compound">xmlXPathContextPtr</ref></type>
+          <type>xmlXPathContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlXPathParserContext when processing a compiled expression. </para>
+<para>Create a new <ref refid="xpath_8h_1a7288215d1b5913fa6c3ba96456da35fc" kindref="member">xmlXPathParserContext</ref> when processing a compiled expression. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -6590,7 +6590,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathParserContext just allocated. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a7288215d1b5913fa6c3ba96456da35fc" kindref="member">xmlXPathParserContext</ref> just allocated. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -6608,7 +6608,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Free up an xmlXPathParserContext. </para>
+<para>Free up an <ref refid="xpath_8h_1a7288215d1b5913fa6c3ba96456da35fc" kindref="member">xmlXPathParserContext</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -6632,7 +6632,7 @@
         <argsstring>(xmlNodePtr node)</argsstring>
         <name>xmlXPathNodeValHash</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -6692,7 +6692,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int inf, int strict, xmlXPathObjectPtr arg, xmlXPathObjectPtr f)</argsstring>
         <name>xmlXPathCompareNodeSetFloat</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -6704,11 +6704,11 @@
           <declname>strict</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>f</declname>
         </param>
         <briefdescription>
@@ -6771,7 +6771,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int inf, int strict, xmlXPathObjectPtr arg, xmlXPathObjectPtr s)</argsstring>
         <name>xmlXPathCompareNodeSetString</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -6783,11 +6783,11 @@
           <declname>strict</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>s</declname>
         </param>
         <briefdescription>
@@ -6850,7 +6850,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int inf, int strict, xmlXPathObjectPtr arg1, xmlXPathObjectPtr arg2)</argsstring>
         <name>xmlXPathCompareNodeSets</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -6862,11 +6862,11 @@
           <declname>strict</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg1</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg2</declname>
         </param>
         <briefdescription>
@@ -6931,7 +6931,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int inf, int strict, xmlXPathObjectPtr arg, xmlXPathObjectPtr val)</argsstring>
         <name>xmlXPathCompareNodeSetValue</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -6943,11 +6943,11 @@
           <declname>strict</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>val</declname>
         </param>
         <briefdescription>
@@ -7010,11 +7010,11 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathObjectPtr arg, const xmlChar *str, int neq)</argsstring>
         <name>xmlXPathEqualNodeSetString</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg</declname>
         </param>
         <param>
@@ -7076,11 +7076,11 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathObjectPtr arg, double f, int neq)</argsstring>
         <name>xmlXPathEqualNodeSetFloat</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg</declname>
         </param>
         <param>
@@ -7142,15 +7142,15 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathObjectPtr arg1, xmlXPathObjectPtr arg2, int neq)</argsstring>
         <name>xmlXPathEqualNodeSets</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg1</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg2</declname>
         </param>
         <param>
@@ -7209,15 +7209,15 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathObjectPtr arg1, xmlXPathObjectPtr arg2)</argsstring>
         <name>xmlXPathEqualValuesCommon</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg1</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+          <type>xmlXPathObjectPtr</type>
           <declname>arg2</declname>
         </param>
         <briefdescription>
@@ -7238,7 +7238,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput> </para>
+<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -7268,7 +7268,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput> </para>
+<para>Implement the equal operation on XPath objects content: <computeroutput>arg1</computeroutput> == <computeroutput>arg2</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -7597,16 +7597,16 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="6154" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6154" bodyend="6189"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a16046e434c9a8c206a7b27ca87a84b50" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr xmlXPathNextChildElement</definition>
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlNodePtr cur)</argsstring>
         <name>xmlXPathNextChildElement</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -7981,11 +7981,11 @@
         <argsstring>(xmlNodePtr ancestor, xmlNodePtr node)</argsstring>
         <name>xmlXPathIsAncestor</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ancestor</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -8039,16 +8039,16 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="6705" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6705" bodyend="6738"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a0d82531c032eb2b8d23772444129afdf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr xmlXPathNextPrecedingInternal</definition>
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlNodePtr cur)</argsstring>
         <name>xmlXPathNextPrecedingInternal</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -8288,7 +8288,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the count() XPath function number count(node-set) </para>
+<para>Implement the count() XPath function number count(node-set). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -8315,12 +8315,12 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="6950" column="1" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="6950" bodyend="6966"/>
       </memberdef>
       <memberdef kind="function" id="xpath_8c_1a84b4e56468e014cad57360b07b4eadbe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+        <type>xmlNodeSetPtr</type>
         <definition>static xmlNodeSetPtr xmlXPathGetElementsByIds</definition>
         <argsstring>(xmlDocPtr doc, const xmlChar *ids)</argsstring>
         <name>xmlXPathGetElementsByIds</name>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
@@ -9009,7 +9009,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the true() XPath function boolean true() </para>
+<para>Implement the true() XPath function boolean true(). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -9049,7 +9049,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the false() XPath function boolean false() </para>
+<para>Implement the false() XPath function boolean false(). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -9130,7 +9130,7 @@
           <declname>nargs</declname>
         </param>
         <briefdescription>
-<para>Implement the number() XPath function number number(object?) </para>
+<para>Implement the number() XPath function number number(object?). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -9323,7 +9323,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int sort)</argsstring>
         <name>xmlXPathCompileExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -9364,7 +9364,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int filter)</argsstring>
         <name>xmlXPathCompPredicate</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -9405,13 +9405,14 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompLocationPath</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>[1] LocationPath ::= RelativeLocationPath | AbsoluteLocationPath [2] AbsoluteLocationPath ::= &apos;/&apos; RelativeLocationPath? | AbbreviatedAbsoluteLocationPath [10] AbbreviatedAbsoluteLocationPath ::= &apos;//&apos; RelativeLocationPath </para>
+<para>[1] LocationPath ::= RelativeLocationPath | AbsoluteLocationPath [2] AbsoluteLocationPath ::= &apos;/&apos; RelativeLocationPath? </para>
         </briefdescription>
         <detaileddescription>
+<para>| AbbreviatedAbsoluteLocationPath [10] AbbreviatedAbsoluteLocationPath ::= &apos;//&apos; RelativeLocationPath</para>
 <para>Compile a location path</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -9434,7 +9435,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompRelativeLocationPath</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9493,7 +9494,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlChar **prefix)</argsstring>
         <name>xmlXPathParseQName</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -9517,7 +9518,7 @@
 <parametername>prefix</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar ** </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> ** </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -9597,7 +9598,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompNumber</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9627,7 +9628,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathParseLiteral</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9658,7 +9659,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompLiteral</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9688,7 +9689,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompVariableReference</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9749,13 +9750,14 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompFunctionCall</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>[16] FunctionCall ::= FunctionName &apos;(&apos; ( Argument ( &apos;,&apos; Argument)*)? &apos;)&apos; [17] Argument ::= Expr </para>
+<para>[16] FunctionCall ::= FunctionName &apos;(&apos; ( Argument ( &apos;,&apos; Argument)*)? </para>
         </briefdescription>
         <detaileddescription>
+<para>&apos;)&apos; [17] Argument ::= Expr</para>
 <para>Compile a function call, the evaluation of all arguments are pushed on the stack</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -9778,7 +9780,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompPrimaryExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9807,7 +9809,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompFilterExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9836,7 +9838,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathScanName</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9866,7 +9868,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompPathExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9895,7 +9897,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompUnionExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9924,7 +9926,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompUnaryExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9953,7 +9955,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompMultiplicativeExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -9982,7 +9984,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompAdditiveExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -10011,7 +10013,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompRelationalExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -10041,7 +10043,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompEqualityExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -10071,7 +10073,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompAndExpr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -10100,7 +10102,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathTestVal *test, xmlXPathTypeVal *type, xmlChar **prefix, xmlChar *name)</argsstring>
         <name>xmlXPathCompNodeTest</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10123,16 +10125,16 @@
         </briefdescription>
         <detaileddescription>
 <para><programlisting><codeline><highlight class="normal">[7]<sp/>NodeTest<sp/>::=<sp/><sp/><sp/>NameTest</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>NodeType<sp/>&apos;(&apos;<sp/>&apos;)&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;processing-instruction&apos;<sp/>&apos;(&apos;<sp/>Literal<sp/>&apos;)&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>NodeType<sp/>&apos;(&apos;<sp/>&apos;)&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;processing-instruction&apos;<sp/>&apos;(&apos;<sp/>Literal<sp/>&apos;)&apos;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">[37]<sp/>NameTest<sp/>::=<sp/><sp/>&apos;*&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>NCName<sp/>&apos;:&apos;<sp/>&apos;*&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>QName</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>NCName<sp/>&apos;:&apos;<sp/>&apos;*&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>QName</highlight></codeline>
 <codeline><highlight class="normal">[38]<sp/>NodeType<sp/>::=<sp/>&apos;comment&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;text&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;processing-instruction&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;node&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;text&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;processing-instruction&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;node&apos;</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -10219,7 +10221,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPathCompStep</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -10253,7 +10255,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op)</argsstring>
         <name>xmlXPathCompOpEval</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10295,11 +10297,11 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlNodeSetPtr set, int filterOpIndex, int minPos, int maxPos, int hasNsNodes)</argsstring>
         <name>xmlXPathNodeSetFilter</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set</declname>
         </param>
         <param>
@@ -10384,7 +10386,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op, xmlNodeSetPtr set, int minPos, int maxPos, int hasNsNodes)</argsstring>
         <name>xmlXPathCompOpEvalPredicate</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10392,7 +10394,7 @@
           <declname>op</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNodeSet" kindref="compound">xmlNodeSetPtr</ref></type>
+          <type>xmlNodeSetPtr</type>
           <declname>set</declname>
         </param>
         <param>
@@ -10473,7 +10475,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op, int *maxPos)</argsstring>
         <name>xmlXPathIsPositionalPredicate</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10498,7 +10500,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op, xmlNodePtr *first, xmlNodePtr *last, int toBool)</argsstring>
         <name>xmlXPathNodeCollectAndTest</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10506,11 +10508,11 @@
           <declname>op</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+          <type>xmlNodePtr *</type>
           <declname>first</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+          <type>xmlNodePtr *</type>
           <declname>last</declname>
         </param>
         <param>
@@ -10531,7 +10533,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op, xmlNodePtr *first)</argsstring>
         <name>xmlXPathCompOpEvalFilterFirst</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10539,7 +10541,7 @@
           <declname>op</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+          <type>xmlNodePtr *</type>
           <declname>first</declname>
         </param>
         <briefdescription>
@@ -10556,7 +10558,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op, xmlNodePtr *last)</argsstring>
         <name>xmlXPathCompOpEvalLast</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10564,7 +10566,7 @@
           <declname>op</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+          <type>xmlNodePtr *</type>
           <declname>last</declname>
         </param>
         <briefdescription>
@@ -10610,7 +10612,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int toBool)</argsstring>
         <name>xmlXPathRunEval</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -10736,7 +10738,7 @@
         <argsstring>(xmlXPathParserContextPtr pctxt, xmlXPathStepOpPtr op)</argsstring>
         <name>xmlXPathOptimizeExpression</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>pctxt</declname>
         </param>
         <param>
@@ -10785,7 +10787,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathCompExpr resulting from the compilation or NULL. the caller has to free the object. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1ae35edb5539f59b16b27c7bb75f637ac8" kindref="member">xmlXPathCompExpr</ref> resulting from the compilation or NULL. the caller has to free the object. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -10816,7 +10818,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathCompExpr resulting from the compilation or NULL. the caller has to free the object. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1ae35edb5539f59b16b27c7bb75f637ac8" kindref="member">xmlXPathCompExpr</ref> resulting from the compilation or NULL. the caller has to free the object. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -10834,11 +10836,11 @@
           <declname>comp</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathContext" kindref="compound">xmlXPathContextPtr</ref></type>
+          <type>xmlXPathContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref> *</type>
+          <type>xmlXPathObjectPtr *</type>
           <declname>resObjPtr</declname>
         </param>
         <param>
@@ -10883,7 +10885,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathObject resulting from the evaluation or NULL. the caller has to free the object. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> resulting from the evaluation or NULL. the caller has to free the object. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -10925,7 +10927,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathObject resulting from the evaluation or NULL. the caller has to free the object. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> resulting from the evaluation or NULL. the caller has to free the object. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -11039,7 +11041,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathObject resulting from the evaluation or NULL. the caller has to free the object. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> resulting from the evaluation or NULL. the caller has to free the object. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -11137,7 +11139,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathObject resulting from the evaluation or NULL. the caller has to free the object. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> resulting from the evaluation or NULL. the caller has to free the object. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -11159,7 +11161,7 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>Alias for xmlXPathEval. </para>
+<para>Alias for <ref refid="xpath_8h_1aafcf477a1b518296238fe55a9df94a1a" kindref="member">xmlXPathEval</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -11179,7 +11181,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathObject resulting from the evaluation or NULL. the caller has to free the object. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> resulting from the evaluation or NULL. the caller has to free the object. </para>
 </simplesect>
 </para>
         </detaileddescription>

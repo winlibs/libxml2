@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlmodule_8h" kind="file" language="C++">
     <compoundname>xmlmodule.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -101,7 +101,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000392"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Will be removed.</para>
 </xrefdescription></xrefsect></para>
-<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const xmlChar * . TODO: options are not yet implemented.</para>
+<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * . TODO: options are not yet implemented.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>name</parametername>
@@ -115,7 +115,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlModuleOption </para>
+<para>a set of <ref refid="xmlmodule_8h_1a3da2abf53bc0cb57bcc3cc4fa8989162" kindref="member">xmlModuleOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlmodule.h" line="40" column="14" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="60" bodyend="79" declfile="xmlmodule.h" declline="40" declcolumn="14"/>
+        <location file="xmlmodule.h" line="40" column="13" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="60" bodyend="79" declfile="xmlmodule.h" declline="40" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlmodule_8h_1a907ca4f0afc57ba6a595bb45644372d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -151,7 +151,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000393"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Will be removed.</para>
 </xrefdescription></xrefsect></para>
-<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const xmlChar * .</para>
+<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * .</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>module</parametername>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlmodule.h" line="44" column="8" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="97" bodyend="110" declfile="xmlmodule.h" declline="44" declcolumn="8"/>
+        <location file="xmlmodule.h" line="44" column="7" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="97" bodyend="110" declfile="xmlmodule.h" declline="44" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="xmlmodule_8h_1a9e84822abde464ae8e3671b66c0e5848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlmodule.h" line="49" column="8" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="123" bodyend="137" declfile="xmlmodule.h" declline="49" declcolumn="8"/>
+        <location file="xmlmodule.h" line="49" column="7" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="123" bodyend="137" declfile="xmlmodule.h" declline="49" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="xmlmodule_8h_1a67dc559ae72da88b9e769a712bde1a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -247,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlmodule.h" line="52" column="8" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="150" bodyend="159" declfile="xmlmodule.h" declline="52" declcolumn="8"/>
+        <location file="xmlmodule.h" line="52" column="7" bodyfile="/builds/GNOME/libxml2/xmlmodule.c" bodystart="150" bodyend="159" declfile="xmlmodule.h" declline="52" declcolumn="7"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

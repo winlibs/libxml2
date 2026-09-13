@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="structhtmlMetaEncoding" kind="struct" language="C++" prot="public">
     <compoundname>htmlMetaEncoding</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structhtmlMetaEncoding_1ae820da179051ab314c705dc2e8faa2db" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+        <type>xmlAttrPtr</type>
         <definition>xmlAttrPtr attr</definition>
         <argsstring></argsstring>
         <name>attr</name>

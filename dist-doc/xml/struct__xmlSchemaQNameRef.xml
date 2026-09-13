@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaQNameRef" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaQNameRef</compoundname>
     <sectiondef kind="public-attrib">
@@ -74,7 +74,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="645" column="19" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="645" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaQNameRef_1af22243a9342e852a5bcc0b878913a289" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr node</definition>
         <argsstring></argsstring>
         <name>node</name>

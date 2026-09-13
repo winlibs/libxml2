@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlRelaxNGParserCtxt" kind="struct" language="C++" prot="public">
     <compoundname>_xmlRelaxNGParserCtxt</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="188" column="10" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="188" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="189" column="10" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="189" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1abaeae9bea358fb96cbb0027ea090152d" prot="public" static="no" mutable="no">
         <type><ref refid="relaxng_8h_1a2f9c0f7741e83f942b6c98ed4e0ba69c" kindref="member">xmlRelaxNGValidityErrorFunc</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="189" column="33" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="189" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="190" column="33" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="190" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a192b0dd116f1ede97c57e9d6802eb87f" prot="public" static="no" mutable="no">
         <type><ref refid="relaxng_8h_1ade2d403c9c2a4a5b08e8342e68a9a34b" kindref="member">xmlRelaxNGValidityWarningFunc</ref></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="190" column="35" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="190" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="191" column="35" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="191" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a08a1f87b354a96c4a17b4e0039b8103c" prot="public" static="no" mutable="no">
         <type><ref refid="xmlerror_8h_1a43ce1e8b08b983fe847fdf074b021127" kindref="member">xmlStructuredErrorFunc</ref></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="191" column="28" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="191" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="192" column="28" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="192" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1ac0efc789bb0888d21efe9dfde152132a" prot="public" static="no" mutable="no">
         <type><ref refid="relaxng_8h_1a983e3c2f1b7e4a301fe5ad1670355443" kindref="member">xmlRelaxNGValidErr</ref></type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="192" column="24" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="192" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="193" column="24" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="193" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1afd53113010afb7a8ef4fdb32b8c5b69f" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGPtr</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="194" column="19" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="194" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="195" column="19" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="195" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1ae8bf5cb3578f0d20629a1b4d3189095d" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGGrammarPtr</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="195" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="195" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="196" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="196" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a7b856fd7ca170cd0711d5fa02cdbab05" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGGrammarPtr</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="196" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="196" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="197" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="197" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1ac8bf36fe0577cba66bccda3a6f7e80a4" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="197" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="197" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="198" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="198" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a7c757b507ea7128441db47b33f5b9de7" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="198" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="198" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="199" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="199" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1aba5e5cfe04d6bec19edd61773a104da7" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="199" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="199" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="200" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="200" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a0b422db62b38f449faeee64c323bc921" prot="public" static="no" mutable="no">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="200" column="19" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="200" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="201" column="19" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="201" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a9c0beb76de513f5bdac262ddb3588608" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGDefinePtr</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="201" column="25" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="201" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="202" column="25" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="202" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a558d07d1ea5f6344310de13d35c85931" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="203" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="203" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="204" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="204" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1aa70d4c2437d2f94be3d8cd098430a7e3" prot="public" static="no" mutable="no">
         <type>xmlHashTablePtr</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="204" column="21" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="204" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="205" column="21" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="205" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a091ac3645cc87d6676e967cf3336cbc5" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGDocumentPtr</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="206" column="27" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="206" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="207" column="27" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="207" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a0615060efc8f9e5cdaa2523b1d030f8b" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGIncludePtr</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="207" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="207" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="208" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="208" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a27574c2b7af9a5806ee7c87b75604d0d" prot="public" static="no" mutable="no">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -253,10 +253,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="208" column="13" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="208" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="209" column="13" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a1163ce46fdf660bf5e5a2c962c194491" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr document</definition>
         <argsstring></argsstring>
         <name>document</name>
@@ -267,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="209" column="15" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="209" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="210" column="15" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="210" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1ae23af8bb2bbcdcb0880efd75d7ebdde8" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="211" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="211" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="212" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="212" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1aea4a02627083b60bb3b00bacc340f00c" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="212" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="212" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="213" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="213" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1aebcad370e7fba15c2787dc932d29fe88" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGDefinePtr *</type>
@@ -309,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="213" column="25" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="213" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="214" column="25" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="214" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1adae84acc92cd77a04f6aaf533643a33a" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -323,7 +323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="215" column="16" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="215" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="216" column="16" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="216" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a439227feff9d7f55384e8780cfc2eb82" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -337,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="216" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="216" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="217" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="217" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1adcda6b06d8d7d7eb4e8422f71c174ea5" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGDocumentPtr</type>
@@ -351,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="219" column="27" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="219" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="220" column="27" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="220" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1adfa3ebd5718f25adadad312e5b388931" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="220" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="220" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="221" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="221" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a38c3d43cb2503e733956c0ccebb89d73" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="221" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="221" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="222" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="222" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a24778b1cff7a87ac885f187aa7c12942" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGDocumentPtr *</type>
@@ -393,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="222" column="27" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="222" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="223" column="27" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="223" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a2687d390a5bff1f06a53524b02423f19" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGIncludePtr</type>
@@ -407,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="225" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="225" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="226" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="226" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a58587ae8cd4893e8e2aca1096a80481b" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -421,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="226" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="226" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="227" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="227" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1add20ba16a51e6618cbb2c8b03d07fc24" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="227" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="227" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="228" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="228" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a3ed5e93d007c8a57a5e73bd99a6a0905" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGIncludePtr *</type>
@@ -449,7 +449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="228" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="228" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="229" column="26" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="229" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a99a0d5b46da4a7cd846b87c98ba06a10" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -463,7 +463,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="229" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="229" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="230" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="230" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1abe7391097c61e9a0f23fa49cb3364c8c" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -477,7 +477,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="231" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="231" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="232" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1adca84caacacdb2ff1eeec74c697f387b" prot="public" static="no" mutable="no">
         <type>xmlAutomataPtr</type>
@@ -491,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="234" column="20" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="234" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="235" column="20" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="235" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a69e703a73789077a8405f2bb28ae7d60" prot="public" static="no" mutable="no">
         <type>xmlAutomataStatePtr</type>
@@ -505,7 +505,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="235" column="25" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="235" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="236" column="25" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="236" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a5c91cf45ed27e5d6999cdb23650df112" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -519,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="237" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="237" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="238" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="238" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a6e79366099cb1322fc2dc0b628757557" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -533,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="238" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="238" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="239" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="239" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1a30c0d77a995c819ff3a6bc91e0e92a8c" prot="public" static="no" mutable="no">
         <type><ref refid="parser_8h_1a7c18bf0fce4a02394bd219d9422c27ed" kindref="member">xmlResourceLoader</ref></type>
@@ -547,7 +547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="240" column="23" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="240" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="241" column="23" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="241" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGParserCtxt_1ac728bd981e68086ac20cf0e6feb826ca" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -561,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="241" column="10" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="241" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="242" column="10" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="242" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -936,7 +936,7 @@
         <label>xmlHashEntry</label>
       </node>
     </collaborationgraph>
-    <location file="/builds/GNOME/libxml2/relaxng.c" line="187" column="1" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="187" bodyend="242"/>
+    <location file="/builds/GNOME/libxml2/relaxng.c" line="188" column="1" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="188" bodyend="243"/>
     <listofallmembers>
       <member refid="struct__xmlRelaxNGParserCtxt_1adca84caacacdb2ff1eeec74c697f387b" prot="public" virt="non-virtual"><scope>_xmlRelaxNGParserCtxt</scope><name>am</name></member>
       <member refid="struct__xmlRelaxNGParserCtxt_1adae84acc92cd77a04f6aaf533643a33a" prot="public" virt="non-virtual"><scope>_xmlRelaxNGParserCtxt</scope><name>buffer</name></member>

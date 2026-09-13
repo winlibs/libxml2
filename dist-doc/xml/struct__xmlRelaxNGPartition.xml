@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlRelaxNGPartition" kind="struct" language="C++" prot="public">
     <compoundname>_xmlRelaxNGPartition</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="269" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="269" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="270" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="270" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGPartition_1a40d57d01865d38add7728f2eeb203194" prot="public" static="no" mutable="no">
         <type>xmlHashTablePtr</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="270" column="21" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="270" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="271" column="21" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="271" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGPartition_1ac8bf36fe0577cba66bccda3a6f7e80a4" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="272" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="272" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="273" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="273" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGPartition_1ac6a6ae439a55ec5906a09cd77d2181cf" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGInterleaveGroupPtr *</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="273" column="34" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="273" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="274" column="34" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="274" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -272,7 +272,7 @@
         <label>xmlHashEntry</label>
       </node>
     </collaborationgraph>
-    <location file="/builds/GNOME/libxml2/relaxng.c" line="268" column="1" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="268" bodyend="274"/>
+    <location file="/builds/GNOME/libxml2/relaxng.c" line="269" column="1" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="269" bodyend="275"/>
     <listofallmembers>
       <member refid="struct__xmlRelaxNGPartition_1ac8bf36fe0577cba66bccda3a6f7e80a4" prot="public" virt="non-virtual"><scope>_xmlRelaxNGPartition</scope><name>flags</name></member>
       <member refid="struct__xmlRelaxNGPartition_1ac6a6ae439a55ec5906a09cd77d2181cf" prot="public" virt="non-virtual"><scope>_xmlRelaxNGPartition</scope><name>groups</name></member>

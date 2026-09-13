@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xpointer_8c" kind="file" language="C++">
     <compoundname>xpointer.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -413,7 +413,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int code, const char *msg, const xmlChar *extra)</argsstring>
         <name>xmlXPtrErr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -472,12 +472,12 @@
         <location file="/builds/GNOME/libxml2/xpointer.c" line="65" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="65" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="xpointer_8c_1a0aea457308e3def544dda88b2c96be78" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr xmlXPtrGetNthChild</definition>
         <argsstring>(xmlNodePtr cur, int no)</argsstring>
         <name>xmlXPtrGetNthChild</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>cur</declname>
         </param>
         <param>
@@ -518,7 +518,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlChar *name)</argsstring>
         <name>xmlXPtrEvalChildSeq</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -551,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xpointer.c" line="471" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="471" bodyend="508" declfile="/builds/GNOME/libxml2/xpointer.c" declline="149" declcolumn="13"/>
+        <location file="/builds/GNOME/libxml2/xpointer.c" line="478" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="478" bodyend="515" declfile="/builds/GNOME/libxml2/xpointer.c" declline="149" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xpointer_8c_1a59256e8571bed27ecd518e79cee42e92" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -559,7 +559,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, int indx)</argsstring>
         <name>xmlXPtrGetChildNo</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -580,7 +580,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlChar *name)</argsstring>
         <name>xmlXPtrEvalXPtrPart</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -619,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xpointer.c" line="248" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="248" bodyend="379"/>
+        <location file="/builds/GNOME/libxml2/xpointer.c" line="248" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="248" bodyend="386"/>
       </memberdef>
       <memberdef kind="function" id="xpointer_8c_1aba9f224228f4164ab50c9ab5b606e1b2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -627,7 +627,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt, xmlChar *name)</argsstring>
         <name>xmlXPtrEvalFullXPtr</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -635,12 +635,12 @@
           <declname>name</declname>
         </param>
         <briefdescription>
-<para>FullXPtr ::= XPtrPart (S? XPtrPart)*. </para>
+<para>FullXPtr ::= XPtrPart (S? </para>
         </briefdescription>
         <detaileddescription>
-<sect2 id="xpointer_8c_1autotoc_md3">
-<title>As the specs says:</title>
-<para>When multiple XPtrParts are provided, they must be evaluated in left-to-right order. If evaluation of one part fails, the nexti is evaluated. The following conditions cause XPointer part failure:</para>
+<para>XPtrPart)*</para>
+<sect1 id="xpointer_8c_1autotoc_md3_1s1"><sect2 id="xpointer_8c_1autotoc_md3">
+<title>As the specs says:</title><para>When multiple XPtrParts are provided, they must be evaluated in left-to-right order. If evaluation of one part fails, the nexti is evaluated. The following conditions cause XPointer part failure:</para>
 <para><itemizedlist>
 <listitem><para>An unknown scheme</para>
 </listitem><listitem><para>A scheme that does not locate any sub-resource present in the resource</para>
@@ -648,10 +648,9 @@
 </listitem></itemizedlist>
 </para>
 <para>The XPointer application must consume a failed XPointer part and attempt to evaluate the next one, if any. The result of the first XPointer part whose evaluation succeeds is taken to be the fragment located by the XPointer as a whole. If all the parts fail, the result </para>
-</sect2>
-<sect2 id="xpointer_8c_1autotoc_md4">
-<title>for the XPointer as a whole is a sub-resource error.</title>
-<para>Parse and evaluate a Full XPtr i.e. possibly a cascade of XPath based expressions or other schemes.</para>
+</sect2></sect1>
+<sect1 id="xpointer_8c_1autotoc_md4_1s1"><sect2 id="xpointer_8c_1autotoc_md4">
+<title>for the XPointer as a whole is a sub-resource error.</title><para>Parse and evaluate a Full XPtr i.e. possibly a cascade of XPath based expressions or other schemes.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -670,11 +669,11 @@
 </parameteritem>
 </parameterlist>
 </para>
-</sect2>
+</sect2></sect1>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xpointer.c" line="408" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="408" bodyend="458"/>
+        <location file="/builds/GNOME/libxml2/xpointer.c" line="415" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="415" bodyend="465"/>
       </memberdef>
       <memberdef kind="function" id="xpointer_8c_1a9c0c5b08bb9d13b0301c0b7d68accfd1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -682,7 +681,7 @@
         <argsstring>(xmlXPathParserContextPtr ctxt)</argsstring>
         <name>xmlXPtrEvalXPointer</name>
         <param>
-          <type><ref refid="struct__xmlXPathParserContext" kindref="compound">xmlXPathParserContextPtr</ref></type>
+          <type>xmlXPathParserContextPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -703,7 +702,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xpointer.c" line="521" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="521" bodyend="556"/>
+        <location file="/builds/GNOME/libxml2/xpointer.c" line="528" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="528" bodyend="563"/>
       </memberdef>
       <memberdef kind="function" id="xpointer_8c_1ad266411e3b0eb3176b33ea279b67ed40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xpath_8h_1a61100c9bec26c0de1d0329962c85c091" kindref="member">xmlXPathContext</ref> *</type>
@@ -753,13 +752,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathContext just allocated. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a61100c9bec26c0de1d0329962c85c091" kindref="member">xmlXPathContext</ref> just allocated. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xpointer.c" line="576" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="576" bodyend="586"/>
+        <location file="/builds/GNOME/libxml2/xpointer.c" line="583" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="583" bodyend="593"/>
       </memberdef>
       <memberdef kind="function" id="xpointer_8c_1a20078f45c75ddf4a44d8ff835439e980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> *</type>
@@ -796,13 +795,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlXPathObject resulting from the evaluation or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="xpath_8h_1a60f7ba568242d9876ac3b78d1c9b2893" kindref="member">xmlXPathObject</ref> resulting from the evaluation or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xpointer.c" line="600" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="600" bodyend="663"/>
+        <location file="/builds/GNOME/libxml2/xpointer.c" line="607" column="1" bodyfile="/builds/GNOME/libxml2/xpointer.c" bodystart="607" bodyend="670"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

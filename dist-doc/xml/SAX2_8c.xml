@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="SAX2_8c" kind="file" language="C++">
     <compoundname>SAX2.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -356,7 +356,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt)</argsstring>
         <name>xmlSAX2ErrMemory</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -373,7 +373,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserErrors error, const char *msg, const xmlChar *str1, const xmlChar *str2)</argsstring>
         <name>xmlErrValid</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -449,7 +449,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserErrors error, const char *msg, const xmlChar *str1, const xmlChar *str2)</argsstring>
         <name>xmlFatalErrMsg</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -526,7 +526,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserErrors error, const char *msg, const xmlChar *str1)</argsstring>
         <name>xmlErrId</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -590,7 +590,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserErrors error, const char *msg, const xmlChar *str1)</argsstring>
         <name>xmlWarnMsg</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -654,7 +654,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserErrors error, const char *msg, const xmlChar *str1, const xmlChar *str2)</argsstring>
         <name>xmlNsWarnMsg</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -747,7 +747,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a xmlChar * </para>
+<simplesect kind="return"><para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -778,7 +778,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a xmlChar * </para>
+<simplesect kind="return"><para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1153,7 +1153,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlEntity if found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref> if found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1195,7 +1195,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlEntity if found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a084cd84a8cefc3c95c7eaf95b2e652ce" kindref="member">xmlEntity</ref> if found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1697,11 +1697,11 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlNodePtr node)</argsstring>
         <name>xmlSAX2AppendChild</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -1718,7 +1718,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlParserErrors error, const char *msg, const xmlChar *str1, const xmlChar *str2)</argsstring>
         <name>xmlNsErrMsg</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1794,7 +1794,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *fullname, const xmlChar *value, const xmlChar *prefix)</argsstring>
         <name>xmlSAX1Attribute</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1859,7 +1859,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *name, const xmlChar *prefix, const xmlChar **atts)</argsstring>
         <name>xmlCheckDefaultedAttributes</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1941,7 +1941,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *fullname, const xmlChar *value)</argsstring>
         <name>xmlSAX2HtmlAttribute</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1966,7 +1966,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *fullname, const xmlChar **atts)</argsstring>
         <name>xmlSAX2StartHtmlElement</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2111,16 +2111,16 @@
         <location file="/builds/GNOME/libxml2/SAX2.c" line="1747" column="1" bodyfile="/builds/GNOME/libxml2/SAX2.c" bodystart="1747" bodyend="1769"/>
       </memberdef>
       <memberdef kind="function" id="SAX2_8c_1a2132dcae4b3881f7c08e2c88b13a44f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr xmlSAX2TextNode</definition>
         <argsstring>(xmlParserCtxtPtr ctxt, xmlDocPtr doc, const xmlChar *str, int len)</argsstring>
         <name>xmlSAX2TextNode</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
@@ -2145,7 +2145,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *str, const xmlChar *end)</argsstring>
         <name>xmlSAX2DecodeAttrEntities</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2165,12 +2165,12 @@
         <location file="/builds/GNOME/libxml2/SAX2.c" line="1870" column="1" bodyfile="/builds/GNOME/libxml2/SAX2.c" bodystart="1870" bodyend="1886"/>
       </memberdef>
       <memberdef kind="function" id="SAX2_8c_1aea25394e04c7e32fdd88f540e29df4fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+        <type>xmlAttrPtr</type>
         <definition>static xmlAttrPtr xmlSAX2AttributeNs</definition>
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *localname, const xmlChar *prefix, const xmlChar *value, const xmlChar *valueend)</argsstring>
         <name>xmlSAX2AttributeNs</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2193,7 +2193,7 @@
 <para>Handle an attribute that has been read by the parser. </para>
         </briefdescription>
         <detaileddescription>
-<para>The default handling is to convert the attribute into an DOM subtree and past it in a new xmlAttr element added to the element.</para>
+<para>The default handling is to convert the attribute into an DOM subtree and past it in a new <ref refid="tree_8h_1a94c0908950e8e798cf7eb5ed524da0af" kindref="member">xmlAttr</ref> element added to the element.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -2447,7 +2447,7 @@
           <declname>name</declname>
         </param>
         <briefdescription>
-<para>called when an entity xmlSAX2Reference is detected. </para>
+<para>called when an entity <ref refid="SAX2_8h_1af8883fe2352083b7ae494e28caf73d49" kindref="member">xmlSAX2Reference</ref> is detected. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2479,7 +2479,7 @@
         <argsstring>(xmlParserCtxtPtr ctxt, const xmlChar *ch, int len, xmlElementType type)</argsstring>
         <name>xmlSAX2Text</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2511,7 +2511,7 @@
 <parametername>ch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar string </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2519,7 +2519,7 @@
 <parametername>len</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the number of xmlChar </para>
+<para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2571,7 +2571,7 @@
 <parametername>ch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar string </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2579,7 +2579,7 @@
 <parametername>len</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the number of xmlChar </para>
+<para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2610,7 +2610,7 @@
 <para>receiving some ignorable whitespaces from the parser. </para>
         </briefdescription>
         <detaileddescription>
-<para>UNUSED: by default the DOM building will use xmlSAX2Characters</para>
+<para>UNUSED: by default the DOM building will use <ref refid="SAX2_8h_1ae839b53ec40a61bf06b8cdb7170cfea1" kindref="member">xmlSAX2Characters</ref></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctx</parametername>
@@ -2624,7 +2624,7 @@
 <parametername>ch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a xmlChar string </para>
+<para>a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2632,7 +2632,7 @@
 <parametername>len</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the number of xmlChar </para>
+<para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2708,7 +2708,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>A xmlSAX2Comment has been parsed. </para>
+<para>A <ref refid="SAX2_8h_1a6eb09427fd179926c358a8ad306c22b7" kindref="member">xmlSAX2Comment</ref> has been parsed. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2724,7 +2724,7 @@
 <parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlSAX2Comment content </para>
+<para>the <ref refid="SAX2_8h_1a6eb09427fd179926c358a8ad306c22b7" kindref="member">xmlSAX2Comment</ref> content </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>

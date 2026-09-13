@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlXIncludeRef" kind="struct" language="C++" prot="public">
     <compoundname>_xmlXIncludeRef</compoundname>
     <sectiondef kind="public-attrib">
@@ -46,7 +46,7 @@
         <location file="/builds/GNOME/libxml2/xinclude.c" line="54" column="25" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlXIncludeRef_1a0fb5ed61a5a122a5564aeda053482c08" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr elem</definition>
         <argsstring></argsstring>
         <name>elem</name>
@@ -60,7 +60,7 @@
         <location file="/builds/GNOME/libxml2/xinclude.c" line="55" column="26" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlXIncludeRef_1ac141cbf82db1bc3c7bfa6e48d7337d49" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>xmlNodePtr inc</definition>
         <argsstring></argsstring>
         <name>inc</name>

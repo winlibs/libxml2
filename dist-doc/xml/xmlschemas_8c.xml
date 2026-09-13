@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlschemas_8c" kind="file" language="C++">
     <compoundname>xmlschemas.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -550,7 +550,7 @@
       </memberdef>
       <memberdef kind="define" id="xmlschemas_8c_1ac3159e738d54cb6ffdcecd6e2996637e" prot="public" static="no">
         <name>WXS_TYPE_CAST</name>
-        <initializer>(<ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref>)</initializer>
+        <initializer>(xmlSchemaTypePtr)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -561,7 +561,7 @@
       </memberdef>
       <memberdef kind="define" id="xmlschemas_8c_1a4174fc4c31cf826d72069ba56a07f2ce" prot="public" static="no">
         <name>WXS_ELEM_CAST</name>
-        <initializer>(<ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref>)</initializer>
+        <initializer>(xmlSchemaElementPtr)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -572,7 +572,7 @@
       </memberdef>
       <memberdef kind="define" id="xmlschemas_8c_1a6f4878de37f088e162d4e79b5655bc8c" prot="public" static="no">
         <name>WXS_ATTR_GROUP_CAST</name>
-        <initializer>(<ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref>)</initializer>
+        <initializer>(xmlSchemaAttributeGroupPtr)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -583,7 +583,7 @@
       </memberdef>
       <memberdef kind="define" id="xmlschemas_8c_1adbe209135eacbe7380a3aa3c01db7e47" prot="public" static="no">
         <name>WXS_ATTR_CAST</name>
-        <initializer>(<ref refid="struct__xmlSchemaAttribute" kindref="compound">xmlSchemaAttributePtr</ref>)</initializer>
+        <initializer>(xmlSchemaAttributePtr)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2174,19 +2174,19 @@
         <name>WXS_FIND_GLOBAL_ITEM</name>
         <param><defname>slot</defname></param>
         <initializer>    if (<ref refid="xmlstring_8h_1a2299004933166f79d1b841c73669a5d6" kindref="member">xmlStrEqual</ref>(nsName, schema-&gt;targetNamespace)) { \
-	ret = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(schema-&gt;slot, name); \
-	if (ret != NULL) goto exit; \
+    ret = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(schema-&gt;slot, name); \
+    if (ret != NULL) goto exit; \
     } \
     if (<ref refid="hash_8h_1a1c69642fcc6335cd61d328877f51e4c6" kindref="member">xmlHashSize</ref>(schema-&gt;schemasImports) &gt; 1) { \
-	xmlSchemaImportPtr import; \
-	if (nsName == NULL) \
-	    import = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(schema-&gt;schemasImports, \
-		XML_SCHEMAS_NO_NAMESPACE); \
-	else \
-	    import = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(schema-&gt;schemasImports, nsName); \
-	if (import == NULL) \
-	    goto exit; \
-	ret = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(import-&gt;schema-&gt;slot, name); \
+    xmlSchemaImportPtr import; \
+    if (nsName == NULL) \
+        import = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(schema-&gt;schemasImports, \
+        XML_SCHEMAS_NO_NAMESPACE); \
+    else \
+        import = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(schema-&gt;schemasImports, nsName); \
+    if (import == NULL) \
+        goto exit; \
+    ret = <ref refid="hash_8h_1aae0bc25d12cf6ecde87c83a5588db014" kindref="member">xmlHashLookup</ref>(import-&gt;schema-&gt;slot, name); \
     }</initializer>
         <briefdescription>
         </briefdescription>
@@ -2259,14 +2259,14 @@
       <memberdef kind="define" id="xmlschemas_8c_1a4dfe501b05397e0e7d13d4fd1f29f5cd" prot="public" static="no">
         <name>ADD_ANNOTATION</name>
         <param><defname>annot</defname></param>
-        <initializer>    <ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref> cur = item-&gt;annot; \
+        <initializer>    xmlSchemaAnnotPtr cur = item-&gt;annot; \
     if (item-&gt;annot == NULL) {  \
-	item-&gt;annot = annot;    \
-	return (annot);         \
+    item-&gt;annot = annot;    \
+    return (annot);         \
     }                           \
     cur = item-&gt;annot;          \
     while (cur-&gt;next != NULL) { \
-	cur = cur-&gt;next;	\
+    cur = cur-&gt;next;    \
     }                           \
     cur-&gt;next = annot;</initializer>
         <briefdescription>
@@ -2328,12 +2328,12 @@
         <param><defname>fac1</defname></param>
         <param><defname>fac2</defname></param>
         <initializer>    xmlSchemaPCustomErrExt(pctxt,      \
-	XML_SCHEMAP_INVALID_FACET_VALUE, \
-	WXS_BASIC_CAST fac1, fac1-&gt;node, \
-	&quot;It is an error for both &apos;%s&apos; and &apos;%s&apos; to be specified on the &quot;\
-	&quot;same type definition&quot;, \
-	<ref refid="xmlstring_8h_1ad0a78338bf196a676079310a7b9c7599" kindref="member">BAD_CAST</ref> xmlSchemaFacetTypeToString(fac1-&gt;type), \
-	<ref refid="xmlstring_8h_1ad0a78338bf196a676079310a7b9c7599" kindref="member">BAD_CAST</ref> xmlSchemaFacetTypeToString(fac2-&gt;type), NULL);</initializer>
+    XML_SCHEMAP_INVALID_FACET_VALUE, \
+    WXS_BASIC_CAST fac1, fac1-&gt;node, \
+    &quot;It is an error for both &apos;%s&apos; and &apos;%s&apos; to be specified on the &quot;\
+    &quot;same type definition&quot;, \
+    <ref refid="xmlstring_8h_1ad0a78338bf196a676079310a7b9c7599" kindref="member">BAD_CAST</ref> xmlSchemaFacetTypeToString(fac1-&gt;type), \
+    <ref refid="xmlstring_8h_1ad0a78338bf196a676079310a7b9c7599" kindref="member">BAD_CAST</ref> xmlSchemaFacetTypeToString(fac2-&gt;type), NULL);</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2347,9 +2347,9 @@
         <param><defname>fac1</defname></param>
         <param><defname>msg</defname></param>
         <initializer>    xmlSchemaPCustomErr(pctxt,      \
-	XML_SCHEMAP_INVALID_FACET_VALUE, \
-	WXS_BASIC_CAST fac1, fac1-&gt;node, \
-	msg, NULL);</initializer>
+    XML_SCHEMAP_INVALID_FACET_VALUE, \
+    WXS_BASIC_CAST fac1, fac1-&gt;node, \
+    msg, NULL);</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2362,10 +2362,10 @@
         <name>FACET_RESTR_FIXED_ERR</name>
         <param><defname>fac</defname></param>
         <initializer>    xmlSchemaPCustomErr(pctxt, \
-	XML_SCHEMAP_INVALID_FACET_VALUE, \
-	WXS_BASIC_CAST fac, fac-&gt;node, \
-	&quot;The base type&apos;s facet is &apos;fixed&apos;, thus the value must not &quot; \
-	&quot;differ&quot;, NULL);</initializer>
+    XML_SCHEMAP_INVALID_FACET_VALUE, \
+    WXS_BASIC_CAST fac, fac-&gt;node, \
+    &quot;The base type&apos;s facet is &apos;fixed&apos;, thus the value must not &quot; \
+    &quot;differ&quot;, NULL);</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2377,7 +2377,7 @@
       <memberdef kind="define" id="xmlschemas_8c_1a8a34013fbeb16acf775f222ae9966c0e" prot="public" static="no">
         <name>WXS_REDEFINED_TYPE</name>
         <param><defname>c</defname></param>
-        <initializer>(((<ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref>) item)-&gt;flags &amp; <ref refid="schemasInternals_8h_1a93c9551723f8546980e7358524cb4efb" kindref="member">XML_SCHEMAS_TYPE_REDEFINED</ref>)</initializer>
+        <initializer>(((xmlSchemaTypePtr) item)-&gt;flags &amp; <ref refid="schemasInternals_8h_1a93c9551723f8546980e7358524cb4efb" kindref="member">XML_SCHEMAS_TYPE_REDEFINED</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2401,7 +2401,7 @@
       <memberdef kind="define" id="xmlschemas_8c_1a68e3b99d843b5c4bb59c12207abf26d9" prot="public" static="no">
         <name>WXS_REDEFINED_ATTR_GROUP</name>
         <param><defname>c</defname></param>
-        <initializer>(((<ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref>) item)-&gt;flags &amp; <ref refid="schemasInternals_8h_1afd953a2afd9acad3b2e38c4bf88ccd91" kindref="member">XML_SCHEMAS_ATTRGROUP_REDEFINED</ref>)</initializer>
+        <initializer>(((xmlSchemaAttributeGroupPtr) item)-&gt;flags &amp; <ref refid="schemasInternals_8h_1afd953a2afd9acad3b2e38c4bf88ccd91" kindref="member">XML_SCHEMAS_ATTRGROUP_REDEFINED</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2416,9 +2416,9 @@
         <param><defname>slot</defname></param>
         <initializer>    { \
     if (WXS_IS_BUCKET_IMPMAIN((c)-&gt;type)) \
-	table = &amp;(WXS_IMPBUCKET((c))-&gt;schema-&gt;slot); \
+    table = &amp;(WXS_IMPBUCKET((c))-&gt;schema-&gt;slot); \
     else \
-	table = &amp;(WXS_INCBUCKET((c))-&gt;ownerImport-&gt;schema-&gt;slot); }</initializer>
+    table = &amp;(WXS_INCBUCKET((c))-&gt;ownerImport-&gt;schema-&gt;slot); }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2477,10 +2477,10 @@
         <param><defname>atype</defname></param>
         <initializer>    if ((! isNormalized) &amp;&amp; \
     (normalize || (type-&gt;flags &amp; <ref refid="schemasInternals_8h_1aeca59891f2a584997dafed85717f4a77" kindref="member">XML_SCHEMAS_TYPE_NORMVALUENEEDED</ref>))) { \
-	normValue = xmlSchemaNormalizeValue(atype, value); \
-	if (normValue != NULL) \
-	    value = normValue; \
-	isNormalized = 1; \
+    normValue = xmlSchemaNormalizeValue(atype, value); \
+    if (normValue != NULL) \
+        value = normValue; \
+    isNormalized = 1; \
     }</initializer>
         <briefdescription>
         </briefdescription>
@@ -2918,7 +2918,7 @@
         <argsstring></argsstring>
         <name>xmlSchemaQNameRef</name>
         <briefdescription>
-<para>A component reference item (not a schema component) (Extends xmlSchemaBasicItem) </para>
+<para>A component reference item (not a schema component) (Extends xmlSchemaBasicItem). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -3401,11 +3401,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -3426,11 +3426,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -3447,7 +3447,7 @@
         <argsstring>(xmlSchemaTypePtr type, xmlSchemaAbstractCtxtPtr actxt)</argsstring>
         <name>xmlSchemaTypeFixup</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -3493,7 +3493,7 @@
           <declname>type</declname>
         </param>
         <briefdescription>
-<para>Convert the xmlSchemaTypeType to a char string. </para>
+<para>Convert the <ref refid="schemasInternals_8h_1a08455b380785b2588bd3f6cebd3b035b" kindref="member">xmlSchemaTypeType</ref> to a char string. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -3524,11 +3524,11 @@
           <defname>pctxt</defname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -3574,7 +3574,7 @@
         <argsstring>(xmlSchemaTypePtr typeDecl, xmlSchemaParserCtxtPtr pctxt)</argsstring>
         <name>xmlSchemaCheckFacetValues</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>typeDecl</declname>
         </param>
         <param>
@@ -3643,7 +3643,7 @@
         <argsstring>(xmlSchemaTypePtr type)</argsstring>
         <name>xmlSchemaGetWhiteSpaceFacetValue</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -3664,11 +3664,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -3765,12 +3765,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="1145" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="1145" bodyend="1156" declfile="/builds/GNOME/libxml2/xmlschemas.c" declline="1058" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1af38181f506a2be61b5b7d0cdd3bdfdc2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaTypeLink" kindref="compound">xmlSchemaTypeLinkPtr</ref></type>
+        <type>xmlSchemaTypeLinkPtr</type>
         <definition>static xmlSchemaTypeLinkPtr xmlSchemaGetUnionSimpleTypeMemberTypes</definition>
         <argsstring>(xmlSchemaTypePtr type)</argsstring>
         <name>xmlSchemaGetUnionSimpleTypeMemberTypes</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -3829,11 +3829,11 @@
           <defname>actxt</defname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>baseType</declname>
         </param>
         <param>
@@ -3841,7 +3841,7 @@
           <declname>subset</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Type Derivation OK (Simple) (cos-st-derived-OK) </para>
+<para>Schema Component Constraint: Type Derivation OK (Simple) (cos-st-derived-OK). </para>
         </briefdescription>
         <detaileddescription>
 <para>Checks whether <computeroutput>type</computeroutput> can be validly derived from <computeroutput>baseType</computeroutput>.</para>
@@ -3892,7 +3892,7 @@
         <argsstring>(xmlSchemaElementPtr elemDecl, xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaCheckElementDeclComponent</name>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <param>
@@ -3954,11 +3954,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -4029,7 +4029,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="1091" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="1091" bodyend="1138"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a459b3f4888e04fa9e8d774ba6321adcc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr xmlSchemaGetComponentNode</definition>
         <argsstring>(xmlSchemaBasicItemPtr item)</argsstring>
         <name>xmlSchemaGetComponentNode</name>
@@ -4121,7 +4121,7 @@
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNs" kindref="compound">xmlNsPtr</ref></type>
+          <type>xmlNsPtr</type>
           <declname>ns</declname>
         </param>
         <param>
@@ -4393,7 +4393,7 @@
           <declname>item</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>itemNode</declname>
         </param>
         <briefdescription>
@@ -4462,7 +4462,7 @@
           <declname>buf</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -4540,7 +4540,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -4600,7 +4600,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -4688,11 +4688,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>child</declname>
         </param>
         <param>
@@ -4788,7 +4788,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -4976,7 +4976,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5044,7 +5044,7 @@
           <declname>code</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5176,7 +5176,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5276,7 +5276,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5321,7 +5321,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5358,7 +5358,7 @@
           <declname>actxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -5416,7 +5416,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5465,7 +5465,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5506,11 +5506,11 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -5555,7 +5555,7 @@
           <declname>idcNode</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -5588,7 +5588,7 @@
           <declname>actxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -5605,7 +5605,7 @@
         <argsstring>(xmlSchemaTypePtr item)</argsstring>
         <name>xmlSchemaIsGlobalItem</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>item</declname>
         </param>
         <briefdescription>
@@ -5630,7 +5630,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5638,7 +5638,7 @@
           <declname>value</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -5667,7 +5667,7 @@
           <declname>ni</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -5696,7 +5696,7 @@
           <declname>ni</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -5721,11 +5721,11 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -5766,7 +5766,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5778,11 +5778,11 @@
           <declname>length</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+          <type>xmlSchemaFacetPtr</type>
           <declname>facet</declname>
         </param>
         <param>
@@ -5823,7 +5823,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ownerElem</declname>
         </param>
         <param>
@@ -5911,7 +5911,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ownerElem</declname>
         </param>
         <param>
@@ -6039,7 +6039,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -6123,7 +6123,7 @@
           <declname>ownerComp</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <briefdescription>
@@ -6187,7 +6187,7 @@
           <declname>item</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>itemElem</declname>
         </param>
         <param>
@@ -6299,7 +6299,7 @@
           <declname>item</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>itemElem</declname>
         </param>
         <param>
@@ -6383,7 +6383,7 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -6519,15 +6519,15 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>baseType</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+          <type>xmlSchemaFacetPtr</type>
           <declname>facet</declname>
         </param>
         <briefdescription>
@@ -6595,11 +6595,11 @@
           <declname>error</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+          <type>xmlSchemaFacetPtr</type>
           <declname>facet</declname>
         </param>
         <briefdescription>
@@ -6663,7 +6663,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -6751,11 +6751,11 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -6888,11 +6888,11 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ownerElem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>child</declname>
         </param>
         <param>
@@ -6971,7 +6971,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="3212" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="3212" bodyend="3239"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1ac9caabbddab57ca805a24f237676c1eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+        <type>xmlSchemaPtr</type>
         <definition>static xmlSchemaPtr xmlSchemaNewSchema</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaNewSchema</name>
@@ -7021,7 +7021,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="3292" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="3292" bodyend="3303"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a55b6e8ef467274f864bd0ee2d6e845a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref></type>
+        <type>xmlSchemaAnnotPtr</type>
         <definition>static xmlSchemaAnnotPtr xmlSchemaNewAnnot</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlNodePtr node)</argsstring>
         <name>xmlSchemaNewAnnot</name>
@@ -7030,7 +7030,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -7330,7 +7330,7 @@
         <argsstring>(xmlSchemaAnnotPtr annot)</argsstring>
         <name>xmlSchemaFreeAnnot</name>
         <param>
-          <type><ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref></type>
+          <type>xmlSchemaAnnotPtr</type>
           <declname>annot</declname>
         </param>
         <briefdescription>
@@ -7358,7 +7358,7 @@
         <argsstring>(xmlSchemaNotationPtr nota)</argsstring>
         <name>xmlSchemaFreeNotation</name>
         <param>
-          <type><ref refid="struct__xmlSchemaNotation" kindref="compound">xmlSchemaNotationPtr</ref></type>
+          <type>xmlSchemaNotationPtr</type>
           <declname>nota</declname>
         </param>
         <briefdescription>
@@ -7386,7 +7386,7 @@
         <argsstring>(xmlSchemaAttributePtr attr)</argsstring>
         <name>xmlSchemaFreeAttribute</name>
         <param>
-          <type><ref refid="struct__xmlSchemaAttribute" kindref="compound">xmlSchemaAttributePtr</ref></type>
+          <type>xmlSchemaAttributePtr</type>
           <declname>attr</declname>
         </param>
         <briefdescription>
@@ -7470,7 +7470,7 @@
         <argsstring>(xmlSchemaWildcardNsPtr set)</argsstring>
         <name>xmlSchemaFreeWildcardNsSet</name>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcardNs" kindref="compound">xmlSchemaWildcardNsPtr</ref></type>
+          <type>xmlSchemaWildcardNsPtr</type>
           <declname>set</declname>
         </param>
         <briefdescription>
@@ -7517,7 +7517,7 @@
         <argsstring>(xmlSchemaAttributeGroupPtr attrGr)</argsstring>
         <name>xmlSchemaFreeAttributeGroup</name>
         <param>
-          <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+          <type>xmlSchemaAttributeGroupPtr</type>
           <declname>attrGr</declname>
         </param>
         <briefdescription>
@@ -7573,7 +7573,7 @@
         <argsstring>(xmlSchemaTypeLinkPtr link)</argsstring>
         <name>xmlSchemaFreeTypeLinkList</name>
         <param>
-          <type><ref refid="struct__xmlSchemaTypeLink" kindref="compound">xmlSchemaTypeLinkPtr</ref></type>
+          <type>xmlSchemaTypeLinkPtr</type>
           <declname>link</declname>
         </param>
         <briefdescription>
@@ -7646,7 +7646,7 @@
         <argsstring>(xmlSchemaElementPtr elem)</argsstring>
         <name>xmlSchemaFreeElement</name>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elem</declname>
         </param>
         <briefdescription>
@@ -7814,7 +7814,7 @@
         <argsstring>(xmlSchemaTypePtr type, FILE *output)</argsstring>
         <name>xmlSchemaTypeDump</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -7934,7 +7934,7 @@
           <declname>output</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref></type>
+          <type>xmlSchemaAnnotPtr</type>
           <declname>annot</declname>
         </param>
         <briefdescription>
@@ -8122,12 +8122,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4437" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4437" bodyend="4459"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1afa984d27970b885fa5b433282370b387" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+        <type>xmlAttrPtr</type>
         <definition>static xmlAttrPtr xmlSchemaGetPropNode</definition>
         <argsstring>(xmlNodePtr node, const char *name)</argsstring>
         <name>xmlSchemaGetPropNode</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -8164,12 +8164,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4478" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4478" bodyend="4491"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1acb6569ce01f7cd275ee5f8e2b6cdec52" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+        <type>xmlAttrPtr</type>
         <definition>static xmlAttrPtr xmlSchemaGetPropNodeNs</definition>
         <argsstring>(xmlNodePtr node, const char *uri, const char *name)</argsstring>
         <name>xmlSchemaGetPropNodeNs</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -8227,7 +8227,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -8244,7 +8244,7 @@
         <argsstring>(xmlNodePtr node)</argsstring>
         <name>xmlSchemaGetNodeContentNoDict</name>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -8265,7 +8265,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -8310,12 +8310,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4551" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4551" bodyend="4563"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1ace6a6d4bee1fd6af9d2702ef31025971" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+        <type>xmlSchemaElementPtr</type>
         <definition>static xmlSchemaElementPtr xmlSchemaGetElem</definition>
         <argsstring>(xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName)</argsstring>
         <name>xmlSchemaGetElem</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8364,12 +8364,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4597" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4597" bodyend="4609"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1aaf1543821198bcfe2d0a9914a656e944" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaGetType</definition>
         <argsstring>(xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName)</argsstring>
         <name>xmlSchemaGetType</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8418,12 +8418,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4620" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4620" bodyend="4645"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1aee05ab955de593810e58c561e0076956" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAttribute" kindref="compound">xmlSchemaAttributePtr</ref></type>
+        <type>xmlSchemaAttributePtr</type>
         <definition>static xmlSchemaAttributePtr xmlSchemaGetAttributeDecl</definition>
         <argsstring>(xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName)</argsstring>
         <name>xmlSchemaGetAttributeDecl</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8472,12 +8472,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4656" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4656" bodyend="4668"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a61b43a6ac619faaa31a3e980f3d9e5ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+        <type>xmlSchemaAttributeGroupPtr</type>
         <definition>static xmlSchemaAttributeGroupPtr xmlSchemaGetAttributeGroup</definition>
         <argsstring>(xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName)</argsstring>
         <name>xmlSchemaGetAttributeGroup</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8531,7 +8531,7 @@
         <argsstring>(xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName)</argsstring>
         <name>xmlSchemaGetGroup</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8580,12 +8580,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4708" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4708" bodyend="4721"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1ad97fd8a448a05d60720205d4152c43ef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaNotation" kindref="compound">xmlSchemaNotationPtr</ref></type>
+        <type>xmlSchemaNotationPtr</type>
         <definition>static xmlSchemaNotationPtr xmlSchemaGetNotation</definition>
         <argsstring>(xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName)</argsstring>
         <name>xmlSchemaGetNotation</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8610,7 +8610,7 @@
         <argsstring>(xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName)</argsstring>
         <name>xmlSchemaGetIDC</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8635,7 +8635,7 @@
         <argsstring>(xmlSchemaPtr schema, xmlSchemaTypeType itemType, const xmlChar *name, const xmlChar *targetNs)</argsstring>
         <name>xmlSchemaGetNamedComponent</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8767,7 +8767,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4827" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4827" bodyend="4905"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a7ce9826eca66309f72b82910bdd94a61" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaNotation" kindref="compound">xmlSchemaNotationPtr</ref></type>
+        <type>xmlSchemaNotationPtr</type>
         <definition>static xmlSchemaNotationPtr xmlSchemaAddNotation</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName, xmlNodePtr node)</argsstring>
         <name>xmlSchemaAddNotation</name>
@@ -8776,7 +8776,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8788,7 +8788,7 @@
           <declname>nsName</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -8845,7 +8845,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="4919" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="4919" bodyend="4941"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a635b2b3a096cf2f5922516fd0cfa3412" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAttribute" kindref="compound">xmlSchemaAttributePtr</ref></type>
+        <type>xmlSchemaAttributePtr</type>
         <definition>static xmlSchemaAttributePtr xmlSchemaAddAttribute</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName, xmlNodePtr node, int topLevel)</argsstring>
         <name>xmlSchemaAddAttribute</name>
@@ -8854,7 +8854,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -8866,7 +8866,7 @@
           <declname>nsName</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -8944,7 +8944,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -9010,7 +9010,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="5021" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="5021" bodyend="5047"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a9def8e4b270893028f206f2abc33b8cd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+        <type>xmlSchemaAttributeGroupPtr</type>
         <definition>static xmlSchemaAttributeGroupPtr xmlSchemaAddAttributeGroupDefinition</definition>
         <argsstring>(xmlSchemaParserCtxtPtr pctxt, xmlSchemaPtr schema, const xmlChar *name, const xmlChar *nsName, xmlNodePtr node)</argsstring>
         <name>xmlSchemaAddAttributeGroupDefinition</name>
@@ -9019,7 +9019,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9031,7 +9031,7 @@
           <declname>nsName</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -9088,7 +9088,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="5060" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="5060" bodyend="5097"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1ac4428ec61df8f93b8e7521e38a03ff5b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+        <type>xmlSchemaElementPtr</type>
         <definition>static xmlSchemaElementPtr xmlSchemaAddElement</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, const xmlChar *name, const xmlChar *nsName, xmlNodePtr node, int topLevel)</argsstring>
         <name>xmlSchemaAddElement</name>
@@ -9105,7 +9105,7 @@
           <declname>nsName</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -9166,7 +9166,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="5111" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="5111" bodyend="5137"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1aa227a3dd185730add3c5d977b3cd0fec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaAddType</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlSchemaTypeType type, const xmlChar *name, const xmlChar *nsName, xmlNodePtr node, int topLevel)</argsstring>
         <name>xmlSchemaAddType</name>
@@ -9175,7 +9175,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9191,7 +9191,7 @@
           <declname>nsName</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -9323,7 +9323,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9331,7 +9331,7 @@
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -9389,7 +9389,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -9456,7 +9456,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9468,7 +9468,7 @@
           <declname>nsName</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -9525,7 +9525,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="5326" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="5326" bodyend="5361"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a20b575fbcafb56a43a5ed2a263f7fd07" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaWildcardNs" kindref="compound">xmlSchemaWildcardNsPtr</ref></type>
+        <type>xmlSchemaWildcardNsPtr</type>
         <definition>static xmlSchemaWildcardNsPtr xmlSchemaNewWildcardNsConstraint</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaNewWildcardNsConstraint</name>
@@ -9564,7 +9564,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9580,7 +9580,7 @@
           <declname>category</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -9592,7 +9592,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="5386" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="5386" bodyend="5414"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a48c682191a77555b7ed817992d9c98f8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+        <type>xmlSchemaWildcardPtr</type>
         <definition>static xmlSchemaWildcardPtr xmlSchemaAddWildcard</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlSchemaTypeType type, xmlNodePtr node)</argsstring>
         <name>xmlSchemaAddWildcard</name>
@@ -9601,7 +9601,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9609,7 +9609,7 @@
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -9706,7 +9706,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>head</declname>
         </param>
         <briefdescription>
@@ -9727,7 +9727,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>head</declname>
         </param>
         <briefdescription>
@@ -9748,11 +9748,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>head</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>member</declname>
         </param>
         <briefdescription>
@@ -9802,7 +9802,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9810,7 +9810,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -9905,7 +9905,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -9913,7 +9913,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -9996,7 +9996,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -10004,7 +10004,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ownerElem</declname>
         </param>
         <param>
@@ -10098,7 +10098,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <briefdescription>
@@ -10140,7 +10140,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ownerElem</declname>
         </param>
         <param>
@@ -10165,7 +10165,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -10255,7 +10255,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -10349,7 +10349,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -10399,7 +10399,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -10456,7 +10456,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="5962" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="5962" bodyend="5993"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a13163c82897903b8f9729ab2bd29093a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaParseSimpleType</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node, int topLevel)</argsstring>
         <name>xmlSchemaParseSimpleType</name>
@@ -10465,11 +10465,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -10522,7 +10522,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="8885" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="8885" bodyend="9085" declfile="/builds/GNOME/libxml2/xmlschemas.c" declline="6000" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a9c1216fe3032c0e5cf3070bb15156ff0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaParseComplexType</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node, int topLevel)</argsstring>
         <name>xmlSchemaParseComplexType</name>
@@ -10531,11 +10531,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -10588,7 +10588,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="11833" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="11833" bodyend="12104" declfile="/builds/GNOME/libxml2/xmlschemas.c" declline="6004" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1add91ddb512cb08bb8b467b9c6f955a99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaParseRestriction</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node, xmlSchemaTypeType parentType)</argsstring>
         <name>xmlSchemaParseRestriction</name>
@@ -10597,11 +10597,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -10663,11 +10663,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -10732,7 +10732,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="6862" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="6862" bodyend="7250" declfile="/builds/GNOME/libxml2/xmlschemas.c" declline="6015" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1acebfdeb4b3984ebdfcc7a81930da0892" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaParseList</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node)</argsstring>
         <name>xmlSchemaParseList</name>
@@ -10741,11 +10741,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -10786,7 +10786,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="8775" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="8775" bodyend="8871" declfile="/builds/GNOME/libxml2/xmlschemas.c" declline="6020" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a96a3caf28c1304a546fe6c7b6bea5691" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+        <type>xmlSchemaWildcardPtr</type>
         <definition>static xmlSchemaWildcardPtr xmlSchemaParseAnyAttribute</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node)</argsstring>
         <name>xmlSchemaParseAnyAttribute</name>
@@ -10795,11 +10795,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -10853,7 +10853,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -10861,7 +10861,7 @@
           <declname>value</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -10932,11 +10932,11 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -11011,7 +11011,7 @@
           <declname>ownerItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ownerElem</declname>
         </param>
         <param>
@@ -11019,7 +11019,7 @@
           <declname>name</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -11098,15 +11098,15 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -11131,11 +11131,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref> *</type>
+          <type>xmlNodePtr *</type>
           <declname>child</declname>
         </param>
         <param>
@@ -11210,7 +11210,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="6238" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="6238" bodyend="6267"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a72a724553b448955091faa8f35e7853e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref></type>
+        <type>xmlSchemaAnnotPtr</type>
         <definition>static xmlSchemaAnnotPtr xmlSchemaParseAnnotation</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlNodePtr node, int needed)</argsstring>
         <name>xmlSchemaParseAnnotation</name>
@@ -11219,7 +11219,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -11264,7 +11264,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="6280" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="6280" bodyend="6385"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a712e53a4ee2ebe1b7c9822689dea9d5a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+        <type>xmlSchemaFacetPtr</type>
         <definition>static xmlSchemaFacetPtr xmlSchemaParseFacet</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node)</argsstring>
         <name>xmlSchemaParseFacet</name>
@@ -11273,11 +11273,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -11327,15 +11327,15 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>wildc</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -11398,7 +11398,7 @@
           <declname>item</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -11427,11 +11427,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -11473,7 +11473,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="6656" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="6656" bodyend="6735"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a5c357568c16f1cb7dd55e181e22eed81" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaNotation" kindref="compound">xmlSchemaNotationPtr</ref></type>
+        <type>xmlSchemaNotationPtr</type>
         <definition>static xmlSchemaNotationPtr xmlSchemaParseNotation</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node)</argsstring>
         <name>xmlSchemaParseNotation</name>
@@ -11482,11 +11482,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -11527,7 +11527,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="6746" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="6746" bodyend="6780"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a2412c205491b76a031bc73cbf0b9d5e8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAttribute" kindref="compound">xmlSchemaAttributePtr</ref></type>
+        <type>xmlSchemaAttributePtr</type>
         <definition>static xmlSchemaAttributePtr xmlSchemaParseGlobalAttribute</definition>
         <argsstring>(xmlSchemaParserCtxtPtr pctxt, xmlSchemaPtr schema, xmlNodePtr node)</argsstring>
         <name>xmlSchemaParseGlobalAttribute</name>
@@ -11536,11 +11536,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -11552,7 +11552,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="7254" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="7254" bodyend="7391"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a629ff3f9e4e93be0bbce8f8f6897a357" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+        <type>xmlSchemaAttributeGroupPtr</type>
         <definition>static xmlSchemaAttributeGroupPtr xmlSchemaParseAttributeGroupDefinition</definition>
         <argsstring>(xmlSchemaParserCtxtPtr pctxt, xmlSchemaPtr schema, xmlNodePtr node)</argsstring>
         <name>xmlSchemaParseAttributeGroupDefinition</name>
@@ -11561,11 +11561,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -11791,7 +11791,7 @@
           <declname>selector</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -11807,7 +11807,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="7746" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="7746" bodyend="7840"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a16dc8078555e451694f185433e958046" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref></type>
+        <type>xmlSchemaAnnotPtr</type>
         <definition>static xmlSchemaAnnotPtr xmlSchemaAddAnnotation</definition>
         <argsstring>(xmlSchemaAnnotItemPtr annItem, xmlSchemaAnnotPtr annot)</argsstring>
         <name>xmlSchemaAddAnnotation</name>
@@ -11816,7 +11816,7 @@
           <declname>annItem</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaAnnot" kindref="compound">xmlSchemaAnnotPtr</ref></type>
+          <type>xmlSchemaAnnotPtr</type>
           <declname>annot</declname>
         </param>
         <briefdescription>
@@ -11862,7 +11862,7 @@
           <declname>idc</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -11924,11 +11924,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -12002,11 +12002,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -12081,11 +12081,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -12135,11 +12135,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -12188,11 +12188,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -12244,7 +12244,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>root</declname>
         </param>
         <briefdescription>
@@ -12280,7 +12280,7 @@
         <argsstring>(xmlSchemaPtr schema)</argsstring>
         <name>xmlSchemaClearSchemaDefaults</name>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <briefdescription>
@@ -12301,11 +12301,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -12326,11 +12326,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>nodes</declname>
         </param>
         <briefdescription>
@@ -12612,7 +12612,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -12637,7 +12637,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
@@ -12687,7 +12687,7 @@
           <declname>location</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>ctxtNode</declname>
         </param>
         <param>
@@ -12720,7 +12720,7 @@
           <declname>schemaLocation</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>schemaDoc</declname>
         </param>
         <param>
@@ -12732,7 +12732,7 @@
           <declname>schemaBufferLen</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>invokingNode</declname>
         </param>
         <param>
@@ -12850,11 +12850,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -12883,11 +12883,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -12903,7 +12903,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="10699" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="10699" bodyend="10893"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a9c6880fb52746072532bb64638eb247c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaParseExtension</definition>
         <argsstring>(xmlSchemaParserCtxtPtr ctxt, xmlSchemaPtr schema, xmlNodePtr node, xmlSchemaTypeType parentType)</argsstring>
         <name>xmlSchemaParseExtension</name>
@@ -12912,11 +12912,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -12979,11 +12979,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -13045,11 +13045,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -13336,7 +13336,7 @@
         <argsstring>(xmlSchemaTypePtr type, xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaBuildContentModel</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -13376,7 +13376,7 @@
         <argsstring>(xmlSchemaElementPtr elemDecl, xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaResolveElementReferences</name>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <param>
@@ -13420,7 +13420,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -13459,7 +13459,7 @@
         <argsstring>(xmlSchemaTypePtr type, int valType)</argsstring>
         <name>xmlSchemaIsDerivedFromBuiltInType</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -13495,12 +13495,12 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="13068" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="13068" bodyend="13083"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a829f240682cd77ac3710d67fa152bca4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>static xmlSchemaTypePtr xmlSchemaGetPrimitiveType</definition>
         <argsstring>(xmlSchemaTypePtr type)</argsstring>
         <name>xmlSchemaGetPrimitiveType</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -13533,11 +13533,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>dest</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>source</declname>
         </param>
         <briefdescription>
@@ -13587,11 +13587,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>completeWild</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>curWild</declname>
         </param>
         <briefdescription>
@@ -13642,11 +13642,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>completeWild</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>curWild</declname>
         </param>
         <briefdescription>
@@ -13693,15 +13693,15 @@
         <argsstring>(xmlSchemaWildcardPtr sub, xmlSchemaWildcardPtr super)</argsstring>
         <name>xmlSchemaCheckCOSNSSubset</name>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>sub</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>super</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Wildcard Subset (cos-ns-subset) </para>
+<para>Schema Component Constraint: Wildcard Subset (cos-ns-subset). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -13764,7 +13764,7 @@
         <argsstring>(xmlSchemaWildcardPtr wild, const xmlChar *ns)</argsstring>
         <name>xmlSchemaCheckCVCWildcardNamespace</name>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>wild</declname>
         </param>
         <param>
@@ -13772,7 +13772,7 @@
           <declname>ns</declname>
         </param>
         <briefdescription>
-<para>Validation Rule: Wildcard allows Namespace Name (cvc-wildcard-namespace) </para>
+<para>Validation Rule: Wildcard allows Namespace Name (cvc-wildcard-namespace). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -13830,11 +13830,11 @@
           <declname>baseUses</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>wild</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref></type>
+          <type>xmlSchemaWildcardPtr</type>
           <declname>baseWild</declname>
         </param>
         <briefdescription>
@@ -13859,7 +13859,7 @@
           <declname>item</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaWildcard" kindref="compound">xmlSchemaWildcardPtr</ref> *</type>
+          <type>xmlSchemaWildcardPtr *</type>
           <declname>completeWild</declname>
         </param>
         <param>
@@ -13932,7 +13932,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -13971,7 +13971,7 @@
         <argsstring>(xmlSchemaTypePtr type, int final)</argsstring>
         <name>xmlSchemaTypeFinalContains</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -14077,11 +14077,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>ctxtType</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>ancestor</declname>
         </param>
         <briefdescription>
@@ -14128,7 +14128,7 @@
         <argsstring>(xmlSchemaTypePtr item, xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaCheckTypeDefCircular</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>item</declname>
         </param>
         <param>
@@ -14172,11 +14172,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>ctxType</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaTypeLink" kindref="compound">xmlSchemaTypeLinkPtr</ref></type>
+          <type>xmlSchemaTypeLinkPtr</type>
           <declname>members</declname>
         </param>
         <briefdescription>
@@ -14197,7 +14197,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14214,7 +14214,7 @@
         <argsstring>(xmlSchemaTypePtr typeDef, xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaResolveTypeReferences</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>typeDef</declname>
         </param>
         <param>
@@ -14258,7 +14258,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14300,11 +14300,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Derivation Valid (Restriction, Simple) (cos-st-restricts) </para>
+<para>Schema Component Constraint: Derivation Valid (Restriction, Simple) (cos-st-restricts). </para>
         </briefdescription>
         <detaileddescription>
 <para>Checks if the given <computeroutput>type</computeroutput> (simpleType) is derived validly by restriction. STATUS:</para>
@@ -14360,11 +14360,11 @@
           <declname>actxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -14405,11 +14405,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -14484,7 +14484,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14522,11 +14522,11 @@
         <argsstring>(xmlSchemaTypePtr typeA, xmlSchemaTypePtr typeB)</argsstring>
         <name>xmlSchemaAreEqualTypes</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>typeA</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>typeB</declname>
         </param>
         <briefdescription>
@@ -14547,11 +14547,11 @@
           <declname>actxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>baseType</declname>
         </param>
         <param>
@@ -14559,7 +14559,7 @@
           <declname>set</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Type Derivation OK (Complex) (cos-ct-derived-ok) </para>
+<para>Schema Component Constraint: Type Derivation OK (Complex) (cos-ct-derived-ok). </para>
         </briefdescription>
         <detaileddescription>
 <para>STATUS: completed</para>
@@ -14614,11 +14614,11 @@
           <declname>actxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>baseType</declname>
         </param>
         <param>
@@ -14626,7 +14626,7 @@
           <declname>set</declname>
         </param>
         <briefdescription>
-<para>Calls: Type Derivation OK (Simple) AND Type Derivation OK (Complex) </para>
+<para>Calls: Type Derivation OK (Simple) AND Type Derivation OK (Complex). </para>
         </briefdescription>
         <detaileddescription>
 <para>Checks whether <computeroutput>type</computeroutput> can be validly derived from <computeroutput>baseType</computeroutput>.</para>
@@ -14681,7 +14681,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14724,7 +14724,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14768,7 +14768,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14810,7 +14810,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14852,11 +14852,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+          <type>xmlSchemaFacetPtr</type>
           <declname>facet1</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaFacet" kindref="compound">xmlSchemaFacetPtr</ref></type>
+          <type>xmlSchemaFacetPtr</type>
           <declname>facet2</declname>
         </param>
         <param>
@@ -14889,7 +14889,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14910,7 +14910,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14927,7 +14927,7 @@
         <argsstring>(xmlSchemaTypePtr type)</argsstring>
         <name>xmlSchemaTypeFixupOptimFacets</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14944,7 +14944,7 @@
         <argsstring>(xmlSchemaTypePtr type)</argsstring>
         <name>xmlSchemaTypeFixupWhitespace</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14965,7 +14965,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -14986,7 +14986,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -15007,7 +15007,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -15213,7 +15213,7 @@
         <argsstring>(xmlSchemaAttributeGroupPtr ctxtGr, xmlSchemaItemListPtr list)</argsstring>
         <name>xmlSchemaCheckAttrGroupCircularRecur</name>
         <param>
-          <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+          <type>xmlSchemaAttributeGroupPtr</type>
           <declname>ctxtGr</declname>
         </param>
         <param>
@@ -15255,7 +15255,7 @@
         <argsstring>(xmlSchemaAttributeGroupPtr attrGr, xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaCheckAttrGroupCircular</name>
         <param>
-          <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+          <type>xmlSchemaAttributeGroupPtr</type>
           <declname>attrGr</declname>
         </param>
         <param>
@@ -15299,7 +15299,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+          <type>xmlSchemaAttributeGroupPtr</type>
           <declname>attrGr</declname>
         </param>
         <briefdescription>
@@ -15340,7 +15340,7 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaAttributeGroup" kindref="compound">xmlSchemaAttributeGroupPtr</ref></type>
+          <type>xmlSchemaAttributeGroupPtr</type>
           <declname>attrGr</declname>
         </param>
         <briefdescription>
@@ -15421,11 +15421,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaAttribute" kindref="compound">xmlSchemaAttributePtr</ref></type>
+          <type>xmlSchemaAttributePtr</type>
           <declname>attr</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Attribute Declaration Properties Correct (a-props-correct) </para>
+<para>Schema Component Constraint: Attribute Declaration Properties Correct (a-props-correct). </para>
         </briefdescription>
         <detaileddescription>
 <para>Validates the value constraints of an attribute declaration/use. NOTE that this needs the simple type definitions to be already built and checked. <parameterlist kind="param"><parameteritem>
@@ -15452,16 +15452,16 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="19070" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="19070" bodyend="19132"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1ac565513b690edabafa8f5daa53b3cdef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+        <type>xmlSchemaElementPtr</type>
         <definition>static xmlSchemaElementPtr xmlSchemaCheckSubstGroupCircular</definition>
         <argsstring>(xmlSchemaElementPtr elemDecl, xmlSchemaElementPtr ancestor)</argsstring>
         <name>xmlSchemaCheckSubstGroupCircular</name>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>ancestor</declname>
         </param>
         <briefdescription>
@@ -15482,11 +15482,11 @@
           <declname>pctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Element Declaration Properties Correct (e-props-correct) </para>
+<para>Schema Component Constraint: Element Declaration Properties Correct (e-props-correct). </para>
         </briefdescription>
         <detaileddescription>
 <para>STATUS: missing: (6) <parameterlist kind="param"><parameteritem>
@@ -15522,11 +15522,11 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Substitution Group (cos-equiv-class) </para>
+<para>Schema Component Constraint: Substitution Group (cos-equiv-class). </para>
         </briefdescription>
         <detaileddescription>
 <para>In Libxml2 the subst. groups will be precomputed, in terms of that a list will be built for each subst. group head, holding all direct referents to this head. NOTE that this function needs:<orderedlist>
@@ -15673,7 +15673,7 @@
           <declname>use</declname>
         </param>
         <briefdescription>
-<para>Schema Component Constraint: Attribute Use Correct (au-props-correct) </para>
+<para>Schema Component Constraint: Attribute Use Correct (au-props-correct). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -15705,7 +15705,7 @@
         <argsstring>(xmlSchemaAttributePtr item, xmlSchemaParserCtxtPtr ctxt)</argsstring>
         <name>xmlSchemaResolveAttrTypeReferences</name>
         <param>
-          <type><ref refid="struct__xmlSchemaAttribute" kindref="compound">xmlSchemaAttributePtr</ref></type>
+          <type>xmlSchemaAttributePtr</type>
           <declname>item</declname>
         </param>
         <param>
@@ -16155,11 +16155,11 @@
           <declname>vctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -16306,11 +16306,11 @@
           <declname>vctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchema" kindref="compound">xmlSchemaPtr</ref></type>
+          <type>xmlSchemaPtr</type>
           <declname>schema</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -17132,7 +17132,7 @@
           <declname>vctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <briefdescription>
@@ -17271,7 +17271,7 @@
           <declname>vctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>attrNode</declname>
         </param>
         <param>
@@ -17385,11 +17385,11 @@
           <declname>actxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -17426,7 +17426,7 @@
         <argsstring>(xmlSchemaTypePtr type, const xmlChar *value)</argsstring>
         <name>xmlSchemaNormalizeValue</name>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -17513,11 +17513,11 @@
           <declname>iattr</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref> *</type>
+          <type>xmlSchemaTypePtr *</type>
           <declname>localType</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaElement" kindref="compound">xmlSchemaElementPtr</ref></type>
+          <type>xmlSchemaElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <briefdescription>
@@ -17702,7 +17702,7 @@
           <declname>inode</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+          <type>xmlSchemaTypePtr</type>
           <declname>type</declname>
         </param>
         <param>
@@ -18296,7 +18296,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlSchemaValidOption </para>
+<para>a combination of <ref refid="xmlschemas_8h_1a8e16b29a07b1cd459f50505926c8edc8" kindref="member">xmlSchemaValidOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -18600,7 +18600,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="27836" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="27836" bodyend="27844"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1af739aa5ddedb45fde5740fcb1bdfa519" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlParserInput" kindref="compound">xmlParserInputPtr</ref></type>
+        <type>xmlParserInputPtr</type>
         <definition>static xmlParserInputPtr resolveEntitySplit</definition>
         <argsstring>(void *ctx, const xmlChar *publicId, const xmlChar *systemId)</argsstring>
         <name>resolveEntitySplit</name>
@@ -18625,7 +18625,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="27847" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="27847" bodyend="27855"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a7b8c4c32cd634e2e2a1847d28a6880c0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlEntity" kindref="compound">xmlEntityPtr</ref></type>
+        <type>xmlEntityPtr</type>
         <definition>static xmlEntityPtr getEntitySplit</definition>
         <argsstring>(void *ctx, const xmlChar *name)</argsstring>
         <name>getEntitySplit</name>
@@ -18646,7 +18646,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="27858" column="1" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="27858" bodyend="27865"/>
       </memberdef>
       <memberdef kind="function" id="xmlschemas_8c_1a7c41f7fbd3e8b06f1dde12c80682a097" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlEntity" kindref="compound">xmlEntityPtr</ref></type>
+        <type>xmlEntityPtr</type>
         <definition>static xmlEntityPtr getParameterEntitySplit</definition>
         <argsstring>(void *ctx, const xmlChar *name)</argsstring>
         <name>getParameterEntitySplit</name>
@@ -18733,7 +18733,7 @@
           <declname>defaultValue</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlEnumeration" kindref="compound">xmlEnumerationPtr</ref></type>
+          <type>xmlEnumerationPtr</type>
           <declname>tree</declname>
         </param>
         <briefdescription>
@@ -18762,7 +18762,7 @@
           <declname>type</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElementContent" kindref="compound">xmlElementContentPtr</ref></type>
+          <type>xmlElementContentPtr</type>
           <declname>content</declname>
         </param>
         <briefdescription>
@@ -18845,7 +18845,7 @@
           <declname>ctx</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlSAXLocator" kindref="compound">xmlSAXLocatorPtr</ref></type>
+          <type>xmlSAXLocatorPtr</type>
           <declname>loc</declname>
         </param>
         <briefdescription>
@@ -19217,7 +19217,7 @@
 <parametername>sax</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to the original xmlSAXHandler </para>
+<para>a pointer to the original <ref refid="tree_8h_1a45238c4ba896d6577bb4986e98122e03" kindref="member">xmlSAXHandler</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -19346,7 +19346,7 @@
 <parametername>ctx</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -19384,7 +19384,7 @@
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>pctxt</declname>
         </param>
         <briefdescription>

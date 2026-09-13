@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlXIncludeCtxt" kind="struct" language="C++" prot="public">
     <compoundname>_xmlXIncludeCtxt</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct__xmlXIncludeCtxt_1acb7e0779c02127031b073502aca38a8c" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr doc</definition>
         <argsstring></argsstring>
         <name>doc</name>
@@ -256,7 +256,7 @@
         <location file="/builds/GNOME/libxml2/xinclude.c" line="104" column="13" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlXIncludeCtxt_1a7473285f86001168c6d3f7b611dd6ff8" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlXPathContext" kindref="compound">xmlXPathContextPtr</ref></type>
+        <type>xmlXPathContextPtr</type>
         <definition>xmlXPathContextPtr xpctxt</definition>
         <argsstring></argsstring>
         <name>xpctxt</name>

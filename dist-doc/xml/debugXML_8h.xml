@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="debugXML_8h" kind="file" language="C++">
     <compoundname>debugXML.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -598,7 +598,7 @@
           <declname>doc</declname>
         </param>
         <briefdescription>
-<para>Check the document for potential content problems, and output the errors to <computeroutput>output</computeroutput> </para>
+<para>Check the document for potential content problems, and output the errors to <computeroutput>output</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

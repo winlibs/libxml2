@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xlink_8h" kind="file" language="C++">
     <compoundname>xlink.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -380,7 +380,7 @@
         <location file="xlink.h" line="147" column="28" bodyfile="xlink.h" bodystart="147" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xlink_8h_1a4d5e89f203ce48b658cda921a0274e4e" prot="public" static="no">
-        <type><ref refid="struct__xlinkHandler" kindref="compound">xlinkHandler</ref> *</type>
+        <type>xlinkHandler *</type>
         <definition>typedef xlinkHandler* xlinkHandlerPtr</definition>
         <argsstring></argsstring>
         <name>xlinkHandlerPtr</name>
@@ -447,7 +447,7 @@
         <location file="xlink.h" line="171" column="1" bodyfile="/builds/GNOME/libxml2/xlink.c" bodystart="81" bodyend="83" declfile="xlink.h" declline="171" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xlink_8h_1a57b489319e3fccb2ee99df55becd2196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xlinkHandler" kindref="compound">xlinkHandler</ref> *</type>
+        <type>xlinkHandler *</type>
         <definition>xlinkHandler * xlinkGetDefaultHandler</definition>
         <argsstring>(void)</argsstring>
         <name>xlinkGetDefaultHandler</name>
@@ -474,7 +474,7 @@
         <argsstring>(xlinkHandler *handler)</argsstring>
         <name>xlinkSetDefaultHandler</name>
         <param>
-          <type><ref refid="struct__xlinkHandler" kindref="compound">xlinkHandler</ref> *</type>
+          <type>xlinkHandler *</type>
           <declname>handler</declname>
         </param>
         <briefdescription>

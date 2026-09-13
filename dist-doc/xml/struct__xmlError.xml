@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlError" kind="struct" language="C++" prot="public">
     <compoundname>_xmlError</compoundname>
     <includes local="no">xmlerror.h</includes>
@@ -11,7 +11,7 @@
         <name>domain</name>
         <qualifiedname>_xmlError::domain</qualifiedname>
         <briefdescription>
-<para>An xmlErrorDomain value. </para>
+<para>An <ref refid="xmlerror_8h_1abd34713153e12c10b931c4e076e0481a" kindref="member">xmlErrorDomain</ref> value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -29,7 +29,7 @@
 <para>The error code, e.g. </para>
         </briefdescription>
         <detaileddescription>
-<para>an xmlParserErrors. </para>
+<para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

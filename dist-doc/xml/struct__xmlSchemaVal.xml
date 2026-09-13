@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaVal" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaVal</compoundname>
     <sectiondef kind="public-attrib">
@@ -171,7 +171,7 @@
         </inbodydescription>
         <location file="/builds/GNOME/libxml2/xmlschemastypes.c" line="121" column="24" bodyfile="/builds/GNOME/libxml2/xmlschemastypes.c" bodystart="121" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__xmlSchemaVal_1ac317e2dd5f6b89780e220ef17eb4c336" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct__xmlSchemaVal_1afc73d20d683d88c3b3b2c132f534a8d4" prot="public" static="no" mutable="no">
         <type>union _xmlSchemaVal</type>
         <definition>union _xmlSchemaVal value</definition>
         <argsstring></argsstring>
@@ -248,7 +248,7 @@
       <member refid="struct__xmlSchemaVal_1a417710996282e5fb405115cfcc9f4b15" prot="public" virt="non-virtual"><scope>_xmlSchemaVal</scope><name>qname</name></member>
       <member refid="struct__xmlSchemaVal_1ac63702296edcf9bf955f021cc570661e" prot="public" virt="non-virtual"><scope>_xmlSchemaVal</scope><name>str</name></member>
       <member refid="struct__xmlSchemaVal_1a9fc28d1eff98254f6b7dbec91e67ce8d" prot="public" virt="non-virtual"><scope>_xmlSchemaVal</scope><name>type</name></member>
-      <member refid="struct__xmlSchemaVal_1ac317e2dd5f6b89780e220ef17eb4c336" prot="public" virt="non-virtual"><scope>_xmlSchemaVal</scope><name>value</name></member>
+      <member refid="struct__xmlSchemaVal_1afc73d20d683d88c3b3b2c132f534a8d4" prot="public" virt="non-virtual"><scope>_xmlSchemaVal</scope><name>value</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

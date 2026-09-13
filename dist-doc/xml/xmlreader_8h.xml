@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlreader_8h" kind="file" language="C++">
     <compoundname>xmlreader.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -393,7 +393,7 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Some common options to use with <ref refid="xmlreader_8h_1a689e58d6a0b5527e898d56a6299f60e3" kindref="member">xmlTextReaderSetParserProp</ref>, but it is better to use xmlParserOption and the xmlReaderNewxxx and xmlReaderForxxx APIs now. </para>
+<para>Some common options to use with <ref refid="xmlreader_8h_1a689e58d6a0b5527e898d56a6299f60e3" kindref="member">xmlTextReaderSetParserProp</ref>, but it is better to use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> and the xmlReaderNewxxx and xmlReaderForxxx APIs now. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -681,7 +681,7 @@
           <declname>URI</declname>
         </param>
         <briefdescription>
-<para>Create an xmlTextReader structure fed with <computeroutput>input</computeroutput> </para>
+<para>Create an <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> structure fed with <computeroutput>input</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -689,7 +689,7 @@
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlParserInputBuffer used to read data </para>
+<para>the <ref refid="tree_8h_1a7a0ca7c6b30d7a9103b28626f820cab9" kindref="member">xmlParserInputBuffer</ref> used to read data </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -701,13 +701,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextReader or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="123" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1987" bodyend="2076" declfile="xmlreader.h" declline="123" declcolumn="1"/>
+        <location file="xmlreader.h" line="123" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1986" bodyend="2075" declfile="xmlreader.h" declline="123" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a4cfc30ccbd5eb35cf538b1e071cfcf65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> *</type>
@@ -719,7 +719,7 @@
           <declname>URI</declname>
         </param>
         <briefdescription>
-<para>Create an xmlTextReader structure fed with the resource at <computeroutput>URI</computeroutput> </para>
+<para>Create an <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> structure fed with the resource at <computeroutput>URI</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -731,13 +731,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextReader or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="126" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2085" bodyend="2118" declfile="xmlreader.h" declline="126" declcolumn="1"/>
+        <location file="xmlreader.h" line="126" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2084" bodyend="2117" declfile="xmlreader.h" declline="126" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a120b2f6a5906f393ff55dd4df104469d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -757,7 +757,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -765,7 +765,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="129" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2126" bodyend="2186" declfile="xmlreader.h" declline="129" declcolumn="1"/>
+        <location file="xmlreader.h" line="129" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2125" bodyend="2185" declfile="xmlreader.h" declline="129" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a91361671d25a0e0226e01a2539b9eb57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -809,7 +809,7 @@
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>xmlParserInputBuffer used to feed the reader, will be destroyed with it. </para>
+<para><ref refid="tree_8h_1a7a0ca7c6b30d7a9103b28626f820cab9" kindref="member">xmlParserInputBuffer</ref> used to feed the reader, will be destroyed with it. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -833,7 +833,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -843,7 +843,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="132" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4715" bodyend="4894" declfile="xmlreader.h" declline="132" declcolumn="13"/>
+        <location file="xmlreader.h" line="132" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4714" bodyend="4893" declfile="xmlreader.h" declline="132" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ae583601c9027285d0bd1c8fbf38afa8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -884,7 +884,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="136" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4903" bodyend="4908" declfile="xmlreader.h" declline="136" declcolumn="13"/>
+        <location file="xmlreader.h" line="136" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4902" bodyend="4907" declfile="xmlreader.h" declline="136" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a897ef70178be7a161b458e01b700a959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlerror_8h_1a7b8f6e2cdbb2916120df21e21d76ae91" kindref="member">xmlError</ref> *</type>
@@ -915,7 +915,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="139" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4917" bodyend="4922" declfile="xmlreader.h" declline="139" declcolumn="13"/>
+        <location file="xmlreader.h" line="139" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4916" bodyend="4921" declfile="xmlreader.h" declline="139" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a84ae2b3c4a335c40d9a6e82851cab279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -935,7 +935,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -965,7 +965,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -975,7 +975,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="149" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1657" bodyend="1685" declfile="xmlreader.h" declline="149" declcolumn="1"/>
+        <location file="xmlreader.h" line="149" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1656" bodyend="1684" declfile="xmlreader.h" declline="149" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1af9704b4f8020be258b2f5e0436c5219f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -995,7 +995,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1005,7 +1005,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="152" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1696" bodyend="1723" declfile="xmlreader.h" declline="152" declcolumn="1"/>
+        <location file="xmlreader.h" line="152" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1695" bodyend="1722" declfile="xmlreader.h" declline="152" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a4baf57e946b0660d70f847e87452df2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1025,7 +1025,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1035,7 +1035,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="156" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1736" bodyend="1802" declfile="xmlreader.h" declline="156" declcolumn="1"/>
+        <location file="xmlreader.h" line="156" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1735" bodyend="1801" declfile="xmlreader.h" declline="156" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a8815756c80f19350b4d00e5ba0e70e12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1055,7 +1055,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1065,7 +1065,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="158" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2804" bodyend="2847" declfile="xmlreader.h" declline="158" declcolumn="1"/>
+        <location file="xmlreader.h" line="158" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2803" bodyend="2846" declfile="xmlreader.h" declline="158" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ade045e97e1f09963582eb872edc3877c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1085,7 +1085,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1095,7 +1095,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="164" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2884" bodyend="2917" declfile="xmlreader.h" declline="164" declcolumn="1"/>
+        <location file="xmlreader.h" line="164" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2883" bodyend="2916" declfile="xmlreader.h" declline="164" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a1d24bf7867cc8cc209048cc5b6f485cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1115,7 +1115,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1125,7 +1125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="166" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3372" bodyend="3385" declfile="xmlreader.h" declline="166" declcolumn="1"/>
+        <location file="xmlreader.h" line="166" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3371" bodyend="3384" declfile="xmlreader.h" declline="166" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a5c122351cd1608307510c8439343cc9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1145,7 +1145,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1155,7 +1155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="168" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3394" bodyend="3410" declfile="xmlreader.h" declline="168" declcolumn="1"/>
+        <location file="xmlreader.h" line="168" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3393" bodyend="3409" declfile="xmlreader.h" declline="168" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a4941c548e4a3b3e1614e564c2ce000ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1175,7 +1175,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1185,7 +1185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="170" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3419" bodyend="3442" declfile="xmlreader.h" declline="170" declcolumn="1"/>
+        <location file="xmlreader.h" line="170" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3418" bodyend="3441" declfile="xmlreader.h" declline="170" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a22bd0dc388ac4a949cceecece8687b08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1205,7 +1205,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1215,7 +1215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="172" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3559" bodyend="3563" declfile="xmlreader.h" declline="172" declcolumn="1"/>
+        <location file="xmlreader.h" line="172" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3558" bodyend="3562" declfile="xmlreader.h" declline="172" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ad5d76b0f59ee08205453328cfb359006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1235,7 +1235,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1245,7 +1245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="174" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2995" bodyend="3013" declfile="xmlreader.h" declline="174" declcolumn="1"/>
+        <location file="xmlreader.h" line="174" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2994" bodyend="3012" declfile="xmlreader.h" declline="174" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a324ed1a93e571e29d5d8f9f3ea8b42d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1265,17 +1265,17 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlReaderTypes of the current node or -1 in case of error </para>
+<simplesect kind="return"><para>the <ref refid="xmlreader_8h_1a4f386d637aef48c8ee9915717f81ceb6" kindref="member">xmlReaderTypes</ref> of the current node or -1 in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="176" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2928" bodyend="2986" declfile="xmlreader.h" declline="176" declcolumn="1"/>
+        <location file="xmlreader.h" line="176" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2927" bodyend="2985" declfile="xmlreader.h" declline="176" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a2b33cf5d490d1211d5e704225ddc87b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1295,7 +1295,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1305,7 +1305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="178" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3572" bodyend="3577" declfile="xmlreader.h" declline="178" declcolumn="1"/>
+        <location file="xmlreader.h" line="178" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3571" bodyend="3576" declfile="xmlreader.h" declline="178" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aaf9683411a15314a7c0cecda38c76a81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1325,7 +1325,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1355,7 +1355,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1365,7 +1365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="182" column="25" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4381" bodyend="4396" declfile="xmlreader.h" declline="182" declcolumn="25"/>
+        <location file="xmlreader.h" line="182" column="25" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4380" bodyend="4395" declfile="xmlreader.h" declline="182" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a9a3776e6e8fbe7666696c1d220d307b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1385,7 +1385,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1395,7 +1395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="185" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3348" bodyend="3363" declfile="xmlreader.h" declline="185" declcolumn="5"/>
+        <location file="xmlreader.h" line="185" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3347" bodyend="3362" declfile="xmlreader.h" declline="185" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a8d99c43b7c1d443bfa7bde9c8f5b278b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1415,7 +1415,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1425,7 +1425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="187" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3052" bodyend="3071" declfile="xmlreader.h" declline="187" declcolumn="5"/>
+        <location file="xmlreader.h" line="187" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3051" bodyend="3070" declfile="xmlreader.h" declline="187" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ae3ca6d002a4f5cbe2a12b338083a48b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1445,7 +1445,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1455,7 +1455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="189" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3152" bodyend="3205" declfile="xmlreader.h" declline="189" declcolumn="5"/>
+        <location file="xmlreader.h" line="189" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3151" bodyend="3204" declfile="xmlreader.h" declline="189" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a7f9777c37773ffe3ef5cb79bc7b91934" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1475,7 +1475,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1485,7 +1485,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="191" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3301" bodyend="3317" declfile="xmlreader.h" declline="191" declcolumn="5"/>
+        <location file="xmlreader.h" line="191" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3300" bodyend="3316" declfile="xmlreader.h" declline="191" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aa76f09799e915752b10ae8d540477bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1505,7 +1505,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1515,7 +1515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="193" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3245" bodyend="3265" declfile="xmlreader.h" declline="193" declcolumn="5"/>
+        <location file="xmlreader.h" line="193" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3244" bodyend="3264" declfile="xmlreader.h" declline="193" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a07bd2ad32320e6227bb85be669934044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1535,7 +1535,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1545,7 +1545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="195" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3602" bodyend="3616" declfile="xmlreader.h" declline="195" declcolumn="5"/>
+        <location file="xmlreader.h" line="195" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3601" bodyend="3615" declfile="xmlreader.h" declline="195" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a688ca664bab522f3985747663bacbe44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1569,7 +1569,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1587,7 +1587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="197" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3628" bodyend="3632" declfile="xmlreader.h" declline="197" declcolumn="5"/>
+        <location file="xmlreader.h" line="197" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3627" bodyend="3631" declfile="xmlreader.h" declline="197" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aee9523ea0f6a3efff7d2019c3faf110b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1607,7 +1607,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1617,7 +1617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="200" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3499" bodyend="3549" declfile="xmlreader.h" declline="200" declcolumn="5"/>
+        <location file="xmlreader.h" line="200" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3498" bodyend="3548" declfile="xmlreader.h" declline="200" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aa6cd85b068a36923eacc24ac2b014672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1637,7 +1637,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1647,7 +1647,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="207" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3327" bodyend="3338" declfile="xmlreader.h" declline="207" declcolumn="1"/>
+        <location file="xmlreader.h" line="207" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3326" bodyend="3337" declfile="xmlreader.h" declline="207" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a44fb8791d977abc9277ec05a7f6ab95f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1667,7 +1667,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1677,7 +1677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="209" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3023" bodyend="3042" declfile="xmlreader.h" declline="209" declcolumn="1"/>
+        <location file="xmlreader.h" line="209" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3022" bodyend="3041" declfile="xmlreader.h" declline="209" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a262a2e94ccb0dc45416373f132de61cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1697,7 +1697,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1707,7 +1707,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="211" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3081" bodyend="3142" declfile="xmlreader.h" declline="211" declcolumn="1"/>
+        <location file="xmlreader.h" line="211" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3080" bodyend="3141" declfile="xmlreader.h" declline="211" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a380705fc1010cf41f7618ca726ca2388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1727,7 +1727,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1737,7 +1737,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="213" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3275" bodyend="3291" declfile="xmlreader.h" declline="213" declcolumn="1"/>
+        <location file="xmlreader.h" line="213" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3274" bodyend="3290" declfile="xmlreader.h" declline="213" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1afa37b9f423be5ba37f28f19b05a808eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1757,7 +1757,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1767,7 +1767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="215" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3215" bodyend="3235" declfile="xmlreader.h" declline="215" declcolumn="1"/>
+        <location file="xmlreader.h" line="215" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3214" bodyend="3234" declfile="xmlreader.h" declline="215" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ac1f6fa9cb77b3bf2c5c983d423275b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1787,7 +1787,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1797,7 +1797,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="217" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3587" bodyend="3593" declfile="xmlreader.h" declline="217" declcolumn="1"/>
+        <location file="xmlreader.h" line="217" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3586" bodyend="3592" declfile="xmlreader.h" declline="217" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a355e3b8727652e4a5cdd507c38d6571e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1817,7 +1817,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1827,7 +1827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="219" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3452" bodyend="3489" declfile="xmlreader.h" declline="219" declcolumn="1"/>
+        <location file="xmlreader.h" line="219" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3451" bodyend="3488" declfile="xmlreader.h" declline="219" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a6d5c3a5f71c2c791933a57de627606fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1847,7 +1847,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1857,7 +1857,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="225" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2202" bodyend="2237" declfile="xmlreader.h" declline="225" declcolumn="5"/>
+        <location file="xmlreader.h" line="225" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2201" bodyend="2236" declfile="xmlreader.h" declline="225" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a71b1925dc530114d7c6e208386829845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1881,7 +1881,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1899,7 +1899,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="227" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2249" bodyend="2288" declfile="xmlreader.h" declline="227" declcolumn="5"/>
+        <location file="xmlreader.h" line="227" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2248" bodyend="2287" declfile="xmlreader.h" declline="227" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a8b1f287162f961ba3c68503cc044d2f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1923,7 +1923,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1941,7 +1941,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="230" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2299" bodyend="2370" declfile="xmlreader.h" declline="230" declcolumn="5"/>
+        <location file="xmlreader.h" line="230" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2298" bodyend="2369" declfile="xmlreader.h" declline="230" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a27fbbb00e0bbb835650b223c2e5d7d77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1969,7 +1969,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1995,7 +1995,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="233" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2383" bodyend="2421" declfile="xmlreader.h" declline="233" declcolumn="5"/>
+        <location file="xmlreader.h" line="233" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2382" bodyend="2420" declfile="xmlreader.h" declline="233" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a032c3bd1376ab9dce24ea58608239b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1a7a0ca7c6b30d7a9103b28626f820cab9" kindref="member">xmlParserInputBuffer</ref> *</type>
@@ -2017,17 +2017,17 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlParserInputBuffer attached to the XML or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a7a0ca7c6b30d7a9103b28626f820cab9" kindref="member">xmlParserInputBuffer</ref> attached to the XML or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="237" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2437" bodyend="2470" declfile="xmlreader.h" declline="237" declcolumn="5"/>
+        <location file="xmlreader.h" line="237" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2436" bodyend="2469" declfile="xmlreader.h" declline="237" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a2ec92cde550e30da4d01796cb2e453dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2051,7 +2051,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2069,7 +2069,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="239" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2482" bodyend="2499" declfile="xmlreader.h" declline="239" declcolumn="5"/>
+        <location file="xmlreader.h" line="239" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2481" bodyend="2498" declfile="xmlreader.h" declline="239" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a2edf41cd14fb04dbcf0cadbb0de0a8d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2093,7 +2093,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2111,7 +2111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="242" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2511" bodyend="2547" declfile="xmlreader.h" declline="242" declcolumn="5"/>
+        <location file="xmlreader.h" line="242" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2510" bodyend="2546" declfile="xmlreader.h" declline="242" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a82b00ba39d899bbeae4acb925a54aa50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2135,7 +2135,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2153,7 +2153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="245" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2558" bodyend="2648" declfile="xmlreader.h" declline="245" declcolumn="5"/>
+        <location file="xmlreader.h" line="245" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2557" bodyend="2647" declfile="xmlreader.h" declline="245" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ab61237b669ab0c47dfbd1f720a0e06c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2181,7 +2181,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2207,7 +2207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="248" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2660" bodyend="2707" declfile="xmlreader.h" declline="248" declcolumn="5"/>
+        <location file="xmlreader.h" line="248" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2659" bodyend="2706" declfile="xmlreader.h" declline="248" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a5174709eaed47522d27663fc5e59a85f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2227,7 +2227,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2237,7 +2237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="252" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2717" bodyend="2734" declfile="xmlreader.h" declline="252" declcolumn="5"/>
+        <location file="xmlreader.h" line="252" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2716" bodyend="2733" declfile="xmlreader.h" declline="252" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a1ddb67b4ab1e889649045dd373aa6a8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2257,7 +2257,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2267,7 +2267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="254" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2744" bodyend="2771" declfile="xmlreader.h" declline="254" declcolumn="5"/>
+        <location file="xmlreader.h" line="254" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2743" bodyend="2770" declfile="xmlreader.h" declline="254" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ace7d247afe2d3766c8cfb948cfa8a042" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2287,7 +2287,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2297,7 +2297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="256" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2781" bodyend="2793" declfile="xmlreader.h" declline="256" declcolumn="5"/>
+        <location file="xmlreader.h" line="256" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2780" bodyend="2792" declfile="xmlreader.h" declline="256" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a5fb71e7ebe4062b857b1971a72da9b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2318,7 +2318,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2328,7 +2328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="258" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3645" bodyend="3649" declfile="xmlreader.h" declline="258" declcolumn="5"/>
+        <location file="xmlreader.h" line="258" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3644" bodyend="3648" declfile="xmlreader.h" declline="258" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1abfbb348dc3e50393b8b8589c7d63c07f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2348,7 +2348,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2358,7 +2358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="260" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2857" bodyend="2869" declfile="xmlreader.h" declline="260" declcolumn="5"/>
+        <location file="xmlreader.h" line="260" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="2856" bodyend="2868" declfile="xmlreader.h" declline="260" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a689e58d6a0b5527e898d56a6299f60e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2387,7 +2387,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2395,7 +2395,7 @@
 <parametername>prop</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlParserProperties to set </para>
+<para>the <ref refid="xmlreader_8h_1ac10f93d6b2a0a83c0ee74ace5391df43" kindref="member">xmlParserProperties</ref> to set </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2413,7 +2413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="266" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3668" bodyend="3720" declfile="xmlreader.h" declline="266" declcolumn="5"/>
+        <location file="xmlreader.h" line="266" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3667" bodyend="3719" declfile="xmlreader.h" declline="266" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a2fe30f5d7c23fd909e3cecd2cfe2e240" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2437,7 +2437,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2445,7 +2445,7 @@
 <parametername>prop</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlParserProperties to get </para>
+<para>the <ref refid="xmlreader_8h_1ac10f93d6b2a0a83c0ee74ace5391df43" kindref="member">xmlParserProperties</ref> to get </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2455,7 +2455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="270" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3730" bodyend="3753" declfile="xmlreader.h" declline="270" declcolumn="5"/>
+        <location file="xmlreader.h" line="270" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3729" bodyend="3752" declfile="xmlreader.h" declline="270" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a616fd1021a34284d33e93a7e5a6d4b3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -2467,7 +2467,7 @@
           <declname>reader</declname>
         </param>
         <briefdescription>
-<para>Hacking interface allowing to get the xmlNode corresponding to the current node being accessed by the xmlTextReader. </para>
+<para>Hacking interface allowing to get the <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> corresponding to the current node being accessed by the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>This is dangerous because the underlying node may be destroyed on the next Reads.</para>
@@ -2476,17 +2476,17 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlNode or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="273" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3797" bodyend="3804" declfile="xmlreader.h" declline="273" declcolumn="5"/>
+        <location file="xmlreader.h" line="273" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3796" bodyend="3803" declfile="xmlreader.h" declline="273" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a9792d23394198bf1dc49551750ff0883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2516,7 +2516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="276" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3763" bodyend="3770" declfile="xmlreader.h" declline="276" declcolumn="13"/>
+        <location file="xmlreader.h" line="276" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3762" bodyend="3769" declfile="xmlreader.h" declline="276" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a8cfc2a7695c2df8bf4e200865282ec50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2546,7 +2546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="279" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3779" bodyend="3786" declfile="xmlreader.h" declline="279" declcolumn="13"/>
+        <location file="xmlreader.h" line="279" column="13" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3778" bodyend="3785" declfile="xmlreader.h" declline="279" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1af819830929dbbbe6d0b21d3a90f1a213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -2561,23 +2561,23 @@
 <para>This tells the XML Reader to preserve the current node. </para>
         </briefdescription>
         <detaileddescription>
-<para>The caller must also use xmlTextReaderCurrentDoc to keep an handle on the resulting document once parsing has finished</para>
+<para>The caller must also use <ref refid="xmlreader_8h_1ae038e15dfa7bd8fb600349599a29f6dd" kindref="member">xmlTextReaderCurrentDoc</ref> to keep an handle on the resulting document once parsing has finished</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlNode or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="282" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3815" bodyend="3838" declfile="xmlreader.h" declline="282" declcolumn="5"/>
+        <location file="xmlreader.h" line="282" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3814" bodyend="3837" declfile="xmlreader.h" declline="282" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a8c214353c5f8e0ee99c16c4d2af559b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2600,13 +2600,13 @@
 <para>This tells the XML Reader to preserve all nodes matched by the pattern. </para>
         </briefdescription>
         <detaileddescription>
-<para>The caller must also use xmlTextReaderCurrentDoc to keep an handle on the resulting document once parsing has finished</para>
+<para>The caller must also use <ref refid="xmlreader_8h_1ae038e15dfa7bd8fb600349599a29f6dd" kindref="member">xmlTextReaderCurrentDoc</ref> to keep an handle on the resulting document once parsing has finished</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2632,7 +2632,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="285" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3852" bodyend="3884" declfile="xmlreader.h" declline="285" declcolumn="5"/>
+        <location file="xmlreader.h" line="285" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3851" bodyend="3883" declfile="xmlreader.h" declline="285" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ae038e15dfa7bd8fb600349599a29f6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -2644,7 +2644,7 @@
           <declname>reader</declname>
         </param>
         <briefdescription>
-<para>Hacking interface allowing to get the xmlDoc corresponding to the current document being accessed by the xmlTextReader. </para>
+<para>Hacking interface allowing to get the <ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> corresponding to the current document being accessed by the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>NOTE: as a result of this call, the reader will not destroy the associated XML document and calling <ref refid="tree_8h_1a703e34a8547e2823fa8cf7059c0bbc9d" kindref="member">xmlFreeDoc</ref> on the result is needed once the reader parsing has finished.</para>
@@ -2653,17 +2653,17 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlDoc or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="290" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3898" bodyend="3908" declfile="xmlreader.h" declline="290" declcolumn="5"/>
+        <location file="xmlreader.h" line="290" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3897" bodyend="3907" declfile="xmlreader.h" declline="290" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a781d81f2aebd642a4e9c97be0e8c08a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> *</type>
@@ -2678,17 +2678,17 @@
 <para>Reads the contents of the current node and the full subtree. </para>
         </briefdescription>
         <detaileddescription>
-<para>It then makes the subtree available until the next xmlTextReaderRead call</para>
+<para>It then makes the subtree available until the next <ref refid="xmlreader_8h_1a84ae2b3c4a335c40d9a6e82851cab279" kindref="member">xmlTextReaderRead</ref> call</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a node pointer valid until the next xmlTextReaderRead call or NULL in case of error. </para>
+<simplesect kind="return"><para>a node pointer valid until the next <ref refid="xmlreader_8h_1a84ae2b3c4a335c40d9a6e82851cab279" kindref="member">xmlTextReaderRead</ref> call or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2714,7 +2714,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2745,7 +2745,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2755,7 +2755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="296" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1951" bodyend="1972" declfile="xmlreader.h" declline="296" declcolumn="5"/>
+        <location file="xmlreader.h" line="296" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="1950" bodyend="1971" declfile="xmlreader.h" declline="296" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a1c19e6074e5baf7cb8211ee0762ea7ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2775,7 +2775,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2785,7 +2785,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="298" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4680" bodyend="4695" declfile="xmlreader.h" declline="298" declcolumn="5"/>
+        <location file="xmlreader.h" line="298" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4679" bodyend="4694" declfile="xmlreader.h" declline="298" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1acbeff887ed189c38b7dace03705a6e5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2810,7 +2810,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2828,7 +2828,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="301" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4365" bodyend="4368" declfile="xmlreader.h" declline="301" declcolumn="5"/>
+        <location file="xmlreader.h" line="301" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4364" bodyend="4367" declfile="xmlreader.h" declline="301" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a1aabbc5b018e8ef39e0647b2e7c8de8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2857,7 +2857,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2883,7 +2883,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="304" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4347" bodyend="4352" declfile="xmlreader.h" declline="304" declcolumn="5"/>
+        <location file="xmlreader.h" line="304" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4346" bodyend="4351" declfile="xmlreader.h" declline="304" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aa3bcddc011c792fe9750af194ca897b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2908,7 +2908,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2926,7 +2926,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="309" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3924" bodyend="3962" declfile="xmlreader.h" declline="309" declcolumn="5"/>
+        <location file="xmlreader.h" line="309" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="3923" bodyend="3961" declfile="xmlreader.h" declline="309" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a5c554854677583e4acc5b653a0094f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2951,7 +2951,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2969,7 +2969,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="314" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4328" bodyend="4331" declfile="xmlreader.h" declline="314" declcolumn="5"/>
+        <location file="xmlreader.h" line="314" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4327" bodyend="4330" declfile="xmlreader.h" declline="314" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ad45e85fb664514e128000ce78965334a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2998,7 +2998,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3024,7 +3024,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="317" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4310" bodyend="4315" declfile="xmlreader.h" declline="317" declcolumn="5"/>
+        <location file="xmlreader.h" line="317" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4309" bodyend="4314" declfile="xmlreader.h" declline="317" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ab7e791d3e36b135fc5ec0423bbdcf809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3049,7 +3049,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3067,7 +3067,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="321" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4031" bodyend="4093" declfile="xmlreader.h" declline="321" declcolumn="5"/>
+        <location file="xmlreader.h" line="321" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4030" bodyend="4092" declfile="xmlreader.h" declline="321" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1afce6edf8fb9f01290f777e00196d2ff6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -3087,7 +3087,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3097,7 +3097,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="325" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4406" bodyend="4421" declfile="xmlreader.h" declline="325" declcolumn="5"/>
+        <location file="xmlreader.h" line="325" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4405" bodyend="4420" declfile="xmlreader.h" declline="325" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a9f1d9d30505de9588560da7ce0436cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3117,7 +3117,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3127,7 +3127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="327" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4432" bodyend="4444" declfile="xmlreader.h" declline="327" declcolumn="5"/>
+        <location file="xmlreader.h" line="327" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4431" bodyend="4443" declfile="xmlreader.h" declline="327" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aaaaf31e6bc5ebeaa9284db9b9b387825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -3160,7 +3160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="334" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4940" bodyend="4949" declfile="xmlreader.h" declline="334" declcolumn="1"/>
+        <location file="xmlreader.h" line="334" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4939" bodyend="4948" declfile="xmlreader.h" declline="334" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aee6234e7239ddb71444d02b10ab09d96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> *</type>
@@ -3190,7 +3190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="340" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4959" bodyend="4983" declfile="xmlreader.h" declline="340" declcolumn="1"/>
+        <location file="xmlreader.h" line="340" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4958" bodyend="4982" declfile="xmlreader.h" declline="340" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a021cdf8d7fa29d02f4f19ff1361a8f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> *</type>
@@ -3217,7 +3217,7 @@
 <para>Create an xmltextReader for an XML in-memory document. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cur</parametername>
@@ -3247,7 +3247,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3257,7 +3257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="342" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4996" bodyend="5007" declfile="xmlreader.h" declline="342" declcolumn="1"/>
+        <location file="xmlreader.h" line="342" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4995" bodyend="5006" declfile="xmlreader.h" declline="342" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a6cec1bfa13924a6619f36d7df9e7bcac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> *</type>
@@ -3280,7 +3280,7 @@
 <para>parse an XML file from the filesystem or the network. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>filename</parametername>
@@ -3302,7 +3302,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3312,7 +3312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="347" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5019" bodyend="5031" declfile="xmlreader.h" declline="347" declcolumn="1"/>
+        <location file="xmlreader.h" line="347" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5018" bodyend="5030" declfile="xmlreader.h" declline="347" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a282cf864e5ed1bf6e542949dc9a4c264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> *</type>
@@ -3343,7 +3343,7 @@
 <para>Create an xmltextReader for an XML in-memory document. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buffer</parametername>
@@ -3381,7 +3381,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3391,7 +3391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="351" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5045" bodyend="5066" declfile="xmlreader.h" declline="351" declcolumn="1"/>
+        <location file="xmlreader.h" line="351" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5044" bodyend="5065" declfile="xmlreader.h" declline="351" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a311944cffde686f5f1d45825fe317a71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> *</type>
@@ -3418,7 +3418,7 @@
 <para>Create an xmltextReader for an XML from a file descriptor. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption. NOTE that the file descriptor will not be closed when the reader is closed or reset.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>. NOTE that the file descriptor will not be closed when the reader is closed or reset.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fd</parametername>
@@ -3448,7 +3448,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3458,7 +3458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="357" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5081" bodyend="5118" declfile="xmlreader.h" declline="357" declcolumn="1"/>
+        <location file="xmlreader.h" line="357" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5080" bodyend="5117" declfile="xmlreader.h" declline="357" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aaa84666f52cb34565bf5aacb35e42e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> *</type>
@@ -3493,7 +3493,7 @@
 <para>Create an xmltextReader for an XML document from I/O functions and source. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ioread</parametername>
@@ -3539,7 +3539,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3549,7 +3549,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="362" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5133" bodyend="5161" declfile="xmlreader.h" declline="362" declcolumn="1"/>
+        <location file="xmlreader.h" line="362" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5132" bodyend="5160" declfile="xmlreader.h" declline="362" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aac854ecfe5b3a52f943f359e42cce4c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3568,7 +3568,7 @@
 <para>Setup an xmltextReader to parse a preparsed XML document. </para>
         </briefdescription>
         <detaileddescription>
-<para>This reuses the existing <computeroutput>reader</computeroutput> xmlTextReader.</para>
+<para>This reuses the existing <computeroutput>reader</computeroutput> <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
@@ -3592,7 +3592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="370" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5172" bodyend="5203" declfile="xmlreader.h" declline="370" declcolumn="1"/>
+        <location file="xmlreader.h" line="370" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5171" bodyend="5202" declfile="xmlreader.h" declline="370" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a84679c7b9e9cc719887206e839369c36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3623,7 +3623,7 @@
 <para>Setup an xmltextReader to parse an XML in-memory document. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption. This reuses the existing <computeroutput>reader</computeroutput> xmlTextReader.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>. This reuses the existing <computeroutput>reader</computeroutput> <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
@@ -3661,7 +3661,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3671,7 +3671,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="373" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5218" bodyend="5232" declfile="xmlreader.h" declline="373" declcolumn="1"/>
+        <location file="xmlreader.h" line="373" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5217" bodyend="5231" declfile="xmlreader.h" declline="373" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ac5ac5a5551a922fbca0cb168c2c1cf4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3698,7 +3698,7 @@
 <para>parse an XML file from the filesystem or the network. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption. This reuses the existing <computeroutput>reader</computeroutput> xmlTextReader.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>. This reuses the existing <computeroutput>reader</computeroutput> <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
@@ -3728,7 +3728,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3738,7 +3738,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="379" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5246" bodyend="5287" declfile="xmlreader.h" declline="379" declcolumn="1"/>
+        <location file="xmlreader.h" line="379" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5245" bodyend="5286" declfile="xmlreader.h" declline="379" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1ad1591062d10a61d90f7bcb5fa667b335" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3773,7 +3773,7 @@
 <para>Setup an xmltextReader to parse an XML in-memory document. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption. This reuses the existing <computeroutput>reader</computeroutput> xmlTextReader.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>. This reuses the existing <computeroutput>reader</computeroutput> <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
@@ -3819,7 +3819,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3829,7 +3829,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="384" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5303" bodyend="5319" declfile="xmlreader.h" declline="384" declcolumn="1"/>
+        <location file="xmlreader.h" line="384" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5302" bodyend="5318" declfile="xmlreader.h" declline="384" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a2d7f9fdedbc662d48204ed118fbf5823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3860,7 +3860,7 @@
 <para>Setup an xmltextReader to parse an XML from a file descriptor. </para>
         </briefdescription>
         <detaileddescription>
-<para>NOTE that the file descriptor will not be closed when the reader is closed or reset. The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption. This reuses the existing <computeroutput>reader</computeroutput> xmlTextReader.</para>
+<para>NOTE that the file descriptor will not be closed when the reader is closed or reset. The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>. This reuses the existing <computeroutput>reader</computeroutput> <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
@@ -3898,7 +3898,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3908,7 +3908,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="391" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5336" bodyend="5366" declfile="xmlreader.h" declline="391" declcolumn="1"/>
+        <location file="xmlreader.h" line="391" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5335" bodyend="5365" declfile="xmlreader.h" declline="391" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1afcb72beddbfaf4b7088c161731e5e3ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3947,7 +3947,7 @@
 <para>Setup an xmltextReader to parse an XML document from I/O functions and source. </para>
         </briefdescription>
         <detaileddescription>
-<para>The parsing flags <computeroutput>options</computeroutput> are a combination of xmlParserOption. This reuses the existing <computeroutput>reader</computeroutput> xmlTextReader.</para>
+<para>The parsing flags <computeroutput>options</computeroutput> are a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref>. This reuses the existing <computeroutput>reader</computeroutput> <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>reader</parametername>
@@ -4001,7 +4001,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlParserOption </para>
+<para>a combination of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4011,7 +4011,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="397" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5384" bodyend="5403" declfile="xmlreader.h" declline="397" declcolumn="1"/>
+        <location file="xmlreader.h" line="397" column="1" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="5383" bodyend="5402" declfile="xmlreader.h" declline="397" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a45f60da8932e08553933f64c13e158ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4041,7 +4041,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="422" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4459" bodyend="4484" declfile="xmlreader.h" declline="422" declcolumn="5"/>
+        <location file="xmlreader.h" line="422" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4458" bodyend="4483" declfile="xmlreader.h" declline="422" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a0a4d50cfe8a0123f30cc85b613f637c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -4071,7 +4071,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="424" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4494" bodyend="4519" declfile="xmlreader.h" declline="424" declcolumn="5"/>
+        <location file="xmlreader.h" line="424" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4493" bodyend="4518" declfile="xmlreader.h" declline="424" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a5f5aa18d12d08d75fbafe67d06692e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4094,7 +4094,7 @@
 <para>Register a callback function that will be called on error and warnings. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000396"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlTextReaderSetStructuredErrorHandler.</para>
+<para><xrefsect id="deprecated_1_deprecated000396"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="xmlreader_8h_1a45c194b6a20004bb560871eee5151ae2" kindref="member">xmlTextReaderSetStructuredErrorHandler</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para>If <computeroutput>f</computeroutput> is NULL, the default error and warning handlers are restored.</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -4102,7 +4102,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4126,7 +4126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="426" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4533" bodyend="4576" declfile="xmlreader.h" declline="426" declcolumn="5"/>
+        <location file="xmlreader.h" line="426" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4532" bodyend="4575" declfile="xmlreader.h" declline="426" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a45c194b6a20004bb560871eee5151ae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4156,7 +4156,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4180,7 +4180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="430" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4590" bodyend="4633" declfile="xmlreader.h" declline="430" declcolumn="5"/>
+        <location file="xmlreader.h" line="430" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4589" bodyend="4632" declfile="xmlreader.h" declline="430" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1a116ba0a73582625bc3d689e861c294dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4208,7 +4208,7 @@
 <parametername>reader</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextReader used </para>
+<para>the <ref refid="xmlreader_8h_1a54aef13f339efa1c3bb886a22041eaf1" kindref="member">xmlTextReader</ref> used </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4232,7 +4232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="434" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4643" bodyend="4650" declfile="xmlreader.h" declline="434" declcolumn="5"/>
+        <location file="xmlreader.h" line="434" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4642" bodyend="4649" declfile="xmlreader.h" declline="434" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlreader_8h_1aa622aeac7754fc43d3f7c253cc1350d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4286,7 +4286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlreader.h" line="439" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4662" bodyend="4671" declfile="xmlreader.h" declline="439" declcolumn="5"/>
+        <location file="xmlreader.h" line="439" column="5" bodyfile="/builds/GNOME/libxml2/xmlreader.c" bodystart="4661" bodyend="4670" declfile="xmlreader.h" declline="439" declcolumn="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

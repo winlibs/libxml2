@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="threads_8h" kind="file" language="C++">
     <compoundname>threads.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="threads.h" line="32" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="751" bodyend="757" declfile="threads.h" declline="32" declcolumn="1"/>
+        <location file="threads.h" line="32" column="1" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="773" bodyend="779" declfile="threads.h" declline="32" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="threads_8h_1a574fd273d73e6cd30305b3bfdc717f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="threads_8h_1a65cb9dc91b670770a3725773fd5a4df7" kindref="member">xmlMutex</ref> *</type>
@@ -191,7 +191,7 @@
           <type>void</type>
         </param>
         <briefdescription>
-<para>xmlNewMutex is used to allocate a libxml2 token struct for use in synchronizing access to data. </para>
+<para><ref refid="threads_8h_1a574fd273d73e6cd30305b3bfdc717f1e" kindref="member">xmlNewMutex</ref> is used to allocate a libxml2 token struct for use in synchronizing access to data. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>a new simple mutex pointer or NULL in case of error </para>
@@ -212,7 +212,7 @@
           <declname>tok</declname>
         </param>
         <briefdescription>
-<para>xmlMutexLock is used to lock a libxml2 token. </para>
+<para><ref refid="threads_8h_1ae9119e93165b3b574c33f2b7d19b15a0" kindref="member">xmlMutexLock</ref> is used to lock a libxml2 token. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -240,7 +240,7 @@
           <declname>tok</declname>
         </param>
         <briefdescription>
-<para>xmlMutexUnlock is used to unlock a libxml2 token. </para>
+<para><ref refid="threads_8h_1a5cf2600ab8ca90435a40caae91915f13" kindref="member">xmlMutexUnlock</ref> is used to unlock a libxml2 token. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -317,7 +317,7 @@
           <declname>tok</declname>
         </param>
         <briefdescription>
-<para>xmlRMutexLock is used to lock a libxml2 token_r. </para>
+<para><ref refid="threads_8h_1a1e3c8a56f1e6099a06ff25f2312bb3fa" kindref="member">xmlRMutexLock</ref> is used to lock a libxml2 token_r. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -345,7 +345,7 @@
           <declname>tok</declname>
         </param>
         <briefdescription>
-<para>xmlRMutexUnlock is used to unlock a libxml2 token_r. </para>
+<para><ref refid="threads_8h_1ae220b43a869130b74b25bfdf1c51713a" kindref="member">xmlRMutexUnlock</ref> is used to unlock a libxml2 token_r. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -402,7 +402,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000298"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Alias for xmlInitParser. </para>
+<para><xrefsect id="deprecated_1_deprecated000298"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Alias for <ref refid="parser_8h_1a642085a16c74b8352e92a89c348cc9c4" kindref="member">xmlInitParser</ref>. </para>
 </xrefdescription></xrefsect></para>
         </detaileddescription>
         <inbodydescription>
@@ -418,7 +418,7 @@
           <type>void</type>
         </param>
         <briefdescription>
-<para>xmlLockLibrary is used to take out a re-entrant lock on the libxml2 library. </para>
+<para><ref refid="threads_8h_1a437aecc8c142721c08025f8f1e0865d3" kindref="member">xmlLockLibrary</ref> is used to take out a re-entrant lock on the libxml2 library. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -435,7 +435,7 @@
           <type>void</type>
         </param>
         <briefdescription>
-<para>xmlUnlockLibrary is used to release a re-entrant lock on the libxml2 library. </para>
+<para><ref refid="threads_8h_1a8bd64fe6a411318bf3e8443786f88fd1" kindref="member">xmlUnlockLibrary</ref> is used to release a re-entrant lock on the libxml2 library. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -454,7 +454,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000299"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is a no-op. Call xmlCleanupParser to free global state but see the warnings there. xmlCleanupParser should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all. </para>
+<para><xrefsect id="deprecated_1_deprecated000299"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is a no-op. Call <ref refid="parser_8h_1a7eb4447bac68a016b428f51cc402369f" kindref="member">xmlCleanupParser</ref> to free global state but see the warnings there. <ref refid="parser_8h_1a7eb4447bac68a016b428f51cc402369f" kindref="member">xmlCleanupParser</ref> should be only called once at program exit. In most cases, you don&apos;t have call cleanup functions at all. </para>
 </xrefdescription></xrefsect></para>
         </detaileddescription>
         <inbodydescription>

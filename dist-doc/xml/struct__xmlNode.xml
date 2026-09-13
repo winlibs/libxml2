@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlNode" kind="struct" language="C++" prot="public">
     <compoundname>_xmlNode</compoundname>
     <includes local="no">tree.h</includes>
@@ -27,7 +27,7 @@
         <name>type</name>
         <qualifiedname>_xmlNode::type</qualifiedname>
         <briefdescription>
-<para>Type enum, an xmlElementType value. </para>
+<para>Type enum, an <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fc" kindref="member">xmlElementType</ref> value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -276,20 +276,20 @@
 </listitem><listitem><para>XML_XINCLUDE_END_NODE</para>
 </listitem></itemizedlist>
 </para>
-<para>Other node types have a different struct layout than xmlNode, see xmlElementType. Except for XML_NAMESPACE_DECL all nodes share the following members at the same offset:</para>
+<para>Other node types have a different struct layout than <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref>, see <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fc" kindref="member">xmlElementType</ref>. Except for XML_NAMESPACE_DECL all nodes share the following members at the same offset:</para>
 <para><itemizedlist>
-<listitem><para><computeroutput>_private</computeroutput></para>
-</listitem><listitem><para><computeroutput>type</computeroutput> (also for XML_NAMESPACE_DECL)</para>
-</listitem><listitem><para><computeroutput>name</computeroutput></para>
-</listitem><listitem><para><computeroutput>children</computeroutput></para>
-</listitem><listitem><para><computeroutput>last</computeroutput></para>
-</listitem><listitem><para><computeroutput>parent</computeroutput></para>
-</listitem><listitem><para><computeroutput>next</computeroutput></para>
-</listitem><listitem><para><computeroutput>prev</computeroutput></para>
-</listitem><listitem><para><computeroutput>doc</computeroutput></para>
+<listitem><para><computeroutput><ref refid="struct__xmlNode_1a1cb76d737bf6f5b53e6c970073cba051" kindref="member">_private</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1ac5b2f541d66059a7c8de2599ba543e70" kindref="member">type</ref></computeroutput> (also for XML_NAMESPACE_DECL)</para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1a9d09be92db244aa2ecd5921f41f43ded" kindref="member">name</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1aff6ebaaa61a2b60c033a82790133fb5e" kindref="member">children</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1a557b64ca596f6376407afcd1b0c959a7" kindref="member">last</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1a6e3b197c773ec09059c77c324278ea78" kindref="member">parent</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1aec42d72625408c533e1ee43b0f668988" kindref="member">next</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1a6b50e54b959fb7df6b6af04da9f8da49" kindref="member">prev</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="struct__xmlNode_1aeeffa6cba73333db3d9b2aa59f366304" kindref="member">doc</ref></computeroutput></para>
 </listitem></itemizedlist>
 </para>
-<para>xmlNode and xmlAttr also share the <computeroutput>ns</computeroutput> member. </para>
+<para><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> and <ref refid="tree_8h_1a94c0908950e8e798cf7eb5ed524da0af" kindref="member">xmlAttr</ref> also share the <computeroutput><ref refid="struct__xmlNode_1a833dce784181d57f113905b18dd49819" kindref="member">ns</ref></computeroutput> member. </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="7">

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlmemory_8c" kind="file" language="C++">
     <compoundname>xmlmemory.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -295,8 +295,8 @@
       </memberdef>
       <memberdef kind="define" id="xmlmemory_8c_1a8972c61108c4ed5d0b76a714782a8453" prot="public" static="no">
         <name>RESERVE_SIZE</name>
-        <initializer>		      (((sizeof(MEMHDR) + ALIGN_SIZE - 1) \
-		      / ALIGN_SIZE ) * ALIGN_SIZE)</initializer>
+        <initializer>              (((sizeof(MEMHDR) + ALIGN_SIZE - 1) \
+              / ALIGN_SIZE ) * ALIGN_SIZE)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -957,6 +957,84 @@
         </inbodydescription>
         <location file="/builds/GNOME/libxml2/xmlmemory.c" line="342" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="342" bodyend="344"/>
       </memberdef>
+      <memberdef kind="function" id="xmlmemory_8c_1ad66e2d22c7bb72a3921b05675e33059c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * xmlGrowArray</definition>
+        <argsstring>(void *array, size_t elemSize, int *capacity, int min, int max)</argsstring>
+        <name>xmlGrowArray</name>
+        <param>
+          <type>void *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>elemSize</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>capacity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Grow an array, combining overflow-checked capacity growth with reallocation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the array (may be NULL for first allocation) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elemSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of each element in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to current capacity (updated on success) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initial allocation size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of elements </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new pointer on success, or NULL on failure with the original array and capacity preserved. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="366" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="366" bodyend="383"/>
+      </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1ad7abed47851c8c33c9f840c0ecfc70f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int xmlInitMemory</definition>
@@ -976,7 +1054,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="359" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="359" bodyend="362"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="397" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="397" bodyend="400"/>
       </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1ac27fc2eda692d35c73fc19a4d452babe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -993,7 +1071,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="368" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="368" bodyend="370"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="406" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="406" bodyend="408"/>
       </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1a6fad15dbecad624ee430cd7102eda760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1011,7 +1089,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="379" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="379" bodyend="380"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="417" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="417" bodyend="418"/>
       </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1a48b6323a664e542772b4582d85d66f5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1029,7 +1107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="387" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="387" bodyend="398"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="425" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="425" bodyend="436"/>
       </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1aaf5fda31eb649128f58f61e8e022f196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1096,7 +1174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="414" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="414" bodyend="430"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="452" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="452" bodyend="468"/>
       </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1abb6175f1a50a973d1b49f4cf3017113d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1162,7 +1240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="442" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="442" bodyend="449"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="480" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="480" bodyend="487"/>
       </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1a638989e93a33e0515cae68bf82c3ca22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1190,11 +1268,11 @@
           <declname>strdupFunc</declname>
         </param>
         <briefdescription>
-<para>Override the default memory access functions with a new set This has to be called before any other libxml routines ! The mallocAtomicFunc is specialized for atomic block allocations (i.e. </para>
+<para>Override the default memory access functions with a new set This has to be called before any other libxml routines ! </para>
         </briefdescription>
         <detaileddescription>
-<para>of areas useful for garbage collected memory allocators</para>
-<para><xrefsect id="deprecated_1_deprecated000390"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlMemSetup.</para>
+<para>The mallocAtomicFunc is specialized for atomic block allocations (i.e. of areas useful for garbage collected memory allocators</para>
+<para><xrefsect id="deprecated_1_deprecated000390"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="xmlmemory_8h_1aaf5fda31eb649128f58f61e8e022f196" kindref="member">xmlMemSetup</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para>Should this be blocked if there was already some allocations done ?</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1244,7 +1322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="470" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="470" bodyend="489"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="508" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="508" bodyend="527"/>
       </memberdef>
       <memberdef kind="function" id="xmlmemory_8c_1ab9137826044b477c8d35f845bb246d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1276,7 +1354,7 @@
         </briefdescription>
         <detaileddescription>
 <para>of areas useful for garbage collected memory allocators</para>
-<para><xrefsect id="deprecated_1_deprecated000391"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlMemGet.</para>
+<para><xrefsect id="deprecated_1_deprecated000391"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="xmlmemory_8h_1abb6175f1a50a973d1b49f4cf3017113d" kindref="member">xmlMemGet</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1325,7 +1403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="506" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="506" bodyend="515"/>
+        <location file="/builds/GNOME/libxml2/xmlmemory.c" line="544" column="1" bodyfile="/builds/GNOME/libxml2/xmlmemory.c" bodystart="544" bodyend="553"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

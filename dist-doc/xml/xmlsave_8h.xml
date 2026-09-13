@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlsave_8h" kind="file" language="C++">
     <compoundname>xmlsave.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -288,7 +288,7 @@
 <para>Create a document saving context serializing to a file descriptor with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -344,7 +344,7 @@
 <para>Create a document saving context serializing to a filename with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -400,7 +400,7 @@
 <para>Create a document saving context serializing to a buffer with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -464,7 +464,7 @@
 <para>Create a document saving context serializing to a file descriptor with the encoding and the options given. </para>
         </briefdescription>
         <detaileddescription>
-<para>If <computeroutput>encoding</computeroutput> is NULL, xmlSaveDoc uses the document&apos;s encoding and xmlSaveTree uses UTF-8.</para>
+<para>If <computeroutput>encoding</computeroutput> is NULL, <ref refid="xmlsave_8h_1aea4488b9ce630799d61709acdf31903a" kindref="member">xmlSaveDoc</ref> uses the document&apos;s encoding and <ref refid="xmlsave_8h_1a943b061206fde27ec1dc696d066e02e2" kindref="member">xmlSaveTree</ref> uses UTF-8.</para>
 <para>This function doesn&apos;t allow to distinguish unsupported encoding errors from failed memory allocations.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -689,7 +689,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -842,7 +842,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000146"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Indenting is enabled by default. Use the <ref refid="xmlsave_8h" kindref="compound">xmlsave.h</ref> API and xmlSaveOption XML_SAVE_NO_INDENT to disable indenting.</para>
+<para><xrefsect id="deprecated_1_deprecated000146"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Indenting is enabled by default. Use the <ref refid="xmlsave_8h" kindref="compound">xmlsave.h</ref> API and <ref refid="xmlsave_8h_1aad8ce95f34cf7d44adf8f69cdbc7d1b0" kindref="member">xmlSaveOption</ref> XML_SAVE_NO_INDENT to disable indenting.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -859,7 +859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlsave.h" line="141" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="914" bodyend="921" declfile="xmlsave.h" declline="141" declcolumn="17"/>
+        <location file="xmlsave.h" line="141" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="936" bodyend="943" declfile="xmlsave.h" declline="141" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="xmlsave_8h_1a5cdac7cc9c7562aaebbff1c6b395b6b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -891,7 +891,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlsave.h" line="144" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="931" bodyend="938" declfile="xmlsave.h" declline="144" declcolumn="17"/>
+        <location file="xmlsave.h" line="144" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="953" bodyend="960" declfile="xmlsave.h" declline="144" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="xmlsave_8h_1a335cbce6a63ac0c054e50a67f30694c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -906,7 +906,7 @@
 <para>Set per-thread default value. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000148"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use the <ref refid="xmlsave_8h" kindref="compound">xmlsave.h</ref> API and xmlSaveOption XML_SAVE_NO_EMPTY.</para>
+<para><xrefsect id="deprecated_1_deprecated000148"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use the <ref refid="xmlsave_8h" kindref="compound">xmlsave.h</ref> API and <ref refid="xmlsave_8h_1aad8ce95f34cf7d44adf8f69cdbc7d1b0" kindref="member">xmlSaveOption</ref> XML_SAVE_NO_EMPTY.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -923,7 +923,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlsave.h" line="147" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="948" bodyend="955" declfile="xmlsave.h" declline="147" declcolumn="17"/>
+        <location file="xmlsave.h" line="147" column="17" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="970" bodyend="977" declfile="xmlsave.h" declline="147" declcolumn="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlschemas_8h" kind="file" language="C++">
     <compoundname>xmlschemas.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -1403,7 +1403,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a combination of xmlSchemaValidOption </para>
+<para>a combination of <ref refid="xmlschemas_8h_1a8e16b29a07b1cd459f50505926c8edc8" kindref="member">xmlSchemaValidOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1825,7 +1825,7 @@
 <parametername>sax</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a pointer to the original xmlSAXHandler </para>
+<para>a pointer to the original <ref refid="tree_8h_1a45238c4ba896d6577bb4986e98122e03" kindref="member">xmlSAXHandler</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>

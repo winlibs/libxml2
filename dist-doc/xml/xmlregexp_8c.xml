@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlregexp_8c" kind="file" language="C++">
     <compoundname>xmlregexp.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -330,7 +330,7 @@
       <memberdef kind="define" id="xmlregexp_8c_1a39b3cc118c8339855e5578335a0b2417" prot="public" static="no">
         <name>ERROR</name>
         <param><defname>str</defname></param>
-        <initializer>    ctxt-&gt;error = XML_REGEXP_COMPILE_ERROR;				\
+        <initializer>    ctxt-&gt;error = XML_REGEXP_COMPILE_ERROR;             \
     xmlRegexpErrCompile(ctxt, str);</initializer>
         <briefdescription>
         </briefdescription>
@@ -365,14 +365,15 @@
       <memberdef kind="define" id="xmlregexp_8c_1a1eec9b2ba472e88eec384b8ecf8e858a" prot="public" static="no">
         <name>NXT</name>
         <param><defname>index</defname></param>
-        <initializer>(ctxt-&gt;cur[index])</initializer>
+        <initializer>    (((size_t)(ctxt-&gt;cur + index - ctxt-&gt;string) &lt; ctxt-&gt;len)               \
+      ? ctxt-&gt;cur[index] : 0)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="51" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="51" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="51" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="51" bodyend="53"/>
       </memberdef>
       <memberdef kind="define" id="xmlregexp_8c_1a1cd1350aed3526160f5d1799ab5d1165" prot="public" static="no">
         <name>NEXTL</name>
@@ -384,7 +385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="53" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="53" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="55" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlregexp_8c_1adc7336e9aa12c3eb5dd3edecb16d3a4c" prot="public" static="no">
         <name>XML_REG_STRING_SEPARATOR</name>
@@ -395,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="54" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="54" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="56" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlregexp_8c_1a55659d6bca0e8c599a48d27e570317dc" prot="public" static="no">
         <name>PREV</name>
@@ -406,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="59" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="59" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="61" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlregexp_8c_1a83e6c79f3ed0a03b3e3a15dd9d03eb74" prot="public" static="no">
         <name>AM_AUTOMATA_RNG</name>
@@ -417,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="286" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="286" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="288" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="288" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlregexp_8c_1af7e80a3a0f633327fe6d1ba5dc2b6130" prot="public" static="no">
         <name>REGEXP_ALL_COUNTER</name>
@@ -428,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="401" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="401" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="404" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="404" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="xmlregexp_8c_1a3fd61f133f02e5816ac41cbd5417b138" prot="public" static="no">
         <name>REGEXP_ALL_LAX_COUNTER</name>
@@ -439,7 +440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="402" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="402" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="405" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="405" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="enum">
@@ -825,7 +826,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="131" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="131" bodyend="185"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="133" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="133" bodyend="187"/>
       </memberdef>
       <memberdef kind="enum" id="xmlregexp_8c_1a5d10db201663243b136510e730ea1b55" prot="public" static="no" strong="no">
         <type></type>
@@ -893,7 +894,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="187" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="187" bodyend="196"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="189" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="189" bodyend="198"/>
       </memberdef>
       <memberdef kind="enum" id="xmlregexp_8c_1a38bf595de016bb83adfa37bb4f942207" prot="public" static="no" strong="no">
         <type></type>
@@ -940,7 +941,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="198" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="198" bodyend="204"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="200" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="200" bodyend="206"/>
       </memberdef>
       <memberdef kind="enum" id="xmlregexp_8c_1abea1f0d962dec246d4922b582da5e660" prot="public" static="no" strong="no">
         <type></type>
@@ -973,7 +974,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="206" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="206" bodyend="210"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="208" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="208" bodyend="212"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -988,7 +989,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="212" column="27" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="212" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="214" column="27" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="214" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a959ae3ac815818f366c41ccd2ad7c14c" prot="public" static="no">
         <type>xmlRegRange *</type>
@@ -1001,7 +1002,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="213" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="213" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="215" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="215" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a5bc056cdfd2daf589966224d75a722d5" prot="public" static="no">
         <type>struct _xmlRegAtom</type>
@@ -1014,7 +1015,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="223" column="26" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="223" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="225" column="26" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="225" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a0afc35e29f4614d220adb7bf8073be95" prot="public" static="no">
         <type>xmlRegAtom *</type>
@@ -1027,7 +1028,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="224" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="224" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="226" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="226" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1adfca3d518cacb53851dd9006a68da2a6" prot="public" static="no">
         <type>struct _xmlAutomataState</type>
@@ -1040,7 +1041,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="226" column="32" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="226" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="228" column="32" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="228" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a943bba48f51b074770a579837aa6b1cf" prot="public" static="no">
         <type>xmlRegState *</type>
@@ -1053,7 +1054,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="227" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="227" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="229" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="229" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a927a23873bc3a3abe08ab22323f2c0e9" prot="public" static="no">
         <type>struct _xmlRegCounter</type>
@@ -1066,7 +1067,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="249" column="29" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="249" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="251" column="29" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="251" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a21da9fa9cc6c6acd4d22047e4aca3117" prot="public" static="no">
         <type>xmlRegCounter *</type>
@@ -1079,7 +1080,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="250" column="23" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="250" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="252" column="23" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="252" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a1e0398732ef2c252597231fcc566be4c" prot="public" static="no">
         <type>struct _xmlRegTrans</type>
@@ -1092,7 +1093,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="257" column="27" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="257" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="259" column="27" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="259" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a791e85a3a0b398a796d165ab4f7887e3" prot="public" static="no">
         <type>xmlRegTrans *</type>
@@ -1105,7 +1106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="258" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="258" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="260" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="260" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a594a72484b29176637cd46a5033cb12c" prot="public" static="no">
         <type>struct _xmlAutomata</type>
@@ -1118,7 +1119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="283" column="27" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="283" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="285" column="27" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="285" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1ae4c60d628abcb09058f64c227b19e5dc" prot="public" static="no">
         <type>xmlRegParserCtxt *</type>
@@ -1131,7 +1132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="284" column="26" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="284" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="286" column="26" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="286" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a5fdc8959012800c57547f8dbc304fb31" prot="public" static="no">
         <type>struct _xmlRegExecRollback</type>
@@ -1144,7 +1145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="340" column="34" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="340" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="343" column="34" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="343" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1afd621f931d6d98468a7a2a3a5cf9864f" prot="public" static="no">
         <type>xmlRegExecRollback *</type>
@@ -1157,7 +1158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="341" column="28" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="341" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="344" column="28" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="344" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a5604560ba7ed75385e7422e6315aea2a" prot="public" static="no">
         <type>struct _xmlRegInputToken</type>
@@ -1170,7 +1171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="350" column="32" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="350" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="353" column="32" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="353" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="xmlregexp_8c_1a847c375a824fb62d3adc81e23df50a6f" prot="public" static="no">
         <type>xmlRegInputToken *</type>
@@ -1183,7 +1184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="351" column="26" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="351" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="354" column="26" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="354" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -1239,7 +1240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="83" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="83" bodyend="102"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="85" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="85" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a6d31864252874c1fe230da2e5b2ee004" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1281,7 +1282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="112" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="112" bodyend="120"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="114" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="114" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a0c44eb3317f39fe7650dab9c15e6a1af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1321,7 +1322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5425" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5425" bodyend="5450" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="404" declcolumn="13"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5429" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5429" bodyend="5454" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="407" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ad45ed9642b0553b454d314e71ea18daf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1349,7 +1350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="935" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="935" bodyend="944" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="405" declcolumn="13"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="939" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="939" bodyend="948" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="408" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ad11818c381d10f11a1089b6fedabb5c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1377,7 +1378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="851" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="851" bodyend="868" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="406" declcolumn="13"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="855" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="855" bodyend="872" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="409" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a3e7c744226e63d8a7a56d9e48e9f9f69" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1420,7 +1421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3768" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3768" bodyend="3802" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="407" declcolumn="12"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3772" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3772" bodyend="3806" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="410" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a6586ba7b61bc1870e96549fd7d3ee210" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1441,7 +1442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3129" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3129" bodyend="3228" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="408" declcolumn="12"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3133" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3133" bodyend="3232" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="411" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ad99edd767ef67bca9e281f32eebf75af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1478,7 +1479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2954" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2954" bodyend="3126" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="409" declcolumn="12"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2958" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2958" bodyend="3130" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="412" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aa83e67dce29b4833aae0952c3d7cae20" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1506,7 +1507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="423" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="423" bodyend="429"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="426" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="426" bodyend="432"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aa418018450bb2ee03e8210e227f2ed66" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1546,7 +1547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="438" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="438" bodyend="456"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="441" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="441" bodyend="459"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ab5cd1dd417cbbda964d2924d829828dd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1574,7 +1575,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2799" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2799" bodyend="2945" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="464" declcolumn="12"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2803" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2803" bodyend="2949" declfile="/builds/GNOME/libxml2/xmlregexp.c" declline="467" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1af76f5864fc94152136fa5f65a3efdbd3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -1628,7 +1629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="475" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="475" bodyend="491"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="478" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="478" bodyend="494"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a525c9c2051fa2d8fed567fc02eb5acfb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegexpPtr</type>
@@ -1658,7 +1659,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="500" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="500" bodyend="719"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="503" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="503" bodyend="722"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a2c5b5ac9c9c1639b9728c335d1f3489b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegParserCtxtPtr</type>
@@ -1688,7 +1689,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="728" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="728" bodyend="748"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="731" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="731" bodyend="752"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1af2e27c4cbe6bc33c162e5a1a16c3a3f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegRangePtr</type>
@@ -1766,7 +1767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="761" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="761" bodyend="775"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="765" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="765" bodyend="779"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a46577bf746db422dcb81179ebcb530fc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1794,7 +1795,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="783" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="783" bodyend="790"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="787" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="787" bodyend="794"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aaf6784ed2e6e90ee8a5d6404f0723eaa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegRangePtr</type>
@@ -1836,7 +1837,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="800" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="800" bodyend="819"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="804" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="804" bodyend="823"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1acff37c32a4d6681279ca9e786535aa88" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegAtomPtr</type>
@@ -1878,7 +1879,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="829" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="829" bodyend="843"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="833" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="833" bodyend="847"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a8859d6e1bef48c7db24def0065ab27c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegAtomPtr</type>
@@ -1920,7 +1921,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="878" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="878" bodyend="912"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="882" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="882" bodyend="916"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ad07e5059ddb439cd535b0ff600ac19a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegStatePtr</type>
@@ -1937,7 +1938,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="915" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="915" bodyend="927"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="919" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="919" bodyend="931"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a2f2a4c6d2901a77f4471bd05d017c7fc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1965,7 +1966,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="952" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="952" bodyend="972"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="956" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="956" bodyend="976"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ae12c468feb3669d35c0bb74fd7858649" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegRangePtr</type>
@@ -2006,7 +2007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1395" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1395" bodyend="1433"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1399" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1399" bodyend="1437"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aebc390c48d0c7de0541a8553b40e9498" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2023,7 +2024,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1436" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1436" bodyend="1458"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1440" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1440" bodyend="1462"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a676ba7b630fe94b01cf2e6dd03c9b1e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2044,7 +2045,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1461" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1461" bodyend="1487"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1465" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1465" bodyend="1491"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a7a4389e57314cf26edb0c609b650712f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2069,7 +2070,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1490" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1490" bodyend="1512"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1494" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1494" bodyend="1516"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ac072e24ded99330d74d7d377deaf54d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2106,7 +2107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1515" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1515" bodyend="1571"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1519" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1519" bodyend="1575"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a6df18b7dbb4c0b18502ebd1481db3ea8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlRegStatePtr</type>
@@ -2123,7 +2124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1574" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1574" bodyend="1604"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1578" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1578" bodyend="1608"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a88c848d1f0c69701a4613e2d1bd3f2d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2178,8 +2179,7 @@
 <parametername>lax</parametername>
 </parameternamelist>
 <parameterdescription>
-<para><linebreak/>
- </para>
+<para></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2187,7 +2187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1613" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1613" bodyend="1627"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1617" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1617" bodyend="1631"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a1bbcd41d210509d84fa2046dedaada72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2238,7 +2238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1635" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1635" bodyend="1645"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1639" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1639" bodyend="1649"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a891ae3f98e8f73ee94b81f98f4aaeff7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2301,7 +2301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1654" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1654" bodyend="1664"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1658" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1658" bodyend="1668"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1af7da8f9a2872004a376e4a3a7846ad00" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2364,7 +2364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1673" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1673" bodyend="1683"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1677" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1677" bodyend="1687"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ad7af3ef9c5dea8af8f331f1d96500561" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2429,7 +2429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1693" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1693" bodyend="1914"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1697" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1697" bodyend="1918"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a7f4303728d646fa50ef5df1adef5841b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2492,7 +2492,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1923" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1923" bodyend="1974"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1927" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1927" bodyend="1978"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a02d019b1168f0652ef839a171adb0226" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2531,7 +2531,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1981" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1981" bodyend="1998"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="1985" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="1985" bodyend="2002"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a1e620c9528d869ee109344fab2470f12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2565,7 +2565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2021" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2021" bodyend="2067"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2025" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2025" bodyend="2071"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a2647cfe5a5025f31f096af588168a3c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2592,7 +2592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2072" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2072" bodyend="2203"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2076" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2076" bodyend="2207"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a47cb1f675e213ce24d51cc5b66ae2eb6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2613,7 +2613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2206" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2206" bodyend="2366"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2210" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2210" bodyend="2370"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1af521a19557d15960fdf81f1e9df2dd4b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2655,7 +2655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2377" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2377" bodyend="2565"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2381" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2381" bodyend="2569"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a4bec57ccde39f090af8c2e1c3d0a4953" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2709,7 +2709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2577" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2577" bodyend="2608"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2581" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2581" bodyend="2612"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aaf50acad6411249feee47fc4b4cf3251" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2763,7 +2763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2620" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2620" bodyend="2705"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2624" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2624" bodyend="2709"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aa38e25722cfea9dcf1ac06e3af0a606c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2839,7 +2839,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2718" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2718" bodyend="2766"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2722" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2722" bodyend="2770"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ad297655b08485d12dc91e9ece4c590be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2879,7 +2879,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2775" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2775" bodyend="2790"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="2779" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="2779" bodyend="2794"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ab854581ed66b8717fe369598aacaa54b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2896,7 +2896,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3237" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3237" bodyend="3283"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3241" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3241" bodyend="3287"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a53aba64f9599387bca481fc713a49117" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2913,7 +2913,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3286" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3286" bodyend="3307"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3290" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3290" bodyend="3311"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ac7a062ce890dd39cece9249bbf98b673" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2934,7 +2934,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3316" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3316" bodyend="3591"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3320" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3320" bodyend="3595"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a80d66451d4743bef56e3775f54e2ec98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlregexp_8h_1a7cb5c3cf63762a6f1a597d31db016278" kindref="member">xmlRegExecCtxt</ref> *</type>
@@ -2990,7 +2990,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3611" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3611" bodyend="3660"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3615" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3615" bodyend="3664"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aa23396f612f65ff669d96fa8bac005e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3020,7 +3020,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3670" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3670" bodyend="3698"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3674" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3674" bodyend="3702"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a850c14ecc5e653f8be3b6f8a01dc45cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3041,7 +3041,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3701" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3701" bodyend="3714"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3705" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3705" bodyend="3718"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a8b4edfcde37c131615ebcdedf8ebebc9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3066,7 +3066,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3717" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3717" bodyend="3754"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3721" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3721" bodyend="3758"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1abe270cdf81dfec67b0f922f814c91997" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3132,7 +3132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3815" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3815" bodyend="3868"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3819" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3819" bodyend="3872"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a99f7adb1853c59fcea17d1a44a038f54" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3198,7 +3198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3881" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3881" bodyend="4178"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="3885" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="3885" bodyend="4182"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a32f09398adfba57d35b00153711e4f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3254,7 +3254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4192" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4192" bodyend="4195"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4196" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4196" bodyend="4199"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ab4ef3d51c07c4067b2e6b5f816499c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3322,7 +3322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4210" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4210" bodyend="4251"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4214" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4214" bodyend="4255"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a30a21767242c7e3eeca8fa1d14251f41" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3357,7 +3357,7 @@
 <para>Extract information from the regexp execution. </para>
         </briefdescription>
         <detaileddescription>
-<para>Internal routine to implement xmlRegExecNextValues and xmlRegExecErrInfo</para>
+<para>Internal routine to implement <ref refid="xmlregexp_8h_1ace04ce949ad8be60b51a3b507688af7a" kindref="member">xmlRegExecNextValues</ref> and <ref refid="xmlregexp_8h_1a525c4e91e0b3318f191ded4edce4a888" kindref="member">xmlRegExecErrInfo</ref></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>exec</parametername>
@@ -3413,7 +3413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4266" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4266" bodyend="4407"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4270" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4270" bodyend="4411"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ace04ce949ad8be60b51a3b507688af7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3494,7 +3494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4427" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4427" bodyend="4430"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4431" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4431" bodyend="4434"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a525c4e91e0b3318f191ded4edce4a888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3587,7 +3587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4452" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4452" bodyend="4463"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4456" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4456" bodyend="4467"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a06b7371e2f1938184765993c6d65db4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3617,7 +3617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4473" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4473" bodyend="4479"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4477" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4477" bodyend="4483"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ab227d3e3b27e249e76c99ce74beea40c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3632,7 +3632,7 @@
 <para>[10] Char ::= [^. </para>
         </briefdescription>
         <detaileddescription>
-<para>\?*+()|#x5B#x5D]</para>
+<para>?*+()|#x5B#x5D]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -3646,7 +3646,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4494" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4494" bodyend="4510"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4498" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4498" bodyend="4514"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a4191170fa6675b4ba7778048758148d3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3658,9 +3658,10 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>[27] charProp ::= IsCategory | IsBlock [28] IsCategory ::= Letters | Marks | Numbers | Punctuation | Separators | Symbols | Others [29] Letters ::= &apos;L&apos; [ultmo]? [30] Marks ::= &apos;M&apos; [nce]? [31] Numbers ::= &apos;N&apos; [dlo]? [32] Punctuation ::= &apos;P&apos; [cdseifo]? [33] Separators ::= &apos;Z&apos; [slp]? [34] Symbols ::= &apos;S&apos; [mcko]? [35] Others ::= &apos;C&apos; [cfon]? [36] IsBlock ::= &apos;Is&apos; [a-zA-Z0-9#x2D]+ </para>
+<para>[27] charProp ::= IsCategory | IsBlock [28] IsCategory ::= Letters | Marks | Numbers | Punctuation | Separators | Symbols | Others [29] Letters ::= &apos;L&apos; [ultmo]? </para>
         </briefdescription>
         <detaileddescription>
+<para>[30] Marks ::= &apos;M&apos; [nce]? [31] Numbers ::= &apos;N&apos; [dlo]? [32] Punctuation ::= &apos;P&apos; [cdseifo]? [33] Separators ::= &apos;Z&apos; [slp]? [34] Symbols ::= &apos;S&apos; [mcko]? [35] Others ::= &apos;C&apos; [cfon]? [36] IsBlock ::= &apos;Is&apos; [a-zA-Z0-9#x2D]+</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -3674,7 +3675,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4528" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4528" bodyend="4739"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4532" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4532" bodyend="4743"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ae0ddcabd10fa238a45fe8aaabe7ab37f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3691,7 +3692,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4741" column="12" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4741" bodyend="4760"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4745" column="12" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4745" bodyend="4764"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a49cf48ad7e31ec941ea038db50b8805e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3708,7 +3709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4762" column="12" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4762" bodyend="4780"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4766" column="12" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4766" bodyend="4784"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a249fae39cc3220faee735bb112380f93" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3741,7 +3742,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4794" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4794" bodyend="4957"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4798" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4798" bodyend="4961"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ac9b96a362346486fcc4f3e41acc56c60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3774,7 +3775,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4971" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4971" bodyend="5079"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="4975" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="4975" bodyend="5083"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a95952be6c516e4bcab6d1efbece8f50c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3802,7 +3803,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5087" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5087" bodyend="5118"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5091" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5091" bodyend="5122"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a5cb65871d3edf05ee9b054d06bc276f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3830,7 +3831,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5129" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5129" bodyend="5155"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5133" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5133" bodyend="5159"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ac580ee61f15b86b59eb18ebccec618aa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3858,7 +3859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5164" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5164" bodyend="5179"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5168" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5168" bodyend="5183"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a458ad213c41967fa07dc255081b57dc7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3888,7 +3889,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5188" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5188" bodyend="5212"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5192" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5192" bodyend="5216"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a41059f032f32513ea75e44f5b1dc143a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3900,9 +3901,10 @@
           <declname>ctxt</declname>
         </param>
         <briefdescription>
-<para>[4] quantifier ::= [?*+] | ( &apos;{&apos; quantity &apos;}&apos; ) [5] quantity ::= quantRange | quantMin | QuantExact [6] quantRange ::= QuantExact &apos;,&apos; QuantExact [7] quantMin ::= QuantExact &apos;,&apos; [8] QuantExact ::= [0-9]+ </para>
+<para>[4] quantifier ::= [? </para>
         </briefdescription>
         <detaileddescription>
+<para>*+] | ( &apos;{&apos; quantity &apos;}&apos; ) [5] quantity ::= quantRange | quantMin | QuantExact [6] quantRange ::= QuantExact &apos;,&apos; QuantExact [7] quantMin ::= QuantExact &apos;,&apos; [8] QuantExact ::= [0-9]+</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ctxt</parametername>
@@ -3916,7 +3918,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5224" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5224" bodyend="5278"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5228" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5228" bodyend="5282"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a1c49e1689ae68b7440cb3c1f7d3e8ea6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3944,7 +3946,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5286" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5286" bodyend="5349"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5290" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5290" bodyend="5353"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a9472898eace8d7dbcf49267f28993f91" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3972,7 +3974,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5357" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5357" bodyend="5369"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5361" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5361" bodyend="5373"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a59626842187c4ec200c9ad6fe21b1fa3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4013,7 +4015,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5381" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5381" bodyend="5416"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5385" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5385" bodyend="5420"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a8aadb15b7eeccd9bee96c10443542168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4055,7 +4057,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5467" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5467" bodyend="5469"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5471" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5471" bodyend="5473"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a5d32dc64095254aef30efdc2f29a9551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlregexp_8h_1a6f2ef8e1a2f1312bc7dce8bae30d22a5" kindref="member">xmlRegexp</ref> *</type>
@@ -4086,7 +4088,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5482" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5482" bodyend="5522"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5486" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5486" bodyend="5526"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a46383adf414cd7bf8fac38a2adff1839" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4128,7 +4130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5532" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5532" bodyend="5536"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5536" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5536" bodyend="5540"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aefb205d1f1d6a9cfc19216057a092adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4162,7 +4164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5554" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5554" bodyend="5585"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5558" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5558" bodyend="5589"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1abf53df7110900c8fee268bd669372764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4190,7 +4192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5593" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5593" bodyend="5623"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5597" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5597" bodyend="5627"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a4364abd34feea889a2ade7829ac93766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aa37a0a8958564d4bf06fe724751017e2" kindref="member">xmlAutomata</ref> *</type>
@@ -4212,7 +4214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5639" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5639" bodyend="5659"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5643" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5643" bodyend="5663"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a3f820610481205fad68711a6ef8736c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4242,7 +4244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5669" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5669" bodyend="5673"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5673" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5673" bodyend="5677"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a9c9ca243465acdc38d67fd07a5462450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4284,7 +4286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5684" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5684" bodyend="5688"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5688" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5688" bodyend="5692"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ae0d15cfdf0a3cc974e0852b0e2c6d35b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -4316,7 +4318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5699" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5699" bodyend="5703"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5703" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5703" bodyend="5707"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a0776046f7367c47dca8e4df14b264e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -4360,7 +4362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5715" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5715" bodyend="5720"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5719" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5719" bodyend="5724"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1af7c76b1b3f0efca56806a53a56226038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -4441,7 +4443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5739" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5739" bodyend="5764"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5743" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5743" bodyend="5768"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1acb4e88ae8d370ddb10495add597b4d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -4473,7 +4475,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by the value of <computeroutput>token</computeroutput> </para>
+<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by the value of <computeroutput>token</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000412"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -4533,7 +4535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5782" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5782" bodyend="5822"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5786" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5786" bodyend="5826"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a6e0ea2fee40a99150c703b36f6b06b39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -4625,7 +4627,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5842" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5842" bodyend="5888"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5846" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5846" bodyend="5892"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ab07f7a3e318e98597074ed6ed1d8b01a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -4665,7 +4667,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and <computeroutput>token2</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput> </para>
+<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and <computeroutput>token2</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000414"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -4741,7 +4743,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5909" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5909" bodyend="5984"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="5913" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5913" bodyend="5988"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1adb32d2d0271ba76652f3edb98092746e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -4777,7 +4779,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput> </para>
+<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000415"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -4845,7 +4847,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6004" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6004" bodyend="6060"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6008" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6008" bodyend="6064"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a4fbb9c6938a3afec71b1bbbd0c0a9fb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -4961,7 +4963,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6082" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6082" bodyend="6147"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6086" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6086" bodyend="6151"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a1130c6b3e5d39cb0944bea5a1ee82892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -5065,7 +5067,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6170" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6170" bodyend="6214"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6174" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6174" bodyend="6218"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aefef086e6f1d5a901db7e3c075b95e3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -5097,7 +5099,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6225" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6225" bodyend="6229"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6229" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6229" bodyend="6233"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1afdc625539abc6af168075a0d528375ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -5153,7 +5155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6244" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6244" bodyend="6252"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6248" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6248" bodyend="6256"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ac4f9205265a6bbc643eb4e097a52136a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -5222,7 +5224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6269" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6269" bodyend="6277"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6273" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6273" bodyend="6281"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a8477677722e413a10d1a1496650c33e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5278,7 +5280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6290" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6290" bodyend="6302"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6294" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6294" bodyend="6306"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a3cf399ff33dca2669765d9c1819b6067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -5346,7 +5348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6318" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6318" bodyend="6326"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6322" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6322" bodyend="6330"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1a7011873a2f63782074a2cb9070aea7bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -5414,7 +5416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6342" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6342" bodyend="6350"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6346" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6346" bodyend="6354"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1aa1c7c7a061cd81b7de446da9396dbf3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlregexp_8h_1a6f2ef8e1a2f1312bc7dce8bae30d22a5" kindref="member">xmlRegexp</ref> *</type>
@@ -5447,7 +5449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6362" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6362" bodyend="6373"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6366" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6366" bodyend="6377"/>
       </memberdef>
       <memberdef kind="function" id="xmlregexp_8c_1ac978b1ae4049005ad1a4b872e84efbd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5479,7 +5481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6384" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6384" bodyend="6392"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="6388" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6388" bodyend="6396"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

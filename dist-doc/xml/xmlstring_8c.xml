@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlstring_8c" kind="file" language="C++">
     <compoundname>xmlstring.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -326,7 +326,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>a strndup for array of xmlChar&apos;s </para>
+<para>a strndup for array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -334,7 +334,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the input xmlChar * </para>
+<para>the input <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -346,7 +346,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar * or NULL </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -364,7 +364,7 @@
           <declname>cur</declname>
         </param>
         <briefdescription>
-<para>a strdup for array of xmlChar&apos;s. </para>
+<para>a strdup for array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s. </para>
         </briefdescription>
         <detaileddescription>
 <para>Since they are supposed to be encoded in UTF-8 or an encoding with 8bit based chars, we assume a termination mark of &apos;0&apos;.</para>
@@ -373,11 +373,11 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the input xmlChar * </para>
+<para>the input <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar * or NULL </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -399,7 +399,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>a strndup for char&apos;s to xmlChar&apos;s </para>
+<para>a strndup for char&apos;s to <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -419,7 +419,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar * or NULL </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -437,7 +437,7 @@
           <declname>cur</declname>
         </param>
         <briefdescription>
-<para>a strdup for char&apos;s to xmlChar&apos;s </para>
+<para>a strdup for char&apos;s to <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -449,7 +449,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar * or NULL </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -471,7 +471,7 @@
           <declname>str2</declname>
         </param>
         <briefdescription>
-<para>a strcmp for xmlChar&apos;s </para>
+<para>a strcmp for <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -479,7 +479,7 @@
 <parametername>str1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the first xmlChar * </para>
+<para>the first <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -487,7 +487,7 @@
 <parametername>str2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the second xmlChar * </para>
+<para>the second <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -516,13 +516,13 @@
 <para>Check if both strings are equal of have same content. </para>
         </briefdescription>
         <detaileddescription>
-<para>Should be a bit more readable and faster than xmlStrcmp</para>
+<para>Should be a bit more readable and faster than <ref refid="xmlstring_8h_1a98e502dfa43396d52c184b75d6234b34" kindref="member">xmlStrcmp</ref></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>str1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the first xmlChar * </para>
+<para>the first <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -530,7 +530,7 @@
 <parametername>str2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the second xmlChar * </para>
+<para>the second <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -584,7 +584,7 @@
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the second xmlChar * </para>
+<para>the second <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -614,7 +614,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>a strncmp for xmlChar&apos;s </para>
+<para>a strncmp for <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -622,7 +622,7 @@
 <parametername>str1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the first xmlChar * </para>
+<para>the first <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -630,7 +630,7 @@
 <parametername>str2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the second xmlChar * </para>
+<para>the second <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -664,7 +664,7 @@
           <declname>str2</declname>
         </param>
         <briefdescription>
-<para>a strcasecmp for xmlChar&apos;s </para>
+<para>a strcasecmp for <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -672,7 +672,7 @@
 <parametername>str1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the first xmlChar * </para>
+<para>the first <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -680,7 +680,7 @@
 <parametername>str2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the second xmlChar * </para>
+<para>the second <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -710,7 +710,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>a strncasecmp for xmlChar&apos;s </para>
+<para>a strncasecmp for <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -718,7 +718,7 @@
 <parametername>str1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the first xmlChar * </para>
+<para>the first <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -726,7 +726,7 @@
 <parametername>str2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the second xmlChar * </para>
+<para>the second <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -760,7 +760,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>a strchr for xmlChar&apos;s </para>
+<para>a strchr for <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -768,7 +768,7 @@
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * array </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -776,11 +776,11 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar to search </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> to search </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlChar * for the first occurrence or NULL. </para>
+<simplesect kind="return"><para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * for the first occurrence or NULL. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -802,7 +802,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>a strstr for xmlChar&apos;s </para>
+<para>a strstr for <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -810,7 +810,7 @@
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * array (haystack) </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array (haystack) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -818,11 +818,11 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar to search (needle) </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> to search (needle) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlChar * for the first occurrence or NULL. </para>
+<simplesect kind="return"><para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * for the first occurrence or NULL. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -844,7 +844,7 @@
           <declname>val</declname>
         </param>
         <briefdescription>
-<para>a case-ignoring strstr for xmlChar&apos;s </para>
+<para>a case-ignoring strstr for <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -852,7 +852,7 @@
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * array (haystack) </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array (haystack) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -860,11 +860,11 @@
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar to search (needle) </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> to search (needle) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlChar * for the first occurrence or NULL. </para>
+<simplesect kind="return"><para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * for the first occurrence or NULL. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -898,7 +898,7 @@
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * array (haystack) </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array (haystack) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -918,7 +918,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlChar * for the first occurrence or NULL. </para>
+<simplesect kind="return"><para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * for the first occurrence or NULL. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -936,7 +936,7 @@
           <declname>str</declname>
         </param>
         <briefdescription>
-<para>length of a xmlChar&apos;s string </para>
+<para>length of a <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s string </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -944,11 +944,11 @@
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * array </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the number of xmlChar contained in the ARRAY. </para>
+<simplesect kind="return"><para>the number of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> contained in the ARRAY. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -974,7 +974,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>a strncat for array of xmlChar&apos;s, it will extend <computeroutput>cur</computeroutput> with the len first bytes of <computeroutput>add</computeroutput>. </para>
+<para>a strncat for array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s, it will extend <computeroutput>cur</computeroutput> with the len first bytes of <computeroutput>add</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Note that if <computeroutput>len</computeroutput> &lt; 0 then this is an API error and NULL will be returned.</para>
@@ -983,7 +983,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the original xmlChar * array </para>
+<para>the original <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -991,7 +991,7 @@
 <parametername>add</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * array added </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array added </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1003,7 +1003,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar *, the original <computeroutput>cur</computeroutput> is reallocated and should not be freed. </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *, the original <computeroutput>cur</computeroutput> is reallocated and should not be freed. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1029,7 +1029,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>same as xmlStrncat, but creates a new string. </para>
+<para>same as <ref refid="xmlstring_8h_1aeca675098d784db337859272f5c6acb8" kindref="member">xmlStrncat</ref>, but creates a new string. </para>
         </briefdescription>
         <detaileddescription>
 <para>The original two strings are not freed. If <computeroutput>len</computeroutput> is &lt; 0 then the length will be calculated automatically.</para>
@@ -1038,7 +1038,7 @@
 <parametername>str1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>first xmlChar string </para>
+<para>first <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1046,7 +1046,7 @@
 <parametername>str2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>second xmlChar string </para>
+<para>second <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1058,7 +1058,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar * or NULL </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * or NULL </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1080,7 +1080,7 @@
           <declname>add</declname>
         </param>
         <briefdescription>
-<para>a strcat for array of xmlChar&apos;s. </para>
+<para>a strcat for array of <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref>&apos;s. </para>
         </briefdescription>
         <detaileddescription>
 <para>Since they are supposed to be encoded in UTF-8 or an encoding with 8bit based chars, we assume a termination mark of &apos;0&apos;.</para>
@@ -1089,7 +1089,7 @@
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the original xmlChar * array </para>
+<para>the original <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1097,11 +1097,11 @@
 <parametername>add</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar * array added </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * array added </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar * containing the concatenated string. The original <computeroutput>cur</computeroutput> is reallocated and should not be freed. </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * containing the concatenated string. The original <computeroutput>cur</computeroutput> is reallocated and should not be freed. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1435,7 +1435,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>result of the compare as with xmlStrncmp </para>
+<simplesect kind="return"><para>result of the compare as with <ref refid="xmlstring_8h_1a7732b72ab4c03163e773fc1e4bf6653b" kindref="member">xmlStrncmp</ref> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1487,7 +1487,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>Read the first UTF8 character from <computeroutput>utf</computeroutput> </para>
+<para>Read the first UTF8 character from <computeroutput>utf</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

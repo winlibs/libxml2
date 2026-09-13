@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlXPathContextCache" kind="struct" language="C++" prot="public">
     <compoundname>_xmlXPathContextCache</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct__xmlXPathContextCache_1a5b3d6302ac39f4e55dd5ab85860748f2" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>xmlXPathObjectPtr nodesetObjs</definition>
         <argsstring></argsstring>
         <name>nodesetObjs</name>
@@ -18,7 +18,7 @@
         <location file="/builds/GNOME/libxml2/xpath.c" line="1109" column="23" bodyfile="/builds/GNOME/libxml2/xpath.c" bodystart="1109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlXPathContextCache_1a79b6d87c154d9942d4c11f275d296723" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlXPathObject" kindref="compound">xmlXPathObjectPtr</ref></type>
+        <type>xmlXPathObjectPtr</type>
         <definition>xmlXPathObjectPtr miscObjs</definition>
         <argsstring></argsstring>
         <name>miscObjs</name>

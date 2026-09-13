@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlRegAtom" kind="struct" language="C++" prot="public">
     <compoundname>_xmlRegAtom</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="230" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="230" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="232" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a32ff668be30ecb40c2caffb8df2b8107" prot="public" static="no" mutable="no">
         <type>xmlRegAtomType</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="231" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="231" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="233" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="233" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a613886c1f6e23ce6d1221d4714f3e32e" prot="public" static="no" mutable="no">
         <type>xmlRegQuantType</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="232" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="232" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="234" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="234" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a3e202b201e6255d975cd6d3aff1f5a4d" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="233" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="233" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="235" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="235" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1ae1e1dde676c120fa6d10f3bb2c14059e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="234" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="234" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="236" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="236" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a6a4083fab79d9123bef0010a202c3c27" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="236" column="10" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="236" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="238" column="10" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="238" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a710f36c52391b4dfc8afd61f41111e95" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="237" column="10" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="237" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="239" column="10" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="239" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a186b6342d483ea691785eb9a6d88605b" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="238" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="238" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="240" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="240" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a1737c67eb2c9e2d32a5906f2e65d9fd3" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="239" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="239" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="241" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="241" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a02a3a6fd47137fb55ed247acf3a122ad" prot="public" static="no" mutable="no">
         <type>xmlRegStatePtr</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="240" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="240" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="242" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="242" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1ad17e6432a546ef3418beeea2bb16704e" prot="public" static="no" mutable="no">
         <type>xmlRegStatePtr</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="241" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="241" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="243" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="243" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1abfed80f2681dc1d7d9d3958e179542af" prot="public" static="no" mutable="no">
         <type>xmlRegStatePtr</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="242" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="242" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="244" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="244" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a51cd6852d33d1ea9e7f940ebf9c0dddf" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="243" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="243" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="245" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="245" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a94e6f495ca0bbd1e831838d4dc9253fb" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="244" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="244" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="246" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1aa13fdda84697e2ad074c8beafbf068e8" prot="public" static="no" mutable="no">
         <type>xmlRegRangePtr *</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="245" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="245" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="247" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="247" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRegAtom_1a735984d41155bc1032e09bece8f8d66d" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="246" column="10" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="246" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="248" column="10" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="248" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -260,7 +260,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/builds/GNOME/libxml2/xmlregexp.c" line="229" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="229" bodyend="247"/>
+    <location file="/builds/GNOME/libxml2/xmlregexp.c" line="231" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="231" bodyend="249"/>
     <listofallmembers>
       <member refid="struct__xmlRegAtom_1a1737c67eb2c9e2d32a5906f2e65d9fd3" prot="public" virt="non-virtual"><scope>_xmlRegAtom</scope><name>codepoint</name></member>
       <member refid="struct__xmlRegAtom_1a735984d41155bc1032e09bece8f8d66d" prot="public" virt="non-virtual"><scope>_xmlRegAtom</scope><name>data</name></member>

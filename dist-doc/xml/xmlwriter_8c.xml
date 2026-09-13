@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlwriter_8c" kind="file" language="C++">
     <compoundname>xmlwriter.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -550,13 +550,13 @@
 <para>misc </para>
         </briefdescription>
         <detaileddescription>
-<para>Free callback for the xmlList.</para>
+<para>Free callback for the <ref refid="list_8h_1a3683aecc49d6366840e76e29c98649d9" kindref="member">xmlList</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>lk</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlLink </para>
+<para>the <ref refid="list_8h_1abfdd7e91ad4832b583a06f8b74b3da89" kindref="member">xmlLink</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -580,7 +580,7 @@
           <declname>data1</declname>
         </param>
         <briefdescription>
-<para>Compare callback for the xmlList. </para>
+<para>Compare callback for the <ref refid="list_8h_1a3683aecc49d6366840e76e29c98649d9" kindref="member">xmlList</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -627,7 +627,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -647,7 +647,7 @@
           <declname>lk</declname>
         </param>
         <briefdescription>
-<para>Free callback for the xmlList. </para>
+<para>Free callback for the <ref refid="list_8h_1a3683aecc49d6366840e76e29c98649d9" kindref="member">xmlList</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -655,7 +655,7 @@
 <parametername>lk</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlLink </para>
+<para>the <ref refid="list_8h_1abfdd7e91ad4832b583a06f8b74b3da89" kindref="member">xmlLink</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -679,7 +679,7 @@
           <declname>data1</declname>
         </param>
         <briefdescription>
-<para>Compare callback for the xmlList. </para>
+<para>Compare callback for the <ref refid="list_8h_1a3683aecc49d6366840e76e29c98649d9" kindref="member">xmlList</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -725,7 +725,7 @@
           <declname>len</declname>
         </param>
         <briefdescription>
-<para>Write callback for the xmlOutputBuffer with target xmlBuffer. </para>
+<para>Write callback for the <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> with target <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -733,7 +733,7 @@
 <parametername>context</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlBuffer </para>
+<para>the <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -771,7 +771,7 @@
           <declname>context</declname>
         </param>
         <briefdescription>
-<para>Close callback for the xmlOutputBuffer with target xmlBuffer. </para>
+<para>Close callback for the <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> with target <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -779,7 +779,7 @@
 <parametername>context</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlBuffer </para>
+<para>the <ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -825,7 +825,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new xmlChar buffer with the data or NULL on error. This buffer must be freed. </para>
+<simplesect kind="return"><para>a new <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> buffer with the data or NULL on error. This buffer must be freed. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -839,7 +839,7 @@
         <argsstring>(xmlOutputBufferPtr out, int len, const unsigned char *data)</argsstring>
         <name>xmlOutputBufferWriteBase64</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>out</declname>
         </param>
         <param>
@@ -851,7 +851,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Write base64 encoded data to an xmlOutputBuffer. </para>
+<para>Write base64 encoded data to an <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para>Adapted from John Walker&apos;s base64.c (<ulink url="http://www.fourmilab.ch/">http://www.fourmilab.ch/</ulink>).</para>
@@ -860,7 +860,7 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlOutputBuffer </para>
+<para>the <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -934,7 +934,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -968,7 +968,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1114,7 +1114,7 @@
           <declname>out</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlTextWriter structure using an xmlOutputBuffer NOTE: the <computeroutput>out</computeroutput> parameter will be deallocated when the writer is closed (if the call succeed.) </para>
+<para>Create a new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> structure using an <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> NOTE: the <computeroutput>out</computeroutput> parameter will be deallocated when the writer is closed (if the call succeed.). </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1122,11 +1122,11 @@
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlOutputBuffer </para>
+<para>an <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextWriter or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1148,7 +1148,7 @@
           <declname>compression</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlTextWriter structure with <computeroutput>uri</computeroutput> as output. </para>
+<para>Create a new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> structure with <computeroutput>uri</computeroutput> as output. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1168,7 +1168,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextWriter or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1190,7 +1190,7 @@
           <declname>compression</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlTextWriter structure with <computeroutput>buf</computeroutput> as output TODO: handle compression. </para>
+<para>Create a new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> structure with <computeroutput>buf</computeroutput> as output TODO: handle compression. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1198,7 +1198,7 @@
 <parametername>buf</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>xmlBuffer </para>
+<para><ref refid="tree_8h_1a2ee128432290a53a930b36702abd1ef4" kindref="member">xmlBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1210,7 +1210,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextWriter or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1232,7 +1232,7 @@
           <declname>compression</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlTextWriter structure with <computeroutput>ctxt</computeroutput> as output NOTE: the <computeroutput>ctxt</computeroutput> context will be freed with the resulting writer (if the call succeeds). </para>
+<para>Create a new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> structure with <computeroutput>ctxt</computeroutput> as output NOTE: the <computeroutput>ctxt</computeroutput> context will be freed with the resulting writer (if the call succeeds). </para>
         </briefdescription>
         <detaileddescription>
 <para>TODO: handle compression</para>
@@ -1241,7 +1241,7 @@
 <parametername>ctxt</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>xmlParserCtxt to hold the new XML document tree </para>
+<para><ref refid="tree_8h_1afe4cc6b7bf2e4d3858f4aee47370d3d8" kindref="member">xmlParserCtxt</ref> to hold the new XML document tree </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1253,7 +1253,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextWriter or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1275,7 +1275,7 @@
           <declname>compression</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlTextWriter structure with <computeroutput>doc</computeroutput> as output. </para>
+<para>Create a new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> structure with <computeroutput>doc</computeroutput> as output. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1283,7 +1283,7 @@
 <parametername>doc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>address of a xmlDoc to hold the new XML document tree </para>
+<para>address of a <ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> to hold the new XML document tree </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1295,7 +1295,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextWriter or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1321,7 +1321,7 @@
           <declname>compression</declname>
         </param>
         <briefdescription>
-<para>Create a new xmlTextWriter structure with <computeroutput>doc</computeroutput> as output starting at <computeroutput>node</computeroutput> </para>
+<para>Create a new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> structure with <computeroutput>doc</computeroutput> as output starting at <computeroutput>node</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1329,7 +1329,7 @@
 <parametername>doc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>xmlDoc </para>
+<para><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1337,7 +1337,7 @@
 <parametername>node</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>xmlNode or NULL for doc-&gt;children </para>
+<para><ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> or NULL for doc-&gt;children </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1349,7 +1349,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlTextWriter or NULL in case of error </para>
+<simplesect kind="return"><para>the new <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1375,7 +1375,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1415,7 +1415,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1470,7 +1470,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1500,7 +1500,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1530,7 +1530,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1567,7 +1567,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1621,7 +1621,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1671,7 +1671,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1713,7 +1713,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1763,7 +1763,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1817,7 +1817,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1848,7 +1848,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1885,7 +1885,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1939,7 +1939,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1994,7 +1994,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2044,7 +2044,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2089,7 +2089,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2143,7 +2143,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2193,7 +2193,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2243,7 +2243,7 @@
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2285,7 +2285,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
         <argsstring>(xmlOutputBufferPtr out, int len, const unsigned char *data)</argsstring>
         <name>xmlOutputBufferWriteBinHex</name>
         <param>
-          <type><ref refid="struct__xmlOutputBuffer" kindref="compound">xmlOutputBufferPtr</ref></type>
+          <type>xmlOutputBufferPtr</type>
           <declname>out</declname>
         </param>
         <param>
@@ -2297,7 +2297,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Write hqx encoded data to an xmlOutputBuffer. </para>
+<para>Write hqx encoded data to an <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2305,7 +2305,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>out</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlOutputBuffer </para>
+<para>the <ref refid="tree_8h_1a5a833f0c7502e1b15b6571271fa4c541" kindref="member">xmlOutputBuffer</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2363,7 +2363,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2421,7 +2421,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2471,7 +2471,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2525,7 +2525,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -2566,7 +2566,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2632,7 +2632,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2694,7 +2694,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2759,7 +2759,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2849,7 +2849,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2935,7 +2935,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3008,7 +3008,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3074,7 +3074,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3136,7 +3136,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3201,7 +3201,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3291,7 +3291,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3377,7 +3377,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3443,7 +3443,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3481,7 +3481,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3522,7 +3522,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3588,7 +3588,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3650,7 +3650,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3696,7 +3696,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3726,7 +3726,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -3763,7 +3763,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3817,7 +3817,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3867,7 +3867,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3917,7 +3917,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -3971,7 +3971,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4020,7 +4020,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4110,7 +4110,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4196,7 +4196,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4262,7 +4262,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4300,7 +4300,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4341,7 +4341,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4407,7 +4407,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4469,7 +4469,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4519,7 +4519,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4557,7 +4557,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4598,7 +4598,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4664,7 +4664,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4726,7 +4726,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4780,7 +4780,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4826,7 +4826,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -4871,7 +4871,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -4949,7 +4949,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5035,7 +5035,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5125,7 +5125,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5194,13 +5194,13 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <para>Write a DTD external entity. </para>
         </briefdescription>
         <detaileddescription>
-<para>The entity must have been started with xmlTextWriterStartDTDEntity</para>
+<para>The entity must have been started with <ref refid="xmlwriter_8h_1a2319e8031407a58d53172e2cdcfe1abc" kindref="member">xmlTextWriterStartDTDEntity</ref></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5282,7 +5282,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5348,7 +5348,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5402,7 +5402,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5434,11 +5434,11 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -5469,7 +5469,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5511,7 +5511,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -5519,7 +5519,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>str</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlChar string </para>
+<para>the <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> string </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -5553,7 +5553,7 @@ NOTE: No safety check is done on the length of data. This check is something tha
 <parametername>writer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the xmlTextWriter </para>
+<para>the <ref refid="xmlwriter_8h_1a35c2a6bb8770f19006d2a0dfdf577adf" kindref="member">xmlTextWriter</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>

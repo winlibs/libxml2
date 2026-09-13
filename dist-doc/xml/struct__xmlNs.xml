@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlNs" kind="struct" language="C++" prot="public">
     <compoundname>_xmlNs</compoundname>
     <includes local="no">tree.h</includes>
@@ -86,7 +86,7 @@
         <name>context</name>
         <qualifiedname>_xmlNs::context</qualifiedname>
         <briefdescription>
-<para>normally an xmlDoc </para>
+<para>normally an <ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -100,8 +100,8 @@
     </briefdescription>
     <detaileddescription>
 <para>Note that prefix == NULL is valid, it defines the default namespace within the subtree (until overridden).</para>
-<para>xmlNsType is unified with xmlElementType.</para>
-<para>Note that the XPath engine returns XPath namespace nodes as xmlNs cast to xmlNode. This is a terrible design decision that can easily cause type confusion errors. In this case, the <computeroutput>next</computeroutput> member points to the xmlNode element to which the namespace node belongs. </para>
+<para>xmlNsType is unified with <ref refid="tree_8h_1a6d83aa11b89106b2ec14162b1474c8fc" kindref="member">xmlElementType</ref>.</para>
+<para>Note that the XPath engine returns XPath namespace nodes as <ref refid="tree_8h_1a79683a004465ef75a960604fada53ab3" kindref="member">xmlNs</ref> cast to <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref>. This is a terrible design decision that can easily cause type confusion errors. In this case, the <computeroutput><ref refid="struct__xmlNs_1a67008c1279cd85f76f2b9ef96e353710" kindref="member">next</ref></computeroutput> member points to the <ref refid="tree_8h_1ac8c054adbdabc014ab4584dfb1ce841e" kindref="member">xmlNode</ref> element to which the namespace node belongs. </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="4">

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlautomata_8h" kind="file" language="C++">
     <compoundname>xmlautomata.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="45" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5639" bodyend="5659" declfile="xmlautomata.h" declline="45" declcolumn="5"/>
+        <location file="xmlautomata.h" line="45" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5643" bodyend="5663" declfile="xmlautomata.h" declline="45" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a3f820610481205fad68711a6ef8736c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="48" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5669" bodyend="5673" declfile="xmlautomata.h" declline="48" declcolumn="5"/>
+        <location file="xmlautomata.h" line="48" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5673" bodyend="5677" declfile="xmlautomata.h" declline="48" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1ae0d15cfdf0a3cc974e0852b0e2c6d35b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -260,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="52" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5699" bodyend="5703" declfile="xmlautomata.h" declline="52" declcolumn="5"/>
+        <location file="xmlautomata.h" line="52" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5703" bodyend="5707" declfile="xmlautomata.h" declline="52" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a0776046f7367c47dca8e4df14b264e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -304,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="55" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5715" bodyend="5720" declfile="xmlautomata.h" declline="55" declcolumn="5"/>
+        <location file="xmlautomata.h" line="55" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5719" bodyend="5724" declfile="xmlautomata.h" declline="55" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1aefef086e6f1d5a901db7e3c075b95e3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -336,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="59" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6225" bodyend="6229" declfile="xmlautomata.h" declline="59" declcolumn="5"/>
+        <location file="xmlautomata.h" line="59" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6229" bodyend="6233" declfile="xmlautomata.h" declline="59" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1af7c76b1b3f0efca56806a53a56226038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -417,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="62" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5739" bodyend="5764" declfile="xmlautomata.h" declline="62" declcolumn="5"/>
+        <location file="xmlautomata.h" line="62" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5743" bodyend="5768" declfile="xmlautomata.h" declline="62" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1acb4e88ae8d370ddb10495add597b4d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -449,7 +449,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by the value of <computeroutput>token</computeroutput> </para>
+<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by the value of <computeroutput>token</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000412"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -509,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="69" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5782" bodyend="5822" declfile="xmlautomata.h" declline="69" declcolumn="5"/>
+        <location file="xmlautomata.h" line="69" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5786" bodyend="5826" declfile="xmlautomata.h" declline="69" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a6e0ea2fee40a99150c703b36f6b06b39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -601,7 +601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="77" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5842" bodyend="5888" declfile="xmlautomata.h" declline="77" declcolumn="21"/>
+        <location file="xmlautomata.h" line="77" column="21" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5846" bodyend="5892" declfile="xmlautomata.h" declline="77" declcolumn="21"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1adb32d2d0271ba76652f3edb98092746e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -637,7 +637,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput> </para>
+<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000415"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -705,7 +705,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="86" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6004" bodyend="6060" declfile="xmlautomata.h" declline="86" declcolumn="5"/>
+        <location file="xmlautomata.h" line="86" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6008" bodyend="6064" declfile="xmlautomata.h" declline="86" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1ab07f7a3e318e98597074ed6ed1d8b01a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -745,7 +745,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and <computeroutput>token2</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput> </para>
+<para>If <computeroutput>to</computeroutput> is NULL, this creates first a new target state in the automata and then adds a transition from the <computeroutput>from</computeroutput> state to the target state activated by a succession of input of value <computeroutput>token</computeroutput> and <computeroutput>token2</computeroutput> and whose number is between <computeroutput>min</computeroutput> and <computeroutput>max</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000414"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -821,7 +821,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="95" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5909" bodyend="5984" declfile="xmlautomata.h" declline="95" declcolumn="5"/>
+        <location file="xmlautomata.h" line="95" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="5913" bodyend="5988" declfile="xmlautomata.h" declline="95" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a1130c6b3e5d39cb0944bea5a1ee82892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -925,7 +925,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="105" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6170" bodyend="6214" declfile="xmlautomata.h" declline="105" declcolumn="5"/>
+        <location file="xmlautomata.h" line="105" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6174" bodyend="6218" declfile="xmlautomata.h" declline="105" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a4fbb9c6938a3afec71b1bbbd0c0a9fb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -1041,7 +1041,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="114" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6082" bodyend="6147" declfile="xmlautomata.h" declline="114" declcolumn="5"/>
+        <location file="xmlautomata.h" line="114" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6086" bodyend="6151" declfile="xmlautomata.h" declline="114" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1ac4f9205265a6bbc643eb4e097a52136a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -1110,7 +1110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="124" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6269" bodyend="6277" declfile="xmlautomata.h" declline="124" declcolumn="5"/>
+        <location file="xmlautomata.h" line="124" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6273" bodyend="6281" declfile="xmlautomata.h" declline="124" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1afdc625539abc6af168075a0d528375ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -1166,7 +1166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="130" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6244" bodyend="6252" declfile="xmlautomata.h" declline="130" declcolumn="5"/>
+        <location file="xmlautomata.h" line="130" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6248" bodyend="6256" declfile="xmlautomata.h" declline="130" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a3cf399ff33dca2669765d9c1819b6067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -1234,7 +1234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="135" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6318" bodyend="6326" declfile="xmlautomata.h" declline="135" declcolumn="5"/>
+        <location file="xmlautomata.h" line="135" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6322" bodyend="6330" declfile="xmlautomata.h" declline="135" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a7011873a2f63782074a2cb9070aea7bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlautomata_8h_1aff9466f70634c12f2e4f4beda6329ff5" kindref="member">xmlAutomataState</ref> *</type>
@@ -1302,7 +1302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="141" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6342" bodyend="6350" declfile="xmlautomata.h" declline="141" declcolumn="5"/>
+        <location file="xmlautomata.h" line="141" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6346" bodyend="6354" declfile="xmlautomata.h" declline="141" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1a8477677722e413a10d1a1496650c33e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1358,7 +1358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="147" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6290" bodyend="6302" declfile="xmlautomata.h" declline="147" declcolumn="5"/>
+        <location file="xmlautomata.h" line="147" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6294" bodyend="6306" declfile="xmlautomata.h" declline="147" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1aecbffa32eb826f0b8559db90c0f5fd8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct _xmlRegexp *</type>
@@ -1391,7 +1391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="153" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6362" bodyend="6373" declfile="xmlautomata.h" declline="153" declcolumn="5"/>
+        <location file="xmlautomata.h" line="153" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6366" bodyend="6377" declfile="xmlautomata.h" declline="153" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlautomata_8h_1ac978b1ae4049005ad1a4b872e84efbd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1423,7 +1423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlautomata.h" line="156" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6384" bodyend="6392" declfile="xmlautomata.h" declline="156" declcolumn="5"/>
+        <location file="xmlautomata.h" line="156" column="5" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="6388" bodyend="6396" declfile="xmlautomata.h" declline="156" declcolumn="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="dict_8c" kind="file" language="C++">
     <compoundname>dict.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -359,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="502" column="9" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="502" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="513" column="9" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="513" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="905" column="17" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="905" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="916" column="17" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="916" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dict_8c_1aaa7aa92218462921e648bd424d050439" prot="public" static="yes" mutable="no">
         <type>unsigned</type>
@@ -441,7 +441,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="907" column="17" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="907" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="918" column="17" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="918" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -574,7 +574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="197" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="197" bodyend="245"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="197" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="197" bodyend="256"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1ab2325dd6b47c753a6dfb4620aa85c5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dict_8h_1a72d327232a49f4337b4357e6417cdad3" kindref="member">xmlDict</ref> *</type>
@@ -594,7 +594,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="253" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="253" bodyend="274"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="264" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="264" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1ab8f9e6e2dd55687f487f7bc9615caa39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dict_8h_1a72d327232a49f4337b4357e6417cdad3" kindref="member">xmlDict</ref> *</type>
@@ -625,7 +625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="286" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="286" bodyend="295"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="297" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="297" bodyend="306"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1ac35fc16acda235c214c7f2a043af5c51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -655,7 +655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="304" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="304" bodyend="310"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="315" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="315" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a8c96faa88b84f4cba7359bb0b22ec35d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -684,7 +684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="319" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="319" bodyend="349"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="330" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="330" bodyend="360"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1ae98630502265a7baabb2a9d67b0f2b40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -726,7 +726,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="360" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="360" bodyend="374"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="371" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="371" bodyend="385"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1afd7448ee71febf328ee836082735c00b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -756,7 +756,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="384" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="384" bodyend="390"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="395" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="395" bodyend="401"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a81fac15f257f79b3993c2d58dfd5b866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -798,7 +798,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="401" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="401" bodyend="409"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="412" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="412" bodyend="420"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1aba24a53035673d84f72096fc5ea024cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -828,7 +828,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="419" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="419" bodyend="431"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="430" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="430" bodyend="442"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a65a88c308406772b8419f48bd07f1417" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -857,7 +857,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="442" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="442" bodyend="457"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="453" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="453" bodyend="468"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a070c02d28082d5dfb95d42ed79630a4b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -890,7 +890,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="461" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="461" bodyend="487"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="472" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="472" bodyend="498"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a0ec716084dc050c925e50568ff42abbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -932,7 +932,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="497" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="497" bodyend="500"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="508" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="508" bodyend="511"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a304e6ca0f50405ddc51f53e1dd2e4bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -974,7 +974,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="513" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="513" bodyend="522"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="524" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="524" bodyend="533"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a90f267c13d202f819b1b56463e268bc5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlDictEntry *</type>
@@ -1063,7 +1063,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="538" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="538" bodyend="588"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="549" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="549" bodyend="599"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a8ef69b150da1f5303cc45719a667e5a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1105,7 +1105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="598" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="598" bodyend="653"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="609" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="609" bodyend="664"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1af872447f7691fef015dd716bacd250ba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const xmlDictEntry *</type>
@@ -1181,7 +1181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="666" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="666" bodyend="802"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="677" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="677" bodyend="813"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a84f7c91566b9ad4859c0b3674e9e3111" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1235,7 +1235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="814" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="814" bodyend="821"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="825" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="825" bodyend="832"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a400cef357b3c07403339adf9698abc03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlHashedString</type>
@@ -1289,7 +1289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="833" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="833" bodyend="847"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="844" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="844" bodyend="858"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1ab89ba11cd92b90bcc5cf2df28fc751a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1343,7 +1343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="858" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="858" bodyend="865"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="869" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="869" bodyend="876"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a577d1b2ae5de897fb37289e647a71ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1397,7 +1397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="878" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="878" bodyend="885"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="889" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="889" bodyend="896"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1af6e5aa8ad8338a7c26b6cfdd94655970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1413,7 +1413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="915" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="915" bodyend="974"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="926" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="926" bodyend="985"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a9c9d5ac5cf579050f2551d19770bdbfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1429,7 +1429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="981" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="981" bodyend="983"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="992" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="992" bodyend="994"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1ae1061aff55cd86a2227374d4bcfa1b04" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -1446,7 +1446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="987" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="987" bodyend="997"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="998" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="998" bodyend="1008"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1aac7a7e7c7fd42a5551f9639c4f99785c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -1462,7 +1462,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="1006" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="1006" bodyend="1014"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="1017" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="1017" bodyend="1025"/>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1a9257299bb8833372af9821f9f21435da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -1478,7 +1478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/dict.c" line="1023" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="1023" bodyend="1025"/>
+        <location file="/builds/GNOME/libxml2/dict.c" line="1034" column="1" bodyfile="/builds/GNOME/libxml2/dict.c" bodystart="1034" bodyend="1036"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

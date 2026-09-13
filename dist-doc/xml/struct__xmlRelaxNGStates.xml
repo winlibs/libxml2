@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlRelaxNGStates" kind="struct" language="C++" prot="public">
     <compoundname>_xmlRelaxNGStates</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="299" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="299" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="300" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="300" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGStates_1a9f7e61185f91ed7bb7b42975ed3c9324" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="300" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="300" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="301" column="9" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="301" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlRelaxNGStates_1ac7917685db6c4d322c5a1a2cad368ce5" prot="public" static="no" mutable="no">
         <type>xmlRelaxNGValidStatePtr *</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/relaxng.c" line="301" column="29" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="301" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/relaxng.c" line="302" column="29" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="302" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -187,7 +187,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/builds/GNOME/libxml2/relaxng.c" line="298" column="1" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="298" bodyend="302"/>
+    <location file="/builds/GNOME/libxml2/relaxng.c" line="299" column="1" bodyfile="/builds/GNOME/libxml2/relaxng.c" bodystart="299" bodyend="303"/>
     <listofallmembers>
       <member refid="struct__xmlRelaxNGStates_1a9f7e61185f91ed7bb7b42975ed3c9324" prot="public" virt="non-virtual"><scope>_xmlRelaxNGStates</scope><name>maxState</name></member>
       <member refid="struct__xmlRelaxNGStates_1a79b55c134b3e1de4837ae2f4f4e609b5" prot="public" virt="non-virtual"><scope>_xmlRelaxNGStates</scope><name>nbState</name></member>

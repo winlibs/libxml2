@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlParserCtxt" kind="struct" language="C++" prot="public">
     <compoundname>_xmlParserCtxt</compoundname>
     <includes local="no">parser.h</includes>
@@ -81,7 +81,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000025"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_NOENT</para>
+<para><xrefsect id="deprecated_1_deprecated000025"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOENT</para>
 </xrefdescription></xrefsect></para>
 <para>shall we replace entities? </para>
         </detaileddescription>
@@ -386,7 +386,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000033"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_DTDVALID</para>
+<para><xrefsect id="deprecated_1_deprecated000033"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_DTDVALID</para>
 </xrefdescription></xrefsect></para>
 <para>shall we try to validate? </para>
         </detaileddescription>
@@ -395,7 +395,7 @@
         <location file="parser.h" line="374" column="9" bodyfile="parser.h" bodystart="374" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlParserCtxt_1a0527715680b7e211a63b5e361f949024" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref></type>
+        <type>xmlValidCtxt</type>
         <definition>xmlValidCtxt vctxt</definition>
         <argsstring></argsstring>
         <name>vctxt</name>
@@ -549,7 +549,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000036"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use inverted xmlParserOption XML_PARSE_NOBLANKS</para>
+<para><xrefsect id="deprecated_1_deprecated000036"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use inverted <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOBLANKS</para>
 </xrefdescription></xrefsect></para>
 <para>ugly but ... </para>
         </detaileddescription>
@@ -783,7 +783,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000042"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_PEDANTIC</para>
+<para><xrefsect id="deprecated_1_deprecated000042"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_PEDANTIC</para>
 </xrefdescription></xrefsect></para>
 <para>signal pedantic warnings </para>
         </detaileddescription>
@@ -817,9 +817,9 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000044"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_DTDLOAD, XML_PARSE_DTDATTR or XML_PARSE_SKIP_IDS.</para>
+<para><xrefsect id="deprecated_1_deprecated000044"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_DTDLOAD, XML_PARSE_DTDATTR or XML_PARSE_SKIP_IDS.</para>
 </xrefdescription></xrefsect></para>
-<para>Control loading of the external subset and handling of IDs. Other options like <computeroutput>validate</computeroutput> can override this value.</para>
+<para>Control loading of the external subset and handling of IDs. Other options like <computeroutput><ref refid="struct__xmlParserCtxt_1a8d391f3cd6e23f6d46b9a3e7f2baabf2" kindref="member">validate</ref></computeroutput> can override this value.</para>
 <para><itemizedlist>
 <listitem><para>0: The default behavior is to process IDs and to ignore the external subset.</para>
 </listitem><listitem><para>XML_DETECT_IDS: Load external subset. This flag is misnamed. ID handling is only controlled by XML_SKIP_IDS.</para>
@@ -872,7 +872,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000046"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlParserOption XML_PARSE_RECOVER run in recovery mode </para>
+<para><xrefsect id="deprecated_1_deprecated000046"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_RECOVER run in recovery mode </para>
 </xrefdescription></xrefsect></para>
         </detaileddescription>
         <inbodydescription>
@@ -1149,7 +1149,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000050"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use inverted xmlParserOption XML_PARSE_NODICT</para>
+<para><xrefsect id="deprecated_1_deprecated000050"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use inverted <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NODICT</para>
 </xrefdescription></xrefsect></para>
 <para>Use dictionary names for the tree </para>
         </detaileddescription>

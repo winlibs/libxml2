@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="c14n_8h" kind="file" language="C++">
     <compoundname>c14n.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -261,7 +261,7 @@
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the c14n mode (see <computeroutput>xmlC14NMode</computeroutput>) </para>
+<para>the c14n mode (see <computeroutput><ref refid="c14n_8h_1adb7a2fe23fa1f38a90a1658a07ba9871" kindref="member">xmlC14NMode</ref></computeroutput>) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="c14n.h" line="61" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="1914" bodyend="1924" declfile="c14n.h" declline="61" declcolumn="1"/>
+        <location file="c14n.h" line="61" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="1916" bodyend="1926" declfile="c14n.h" declline="61" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="c14n_8h_1a0b03db0d24c59380144912ffe50a5474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -352,7 +352,7 @@
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the c14n mode (see <computeroutput>xmlC14NMode</computeroutput>) </para>
+<para>the c14n mode (see <computeroutput><ref refid="c14n_8h_1adb7a2fe23fa1f38a90a1658a07ba9871" kindref="member">xmlC14NMode</ref></computeroutput>) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -386,7 +386,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="c14n.h" line="69" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="1947" bodyend="1991" declfile="c14n.h" declline="69" declcolumn="1"/>
+        <location file="c14n.h" line="69" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="1949" bodyend="1993" declfile="c14n.h" declline="69" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="c14n_8h_1af73d08aab2819d554e7492fb49ec3745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -447,7 +447,7 @@
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the c14n mode (see <computeroutput>xmlC14NMode</computeroutput>) </para>
+<para>the c14n mode (see <computeroutput><ref refid="c14n_8h_1adb7a2fe23fa1f38a90a1658a07ba9871" kindref="member">xmlC14NMode</ref></computeroutput>) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -489,7 +489,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="c14n.h" line="77" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="2015" bodyend="2055" declfile="c14n.h" declline="77" declcolumn="1"/>
+        <location file="c14n.h" line="77" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="2017" bodyend="2057" declfile="c14n.h" declline="77" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="c14n_8h_1a86550661d85e370e6da9a94491f4cfc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -558,7 +558,7 @@
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the c14n mode (see <computeroutput>xmlC14NMode</computeroutput>) </para>
+<para>the c14n mode (see <computeroutput><ref refid="c14n_8h_1adb7a2fe23fa1f38a90a1658a07ba9871" kindref="member">xmlC14NMode</ref></computeroutput>) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -592,7 +592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="c14n.h" line="102" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="1815" bodyend="1892" declfile="c14n.h" declline="102" declcolumn="1"/>
+        <location file="c14n.h" line="102" column="1" bodyfile="/builds/GNOME/libxml2/c14n.c" bodystart="1817" bodyend="1894" declfile="c14n.h" declline="102" declcolumn="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

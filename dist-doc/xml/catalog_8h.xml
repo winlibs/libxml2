@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="catalog_8h" kind="file" language="C++">
     <compoundname>catalog.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -166,13 +166,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlCatalog or NULL in case of error </para>
+<simplesect kind="return"><para>the <ref refid="catalog_8h_1aa3ccaec875fffaa151ce8a4042112725" kindref="member">xmlCatalog</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="75" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3116" bodyend="3134" declfile="catalog.h" declline="75" declcolumn="1"/>
+        <location file="catalog.h" line="75" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3141" bodyend="3159" declfile="catalog.h" declline="75" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a7a2f7b4b74cc467b5ed43048cc2204cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="catalog_8h_1aa3ccaec875fffaa151ce8a4042112725" kindref="member">xmlCatalog</ref> *</type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="78" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2736" bodyend="2782" declfile="catalog.h" declline="78" declcolumn="1"/>
+        <location file="catalog.h" line="78" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2768" bodyend="2814" declfile="catalog.h" declline="78" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a19736045503a44008e89bd0cf6e40b55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="catalog_8h_1aa3ccaec875fffaa151ce8a4042112725" kindref="member">xmlCatalog</ref> *</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="82" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2698" bodyend="2721" declfile="catalog.h" declline="82" declcolumn="1"/>
+        <location file="catalog.h" line="82" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2730" bodyend="2753" declfile="catalog.h" declline="82" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1ab515aaa7cda29238cd3a58639f700ea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -338,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="89" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3046" bodyend="3076" declfile="catalog.h" declline="89" declcolumn="1"/>
+        <location file="catalog.h" line="89" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3071" bodyend="3101" declfile="catalog.h" declline="89" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a747e4b6b4f9552a277e15c2ba0062380" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -382,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="95" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3088" bodyend="3105" declfile="catalog.h" declline="95" declcolumn="1"/>
+        <location file="catalog.h" line="95" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3113" bodyend="3130" declfile="catalog.h" declline="95" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a768df5b68e9c549292c81db6d8b9b58c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -438,7 +438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="99" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2929" bodyend="2968" declfile="catalog.h" declline="99" declcolumn="1"/>
+        <location file="catalog.h" line="99" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2957" bodyend="2993" declfile="catalog.h" declline="99" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a0d6dbea69afba49838aa293b5178b8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -482,7 +482,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="104" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2848" bodyend="2875" declfile="catalog.h" declline="104" declcolumn="1"/>
+        <location file="catalog.h" line="104" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2880" bodyend="2905" declfile="catalog.h" declline="104" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a3102e7cd5d28f7470a9f6f187b37ac56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -526,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="108" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2888" bodyend="2915" declfile="catalog.h" declline="108" declcolumn="1"/>
+        <location file="catalog.h" line="108" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2918" bodyend="2943" declfile="catalog.h" declline="108" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a883b8d2b5bc790bfe97ec6b46fd95534" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -570,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="112" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="2981" bodyend="3006" declfile="catalog.h" declline="112" declcolumn="1"/>
+        <location file="catalog.h" line="112" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3006" bodyend="3031" declfile="catalog.h" declline="112" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a1b0e0f6095e18c9f43b12ae00507a5ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -612,7 +612,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="117" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3018" bodyend="3030" declfile="catalog.h" declline="117" declcolumn="1"/>
+        <location file="catalog.h" line="117" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3043" bodyend="3055" declfile="catalog.h" declline="117" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a45928e822a6ff074ad0a3458af27826f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -674,7 +674,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="125" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3145" bodyend="3173" declfile="catalog.h" declline="125" declcolumn="1"/>
+        <location file="catalog.h" line="125" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3170" bodyend="3198" declfile="catalog.h" declline="125" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1af1b6622538d7f4540cc8e0ca30d0ce99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -691,7 +691,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="131" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3196" bodyend="3246" declfile="catalog.h" declline="131" declcolumn="1"/>
+        <location file="catalog.h" line="131" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3221" bodyend="3271" declfile="catalog.h" declline="131" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a1d70d9d7080c5362e737895a000deeb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -722,7 +722,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="133" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3259" bodyend="3284" declfile="catalog.h" declline="133" declcolumn="1"/>
+        <location file="catalog.h" line="133" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3284" bodyend="3309" declfile="catalog.h" declline="133" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1aa63041f61aa5623017ea31aaaaa59fa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -752,7 +752,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="135" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3295" bodyend="3330" declfile="catalog.h" declline="135" declcolumn="1"/>
+        <location file="catalog.h" line="135" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3320" bodyend="3355" declfile="catalog.h" declline="135" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a29d92da35757a1fc1f79c1786d0e40b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -769,7 +769,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="137" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3336" bodyend="3351" declfile="catalog.h" declline="137" declcolumn="1"/>
+        <location file="catalog.h" line="137" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3361" bodyend="3376" declfile="catalog.h" declline="137" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1afac63a89f0799789836fe803be907331" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -797,10 +797,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="140" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3441" bodyend="3449" declfile="catalog.h" declline="140" declcolumn="1"/>
+        <location file="catalog.h" line="140" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3466" bodyend="3474" declfile="catalog.h" declline="140" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a5473c4890dd64f48241f68e29c5c11c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr xmlCatalogDumpDoc</definition>
         <argsstring>(void)</argsstring>
         <name>xmlCatalogDumpDoc</name>
@@ -808,16 +808,16 @@
           <type>void</type>
         </param>
         <briefdescription>
-<para>Dump all the global catalog content as a xmlDoc This function is just for testing/debugging purposes. </para>
+<para>Dump all the global catalog content as a <ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> This function is just for testing/debugging purposes. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>The catalog as xmlDoc or NULL if failed, it must be freed by the caller. </para>
+<para><simplesect kind="return"><para>The catalog as <ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> or NULL if failed, it must be freed by the caller. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="142" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3458" bodyend="3463" declfile="catalog.h" declline="142" declcolumn="1"/>
+        <location file="catalog.h" line="142" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3483" bodyend="3488" declfile="catalog.h" declline="142" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1af4025a6e7beb50f07b1c53c2dbfab6f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -859,7 +859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="145" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3406" bodyend="3414" declfile="catalog.h" declline="145" declcolumn="1"/>
+        <location file="catalog.h" line="145" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3431" bodyend="3439" declfile="catalog.h" declline="145" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a1e5a9f085a86565bc311de418eafacf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -889,7 +889,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="148" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3369" bodyend="3377" declfile="catalog.h" declline="148" declcolumn="1"/>
+        <location file="catalog.h" line="148" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3394" bodyend="3402" declfile="catalog.h" declline="148" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a18edb9fa5bb56ef793aba5167635c812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -919,7 +919,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="150" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3387" bodyend="3395" declfile="catalog.h" declline="150" declcolumn="1"/>
+        <location file="catalog.h" line="150" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3412" bodyend="3420" declfile="catalog.h" declline="150" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a5600244c5c49b540e82d0b076717a28e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -949,7 +949,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="152" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3424" bodyend="3432" declfile="catalog.h" declline="152" declcolumn="1"/>
+        <location file="catalog.h" line="152" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3449" bodyend="3457" declfile="catalog.h" declline="152" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a33e62d64238b23b763ac46e8c34fa535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -972,7 +972,7 @@
 <para>Add an entry in the catalog, it may overwrite existing but different entries. </para>
         </briefdescription>
         <detaileddescription>
-<para>If called before any other catalog routine, allows to override the default shared catalog put in place by xmlInitializeCatalog;</para>
+<para>If called before any other catalog routine, allows to override the default shared catalog put in place by <ref refid="catalog_8h_1af1b6622538d7f4540cc8e0ca30d0ce99" kindref="member">xmlInitializeCatalog</ref>;</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>type</parametername>
@@ -1004,7 +1004,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="154" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3478" bodyend="3504" declfile="catalog.h" declline="154" declcolumn="1"/>
+        <location file="catalog.h" line="154" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3503" bodyend="3529" declfile="catalog.h" declline="154" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1abf571cd2cf730be2e899e6405a20a276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1034,7 +1034,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="158" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3513" bodyend="3523" declfile="catalog.h" declline="158" declcolumn="1"/>
+        <location file="catalog.h" line="158" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3538" bodyend="3548" declfile="catalog.h" declline="158" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a0815fdfeb44005edf5f8bedbecc7658b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="tree_8h_1ae94acff8b6413934705e29389bcddc17" kindref="member">xmlDoc</ref> *</type>
@@ -1087,7 +1087,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="165" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3532" bodyend="3542" declfile="catalog.h" declline="165" declcolumn="1"/>
+        <location file="catalog.h" line="165" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3557" bodyend="3567" declfile="catalog.h" declline="165" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1ab473f60a58841c578359e82e009ad677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1115,7 +1115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="173" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3664" bodyend="3670" declfile="catalog.h" declline="173" declcolumn="1"/>
+        <location file="catalog.h" line="173" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3689" bodyend="3695" declfile="catalog.h" declline="173" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a5d8a0a4fd53989e3a6ea660c77502cfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -1157,7 +1157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="175" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3681" bodyend="3706" declfile="catalog.h" declline="175" declcolumn="1"/>
+        <location file="catalog.h" line="175" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3706" bodyend="3731" declfile="catalog.h" declline="175" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a27127b6393f0c94cada0cff9633b1aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1211,7 +1211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="178" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3719" bodyend="3749" declfile="catalog.h" declline="178" declcolumn="1"/>
+        <location file="catalog.h" line="178" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3744" bodyend="3772" declfile="catalog.h" declline="178" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1ad1e8d7353ff8524bf545925a0b414fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1253,7 +1253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="182" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3761" bodyend="3779" declfile="catalog.h" declline="182" declcolumn="1"/>
+        <location file="catalog.h" line="182" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3784" bodyend="3802" declfile="catalog.h" declline="182" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1ab6227debb7282c5c1618aa14d59321b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1283,7 +1283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="188" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3642" bodyend="3650" declfile="catalog.h" declline="188" declcolumn="1"/>
+        <location file="catalog.h" line="188" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3667" bodyend="3675" declfile="catalog.h" declline="188" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1aaf7e3b9033eec2dee0736c1253809062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlCatalogPrefer</type>
@@ -1316,7 +1316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="191" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3610" bodyend="3632" declfile="catalog.h" declline="191" declcolumn="1"/>
+        <location file="catalog.h" line="191" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3635" bodyend="3657" declfile="catalog.h" declline="191" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a31cf4271859a85eb9a0d86f6259a990b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1347,7 +1347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="193" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3575" bodyend="3597" declfile="catalog.h" declline="193" declcolumn="1"/>
+        <location file="catalog.h" line="193" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3600" bodyend="3622" declfile="catalog.h" declline="193" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1ac7a6a9d398aa93037fed4b08b0f15c19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>xmlCatalogAllow</type>
@@ -1370,7 +1370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="195" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3561" bodyend="3563" declfile="catalog.h" declline="195" declcolumn="1"/>
+        <location file="catalog.h" line="195" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3586" bodyend="3588" declfile="catalog.h" declline="195" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1a71947032167b68af7e6b993f01087ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1385,7 +1385,7 @@
 <para>Try to lookup the catalog reference associated to a system ID. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000101"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use xmlCatalogResolveSystem</para>
+<para><xrefsect id="deprecated_1_deprecated000101"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="catalog_8h_1a1e5a9f085a86565bc311de418eafacf4" kindref="member">xmlCatalogResolveSystem</ref></para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1402,7 +1402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="201" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3795" bodyend="3831" declfile="catalog.h" declline="201" declcolumn="1"/>
+        <location file="catalog.h" line="201" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3818" bodyend="3852" declfile="catalog.h" declline="201" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="catalog_8h_1ae2eb59768f3a163b738c59923e4d94f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1417,7 +1417,7 @@
 <para>Try to lookup the catalog reference associated to a public ID. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000102"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use xmlCatalogResolvePublic</para>
+<para><xrefsect id="deprecated_1_deprecated000102"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="catalog_8h_1a18edb9fa5bb56ef793aba5167635c812" kindref="member">xmlCatalogResolvePublic</ref></para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1434,7 +1434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="catalog.h" line="204" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3842" bodyend="3878" declfile="catalog.h" declline="204" declcolumn="1"/>
+        <location file="catalog.h" line="204" column="1" bodyfile="/builds/GNOME/libxml2/catalog.c" bodystart="3863" bodyend="3897" declfile="catalog.h" declline="204" declcolumn="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

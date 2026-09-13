@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="valid_8c" kind="file" language="C++">
     <compoundname>valid.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -348,9 +348,9 @@
       </memberdef>
       <memberdef kind="define" id="valid_8c_1a274a68ff28d8150ab4832f4ec0a6cef9" prot="public" static="no">
         <name>CHECK_DTD</name>
-        <initializer>   if (doc == NULL) return(0);					\
-   else if ((doc-&gt;intSubset == NULL) &amp;&amp;				\
-	    (doc-&gt;extSubset == NULL)) return(0)</initializer>
+        <initializer>   if (doc == NULL) return(0);                  \
+   else if ((doc-&gt;intSubset == NULL) &amp;&amp;             \
+        (doc-&gt;extSubset == NULL)) return(0)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -362,9 +362,9 @@
       <memberdef kind="define" id="valid_8c_1a139e7e0ce4bf2f0b812686775cbfc3e4" prot="public" static="no">
         <name>DICT_FREE</name>
         <param><defname>str</defname></param>
-        <initializer>	if ((str) &amp;&amp; ((!dict) ||				\
-	    (<ref refid="dict_8h_1ae98630502265a7baabb2a9d67b0f2b40" kindref="member">xmlDictOwns</ref>(dict, (const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)(str)) == 0)))	\
-	    <ref refid="xmlmemory_8h_1a30231cbab46e8d659a5262c3b781164b" kindref="member">xmlFree</ref>((char *)(str));</initializer>
+        <initializer>    if ((str) &amp;&amp; ((!dict) ||                \
+        (<ref refid="dict_8h_1ae98630502265a7baabb2a9d67b0f2b40" kindref="member">xmlDictOwns</ref>(dict, (const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *)(str)) == 0)))  \
+        <ref refid="xmlmemory_8h_1a30231cbab46e8d659a5262c3b781164b" kindref="member">xmlFree</ref>((char *)(str));</initializer>
         <briefdescription>
 <para>Free a string if it is not owned by the dictionary in the current scope. </para>
         </briefdescription>
@@ -454,16 +454,16 @@
     </sectiondef>
     <sectiondef kind="func">
       <memberdef kind="function" id="valid_8c_1a9ea296c44bf6f11c3b688117e3842705" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+        <type>xmlElementPtr</type>
         <definition>static xmlElementPtr xmlGetDtdElementDesc2</definition>
         <argsstring>(xmlValidCtxtPtr ctxt, xmlDtdPtr dtd, const xmlChar *name)</argsstring>
         <name>xmlGetDtdElementDesc2</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDtd" kindref="compound">xmlDtdPtr</ref></type>
+          <type>xmlDtdPtr</type>
           <declname>dtd</declname>
         </param>
         <param>
@@ -499,7 +499,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlElement or NULL if not found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1aadd1c7b634b876bfd26a20183fa88032" kindref="member">xmlElement</ref> or NULL if not found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -513,7 +513,7 @@
         <argsstring>(xmlDocPtr doc, xmlAttributeType type, const xmlChar *value)</argsstring>
         <name>xmlValidateAttributeValueInternal</name>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
@@ -567,7 +567,7 @@
         <argsstring>(xmlValidCtxtPtr ctxt)</argsstring>
         <name>xmlVErrMemory</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -595,11 +595,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlNodePtr node, xmlParserErrors code, int level, const xmlChar *str1, const xmlChar *str2, const xmlChar *str3, int int1, const char *msg,...)</argsstring>
         <name>xmlDoErrValid</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -647,11 +647,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlNodePtr node, xmlParserErrors error, const char *msg, const xmlChar *str1, const xmlChar *str2, const xmlChar *str3)</argsstring>
         <name>xmlErrValidNode</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -747,7 +747,7 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlParserErrors error, const char *msg, const char *extra)</argsstring>
         <name>xmlErrValid</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -811,11 +811,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlNodePtr node, xmlParserErrors error, const char *msg, const xmlChar *str1, int int2, const xmlChar *str3)</argsstring>
         <name>xmlErrValidNodeNr</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -911,11 +911,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlNodePtr node, xmlParserErrors error, const char *msg, const xmlChar *str1, const xmlChar *str2, const xmlChar *str3)</argsstring>
         <name>xmlErrValidWarning</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -1013,15 +1013,15 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlElementPtr elemDecl, xmlNodePtr node)</argsstring>
         <name>vstateVPush</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+          <type>xmlElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -1038,7 +1038,7 @@
         <argsstring>(xmlValidCtxtPtr ctxt)</argsstring>
         <name>vstateVPop</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1055,11 +1055,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlNodePtr value)</argsstring>
         <name>nodeVPush</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>value</declname>
         </param>
         <briefdescription>
@@ -1071,12 +1071,12 @@
         <location file="/builds/GNOME/libxml2/valid.c" line="373" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="373" bodyend="396"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a09394f73d377cf00fc4ac57f70fd574d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+        <type>xmlNodePtr</type>
         <definition>static xmlNodePtr nodeVPop</definition>
         <argsstring>(xmlValidCtxtPtr ctxt)</argsstring>
         <name>nodeVPop</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -1093,11 +1093,11 @@
         <argsstring>(xmlElementContentPtr content, xmlValidCtxtPtr ctxt, const xmlChar *name)</argsstring>
         <name>xmlValidBuildAContentModel</name>
         <param>
-          <type><ref refid="struct__xmlElementContent" kindref="compound">xmlElementContentPtr</ref></type>
+          <type>xmlElementContentPtr</type>
           <declname>content</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1147,7 +1147,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlElement *elem)</argsstring>
         <name>xmlValidBuildContentModel</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1186,7 +1186,7 @@
         <location file="/builds/GNOME/libxml2/valid.c" line="597" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="597" bodyend="648"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1afab3b376d650f445011cc3c329cd7cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+        <type>xmlValidCtxt *</type>
         <definition>xmlValidCtxt * xmlNewValidCtxt</definition>
         <argsstring>(void)</argsstring>
         <name>xmlNewValidCtxt</name>
@@ -1212,7 +1212,7 @@
         <argsstring>(xmlValidCtxt *cur)</argsstring>
         <name>xmlFreeValidCtxt</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>cur</declname>
         </param>
         <briefdescription>
@@ -1307,7 +1307,7 @@
 <para>Allocate an element content structure. </para>
         </briefdescription>
         <detaileddescription>
-<para>Deprecated in favor of xmlNewDocElementContent</para>
+<para>Deprecated in favor of <ref refid="valid_8h_1a7e28bc7784c6d3a1a1b726ddff87ded6" kindref="member">xmlNewDocElementContent</ref></para>
 <para><xrefsect id="deprecated_1_deprecated000309"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1371,7 +1371,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlElementContent or NULL in case of error. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1a43d7c30835afce6963189de976e668e4" kindref="member">xmlElementContent</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1392,7 +1392,7 @@
 <para>Build a copy of an element content description. </para>
         </briefdescription>
         <detaileddescription>
-<para>Deprecated, use xmlCopyDocElementContent instead</para>
+<para>Deprecated, use <ref refid="valid_8h_1a3cc7b740349d3366ef7ae5a0078456c5" kindref="member">xmlCopyDocElementContent</ref> instead</para>
 <para><xrefsect id="deprecated_1_deprecated000311"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1404,7 +1404,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlElementContent or NULL in case of error. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1a43d7c30835afce6963189de976e668e4" kindref="member">xmlElementContent</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1468,7 +1468,7 @@
 <para>Free an element content structure. </para>
         </briefdescription>
         <detaileddescription>
-<para>The whole subtree is removed. Deprecated, use xmlFreeDocElementContent instead</para>
+<para>The whole subtree is removed. Deprecated, use <ref refid="valid_8h_1ac772e692b6f5dad8aa9ddaf279498aba" kindref="member">xmlFreeDocElementContent</ref> instead</para>
 <para><xrefsect id="deprecated_1_deprecated000313"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1504,7 +1504,7 @@
           <declname>englob</declname>
         </param>
         <briefdescription>
-<para>Deprecated, unsafe, use xmlSnprintfElementContent. </para>
+<para>Deprecated, unsafe, use <ref refid="valid_8h_1a79c53237c2004339c0ce9f29863ba509" kindref="member">xmlSnprintfElementContent</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000314"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Internal function, don&apos;t use.</para>
@@ -1612,7 +1612,7 @@
         <argsstring>(xmlElementPtr elem)</argsstring>
         <name>xmlFreeElement</name>
         <param>
-          <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+          <type>xmlElementPtr</type>
           <declname>elem</declname>
         </param>
         <briefdescription>
@@ -1640,7 +1640,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDtd *dtd, const xmlChar *name, xmlElementTypeVal type, xmlElementContent *content)</argsstring>
         <name>xmlAddElementDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -1797,7 +1797,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlElement or NULL in case of error. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1aadd1c7b634b876bfd26a20183fa88032" kindref="member">xmlElement</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1998,7 +1998,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlEnumeration just created or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1acfc4ea75665f49d9af693257ea1178e8" kindref="member">xmlEnumeration</ref> just created or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2058,7 +2058,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlEnumeration just created or NULL in case of error. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1acfc4ea75665f49d9af693257ea1178e8" kindref="member">xmlEnumeration</ref> just created or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2072,11 +2072,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlElementPtr elem, int err)</argsstring>
         <name>xmlScanIDAttributeDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+          <type>xmlElementPtr</type>
           <declname>elem</declname>
         </param>
         <param>
@@ -2126,7 +2126,7 @@
         <argsstring>(xmlAttributePtr attr)</argsstring>
         <name>xmlFreeAttribute</name>
         <param>
-          <type><ref refid="struct__xmlAttribute" kindref="compound">xmlAttributePtr</ref></type>
+          <type>xmlAttributePtr</type>
           <declname>attr</declname>
         </param>
         <briefdescription>
@@ -2154,7 +2154,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDtd *dtd, const xmlChar *elem, const xmlChar *name, const xmlChar *ns, xmlAttributeType type, xmlAttributeDefault def, const xmlChar *defaultValue, xmlEnumeration *tree)</argsstring>
         <name>xmlAddAttributeDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2359,7 +2359,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlAttribute or NULL in case of error. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1a5c4851befecec9ecc3a394282d6d2e37" kindref="member">xmlAttribute</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2541,7 +2541,7 @@
         <argsstring>(xmlNotationPtr nota)</argsstring>
         <name>xmlFreeNotation</name>
         <param>
-          <type><ref refid="struct__xmlNotation" kindref="compound">xmlNotationPtr</ref></type>
+          <type>xmlNotationPtr</type>
           <declname>nota</declname>
         </param>
         <briefdescription>
@@ -2569,7 +2569,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDtd *dtd, const xmlChar *name, const xmlChar *publicId, const xmlChar *systemId)</argsstring>
         <name>xmlAddNotationDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -2726,7 +2726,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlNotation or NULL in case of error. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1ab5edcaca20bf051640b2dfb0149653ab" kindref="member">xmlNotation</ref> or NULL in case of error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2856,7 +2856,7 @@
         <argsstring>(xmlValidCtxtPtr ctxt)</argsstring>
         <name>xmlIsStreaming</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <briefdescription>
@@ -2873,7 +2873,7 @@
         <argsstring>(xmlIDPtr id)</argsstring>
         <name>xmlFreeID</name>
         <param>
-          <type><ref refid="struct__xmlID" kindref="compound">xmlIDPtr</ref></type>
+          <type>xmlIDPtr</type>
           <declname>id</declname>
         </param>
         <briefdescription>
@@ -2901,7 +2901,7 @@
         <argsstring>(xmlAttrPtr attr, const xmlChar *value, xmlIDPtr *idPtr)</argsstring>
         <name>xmlAddIDInternal</name>
         <param>
-          <type><ref refid="struct__xmlAttr" kindref="compound">xmlAttrPtr</ref></type>
+          <type>xmlAttrPtr</type>
           <declname>attr</declname>
         </param>
         <param>
@@ -2909,7 +2909,7 @@
           <declname>value</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlID" kindref="compound">xmlIDPtr</ref> *</type>
+          <type>xmlIDPtr *</type>
           <declname>idPtr</declname>
         </param>
         <briefdescription>
@@ -2999,7 +2999,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, const xmlChar *value, xmlAttr *attr)</argsstring>
         <name>xmlAddID</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -3051,7 +3051,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the new xmlID or NULL on error. </para>
+<simplesect kind="return"><para>the new <ref refid="tree_8h_1a82cc16c849bbe05cd9130abfaef28c0d" kindref="member">xmlID</ref> or NULL on error. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3405,7 +3405,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, const xmlChar *value, xmlAttr *attr)</argsstring>
         <name>xmlAddRef</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -3677,7 +3677,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlElement or NULL if not found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1aadd1c7b634b876bfd26a20183fa88032" kindref="member">xmlElement</ref> or NULL if not found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3731,7 +3731,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlElement or NULL if not found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1aadd1c7b634b876bfd26a20183fa88032" kindref="member">xmlElement</ref> or NULL if not found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3785,7 +3785,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlAttribute or NULL if not found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a5c4851befecec9ecc3a394282d6d2e37" kindref="member">xmlAttribute</ref> or NULL if not found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3851,7 +3851,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlAttribute or NULL if not found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1a5c4851befecec9ecc3a394282d6d2e37" kindref="member">xmlAttribute</ref> or NULL if not found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3893,7 +3893,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the xmlNotation or NULL if not found. </para>
+<simplesect kind="return"><para>the <ref refid="tree_8h_1ab5edcaca20bf051640b2dfb0149653ab" kindref="member">xmlNotation</ref> or NULL if not found. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -3907,7 +3907,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, const xmlChar *notationName)</argsstring>
         <name>xmlValidateNotationUse</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -4328,7 +4328,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNotation *nota)</argsstring>
         <name>xmlValidateNotationDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -4433,11 +4433,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlDocPtr doc, const xmlChar *name, xmlAttributeType type, const xmlChar *value)</argsstring>
         <name>xmlValidateAttributeValue2</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
@@ -4515,7 +4515,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNode *elem, const xmlChar *name, const xmlChar *value)</argsstring>
         <name>xmlValidCtxtNormalizeAttributeValue</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -4691,7 +4691,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlAttribute *attr)</argsstring>
         <name>xmlValidateAttributeDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -4755,7 +4755,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlElement *elem)</argsstring>
         <name>xmlValidateElementDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -4818,7 +4818,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNode *elem, xmlAttr *attr, const xmlChar *value)</argsstring>
         <name>xmlValidateOneAttribute</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -4911,7 +4911,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNode *elem, const xmlChar *prefix, xmlNs *ns, const xmlChar *value)</argsstring>
         <name>xmlValidateOneNamespace</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5024,7 +5024,7 @@
           <declname>size</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>node</declname>
         </param>
         <param>
@@ -5072,7 +5072,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="4623" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="4623" bodyend="4693"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="4623" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="4623" bodyend="4705"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a29c4e154b7b68ea0f043a92a66b07d2c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5080,15 +5080,15 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlNodePtr child, xmlElementPtr elemDecl, int warn, xmlNodePtr parent)</argsstring>
         <name>xmlValidateElementContent</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>child</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+          <type>xmlElementPtr</type>
           <declname>elemDecl</declname>
         </param>
         <param>
@@ -5096,7 +5096,7 @@
           <declname>warn</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>parent</declname>
         </param>
         <briefdescription>
@@ -5150,7 +5150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="4707" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="4707" bodyend="4999"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="4719" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="4719" bodyend="5011"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1afcef20ac658a5ac3d95da7c5086f1aff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5158,15 +5158,15 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlDocPtr doc, xmlNodePtr elem)</argsstring>
         <name>xmlValidateOneCdataElement</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>elem</declname>
         </param>
         <briefdescription>
@@ -5204,7 +5204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5010" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5010" bodyend="5067"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5022" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5022" bodyend="5079"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a66d71f1251a75649fe43c48cedce6595" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5212,11 +5212,11 @@
         <argsstring>(xmlValidCtxtPtr ctxt, xmlElementContentPtr cont, const xmlChar *qname)</argsstring>
         <name>xmlValidateCheckMixed</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlElementContent" kindref="compound">xmlElementContentPtr</ref></type>
+          <type>xmlElementContentPtr</type>
           <declname>cont</declname>
         </param>
         <param>
@@ -5258,23 +5258,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5079" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5079" bodyend="5132"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5091" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5091" bodyend="5144"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a69c7910278577f4bd208baa067027941" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct__xmlElement" kindref="compound">xmlElementPtr</ref></type>
+        <type>xmlElementPtr</type>
         <definition>static xmlElementPtr xmlValidGetElemDecl</definition>
         <argsstring>(xmlValidCtxtPtr ctxt, xmlDocPtr doc, xmlNodePtr elem, int *extsubset)</argsstring>
         <name>xmlValidGetElemDecl</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlNode" kindref="compound">xmlNodePtr</ref></type>
+          <type>xmlNodePtr</type>
           <declname>elem</declname>
         </param>
         <param>
@@ -5324,7 +5324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5146" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5146" bodyend="5194"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5158" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5158" bodyend="5206"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1aa72ee20780eb71ae4aa9bb84dce37445" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5332,7 +5332,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNode *elem, const xmlChar *qname)</argsstring>
         <name>xmlValidatePushElement</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5392,7 +5392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5209" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5209" bodyend="5293"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5221" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5221" bodyend="5305"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a6b98ab8ec58d964e2566103b2990875b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5400,7 +5400,7 @@
         <argsstring>(xmlValidCtxt *ctxt, const xmlChar *data, int len)</argsstring>
         <name>xmlValidatePushCData</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5448,7 +5448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5306" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5306" bodyend="5364"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5318" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5318" bodyend="5376"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a4caef0481f03d75538927c097a771553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5456,7 +5456,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNode *elem, const xmlChar *qname)</argsstring>
         <name>xmlValidatePopElement</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5516,7 +5516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5378" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5378" bodyend="5421"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5390" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5390" bodyend="5433"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a2c7f71c4131dce7df533ddb9d4e27080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5524,7 +5524,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNode *elem)</argsstring>
         <name>xmlValidateOneElement</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5547,7 +5547,7 @@
 </listitem><listitem><para>[ VC: Required Attribute ]</para>
 </listitem></itemizedlist>
 </para>
-<para>Then calls xmlValidateOneAttribute for each attribute present.</para>
+<para>Then calls <ref refid="valid_8h_1a54395bf4208897fc68bb20ae7bb52f99" kindref="member">xmlValidateOneAttribute</ref> for each attribute present.</para>
 <para>ID/IDREF checks are handled separately.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -5580,7 +5580,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5445" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5445" bodyend="5716"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5457" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5457" bodyend="5728"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a5ea04828b0aa521660f5a8d5cc9d5419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5588,7 +5588,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc)</argsstring>
         <name>xmlValidateRoot</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5630,7 +5630,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5735" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5735" bodyend="5784"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5747" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5747" bodyend="5796"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1abd371997f9c18d1bd760a1808f49268f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5638,7 +5638,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlNode *root)</argsstring>
         <name>xmlValidateElement</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5684,7 +5684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5797" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5797" bodyend="5859"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5809" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5809" bodyend="5871"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1af49161117a6f06490e478523b8676937" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5696,7 +5696,7 @@
           <declname>ref</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5735,7 +5735,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5867" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5867" bodyend="5941"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5879" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5879" bodyend="5953"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1ac3457164b6ba0468511e04863ce75f72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5776,7 +5776,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5949" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5949" bodyend="5954"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5961" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5961" bodyend="5966"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a629fb5c42e6a4ba9d798879f66019e95" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5827,7 +5827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5962" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5962" bodyend="5974"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="5974" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5974" bodyend="5986"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1ae9061272cbd26764c749ad62f88009cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5835,7 +5835,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc)</argsstring>
         <name>xmlValidateDocumentFinal</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5876,7 +5876,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="5992" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="5992" bodyend="6033"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6004" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6004" bodyend="6045"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a0d29ed3a8118fc66496ebe71f9970d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5884,7 +5884,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc, xmlDtd *dtd)</argsstring>
         <name>xmlValidateDtd</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -5931,7 +5931,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6049" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6049" bodyend="6091"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6061" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6061" bodyend="6103"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1ad3b7d78af3201bb6351271e601ac3a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -5954,7 +5954,7 @@
 <para>Validate a document against a DTD. </para>
         </briefdescription>
         <detaileddescription>
-<para>Like xmlValidateDtd but uses the parser context&apos;s error handler.</para>
+<para>Like <ref refid="valid_8h_1a0d29ed3a8118fc66496ebe71f9970d61" kindref="member">xmlValidateDtd</ref> but uses the parser context&apos;s error handler.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -5988,7 +5988,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6106" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6106" bodyend="6113"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6118" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6118" bodyend="6125"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1ab7495728561df30bf52a0b0692a565a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6013,7 +6013,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6116" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6116" bodyend="6134"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6128" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6128" bodyend="6146"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a9340e07ab9663150a1825611a17d8c77" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6038,7 +6038,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6137" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6137" bodyend="6190"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6149" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6149" bodyend="6202"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a87dc991581fe3e4b067a4165b98ca882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6046,7 +6046,7 @@
         <argsstring>(xmlValidCtxt *ctxt, xmlDoc *doc)</argsstring>
         <name>xmlValidateDtdFinal</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>ctxt</declname>
         </param>
         <param>
@@ -6088,7 +6088,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6211" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6211" bodyend="6240"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6223" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6223" bodyend="6252"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1af9096f32fb1cab1f77c6377585c3eeb3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6096,15 +6096,15 @@
         <argsstring>(xmlParserCtxtPtr ctxt, xmlValidCtxtPtr vctxt, xmlDocPtr doc)</argsstring>
         <name>xmlValidateDocumentInternal</name>
         <param>
-          <type><ref refid="struct__xmlParserCtxt" kindref="compound">xmlParserCtxtPtr</ref></type>
+          <type>xmlParserCtxtPtr</type>
           <declname>ctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxtPtr</ref></type>
+          <type>xmlValidCtxtPtr</type>
           <declname>vctxt</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+          <type>xmlDocPtr</type>
           <declname>doc</declname>
         </param>
         <briefdescription>
@@ -6142,7 +6142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6251" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6251" bodyend="6332"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6263" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6263" bodyend="6344"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a889a5b4c80ca6ad1ffb39ac2d6cb7961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6150,7 +6150,7 @@
         <argsstring>(xmlValidCtxt *vctxt, xmlDoc *doc)</argsstring>
         <name>xmlValidateDocument</name>
         <param>
-          <type><ref refid="struct__xmlValidCtxt" kindref="compound">xmlValidCtxt</ref> *</type>
+          <type>xmlValidCtxt *</type>
           <declname>vctxt</declname>
         </param>
         <param>
@@ -6161,7 +6161,7 @@
 <para>Try to validate the document instance. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000352"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function can&apos;t report malloc or other failures. Use xmlCtxtValidateDocument.</para>
+<para><xrefsect id="deprecated_1_deprecated000352"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function can&apos;t report malloc or other failures. Use <ref refid="parser_8h_1a78f8254d62233d6bdff644747111d1f6" kindref="member">xmlCtxtValidateDocument</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para>Performs the all the checks described by the XML Rec, i.e. validates the internal and external subset (if present) and validates the document tree.</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -6187,7 +6187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6349" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6349" bodyend="6351"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6361" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6361" bodyend="6363"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a78f8254d62233d6bdff644747111d1f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6206,7 +6206,7 @@
 <para>Validate a document. </para>
         </briefdescription>
         <detaileddescription>
-<para>Like xmlValidateDocument but uses the parser context&apos;s error handler.</para>
+<para>Like <ref refid="valid_8h_1a8d744c751b6f7acafca60dcec1ecc41b" kindref="member">xmlValidateDocument</ref> but uses the parser context&apos;s error handler.</para>
 <para>Option XML_PARSE_DTDLOAD should be enabled in the parser context to make external entities work.</para>
 <para><simplesect kind="since"><para>2.14.0</para>
 </simplesect>
@@ -6233,7 +6233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6368" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6368" bodyend="6375"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6380" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6380" bodyend="6387"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1aef12230125b0cc231595969a8834e079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6299,7 +6299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6394" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6394" bodyend="6425"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6406" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6406" bodyend="6437"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a0f70b238cc3494fe54b95626360ce5a7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6323,7 +6323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6430" column="13" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6430" bodyend="6432"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6442" column="13" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6442" bodyend="6444"/>
       </memberdef>
       <memberdef kind="function" id="valid_8c_1a7336f28e72c1ba307ae5ad300e581db3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -6393,7 +6393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/valid.c" line="6460" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6460" bodyend="6562"/>
+        <location file="/builds/GNOME/libxml2/valid.c" line="6472" column="1" bodyfile="/builds/GNOME/libxml2/valid.c" bodystart="6472" bodyend="6574"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlmodule_8c" kind="file" language="C++">
     <compoundname>xmlmodule.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -202,7 +202,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000392"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Will be removed.</para>
 </xrefdescription></xrefsect></para>
-<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const xmlChar * . TODO: options are not yet implemented.</para>
+<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * . TODO: options are not yet implemented.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>name</parametername>
@@ -216,7 +216,7 @@
 <parametername>options</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlModuleOption </para>
+<para>a set of <ref refid="xmlmodule_8h_1a3da2abf53bc0cb57bcc3cc4fa8989162" kindref="member">xmlModuleOption</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -251,7 +251,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000393"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Will be removed.</para>
 </xrefdescription></xrefsect></para>
-<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const xmlChar * .</para>
+<para>NOTE: that due to portability issues, behaviour can only be guaranteed with <computeroutput>name</computeroutput> using ASCII. We cannot guarantee that an UTF-8 string would work, which is why name is a const char * and not a const <ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> * .</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>module</parametername>

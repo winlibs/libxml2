@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="uri_8c" kind="file" language="C++">
     <compoundname>uri.c</compoundname>
     <includes local="yes">libxml.h</includes>
@@ -299,7 +299,7 @@
       <memberdef kind="define" id="uri_8c_1a5625c25d2e95905d16b5382472bf0459" prot="public" static="no">
         <name>ISA_ALPHA</name>
         <param><defname>p</defname></param>
-        <initializer>                      (((*(p) &gt;= &apos;a&apos;) &amp;&amp; (*(p) &lt;= &apos;z&apos;)) ||		\
+        <initializer>                      (((*(p) &gt;= &apos;a&apos;) &amp;&amp; (*(p) &lt;= &apos;z&apos;)) ||      \
                       ((*(p) &gt;= &apos;A&apos;) &amp;&amp; (*(p) &lt;= &apos;Z&apos;)))</initializer>
         <briefdescription>
         </briefdescription>
@@ -312,7 +312,7 @@
       <memberdef kind="define" id="uri_8c_1a503abf61b98a3a634662f2b79b6e986d" prot="public" static="no">
         <name>ISA_HEXDIG</name>
         <param><defname>p</defname></param>
-        <initializer>       (ISA_DIGIT(p) || ((*(p) &gt;= &apos;a&apos;) &amp;&amp; (*(p) &lt;= &apos;f&apos;)) ||		\
+        <initializer>       (ISA_DIGIT(p) || ((*(p) &gt;= &apos;a&apos;) &amp;&amp; (*(p) &lt;= &apos;f&apos;)) ||     \
         ((*(p) &gt;= &apos;A&apos;) &amp;&amp; (*(p) &lt;= &apos;F&apos;)))</initializer>
         <briefdescription>
         </briefdescription>
@@ -325,9 +325,9 @@
       <memberdef kind="define" id="uri_8c_1a520bfdacadb16f759d1cad6fa31ee8ab" prot="public" static="no">
         <name>ISA_SUB_DELIM</name>
         <param><defname>p</defname></param>
-        <initializer>      (((*(p) == &apos;!&apos;)) || ((*(p) == &apos;$&apos;)) || ((*(p) == &apos;&amp;&apos;)) ||		\
-       ((*(p) == &apos;(&apos;)) || ((*(p) == &apos;)&apos;)) || ((*(p) == &apos;*&apos;)) ||		\
-       ((*(p) == &apos;+&apos;)) || ((*(p) == &apos;,&apos;)) || ((*(p) == &apos;;&apos;)) ||		\
+        <initializer>      (((*(p) == &apos;!&apos;)) || ((*(p) == &apos;$&apos;)) || ((*(p) == &apos;&amp;&apos;)) ||     \
+       ((*(p) == &apos;(&apos;)) || ((*(p) == &apos;)&apos;)) || ((*(p) == &apos;*&apos;)) ||     \
+       ((*(p) == &apos;+&apos;)) || ((*(p) == &apos;,&apos;)) || ((*(p) == &apos;;&apos;)) ||     \
        ((*(p) == &apos;=&apos;)) || ((*(p) == &apos;\&apos;&apos;)))</initializer>
         <briefdescription>
         </briefdescription>
@@ -366,7 +366,7 @@
       <memberdef kind="define" id="uri_8c_1aeaecaef60408bea9abb1aa77e2e7109e" prot="public" static="no">
         <name>ISA_STRICTLY_UNRESERVED</name>
         <param><defname>p</defname></param>
-        <initializer>      ((ISA_ALPHA(p)) || (ISA_DIGIT(p)) || ((*(p) == &apos;-&apos;)) ||		\
+        <initializer>      ((ISA_ALPHA(p)) || (ISA_DIGIT(p)) || ((*(p) == &apos;-&apos;)) ||       \
        ((*(p) == &apos;.&apos;)) || ((*(p) == &apos;_&apos;)) || ((*(p) == &apos;~&apos;)))</initializer>
         <briefdescription>
         </briefdescription>
@@ -392,7 +392,7 @@
         <name>ISA_PCHAR</name>
         <param><defname>u</defname></param>
         <param><defname>p</defname></param>
-        <initializer>     (ISA_UNRESERVED(u, p) || ISA_PCT_ENCODED(p) || ISA_SUB_DELIM(p) ||	\
+        <initializer>     (ISA_UNRESERVED(u, p) || ISA_PCT_ENCODED(p) || ISA_SUB_DELIM(p) || \
       ((*(p) == &apos;:&apos;)) || ((*(p) == &apos;@&apos;)))</initializer>
         <briefdescription>
         </briefdescription>
@@ -475,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="1738" column="9"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="1740" column="9"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -485,11 +485,11 @@
         <argsstring>(xmlURIPtr uri)</argsstring>
         <name>xmlCleanURI</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <briefdescription>
-<para>Make sure the xmlURI struct is free of content. </para>
+<para>Make sure the <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> struct is free of content. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -497,7 +497,7 @@
 <parametername>uri</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an xmlURI </para>
+<para>pointer to an <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -513,7 +513,7 @@
         <argsstring>(xmlURIPtr uri, const char *cur)</argsstring>
         <name>xmlIsUnreserved</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -534,7 +534,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986Scheme</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -577,7 +577,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986Fragment</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -620,7 +620,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986Query</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -663,7 +663,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986Port</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -706,7 +706,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986Userinfo</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -780,7 +780,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986Host</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -823,7 +823,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986Authority</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -866,7 +866,7 @@
         <argsstring>(xmlURIPtr uri, const char **str, char forbid, int empty)</argsstring>
         <name>xmlParse3986Segment</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -933,7 +933,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986PathAbEmpty</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -976,7 +976,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986PathAbsolute</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -1019,7 +1019,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986PathRootless</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -1062,7 +1062,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986PathNoScheme</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -1105,7 +1105,7 @@
         <argsstring>(xmlURIPtr uri, const char **str)</argsstring>
         <name>xmlParse3986HierPart</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -1148,7 +1148,7 @@
         <argsstring>(xmlURIPtr uri, const char *str)</argsstring>
         <name>xmlParse3986RelativeRef</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -1191,7 +1191,7 @@
         <argsstring>(xmlURIPtr uri, const char *str)</argsstring>
         <name>xmlParse3986URI</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -1234,7 +1234,7 @@
         <argsstring>(xmlURIPtr uri, const char *str)</argsstring>
         <name>xmlParse3986URIReference</name>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref></type>
+          <type>xmlURIPtr</type>
           <declname>uri</declname>
         </param>
         <param>
@@ -1339,7 +1339,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a newly built xmlURI or NULL in case of error </para>
+<simplesect kind="return"><para>a newly built <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1425,7 +1425,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a newly built xmlURI or NULL in case of error </para>
+<simplesect kind="return"><para>a newly built <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> or NULL in case of error </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1442,7 +1442,7 @@
           <type>void</type>
         </param>
         <briefdescription>
-<para>Simply creates an empty xmlURI. </para>
+<para>Simply creates an empty <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>the new structure or NULL in case of error </para>
@@ -1493,7 +1493,7 @@
 <parametername>uri</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an xmlURI </para>
+<para>pointer to an <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1535,7 +1535,7 @@
 <parametername>uri</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an xmlURI </para>
+<para>pointer to an <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1555,7 +1555,7 @@
           <declname>uri</declname>
         </param>
         <briefdescription>
-<para>Free up the xmlURI struct. </para>
+<para>Free up the <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> struct. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -1563,7 +1563,7 @@
 <parametername>uri</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to an xmlURI </para>
+<para>pointer to an <ref refid="uri_8h_1ae2d1c5456730ad1fce438a9c6c6c4f12" kindref="member">xmlURI</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1779,7 +1779,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="1637" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1637" bodyend="1696"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="1637" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1637" bodyend="1698"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1aad2ce265c73c863e5659027497990a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1791,10 +1791,11 @@
           <declname>str</declname>
         </param>
         <briefdescription>
-<para>Escaping routine, does not do validity checks ! It will try to escape the chars needing this, but this is heuristic based it&apos;s impossible to be sure. </para>
+<para>Escaping routine, does not do validity checks ! </para>
         </briefdescription>
         <detaileddescription>
-<para>25 May 2001 Uses xmlParseURI and xmlURIEscapeStr to try to escape correctly according to RFC2396.<itemizedlist>
+<para>It will try to escape the chars needing this, but this is heuristic based it&apos;s impossible to be sure.</para>
+<para>25 May 2001 Uses <ref refid="uri_8h_1a4aff5eec35266e0089db4b6c8e5ce08d" kindref="member">xmlParseURI</ref> and <ref refid="uri_8h_1a1ce4f41a5ee6008746eaa0ac315ff114" kindref="member">xmlURIEscapeStr</ref> to try to escape correctly according to RFC2396.<itemizedlist>
 <listitem><para>Carl Douglas <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>str</parametername>
@@ -1812,7 +1813,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="1711" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1711" bodyend="1826"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="1713" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1713" bodyend="1828"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1aea9582fea69440a104fcd6f9d4f5e14d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1829,7 +1830,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="1835" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1835" bodyend="1849"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="1837" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1837" bodyend="1851"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1ab44206cd3e5f3ae9c1ee1b28c1fd3b0f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1883,7 +1884,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="1861" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1861" bodyend="1951"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="1863" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1863" bodyend="1953"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1a1a43cb3734af736da0a142e88aa61c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1941,7 +1942,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="1970" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1970" bodyend="2318"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="1972" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="1972" bodyend="2320"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1a6334686e706235baf07ea115fa8c8d2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -1985,7 +1986,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="2334" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2334" bodyend="2339"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="2336" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2336" bodyend="2341"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1a2c4ed95e2fbbe36eafba06edfb3d9df8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1997,7 +1998,7 @@
           <declname>str</declname>
         </param>
         <param>
-          <type><ref refid="struct__xmlURI" kindref="compound">xmlURIPtr</ref> *</type>
+          <type>xmlURIPtr *</type>
           <declname>out</declname>
         </param>
         <param>
@@ -2010,7 +2011,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="2342" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2342" bodyend="2462"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="2344" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2344" bodyend="2464"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1adc9805a5b06298d7f7f2a26164fdf5fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2044,7 +2045,8 @@ docs/pic1.gif                    pic1.gif
 docs/img/pic1.gif                img/pic1.gif
 img/pic1.gif                     ../img/pic1.gif
 http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
-</verbatim> <simplesect kind="since"><para>2.13.0</para>
+</verbatim></para>
+<para><simplesect kind="since"><para>2.13.0</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2077,7 +2079,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="2489" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2489" bodyend="2707"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="2491" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2491" bodyend="2709"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1a4a8312eacdcb89055884b76e5cb81252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2093,7 +2095,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
           <declname>base</declname>
         </param>
         <briefdescription>
-<para>See xmlBuildRelativeURISafe. </para>
+<para>See <ref refid="uri_8h_1a7aa14f7dd11cc0479e053ed54dae313c" kindref="member">xmlBuildRelativeURISafe</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -2119,7 +2121,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="2718" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2718" bodyend="2724"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="2720" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2720" bodyend="2726"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1a0438fbb18ad322938345a08c20547500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2152,7 +2154,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="2744" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2744" bodyend="2766"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="2746" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2746" bodyend="2768"/>
       </memberdef>
       <memberdef kind="function" id="uri_8c_1a47f20ab34321fc18df02e0b4b14dc3c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -2182,7 +2184,7 @@ http://site1.com/docs/pic1.gif   http://site1.com/docs/pic1.gif
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/uri.c" line="2778" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2778" bodyend="2781"/>
+        <location file="/builds/GNOME/libxml2/uri.c" line="2780" column="1" bodyfile="/builds/GNOME/libxml2/uri.c" bodystart="2780" bodyend="2783"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlAutomata" kind="struct" language="C++" prot="public">
     <compoundname>_xmlAutomata</compoundname>
     <sectiondef kind="public-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="289" column="13" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="289" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="291" column="13" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="291" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a454a1b6ce61b8cf97a28f1cd3ba4fad0" prot="public" static="no" mutable="no">
         <type><ref refid="xmlstring_8h_1afb1489b546f7800463867523ffaee1d3" kindref="member">xmlChar</ref> *</type>
@@ -29,7 +29,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="290" column="13" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="290" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="292" column="13" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__xmlAutomata_1a7360b55975153b822efc5217b7734e6a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <qualifiedname>_xmlAutomata::len</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="293" column="12" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="293" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a11614f44ef4d939bdd984953346a7572" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -43,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="292" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="292" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="295" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="295" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a186b6342d483ea691785eb9a6d88605b" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -57,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="293" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="293" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="296" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="296" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a02a3a6fd47137fb55ed247acf3a122ad" prot="public" static="no" mutable="no">
         <type>xmlRegStatePtr</type>
@@ -71,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="295" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="295" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="298" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="298" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a7415158a7e0e249e66e5c8c650c5d5b8" prot="public" static="no" mutable="no">
         <type>xmlRegStatePtr</type>
@@ -85,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="296" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="296" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="299" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="299" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a7461d5545d620887243c714effee005d" prot="public" static="no" mutable="no">
         <type>xmlRegStatePtr</type>
@@ -99,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="297" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="297" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="300" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="300" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a6b35bb010401a5a08b7058327e2fc8b5" prot="public" static="no" mutable="no">
         <type>xmlRegAtomPtr</type>
@@ -113,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="299" column="19" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="299" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="302" column="19" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="302" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a9dbd308a7d73ededb9fe77df9ca56315" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -127,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="301" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="301" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="304" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="304" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a4bf2e037a0df57e1ed5f99ef5fc0c028" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -141,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="302" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="302" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="305" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="305" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1af7c897d79fb61dde09602672a70e5b84" prot="public" static="no" mutable="no">
         <type>xmlRegAtomPtr *</type>
@@ -155,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="303" column="19" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="303" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="306" column="19" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="306" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a06d91f5e4357042dd21ea0dc1973315e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -169,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="305" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="305" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="308" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="308" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1ac32824c1fdb1783338dc0e3b71d7d3dd" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -183,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="306" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="306" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="309" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="309" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a35e0467412db84698df651c98c7cb108" prot="public" static="no" mutable="no">
         <type>xmlRegStatePtr *</type>
@@ -197,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="307" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="307" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="310" column="20" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="310" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a0604336bb39e817283b768df51aea2b3" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -211,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="309" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="309" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="312" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="312" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1ac3abda675968bb89a26ec94b3a418125" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -225,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="310" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="310" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="313" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="313" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1adabc3f4cc24a6e96b9ddf45a10bd8ca6" prot="public" static="no" mutable="no">
         <type>xmlRegCounter *</type>
@@ -239,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="311" column="19" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="311" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="314" column="19" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="314" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a9f125e1f0926df6d7b41fa62948c0439" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -253,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="313" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="313" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="316" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="316" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1a5cc2a5ae2f1b46efd918474330768b66" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -267,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="314" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="314" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="317" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="317" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1ac8bf36fe0577cba66bccda3a6f7e80a4" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -281,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="315" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="315" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="318" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="318" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlAutomata_1acb5ba97551079e0b072c62c21d784ac5" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -295,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="317" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="317" bodyend="-1"/>
+        <location file="/builds/GNOME/libxml2/xmlregexp.c" line="320" column="9" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="320" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -349,7 +363,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/builds/GNOME/libxml2/xmlregexp.c" line="288" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="288" bodyend="318"/>
+    <location file="/builds/GNOME/libxml2/xmlregexp.c" line="290" column="1" bodyfile="/builds/GNOME/libxml2/xmlregexp.c" bodystart="290" bodyend="321"/>
     <listofallmembers>
       <member refid="struct__xmlAutomata_1a6b35bb010401a5a08b7058327e2fc8b5" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>atom</name></member>
       <member refid="struct__xmlAutomata_1af7c897d79fb61dde09602672a70e5b84" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>atoms</name></member>
@@ -360,6 +374,7 @@
       <member refid="struct__xmlAutomata_1a7415158a7e0e249e66e5c8c650c5d5b8" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>end</name></member>
       <member refid="struct__xmlAutomata_1a11614f44ef4d939bdd984953346a7572" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>error</name></member>
       <member refid="struct__xmlAutomata_1ac8bf36fe0577cba66bccda3a6f7e80a4" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>flags</name></member>
+      <member refid="struct__xmlAutomata_1a7360b55975153b822efc5217b7734e6a" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>len</name></member>
       <member refid="struct__xmlAutomata_1a9dbd308a7d73ededb9fe77df9ca56315" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>maxAtoms</name></member>
       <member refid="struct__xmlAutomata_1a0604336bb39e817283b768df51aea2b3" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>maxCounters</name></member>
       <member refid="struct__xmlAutomata_1a06d91f5e4357042dd21ea0dc1973315e" prot="public" virt="non-virtual"><scope>_xmlAutomata</scope><name>maxStates</name></member>

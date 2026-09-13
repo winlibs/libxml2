@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xmlerror_8h" kind="file" language="C++">
     <compoundname>xmlerror.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -387,7 +387,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aa7e0088039c834b120303c82c1e01287b" prot="public">
           <name>XML_FROM_TREE</name>
           <briefdescription>
-<para>The tree module (unused) </para>
+<para>The tree module (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -419,7 +419,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aa609c028b22aad211401feed988a1fadb" prot="public">
           <name>XML_FROM_MEMORY</name>
           <briefdescription>
-<para>The memory allocator (unused) </para>
+<para>The memory allocator (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -443,7 +443,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aa90eb7b8e78c09fcec5f58305d0059dcb" prot="public">
           <name>XML_FROM_FTP</name>
           <briefdescription>
-<para>The FTP module (unused) </para>
+<para>The FTP module (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -451,7 +451,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aa895c2b62ebec499a9b457a29af12809d" prot="public">
           <name>XML_FROM_HTTP</name>
           <briefdescription>
-<para>The HTTP module (unused) </para>
+<para>The HTTP module (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -547,7 +547,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aab5843370bb6149f6e3f9692bc0d15ccd" prot="public">
           <name>XML_FROM_XSLT</name>
           <briefdescription>
-<para>The XSLT engine from libxslt (unused) </para>
+<para>The XSLT engine from libxslt (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -563,7 +563,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aaf98b6651156cca59798d8d82d867fa1e" prot="public">
           <name>XML_FROM_CHECK</name>
           <briefdescription>
-<para>The error checking module (unused) </para>
+<para>The error checking module (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -579,7 +579,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aa49680a99e93599435482a24f4f98f545" prot="public">
           <name>XML_FROM_MODULE</name>
           <briefdescription>
-<para>The dynamically loaded module module (unused) </para>
+<para>The dynamically loaded module module (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -587,7 +587,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aae701de48fcc113ff71a7e4f1b1aa7a07" prot="public">
           <name>XML_FROM_I18N</name>
           <briefdescription>
-<para>The module handling character conversion (unused) </para>
+<para>The module handling character conversion (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -603,7 +603,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aa6cd3930385f6922a199a890fff2b04ec" prot="public">
           <name>XML_FROM_BUFFER</name>
           <briefdescription>
-<para>The buffers module (unused) </para>
+<para>The buffers module (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -611,7 +611,7 @@
         <enumvalue id="xmlerror_8h_1abd34713153e12c10b931c4e076e0481aa4b10a54681fecc0bd5654844e28a8b94" prot="public">
           <name>XML_FROM_URI</name>
           <briefdescription>
-<para>The URI module (unused) </para>
+<para>The URI module (unused). </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -5947,7 +5947,7 @@
         <argsstring>)(void *userData, const xmlError *error)</argsstring>
         <name>xmlStructuredErrorFunc</name>
         <briefdescription>
-<para>Structured error callback receiving an xmlError. </para>
+<para>Structured error callback receiving an <ref refid="xmlerror_8h_1a7b8f6e2cdbb2916120df21e21d76ae91" kindref="member">xmlError</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -5992,9 +5992,9 @@
 <para>Set the thread-local &quot;generic&quot; handler and context for error messages. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000129"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See xmlSetStructuredErrorFunc for alternatives.</para>
+<para><xrefsect id="deprecated_1_deprecated000129"><xreftitle>Deprecated</xreftitle><xrefdescription><para>See <ref refid="xmlerror_8h_1a45950b585823204441216f768579b5f4" kindref="member">xmlSetStructuredErrorFunc</ref> for alternatives.</para>
 </xrefdescription></xrefsect></para>
-<para>If you only want to disable parser errors being printed to stderr, use xmlParserOption XML_PARSE_NOERROR.</para>
+<para>If you only want to disable parser errors being printed to stderr, use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOERROR.</para>
 <para>The generic error handler will only receive fragments of error messages which should be concatenated or printed to a stream.</para>
 <para>If <computeroutput>handler</computeroutput> is NULL, use the built-in default handler which prints to stderr.</para>
 <para>Since this is a thread-local setting, it&apos;s a good idea to reset the error handler to its default value after collecting the errors you&apos;re interested in. To get the original values, you have to access xmlGenericError and xmlGenericErrorContext directly, making this function kind of useless.</para>
@@ -6041,7 +6041,7 @@
         <detaileddescription>
 <para><xrefsect id="deprecated_1_deprecated000130"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a per-context error handler.</para>
 </xrefdescription></xrefsect></para>
-<para>If you only want to disable parser errors being printed to stderr, use xmlParserOption XML_PARSE_NOERROR.</para>
+<para>If you only want to disable parser errors being printed to stderr, use <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> XML_PARSE_NOERROR.</para>
 <para>It&apos;s recommended to use the per-context error handlers instead:</para>
 <para><itemizedlist>
 <listitem><para><ref refid="parser_8h_1ae5ed5da325b136d630c2f774623ff06a" kindref="member">xmlCtxtSetErrorHandler</ref> (since 2.13.0)</para>
@@ -6121,7 +6121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlerror.h" line="1009" column="5" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="844" bodyend="852" declfile="xmlerror.h" declline="1009" declcolumn="5"/>
+        <location file="xmlerror.h" line="1009" column="5" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="866" bodyend="874" declfile="xmlerror.h" declline="1009" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlerror_8h_1a803d46e8d2daf65eaee032a0a88beb2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6163,7 +6163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xmlerror.h" line="1013" column="5" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="863" bodyend="868" declfile="xmlerror.h" declline="1013" declcolumn="5"/>
+        <location file="xmlerror.h" line="1013" column="5" bodyfile="/builds/GNOME/libxml2/globals.c" bodystart="885" bodyend="890" declfile="xmlerror.h" declline="1013" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="xmlerror_8h_1aae147cdcd7fe91e04d4267816c8d438a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6185,7 +6185,7 @@
 <para>This is the default SAX error handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, errors will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, errors will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000133"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an error message with additional detail from the parser context and print to generic error handler.</para>
@@ -6240,7 +6240,7 @@
 <para>This is the default SAX warning handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, warnings will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, warnings will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000134"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an warning message with additional detail from the parser context and print to generic error handler.</para>
@@ -6295,7 +6295,7 @@
 <para>This is the default validity error handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, errors will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, errors will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000135"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an error message with additional detail from the parser context and print to generic error handler.</para>
@@ -6350,7 +6350,7 @@
 <para>This is the default validity warning handler, but it will never be called. </para>
         </briefdescription>
         <detaileddescription>
-<para>If it isn&apos;t replaced by the user, warnings will be handled by xmlFormatError.</para>
+<para>If it isn&apos;t replaced by the user, warnings will be handled by <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 <para><xrefsect id="deprecated_1_deprecated000136"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not call directly.</para>
 </xrefdescription></xrefsect></para>
 <para>Format an warning message with additional detail from the parser context and print to generic error handler.</para>
@@ -6398,14 +6398,14 @@
 <para>Displays the associated file and line information for the current input. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000131"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlFormatError.</para>
+<para><xrefsect id="deprecated_1_deprecated000131"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserInput input </para>
+<para>an <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> input </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -6428,14 +6428,14 @@
 <para>Displays current context within the input content for error reporting. </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000132"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use xmlFormatError.</para>
+<para><xrefsect id="deprecated_1_deprecated000132"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="xmlerror_8h_1a5941264be0066259e1bb8ebca9837fe1" kindref="member">xmlFormatError</ref>.</para>
 </xrefdescription></xrefsect></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlParserInput input </para>
+<para>an <ref refid="tree_8h_1aa05e6cbf6c68ec5a2e33ddabddf58b7d" kindref="member">xmlParserInput</ref> input </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>

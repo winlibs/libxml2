@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="xinclude_8h" kind="file" language="C++">
     <compoundname>xinclude.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -375,7 +375,7 @@
           <declname>doc</declname>
         </param>
         <briefdescription>
-<para>Implement the XInclude substitution on the XML document <computeroutput>doc</computeroutput> </para>
+<para>Implement the XInclude substitution on the XML document <computeroutput>doc</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -393,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="76" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2123" bodyend="2125" declfile="xinclude.h" declline="76" declcolumn="1"/>
+        <location file="xinclude.h" line="76" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2126" bodyend="2128" declfile="xinclude.h" declline="76" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a9cda55502370eb7744b17c0c4b87a982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -409,7 +409,7 @@
           <declname>flags</declname>
         </param>
         <briefdescription>
-<para>Implement the XInclude substitution on the XML document <computeroutput>doc</computeroutput> </para>
+<para>Implement the XInclude substitution on the XML document <computeroutput>doc</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -425,7 +425,7 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlParserOption used for parsing XML includes </para>
+<para>a set of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> used for parsing XML includes </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="78" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2111" bodyend="2113" declfile="xinclude.h" declline="78" declcolumn="1"/>
+        <location file="xinclude.h" line="78" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2114" bodyend="2116" declfile="xinclude.h" declline="78" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a1ce0a7a6c8c67f5e2df2eff7a1d4ee3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -455,7 +455,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Implement the XInclude substitution on the XML document <computeroutput>doc</computeroutput> </para>
+<para>Implement the XInclude substitution on the XML document <computeroutput>doc</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -471,7 +471,7 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlParserOption used for parsing XML includes </para>
+<para>a set of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> used for parsing XML includes </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -489,7 +489,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="81" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2091" bodyend="2100" declfile="xinclude.h" declline="81" declcolumn="1"/>
+        <location file="xinclude.h" line="81" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2094" bodyend="2103" declfile="xinclude.h" declline="81" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a4113ad7ecd2f1f4886d680cfb387a4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -509,7 +509,7 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Implement the XInclude substitution on the XML node <computeroutput>tree</computeroutput> </para>
+<para>Implement the XInclude substitution on the XML node <computeroutput>tree</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -525,7 +525,7 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlParserOption used for parsing XML includes </para>
+<para>a set of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> used for parsing XML includes </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -543,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="85" column="17" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2059" bodyend="2078" declfile="xinclude.h" declline="85" declcolumn="17"/>
+        <location file="xinclude.h" line="85" column="17" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2062" bodyend="2081" declfile="xinclude.h" declline="85" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a8e01899bfa415b5f1620691f67c37bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -573,7 +573,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="89" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2163" bodyend="2165" declfile="xinclude.h" declline="89" declcolumn="1"/>
+        <location file="xinclude.h" line="89" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2166" bodyend="2168" declfile="xinclude.h" declline="89" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1aec000d15a7a1c12403f4f440cb94fff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -605,7 +605,7 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlParserOption used for parsing XML includes </para>
+<para>a set of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> used for parsing XML includes </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -615,7 +615,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="91" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2136" bodyend="2153" declfile="xinclude.h" declline="91" declcolumn="1"/>
+        <location file="xinclude.h" line="91" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2139" bodyend="2156" declfile="xinclude.h" declline="91" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a94c5ab5218c17cd68fc40dc825636831" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="xinclude_8h_1ac696145a69920b566bc94d13681967e4" kindref="member">xmlXIncludeCtxt</ref> *</type>
@@ -677,7 +677,7 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a set of xmlParserOption used for parsing XML includes </para>
+<para>a set of <ref refid="parser_8h_1a7d2daaf67df051ca5ef0b319b640442c" kindref="member">xmlParserOption</ref> used for parsing XML includes </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -687,7 +687,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="99" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2025" bodyend="2030" declfile="xinclude.h" declline="99" declcolumn="1"/>
+        <location file="xinclude.h" line="99" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2028" bodyend="2033" declfile="xinclude.h" declline="99" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a9cdfa104cc6daeff5876365bfdd7f02d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -742,7 +742,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="102" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="1991" bodyend="1997" declfile="xinclude.h" declline="102" declcolumn="1"/>
+        <location file="xinclude.h" line="102" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="1994" bodyend="2000" declfile="xinclude.h" declline="102" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a745f07954d566274149a235ec484ff95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -796,7 +796,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="106" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2009" bodyend="2015" declfile="xinclude.h" declline="106" declcolumn="1"/>
+        <location file="xinclude.h" line="106" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2012" bodyend="2018" declfile="xinclude.h" declline="106" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1ab2ac87a969b8dcccd4da9feef8b319d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -827,7 +827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="110" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="1975" bodyend="1979" declfile="xinclude.h" declline="110" declcolumn="1"/>
+        <location file="xinclude.h" line="110" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="1978" bodyend="1982" declfile="xinclude.h" declline="110" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="xinclude_8h_1a9e957b93ca0fbac135f342aef43ca8f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -898,7 +898,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="xinclude.h" line="114" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2177" bodyend="2187" declfile="xinclude.h" declline="114" declcolumn="1"/>
+        <location file="xinclude.h" line="114" column="1" bodyfile="/builds/GNOME/libxml2/xinclude.c" bodystart="2180" bodyend="2190" declfile="xinclude.h" declline="114" declcolumn="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="entities_8h" kind="file" language="C++">
     <compoundname>entities.h</compoundname>
     <includes refid="xmlversion_8h" local="no">libxml/xmlversion.h</includes>
@@ -301,7 +301,7 @@
 <para>Create a new entity. </para>
         </briefdescription>
         <detaileddescription>
-<para>Like xmlAddDocEntity, but if <computeroutput>doc</computeroutput> is NULL or has no internal subset defined, an unlinked entity will be returned. It is then the responsibility of the caller to link it to the document later or free it when not needed anymore.</para>
+<para>Like <ref refid="entities_8h_1a639b25facc829da206ffbbd2ca3483dc" kindref="member">xmlAddDocEntity</ref>, but if <computeroutput>doc</computeroutput> is NULL or has no internal subset defined, an unlinked entity will be returned. It is then the responsibility of the caller to link it to the document later or free it when not needed anymore.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
@@ -323,7 +323,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -459,7 +459,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -495,7 +495,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>an xmlParserErrors error code. </para>
+<simplesect kind="return"><para>an <ref refid="xmlerror_8h_1adc147424b5aac85cccf5018513b9ec14" kindref="member">xmlParserErrors</ref> error code. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -536,7 +536,7 @@
 <para>Add a new entity to the document&apos;s internal subset. </para>
         </briefdescription>
         <detaileddescription>
-<para>xmlAddEntity offers better error handling.</para>
+<para><ref refid="entities_8h_1a17c6a4404cc87ad3c67e32e6a802c006" kindref="member">xmlAddEntity</ref> offers better error handling.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
@@ -558,7 +558,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -627,7 +627,7 @@
 <para>Add a new entity to the document&apos;s external subset. </para>
         </briefdescription>
         <detaileddescription>
-<para>xmlAddEntity offers better error handling.</para>
+<para><ref refid="entities_8h_1a17c6a4404cc87ad3c67e32e6a802c006" kindref="member">xmlAddEntity</ref> offers better error handling.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>
@@ -649,7 +649,7 @@
 <parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an xmlEntityType value </para>
+<para>an <ref refid="entities_8h_1a64131e2e263dff72c78d311eff342f3a" kindref="member">xmlEntityType</ref> value </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -862,7 +862,7 @@
 <para>If <computeroutput>doc</computeroutput> is NULL or an XML document, replaces <computeroutput>&lt;</computeroutput>, <computeroutput>&gt;</computeroutput> and <computeroutput>&amp;</computeroutput> with predefined entities. Carriage return is replaced with <computeroutput>&amp;#13;</computeroutput>. If <computeroutput>doc</computeroutput> or its encoding are NULL, non-ASCII characters are replaced with a hexadecimal character reference.</para>
 <para>If <computeroutput>doc</computeroutput> is an HTML document, follows the HTML serialization rules.</para>
 <para>Silently removes some invalid characters like ASCII control codes.</para>
-<para>See xmlEncodeSpecialChars for an alternative.</para>
+<para>See <ref refid="entities_8h_1ac1c6e5ab272e7a6043c786a6e4ba3536" kindref="member">xmlEncodeSpecialChars</ref> for an alternative.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>doc</parametername>

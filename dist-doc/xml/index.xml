@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
   <compound refid="struct__xlinkHandler" kind="struct"><name>_xlinkHandler</name>
     <member refid="struct__xlinkHandler_1a84bb3bb50095d688d5fe054508a47af2" kind="variable"><name>simple</name></member>
     <member refid="struct__xlinkHandler_1a7fe02e46f79b0bd6c0067f6027d48963" kind="variable"><name>extended</name></member>
@@ -41,6 +41,7 @@
   <compound refid="struct__xmlAutomata" kind="struct"><name>_xmlAutomata</name>
     <member refid="struct__xmlAutomata_1af2ac496dd25a801876f09f2b0bd91e6d" kind="variable"><name>string</name></member>
     <member refid="struct__xmlAutomata_1a454a1b6ce61b8cf97a28f1cd3ba4fad0" kind="variable"><name>cur</name></member>
+    <member refid="struct__xmlAutomata_1a7360b55975153b822efc5217b7734e6a" kind="variable"><name>len</name></member>
     <member refid="struct__xmlAutomata_1a11614f44ef4d939bdd984953346a7572" kind="variable"><name>error</name></member>
     <member refid="struct__xmlAutomata_1a186b6342d483ea691785eb9a6d88605b" kind="variable"><name>neg</name></member>
     <member refid="struct__xmlAutomata_1a02a3a6fd47137fb55ed247acf3a122ad" kind="variable"><name>start</name></member>
@@ -140,9 +141,9 @@
     <member refid="struct__xmlCharEncodingHandler_1a5ac083a645d964373f022d03df4849c8" kind="variable"><name>name</name></member>
     <member refid="struct__xmlCharEncodingHandler_1af77cac82a0d7e18c9e06cf9a2bdf9af6" kind="variable"><name>func</name></member>
     <member refid="struct__xmlCharEncodingHandler_1aa68753840e53e4335fee1fee8f9b0354" kind="variable"><name>legacyFunc</name></member>
-    <member refid="struct__xmlCharEncodingHandler_1ae46f8df83ad27d16520c1c3bec277d1e" kind="variable"><name>input</name></member>
+    <member refid="struct__xmlCharEncodingHandler_1a2b1403f3a51c151b1caa095bdf87e040" kind="variable"><name>input</name></member>
     <member refid="struct__xmlCharEncodingHandler_1a7fd0bb53e8270a2f7f124288f1820e38" kind="variable"><name>legacyFunc</name></member>
-    <member refid="struct__xmlCharEncodingHandler_1a2d2fea6595303d7b4ee9b1c48f79e66a" kind="variable"><name>output</name></member>
+    <member refid="struct__xmlCharEncodingHandler_1aeafb950d783a09268d55f2f50c2ae215" kind="variable"><name>output</name></member>
     <member refid="struct__xmlCharEncodingHandler_1a3861a22085dd8d2ef13500e199f86145" kind="variable"><name>inputCtxt</name></member>
     <member refid="struct__xmlCharEncodingHandler_1af2e80ed02c6235e2e55adb2bfd62b612" kind="variable"><name>outputCtxt</name></member>
     <member refid="struct__xmlCharEncodingHandler_1a2d527f7bfa560fc129325e2f755e47ab" kind="variable"><name>ctxtDtor</name></member>
@@ -1476,7 +1477,7 @@
     <member refid="struct__xmlSchemaVal_1a873684cefeb665f3d5e6b495de57fc0d" kind="variable"><name>d</name></member>
     <member refid="struct__xmlSchemaVal_1a148e3876077787926724625411d6e7a9" kind="variable"><name>b</name></member>
     <member refid="struct__xmlSchemaVal_1ac63702296edcf9bf955f021cc570661e" kind="variable"><name>str</name></member>
-    <member refid="struct__xmlSchemaVal_1ac317e2dd5f6b89780e220ef17eb4c336" kind="variable"><name>value</name></member>
+    <member refid="struct__xmlSchemaVal_1afc73d20d683d88c3b3b2c132f534a8d4" kind="variable"><name>value</name></member>
   </compound>
   <compound refid="struct__xmlSchemaValBase64" kind="struct"><name>_xmlSchemaValBase64</name>
     <member refid="struct__xmlSchemaValBase64_1ac63702296edcf9bf955f021cc570661e" kind="variable"><name>str</name></member>
@@ -2051,6 +2052,16 @@
     <member refid="c14n_8c_1a9c264264960f9f8efcf04a585edb692d" kind="typedef"><name>xmlC14NVisibleNsStackPtr</name></member>
     <member refid="c14n_8c_1a35d46d900b339298adca6a32fb484ab4" kind="typedef"><name>xmlC14NCtx</name></member>
     <member refid="c14n_8c_1a564fb6e2175b090d803ecce7d54a5935" kind="typedef"><name>xmlC14NCtxPtr</name></member>
+    <member refid="c14n_8c_1a4c3a358572dcbbc235d824868164272a" kind="variable"><name>ctx</name></member>
+    <member refid="c14n_8c_1ab73c0ed3cd583f9ae640974700a48a37" kind="variable"><name>doc</name></member>
+    <member refid="c14n_8c_1a23ffa502406f0ee0a284726350f813a8" kind="variable"><name>with_comments</name></member>
+    <member refid="c14n_8c_1a12165b6e784b280d8c36ebf5d0077492" kind="variable"><name>is_visible_callback</name></member>
+    <member refid="c14n_8c_1a60854ccb0cc4307697d29f6084b3633b" kind="variable"><name>user_data</name></member>
+    <member refid="c14n_8c_1aeed0611ba9d287d15c0b841c62b867c8" kind="variable"><name>buf</name></member>
+    <member refid="c14n_8c_1a4e08755f07fedf74cf3977830b74664e" kind="variable"><name>parent_is_doc</name></member>
+    <member refid="c14n_8c_1a5feb78939d847f18c5fda19b81a0fa30" kind="variable"><name>pos</name></member>
+    <member refid="c14n_8c_1a6a18e97a485873ac1d2b964772c6e6a9" kind="variable"><name>ns_rendered</name></member>
+    <member refid="c14n_8c_1a91bd32f44d14fd54fd6d785b76a6be2d" kind="variable"><name>mode</name></member>
     <member refid="c14n_8c_1a91c57b665398d9737f9a71fda0cfe3cf" kind="function"><name>xmlC14NVisibleNsStackCreate</name></member>
     <member refid="c14n_8c_1a3c3c62fb542f44b83868319a34528d06" kind="function"><name>xmlC14NVisibleNsStackDestroy</name></member>
     <member refid="c14n_8c_1a459fba152c0aea290a2ba394397d6de6" kind="function"><name>xmlC14NVisibleNsStackAdd</name></member>
@@ -2086,7 +2097,12 @@
     <member refid="c14n_8c_1ab4214cd564c6468e00f4bcd090ce4073" kind="function"><name>xmlC14NCheckForRelativeNamespaces</name></member>
     <member refid="c14n_8c_1a5e2702219f6d370adb46b4861d44de95" kind="function"><name>xmlC14NProcessElementNode</name></member>
     <member refid="c14n_8c_1af89e0ac8b19d232ac7dd5ed301d74c21" kind="function"><name>xmlC14NFreeCtx</name></member>
-    <member refid="c14n_8c_1ae4318db7d77dafc89929a14c66297c8f" kind="function"><name>xmlC14NNewCtx</name></member>
+    <member refid="c14n_8c_1a80524584e03541b86ff7145cb9502c36" kind="function"><name>if</name></member>
+    <member refid="c14n_8c_1a13507154075c5c224303599bb73177d3" kind="function"><name>if</name></member>
+    <member refid="c14n_8c_1a30b3cf7e3b888b1a1d877c01d2b79f7e" kind="function"><name>memset</name></member>
+    <member refid="c14n_8c_1a51e4644d640aeb877692f9e1c70f8e41" kind="function"><name>if</name></member>
+    <member refid="c14n_8c_1a0e1f3bf1ba0789ea0be2d6a55eca124a" kind="function"><name>if</name></member>
+    <member refid="c14n_8c_1a035c94851331670a000057ca7fd59295" kind="function"><name>return</name></member>
     <member refid="c14n_8c_1a86550661d85e370e6da9a94491f4cfc0" kind="function"><name>xmlC14NExecute</name></member>
     <member refid="c14n_8c_1ae5e77b937212f74e64819fc29b8144b2" kind="function"><name>xmlC14NDocSaveTo</name></member>
     <member refid="c14n_8c_1a0b03db0d24c59380144912ffe50a5474" kind="function"><name>xmlC14NDocDumpMemory</name></member>
@@ -2172,6 +2188,8 @@
     <member refid="catalog_8c_1adbe5c3a394b2bff7dd9133f7a507eb51" kind="function"><name>xmlParseXMLCatalogNodeList</name></member>
     <member refid="catalog_8c_1a4d6f356a485311bb198ff9fc84df2320" kind="function"><name>xmlCatalogListXMLResolve</name></member>
     <member refid="catalog_8c_1a5086f86ea41ad90e166acc7f6857426b" kind="function"><name>xmlCatalogListXMLResolveURI</name></member>
+    <member refid="catalog_8c_1a4e689ae87c6d44db18d2802eaf4eed81" kind="function"><name>xmlCatalogListXMLResolveURIInitial</name></member>
+    <member refid="catalog_8c_1ad5cb88c767b24b4579aac895c2af1c3a" kind="function"><name>xmlCatalogListXMLResolveInitial</name></member>
     <member refid="catalog_8c_1af984a99c7e01f072fb3500aff78c05d0" kind="function"><name>xmlGetXMLCatalogEntryType</name></member>
     <member refid="catalog_8c_1aed128eee09cbac59c944539b4638bf4d" kind="function"><name>xmlParseXMLCatalogOneNode</name></member>
     <member refid="catalog_8c_1a241d5b5c9efb64ab15357d10b39b8e38" kind="function"><name>xmlParseXMLCatalogNode</name></member>
@@ -6096,7 +6114,8 @@
     <member refid="parser_8c_1ade86f54d8c5d7baa13d57d52079c727c" kind="function"><name>xmlSBufCleanup</name></member>
     <member refid="parser_8c_1a95abbbf7a12e91a267378aaaa8b16116" kind="function"><name>xmlUTF8MultibyteLen</name></member>
     <member refid="parser_8c_1a2a37ff84548e07861d99ea581b58fcd3" kind="function"><name>xmlCtxtInitializeLate</name></member>
-    <member refid="parser_8c_1a3536d9668afffc0e1e3a66c677da8a48" kind="function"><name>xmlAttrNormalizeSpace</name></member>
+    <member refid="parser_8c_1a55fd2971a874e2e1e1202e4f73e95dbe" kind="function"><name>xmlAttrNormalizeSpace</name></member>
+    <member refid="parser_8c_1ad6c22c5a814a2d51514f2101f3b72e72" kind="function"><name>xmlAttrNormalize</name></member>
     <member refid="parser_8c_1a1b5720233c29736baecce2792963699f" kind="function"><name>xmlAddDefAttrs</name></member>
     <member refid="parser_8c_1ac9a9b17069b206ad239b53103238274c" kind="function"><name>xmlAddSpecialAttr</name></member>
     <member refid="parser_8c_1a8bd94959734d1284b67d6ed137db9bb3" kind="function"><name>xmlCleanSpecialAttrCallback</name></member>
@@ -6910,7 +6929,7 @@
     <member refid="tree_8c_1ada779a2b6d623aa913da3a45415c56d5" kind="function"><name>xmlNewReconciledNs</name></member>
     <member refid="tree_8c_1a5abdccdc96e857d86db922e0a5fe70ee" kind="function"><name>xmlGetPropNodeInternal</name></member>
     <member refid="tree_8c_1ad3c1959bdbedf0f7a6fdcda7d6474984" kind="function"><name>xmlGetPropNodeValueInternal</name></member>
-    <member refid="tree_8c_1a3a569b5f7de0e43d3197386bcee6f77b" kind="function"><name>xmlBufGetChildContent</name></member>
+    <member refid="tree_8c_1a113b40d94bfdc38a1c039631d145a787" kind="function"><name>xmlBufGetChildContent</name></member>
     <member refid="tree_8c_1a85675d816268690986dd986ee3724885" kind="function"><name>xmlUnlinkNodeInternal</name></member>
     <member refid="tree_8c_1a19ba038b2d4a4aec082d52c57d09404c" kind="function"><name>xmlGetEntityFromDtd</name></member>
     <member refid="tree_8c_1abcfe90d322f33680d62479ee0382e8af" kind="function"><name>xmlGetParameterEntityFromDtd</name></member>
@@ -7016,7 +7035,7 @@
     <member refid="tree_8c_1a44b7232cf4e4262f68923a200f2b2014" kind="function"><name>xmlNodeGetBaseSafe</name></member>
     <member refid="tree_8c_1a727c73de075f16410236686e1a6e1d01" kind="function"><name>xmlNodeGetBase</name></member>
     <member refid="tree_8c_1a3449a796095bb2a630f2d0471106baca" kind="function"><name>xmlNodeBufGetContent</name></member>
-    <member refid="tree_8c_1a7d8eaf38d364ea6c757a9de860860952" kind="function"><name>xmlBufGetEntityRefContent</name></member>
+    <member refid="tree_8c_1a4d0754ca91651015a555b20ae379d237" kind="function"><name>xmlBufGetEntityRefContent</name></member>
     <member refid="tree_8c_1a1e80cee4855045733ca75f417dc2715e" kind="function"><name>xmlBufGetNodeContent</name></member>
     <member refid="tree_8c_1a64a87933e820a3250b386777bda13400" kind="function"><name>xmlNodeGetContent</name></member>
     <member refid="tree_8c_1a8641a37b8276f8a21e04f5cd4acdcc3d" kind="function"><name>xmlNodeSetContentInternal</name></member>
@@ -7480,6 +7499,7 @@
     <member refid="xmlmemory_8c_1aee74a50dfb53ebbfd3cfe231bc4cb2a5" kind="function"><name>xmlMemDisplay</name></member>
     <member refid="xmlmemory_8c_1adf8542adeac423db5c440119fe3d3cba" kind="function"><name>xmlMemShow</name></member>
     <member refid="xmlmemory_8c_1af28bfd5f3477b8068b50b75cdb120202" kind="function"><name>xmlMemoryDump</name></member>
+    <member refid="xmlmemory_8c_1ad66e2d22c7bb72a3921b05675e33059c" kind="function"><name>xmlGrowArray</name></member>
     <member refid="xmlmemory_8c_1ad7abed47851c8c33c9f840c0ecfc70f4" kind="function"><name>xmlInitMemory</name></member>
     <member refid="xmlmemory_8c_1ac27fc2eda692d35c73fc19a4d452babe" kind="function"><name>xmlInitMemoryInternal</name></member>
     <member refid="xmlmemory_8c_1a6fad15dbecad624ee430cd7102eda760" kind="function"><name>xmlCleanupMemory</name></member>
@@ -8600,11 +8620,8 @@
     <member refid="xmlschemastypes_8c_1a0a98d8c1d98a7ecaab9d74c849c68696" kind="typedef"><name>xmlSchemaValHexPtr</name></member>
     <member refid="xmlschemastypes_8c_1a9a96b5ea6a9bcefcdb3ef14a3955f29f" kind="typedef"><name>xmlSchemaValBase64</name></member>
     <member refid="xmlschemastypes_8c_1a1bad1314a62fc25d0273ce83df7b6791" kind="typedef"><name>xmlSchemaValBase64Ptr</name></member>
-    <member refid="xmlschemastypes_8c_1a31ff504a74ce27ff0376c5c073c5a798" kind="typedef"><name>xmlSchemaTreeItem</name></member>
     <member refid="xmlschemastypes_8c_1a79688ec7008f425e93a99e101a2a37ca" kind="typedef"><name>xmlSchemaTreeItemPtr</name></member>
-    <member refid="xmlschemastypes_8c_1aa488b796345971666e52cca1d3383390" kind="typedef"><name>xmlSchemaParticle</name></member>
     <member refid="xmlschemastypes_8c_1a568313a8766a2ef5ea381b58401899a4" kind="typedef"><name>xmlSchemaParticlePtr</name></member>
-    <member refid="xmlschemastypes_8c_1ac115941b82b4f75a8add91e01d29d261" kind="typedef"><name>xmlSchemaModelGroup</name></member>
     <member refid="xmlschemastypes_8c_1aabf014758670bd27358c918da3a3f3e9" kind="typedef"><name>xmlSchemaModelGroupPtr</name></member>
     <member refid="xmlschemastypes_8c_1ae13aa336e759be345b4feb464ca81e4b" kind="variable"><name>xmlSchemaTypesInitialized</name></member>
     <member refid="xmlschemastypes_8c_1afb33953fce252ffe9da4fd7407e40acf" kind="variable"><name>xmlSchemaNAN</name></member>
@@ -8996,7 +9013,7 @@
     <member refid="xpath_8c_1acf716e9adfff80287093ab1cdbd15333" kind="typedef"><name>xmlXPathNodeSetMergeFunction</name></member>
     <member refid="xpath_8c_1a8f8f80d37794cde9472343e4487ba3eb" kind="variable"><name>name</name></member>
     <member refid="xpath_8c_1a0b29d29bddb7bddf6f846f5d8e65f2d2" kind="variable"><name>func</name></member>
-    <member refid="xpath_8c_1a28caba80ede960ab06adb377955e13f3" kind="variable"><name>xmlXPathStandardFunctions</name></member>
+    <member refid="xpath_8c_1a3e69a306e7d853b78bc35580e050351b" kind="variable"><name>xmlXPathStandardFunctions</name></member>
     <member refid="xpath_8c_1aecb36aa81a9ea22571db202711e972d2" kind="variable"><name>xmlXPathSFHash</name></member>
     <member refid="xpath_8c_1ab0569bc58bf1a65454ab1e9c095bae89" kind="variable"><name>xmlXPathNAN</name></member>
     <member refid="xpath_8c_1aa8f3eb475e4e709a5ca93aeedb41a549" kind="variable"><name>xmlXPathPINF</name></member>

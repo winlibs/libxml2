@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlXPathParserContext" kind="struct" language="C++" prot="public">
     <compoundname>_xmlXPathParserContext</compoundname>
     <includes local="no">xpath.h</includes>
@@ -180,7 +180,7 @@
 <para>An XPath parser context. </para>
     </briefdescription>
     <detaileddescription>
-<para>It contains pure parsing information, an xmlXPathContext, and the stack of objects.</para>
+<para>It contains pure parsing information, an <ref refid="xpath_8h_1a61100c9bec26c0de1d0329962c85c091" kindref="member">xmlXPathContext</ref>, and the stack of objects.</para>
 <para>This struct is used for evaluation as well and misnamed. </para>
     </detaileddescription>
     <collaborationgraph>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaBucket" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaBucket</compoundname>
     <sectiondef kind="public-attrib">
@@ -74,7 +74,7 @@
         <location file="/builds/GNOME/libxml2/xmlschemas.c" line="405" column="19" bodyfile="/builds/GNOME/libxml2/xmlschemas.c" bodystart="405" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__xmlSchemaBucket_1acb7e0779c02127031b073502aca38a8c" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlDoc" kindref="compound">xmlDocPtr</ref></type>
+        <type>xmlDocPtr</type>
         <definition>xmlDocPtr doc</definition>
         <argsstring></argsstring>
         <name>doc</name>

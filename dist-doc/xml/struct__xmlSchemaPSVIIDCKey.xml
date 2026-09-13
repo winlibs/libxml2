@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="struct__xmlSchemaPSVIIDCKey" kind="struct" language="C++" prot="public">
     <compoundname>_xmlSchemaPSVIIDCKey</compoundname>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct__xmlSchemaPSVIIDCKey_1ade230ff73c108fe8c0bc4a7574851dab" prot="public" static="no" mutable="no">
-        <type><ref refid="struct__xmlSchemaType" kindref="compound">xmlSchemaTypePtr</ref></type>
+        <type>xmlSchemaTypePtr</type>
         <definition>xmlSchemaTypePtr type</definition>
         <argsstring></argsstring>
         <name>type</name>
