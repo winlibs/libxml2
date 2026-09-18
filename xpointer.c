@@ -950,7 +950,7 @@ xmlXPtrGetChildNo(xmlXPathParserContextPtr ctxt, int indx) {
 static void
 xmlXPtrEvalXPtrPart(xmlXPathParserContextPtr ctxt, xmlChar *name) {
     xmlChar *buffer, *cur;
-    int len;
+    size_t len;
     int level;
 
     if (name == NULL)
@@ -966,6 +966,14 @@ xmlXPtrEvalXPtrPart(xmlXPathParserContextPtr ctxt, xmlChar *name) {
     level = 1;
 
     len = xmlStrlen(ctxt->cur);
+    /* Overflow in xmlStrlen */
+    if (len == 0 && ctxt->cur != NULL && *ctxt->cur != 0) {
+        ctxt->error = XPATH_MEMORY_ERROR;
+        xmlXPtrErrMemory("evaluating XPointer expression");
+        xmlFree(name);
+        return;
+    }
+
     len++;
     buffer = (xmlChar *) xmlMallocAtomic(len * sizeof (xmlChar));
     if (buffer == NULL) {
@@ -2969,4 +2977,3 @@ xmlXPtrEvalRangePredicate(xmlXPathParserContextPtr ctxt) {
 #endif /* LIBXML_XPTR_LOCS_ENABLED */
 
 #endif
-
