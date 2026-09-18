@@ -290,15 +290,19 @@ xmlDictAddQString(xmlDictPtr dict, const xmlChar *prefix, unsigned int plen,
     const xmlChar *ret;
     size_t size = 0; /* + sizeof(_xmlDictStrings) == 1024 */
     size_t limit = 0;
+    size_t qlen;
 
     if (prefix == NULL) return(xmlDictAddString(dict, name, namelen));
+    if ((size_t) namelen >= SIZE_MAX - (size_t) plen)
+        return(NULL);
+    qlen = (size_t) namelen + plen + 1;
 
 #ifdef DICT_DEBUG_PATTERNS
     fprintf(stderr, "=");
 #endif
     pool = dict->strings;
     while (pool != NULL) {
-	if ((size_t)(pool->end - pool->free) > namelen + plen + 1)
+	if ((size_t)(pool->end - pool->free) > qlen)
 	    goto found_pool;
 	if (pool->size > size) size = pool->size;
         limit += pool->size;
@@ -312,10 +316,20 @@ xmlDictAddQString(xmlDictPtr dict, const xmlChar *prefix, unsigned int plen,
             return(NULL);
         }
 
-        if (size == 0) size = 1000;
-	else size *= 4; /* exponential growth */
-        if (size < 4 * (namelen + plen + 1))
-	    size = 4 * (namelen + plen + 1); /* just in case ! */
+        if (size == 0) {
+            size = 1000;
+        } else {
+            if (size < (SIZE_MAX - sizeof(xmlDictStrings)) / 4)
+                size *= 4; /* exponential growth */
+            else
+                size = SIZE_MAX - sizeof(xmlDictStrings);
+        }
+        if (size / 4 < qlen) {
+            if (qlen < (SIZE_MAX - sizeof(xmlDictStrings)) / 4)
+                size = 4 * qlen; /* just in case ! */
+            else
+                return(NULL);
+        }
 	pool = (xmlDictStringsPtr) xmlMalloc(sizeof(xmlDictStrings) + size);
 	if (pool == NULL)
 	    return(NULL);
@@ -1264,4 +1278,3 @@ xmlDictGetUsage(xmlDictPtr dict) {
     }
     return(limit);
 }
-
