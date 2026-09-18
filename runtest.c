@@ -2397,6 +2397,80 @@ noentParseTest(const char *filename, const char *result,
     return(res);
 }
 
+#ifdef LIBXML_XINCLUDE_ENABLED
+static int xincludeNonetPropagated;
+
+static xmlParserInputPtr
+xincludeProcessTestLoader(const char *URL, const char *ID,
+                          xmlParserCtxtPtr ctxt) {
+    if ((URL != NULL) && (!xmlStrncasecmp(BAD_CAST URL,
+                                          BAD_CAST "http://", 7)))
+        xincludeNonetPropagated = ((ctxt != NULL) &&
+                                   (ctxt->options & XML_PARSE_NONET));
+
+    return(testExternalEntityLoader(URL, ID, ctxt));
+}
+
+/**
+ * Parse a file and run xmlXIncludeProcess() to verify that doc->parseFlags
+ * is propagated properly.
+ *
+ * @param filename  the file to parse
+ * @param result  the file with expected result
+ * @param err  the file with error messages
+ * @returns 0 in case of success, an error code otherwise
+ */
+static int
+xincludeProcessTest(const char *filename, const char *result, const char *err,
+                    int options) {
+    xmlExternalEntityLoader oldLoader;
+    xmlDocPtr doc;
+    xmlChar *base = NULL;
+    int size, res;
+    int ret = 0;
+
+    nb_tests++;
+
+    doc = xmlReadFile(filename, NULL, options);
+
+    /* Check if `doc` was created successfully */
+    if (doc == NULL) {
+        testErrorHandler(NULL, "%s : failed to parse\n", filename);
+        return(-1);
+    }
+
+    oldLoader = xmlGetExternalEntityLoader();
+    xincludeNonetPropagated = 0;
+    xmlSetExternalEntityLoader(xincludeProcessTestLoader);
+    xmlXIncludeProcess(doc);
+    xmlSetExternalEntityLoader(oldLoader);
+    if (!xincludeNonetPropagated)
+        ret = -1;
+
+    /* Check the result and for any errors */
+    if (result) {
+        xmlDocDumpMemory(doc, &base, &size);
+        res = compareFileMem(result, (char *) base, size);
+        xmlFree(base);
+        if (res != 0) {
+            fprintf(stderr, "Result for %s failed in %s\n", filename, result);
+            ret = -1;
+        }
+    }
+
+    if ((ret == 0) && (err != NULL)) {
+        res = compareFileMem(err, testErrors, testErrorsSize);
+        if (res != 0) {
+            fprintf(stderr, "Error for %s failed\n", filename);
+            ret = -1;
+        }
+    }
+
+    xmlFreeDoc(doc);
+    return(ret);
+}
+#endif
+
 /**
  * errParseTest:
  * @filename: the file to parse
@@ -5111,6 +5185,12 @@ testDesc testDescriptions[] = {
     { "XInclude regression tests without reader",
       errParseTest, "./test/XInclude/without-reader/*", "result/XInclude/", "",
       ".err", XML_PARSE_XINCLUDE },
+    { "XInclude issue1120 regression tests",
+      errParseTest, "./test/XInclude/issue1120/*", "result/XInclude/", "",
+      ".err", XML_PARSE_XINCLUDE | XML_PARSE_NONET },
+    { "XInclude xmlXIncludeProcess() issue1120 regression tests",
+      xincludeProcessTest, "./test/XInclude/issue1120/*", "result/XInclude/",
+      "", ".err", XML_PARSE_NONET },
 #endif
 #ifdef LIBXML_XPATH_ENABLED
 #ifdef LIBXML_DEBUG_ENABLED
