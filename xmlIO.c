@@ -3344,7 +3344,7 @@ xmlParserInputBufferRead(xmlParserInputBufferPtr in, int len) {
  */
 int
 xmlOutputBufferWrite(xmlOutputBufferPtr out, int len, const char *buf) {
-    int nbchars = 0; /* number of chars to output to I/O */
+    size_t nbchars = 0; /* number of chars to output to I/O */
     int ret;         /* return from function call */
     int written = 0; /* number of char written to I/O so far */
     int chunk;       /* number of byte current processed from buf */
@@ -3403,6 +3403,11 @@ xmlOutputBufferWrite(xmlOutputBufferPtr out, int len, const char *buf) {
 	if (out->writecallback) {
             if ((nbchars < MINLEN) && (len <= 0))
                 goto done;
+
+	    if (nbchars >= INT_MAX) {
+		out->error = XML_ERR_INTERNAL_ERROR;
+		return(-1);
+	    }
 
 	    /*
 	     * second write the stuff to the I/O channel
@@ -3517,7 +3522,7 @@ xmlEscapeContent(unsigned char* out, int *outlen,
 int
 xmlOutputBufferWriteEscape(xmlOutputBufferPtr out, const xmlChar *str,
                            xmlCharEncodingOutputFunc escaping) {
-    int nbchars = 0; /* number of chars to output to I/O */
+    size_t nbchars = 0; /* number of chars to output to I/O */
     int ret;         /* return from function call */
     int written = 0; /* number of char written to I/O so far */
     int oldwritten=0;/* loop guard */
@@ -3602,6 +3607,10 @@ xmlOutputBufferWriteEscape(xmlOutputBufferPtr out, const xmlChar *str,
 	if (out->writecallback) {
             if ((nbchars < MINLEN) && (len <= 0))
                 goto done;
+            if (nbchars >= INT_MAX) {
+                out->error = XML_ERR_INTERNAL_ERROR;
+                return(-1);
+            }
 
 	    /*
 	     * second write the stuff to the I/O channel
@@ -3702,15 +3711,25 @@ xmlOutputBufferFlush(xmlOutputBufferPtr out) {
      */
     if ((out->conv != NULL) && (out->encoder != NULL) &&
 	(out->writecallback != NULL)) {
+        size_t bufsize = xmlBufUse(out->conv);
+        if (bufsize >= INT_MAX) {
+            out->error = XML_ERR_INTERNAL_ERROR;
+            return(-1);
+        }
 	ret = out->writecallback(out->context,
                                  (const char *)xmlBufContent(out->conv),
-                                 xmlBufUse(out->conv));
+                                 bufsize);
 	if (ret >= 0)
 	    xmlBufShrink(out->conv, ret);
     } else if (out->writecallback != NULL) {
+        size_t bufsize = xmlBufUse(out->buffer);
+        if (bufsize >= INT_MAX) {
+            out->error = XML_ERR_INTERNAL_ERROR;
+            return(-1);
+        }
 	ret = out->writecallback(out->context,
                                  (const char *)xmlBufContent(out->buffer),
-                                 xmlBufUse(out->buffer));
+                                 bufsize);
 	if (ret >= 0)
 	    xmlBufShrink(out->buffer, ret);
     }
@@ -4112,4 +4131,3 @@ xmlNoNetExternalEntityLoader(const char *URL, const char *ID,
 	xmlFree(resource);
     return(input);
 }
-
