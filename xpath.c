@@ -683,7 +683,7 @@ xmlXPathErrMemory(xmlXPathContextPtr ctxt, const char *extra)
  *
  * Handle a redefinition of attribute error
  */
-static void
+void
 xmlXPathPErrMemory(xmlXPathParserContextPtr ctxt, const char *extra)
 {
     if (ctxt == NULL)
